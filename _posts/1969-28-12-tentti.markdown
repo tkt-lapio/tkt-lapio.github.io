@@ -1,0 +1,28 @@
+---
+layout: material
+title: "Tentti ja arvostelu"
+date: 1969-12-28 00:01:00 +0200
+permalink: "/tentti/"
+---
+
+Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti suoritetaan Moodle-oppimisympäristössä, johon kirjaudutaan yliopiston käyttäjätunnuksilla.
+
+<h3>Tentin suorittamisen säännöt:</h3>
+
+- Tentin suorittamisen saa aloittaa missä vain, milloin vain, kunhan tentti on suoritettu ennen 31.5.2019.
+- Tentin suorittamiseen on kolme (3) tuntia.
+- Opiskelija saa käyttää vapaasti nettiä tentin aikana.
+- Vastausten etsiminen netistä, kuten esimerkiksi foorumeilta tai kurssin materiaalista, on sallittua.
+- Opiskelija saa vapaasti testata haluamiaan komentoja komentorivillä: tämä on jopa suositeltavaa, ja joissain tehtävissä vaatimus. <strong>Varmista, että läpäiset tentin siis Unix-tyyppisessä ympäristössä, mieluiten samalla koneella, jolla teit tehtävät, tai osaston koneella.</strong>
+- Tentti on yksilösuoritus. Opiskelija ei saa tehdä yhteistyötä toisen opiskelijan kanssa tentin aikana, tai pyytää apua ohjaajalta tai muulta henkilöltä suoraan tai välillisesti, eikä käyttää toisen opiskelijan vastauksia ominaan. Kaikki yhteistyö ja plagiointi lasketaan opintovilpiksi, ja sillä on seuraukset.
+- <strong>Koneella, jolla teet tentin, on oltava Git asennettuna.</strong>
+
+<h3>Arvostelu:</h3>
+- Kurssin arvosana-asteikossa on kolme arvosanaa
+  - hylätty
+  - 3
+  - 5
+- Kurssin arviointi varmistetaan ensimmäisen kuukauden suoritusten perusteella. Tentistä voi saada maksimissaan 18 pistettä. Alustavasti vähintään puolet (9 pistettä) on saatava, jotta kurssista pääsee läpi. Alustavasti jokaisen osan tehtävistä on mahdollista saada 2 laskaripistettä. Maksimissaan laskaripisteitä voi siis saada 6. Kurssipisteet koostuvat tentin pisteistä, sekä laskaripisteistä. Alustavasti arvosana 5 vaatii 17 kurssipistettä.
+- Mikäli et pääse tentistä läpi, voit suorittaa sen uudestaan aikaisintaan viikon päästä edellisestä suorituskerrasta, aina 31.5.2019 asti. Suorituskertojen määrälle ei ole ylärajaa.
+- Tentti sisältää yhden ja kahden pisteen tehtäviä.
+- Laskaripisteet merkitään Moodle-alueella jokaiselle osalle erikseen. Älä lähetä laskaripisteitä sähköpostilla, emme ota niitä silloin huomioon. Merkitse laskaripisteet ennen kuin suoritat tentin.

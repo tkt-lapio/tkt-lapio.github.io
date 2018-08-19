@@ -1,0 +1,21 @@
+---
+layout: material
+title: "Paja"
+date: 1969-12-28 00:05:00 +0200
+permalink: "/paja/"
+---
+
+Pajalla tarkoitetaan määrättyä hetkeä, jolloin kurssin assistentit ovat paikalla luokkahuoneessa, jonne opiskelijat voivat halutessaan tulla tekemään kurssin tehtäviä ja esittämään kysymyksiä. Pajaan ei tarvitse ilmoittautua, eikä paikalla tarvitse olla määrättyä aikaa: tarkoitus on, että opiskelija voi esittää matalalla kynnyksellä kysymyksiä ja esimerkiksi tehdä yhteistyötä toisten opiskelijoiden kanssa. Paja on erinomainen tapa opiskella, ja suosittelemme sitä lämpimästi.
+
+Tietojenkäsittelytieteen osastolla on kaksi pajaluokkaa, BK107 Exactumin kellarikerroksessa ruokalan vieressä, sekä B221 toisessa kerroksessa. Tunnistat ohjaajat neonvärisistä liiveistä. Nosta kätesi rohkeasti, kun tarvitset apua, äläkä pelkää kysyä tyhmältäkin tuntuvia kysymyksiä.
+
+Lapio-kurssille tarjotaan ohjausta ensimmäisen periodin ajan. Paikalla on yksi tai kaksi ohjaajaa vähintään kahden tunnin ajan.
+
+Pajassa on ohjausta monille erilaisille kursseille. Alla näkyy Lapion ohjausajat. Alustavasti ohjausajat pysyvät koko periodin ajan samoina, mutta saatamme päivittää niitä kysynnän mukaan.
+
+**Vain tietojenkäsittelytieteen pää- ja sivuaineopiskelijoilla on oikeus pajaohjaukseen. Valitettavasti pajaohjaus ei ole DEFA-opiskelijoille.**
+
+Pajaohjaus alkaa tiistaina **4.9.2018**.
+
+|Maanantai | Tiistai      | Keskiviikko  | Torstai      | Perjantai  |
+|   -    | 12-14, BK107 | 10-12, B221 | 14-16, BK107 | 14-16, BK107 |

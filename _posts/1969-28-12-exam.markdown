@@ -1,0 +1,124 @@
+---
+layout: material
+title: "Exam and grading"
+date: 1969-12-28 00:00:10 +0200
+permalink: "/exam/"
+---
+
+One must pass the exam in order to receive a grade from the course. The exam is taken in Moodle, where you log in using your University account.
+
+<h3>Rules in the exam:</h3>
+- Students can start the exam anywhere and anytime they wish, as long as it's done before 31.5.2019.
+- You have three (3) hours to pass the exam.
+- Students are allowed to use the internet during the exam.
+- Students are allowed to search for information on the internet and visit for example forums or other similiar resources during the exam.
+- Students can also test out any commands they wish: actually this is highly recommended and sometimes even necessary. Make sure you pass the exam in a Unix-like environment or Windows' bash shell.
+- The exam must be taken alone. Students are not allowed to work together during the exam. Asking for help from a course assistant or any other person directly or indirectly is strictly forbidden. Students also must not use others' answers as their own. All such acts are perceived as cheating and will have consequences.
+- The computer you pass the exam on has to have Git installed.
+- If you have access to the CS department's computers, we recommend passing the exam on one of them.
+- Each question and answer option is written in Finnish and in English. Please let us know if this is not the case.
+
+<h3>Grading:</h3>
+- The grading scale is the following:
+  - Failed
+  - 3
+  - 5
+- The exam counts for 18 points.
+- Definitive grade limits are determined based on the first period of 2018, but a priori 9 points are required to pass the course and 17 points are required for the grade 5.
+- If you don't pass the exam, you can retake it for an unlimited amount of times, until May 31st 2019. There must be a week between each retake.
+- The exam contains exercises of one and two points.
+- If you have trouble passing the exam please contact the course organizers.
+
+<h3>Subjects covered in the exam</h3>
+
+Here is a list of things covered in each part of the material:
+
+<h4>The goal is that after <strong>the first</strong> week, the student will</h4>
+
+<ul>
+<li>Understand the differences between a graphical and a command line user interface.</li>
+<li>Be able to navigate through files and folders on the command line.</li>
+<ul>
+<li>ls and the options -a and -l</li>
+<li>cd</li>
+<li>mkdir</li>
+</ul>
+<li>Know how to open and create, save and close a file with a command line text editor.</li>
+<ul>
+<li>nano</li>
+<li>vim</li>
+</ul>
+<li>Know how to use relative and absolute paths for referring to files and folders.</li>
+<li>Understand the difference between the root and home folder.</li>
+<li>Be able to copy, cut and paste files and folders from the command line.</li>
+<li>Know how to give several files and folders as arguments using the \* wildcard.</li>
+<li>Know how to handle text with the following commands:</li>
+<ul>
+<li>cat</li>
+<li>tail and head with the option n</li>
+<li>grep</li>
+</ul>
+<li>Know how to handle output with the following commands:</li>
+<ul>
+<li>The pipe |</li>
+<li>> and >></li>
+</ul>
+<li>Know how to create an SSH key pair, and form an SSH connection to another system.</li>
+<li>Know how to fetch content from the internet from the command line.</li>
+<ul>
+<li>wget</li>
+</ul>
+<li>Know how to read the output of the command ls -l.</li>
+<li>Know how to edit the permissions of files and folders.</li>
+<ul>
+<li>chmod</li>
+</ul>
+<li>Know how to write a simple bash script and run it.</li>
+<ul>
+<li>The material only has <code>echo</code> as an example: no further bash skills are required</li>
+</ul>
+<li>Understand the implications and dangers of the sudo command.</li>
+</ul>
+
+<h4>The goal is that after <strong>the second</strong> week, the student will</h4>
+
+<ul>
+<li>Understand the motivations for using version control.</li>
+<li>Know how to create a Git project.</li>
+<li>Understand what a commit is and knows how to create one.</li>
+<li>Understand the different states a change goes through before it's added to a commit.</li>
+<li>Understand what the master branch is.</li>
+<li>Know how to read the output of the command <code>git status</code></li>
+<li>Know how to create a repository on GitHub and add it to an existing Git project.</li>
+<li>Know how to use GitHub through an SSH connection.</li>
+<li>Know how to publish locally made commits.</li>
+<li>Know how set locally made changes aside to the stash, and how to get them back.</li>
+<li>Know what a merge commit is.</li>
+<li>Know what a merge conflict is.</li>
+<li>Understand how a merge conflict is formed.</li>
+<li>Know how to solve a merge conflict.</li>
+<li>Know how to view old commits on GitHub and the command line, and how to move back to the latest commit of master after checking out old ones.</li>
+<li>Know how to clone a Git project to their local machine.</li>
+<li>Understand how GitHub can be used in team projects.</li>
+<ul>
+<li>Know what an issue is.</li>
+<li>Know what forking a project means.</li>
+<li>Know what a pull request is.</li>
+</ul>
+</ul>
+
+
+<h4>The goal is that after <strong>the third</strong> week, the student will</h4>
+
+<ul>
+<li>Understand what a static website means.</li>
+<li>Understand what HTML is and what it's used for.</li>
+<li>Know what an HTML element is and what it consists of.</li>
+<li>Know what an HTML document consists of. </li>
+<li>Know how to correctly indent HTML and understands the syntax.</li>
+<li>Know how to place elements on a web site.</li>
+<li>Know how to make a simple web page more readable </li>
+<li>Know what CSS is and what it is used for.</li>
+<li>Know how to use the most common features of CSS</li>
+<li>Know how to publish static web pages written with vanilla HTML and CSS</li>
+</ul>
