@@ -9,3 +9,5 @@
 Komennon bundle install ajaminen saattaa vaatia muita Ruby-gemien asentamista. Seuraa komentojen ohjeita.
 
 Pull requestit ovat tervetulleita!
+
+Master-haara deployataan automaattisesti Github-pageksi.
