@@ -47,9 +47,7 @@ Kurssin suorittaminen vaatii muutaman ohjelman asentamista koneelle. Mikäli et 
 
 Jos teet tehtäviä kotikoneella, ja olet läsnäoleva yliopisto-opiskelija, asenna ensin [Eduroam](https://www.eduroam.org/what-is-eduroam/), jolla pääset internetiin Helsingin yliopiston kampusalueilla. Helpdeskillä on sille [ohjeet](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/eduroam-verkon-asennus-asetustiedoston-avulla). Suosi aina Eduroamia yliopiston toisen verkon, HUPnetin yli. Internetin käyttö Eduroamin yli on turvallisempaa, ja se on saatavilla kampusalueilla myös ulkomailla.
 
-<div class="note">
-Mikäli olet tietojenkäsittelytieteen pää- tai sivuaineopiskelija, aktivoi CS-tunnuksesi seuraavan sivun <a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat">ohjeiden</a> mukaan ennen materiaalin lukemista.
-</div>
+**Mikäli olet tietojenkäsittelytieteen pää- tai sivuaineopiskelija, aktivoi CS-tunnuksesi seuraavan sivun [ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan ennen materiaalin lukemista.**
 
 ## Linkit
 
