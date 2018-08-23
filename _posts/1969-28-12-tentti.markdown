@@ -3,6 +3,7 @@ layout: material
 title: "Tentti ja arvostelu"
 date: 1969-12-28 00:01:00 +0200
 permalink: "/tentti/"
+tag: info
 ---
 
 Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti suoritetaan Moodle-oppimisympäristössä, johon kirjaudutaan yliopiston käyttäjätunnuksilla.

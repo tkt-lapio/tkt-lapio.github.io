@@ -3,6 +3,7 @@ layout: post
 title: 'Osa 2 - Versionhallinta: Git ja Github'
 date: 1969-12-28 00:03:00 +0200
 permalink: /git/
+tag: material
 ---
 
 # Oppimistavoitteet

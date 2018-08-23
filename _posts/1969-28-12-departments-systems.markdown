@@ -3,6 +3,7 @@ layout: material
 title: "The CS department's systems"
 date: 1969-12-28 00:00:05 +0200
 permalink: /departments-systems/
+tag: eng
 ---
 
 - If you are a CS major or minor, please activate your account according to [these](https://www.cs.helsinki.fi/en/compfac/user-accounts) instructions.
