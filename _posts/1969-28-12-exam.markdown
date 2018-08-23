@@ -3,6 +3,7 @@ layout: material
 title: "Exam and grading"
 date: 1969-12-28 00:00:10 +0200
 permalink: "/exam/"
+tag: eng
 ---
 
 One must pass the exam in order to receive a grade from the course. The exam is taken in Moodle, where you log in using your University account.

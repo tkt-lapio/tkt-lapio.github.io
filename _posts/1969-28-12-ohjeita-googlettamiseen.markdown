@@ -3,6 +3,7 @@ layout: material
 title: "Ohjeita tehokkaaseen googlettamiseen"
 date: 1969-12-28 00:05:00 +0200
 permalink: "/ohjeita-googlettamiseen/"
+tag: info
 ---
 
 Tällä kurssilla tulee monta kertaa vastaan tehtävä, jossa kehotetaan selvittämään itse, miten jonkin asian voi tehdä. Tiedon hakeminen itsenäisesti Internetistä on olennainen osa ohjelmoijan työtä: keneltäkään harvoin odotetaan, että tietyn komennon parametrien tai metodien nimet muistettaisiin ulkoa. Oleellista on kyetä etsimään tarvittaessa luotettavaa tietoa Internetistä.

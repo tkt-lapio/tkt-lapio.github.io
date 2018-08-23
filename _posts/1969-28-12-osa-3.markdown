@@ -3,6 +3,7 @@ layout: material
 title: 'Osa 3 - Staattiset verkkosivut'
 date: 1969-12-28 00:02:00 +0200
 permalink: /verkkosivut/
+tag: material
 ---
 
 # Oppimistavoitteet

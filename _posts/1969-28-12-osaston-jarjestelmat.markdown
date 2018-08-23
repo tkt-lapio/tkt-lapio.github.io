@@ -3,6 +3,7 @@ layout: material
 title: 'Osaston järjestelmät'
 date: 1969-12-28 00:00:00 +0200
 permalink: /osaston-jarjestelmat/
+tag: info
 ---
 
 - Mikäli olet tietojenkäsittelytieteen pää- tai sivuaineopiskelija, aktivoi CS-tunnuksesi seuraavan sivun [ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan.

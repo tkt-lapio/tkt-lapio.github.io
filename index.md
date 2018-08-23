@@ -3,6 +3,7 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+list_title: Materiaali
 ---
 
 <h3>A link to the English page is in the upper right corner</h3>
@@ -23,7 +24,7 @@ Tehtäviä tekemällä ansaitsee laskaripisteitä, jotka lasketaan mukaan kurssi
 
 ## Tukikanavat
 
-Kurssilla on kaksi tukikanavaa: Syksyn 2019 ensimmäisen periodin ajan järjestetään pajaohjausta, jolloin opiskelijoiden on mahdollista tulla tekemään tehtäviä osaston tiloihin, ja saada halutessaan apua kurssin assistenteilta. Lue lisää pajasta, ja sen aikatauluista [täältä](/paja).
+Kurssilla on kaksi tukikanavaa: Syksyn 2018 ensimmäisen periodin ajan järjestetään pajaohjausta, jolloin opiskelijoiden on mahdollista tulla tekemään tehtäviä osaston tiloihin, ja saada halutessaan apua kurssin assistenteilta. Lue lisää pajasta, ja sen aikatauluista [täältä](/paja).
 
 Kurssilla on myös sähköinen tukikanava, joka on sillattu IRCistä telegrammiin. 
 
@@ -48,16 +49,6 @@ Kurssin suorittaminen vaatii muutaman ohjelman asentamista koneelle. Mikäli et 
 Jos teet tehtäviä kotikoneella, ja olet läsnäoleva yliopisto-opiskelija, asenna ensin [Eduroam](https://www.eduroam.org/what-is-eduroam/), jolla pääset internetiin Helsingin yliopiston kampusalueilla. Helpdeskillä on sille [ohjeet](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/eduroam-verkon-asennus-asetustiedoston-avulla). Suosi aina Eduroamia yliopiston toisen verkon, HUPnetin yli. Internetin käyttö Eduroamin yli on turvallisempaa, ja se on saatavilla kampusalueilla myös ulkomailla.
 
 **Mikäli olet tietojenkäsittelytieteen pää- tai sivuaineopiskelija, aktivoi CS-tunnuksesi seuraavan sivun [ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan ennen materiaalin lukemista.**
-
-## Linkit
-
-<a href="/tentti">Tentti ja arvostelu</a>
-
-Tähän tulee kurssin alettua linkki kurssialueeseen Moodlessa.
-
-<a href="/osaston-jarjestelmat">Osaston IT-järjestelmät</a>
-
-<a href="/paja">Pajasta</a>
 
 <h2>Ohjeita materiaalin lukemiseen</h2>
 
