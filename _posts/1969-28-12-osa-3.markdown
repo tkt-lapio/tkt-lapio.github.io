@@ -32,7 +32,7 @@ Yksinkertaistettuna verkkosivulla tarkoitetaan internetissä julkaistua tekstido
 Tarvitset tässä osassa tekstieditoria. Suosittelemme [vscodea](https://code.visualstudio.com/download). Tämän lisäksi tarvitset verkkoselainta. Hyviä moderneja verkkoselaimia ovat muun muassa [google chrome](https://www.google.fi/chrome/index.html) ja [firefox](https://www.mozilla.org/fi/firefox/). Osan pystyy suorittamaan myös jollain muulla tekstieditorilla tai selaimella.
 
 <div class="exercise">
-<h3><span class="points">5%</span> Tehtävä 1: Järjestelyt</h3>
+<h3>Tehtävä 1: Järjestelyt {% include points.html text="5%" %}</h3>
 <ol>
 <li>Luo "Lapio-website"-niminen kansio komentoriviä käyttäen ja tee tästä kansiosta git-projekti.</li>
 <li>Luo Githubiin uusi <strong>tyhjä</strong> repo nimellä Lapio-website.</li>
@@ -77,7 +77,7 @@ Lisätään index.html tiedostoon `<!--Tee tehtävät tänne-->` rivin alapuolel
 ![Esimerkki miten HTML näkyy selaimessa](/assets/html-example-01.png)
 
 <div class="exercise">
-<h3><span class="points">5%</span> Tehtävä 2: Tutustuminen tekstielementteihin</h3>
+<h3>Tehtävä 2: Tutustuminen tekstielementteihin {% include points.html text="5%" %}</h3>
 Jatketaan index.html tiedoston muokkaamista. Testaa eri tekstielementit läpi ja katso mitä eri elementit tekevät. Tehtävän tavoitteena on saada sivustosta seuraavan näköinen.
 <img src="/assets/html-ex1.png" alt="Ensimmainen tehtava kuvana"/>
 Kun koet, että tehtävä on valmis, tee commit viestillä `Viikko 3. Toinen tehtävä` ja puske tehtävä Githubiin.
@@ -124,7 +124,7 @@ Edellinen esimerkki näyttää selaimessa tältä:
 Sisäkkäin asettelu on hyvin tärkeä osa HTML-dokumenttiä, ja sen rooli korostuu myöhemmin, kun alamme käyttämään css-tyylejä.
 
 <div class="exercise">
-<h3><span class="points">10%</span> Tehtävä 3: Sisäkkäin asetetut elementit</h3>
+<h3>Tehtävä 3: Sisäkkäin asetetut elementit {% include points.html text="10%" %}</h3>
 Tehtävänäsi on jatkaa edellisistä tehtävistä tuttua index.html tiedostoa.
 Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi `Jukola`, kursivoi `Häme`ja lihavoi sekä kursivoi `Toukola`
 <img src="/assets/html-ex3.png" alt="Kolmas tehtava kuvana"/> 
@@ -235,7 +235,7 @@ Sisäkkäin asetetulla listalla tarkoitetaan listaa, jossa on listoja listojen s
 ```
 
 <div class="exercise">
-<h3><span class="points">10%</span> Tehtävä 4: Listat</h3>
+<h3>Tehtävä 4: Listat {% include points.html text="10%" %}</h3>
 
 Jatketaan edellisestä tehtävistä tuttua index.html dokumentin muokkaamista. Testaa ensin dokumenttiin mitä eri listatyypit tekevät. Tämän jälkeen yritä saada sivusto näyttämään seuraavanlaiselta.
 
@@ -262,7 +262,7 @@ Huomataan myös, että `<img/>` tagilla ei ole lopetustagia. Se on niin sanottu 
 HTML-dokumentissä voi olla kommentteja, jotka eivät näy lopullisessa verkkosivussa. Niiden tarkoitus on selventää kirjoittajan ajatuksia seuraavalle kirjoittajalle, tai itselleen myöhempää käyttöä varten. Kommentin voi lisätä `<!-- ja -->`väliin. Esimerkiksi seuraava on HTML kommentti `<!-- Tämä tässä on kommentti -->`
 
 <div class="exercise">
-<h3><span class="points">10%</span> Tehtävä 5: Kuvat ja kommentit</h3>
+<h3>Tehtävä 5: Kuvat ja kommentit {% include points.html text="10%" %}</h3>
 <div class="warning">
 Jos liität omille verkkosivuille kuvan joltain toiselta sivulta, pitää sinulla olla oikeus käyttää tätä kuvaa.
 Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia.
@@ -294,7 +294,7 @@ Linkki elementti sisältää `href` attribuutin jossa on osoite linkattavaan koh
 Linkille voi myös antaa `target` attribuutin, jonka `_blank` arvolla voi pakottaa linkin aukeamaan toisella välilehdessä. Lisää linkin attribuuteista voi lukea [täältä](https://www.w3schools.com/tags/tag_a.asp).
 
 <div class="exercise">
-<h3><span class="points">10%</span> Tehtävä 6: HTML tiedostojen linkittäminen</h3>
+<h3>Tehtävä 6: HTML tiedostojen linkittäminen {% include points.html text="10%" %}</h3>
 <ol>
 <li>Tee toinen HTML -tiedosto ja sijoita se samaan kansioon edellisen tiedoston kanssa.</li>
 <li>Lisää tiedosto Gittiin.</li>
@@ -330,7 +330,7 @@ Jotta CSS voi vaikuttaa HTML-elementteihin, pitää HTML-dokumentin löytää CS
 Huomataan, että linkissä on kolme eri attribuuttia, joista vain yksi on tuttu. Attribuutti `rel` määrittää, että luettava tiedosto on tyylitiedosto. Type puolestaan määrittää, että kyseessä on CSS -tyyliarkkikieli. Näin selain tietää, että sen pitää lukea myös CSS-tiedosto ja ottaa huomioon myös sen tekemät muutokset.
 
 <div class="exercise">
-<h3><span class="points">5%</span> Tehtävä 7: CSS:n linkittäminen</h3>
+<h3>Tehtävä 7: CSS:n linkittäminen {% include points.html text="5%" %}</h3>
 <ol>
 <li>Tee `style.css` tiedosto samaan kansioon kuin aikaisemmat tehtävät.</li>
 <li>Lisää tiedosto Gittiin.</li>
@@ -419,7 +419,7 @@ Universaali selektori on helppo ymmärtää. Sillä valitaan jokainen elementti 
 ```
 
 <div class="exercise">
-<h3><span class="points">10%</span> Tehtävä 8: Selektorit</h3>
+<h3>Tehtävä 8: Selektorit {% include points.html text="10%" %}</h3>
 
 Tehtävän ideana on testata kaikkia eri selektoreita värittämisen avulla.
 
@@ -534,7 +534,7 @@ Elementti on sijoittunut reunaan, mutta se ei varaa enää tilaa itse dokumentis
 Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosittelemme siihen tutustumista vielä lisää esimerkiksi [täältä](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 
 <div class="exercise">
-<h3><span class="points">10%</span> Tehtävä 9: Elementit vierekkäin</h3>
+<h3>Tehtävä 9: Elementit vierekkäin {% include points.html text="10%" %}</h3>
 <ol>
 <li>Tee git-kansioon toinen tiedosto, ja nimeä se position.html nimellä.</li>
 <li>Tee myös styles.css tiedosto ja tee tarvittavat toimenpiteet että saat linkitettyä tiedostot toisiinsa.</li>
@@ -593,7 +593,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 `border-color`, määrittelee minkä värinen reuna on. Tälle voi antaa samoja ominaisuuksia kuin `background-color` tai `color` ominaisuuksille.
 
 <div class="exercise">
-<h3><span class="points">5%</span> Tehtävä 10: CSS:n ominaisuuksia</h3>
+<h3>Tehtävä 10: CSS:n ominaisuuksia {% include points.html text="5%" %}</h3>
 <ol>
 <li>Tehtävän ideana on, että tutustut äsken käytyihin ominaisuuksiin itsenäisesti.</li>
 <li>Ota tavoitteeksi, että saat edellisessä tehtävässä tehdyn sivun näyttämään tältä.</li>
@@ -694,7 +694,7 @@ code {
 Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mistä lähdimme liikkeelle.
 
 <div class="exercise">
-<h3><span class="points">10%</span> Tehtävä 11: Sivuista luettavat CSS:n avulla</h3>
+<h3>Tehtävä 11: Sivuista luettavat CSS:n avulla {% include points.html text="10%" %}</h3>
 <ol>
 <li>Tee kappaleessa käydyt asiat edellisistä tehtävistä tutuille verkkosivuille. Voit lisätä verkkosivuille pidemmän kappaleen Seitemästä veljestä, jotta näet paremmin lopputuloksen. Löydät koko kirjan [täältä](http://www.gutenberg.org/cache/epub/11940/pg11940.txt).</li>
 <li>Verkkosivun pitäisi näyttää suurinpiirtein tältä: TODO</li>
@@ -732,7 +732,7 @@ Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
 
 <div class="exercise">
 
-<h3><span class="points">10%</span> Tehtävä 12: Ansioluettelo</h3>
+<h3>Tehtävä 12: Ansioluettelo {% include points.html text="10%" %}</h3>
 <ol>
 <li>Luo uusi repositorio Githubiin.</li>
 <li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna. Jos et halua tehdä omaa niin voit tehdä ansioluettelon keksityillä tiedoilla.</li>
