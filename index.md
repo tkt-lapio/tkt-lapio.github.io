@@ -20,13 +20,13 @@ Jos aiheista on kokemusta aikaisemmin, materiaalin lukeminen tai tehtävien teke
 
 Jokaisen osan alussa on määritelty oppimistavoitteet, joiden perusteella voit määritellä itse, oletko valmis osallistumaan tenttiin.
 
-Tehtäviä tekemällä ansaitsee laskaripisteitä, jotka lasketaan mukaan kurssipisteisiin. Voit lukea kurssipisteistä lisää arvostelu-sivulta.
+Tehtäviä tekemällä ansaitsee laskaripisteitä, jotka lasketaan mukaan kurssipisteisiin. Voit lukea kurssipisteistä lisää [arvostelu-sivulta](/tentti).
 
 ## Tukikanavat
 
 Kurssilla on kaksi tukikanavaa: Syksyn 2018 ensimmäisen periodin ajan järjestetään pajaohjausta, jolloin opiskelijoiden on mahdollista tulla tekemään tehtäviä osaston tiloihin, ja saada halutessaan apua kurssin assistenteilta. Lue lisää pajasta, ja sen aikatauluista [täältä](/paja).
 
-Kurssilla on myös sähköinen tukikanava, joka on sillattu IRCistä telegrammiin. 
+Kurssilla on myös sähköinen tukikanava, joka on sillattu IRCistä telegrammiin.
 
 - #lapio2017 @IRCnet
 - <a href="https://t.me/tktlapio">Liittymislinkki Telegram-ryhmään</a>
