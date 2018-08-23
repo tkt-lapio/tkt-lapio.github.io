@@ -62,8 +62,8 @@ HTML-tagit ovat sivuston piilotettuja avainsanoja, eli ne eivät näyttäydy sil
 
 1.  `<h1></h1>` Elementtiä käytetään otsikkojen tekemiseen. Otsikko tageja on olemassa kuusi erilaista (h1-h6). Tärkein otsikko merkitään h1 -tagilla ja vähinten tärkeä otsikko merkitään h6 -tagilla.
 2.  `<p></p>` Elementtiä käytetään leipätekstin tekoon.
-3.  `<i></i>` Elementtiä käytetään kursivoidun kirjoitustyypin tekoon.
-4.  `<b></b>` Elementtiä käytetään lihavoidun kirjoitustyypin tekoon. Myös `<em>` ja `<strong>` elementtejä käytetään lihavoimaan tekstiä.
+3.  `<em></em>` Elementtiä käytetään kursivoidun kirjoitustyypin tekoon.
+4.  `<strong></strong>` Elementtiä käytetään lihavoidun kirjoitustyypin tekoon. Myös `<b>` ja `<i>` elementtejä käytetään lihavoimaan sekä kursivoimaan tekstiä.
 
 Katsotaan miten HTML toimii käytännössä.
 Avataan edellisessä tehtävässä luotu index.html tiedosto verkkoselaimessa sekä tekstieditorissa.
@@ -79,8 +79,8 @@ Lisätään index.html tiedostoon `<!--Tee tehtävät tänne-->` rivin alapuolel
 <div class="exercise">
 <h3>Tehtävä 2: Tutustuminen tekstielementteihin {% include points.html text="5%" %}</h3>
 Jatketaan index.html tiedoston muokkaamista. Testaa eri tekstielementit läpi ja katso mitä eri elementit tekevät. Tehtävän tavoitteena on saada sivustosta seuraavan näköinen.
-<img src="/assets/html-ex1.png" alt="Ensimmainen tehtava kuvana"/>
-Kun koet, että tehtävä on valmis, tee commit viestillä `Osa 3. Toinen tehtävä` ja puske tehtävä Githubiin.
+<img src="/assets/html-ex1.png" alt="Toinen tehtava kuvana"/>
+Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen tehtävä </code>ja puske tehtävä Githubiin.
 </div>
 
 # Sisäkkäin asetetut elementit
@@ -92,21 +92,21 @@ Esimerkiksi, kun meillä on lause, josta haluamme vahvistaa vain osan, on meidä
 Tämä on kiva **lause**
 
 ```html
-<p>Tämä on kiva <b>lause</b></p>
+<p>Tämä on kiva <strong>lause</strong></p>
 ```
 
-On kuitenkin tärkeää sulkea HTML-elementit järjestyksessä. Edellisessä esimerkikssä avasimme ensimmäiseksi `<p>` elementin, jonka jälkeen avasimme `<b>` elementin. Suljimme `</b>` elementin ensimmäisenä ja `</p>` elementin sen jälkeen. Oikeaoppisessa HTML:ssä on virheellistä sulkea elementit väärässä järjestyksessä. Aina pitää sulkea viimeiseksi aukaistu elementti. Jos emme tee näin,yrittää selain arvata parhaan tavan esittää koodin. Eri selaimet arvaavat voivat arvata eri tavalla, joten emme voi olla varmoja dokumentin esitystavasta.
+On kuitenkin tärkeää sulkea HTML-elementit järjestyksessä. Edellisessä esimerkikssä avasimme ensimmäiseksi `<p>` elementin, jonka jälkeen avasimme `<strong>` elementin. Suljimme `</strong>` elementin ensimmäisenä ja `</p>` elementin sen jälkeen. Oikeaoppisessa HTML:ssä on virheellistä sulkea elementit väärässä järjestyksessä. Aina pitää sulkea viimeiseksi aukaistu elementti. Jos emme tee näin,yrittää selain arvata parhaan tavan esittää koodin. Eri selaimet arvaavat voivat arvata eri tavalla, joten emme voi olla varmoja dokumentin esitystavasta.
 
 On olemassa kahta eri kategoriaa HTML-elementtejä. Niin sanotut _lohkotason_ elementit ja _sisätason_ elementit.
 
 Lohkotason elementit ovat näkyvissä lohkoina verkkosivulla. Jokainen lohkotason elementti varaa oman rivin, eli toisin sanoen lohkotason elementtien sisältö näkyy aina uudelta riviltä. Lohkotason elementtiä ei pidä sisällyttää sisätason elementin sisään. Sisätason elementti on aina lohkotason elementin sisällä.
 
-Sisätason elementit on siis aina suljettu lohkotason elementin sisälle ja ne käsittelevät vain todella pientä palaa sivustosta. Ne eivät käsittele kokonaisia teksipaloja tai kuvia. Yhdellä rivillä voi olla useita sisätason elementtejä. Yleensä sisätason elementtejä näkyy vain tekstin sisällä. Tällaisia elementtejä ovat simerkiksi `<b></b>` tai `<a></a>` elementit.
+Sisätason elementit on siis aina suljettu lohkotason elementin sisälle ja ne käsittelevät vain todella pientä palaa sivustosta. Ne eivät käsittele kokonaisia teksipaloja tai kuvia. Yhdellä rivillä voi olla useita sisätason elementtejä. Yleensä sisätason elementtejä näkyy vain tekstin sisällä. Tällaisia elementtejä ovat simerkiksi `<strong></strong>` tai `<a></a>` elementit.
 
 Käydään läpi lohkotason ja sisätason elementtejä esimerkin kautta.
 
 ```
-<p>Tämä tässä on esimerkki <b>sisätason elementtiä</b> käyttäen</p>
+<p>Tämä tässä on esimerkki <strong>sisätason elementtiä</strong> käyttäen</p>
 ```
 
 Edellinen esimerkki näyttää selaimessa tältä:
@@ -171,9 +171,9 @@ HTML-dokumentti täytyy sisentää oikein, jotta koodin luettavuus pysyy selkeä
 <h1>otsikko</h1>
 
 <p>Lorem ipsum
-<i>dolor sit amet</i>
+<em>dolor sit amet</em>
 consectetur adipisicing elit,sed do
-<b>eiusmod tempor</b>
+<strong>eiusmod tempor</strong>
 </p>
 ```
 
@@ -182,8 +182,8 @@ consectetur adipisicing elit,sed do
 ```html
 <h1>otsikko</h1>
 <p>
-  Lorem ipsum<i>dolor sit amet</i>consectetur
-  adipisicing elit,sed do<b>eiusmod tempor</b>
+  Lorem ipsum<em>dolor sit amet</em>consectetur
+  adipisicing elit,sed do<strong>eiusmod tempor</strong>
 </p>
 ```
 
@@ -582,7 +582,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 
 `font-size`, kertoo kuinka suurta tekstiä näytetään. Käytä tämän kanssa `px` tai `em` arvoja.
 
-`font-style`, mahdollistaa eri kirjaisintyylien käytön, esimerkiksi lihavoidun. Kannattaa kuitenkin aina merkitä lihavointi `<b></b>` tai `<strong></strong>` elementeillä, ja kursivointi `<i></i>`. Tämä sen takia, että esimerkiksi sokeiden lukuohjelmat lukee verkkosivua suoraan html:lästä, eikä tällöin CSS-tehdyt muutokset välity kuuntelijalle.
+`font-style`, mahdollistaa eri kirjaisintyylien käytön, esimerkiksi lihavoidun. Kannattaa kuitenkin aina merkitä lihavointi `<strong></strong>` tai `<strong></strong>` elementeillä, ja kursivointi `<em></em>`. Tämä sen takia, että esimerkiksi sokeiden lukuohjelmat lukee verkkosivua suoraan html:lästä, eikä tällöin CSS-tehdyt muutokset välity kuuntelijalle.
 
 `background-color`, värjää elementin taustan, tälle voi antaa samoja arvoja kuin color elementille.
 
