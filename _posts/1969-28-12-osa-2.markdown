@@ -52,14 +52,14 @@ GitHub on myöhemmin kehitetty palvelu, joka säilyttää Git-projekteja. GitHub
 Gittiä ja GitHubia käytetään yliopistolla yksilö- ja ryhmätöissä, sekä yleisesti työelämässä. Niiden käyttö ei rajoitu pelkästään koodiin, vaan moni pitää esimerkiksi kandinsa tai maisterinsa Gitissä. Tässä osassa keskitytään lähinnä koodin jakamiseen Gitin avulla GitHubissa, ja siinä usein kohdattuihin ongelmiin. Lisää Gitistä oppii esimerkiksi kursseilla Ohjelmistotekniikan menetelmät ja Ohjelmistotuotanto.
 
 <div class="exercise">
-<h3>Tehtävä 1 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 1: Github-tunnuksen luonti {% include points.html text="5%" %}</h3>
 
 Luo aluksi GitHub-tunnus osoitteessa <a href="https://github.com/"> https://github.com/ </a>. GitHubiin rakennetaan eräänlainen koodiportfolio, joka usein linkataan myös CV:seen, kannattaa siis valita siisti käyttäjänimi.
 Git löytyy laitoksen koneilta ja Ubuntusta valmiiksi. Muussa tapauksessa sen voi asentaa esimerkiksi <a href="https://git-scm.com/downloads" >täältä</a>, tai <a href="/komentorivi#asentamisesta">pakettienhallintajärjestelmän</a> kautta. Käytämme näissä ohjeissa Gittiä terminaalin kautta.
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 2 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 2: Gitin konfigurointi {% include points.html text="5%" %}</h3>
 
 Konfiguroidaan hieman Gittiä.
 
@@ -229,7 +229,7 @@ Komennon `git status` ulosteen yläreunassa näkyy: `On branch master`. Haarat, 
 Usein haaroja käytetään niin, että päähaarasta erotetaan uuden toiminnallisuuden testaamiseksi toinen haara, jossa koodataan lisäominaisuuksia. Haarat eivät vaikuta toistensa tiloihin, eli uudella koodilla voidaan leikkiä huolimatta päähaarasta. Kun ollaan todettu uusi koodi toimivaksi, voidaan se lisätä päähaaraan, ja poistaa uusi haara. Tässä osassa ei käsitellä haaroja sen enempää: riittää ymmärtää, että käytämme nyt vain master-, eli päähaaraa.
 
 <div class="exercise">
-<h3>Tehtävä 3 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 3: Committien harjoittelua {% include points.html text="10%" %}</h3>
 <ol>
 <li>Luo kansio komentorivillä ja tee siitä Git-projekti.</li>
 <li>Luo projektikansioosi tiedosto nimeltä <code>tarina.txt</code>. Lisää sinne jokin pitkä pätkä tekstiä.</li>
@@ -247,7 +247,7 @@ Jos committia luodessa tulostuu virheviesti <code>error: cannot run : No such fi
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 4 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 4: Muutosten poistaminen {% include points.html text="10%" %}</h3>
 <ol>
 <li>Selvitä, miten saat poistettua muutoksen tilasta, jossa olet lisäämässä sitä committiin (näkyy vihreänä tulostuksessa), ja siirrettyä muutoksen otsikon <code>Changes not staged for commit</code> alle? Vinkki: <code>git status</code> auttaa.</li>
 <li>Lisää uusia tuotteita ostoslistaan, ja aseta muutokset lisättäväksi seuraavaan committiin (<code>Changes to be commited</code>). <strong>Älä kuitenkaan paketoi committia.</strong></li>
@@ -291,14 +291,14 @@ Valitaan GitHubin ohjeista SSH-osoite projektille, jotta siihen voidaan muodosta
 Uusi origin-niminen etärepositorio lisätään SSH-yhteyttä käyttäen ajamalla projektikansiossa komento `git remote add origin git@github.com:kayttaja/projekti.git`. Https-osoite olisi käytännössä sama, kuin selaimen osoiterivillä. Etärepositorion nimi voi olla muutakin kuin "origin", mutta se on yleinen valinta. Yhdelle projektille voi lisätä useita etärepositorioita, jolloin niiden järkevä nimeäminen on oleellista.
 
 <div class="exercise">
-<h3>Tehtävä 5 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 5: SSH-avainparin luominen {% include points.html text="5%" %}</h3>
 Jos et ole luonut koneellesi ssh-avainparia, tee se ensin. Ohjeet löytyy <a href="/komentorivi#SSH-avainpari">ensimmäiseltä viikolta</a>.
 Lisää julkinen ssh-avaimesi GitHubin käyttäjällesi. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">Ohjeet GitHubissa</a>.
 Voit tulostaa ssh-avaimen terminaaliisi komennolla `cat avaintiedoston_nimi` ja kopioida sen painamalla <code>ctrl + shift + c</code>, ja jatkaa GitHubin ohjeiden seuraamista kohdasta 2. Tällöin sinun ei tarvitse asentaa uutta ohjelmaa, kuten GitHubin ohjeet ehdottavat.
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 6 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 6: Etärepositorion luominen Githubissa {% include points.html text="5%" %}</h3>
 Luo aikaisemmin tekemällesi projektille vastapari, eli repositorio GitHubiin. Älä luo projektille GitHubissa valmiiksi lisenssiä, READMEtä tai .gitignore-tiedostoa, muuten kohtaat myöhemmin ongelmia.
 Liitä GitHubin repo projektisi etärepositorioksi. Jos teit edellisen tehtävän, käytä SSH-osoitetta, muuten käytä https-osoitetta.
 </div>
@@ -313,7 +313,7 @@ Muutokset voi puskea tietyn etärepositorion tiettyyn haaraan seuraavasti: `git 
 Pusketaan `lapio_vko2.txt`-tiedostoon tekemämme muutokset komennolla `git push -u origin master`, sillä lisäsimme etärepositorion nimellä `origin`, ja käytämme `master`-haaraa. Navigoidaan GitHubissa projektisivulle. Tiedosto `lapio_vko2.txt` näkyy nyt GitHubissa.
 
 <div class="exercise">
-<h3>Tehtävä 7 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 7: Commitin julkaiseminen {% include points.html text="5%" %}</h3>
 <ol>
 <li>Puske tekemäsi kolme committia etärepositoriosi <code>master</code>-haaraan.</li>
 <li>Käy tarkistamassa GitHubissa, että luomasi neljä committia näkyvät etärepositoriossa.</li>
@@ -360,7 +360,7 @@ Fast-forward
 Nyt muutokset näkyvät myös paikallisesti.
 
 <div class="exercise">
-<h3>Tehtävä 8 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 8: Koodin hakeminen etärepositoriosta {% include points.html text="5%" %}</h3>
 Luo GitHubissa kouluprojektit-alikansioon uusi tiedosto, ja hae se sitten omaan projektiisi.
 </div>
 
@@ -389,7 +389,7 @@ Pullaus ei toimi, koska paikallisessa versiossa on muutoksia samaan tiedostoon, 
 Tällaisessa tilanteessa voidaan laittaa paikalliset muutokset syrjään _stashiin_ komennolla `git stash`. Kun ajetaan `git stash`, paikallisesti lisätyt muutokset Gitin seuraamissa kansiossa laitetaan syrjään. Tämä siis tarkoittaa, että tehdyt muutoksen poistuvat näkyvistä, mutta niitä ei ole menetetty kokonaan. Laittaaksesi syrjään myös muutokset Gittiin vielä lisäämättömissä tiedostoissa (`untracked`), aja komento vivulla `-u`, eli `git stash -u`. Saat muutokset takaisin käskyllä `git stash pop`.
 
 <div class="exercise">
-<h3>Tehtävä 9 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 9: Stashin käyttäminen pullatessa {% include points.html text="10%" %}</h3>
 <ol>
 <li>Tee muutoksia paikallisesti jo kertaalleen Gittiin lisäämiisi tiedostoihin (eivät ole <code>untracked</code>-otsikon alla </li>komennon <code>git status</code> tulostuksessa).
 <li>Laita sen jälkeen juuri tekemäsi muutokset syrjään stashiin.</li>
@@ -454,7 +454,7 @@ Merge made by the 'recursive' strategy.
 Nyt komennon `git status` mukaan ollaan tehty 2 committia (`ahead by 2 commits`). Ensimmäinen niistä on se, joka luotiin paikallisesti, ja toinen on uusi, automaattisesti luotu merge-commit.
 
 <div class="exercise">
-<h3>Tehtävä 10 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 10: Mergeäminen {% include points.html text="5%" %}</h3>
 <ol>
 <li>Luo etärepositorioon GitHubissa ja paikallisesti sellaiset commitit, että niissä tapahtuvat muutokset eivät ole ristiriidassa keskenään, eli eivät muokkaa samoja rivejä. Toimi esimerkiksi seuraavasti: muokkaa ostoslistan ensimmäistä tuotetta GitHubissa, ja tee commit. Lisää sitten paikallisesti ostoslistan loppuun uusi tuote ja tee uusi commit.</li>
 <li>Kokeile puskea paikallinen committisi etärepositorioon. Minkä virheviestin saat?</li>
@@ -537,7 +537,7 @@ Merge-konfliktit ovat raivostuttavia, mutta yleisiä. Helpoiten niiltä välttyy
 Merge-konflikteja voi tulla myös, kun muutoksia ottaa pois stashista, jos syrjään asetetut muutokset ovat ristiriidassa nykyisten muutosten kanssa.
 
 <div class="exercise">
-<h3>Tehtävä 11 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 11: Merge-konflikti {% include points.html text="10%" %}</h3>
 Aiheuta projektissasi merge-konflikti, ja ratkaise se. Puske lopputulos GitHubiin.
 </div>
 
@@ -570,7 +570,7 @@ Painamalla seuraavaksi "Browse files", tai edellisestä näkymästä oikeanpuoli
 Saman voi tehdä myös komentorivillä. Kun ollaan Git-projektin kansiossa, tiettyyn committiin voidaan siirtyä komennolla `git checkout commitin_id`. Tämä vastaa samaa, kuin GitHubissa koko projektin tilan tarkasteleminen tietyn commitin jälkeen. Samalla tavalla takaisin viimeisimpään committiin pääsee komennolla `git checkout haarannimi`, eli yleisimmässä tapauksessa `git checkout master`. Yksittäisen commitin muutoksia voidaan tarkastella komennolla `git show commitin_id`.
 
 <div class="exercise">
-<h3>Tehtävä 12 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 12: Salaisuus {% include points.html text="10%" %}</h3>
 <ol>
 <li>Luo projektiisi uusi tiedosto <code>salaisuus.txt</code>, ja kirjoita sisään esimerkiksi "tämä on hyvin salainen salaisuus".</li>
 <li>Tee commit salaisuuden lisäämisestä.</li>
@@ -601,7 +601,7 @@ On kuitenkin myös toinen tapa ehdottaa muutoksia olemassaolevaan projektiin: _f
 Jos oman kopioosi tekemäsi muutokset ovat mielestäsi niin hyviä, että haluat ehdottaa niitä myös alkuperäiseen projektiin, sen voi tehdä [pull requestin](https://help.github.com/articles/about-pull-requests/) avulla. Tällöin alkuperäisen projektin omistaja voi halutessaan liittää mergen avulla muutoksesi projektiinsa.
 
 <div class="exercise">
-<h3>Tehtävä 13 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 13: Kloonaaminen {% include points.html text="10%" %}</h3>
 <ol>
 <li>Selvitä ensin Googlen avulla, miten saat selville komentoriviltä Git-projektin etärepositorioiden nimet ja osoitteet. Kyseessä on siis komento, joka ajetaan Git-projektin sisällä, kun sille on asetettu etärepositorio.</li>
 <li>Etsi vapaavalintainen <a href="https://en.wikipedia.org/wiki/Open-source_software">vapaan lähdekoodin</a>-projekti GitHubista (esim. <a href="https://github.com/google/guava">Googlen Guava</a> tai <a href="https://github.com/orfjackal/varjocafe">VarjoCafe</a>). Kloonaa se ensin koneellesi. Selvitä sitten, minkä nimiseksi etärepositorio asetetaan automaattisesti kloonatessa. Voit tehdä tämän ajamalla edellisessä kohdassa selvittämäsi komennon kloonatun projektin sisällä.</li>
@@ -609,7 +609,7 @@ Jos oman kopioosi tekemäsi muutokset ovat mielestäsi niin hyviä, että haluat
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 14 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 14: Toisen projektin tutkiminen {% include points.html text="5%" %}</h3>
 Tutki sen jälkeen jonkin vapaan lähdekoodin projektin repoa GitHubissa. Etsi, mistä löydät projektin issuet ja pull requestit. Etsi myös projektiin osallistuneet (<i>contributors</i>) ja heihin liittyvä statistiikka.
 </div>
 

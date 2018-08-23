@@ -6,7 +6,7 @@ permalink: /departments-systems/
 tag: eng
 ---
 
-- If you are a CS major or minor, please activate your account according to [these](https://www.cs.helsinki.fi/en/compfac/user-accounts) instructions.
+- If you are a CS major or minor, please activate university account [here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/user-account/activating-new-username) and your CS account according to [these](https://www.cs.helsinki.fi/en/compfac/user-accounts) instructions.
 
 - The university offers its students two ways for wireless internet connection: Eduroam and HUPnet. You can also get guest access to HUPnet. HUPnet is not secured, so we heavily recommend using Eduroam. You can also access it in some campus sites overseas. Instructions on installing Eduroam are found [here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/networks/setting-eduroam-installer-package). You can also install it on your mobile device: [Android](https://helpdesk.it.helsinki.fi/en/instructions/computer-and-printing/mobile-devices/eduroam-on-android-devices) and [iPhone](https://helpdesk.it.helsinki.fi/en/instructions/computer-and-printing/mobile-devices/ipad-and-iphone-wireless-connections).
 
@@ -27,3 +27,13 @@ If you use the department's servers over SSH connection and have added your priv
 - The departments also has a cluster called [Ukko](https://www.cs.helsinki.fi/en/compfac/high-performance-cluster-ukko).
 
 - Do not run sudo commands in the CS department's systems. Such behaviour is logged as malicious.
+
+- If you are a CS major, you get the following emails from the university:
+
+  - `firstname.lastname@helsinki.fi` (AD account)
+  - `username@cs.helsinki.fi` (CS account)
+  - `firstname.lastname@cs.helsinki.fi` (CS account) --> redirected to `username@cs.helsinki.fi`
+
+  [Here](https://www.cs.helsinki.fi/compfac/ohjeet/posti/index.en.html) are some instructions, which are unfortunately somewhat outdated: for example Mappi is not used anymore. Each CS student is generated an Office 365 mail, which you can access using your AD account (use `username@ad.helsinki.fi` as the username) in [here](http://www.helsinki.fi/office365/). In addition, [here](https://helpdesk.it.helsinki.fi/en/collaboration-and-publication/office-365/office-365) is some info regarding Office 365. You can for example reserve some rooms from University's libraries using the calendar. You can access the `cs.helsinki.fi` mail from [here](https://webmail.cs.helsinki.fi/lite/) by using your CS account.
+  
+  **We recommend choosing to use just one mail, and redirecting the mail from either from helsinki.fi to cs.helsinki.fi ([instructions](https://helpdesk.it.helsinki.fi/en/instructions/collaboration-and-publication/e-mail/directing-e-mail-away-office-365)) or the other way around.**

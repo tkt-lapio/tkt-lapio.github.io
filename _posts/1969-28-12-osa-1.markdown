@@ -88,7 +88,7 @@ Seuraavassa on esimerkkejä komennoista, joissa niiden toimintaa on muutettu vip
 ls -la Downloads/tiedosto
 ```
 
-`ls` on yleisesti käytetty komento, johon tutustumme tässä osassa. Oletuksena se näyttää nykyisen kansion tiedostojen nimet. Vivut `-a` ja `-l` (huomaa, miten kaksi vipua annetaan komennolle ylläolevassa esimerkissä) vaikuttavat siihen, mitä tietoa `ls` näyttää. Kun komennolle `ls` annetaan argumenttina jokin polku kansioon, se näyttää tietoa vain kyseisen kansion sisällöstä. Tällä tavalla vipujen ja argumenttien avulla voidaan muuttaa ja tarkentaa komennon toimintaa.
+`ls` on yleisesti käytetty komento, johon tutustumme tässä osassa. Oletuksena se näyttää nykyisen kansion tiedostojen nimet. Vivut `-a` ja `-l` (huomaa, miten kaksi vipua annetaan komennolle ylläolevassa esimerkissä) vaikuttavat siihen, mitä tietoa `ls` näyttää. Kun komennolle `ls` annetaan argumenttina jokin polku kansioon, se näyttää tietoa vain kyseisen kansion sisällöstä. Tällä tavalla vipujen ja argumenttien avulla voidaan muuttaa ja tarkentaa komennon toimintaa. Voit kokeilla ensin ajaa pelkän komennon `ls`, sitten `ls -la` ja lopulta `ls -la ~/Downloads`. Ei tarvitse vielä ymmärtää, mitä tulostus tarkoittaa, tärkeintä on huomata, että tulostus on erilainen joka kerralla.
 
 ```bash
 git add -p
@@ -105,7 +105,7 @@ ls "olen vähän hassusti nimetty tiedosto" # tai ls 'olen vähän hassusti nime
 ```
 
 <div class="note">
-Voit selata `man`-sivua nuolinäppäimellä, ja postua painamalla <code>q</code>.
+Voit selata <code>man</code>-sivua nuolinäppäimellä, ja postua painamalla <code>q</code>.
 </div>
 
 <div class="note">
@@ -148,13 +148,13 @@ Pidä graafinen tiedostoselain vierellä, ja aja komentorivillä kotihakemistoss
 Unix-ympäristössä piilotettu tiedosto tai kansio tarkoittaa tarkoittaa sellaisia, joiden nimi alkaa pisteellä, esimerkiksi `.config`. Tällaisia ovat usein tiedostot, jotka sisältävät joitain asetuksia tai tietoja, joita käyttäjän tarvitsee harvoin muuttaa. Linuxissa piilotetut tiedostot on mahdollista nähdä painamalla graafisessa tiedostoselaimessa `CTRL + h`, macOSissa `cmd + SHIFT + .`.
 
 <div class="exercise">
-<h3>Tehtävä nro 1 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 1: Graafinen vs. tekstikäyttöliittymä {% include points.html text="5%" %}</h3>
 Voit merkata tämän tehtävän tehdyksi, kun olet käynyt läpi alun esimerkin graafisen ja tekstikäyttöliittymän eroista tehden samalla esimerkit komentorivillä.
 </div>
 
 <div class="exercise">
 
-<h3>Tehtävä nro 2 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 2: Kansion luominen {% include points.html text="5%" %}</h3>
  Graafisessa tiedostoselaimessa voi luoda kansioita käyttämällä hiiren oikeaa näppäintä. Unix-tyyppisissä järjestelmissä tämä tapahtuu komennolla <code>mkdir</code>. Kyseessä on jälleen lyhenne, vähemmän yllättäen sanoista <i>make directory</i>. Komennolle annetaan argumenttina luotavan kansion nimi. Luo kansio nimeltä <b>lapio</b> kotihakemistoosi. Varmista että loit kansion komennolla <code>ls</code>.
 </div>
 
@@ -175,7 +175,7 @@ Jos saat virheviestin <code>nano: command not found</code>, nanoa ei ole asennet
 </div>
 
 <div class="exercise">
-<h3>Tehtävä nro 3 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 3: nano {% include points.html text="5%" %}</h3>
 
 Ota selvää miten <code>nano</code> toimii käyttämällä Googlea tai <code>man</code>-komentoa. Selvitä seuraavat asiat:
 
@@ -189,7 +189,7 @@ Tarkista, että osaat tehdä nämä asiat: Avaa tiedosto <code>eximerkki.txt</co
 </div>
 
 <div class="exercise">
-<h3>Tehtävä nro 4 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 4: vim {% include points.html text="5%" %}</h3>
 
 Vastaavanlainen, mutta paljon enemmän ominaisuuksia sisältävä komentolinjalla toimiva tekstieditori on <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>. Se on kuitenkin myös huomattavasti monimutkaisempi käyttää. Ota selvää vimistä seuraavat asiat:
 
@@ -216,14 +216,14 @@ Suhteellisissa poluissa käytetään usein merkkejä `.` ja `..`. Yksi piste `.`
 
 Tässä vielä esimerkki absoluuttisista ja suhteellisista poluista:
 
-Oletetaan, että olet ladannut Downloads-kansioon kissakuvia jokaiselle vuoden kuukaudelle niin, että jokaisen kuukauden kuvat ovat omassa kansiossaan. Sen jälkeen olet siirtynyt komentorivillä "toukokuu"-nimiseen kansioon, jonka polku on `~/Downloads/kissakuvia/toukokuu/`. Voit nyt viitata toukokuu-kansion sisältä `Downloads`-kansioon polulla `..`, `~/Downloads` tai `/home/tunnus/Downloads` Linuxilla ja `/Users/tunnus/Downloads` macOSilla. Jos haluaisit viitata toukokuu-kansiosta esimerkiksi marraskuu-kansioon, voit tehdä sen polulla `../marraskuu/`. Kauttaviiva polun lopussa alleviivaa, että kyseessä on kansio, mutta se ei ole välttämätön.
+Oletetaan, että olet ladannut Downloads-kansioon kissakuvia jokaiselle vuoden kuukaudelle niin, että jokaisen kuukauden kuvat ovat omassa kansiossaan. Sen jälkeen olet siirtynyt komentorivillä "toukokuu"-nimiseen kansioon, jonka polku on `~/Downloads/kissakuvia/toukokuu/`. Voit nyt viitata toukokuu-kansion _sisältä_ esimerkiksi "Downloads"-kansioon polulla `../..`, `~/Downloads` tai `/home/tunnus/Downloads` Linuxilla ja `/Users/tunnus/Downloads` macOSilla. Jos haluaisit viitata toukokuu-kansiosta esimerkiksi marraskuu-kansioon (joka on siis kissakuvia-kansion sisällä), voit tehdä sen polulla `../marraskuu/`. Kauttaviiva polun lopussa alleviivaa, että kyseessä on kansio, mutta se ei ole välttämätön.
 
 <div class="note">
 Muista, että komentorivi näyttää sinulle koko ajan nykyisen kansiosi polun suhteessa kotihakemistoosi. Tämä helpottaa tiedostojen seassa navigointia ja polkujen kirjoittamista.
 </div>
 
 <div class="exercise">
-<h3>Tehtävä nro 5 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 5: Tiedostonhallinnan harjoittelu 1 {% include points.html text="5%" %}</h3>
 
 Harjoitellaan tässä tiedostohallintaa komentoriviltä.
 Luo ensin kuvaa vastaava kansiorakenne:
@@ -231,10 +231,10 @@ Luo ensin kuvaa vastaava kansiorakenne:
 
 <p>
 Oheisessa kansiorakenteessa siis <code>koulu</code>-kansio sisältää kolme kansiota: <code>lapio</code>, <code>ohpe</code> ja <code>ohja</code>, joista jokainen sisältää puolestaan vähintään yhden tiedoston.
-Luo ensin <code>koulu</code>-kansio, ja siirry sen jälkeen sen sisään. Tämän jälkeen pyri luomaan tiedostot ilman, että siirryt pois kansiosta <code>koulu</code>.
+Luo ensin <code>koulu</code>-kansio, ja siirry sen jälkeen sen sisään. Tämän jälkeen luo kuvan mukainen tiedostorakennelma. Pyri luomaan osa tiedostoista suoraan koulu-kansiosta, ja osa niin, että siirryt alikansioon sisään ennen kuin luot sinne tiedoston.
 </p>
 
-<p><i>Vinkki: voit luoda tekstitiedoston avaamalla sen tekstieditorilla, tai komennolla <code>touch</code>.</i></p>
+<p class="note">Vinkki: voit luoda tekstitiedoston avaamalla sen tekstieditorilla ja tallentamalla, tai komennolla <code>touch</code>.</p>
 
 <p>Tarkista, että olet luonut oikeat kansiot ja tiedostot <code>ls</code>-komennolla.</p>
 
@@ -258,7 +258,7 @@ Esimerkkejä `mv`:n toiminnasta:
 `mv ~/esimerkki.txt ~/Downloads/` siirtää tiedoston `esimerkki.txt` kotihakemistosta Downloads-kansioon.
 
 <div class="exercise">
-<h3>Tehtävä nro 6 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 6: Tiedostonhallinnan harjoittelu 2 {% include points.html text="5%" %}</h3>
 
 Tämä on jatkoa edelliseen tehtävään.
 Kun olet luonut alkutilanteen, muuta se komennoilla <code>mv</code> ja <code>cp</code> seuraavan näköiseksi:
@@ -269,7 +269,7 @@ Huomaa, että kiusallinen kirjoitusvirhe tiedoston <code>kmntorivi.txt</code> ni
 </div>
 
 <div class="exercise">
-<h3>Tehtävä nro 7 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 7: Kansion poistaminen {% include points.html text="5%" %}</h3>
 
 Tiedostoja voidaan poistaa komennolla <code>rm</code>, eli <b>r</b>e<b>m</b>ove. Käyttäen komentoriviä, poista edellisessä tehtävässä luomasi tiedostot. Selvitä sitten, miten voit poistaa hakemiston komentoriviltä, ja poista koko <code>koulu</code>-hakemisto. <div class="warning">Huomaa, että kun poistat jotain komentoriviltä, se ei siirry roskakoriin vaan poistuu heti, ole siis varovainen.</div>
 
@@ -291,7 +291,7 @@ tunnus@hal9000:~/esimerkki$
 Samoin `mv test* tests/` siirtäisi kaikki `test`-alkuiset tiedostot ja hakemistot `tests`-nimiseen kansioon.
 
 <div class="exercise">
-<h3>Tehtävä nro 8 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 8: Villikortti {% include points.html text="10%" %}</h3>
 Hyödyllinen villikortteihin liittyvä tutoriaali löytyy <a href="http://www.linfo.org/wildcard.html">täältä</a>. Tee kansio nimeltä <i>työväline</i> kotihakemistoosi, ja lataa sinne internetistä kaksi kuvaa, joista toinen on <code>jpg</code>-muotoinen, ja toinen <code>png</code>-muotoinen. Lisää sen lisäksi kansioon joitain tiedostoja, esimerkiksi nimillä <code>tiedosto.txt</code> ja <code>en_ole_kuva.txt</code>. Luo lopuksi kansio nimeltä <code>kuvat</code> ja kopioi sinne tutoriaalia hyödyntäen jokainen kuva.
 </div>
 
@@ -359,7 +359,7 @@ Huomaa, että osuma löytyy, vaikka se oli sanan keskellä. Useimmissa ympärist
 ![grep-esimerkki](/assets/päiväkirja.png){:class="img-responsive"}
 
 <div class="exercise">
-<h3>Tehtävä nro 9 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 9: grep {% include points.html text="10%" %}</h3>
 Ilman erillisiä vipuja <code>grep</code> ei kohtele kirjaimia samana, jos ne ovat eri kokoisia. Esimerkiksi "a" ja "A" ovat sille siis erilaisia kirjaimia. Tarkastele <code>grep --help</code> apusivun tulosta, ja ota selvää miten pääset eroon kirjainkoon erottelusta. Ota myös selvää esimerkiksi Googlettaen, miten saat haettua vain merkkijonoja, jotka ovat rivin alussa. Tarkista, että osaat tehdä tämän. Voit tehdä sen kirjoittamalla tiedostoon esimerkiksi
 </div>
 ```
@@ -401,7 +401,7 @@ Komento <code>></code> korvaa kohdetiedoston koko sisällön annetulla tekstill�
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 10  {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 10: Opiskelijan muistiinpanot {% include points.html text="5%" %}</h3>
 Luo tekstitiedosto <code>muistiinpanot.txt</code> komentorivillä. Kopioi sinne seuraava teksti, joka kuvailee erään opiskelijan ajatuksia tiettynä viikkona:
 </div>
 ```
@@ -494,7 +494,7 @@ Huomaa siis, että agentille lisätyllä avaimella ei ollut `.pub`-päätettä, 
 Voit lukea lisää `ssh`-komennosta ja sen konfiguroimisesta esimerkiksi [täällä](https://linux.fi/wiki/SSH)
 
 <div class="exercise">
-<h3>Tehtävä nro 11 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 11: SSH-yhteys {% include points.html text="10%" %}</h3>
 
 Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus, mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia.
 
@@ -507,14 +507,14 @@ Graafisessa ympäristössä selain antaa tarkastella sivuja internetissä. Komen
 Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toimii yksinkertaisimmillaan `wget sivun.osoite`, joka lataa annetun sivun koneellesi. Internet-sivut on tehty HTML-kielellä, johon tutustumme seuraavalla viikolla, joten saat kutsun tuloksena koneellesi `.html`-päätteisen tiedoston.
 
 <div class="exercise">
-<h3>Tehtävä nro 12 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 12: Wget ja HTML-koodi {% include points.html text="10%" %}</h3>
 
 Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla, ja avaa tallennettu <code>.html</code>-päätteinen tiedosto selaimella, esim Firefoxilla tai Chromella (saat tiedoston helpoiten selaimella auki graafisesta tiedostonhallinnasta). Sivu näyttää luultavasti hieman erilaiselta kuin yleensä. Avaa sitten tiedosto niin, että näet sen sisällä olevan HTML-koodin (toisin sanoen avaa se niin, että näet tiedoston sisällön koodina, eikä tiedosto aukea selaimessa). Tutustumme HTML-kieleen kolmannessa osassa.
 
 </div>
 
 <div class="exercise">
-<h3>Tehtävä nro 13 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 13: Wget, grep ja Linus Torvalds {% include points.html text="10%" %}</h3>
 
 <p>
 Hae wgetillä Linus Torvaldsista kertova <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia-artikkeli</a> koneellesi. Tarkista sen jälkeen <code>grep</code>-komentoa käyttäen, kuinka monella rivillä esiintyy sana "Linux". Kirjoita nämä rivit tiedostoon.
@@ -600,7 +600,7 @@ drw-r--r-- 1 tunnus tunnus 130 kesä 14 17:54 päiväkirjamerkinnät
 ```
 
 <div class="exercise">
-<h3>Tehtävä 14 {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 14: Oikeuksien harjoittelua {% include points.html text="10%" %}</h3>
 
 Luo tiedosto <code>oikeus.txt</code> ja harjoittele sen avulla oikeuksien hallinnointia. Anna sille vuorotellen seuraavanlaiset oikeudet:
 
@@ -640,7 +640,7 @@ Huomaa kuitenkin, että jotkin asiat toimivat skripteissä eri tavalla kuin olet
 Jotta skriptin voi ajaa, käyttäjälle tulee ensin antaa siihen ajo-oikeudet komennolla `chmod`.
 
 <div class="exercise">
-<h3>Tehtävä nro 15 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 15: Pieni bash-skripti {% include points.html text="5%" %}</h3>
 
 Etsi netistä, miten <code>bash</code>issä voi tulostaa tekstiä terminaaliin. Kirjoita sen jälkeen skripti, joka tulostaa "Hello world!". Selvitä sen jälkeen, miksi yleensä ensimmäisessä ohjelmointitehtävässä tulostetaan teksti "Hello world!". Aja lopuksi kirjoittamasi skripti.
 

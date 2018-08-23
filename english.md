@@ -12,7 +12,7 @@ This course is primarly designed for CS major freshmen, and its purpose is to go
 
 The course is passed with an online exam, which is held in Moodle. Please read the instructions linked below carefully before taking the exam.
 
-Please also read the introductions to the department's IT systems page.
+Please also read the introductions to the department's IT systems page. They include vital information.
 
 There is currently no material in English. Please take the exam in order to pass the course. If you have problems passing the exam, please contact <a href="mailto:karlin@cs.helsinki.fi" target="_top">karlin@cs.helsinki.fi</a> or <a href="mailto:irene.nikkarinen@helsinki.fi" target="_top">irene.nikkarinen@helsinki.fi</a>.
 
