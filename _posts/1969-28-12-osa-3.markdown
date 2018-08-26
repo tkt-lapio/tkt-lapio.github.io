@@ -245,7 +245,7 @@ Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Neljäs 
 
 # Kuvat ja kommenttit
 
-Kuvat on tärkeä osa verkkosivuja. Kuten vanha sanonta kuuluu, kuva kertoo enemmän, kuin tuhat sanaa. Jotta kuvan voi näyttää, on sen sijaittava jollain palvelimella. Kuvan voi tarjota omalta palvelimelta HTML-dokumentin yhteydessä tai sitten sen voi linkata suoraan toiselta palvelimelta. Perehdytään ensin jälkimmäiseen vaihtoehtoon.
+Kuvat on tärkeä osa verkkosivuja. Kuten vanha sanonta kuuluu, kuva kertoo enemmän, kuin tuhat sanaa. Jotta kuvan voi näyttää, on sen sijaittava jollain palvelimella. Kuvan voi tarjota omalta palvelimelta HTML-dokumentin yhteydessä tai sen voi linkata suoraan toiselta palvelimelta. Perehdytään ensin jälkimmäiseen vaihtoehtoon.
 
 Kuvat lisätään `<img></img>` -elementin avulla. Esimerkiksi, jos haluaisimme lisätä HTML -dokumenttiin kuvan osoitteesta `https://cdn.pixabay.com/photo/2016/02/19/15/46/dog-1210559_1280.jpg` niin kuva lisätään seuraavalla elementillä.
 
@@ -257,6 +257,8 @@ Huomataan, että HTML-tagin sisällä on jotain uutta. Näitä kutsutaan attribu
 
 Huomataan myös, että `<img/>` tagilla ei ole lopetustagia. Se on niin sanottu tyhjä elementti. Tällä tarkoitetaan elementtiä, jossa ei ole mitään sisältöä ja lopetustagi on liitetty aloitustagiin. Tyhjät elementit ilmenee yleensä dokumentissa sisätason elementtinä. Voit lukea lisää tyhjistä elementeistä [täältä](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element).
 
+Jos kuva sijaitsee samalla koneella verkkosivun kanssa, käytetään <code>src</code> attribuutissa suhteellista polkua. Voit lukea suhteellisesta polusta lisää [täältä](https://en.wikipedia.org/wiki/Path_(computing)).
+
 HTML-dokumentissä voi olla kommentteja, jotka eivät näy lopullisessa verkkosivussa. Niiden tarkoitus on selventää kirjoittajan ajatuksia seuraavalle kirjoittajalle, tai itselleen myöhempää käyttöä varten. Kommentin voi lisätä `<!-- ja -->`väliin. Esimerkiksi seuraava on HTML kommentti `<!-- Tämä tässä on kommentti -->`
 
 <div class="exercise">
@@ -267,12 +269,12 @@ Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia.
 </div>
 <ol>
 <li>Lataa omalle koneelle <a href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Seitsem%C3%A4n_veljest%C3%A4.png">kuva</a>. Kuvaa saa käyttää uudestaan.</li>
-<li>Tee edellisistä tehtävistä tuttuun repositorioon uusi kansio, jonka nimi on `assets` ja lisää se Gittiin.</li>
+<li>Tee edellisistä tehtävistä tuttuun repositorioon uusi kansio, jonka nimi on <code>assets</code> ja lisää se Gittiin.</li>
 <li>Lisää kuva kansioon ja muista lisätä myös se Gittiin.</li>
 <li>Lisää kuva edellisistä tehtävistä tuttuun html -dokumenttiin dynaamisella osoitteella.</li>
 <li>Säädä kuvan koko oikeaksi.</li>
 <li>Muista lisätä <code>alt</code> tagi.</li>
-<li>Lisää kuvan elementin yläpuolelle kommentti että kuvan esittää seitsemän veljeksen kirjan ensimmäistä sivua.</li>
+<li>Lisää kuvan elementin yläpuolelle kommentti että kuva esittää seitsemän veljeksen kirjan ensimmäistä sivua.</li>
 <li>Lopputuloksen pitäisi näyttää seuraavanlaiselta.</li>
 <img src="/assets/html-ex5.png" alt="Viidennen tehtävän lopputulos"/>
 <li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Viides tehtävä</code> ja puske tehtävä Githubiin.</li>
@@ -287,9 +289,9 @@ HTML-dokumentit voi sisältää hyperlinkkejä toisiin HTML-dokumentteihin. Link
 <a href="https://yle.fi/uutiset">Ylen uutissivusto</a>
 ```
 
-Linkki elementti sisältää `href` attribuutin jossa on osoite linkattavaan kohteen. Jos linkattava kohde sijaitsee toisella palvelimella pitää palvelimen osoite olla kokonaisuudessaan `href`in perässä. Jos dokumentti sijaitsee samalla palvelimella, voi hrefissä olla suora dynaaminen osoite tiedostoon. `href="toinen.html"`.
+Linkki elementti sisältää `href` attribuutin jossa on osoite linkattavaan kohteeseen. Jos linkattava kohde sijaitsee toisella palvelimella pitää palvelimen osoite olla kokonaisuudessaan `href`in perässä. Jos dokumentti sijaitsee samalla palvelimella, voi hrefissä olla suora relatiivinen polku tiedostoon. `href="toinen.html"`.
 
-Linkille voi myös antaa `target` attribuutin, jonka `_blank` arvolla voi pakottaa linkin aukeamaan toisella välilehdessä. Lisää linkin attribuuteista voi lukea [täältä](https://www.w3schools.com/tags/tag_a.asp).
+Linkille voi myös antaa myös `target` attribuutin, jonka `_blank` arvolla voi pakottaa linkin aukeamaan toisella välilehdessä. Lisää linkin attribuuteista voi lukea [täältä](https://www.w3schools.com/tags/tag_a.asp).
 
 <div class="exercise">
 <h3>Tehtävä 6: HTML tiedostojen linkittäminen {% include points.html text="10%" %}</h3>
@@ -298,6 +300,8 @@ Linkille voi myös antaa `target` attribuutin, jonka `_blank` arvolla voi pakott
 <li>Lisää tiedosto Gittiin.</li>
 <li>Tee tiedostoon perus HTML-struktuuri. Voit kirjoittaa sen itse tai kopioida ensimmäisestä tehtävästä.</li>
 <li>Tee edellisistä tehtävistä tuttuun HTML -dokumenttiin linkki toiseen dokumenttiin ja toisesta dokumentistä linkki <code>index.html</code> dokumenttiin</li>
+<li>Lopputulos voi näyttää esimerkiksi seuraavanlaiselta</li>
+<img src="/assets/html-ex6.png" alt="Viidennen tehtävän lopputulos"/>
 <li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kuudes tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
@@ -330,9 +334,9 @@ Huomataan, että linkissä on kolme eri attribuuttia, joista vain yksi on tuttu.
 <div class="exercise">
 <h3>Tehtävä 7: CSS:n linkittäminen {% include points.html text="5%" %}</h3>
 <ol>
-<li>Tee `style.css` tiedosto samaan kansioon kuin aikaisemmat tehtävät.</li>
+<li>Tee <code>style.css</code> tiedosto samaan kansioon kuin aikaisemmat tehtävät.</li>
 <li>Lisää tiedosto Gittiin.</li>
-<li>Kirjoita tiedostoon seuraava pätkä `p { background-color: red; }`</li>
+<li>Kirjoita tiedostoon seuraava pätkä <code>p { background-color: red; }</code></li>
 <li>Verkkosivun pitäisi näkyä selaimessa seuraavalla tavalla.</li>
 <img src="/assets/html-ex7.png" alt="Seitsemännen tehtävän lopputulos"/>
 <li>Kun koet että tehtävä on valmis, niin tee commit viestillä <code>Osa 3. Seitsemäs tehtävä</code> ja pushaa tehtävä Githubiin.</li>
@@ -425,7 +429,7 @@ Tehtävän ideana on testata kaikkia eri selektoreita värittämisen avulla.
 <li>Korjataan sivusto näyttämään paremmalta myöhemmin, nyt on tärkeintä että testaat mitä eri selektorit tekee.</li>
 Lopputulos pitäisi näyttää suurinpiirtein tältä:
    <img src="/assets/html-example-12.png" alt="Kahdeksannen tehtävän lopputulos kuvana"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä `Osa 3. Kahdeksas tehtävä` ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kahdeksas tehtävä ja puske tehtävä Githubiin.</code></li>
 </ol>
 </div>
 
@@ -597,7 +601,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 <li>Ota tavoitteeksi, että saat edellisessä tehtävässä tehdyn sivun näyttämään tältä.</li>
 <li>Älä välitä vaikka sivusto on ruma, vaan kseskity tutkimaan mitä eri CSS ominaisuudet tekevät.</li>
 <img src="/assets/html-ex-10.png" alt="HTML sivu ilman CSS-koodia"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä `Osa 3. Kymmenes tehtävä` ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kymmenes tehtävä ja puske tehtävä Githubiin.</code></li>
 </ol>
 </div>
 
@@ -696,7 +700,7 @@ Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mist
 <ol>
 <li>Tee kappaleessa käydyt asiat edellisistä tehtävistä tutuille verkkosivuille. Voit lisätä verkkosivuille pidemmän kappaleen Seitemästä veljestä, jotta näet paremmin lopputuloksen. Löydät koko kirjan [täältä](http://www.gutenberg.org/cache/epub/11940/pg11940.txt).</li>
 <li>Verkkosivun pitäisi näyttää suurinpiirtein tältä: TODO</li>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä `Osa 3. Yhdestoista tehtävä` ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Yhdestoista tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
 
