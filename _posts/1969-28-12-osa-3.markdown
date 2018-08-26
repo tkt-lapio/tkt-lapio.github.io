@@ -80,7 +80,7 @@ Lisätään index.html tiedostoon `<!--Tee tehtävät tänne-->` rivin alapuolel
 <h3>Tehtävä 2: Tutustuminen tekstielementteihin {% include points.html text="5%" %}</h3>
 Jatketaan index.html tiedoston muokkaamista. Testaa eri tekstielementit läpi ja katso mitä eri elementit tekevät. Tehtävän tavoitteena on saada sivustosta seuraavan näköinen.
 <img src="/assets/html-ex1.png" alt="Ensimmainen tehtava kuvana"/>
-Kun koet, että tehtävä on valmis, tee commit viestillä `Viikko 3. Toinen tehtävä` ja puske tehtävä Githubiin.
+Kun koet, että tehtävä on valmis, tee commit viestillä <code>Viikko 3. Toinen tehtävä</code> ja puske tehtävä Githubiin.
 </div>
 
 # Sisäkkäin asetetut elementit
@@ -126,7 +126,7 @@ Sisäkkäin asettelu on hyvin tärkeä osa HTML-dokumenttiä, ja sen rooli koros
 <div class="exercise">
 <h3>Tehtävä 3: Sisäkkäin asetetut elementit {% include points.html text="10%" %}</h3>
 Tehtävänäsi on jatkaa edellisistä tehtävistä tuttua index.html tiedostoa.
-Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi `Jukola`, kursivoi `Häme`ja lihavoi sekä kursivoi `Toukola`
+Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi <code>Jukola</code>, kursivoi <code>Häme</code>ja lihavoi sekä kursivoi <code>Toukola</code>.
 <img src="/assets/html-ex3.png" alt="Kolmas tehtava kuvana"/> 
 Kun koet, että tehtävä on valmis, niin tee commit viestillä <code>Viikko 3. Kolmas tehtävä</code> ja pushaa tehtävä Githubiin.
 </div>
@@ -269,7 +269,7 @@ Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia.
 </div>
 <ol>
 <li>Lataa omalle koneelle <a href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Seitsem%C3%A4n_veljest%C3%A4.png">kuva</a>. Kuvaa saa käyttää uudestaan.</li>
-<li>Tee edellisistä tehtävistä tuttuun repositorioon uusi kansio, jonka nimi on `assets` ja lisää se Gittiin.</li>
+<li>Tee edellisistä tehtävistä tuttuun repositorioon uusi kansio, jonka nimi on <code>assets</code> ja lisää se Gittiin.</li>
 <li>Lisää kuva kansioon ja muista lisätä myös se Gittiin.</li>
 <li>Lisää kuva edellisistä tehtävistä tuttuun html -dokumenttiin dynaamisella osoitteella.</li>
 <li>Säädä kuvan koko oikeaksi.</li>
@@ -332,9 +332,9 @@ Huomataan, että linkissä on kolme eri attribuuttia, joista vain yksi on tuttu.
 <div class="exercise">
 <h3>Tehtävä 7: CSS:n linkittäminen {% include points.html text="5%" %}</h3>
 <ol>
-<li>Tee `style.css` tiedosto samaan kansioon kuin aikaisemmat tehtävät.</li>
+<li>Tee <code>style.css</code> tiedosto samaan kansioon kuin aikaisemmat tehtävät.</li>
 <li>Lisää tiedosto Gittiin.</li>
-<li>Kirjoita tiedostoon seuraava pätkä `p { background-color: red; }`</li>
+<li>Kirjoita tiedostoon seuraava pätkä <code>p { background-color: red; }</code></li>
 <li>Verkkosivun pitäisi näkyä selaimessa seuraavalla tavalla.</li>
 <img src="/assets/html-ex7.png" alt="Seitsemännen tehtävän lopputulos"/>
 <li>Kun koet että tehtävä on valmis, niin tee commit viestillä <code>Viikko 3. Seitsemäs tehtävä</code> ja pushaa tehtävä Githubiin.</li>
@@ -427,7 +427,7 @@ Tehtävän ideana on testata kaikkia eri selektoreita värittämisen avulla.
 <li>Korjataan sivusto näyttämään paremmalta myöhemmin, nyt on tärkeintä että testaat mitä eri selektorit tekee.</li>
 Lopputulos pitäisi näyttää suurinpiirtein tältä:
    <img src="/assets/html-example-12.png" alt="Kahdeksannen tehtävän lopputulos kuvana"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä `Viikko 3. Kahdeksas tehtävä` ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Viikko 3. Kahdeksas tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
 
@@ -599,7 +599,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 <li>Ota tavoitteeksi, että saat edellisessä tehtävässä tehdyn sivun näyttämään tältä.</li>
 <li>Älä välitä vaikka sivusto on ruma, vaan kseskity tutkimaan mitä eri CSS ominaisuudet tekevät.</li>
 <img src="/assets/html-ex-10.png" alt="HTML sivu ilman CSS-koodia"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä `Viikko 3. Kymmenes tehtävä` ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Viikko 3. Kymmenes tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
 
@@ -698,7 +698,7 @@ Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mist
 <ol>
 <li>Tee kappaleessa käydyt asiat edellisistä tehtävistä tutuille verkkosivuille. Voit lisätä verkkosivuille pidemmän kappaleen Seitemästä veljestä, jotta näet paremmin lopputuloksen. Löydät koko kirjan [täältä](http://www.gutenberg.org/cache/epub/11940/pg11940.txt).</li>
 <li>Verkkosivun pitäisi näyttää suurinpiirtein tältä: TODO</li>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä `Viikko 3. Yhdestoista tehtävä` ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Viikko 3. Yhdestoista tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
 

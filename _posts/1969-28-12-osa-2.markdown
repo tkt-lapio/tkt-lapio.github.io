@@ -294,7 +294,7 @@ Uusi origin-niminen etärepositorio lisätään SSH-yhteyttä käyttäen ajamall
 <h3>Tehtävä 5: SSH-avainparin luominen {% include points.html text="5%" %}</h3>
 Jos et ole luonut koneellesi ssh-avainparia, tee se ensin. Ohjeet löytyy <a href="/komentorivi#SSH-avainpari">ensimmäiseltä viikolta</a>.
 Lisää julkinen ssh-avaimesi GitHubin käyttäjällesi. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">Ohjeet GitHubissa</a>.
-Voit tulostaa ssh-avaimen terminaaliisi komennolla `cat avaintiedoston_nimi` ja kopioida sen painamalla <code>ctrl + shift + c</code>, ja jatkaa GitHubin ohjeiden seuraamista kohdasta 2. Tällöin sinun ei tarvitse asentaa uutta ohjelmaa, kuten GitHubin ohjeet ehdottavat.
+Voit tulostaa ssh-avaimen terminaaliisi komennolla <code>cat avaintiedoston_nimi</code> ja kopioida sen painamalla <code>ctrl + shift + c</code>, ja jatkaa GitHubin ohjeiden seuraamista kohdasta 2. Tällöin sinun ei tarvitse asentaa uutta ohjelmaa, kuten GitHubin ohjeet ehdottavat.
 </div>
 
 <div class="exercise">
