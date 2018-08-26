@@ -37,7 +37,7 @@ Tarvitset tässä osassa tekstieditoria. Suosittelemme [vscodea](https://code.vi
 <li>Luo "Lapio-website"-niminen kansio komentoriviä käyttäen ja tee tästä kansiosta git-projekti.</li>
 <li>Luo Githubiin uusi <strong>tyhjä</strong> repo nimellä Lapio-website.</li>
 <li>Lisää Github.projekti Git-projektin etärepositorioksi.</li>
-<li>Lisää kansioon index.html tiedosto joka löytyy <a href="https://github.com/rovaniemi/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">täältä</a>. Tiedoston sisältöä ei tarvitse vielä ymmärtää.</li>
+<li>Lisää kansioon <code>index.html</code> tiedosto joka löytyy <a href="https://github.com/rovaniemi/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">täältä</a>. Tiedoston sisältöä ei tarvitse vielä ymmärtää.</li>
 <li>Tee commit viestillä <code>Osa 3. Ensimmäinen tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
@@ -66,19 +66,19 @@ HTML-tagit ovat sivuston piilotettuja avainsanoja, eli ne eivät näyttäydy sil
 4.  `<strong></strong>` Elementtiä käytetään lihavoidun kirjoitustyypin tekoon. Myös `<b>` ja `<i>` elementtejä käytetään lihavoimaan sekä kursivoimaan tekstiä.
 
 Katsotaan miten HTML toimii käytännössä.
-Avataan edellisessä tehtävässä luotu index.html tiedosto verkkoselaimessa sekä tekstieditorissa.
+Avataan edellisessä tehtävässä luotu <code>index.html</code> tiedosto verkkoselaimessa sekä tekstieditorissa.
 
 <div class="note">
 Jos et saa tiedostoa auki verkkoselaimessa, voit myös etsiä tiedoston komentoriviltä, katsoa tiedoston sijainnin ja kirjoittaa sen verkkoselaimesi osoitepalkkiin.
 </div>
 
-Lisätään index.html tiedostoon `<!--Tee tehtävät tänne-->` rivin alapuolelle `<p>Tässä on tekstipätkä</p>`. Tämän jälkeen katsomme miltä dokumentti näyttää selaimessa.
+Lisätään <code>index.html</code> tiedostoon `<!--Tee tehtävät tänne-->` rivin alapuolelle `<p>Tässä on tekstipätkä</p>`. Tämän jälkeen katsomme miltä dokumentti näyttää selaimessa.
 
 ![Esimerkki miten HTML näkyy selaimessa](/assets/html-example-01.png)
 
 <div class="exercise">
 <h3>Tehtävä 2: Tutustuminen tekstielementteihin {% include points.html text="5%" %}</h3>
-Jatketaan index.html tiedoston muokkaamista. Testaa eri tekstielementit läpi ja katso mitä eri elementit tekevät. Tehtävän tavoitteena on saada sivustosta seuraavan näköinen.
+Jatketaan <code>index.html</code> tiedoston muokkaamista. Testaa eri tekstielementit läpi ja katso mitä eri elementit tekevät. Tehtävän tavoitteena on saada sivustosta seuraavan näköinen.
 <img src="/assets/html-ex1.png" alt="Toinen tehtava kuvana"/>
 Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen tehtävä </code>ja puske tehtävä Githubiin.
 </div>
@@ -125,8 +125,8 @@ Sisäkkäin asettelu on hyvin tärkeä osa HTML-dokumenttiä, ja sen rooli koros
 
 <div class="exercise">
 <h3>Tehtävä 3: Sisäkkäin asetetut elementit {% include points.html text="10%" %}</h3>
-Tehtävänäsi on jatkaa edellisistä tehtävistä tuttua index.html tiedostoa.
-Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi `Jukola`, kursivoi `Häme`ja lihavoi sekä kursivoi `Toukola`
+Tehtävänäsi on jatkaa edellisistä tehtävistä tuttua <code>index.html</code> tiedostoa.
+Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi <code>Jukola</code>, kursivoi <code>Häme</code>ja lihavoi sekä kursivoi <code>Toukola</code>
 <img src="/assets/html-ex3.png" alt="Kolmas tehtava kuvana"/> 
 Kun koet, että tehtävä on valmis, niin tee commit viestillä <code>Osa 3. Kolmas tehtävä</code> ja pushaa tehtävä Githubiin.
 </div>
@@ -222,14 +222,12 @@ Sisäkkäin asetetulla listalla tarkoitetaan listaa, jossa on listoja listojen s
 <ol>
   <li>Käytä koira aamulenkillä.</li>
   <li>Anna koiralle ruokaa, ruoka sisältää:</li>
-  <li>
-    <ul>
-      <li>150g muroja</li>
-      <li>loraus öljyä</li>
-      <li>mitallinen niveljauhetta</li>
-      <li>mitallinen hammasjauhetta</li>
-    </ul>
-  </li>
+  <ul>
+    <li>150g muroja</li>
+    <li>loraus öljyä</li>
+    <li>mitallinen niveljauhetta</li>
+    <li>mitallinen hammasjauhetta</li>
+  </ul>
   <li>Täytä vesikuppi</li>
 </ol>
 ```
@@ -237,7 +235,7 @@ Sisäkkäin asetetulla listalla tarkoitetaan listaa, jossa on listoja listojen s
 <div class="exercise">
 <h3>Tehtävä 4: Listat {% include points.html text="10%" %}</h3>
 
-Jatketaan edellisestä tehtävistä tuttua index.html dokumentin muokkaamista. Testaa ensin dokumenttiin mitä eri listatyypit tekevät. Tämän jälkeen yritä saada sivusto näyttämään seuraavanlaiselta.
+Jatketaan edellisestä tehtävistä tuttua <code>index.html</code> dokumentin muokkaamista. Testaa ensin dokumenttiin mitä eri listatyypit tekevät. Tämän jälkeen yritä saada sivusto näyttämään seuraavanlaiselta.
 
 <img src="/assets/html-ex4.png" alt="Neljannen tehtavan kuva" />
 
@@ -299,7 +297,7 @@ Linkille voi myös antaa `target` attribuutin, jonka `_blank` arvolla voi pakott
 <li>Tee toinen HTML -tiedosto ja sijoita se samaan kansioon edellisen tiedoston kanssa.</li>
 <li>Lisää tiedosto Gittiin.</li>
 <li>Tee tiedostoon perus HTML-struktuuri. Voit kirjoittaa sen itse tai kopioida ensimmäisestä tehtävästä.</li>
-<li>Tee edellisistä tehtävistä tuttuun HTML -dokumenttiin linkki toiseen dokumenttiin ja toisesta dokumentistä linkki index.html dokumenttiin</li>
+<li>Tee edellisistä tehtävistä tuttuun HTML -dokumenttiin linkki toiseen dokumenttiin ja toisesta dokumentistä linkki <code>index.html</code> dokumenttiin</li>
 <li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kuudes tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
