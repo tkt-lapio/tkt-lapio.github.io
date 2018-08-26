@@ -577,6 +577,7 @@ Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosi
 <li>Nyt ideana on, että saisit samat elementit vierekkäin. Lopputuloksen pitäisi näyttää tältä:</li>
 <img src="/assets/html-ex-9.png" alt="Elementit vierekkäin"/>
 <li>Kun koet, että tehtävä on valmis, lisää tiedostot gittiin ja tee commit viestillä <code>Osa 3. Yhdeksäs tehtävä</code>. Puske tehtävä Githubiin.</li>
+<div class="note">Vinkki: Jos ei onnistu, niin testaa mitä tapahtuu, jos sijoitat elementtejä toisten sisälle eri position arvoilla?</div>
 </ol>
 </div>
 
@@ -731,8 +732,8 @@ Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mist
 <div class="exercise">
 <h3>Tehtävä 11: Sivuista luettavat CSS:n avulla {% include points.html text="10%" %}</h3>
 <ol>
-<li>Tee kappaleessa käydyt asiat edellisistä tehtävistä tutuille verkkosivuille. Voit lisätä verkkosivuille pidemmän kappaleen Seitemästä veljestä, jotta näet paremmin lopputuloksen. Löydät koko kirjan [täältä](http://www.gutenberg.org/cache/epub/11940/pg11940.txt).</li>
-<li>Verkkosivun pitäisi näyttää suurinpiirtein tältä: TODO</li>
+<li>Tee kappaleessa käydyt asiat edellisistä tehtävistä tutuille verkkosivuille. Voit lisätä verkkosivuille pidemmän kappaleen Seitemästä veljestä, jotta näet paremmin lopputuloksen. Löydät koko kirjan <a href="http://www.gutenberg.org/cache/epub/11940/pg11940.txt" target="_blank">täältä.</a></li>
+<li>Verkkosivun pitäisi näyttää suurinpiirtein tältä: TODO: paremman näköinen sivu</li>
 <li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Yhdestoista tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
@@ -741,7 +742,9 @@ Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mist
 
 Staattisen verkkosivun voi julkaista monessa paikassa. Yleinen tapa on vuokrata/ostaa oma palvelin ja tarjota sieltä dokumenttejä maailmalle. Harjoittelemme kuitenkin tällä kurssilla verkkosivun julkaisua Github sivuna.
 
-<div class="exercise">
+TODO: Github pages ohjeet
+
+<div class="note">
 <strong>Pääaineopiskelijoille</strong>
 
 Yliopisto tarjoaa tietojenkäsittelytieteen pääaineopiskelijoille palvelintilaa missä voi pyörittää omia staattisia verkkosivuja. Käyttäjän dokumentit sijaitsee levypalvelimella käyttäjän kotihakemiston public_html-alihakemistossa: <code>/home/cs/käyttäjätunnus/public_html/</code>.
@@ -761,7 +764,6 @@ Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
 
 <li>Tämän jälkeen sivuston pitäisi näkyä osoitteessa <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code></li>
 </ol>
-<strong>Muille, kuin pääaineopiskelijoille</strong>
 
 </div>
 
