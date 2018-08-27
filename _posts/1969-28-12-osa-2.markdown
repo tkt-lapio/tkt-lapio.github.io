@@ -8,7 +8,7 @@ tag: material
 
 # Oppimistavoitteet
 
-Tämän viikon tavoitteina on, että opiskelija
+Tämän osan tavoitteina on, että opiskelija
 
 - Ymmärtää, mitä hyötyöä versionhallinnan käyttämisessä on
 - Osaa luoda Git-projektin.
@@ -33,7 +33,7 @@ Tämän viikon tavoitteina on, että opiskelija
 
 # Versionhallinta: Git ja GitHub
 
-Tällä viikolla käsitellään versionhallintaa. Versionhallinta tarkoittaa palvelua, joka säilöö koodia. Sen käyttöön on pääsääntöisesti kaksi motiivia: Versionhallinnan avulla voidaan pitää varmuuskopioita sekä ohjelman nykyisestä, että aiemmista versiosta. Lisäksi sen avulla voidaan helposti jakaa koodia muille, sekä osallistua muiden projekteihin.
+Tässä osassa käsitellään versionhallintaa. Versionhallinta tarkoittaa palvelua, joka säilöö koodia. Sen käyttöön on pääsääntöisesti kaksi motiivia: Versionhallinnan avulla voidaan pitää varmuuskopioita sekä ohjelman nykyisestä, että aiemmista versiosta. Lisäksi sen avulla voidaan helposti jakaa koodia muille, sekä osallistua muiden projekteihin.
 
 Versionhallintatyökalujen avulla on mahdollista merkitä jokin projektin tila sellaiseksi, että siihen voidaan palata myöhemmin. Näin ollen jos jotain menee pieleen uusien ominaisuuksien kehityksessä, voidaan palata aikaisempaan, toimivaan versioon. Versionhallinnassa pidetään kaikkia merkittyjä tiloja. Näin ollen nähdään, miten ohjelman kehitys on edistynyt, milloin ja millaisia muutoksia ollaan tehty, ja kenen toimesta. Tämä helpottaa myös esimerkiksi suurempien bugien, eli ohjelman toiminnassa esiintyvien virheiden metsästystä.
 
@@ -56,6 +56,7 @@ Gittiä ja GitHubia käytetään yliopistolla yksilö- ja ryhmätöissä, sekä 
 
 Luo aluksi GitHub-tunnus osoitteessa <a href="https://github.com/"> https://github.com/ </a>. GitHubiin rakennetaan eräänlainen koodiportfolio, joka usein linkataan myös CV:seen, kannattaa siis valita siisti käyttäjänimi.
 Git löytyy laitoksen koneilta ja Ubuntusta valmiiksi. Muussa tapauksessa sen voi asentaa esimerkiksi <a href="https://git-scm.com/downloads" >täältä</a>, tai <a href="/komentorivi#asentamisesta">pakettienhallintajärjestelmän</a> kautta. Käytämme näissä ohjeissa Gittiä terminaalin kautta.
+
 </div>
 
 <div class="exercise">
@@ -64,12 +65,14 @@ Git löytyy laitoksen koneilta ja Ubuntusta valmiiksi. Muussa tapauksessa sen vo
 Konfiguroidaan hieman Gittiä.
 
 Liitä nimesi ja sähköpostiosoitteesi Gittiin niin, että kaikkiin projekteihesi tekemät muutokset liitetään sinuun seuraavilla komennoilla.
+
 </div>
 
 ```bash
 $ git config --global user.name "Minun Nimeni"
 $ git config --global user.email sähköposti@osoite.com
 ```
+
 <div class="exercise">
 Jos et halua sähköpostiasi julkiseksi, GitHub tarjoaa erityisen <a href="https://help.github.com/articles/about-commit-email-addresses/">noreply-sähköpostiosoitteen</a>.
 
@@ -78,6 +81,7 @@ Huomaa Note-kohta äsken linkatulla sivulla! Noreplyn muoto riippuu siitä, mill
 </div>
 
 Jos et ole tottunut Vimin käyttäjä, muuta Gitin oletuseditoriksi nano komennolla <code>git config --global core.editor nano</code>. Windowsissa vaihda nanon paikalle <code>notepad</code>.
+
 </div>
 
 ## Git-projektin aloittaminen
@@ -291,8 +295,8 @@ Valitaan GitHubin ohjeista SSH-osoite projektille, jotta siihen voidaan muodosta
 Uusi origin-niminen etärepositorio lisätään SSH-yhteyttä käyttäen ajamalla projektikansiossa komento `git remote add origin git@github.com:kayttaja/projekti.git`. Https-osoite olisi käytännössä sama, kuin selaimen osoiterivillä. Etärepositorion nimi voi olla muutakin kuin "origin", mutta se on yleinen valinta. Yhdelle projektille voi lisätä useita etärepositorioita, jolloin niiden järkevä nimeäminen on oleellista.
 
 <div class="exercise">
-<h3>Tehtävä 5: SSH-avainparin luominen {% include points.html text="5%" %}</h3>
-Jos et ole luonut koneellesi ssh-avainparia, tee se ensin. Ohjeet löytyy <a href="/komentorivi#SSH-avainpari">ensimmäiseltä viikolta</a>.
+<h3>Tehtävä 5 {% include points.html text="5%" %}</h3>
+Jos et ole luonut koneellesi ssh-avainparia, tee se ensin. Ohjeet löytyy <a href="/komentorivi#SSH-avainpari">ensimmäisestä osasta</a>.
 Lisää julkinen ssh-avaimesi GitHubin käyttäjällesi. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">Ohjeet GitHubissa</a>.
 Voit tulostaa ssh-avaimen terminaaliisi komennolla <code>cat avaintiedoston_nimi</code> ja kopioida sen painamalla <code>ctrl + shift + c</code>, ja jatkaa GitHubin ohjeiden seuraamista kohdasta 2. Tällöin sinun ei tarvitse asentaa uutta ohjelmaa, kuten GitHubin ohjeet ehdottavat.
 </div>
@@ -485,11 +489,11 @@ Automatic merge failed; fix conflicts and then commit the result.
 Avataan tämä tiedosto. Siellä näkyy:
 
 ```bash
-<<<<<<< HEAD
+<<<<<< HEAD
 terveisiä mun koneelta
-=======
+======
 terveisiä GitHubista
->>>>>>> baaf2c96cw031e11138d42c1a35065b9bf8b4400b
+>>>>>> baaf2c96cw031e11138d42c1a35065b9bf8b4400b
 ```
 
 Toisensa poissulkevat commitit on siis eroteltu <, > ja = -merkkien avulla. HEAD tarkoittaa tämänhetkistä committia, ja kirjain-numero-yhdistelmä on toisen etärepositoriossa tehdyn commitin id. Hienostuneemmat editorit, kuten VSCode mahdollistavat konfliktien ratkaisemisen yhdellä klikkauksella, mutta muuten ainoa vaihtoehto on poistaa sen ne rivit, joita ei haluta pitää jatkossa.

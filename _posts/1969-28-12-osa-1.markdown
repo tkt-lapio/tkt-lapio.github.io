@@ -6,11 +6,11 @@ permalink: /komentorivi/
 tag: material
 ---
 
-Tästä alkaa ensimmäisen viikon materiaali. Ensimmäisen viikon keskeisin tavoite on tutustua komentoriviin Unix-tyyppisessä ympäristössä.
+Tästä alkaa ensimmäisen osan materiaali. Ensimmäisen osan keskeisin tavoite on tutustua komentoriviin Unix-tyyppisessä ympäristössä.
 
 <h2>Tämän osan oppimistavoitteet</h2>
 
-Tämän viikon tavoitteina on, että opiskelija
+Tämän osan tavoitteina on, että opiskelija
 
 - Ymmärtää graafisen ja tekstikäyttöliittymän erot.
 - Osaa navigoida tiedostohallinnassa komentorivillä.
@@ -94,7 +94,7 @@ ls -la Downloads/tiedosto
 git add -p
 ```
 
-Kun halutaan kutsua komentoriviltä jotain ohjelmaa, tulee ensimmäisenä komentoon kirjoittaa ajettavan ohjelman nimi. Yllä näkyvässä esimerkissä kutsutaan ohjelmaa nimeltä _Git_, johon tutustumme paremmin ensi viikolla. Näin ollen ensin kirjoitetaan `git`. Ohjelma määrittelee erilaisia komentoja eri toiminnillaisuuksille. Tässä esimerkissä ajettavan komennon nimi on `add`, ja sille annetaan sen toimintaa muuttava vipu `-p`. Sinun ei tarvitse ajaa kyseistä koodia, tutustumme Gittiin vasta seuraavassa osassa.
+Kun halutaan kutsua komentoriviltä jotain ohjelmaa, tulee ensimmäisenä komentoon kirjoittaa ajettavan ohjelman nimi. Yllä näkyvässä esimerkissä kutsutaan ohjelmaa nimeltä _Git_, johon tutustumme paremmin ensi osassa. Näin ollen ensin kirjoitetaan `git`. Ohjelma määrittelee erilaisia komentoja eri toiminnillaisuuksille. Tässä esimerkissä ajettavan komennon nimi on `add`, ja sille annetaan sen toimintaa muuttava vipu `-p`. Sinun ei tarvitse ajaa kyseistä koodia, tutustumme Gittiin vasta seuraavassa osassa.
 
 Kutsuttava ohjelma määrittää, mitä komentoja se tarjoaa. Usein mahdolliset komennot on mahdollista nähdä komentoriviltä lisäämällä ohjelman perään vivun `--help` tai lyhyemmin `-h`. Tarkan ohjeen ohjelman käytöstä saa komennolla `man` ja antamalla parametriksi ohjelman nimen (esimerkiksi siis `man git`). `man`-sivut eivät ole järin aloittelijaystävällisiä, mutta tarjoavat yleensä kattavimman dokumentaation tietystä ohjelmasta.
 
@@ -504,7 +504,7 @@ Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva p�
 
 Graafisessa ympäristössä selain antaa tarkastella sivuja internetissä. Komentorivillä toimivien ohjelmien on vaikeaa näyttää internet-sivuja samoin kuin graafinen selain, ([joskin se on mahdollista](https://en.wikipedia.org/wiki/Text-based_web_browser)) mutta pohjimmiltaan nettisivu internetissä on vain tiedosto, jonka voimme toki ladata koneellemme tarkasteltavaksi.
 
-Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toimii yksinkertaisimmillaan `wget sivun.osoite`, joka lataa annetun sivun koneellesi. Internet-sivut on tehty HTML-kielellä, johon tutustumme seuraavalla viikolla, joten saat kutsun tuloksena koneellesi `.html`-päätteisen tiedoston.
+Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toimii yksinkertaisimmillaan `wget sivun.osoite`, joka lataa annetun sivun koneellesi. Internet-sivut on tehty HTML-kielellä, johon tutustumme seuraavassa osassa, joten saat kutsun tuloksena koneellesi `.html`-päätteisen tiedoston.
 
 <div class="exercise">
 <h3>Tehtävä 12: Wget ja HTML-koodi {% include points.html text="10%" %}</h3>
@@ -668,13 +668,13 @@ Järjestelmän ympäristö voidaan määritellä skripteissä niin, että niitä
 
 <h2> Loppusanat</h2>
 
-Tähän päättyy kurssin ensimmäinen viikko. Komentorivin opettelussa voi mennä aikaa, mutta ajan kanssa uuteen työkaluun tottuu. Unix-yhteisö tarjoaa paljon apuja internetissä: Linuxille on muun muassa wiki-sivut [linux.fi](https://www.linux.fi/wiki/Etusivu), sekä Unixille foorumi [Stack Exchangessa](https://unix.stackexchange.com/). MacOSille on olemassa käyttäjäystävällinen virallinen dokumentaatio, sekä myös oma [foorumi](https://discussions.apple.com/welcome).
+Tähän päättyy kurssin ensimmäinen osa. Komentorivin opettelussa voi mennä aikaa, mutta ajan kanssa uuteen työkaluun tottuu. Unix-yhteisö tarjoaa paljon apuja internetissä: Linuxille on muun muassa wiki-sivut [linux.fi](https://www.linux.fi/wiki/Etusivu), sekä Unixille foorumi [Stack Exchangessa](https://unix.stackexchange.com/). MacOSille on olemassa käyttäjäystävällinen virallinen dokumentaatio, sekä myös oma [foorumi](https://discussions.apple.com/welcome).
 
 Komentorivin peruskäyttö kannattaa opetella, vaikka se tuntuisi aluksi turhalta: osaathan samat asiat jo graafisessa ympäristössä. Monen mielestä komentorivillä toimiminen on koodatessa lopulta nopeampaa, kun välissä ei tarvitse käyttää hiirtä, ja yleensä koodatessa käytettäville ohjelmille on olemassa komentoriviohjelma. Tällöin graafisen selaimen avaaminen tiedoston kopioimiseksi voi oikeasti vain hidastaa. Loppujen lopuksi kyse on tietenkin tottumisesta ja mielipiteistä.
 
 Pidä nyt pieni tauko: voit taputtaa itseäsi selkään, sait käytyä ensimmäisen osan läpi! Palaa sen jälkeen tämän sivun alusta löytyviin oppimistavoitteisiin, ja selvitä itsellesi, mitkä aiheet tarvitsevat vielä kertausta.
 
-Tämä viikko toimi esittelynä komentoriviin. Komentorivi tarjoaa kuitenkin vielä paljon erilaisia työkaluja ja komentoja, joita ei tässä käyty läpi. Tulet oppimaan ne tulevilla kursseilla sitä mukaan kuin niitä tarvitset. Alla vielä listaus hyödyllisistä komennoista, joihin kannattaa ehkä tutustua, vaikkei niitä käyty tässä läpi:
+Tämä osa toimi esittelynä komentoriviin. Komentorivi tarjoaa kuitenkin vielä paljon erilaisia työkaluja ja komentoja, joita ei tässä käyty läpi. Tulet oppimaan ne tulevilla kursseilla sitä mukaan kuin niitä tarvitset. Alla vielä listaus hyödyllisistä komennoista, joihin kannattaa ehkä tutustua, vaikkei niitä käyty tässä läpi:
 
 - `scp`: kopiointi verkon yli
 - `watch`: toista komentoa teityin väliajoin
