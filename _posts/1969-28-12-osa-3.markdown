@@ -742,7 +742,51 @@ Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mist
 
 Staattisen verkkosivun voi julkaista monessa paikassa. Yleinen tapa on vuokrata/ostaa oma palvelin ja tarjota sieltä dokumenttejä maailmalle. Harjoittelemme kuitenkin tällä kurssilla verkkosivun julkaisua Github sivuna.
 
-TODO: Github pages ohjeet
+Github sivut on ilmainen Githubin palvelu, joka mahdollistaa staattisten sivujen tarjoamisen suoraan Githubin repositoriosta.
+Tehdään uusi repositorio, minne lisäämme `index.html` tiedoston ja `css` kansioon `styles.css` tiedoston. Tämän jälkeen kirjoitamme `index.html` tiedostoon seuraavan pätkän.
+
+```html
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Github page testi</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <h1>Github pages testi</h1>
+</body>
+
+</html>
+```
+
+Ja CSS tiedostoon lisäämme seuraavan tyylin.
+
+```css
+h1 {
+  color: grey;
+}
+```
+
+Tämän jälkeen lisäämme tiedostot gittiin, ja puskemme ne githubiin. Avataan githubista repositorion settings valikko.
+
+![Githubin settings valikon ohje](/assets/html-github-settings.png)
+
+Valitaan settings valikosta github pages, ja julkaistaan master branch github sivuna.
+
+![Github sivun julkaisu](/assets/html-github-pages.png)
+
+Tämän jälkeen mennään osoitteeseen, missä sivun pitäisi olla. Osoite on oletuksena muotoa `username.github.io/repository`.
+
+![Github sivu julkaistuna](/assets/html-github-pages-live.png)
+
+Huomaamme että sivusto on julkisena, ja jokaisen internetin käyttäjän saatavilla ympäri maailman.
 
 <div class="note">
 <strong>Pääaineopiskelijoille</strong>
