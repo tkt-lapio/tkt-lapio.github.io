@@ -1,8 +1,8 @@
 ---
 layout: material
-title: "Tentti ja arvostelu"
+title: 'Tentti ja arvostelu'
 date: 1969-12-28 00:01:00 +0200
-permalink: "/tentti/"
+permalink: '/tentti/'
 tag: info
 ---
 
@@ -28,4 +28,8 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
 - Mikäli et pääse tentistä läpi, voit suorittaa sen uudestaan aikaisintaan viikon päästä edellisestä suorituskerrasta, aina 31.5.2019 asti. Suorituskertojen määrälle ei ole ylärajaa.
 - Tentti sisältää yhden ja kahden pisteen tehtäviä.
 - Laskaripisteet merkitään Moodle-alueella jokaiselle osalle erikseen. Älä lähetä laskaripisteitä sähköpostilla, emme ota niitä silloin huomioon. Merkitse laskaripisteet ennen kuin suoritat tentin.
-- Opiskelijoiden suoritukset merkitään joka kuukauden lopussa.
+
+<h3> Opintovilpistä</h3>
+Kurssilla seurataan Helsingin yliopiston opintokäytäntöjä. Plagiarismi ja opintovilppi, eli esimerkiksi netissä olevien tai kaverilta saatujen vastausten kopiointi ja niiden palauttaminen omana työnä on kiellettyä.
+
+Todettu opintovilppi johtaa kurssisuorituksen hylkäämiseen ja toistuva opintovilppi voi johtaa opinto-oikeuden määräaikaiseen menettämiseen. Lue lisää [täätä](http://blogs.helsinki.fi/alakopsaa/opiskelijalle/).

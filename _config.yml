@@ -16,11 +16,9 @@
 title: Tietokone Työvälineenä
 email: karlin@helsinki.fi irene.nikkarinen@helsinki.fi
 description: >- # this means to ignore newlines until "baseurl:"
-  Tietokone-työvälineenä
 baseurl: '' # the subpath of your site, e.g. /blog
-url: '' # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
-github_username:
+url: https://tkt-lapio.github.io/
+github_username: tkt-lapio
 favicon: /favicon.ico
 
 # Build settings
