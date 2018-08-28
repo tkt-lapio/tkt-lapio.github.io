@@ -14,13 +14,13 @@ Tämä kurssi on tarkoitettu Helsingin yliopiston tietojenkäsittelytieteen ensi
 
 <h2>Kurssin suorittaminen</h2>
 
-Kurssi suoritetaan verkkotentillä, joka tehdään Moodle-oppimisympäristössä. Tentti perustuu pääosin tältä sivustolta löytyvään materiaaliin, joka on jaettu kolmeen osaan: Komentorivin perusteet, Git ja versionhallinta, sekä HTML ja CSS.
+Kurssi suoritetaan verkkotentillä, joka tehdään [Moodle-oppimisympäristössä](https://moodle.helsinki.fi/). Moodle on yliopistolla lajaasti käytössä oleva sivusto, joka mahdollistaa sähköisen etäopetuksen järjestämisen. Kurssille on olemassa oma kurssialue, joka avataan kurssin alettua. Kurssin tentti perustuu pääosin tältä sivustolta löytyvään materiaaliin, joka on jaettu kolmeen osaan: Komentorivin perusteet, Git ja versionhallinta, sekä HTML ja CSS.
 
 Jos aiheista on kokemusta aikaisemmin, materiaalin lukeminen tai tehtävien tekeminen ei ole välttämätöntä tentin läpipääsemiseksi, vaan tenttiin voi osallistua suoraan. Jos kuitenkin käsiteltävät asiat ovat vieraita, kannattaa materiaali käydä läpi huolellisesti, sillä kurssilla opeteltavia taitoja tulet varmasti tarvitsemaan tulevissa opinnoissa. Vaikka et muuten lukisi materiaalia, lue silti tältä sivulta löytyvät [ohjeet osaston IT-järjestelmiin](/osaston-jarjestelmat).
 
 Jokaisen osan alussa on määritelty oppimistavoitteet, joiden perusteella voit määritellä itse, oletko valmis osallistumaan tenttiin.
 
-Tehtäviä tekemällä ansaitsee laskaripisteitä, jotka lasketaan mukaan kurssipisteisiin. Voit lukea kurssipisteistä lisää [arvostelu-sivulta](/tentti).
+Tehtäviä tekemällä ansaitsee laskaripisteitä, jotka lasketaan mukaan kurssipisteisiin. Laskaripisteet merkitään Moodle-alueella. Voit lukea kurssipisteistä lisää [arvostelu-sivulta](/tentti).
 
 ## Tukikanavat
 
