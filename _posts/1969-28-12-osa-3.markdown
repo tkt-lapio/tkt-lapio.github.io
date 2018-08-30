@@ -592,9 +592,9 @@ Tietokone näyttää kuvaa pikseleissä. Tällähetkellä yleisin käytössä ol
 Eli `1366x768` resoluutiolla varustetussa näytössä on yli **miljoona** pikseliä. Nyt, kun tiedämme mistä tietokoneen kuva koostuu, voimme helpommin käsitellä eri mittayksiköitä. Käymme läpi CSS:n tärkeimmät mittayksiköt ja listaamme tämän jälkeen vähemmän tärkeät.
 
 1. `px` pikselillä tarkoitetaan yksittäistä pikseliä näytöllä.
-2. `em` on sidottu käyttäjän asettamaan kirjaisinkokoon, joka voi olla vaikka `12px`. Yksi `em` tarkoittaa yhtä kirjaisinkokoa. Taas `2em` tarkoittaa kaksinkertaista kirjaisinkokoa. Kirjaisinkoot, eli `font-size` ominaisuus kannattaa aina merkitä joko pikseleinä tai em-mittayksiköllä.
+2. `em` on verrannollinen sen elementin kirjasinkokoon, minkä sisällä kyseinen elementti on. Yksi `em` tarkoittaa yhtä kirjasinkokoa. Taas `2em` tarkoittaa kaksinkertaista kirjasinkokoa. Esimerkiksi jos ylemmän elementin kirjasinkoko on `12px`, on sisemmän elementin `1em` sama kuin `12px`, ja `2em` sama kuin `24px`.  Kirjaisinkoot, eli `font-size` ominaisuus kannattaa aina merkitä joko pikseleinä tai em-mittayksiköllä.
 3. `%` on verrannollinen elementtiin, jonka sisällä kyseinen elementti on. Jos ylempi elementti on `200px` leveä, ja sisempi on `20%` leveä, niin sen koko on `40px`.
-4. `rem` on verrannollinen `<html></html>`-elementin kirjaisinkokoon. Eli toimii käytännössä samanlailla kuin em, jos kirjaisinkokoa ei ole määritelty erikseen.
+4. `rem` on muuten sama kuin `em`, mutta se on verrannollinen `<html></html>`-elementin kirjasinkokoon.
 5. `vw` verrannollinen näytön leveyteen. Yksi yksikkö tarkoittaa yhtä prosenttia näytön leveydestä.
 6. `vh` verrannollinen näytön korkeuteen. Yksi yksikkö tarkoittaa yhtä prosenttia näytön korkeudesta.
 
