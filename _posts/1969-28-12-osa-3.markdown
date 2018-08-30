@@ -80,7 +80,7 @@ Lisätään <code>index.html</code> tiedostoon `<!--Tee tehtävät tänne-->` ri
 <h3>Tehtävä 2: Tutustuminen tekstielementteihin {% include points.html text="5%" %}</h3>
 Jatketaan <code>index.html</code> tiedoston muokkaamista. Testaa eri tekstielementit läpi ja katso mitä eri elementit tekevät. Tehtävän tavoitteena on saada sivustosta seuraavan näköinen.
 <img src="/assets/html-ex1.png" alt="Toinen tehtava kuvana"/>
-Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen tehtävä </code>ja puske tehtävä Githubiin.
+Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen tehtävä </code> ja puske tehtävä Githubiin.
 </div>
 
 # Sisäkkäin asetetut elementit
