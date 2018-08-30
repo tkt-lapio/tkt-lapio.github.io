@@ -18,6 +18,6 @@ There is currently no material in English. Please take the exam in order to pass
 
 <a href="/exam">About the exam and grading</a>
 
-We will share a link to the Moodle environment here once the course starts.
+<a href="https://moodle.helsinki.fi/course/view.php?id=22186">Moodle environment</a> The course key is <strong>lapio-on-tyovaline</strong>.
 
 <a href="/departments-systems">About the departments IT systems<a>

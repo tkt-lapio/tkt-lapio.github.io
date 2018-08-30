@@ -6,7 +6,7 @@ permalink: '/tentti/'
 tag: info
 ---
 
-Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti suoritetaan Moodle-oppimisympäristössä, johon kirjaudutaan yliopiston käyttäjätunnuksilla.
+Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti suoritetaan Moodle-oppimisympäristössä, johon kirjaudutaan yliopiston käyttäjätunnuksilla. Tarvitset kirjautumista varten kurssiavaimen, joka näkyy kurssisivujen etusivulla.
 
 <h3>Tentin suorittamisen säännöt:</h3>
 
