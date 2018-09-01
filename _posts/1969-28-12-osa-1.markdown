@@ -210,7 +210,7 @@ Polku voi olla _suhteellinen_ tai _absoluuttinen_: suhteellinen polku merkitää
 Ole varovainen juurihakemiston kanssa! Se sisältää kaikenlaista tärkeää, älä siis muuta turhaan tiedostoja tai poista kansioita juuressa.
 </div>
 
-Absoluuttinen polku alkaa aina `/`-merkillä, sillä juurikansion absoluuttinen polku on `/`. Jos polkua ei aloita merkillä `/`, järjestelmä luulee että viitataan kansioon joka on nykyisessä hakemistossa. Nykyisen kansion absoluuttisen polun näkee komennolla `pwd` (**p**rint **w**orking **d**irectory). Kotihakemiston absoluuttinen polku on Linuxissa yleensä `/home/tunnus/` ja macOSissa `/Users/tunnus/`. Siihen voidaan myös viitata merkillä `~`. Esimerkiksi absoluuttinen polku kotihakemiston Downloads-kansioon olisi Linuxissa `/home/tunnus/Downloads` tai `~/Downloads`.
+Absoluuttinen polku alkaa aina `/`-merkillä, sillä juurikansion absoluuttinen polku on `/`. Jos polkua ei aloita merkillä `/`, järjestelmä luulee, että viitataan kansioon joka on nykyisessä hakemistossa. Nykyisen kansion absoluuttisen polun näkee komennolla `pwd` (**p**rint **w**orking **d**irectory). Kotihakemiston absoluuttinen polku on Linuxissa yleensä `/home/tunnus/` ja macOSissa `/Users/tunnus/`. Siihen voidaan myös viitata merkillä `~`. Esimerkiksi absoluuttinen polku kotihakemiston Downloads-kansioon olisi Linuxissa `/home/tunnus/Downloads` tai `~/Downloads`.
 
 Suhteellisissa poluissa käytetään usein merkkejä `.` ja `..`. Yksi piste `.` viittaa nykyiseen kansioon, kaksi pistettä `..` viittaa edelliseen kansioon tai ylä- eli äitikansioon. Esimerkiksi komennolla `cd ../..` siirryttäisiin kaksi kansiota "ylöspäin". Kotihakemistosta suhteellinen polku kansioon Downloads on `./Downloads` tai pelkkä `Downloads`.
 
