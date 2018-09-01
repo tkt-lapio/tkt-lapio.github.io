@@ -20,6 +20,9 @@ baseurl: '' # the subpath of your site, e.g. /blog
 url: https://tkt-lapio.github.io/
 github_username: tkt-lapio
 favicon: /favicon.ico
+webmaster_verifications:
+  google: O16GEzCu8_885HGbQ4oY7pnXFYoMzNAFR1zheUKqCE8
+  bing: 98ABC70024CB18DDED96036B3344CC0A
 
 # Build settings
 markdown: kramdown
