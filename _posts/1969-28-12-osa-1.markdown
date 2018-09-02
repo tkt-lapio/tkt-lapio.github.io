@@ -292,10 +292,10 @@ Sekä `mv` että `cp` (ja melkein kaikki muutkin Unix-tyyppisen ympäristön kom
 
 ```bash
 tunnus@hal9000:~/esimerkki$ ls
-kohde kuva.png muistio.txt toinen.png
+kohde teksti.txt muistio.txt toinen.png
 tunnus@hal9000:~/esimerkki$ mv *.txt kohde/
 tunnus@hal9000:~/esimerkki$ ls
-toinen.png
+kohde toinen.png
 tunnus@hal9000:~/esimerkki$
 ```
 
@@ -344,9 +344,9 @@ Jos tiedosto on kovin iso, tulee rivejä paljon. Usein niistä tarvitsee vain al
 
 ```
 tunnus@hal9000:~/esimerkki$ tail -n 1 esimerkki.txt
-olen
-tunnus@hal9000:~/esimerkki$ head -n 1 esimerkki.txt
 sisältö
+tunnus@hal9000:~/esimerkki$ head -n 1 esimerkki.txt
+olen
 ```
 
 Tässä siis vivulle `-n` annettiin argumenttina luku 1.
