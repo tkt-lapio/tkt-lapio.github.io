@@ -116,7 +116,7 @@ Komennot voivat vaikuttaa aluksi hieman erikoisesti nimetyiltä, sillä komennot
 
 Komentoriviltä voi selata ja hallinnoida tiedostoja samaan tapaan kuin graafisesta ympäristöstä.
 
-Avaa graafinen tiedostoselain. Se löytyy Ubuntu-ympäristössä ohjelmana nimeltä "Files" tai kirjoittamalla komentoriville `nautilus` ja painamalla <kbd>ENTER</kbd>. MacOSissa avaa finder, ja paina näppäinyhdistelmää `Shift + Cmd + H`. Tiedostoselaimessa tulisi näkyä _kotihakemistosi_. Kotihakemisto tarkoittaa hakemistoa, joka sisältää kaikki tietyn käyttäjän henkilökohtaiset tiedostot ja kansiot. Mikäli olet laitoksen koneella, kotihakemistosi sisältää samat asiat riippumatta siitä millä _fyysisellä_ koneella satut olemaan: tietokoneen sisältö haetaan toisaalta. Jos taas luet materiaalia omalta koneeltasi, kotihakemistossasi on vain ne asiat mitkä sillä fyysisellä koneella on.
+Avaa graafinen tiedostoselain. Se löytyy Ubuntu-ympäristössä ohjelmana nimeltä "Files" tai kirjoittamalla komentoriville `nautilus` ja painamalla <kbd>ENTER</kbd>. MacOSissa avaa finder, ja paina näppäinyhdistelmää `Shift + Cmd + H`. Windowsissa `nautilus` ei toimi. Tiedostoselaimessa tulisi näkyä _kotihakemistosi_. Kotihakemisto tarkoittaa hakemistoa, joka sisältää kaikki tietyn käyttäjän henkilökohtaiset tiedostot ja kansiot. Mikäli olet laitoksen koneella, kotihakemistosi sisältää samat asiat riippumatta siitä millä _fyysisellä_ koneella satut olemaan: tietokoneen sisältö haetaan toisaalta. Jos taas luet materiaalia omalta koneeltasi, kotihakemistossasi on vain ne asiat mitkä sillä fyysisellä koneella on.
 
 Huomaa, että jos avasit graafisen tiedostoselaimen komentoriviltä, komentorivi jäi ikään kuin lukkoon, ja sillä ei voinut tehdä muuta ellei graafista ohjelmaa suljeta. Voit aina sulkea käynnissä olevan ohjelman painamalla näppäinyhdistelmää <kbd>CTRL + C</kbd>. Joskus kerta ei riitä, ja voit huoletta painaa sitä monta kertaa.
 
@@ -162,7 +162,7 @@ Jos olet tottunut käyttämään graafista käyttöliittymää, mietit luultavas
 
 Kokeile tab-täydennystä kirjoittamalla kotihakemistossa `cd D`, ja painamalla sen jälkeen tab-näppäintä (löytyy näppämistöstä caps-lockin yläpuolelta) pari kertaa. Terminaaliin tulostuu kaikki kotihakemiston D-kirjaimella alkavat hakemistot, ainakin siis "Downloads" ja "Documents". Oletetaan, että haluat siirtyä Downloads-kansioon. Tällöin riittää kirjoittaa cd-komennon parametriksi vain `Dow` ja painaa tab-näppäintä, jonka jälkeen Downloads-kansion nimi täydennetään komennon parametriksi (olettaen että kotihakemistossasi ei ole mitään muuta kansiota, jonka nimi alkaisi merkkijonolla `Dow`).
 
-Toinen nopeuttava apu on vanhojen komentojen selaaminen: voit tehdä sen painamalla nuolinäppäimiä ylös- ja alaspäin. Kun olet kirjoittamassa komentoa, et voi käyttää kursoria siirtyäksesi tekstissä taaksepäin: voit liikkua komentorivin tekstissä esimerkiksi vasemmalla ja oikealla nuolinäppäimellä.
+Toinen nopeuttava apu on vanhojen komentojen selaaminen: voit tehdä sen painamalla nuolinäppäimiä ylös- ja alaspäin. Kun olet kirjoittamassa komentoa, et voi käyttää kursoria siirtyäksesi tekstissä taaksepäin: voit liikkua komentorivin tekstissä esimerkiksi vasemmalla ja oikealla nuolinäppäimellä. Komentorivi tukee valtavasti erilaisia käteviä näppäinyhdistelmiä, joista voit lukea esimerkiksi [täältä](https://unix.stackexchange.com/a/255716).
 
 <h2> Tekstinkäsittely</h2>
 
@@ -172,6 +172,17 @@ Tehtyäsi `esimerkki.txt`-tiedoston navigoi komentorivillä `lapio`-kansioon, ja
 
 <div class="note">
 Jos saat virheviestin <code>nano: command not found</code>, nanoa ei ole asennettu koneellesi. Helpoiten sen saa asennettua pakettienhallintajärjestelmän avulla. Katso osan lopusta linkki pakettienhallintajärjestelmien käyttöohjeisiin.
+</div>
+
+<div class="note">
+Windowsissa voit käyttää geditin sijaan notepad-ohjelmaa, jonka pitäisi olla valmiiksi asennettuna koneelle. Suosittelemme kuitenkin <a href="https://notepad-plus-plus.org/">notepad++</a>-editorin käyttämistä. Windows käsittelee rivinvaihtoja (merkki, joka lisätään tekstiin, kun painat enter-näppäintä) eri tavalla kuin Unix-tyyppiset järjestelmät: Windowsissa merkki on <code>\r\n</code> ja Unixissa <code>\n</code>. Tämän takia, kun tutkit notepadilla luotua tiedostoa komentorivillä, se näyttää oudolta.
+<br/><br/>
+Alla näkyy, miten voit notepad++ -editorissa luoda tiedoston, jossa rivinvaihdot käsitellään oikein myös Unix-komentorivillä.
+
+<img alt="Rivinvaihto-merkin vaihtaminen notepad++ -editorilla" src="/assets/notepad++_lf.png" />
+<br/>
+
+Huomaa, että notepadillä luomasi tiedosto on luotu Windwos-käyttäjällä, ja bash-komentorivillä käytät Unix-käyttäjää. Löydät Windows-käyttäjän tiedostot komentorivillä esimerkiksi kansiosta <code>/mnt/c</code>, jos tallensit tiedoston C-asemalle.
 </div>
 
 <div class="exercise">
@@ -662,7 +673,7 @@ Yliopiston tai osaston koneilla, eli niillä joihin kirjaudut yliopiston tai osa
 
 Helpoiten komentorivityökalujen asentaminen tapahtuu pakettienhallintajärjestelmien avulla. Tällaisia ovat esimerkiksi apt-get (Linux) tai homebrew (macOS). Ubuntussa (osaston koneilla käytettävä Linuxin versio) pitäisi olla apt-get valmiina, macOSissa joudut asentamaan homebrew:n erikseen [täältä](https://brew.sh/). Ohjeita apt-getin käyttöön löytyy [täältä](https://help.ubuntu.com/community/AptGet/Howto). **Suosittelemme vahvasti pakettienhallintajärjestelmän käyttämistä.**
 
-Ohjelman asentaminen ilman pakettienhallintajärjestelmää sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
+Ohjelman asentaminen ilman pakettienhallintajärjestelmää sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
 
 Järjestelmän ympäristö voidaan määritellä skripteissä niin, että niitä ei tarvitse erikseen määritellä session loputtua. Tällaisia on esimerkiksi `~/.bashrc`, joka ajetaan joka kerta, kun terminaali käynnistetään ja `~/bash_profile`, joka ajetaan jokaisella kirjautumisella. Voit lukea näistä tiedostoista ja niiden käytöstä muun muassa [täältä](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html). Esimerkiksi `PATH` määritellään yleensä `.bashrc`-tiedostoon.
 
