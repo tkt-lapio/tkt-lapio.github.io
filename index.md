@@ -13,7 +13,7 @@ list_title: Materiaali
 Tämä kurssi on tarkoitettu Helsingin yliopiston tietojenkäsittelytieteen ensimmäisen vuoden opiskelijoille. Kurssilla tutustutaan komentoriviin Unix-tyyppisissä järjestelmissä, opetellaan Git-versionhallintatyökalun käyttöä sekä hieman HTML ja CSS-kieliä. Tarkoituksena on oppia tietojenkäsittelytietelijän käytännön taitoja, ja käyttämään opinnoissa hyödyllisiä työvälineitä.
 
 <h2>Kurssin suorittaminen</h2>
-Kurssi suoritetaan verkkotentillä, joka tehdään [Moodle-oppimisympäristössä](https://moodle.helsinki.fi/). Moodle on yliopistolla lajaasti käytössä oleva sivusto, joka mahdollistaa sähköisen etäopetuksen järjestämisen. Kurssille on olemassa [oma kurssialue](https://moodle.helsinki.fi/course/view.php?id=22186). Moodle-alueelle pääsy vaatii kurssiavaimen, joka on <strong>lapio-on-tyovaline</strong>. Tentti perustuu pääosin tältä sivustolta löytyvään materiaaliin, joka on jaettu kolmeen osaan: Komentorivin perusteet, Git ja versionhallinta, sekä HTML ja CSS. 
+Kurssi suoritetaan verkkotentillä, joka tehdään [Moodle-oppimisympäristössä](https://moodle.helsinki.fi/). Moodle on yliopistolla lajaasti käytössä oleva sivusto, joka mahdollistaa sähköisen etäopetuksen järjestämisen. Kurssille on olemassa [oma kurssialue](https://moodle.helsinki.fi/course/view.php?id=22186). Moodle-alueelle pääsy vaatii kurssiavaimen, joka on <strong>lapio-on-tyovaline</strong>. Tentti perustuu pääosin tältä sivustolta löytyvään materiaaliin, joka on jaettu kolmeen osaan: Komentorivin perusteet, Git ja versionhallinta, sekä HTML ja CSS.
 
 Jos aiheista on kokemusta aikaisemmin, materiaalin lukeminen tai tehtävien tekeminen ei ole välttämätöntä tentin läpipääsemiseksi, vaan tenttiin voi osallistua suoraan. Jos kuitenkin käsiteltävät asiat ovat vieraita, kannattaa materiaali käydä läpi huolellisesti, sillä kurssilla opeteltavia taitoja tulet varmasti tarvitsemaan tulevissa opinnoissa. Vaikka et muuten lukisi materiaalia, lue silti tältä sivulta löytyvät [ohjeet osaston IT-järjestelmiin](/osaston-jarjestelmat).
 
@@ -39,9 +39,33 @@ Syrjiviä tai asiattomia kommentteja ei sallita, ja niiden esittäjä poistetaan
 
 Tehtävät on mahdollista tehdä millä tahansa Unix-pohjaisella tietokoneella. Käytännössä tämä tarkoittaa useimmiten Linux- tai macOS-tietokoneita. Mikäli mahdollista, suosittelemme (paria tehtävää lukuunottamatta) tehtävien tekemistä osaston koneilla, joissa on yliopiston oma Linuxin jakeluversio [Cubbli](https://helpdesk.it.helsinki.fi/ohjeet/tietokone-ja-tulostaminen/tyoasemapalvelu/yleista-cubblista).
 
-[Windows ei kuulu Unix-tyyppisten käyttöjärjestelmien perheeseen](https://en.wikipedia.org/wiki/Unix-like). Nykyään Windows 10 mahdollistaa kuitenkin Unix-tyyppisen komentorivin käytön melko vähällä vaivalla. Jos sinulla on pääsy vain Windows-koneeseen, jonka käyttöjärjestelmänä on Windows 10, käy ennen osan aloittamista läpi [nämä](https://www.windowscentral.com/how-install-bash-shell-command-line-windows-10) ohjeet. Tällöin pystyt ajamaan komentorivillä komentoja kuten Linux-koneella. Materiaali on tehty ajatellen Unix-järjestelmää, joten Windowsilla suorittaminen voi myös bash-shellin kanssa vaatia hieman kikkailua. Kysy rohkeasti apua, mikäli kohtaat ongelmia, ja ilmoita, mikäli voimme parantaa materiaali Windows-käyttäjiä ajatellen!
+[Windows ei kuulu Unix-tyyppisten käyttöjärjestelmien perheeseen](https://en.wikipedia.org/wiki/Unix-like). Kurssin suorittamiseksi Windows-koneella on kuitenkin useita vaihtoehtoja:
+
+### VirtualBox
+
+Kurssin suorittaminen Windows-koneella onnistuu todennäköisesti helpoiten ajamalla Linuxia virtuaalikoneen sisällä. Tällöin Linux-kone pyörii omassa ikkunassaan.
+
+Varmista ennen asentamista, että sinulla on vähintään 512M, mutta mieluiten 1G [RAM-muistia](https://www.computerhope.com/issues/ch000149.htm) koneellasi.
+
+  VirtualBoxin asennus:
+
+  1. Lataa ja asenna VirtualBox [täältä](https://www.virtualbox.org/wiki/Downloads).
+  2. Lataa Ubuntu 16.04:n levykuva (.iso) [täältä](http://releases.ubuntu.com/16.04/). Jos olet koskaan asentanut käyttöjärjestelmää CD:ltä, tämä .iso-tiedosto on tavallaan sen sisältö.
+  3. Seuraa [näitä ohjeita](http://www.psychocats.net/ubuntu/virtualbox) luodaksesi virtuaalikoneen
+  4. Käynnistä virtuaalikone VirtualBoxista.
+
+### Bash shell
+
+Windows 10 -käyttöjärjestelmässä on mahdollista käyttää bash shelliä. [Täältä](https://www.windowscentral.com/how-install-bash-shell-command-line-windows-10) löytyy ohjeet bash shellin asentamiseksi ja ajamiseksi. Tällöin pystyt ajamaan komentorivillä komentoja kuten Linux-koneella. Materiaali on tehty ajatellen Unix-järjestelmää, joten Windowsilla suorittaminen voi myös bash-shellin kanssa vaatia hieman kikkailua. Kysy rohkeasti apua, mikäli kohtaat ongelmia, ja ilmoita, mikäli voimme parantaa materiaali Windows-käyttäjiä ajatellen!
+
+
+### Ubuntu-applikaatio
+
+Windows 10 -käyttöjärjestelmässä on myös mahdollista ladata erillinen [Ubuntu-applikaatio](https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows#0), jonka avulla voit käyttää Ubuntu-terminaalia. Ubuntu tarkoittaa erästä Linux-jakeluversiota (tuttavallisemmin distro), josta eräs versio pyörii myös osaston koneilla.
 
 Muuten Windowsilla kurssin suorittaminen on vaikeaa, eikä järin tavoitteellista, sillä tarkoitus on nimenomaan tutustua Unix-komentoriviin. Jos olet tietojenkäsittelytieteen pääaineopiskelija, kannattaa tässä tapauksessa ensimmäisen osan tehtävät tehdä osaston paja-luokkien koneilla. Mikäli sinulla ei ole käytössä muuta, kuin vanha Windows, ota yhteys kurssin järjestäjiin.
+
+## Ennen materiaalin aloittamista
 
 Kurssin suorittaminen vaatii muutaman ohjelman asentamista koneelle. Mikäli et suorita kurssia osaston koneilla, varmista, että sinulla on käyttämääsi järjestelmään asennusoikeus.
 

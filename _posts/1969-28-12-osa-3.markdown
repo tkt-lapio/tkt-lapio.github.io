@@ -127,7 +127,7 @@ Sisäkkäin asettelu on hyvin tärkeä osa HTML-dokumenttiä, ja sen rooli koros
 <h3>Tehtävä 3: Sisäkkäin asetetut elementit {% include points.html text="10%" %}</h3>
 Tehtävänäsi on jatkaa edellisistä tehtävistä tuttua <code>index.html</code> tiedostoa.
 Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi <code>Jukola</code>, kursivoi <code>Häme</code>ja lihavoi sekä kursivoi <code>Toukola</code>
-<img src="/assets/html-ex3.png" alt="Kolmas tehtava kuvana"/> 
+<img src="/assets/html-ex3.png" alt="Kolmas tehtava kuvana"/>
 Kun koet, että tehtävä on valmis, niin tee commit viestillä <code>Osa 3. Kolmas tehtävä</code> ja puske tehtävä Githubiin.
 </div>
 
@@ -743,7 +743,7 @@ Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mist
 Staattisen verkkosivun voi julkaista monessa paikassa. Yleinen tapa on vuokrata/ostaa oma palvelin ja tarjota sieltä dokumenttejä maailmalle. Harjoittelemme kuitenkin tällä kurssilla verkkosivun julkaisua Github sivuna.
 
 Github sivut on ilmainen Githubin palvelu, joka mahdollistaa staattisten sivujen tarjoamisen suoraan Githubin repositoriosta.
-Tehdään uusi repositorio, minne lisäämme `index.html` tiedoston ja `css` kansioon `styles.css` tiedoston. Tämän jälkeen kirjoitamme `index.html` tiedostoon seuraavan pätkän.
+Tehdään uusi repositorio, jonne lisäämme `index.html` tiedoston ja `css` kansioon `styles.css` tiedoston. Tämän jälkeen kirjoitamme `index.html` tiedostoon seuraavan pätkän.
 
 ```html
 <!doctype html>
@@ -774,11 +774,11 @@ h1 {
 }
 ```
 
-Tämän jälkeen lisäämme tiedostot gittiin, ja puskemme ne githubiin. Avataan githubista repositorion settings valikko.
+Tämän jälkeen lisäämme tiedostot gittiin, ja puskemme ne Githubiin. Avataan Githubista repositorion settings valikko.
 
 ![Githubin settings valikon ohje](/assets/html-github-settings.png)
 
-Valitaan settings valikosta github pages, ja julkaistaan master branch github sivuna.
+Valitaan settings-valikosta "github pages", ja julkaistaan master-haara Github-sivuna.
 
 ![Github sivun julkaisu](/assets/html-github-pages.png)
 
@@ -816,7 +816,7 @@ Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
 <h3>Tehtävä 12: Ansioluettelo {% include points.html text="10%" %}</h3>
 <ol>
 <li>Luo uusi repositorio Githubiin.</li>
-<li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna. Jos et halua tehdä omaa niin voit tehdä ansioluettelon keksityillä tiedoilla.</li>
+<li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna. Voit halutessasi tehdä ansioluettelon myös keksityillä tiedoilla.</li>
 <li>Käytä ansioluettelon tekoon tässä osiossa opetettuja asioita. Voit hakea hakukoneella esimerkkejä esimerkiksi hakusanoilla <code>static website resumes</code>. Jos et osaa tehdä jotain tyyliä CSSllä niin hae rohkeasti netistä tietoa miten sellainen tehdään.</li>
 <li>Puske lopuksi tekemäsi muutokset GitHubiin.</li>
 <li>Julkaise ansioluettelo Github-sivuna.</li>
@@ -831,17 +831,17 @@ Lisää HTML:stä ja CSS:stä voi lukea esimerkiksi seuraavista lähteistä:
 
 - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a>
-  - Mozillan tekemä HTML ja CSS -dokumentaatio kattaa tarkasti CSS:n ja HTML:n perusteet. Jos aihe kiinnostaa enemmän kannattaa kyseiset dokumentaatiot kahlata läpi
-- Google on hyvä työkalu myös HTML ja CSS-ongelmien kanssa. Kannattaa rohkeasti hakea tietoa jos jokin asia mietityttää. Maailmassa on paljon ihmisiä, jotka ovat miettineet samoja asioita.
+  - Mozillan tekemä HTML ja CSS -dokumentaatio kattaa tarkasti CSS:n ja HTML:n perusteet. Jos aihe kiinnostaa enemmän kannattaa kyseiset dokumentaatiot kahlata läpi.
+- Google on hyvä työkalu myös HTML ja CSS-ongelmien kanssa. Kannattaa rohkeasti hakea tietoa, jos jokin asia mietityttää. Maailmassa on paljon ihmisiä, jotka ovat miettineet samoja asioita.
 
 ## Kurssin loppusanat
 
 Tähän päättyy Tietokone työvälineenä -kurssin materiaali.
 
-Pidä jälleen tauko, ja anna aivojesi levätä. Onnittele itseäsi siitä, että sait käytyä koko materiaalin läpi. Palaa sen jälkeen materiaalin oppimistavoitteisiin ja käy ne läpi ajatuksella. Mieti, mitä asioita muistat, ja mitä et. Pyri selventämään jokainen käsite nopeasti itsellesi katsomatta materiaaliin. Mikäli et muista jotain, etsi tieto rohkeasti netistä tai materiaalista. Lue lopuksi vielä tenttiä koskevat ohjeet tarkasti.
+Pidä jälleen tauko, ja anna aivojesi levätä. Onnittele itseäsi siitä, että sait käytyä koko materiaalin läpi. Palaa sen jälkeen materiaalin oppimistavoitteisiin ja käy ne läpi ajatuksella. Mieti, mitä asioita muistat, ja mitä et. Pyri selventämään jokainen käsite nopeasti itsellesi katsomatta materiaaliin. Mikäli et muista jotain, etsi tieto netistä tai materiaalista. Lue lopuksi vielä tenttiä koskevat ohjeet tarkasti.
 
 Kun osaat mielestäsi kurssin aiheet tarpeeksi hyvin, siirry Moodle-alueelle. Merkitse siellä tekemäsi laskaritehtävät. Varmista, että olet ilmoittautunut kurssille Weboodissa. Tämän jälkeen olet valmis tekemään tentin. Saat arvosanan kuluvan kuukauden lopussa.
 
-Anna vielä lopuksi kurssista anonyymiä palautetta: https://ilmo.cs.helsinki.fi/kurssit/servlet/Valinta.
+Anna vielä lopuksi kurssista anonyymiä palautetta <a href="https://ilmo.cs.helsinki.fi/kurssit/servlet/Valinta"> täällä</a>.
 
 Kiitos kurssista ja onnea tuleviin opintoihin! Opiskelukavereiden ja Googlen avulla selviää vaikeimmistakin kursseista :)

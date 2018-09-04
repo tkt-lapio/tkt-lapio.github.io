@@ -8,7 +8,7 @@ tag: info
 
 Pajalla tarkoitetaan määrättyä hetkeä, jolloin kurssin assistentit ovat paikalla luokkahuoneessa, jonne opiskelijat voivat halutessaan tulla tekemään kurssin tehtäviä ja esittämään kysymyksiä. Pajaan ei tarvitse ilmoittautua, eikä paikalla tarvitse olla määrättyä aikaa: tarkoitus on, että opiskelija voi esittää matalalla kynnyksellä kysymyksiä ja esimerkiksi tehdä yhteistyötä toisten opiskelijoiden kanssa. Paja on erinomainen tapa opiskella, ja suosittelemme sitä lämpimästi.
 
-Tietojenkäsittelytieteen osastolla on kaksi pajaluokkaa, BK107 Exactumin kellarikerroksessa ruokalan vieressä, sekä B221 toisessa kerroksessa. Tunnistat ohjaajat neonvärisistä liiveistä. Nosta kätesi rohkeasti, kun tarvitset apua, äläkä pelkää kysyä tyhmältäkin tuntuvia kysymyksiä.
+Tietojenkäsittelytieteen osastolla on kaksi pajaluokkaa, BK107 Exactumin kellarikerroksessa ruokalan vieressä, sekä B221 toisessa kerroksessa. Tunnistat ohjaajat neonvärisistä liiveistä. Nosta kätesi kun tarvitset apua, äläkä pelkää kysyä tyhmältäkin tuntuvia kysymyksiä.
 
 Lapio-kurssille tarjotaan ohjausta ensimmäisen periodin ajan. Paikalla on yksi tai kaksi ohjaajaa vähintään kahden tunnin ajan.
 
