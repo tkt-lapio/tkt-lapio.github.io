@@ -610,7 +610,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 
 `text-decoration: none | underline | overline | line-through | blink | inherit`, mahdollistaa yleisimmät tekstin muokkaustavat, esimerkiksi alleviivauksen.
 
-`text-transformation: none | capitalize | uppercase | lowercase`, mahdollistaa koko tekstin pienellä/suurella kirjoitettuna, vaikka tekstin sisällössä olisi erinkokoisia kirjaimia.
+`text-transform: none | capitalize | uppercase | lowercase`, mahdollistaa koko tekstin pienellä/suurella kirjoitettuna, vaikka tekstin sisällössä olisi erinkokoisia kirjaimia.
 
 `line-height`, rivinkorkeudella voi säätää tekstien rivien välistä etäisyyttä. Tämä ominaisuus vaikuttaa vain tekstiin. Anna tälle arvot pikseleinä tai prosentteina.
 
