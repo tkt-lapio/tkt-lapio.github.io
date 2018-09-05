@@ -500,14 +500,14 @@ ssh-add ~/.ssh/id_rsa # olettaen, ettet muuttanut yksityisen avaimen polkua sit�
 
 Huomaa siis, että agentille lisätyllä avaimella ei ollut `.pub`-päätettä, se on siis yksityinen!
 
-`ssh`-komento kannattaa ajaa vivuilla `-t rsa -b 4096`. Ne varmistavat, että käytetty salausalgoritmi on [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) ja että avaimesta tulee 4096 bittiä pitkä. Pitempi pituus tekee RSA:lla luodusta avaimesta turvallisemman.
+`ssh-keygen`-komento kannattaa ajaa vivuilla `-t rsa -b 4096`. Ne varmistavat, että käytetty salausalgoritmi on [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) ja että avaimesta tulee 4096 bittiä pitkä. Pitempi pituus tekee RSA:lla luodusta avaimesta turvallisemman.
 
 Voit lukea lisää `ssh`-komennosta ja sen konfiguroimisesta esimerkiksi [täällä](https://linux.fi/wiki/SSH)
 
 <div class="exercise">
 <h3>Tehtävä 11: SSH-yhteys {% include points.html text="10%" %}</h3>
 
-Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus, mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia.
+Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus, mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta.
 
 </div>
 
