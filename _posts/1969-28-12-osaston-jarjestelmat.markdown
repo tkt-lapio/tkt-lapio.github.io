@@ -20,7 +20,7 @@ tag: info
 Kaikki nämä palvelimet ohjaavat siis samaan käyttäjäkohtaiseen yliopiston ad-kotihakemistoon, johon pääsee kaikilta osaston koneilta. Kirjautuminen tapahtuu osaston käyttäjätunnuksilla.
 
 <div class="warning">
-Mikäli käytät yliopoiston palvelimia SSH-yhteyden yli, ja lisäät yksityisen avaimen SSH-agentille, on yksityinen avain yliopiston sääntöjen mukaan suojattava salasanalla. 
+Mikäli käytät yliopoiston palvelimia SSH-yhteyden yli, on yksityinen avain yliopiston sääntöjen mukaan suojattava salasanalla.
 </div>
 
 - Osaston tunnuksen myötä saa yliopiston ad-kotihakemiston lisäksi cs-kotihakemiston. CS-kotihakemisto sijaitsee polussa `/cs/home/<käyttäjätunnus>`. Pääset cs-kotihakemistoon samasta järjestelmästä, jossa ad-kotihakemisto sijaitsee. CS-kotihakemiston avulla on esimerkiksi mahdollista luoda itselleen laitoksen kotisivu osoitteeseen `https://www.cs.helsinki.fi/u/omatunnus/`. HTML-sivu luodaan polkuun `/cs/home/tunnus/public_html/index.html` (saatat joutua luomaan kansion `public_html`).
@@ -29,6 +29,6 @@ Mikäli käytät yliopoiston palvelimia SSH-yhteyden yli, ja lisäät yksityisen
 
 - Älä aja laitoksen järjestelmissä sudo-komentoja. Siitä lähtee ylläpidolle väärinkäyttöilmoitus.
 
-- Tietojenkäsittelytieteen pääaineopioskelijat saavat yliopiston kautta käyttöösi `cs.helsinki.fi` ja `helsinki.fi` -sähköpostit. TKO-älyn fuksiwikissä on [ohjeet](https://fuksiwiki.tko-aly.fi/S%C3%A4hk%C3%B6postitilit) siihen liittyen. Office 365 -järjestelmässä on myös kalenteri, jonka kautta voi varata erilaisia kokoustiloja esimerkiksi Kaisa-talosta. 
+- Tietojenkäsittelytieteen pääaineopioskelijat saavat yliopiston kautta käyttöösi `cs.helsinki.fi` ja `helsinki.fi` -sähköpostit. TKO-älyn fuksiwikissä on [ohjeet](https://fuksiwiki.tko-aly.fi/S%C3%A4hk%C3%B6postitilit) siihen liittyen. Office 365 -järjestelmässä on myös kalenteri, jonka kautta voi varata erilaisia kokoustiloja esimerkiksi Kaisa-talosta.
 
   **Käytännössä kannattaa valita yksi sähköposti jota käyttää, ja varmuuden vuoksi uudelleenohjata liikenne esimerkiksi helsinki.fi -sähköpostista cs.helsinki.fi -sähköpostiin ([ohjeet](https://helpdesk.it.helsinki.fi/ohjeet/yhteydenpito-ja-julkaiseminen/sahkoposti/postin-ohjaus-pois-office-365sta)) tai toisin päin.**

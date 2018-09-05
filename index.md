@@ -37,7 +37,7 @@ Syrjiviä tai asiattomia kommentteja ei sallita, ja niiden esittäjä poistetaan
 
 ## Välineet
 
-Tehtävät on mahdollista tehdä millä tahansa Unix-pohjaisella tietokoneella. Käytännössä tämä tarkoittaa useimmiten Linux- tai macOS-tietokoneita. Mikäli mahdollista, suosittelemme (paria tehtävää lukuunottamatta) tehtävien tekemistä osaston koneilla, joissa on yliopiston oma Linuxin jakeluversio [Cubbli](https://helpdesk.it.helsinki.fi/ohjeet/tietokone-ja-tulostaminen/tyoasemapalvelu/yleista-cubblista).
+Tehtävät on mahdollista tehdä millä tahansa Unix-tyyppisellä käyttöjärjestelmällä. Käytännössä tämä tarkoittaa useimmiten Linux- tai macOS-tietokoneita. Mikäli mahdollista, suosittelemme SSH-tehtävää lukuunottamatta tehtävien tekemistä osaston koneilla, joissa on yliopiston oma Linuxin jakeluversio [Cubbli](https://helpdesk.it.helsinki.fi/ohjeet/tietokone-ja-tulostaminen/tyoasemapalvelu/yleista-cubblista).
 
 [Windows ei kuulu Unix-tyyppisten käyttöjärjestelmien perheeseen](https://en.wikipedia.org/wiki/Unix-like). Kurssin suorittamiseksi Windows-koneella on kuitenkin useita vaihtoehtoja:
 
@@ -45,25 +45,26 @@ Tehtävät on mahdollista tehdä millä tahansa Unix-pohjaisella tietokoneella. 
 
 Kurssin suorittaminen Windows-koneella onnistuu todennäköisesti helpoiten ajamalla Linuxia virtuaalikoneen sisällä. Tällöin Linux-kone pyörii omassa ikkunassaan.
 
-Varmista ennen asentamista, että sinulla on vähintään 512M, mutta mieluiten 1G [RAM-muistia](https://www.computerhope.com/issues/ch000149.htm) koneellasi.
+Varmista ennen asentamista, että sinulla on vähintään 512M, mutta mieluiten 1G [RAM-muistia](https://www.computerhope.com/issues/ch000149.htm) vapaana koneellasi.
 
-  VirtualBoxin asennus:
+VirtualBoxin asennus:
 
-  1. Lataa ja asenna VirtualBox [täältä](https://www.virtualbox.org/wiki/Downloads).
-  2. Lataa Ubuntu 16.04:n levykuva (.iso) [täältä](http://releases.ubuntu.com/16.04/). Jos olet koskaan asentanut käyttöjärjestelmää CD:ltä, tämä .iso-tiedosto on tavallaan sen sisältö.
-  3. Seuraa [näitä ohjeita](http://www.psychocats.net/ubuntu/virtualbox) luodaksesi virtuaalikoneen
-  4. Käynnistä virtuaalikone VirtualBoxista.
+1. Lataa ja asenna VirtualBox [täältä](https://www.virtualbox.org/wiki/Downloads).
+2. Lataa Ubuntu 16.04:n levykuva (.iso) [täältä](http://releases.ubuntu.com/16.04/). Jos olet koskaan asentanut käyttöjärjestelmää CD:ltä, tämä .iso-tiedosto on tavallaan sen sisältö.
+3. Seuraa [näitä ohjeita](http://www.psychocats.net/ubuntu/virtualbox) luodaksesi virtuaalikoneen.
+4. Käynnistä virtuaalikone VirtualBoxista.
 
-### Bash shell
+### Bash on Ubuntu on Windows 10
 
-Windows 10 -käyttöjärjestelmässä on mahdollista käyttää bash shelliä. [Täältä](https://www.windowscentral.com/how-install-bash-shell-command-line-windows-10) löytyy ohjeet bash shellin asentamiseksi ja ajamiseksi. Tällöin pystyt ajamaan komentorivillä komentoja kuten Linux-koneella. Materiaali on tehty ajatellen Unix-järjestelmää, joten Windowsilla suorittaminen voi myös bash-shellin kanssa vaatia hieman kikkailua. Kysy rohkeasti apua, mikäli kohtaat ongelmia, ja ilmoita, mikäli voimme parantaa materiaali Windows-käyttäjiä ajatellen!
+Windows 10 -käyttöjärjestelmässä voi ladata erillisen [Ubuntu-applikaation](https://www.microsoft.com/fi-fi/p/ubuntu/9nblggh4msv6?activetab=pivot%3aoverviewtab), jonka avulla voit käyttää Ubuntu-terminaalia. Ubuntu tarkoittaa erästä Linux-jakeluversiota (tuttavallisemmin distro), josta eräs versio pyörii myös osaston koneilla.
 
+Windows 10 -käyttöjärjestelmässä on mahdollista voi myös käyttää pelkästään bash shelliä. [Täältä](https://www.windowscentral.com/how-install-bash-shell-command-line-windows-10) löytyy ohjeet bash shellin asentamiseksi ja ajamiseksi. Tällöin pystyt ajamaan komentorivillä komentoja kuten Linux-koneella.
 
-### Ubuntu-applikaatio
+Materiaali on tehty ajatellen Unix-järjestelmää, joten Windowsilla suorittaminen voi myös bash shellin kanssa vaatia hieman kikkailua. Bash shell ja Ubuntu for Windows pyörivät [Windows Subsystem for Linuxin (WSL)](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) avulla. Käyttäessäsi WSL:ää, luot erillisen Unix-käyttäjän. **Älä yritä avata Unix-käyttäjänä luotuja tiedostoja Windows-puolella, tämä voi johtaa ongelmiin.**
 
-Windows 10 -käyttöjärjestelmässä on myös mahdollista ladata erillinen [Ubuntu-applikaatio](https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows#0), jonka avulla voit käyttää Ubuntu-terminaalia. Ubuntu tarkoittaa erästä Linux-jakeluversiota (tuttavallisemmin distro), josta eräs versio pyörii myös osaston koneilla.
+Muuten Windowsilla kurssin suorittaminen on vaikeaa, eikä järin tavoitteellista, sillä tarkoitus on nimenomaan tutustua Unix-komentoriviin. Jos olet tietojenkäsittelytieteen pääaineopiskelija, kannattaa tässä tapauksessa ainakin ensimmäisen osan tehtävät tehdä osaston paja-luokkien koneilla.
 
-Muuten Windowsilla kurssin suorittaminen on vaikeaa, eikä järin tavoitteellista, sillä tarkoitus on nimenomaan tutustua Unix-komentoriviin. Jos olet tietojenkäsittelytieteen pääaineopiskelija, kannattaa tässä tapauksessa ensimmäisen osan tehtävät tehdä osaston paja-luokkien koneilla. Mikäli sinulla ei ole käytössä muuta, kuin vanha Windows, ota yhteys kurssin järjestäjiin.
+Kysy rohkeasti apua, mikäli kohtaat ongelmia, ja ilmoita, mikäli voimme parantaa materiaali Windows-käyttäjiä ajatellen!
 
 ## Ennen materiaalin aloittamista
 
@@ -79,4 +80,4 @@ Prosenttiluku tehtävän nimen jälkeen kertoo, kuinka monta prosenttia se vasta
 
 Materiaali on rakennettu niin, että sitä voi seurata tehden esimerkit samalla. Suosittelemme tätä vahvasti.
 
-Mikäli löydät virheen tai typon materiaalista, forkkaa [tämä](https://github.com/tkt-lapio/tkt-lapio.github.io) projekti, korjaa virhe omaan versioosi, ja tee pull request.
+Mikäli löydät virheen tai typon materiaalista, forkkaa [tämä](https://github.com/tkt-lapio/tkt-lapio.github.io) projekti, korjaa virhe omaan versioosi, ja tee pull request (tästä puhutaan toisessa osassa).
