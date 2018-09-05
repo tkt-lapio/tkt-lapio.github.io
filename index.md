@@ -43,7 +43,7 @@ Tehtävät on mahdollista tehdä millä tahansa Unix-tyyppisellä käyttöjärje
 
 ### VirtualBox
 
-Kurssin suorittaminen Windows-koneella onnistuu todennäköisesti helpoiten ajamalla Linuxia virtuaalikoneen sisällä. Tällöin Linux-kone pyörii omassa ikkunassaan.
+Kurssin suorittaminen Windows-koneella onnistuu todennäköisesti helpoiten ajamalla Linuxia virtuaalikoneen sisällä. Tällöin Linux pyörii omassa ikkunassaan.
 
 Varmista ennen asentamista, että sinulla on vähintään 512M, mutta mieluiten 1G [RAM-muistia](https://www.computerhope.com/issues/ch000149.htm) vapaana koneellasi.
 
@@ -56,15 +56,15 @@ VirtualBoxin asennus:
 
 ### Bash on Ubuntu on Windows 10
 
-Windows 10 -käyttöjärjestelmässä voi ladata erillisen [Ubuntu-applikaation](https://www.microsoft.com/fi-fi/p/ubuntu/9nblggh4msv6?activetab=pivot%3aoverviewtab), jonka avulla voit käyttää Ubuntu-terminaalia. Ubuntu tarkoittaa erästä Linux-jakeluversiota (tuttavallisemmin distro), josta eräs versio pyörii myös osaston koneilla.
+Mikäli ei halua käyttää VirtualBoxia, Windows 10 -käyttöjärjestelmässä voi ladata erillisen [Ubuntu-applikaation](https://www.microsoft.com/fi-fi/p/ubuntu/9nblggh4msv6?activetab=pivot%3aoverviewtab), jonka avulla voit käyttää Ubuntu-terminaalia. Ubuntu tarkoittaa erästä Linux-jakeluversiota (tuttavallisemmin distro), josta eräs versio pyörii myös osaston koneilla.
 
-Windows 10 -käyttöjärjestelmässä on mahdollista voi myös käyttää pelkästään bash shelliä. [Täältä](https://www.windowscentral.com/how-install-bash-shell-command-line-windows-10) löytyy ohjeet bash shellin asentamiseksi ja ajamiseksi. Tällöin pystyt ajamaan komentorivillä komentoja kuten Linux-koneella.
+Windows 10 -käyttöjärjestelmässä voi myös käyttää pelkästään bash shelliä. [Täältä](https://www.windowscentral.com/how-install-bash-shell-command-line-windows-10) löytyy ohjeet bash shellin asentamiseksi ja ajamiseksi. Tällöin pystyt ajamaan komentorivillä komentoja kuten Linux-koneella.
 
 Materiaali on tehty ajatellen Unix-järjestelmää, joten Windowsilla suorittaminen voi myös bash shellin kanssa vaatia hieman kikkailua. Bash shell ja Ubuntu for Windows pyörivät [Windows Subsystem for Linuxin (WSL)](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) avulla. Käyttäessäsi WSL:ää, luot erillisen Unix-käyttäjän. **Älä yritä avata Unix-käyttäjänä luotuja tiedostoja Windows-puolella, tämä voi johtaa ongelmiin.**
 
-Muuten Windowsilla kurssin suorittaminen on vaikeaa, eikä järin tavoitteellista, sillä tarkoitus on nimenomaan tutustua Unix-komentoriviin. Jos olet tietojenkäsittelytieteen pääaineopiskelija, kannattaa tässä tapauksessa ainakin ensimmäisen osan tehtävät tehdä osaston paja-luokkien koneilla.
+Muuten Windowsilla kurssin suorittaminen on vaikeaa, eikä järin tavoitteellista, sillä tarkoitus on nimenomaan tutustua Unix-komentoriviin. Jos olet tietojenkäsittelytieteen pääaineopiskelija, kannattaa tässä tapauksessa ainakin ensimmäisen osan tehtävät tehdä osaston paja-luokkien (B221 ja BK107) tai navetan koneilla.
 
-Kysy rohkeasti apua, mikäli kohtaat ongelmia, ja ilmoita, mikäli voimme parantaa materiaali Windows-käyttäjiä ajatellen!
+Kysy rohkeasti apua, mikäli kohtaat ongelmia, ja ilmoita, mikäli voimme parantaa materiaalia Windows-käyttäjiä ajatellen!
 
 ## Ennen materiaalin aloittamista
 
