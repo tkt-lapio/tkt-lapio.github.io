@@ -509,6 +509,10 @@ Voit lukea lisää `ssh`-komennosta ja sen konfiguroimisesta esimerkiksi [tääl
 
 Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus, mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta.
 
+<div class="note">
+Mikäli loit avainparin itse määrittelemääsi polkuun, tarkenna yksityisen avaimen polku: <code>ssh -i polku/yksityiseen/avaimeen tunnus@palvelimen.osoite</code>.
+</div>
+
 </div>
 
 <h2> Wget</h2>
