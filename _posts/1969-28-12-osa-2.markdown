@@ -320,7 +320,7 @@ Pusketaan `lapio_vko2.txt`-tiedostoon tekemämme muutokset komennolla `git push 
 <h3>Tehtävä 7: Commitin julkaiseminen {% include points.html text="5%" %}</h3>
 <ol>
 <li>Puske tekemäsi kolme committia etärepositoriosi <code>master</code>-haaraan.</li>
-<li>Käy tarkistamassa GitHubissa, että luomasi neljä committia näkyvät etärepositoriossa.</li>
+<li>Käy tarkistamassa GitHubissa, että kyseiset commitit näkyvät etärepositoriossa.</li>
 </ol>
 </div>
 

@@ -615,13 +615,19 @@ drw-r--r-- 1 tunnus tunnus 130 kesä 14 17:54 päiväkirjamerkinnät
 
 Luo tiedosto <code>oikeus.txt</code> ja harjoittele sen avulla oikeuksien hallinnointia. Anna sille vuorotellen seuraavanlaiset oikeudet:
 
-</div>
-```
+<pre>
+<code>
 -rwxr--r--
 -rw-r--r--
 -rw-------
 -r-xrw--w-
-```
+</code>
+</pre>
+
+<div class="note">
+Mikäli teet tehtävän osaston koneella, tee se kansiossa, jonka polku on <code>/cs/home/yliopiston_tunnuksesi</code>. Mikäli kansiota ei löydy (yrittäessäsi siirtyä kansioon komennolla <code>cd</code> tulostuu <code>No such file or directory</code>), aktivoi ensin CS-käyttäjätunnuksesi <a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> täältä </a> löytyvien ohjeiden mukaan.
+</div>
+</div>
 
 Voit lukea lisää oikeuksista esimerkiksi [täältä](https://csguide.cs.princeton.edu/account/groups).
 
