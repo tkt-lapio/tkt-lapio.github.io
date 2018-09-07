@@ -791,7 +791,7 @@ Huomaamme että sivusto on julkisena, ja jokaisen internetin käyttäjän saatav
 <div class="note">
 <strong>Pääaineopiskelijoille</strong>
 
-Yliopisto tarjoaa tietojenkäsittelytieteen pääaineopiskelijoille palvelintilaa missä voi pyörittää omia staattisia verkkosivuja. Käyttäjän dokumentit sijaitsee levypalvelimella käyttäjän kotihakemiston public_html-alihakemistossa: <code>/home/cs/käyttäjätunnus/public_html/</code>.
+Yliopisto tarjoaa tietojenkäsittelytieteen pääaineopiskelijoille palvelintilaa missä voi pyörittää omia staattisia verkkosivuja. Käyttäjän dokumentit sijaitsee levypalvelimella käyttäjän CS-kotihakemiston public_html-alihakemistossa: <code>/cs/home/käyttäjätunnus/public_html/</code>.
 
 <p>Kotisivu näkyy maailmalle osoitteessa <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code>.</p>
 
