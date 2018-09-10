@@ -487,7 +487,25 @@ The key's randomart image is:
 
 Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. Tämä `.pub`-päätteinen tiedosto sisältää julkisen avaimen, jonka voit turvallisesti jakaa muille, toinen tiedosto yksityisen avaimen, jota kannattaa kohdella samalla varovaisuudella kuin tavallista salasanaa.
 
-Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään halutulle palvelimelle. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Lisätään siis `.pub`-päätteisen tiedoston sisältö yliopiston kotihakemiston polkuun `~/.ssh/authorized_keys`, siis kansioon `.ssh`, tiedostoon nimeltä `authorized_keys`.
+Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Lisätään siis `.pub`-päätteisen tiedoston sisältö yliopiston kotihakemiston polkuun `~/.ssh/authorized_keys`, siis kansioon `.ssh`, tiedostoon nimeltä `authorized_keys`. Joudut luultavasti luomaan kansion ja tiedoston itse.
+
+Helpoiten saa julkisen avaimen siirrettyä kohdepalvelimelle komennolla <code>scp</code>. Komentoa käytetään seuraavasti:
+
+```
+scp polku/kopioitavaan/tiedostoon tunnus@palvelmen.osoite:polku/kohdekansioon
+```
+
+Huomaa palvelimen osoitteen jälkeen lisättävä kaksoispiste!
+
+<div class="note">
+
+Voit esimerkiksi kopioida julkisen avaimen <code>.ssh</code>-kansioon, ja sen jälkeen uudelleennimetä sen sopivasti.
+
+<br/>
+<i>
+Kannatta myös kokeilla, miten <code>scp</code> toimii, jos kohdekansiota ei ole olemassa.
+</i>
+</div>
 
 Autentikaatio toimii oikein, kun otettaessa SSH-yhteyttä yliopiston koneisiin pääsee kirjautumaan SSH-avaimelle antamalla salasanalla.
 
@@ -510,9 +528,12 @@ Voit lukea lisää `ssh`-komennosta ja sen konfiguroimisesta esimerkiksi [tääl
 Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus, mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta.
 
 <div class="note">
-Mikäli loit avainparin itse määrittelemääsi polkuun, tarkenna yksityisen avaimen polku: <code>ssh -i polku/yksityiseen/avaimeen tunnus@palvelimen.osoite</code>.
-</div>
+Mikäli loit avainparin itse määrittelemääsi polkuun, ja yhteys kysyy vielä yliopiston salasanaa, tarkenna yksityisen avaimen polku:
 
+<div>
+<code>ssh -i polku/yksityiseen/avaimeen tunnus@kohde.palvelimen.osoite</code>
+</div>
+</div>
 </div>
 
 <h2> Wget</h2>
@@ -697,8 +718,7 @@ Pidä nyt pieni tauko: voit taputtaa itseäsi selkään, sait käytyä ensimmäi
 
 Tämä osa toimi esittelynä komentoriviin. Komentorivi tarjoaa kuitenkin vielä paljon erilaisia työkaluja ja komentoja, joita ei tässä käyty läpi. Tulet oppimaan ne tulevilla kursseilla sitä mukaan kuin niitä tarvitset. Alla vielä listaus hyödyllisistä komennoista, joihin kannattaa ehkä tutustua, vaikkei niitä käyty tässä läpi:
 
-- `scp`: kopiointi verkon yli
-- `watch`: toista komentoa teityin väliajoin
+- `watch`: toista komentoa tietyin väliajoin
 - `&& tai ;`: ketjuta komentoja peräjälkeen
 - `alias`: määrittele komennoille aliaksia, joiden avulla voit kutsua niitä esimerkiksi nopeammin.
 - `&`: kirjoittamalla merkin komennon loppuun sen aloittama prosessi jää taustalle, eikä lukitse komentoriviä
