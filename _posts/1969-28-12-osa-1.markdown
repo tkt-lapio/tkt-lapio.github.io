@@ -27,7 +27,7 @@ Tämän osan tavoitteina on, että opiskelija
 - Osaa käsitellä tekstiä komentorivillä
   - cat
   - tail ja head, myös n-vivun kanssa
-  - Grep
+  - grep
 - Tulosteen käsittely
   - Putki \|
   - \> ja \>\>
@@ -487,7 +487,7 @@ The key's randomart image is:
 
 Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. Tämä `.pub`-päätteinen tiedosto sisältää julkisen avaimen, jonka voit turvallisesti jakaa muille, toinen tiedosto yksityisen avaimen, jota kannattaa kohdella samalla varovaisuudella kuin tavallista salasanaa.
 
-Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Lisätään siis `.pub`-päätteisen tiedoston sisältö yliopiston kotihakemiston polkuun `~/.ssh/authorized_keys`, siis kansioon `.ssh`, tiedostoon nimeltä `authorized_keys`. Joudut luultavasti luomaan kansion ja tiedoston itse.
+Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Lisätään siis `.pub`-päätteisen tiedoston sisältö yliopiston kotihakemiston polkuun `~/.ssh/authorized_keys`, siis kansioon `.ssh`, tiedostoon nimeltä `authorized_keys`. Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Joudut luultavasti luomaan kansion ja tiedoston itse.
 
 Helpoiten saa julkisen avaimen siirrettyä kohdepalvelimelle komennolla <code>scp</code>. Komentoa käytetään seuraavasti:
 
