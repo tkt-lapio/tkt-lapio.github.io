@@ -215,7 +215,7 @@ Vastaavanlainen, mutta paljon enemmän ominaisuuksia sisältävä komentolinjall
 
 Polku (englanniksi _path_) tarkoittaa osoitetta tiettyyn tiedostoon tai kansioon. Se koostuu lähinnä kansioiden ja tiedostojen nimistä ja `/`-merkistä. Polkuja käytetään komentojen argumenteissa.
 
-Polku voi olla _suhteellinen_ tai _absoluuttinen_: suhteellinen polku merkitään suhteessä nykyiseen kansioon, absoluuttinen suhteessa järjestelmän _juurikansioon_. Juurikansio sisältää kaikki tietokoneen tiedostot, eikä sitä tule sekoittaa käyttäjäkohtaiseen kotihakemistoon. Juurikansio sisältää siis kaikkien käyttäjien kotihakemistot.
+Polku voi olla _suhteellinen_ tai _absoluuttinen_: suhteellinen polku merkitään suhteessa nykyiseen kansioon, absoluuttinen suhteessa järjestelmän _juurikansioon_. Juurikansio sisältää kaikki tietokoneen tiedostot, eikä sitä tule sekoittaa käyttäjäkohtaiseen kotihakemistoon. Juurikansio sisältää siis kaikkien käyttäjien kotihakemistot.
 
 <div class="warning">
 Ole varovainen juurihakemiston kanssa! Se sisältää kaikenlaista tärkeää, älä siis muuta turhaan tiedostoja tai poista kansioita juuressa.
