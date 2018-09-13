@@ -286,18 +286,18 @@ Nappi `Create repository` lisää projektin omaan profiiliin. Kun projektiin nav
 
 Etärepositorio yhdistetään paikalliseen projektiin komennolla `git remote add`.
 
-Komento ottaa argumentikseen lisättävän etärepositorion nimen sekä osoitteen. GitHub tarjoaa kaksi vaihtoehtoa etärepositorion lisäysprotokollaksi: SSH ja https. Ensimmäisen vaihtoehdon pitäisi olla tuttu ensimmäisestä osasta, toisen selaimen osoitekentästä. SSH on siis sama yhteystyyppi, jolla vierailtiin laitoksen koneilla komennolla `ssh`. Tätä yhteystyyppia on mahdollista käyttää, jos koneella on luotu yksityinen ja julkinen avainpari, joista julkinen on lisätty GitHubiin. Jos käyttää https-yhteyttä, autentikointi tapahtuu GitHub-käyttäjänimellä ja salasanalla. SSH-yhteyden käyttö on siis paljon vaivattomampaa, sillä jos yksityisen avaimen lisää ssh-agentille, ei salasanaa tarvitse kirjoittaa jatkusvasti. SSH-avaimia käsiteltiin [ensimmäisessä osasssa](/komentorivi#SSH-avainpari).
+Komento ottaa argumentikseen lisättävän etärepositorion nimen sekä osoitteen. GitHub tarjoaa kaksi vaihtoehtoa etärepositorion lisäysprotokollaksi: SSH ja https. Ensimmäisen vaihtoehdon pitäisi olla tuttu ensimmäisestä osasta, toisen selaimen osoitekentästä. SSH on siis sama yhteystyyppi, jolla vierailtiin laitoksen koneilla komennolla `ssh`. Tätä yhteystyyppia on mahdollista käyttää, jos koneella on luotu yksityinen ja julkinen avainpari, joista julkinen on lisätty GitHubiin. Jos käyttää https-yhteyttä, autentikointi tapahtuu GitHub-käyttäjänimellä ja salasanalla. SSH-yhteyden käyttö on siis paljon vaivattomampaa, sillä jos yksityisen avaimen lisää ssh-agentille, ei salasanaa tarvitse kirjoittaa jatkuvasti. SSH-avaimia käsiteltiin [ensimmäisessä osasssa](/komentorivi#SSH-avainpari).
 
 Valitaan GitHubin ohjeista SSH-osoite projektille, jotta siihen voidaan muodostaa SSH-yhteys:
 
 ![SSH osoite GitHubissa](/assets/ssh-clone.png)
 
-Uusi origin-niminen etärepositorio lisätään SSH-yhteyttä käyttäen ajamalla projektikansiossa komento `git remote add origin git@github.com:kayttaja/projekti.git`. Https-osoite olisi käytännössä sama, kuin selaimen osoiterivillä. Etärepositorion nimi voi olla muutakin kuin "origin", mutta se on yleinen valinta. Yhdelle projektille voi lisätä useita etärepositorioita, jolloin niiden järkevä nimeäminen on oleellista.
+Uusi origin-niminen etärepositorio lisätään SSH-yhteyttä käyttäen ajamalla projektikansiossa komento `git remote add origin git@github.com:kayttaja/projekti.git`. Https-osoite olisi melkein sama, kuin selaimen osoiterivillä. Etärepositorion nimi voi olla muutakin kuin "origin", mutta se on yleinen valinta. Yhdelle projektille voi lisätä useita etärepositorioita, jolloin niiden järkevä nimeäminen on oleellista.
 
 <div class="exercise">
-<h3>Tehtävä 5 {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 5: SSH-avain GitHubiin {% include points.html text="5%" %}</h3>
 Jos et ole luonut koneellesi ssh-avainparia, tee se ensin. Ohjeet löytyy <a href="/komentorivi#SSH-avainpari">ensimmäisestä osasta</a>.
-Lisää julkinen ssh-avaimesi GitHubin käyttäjällesi. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">Ohjeet GitHubissa</a>.
+Lisää julkinen ssh-avaimesi GitHubin käyttäjällesi. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">Sille löytyy ohjeet GitHubissa</a>.
 Voit tulostaa ssh-avaimen terminaaliisi komennolla <code>cat avaintiedoston_nimi</code> ja kopioida sen painamalla <code>ctrl + shift + c</code>, ja jatkaa GitHubin ohjeiden seuraamista kohdasta 2. Tällöin sinun ei tarvitse asentaa uutta ohjelmaa, kuten GitHubin ohjeet ehdottavat.
 </div>
 
@@ -398,8 +398,8 @@ Tällaisessa tilanteessa voidaan laittaa paikalliset muutokset syrjään _stashi
 <li>Tee muutoksia paikallisesti jo kertaalleen Gittiin lisäämiisi tiedostoihin (eivät ole <code>untracked</code>-otsikon alla </li>komennon <code>git status</code> tulostuksessa).
 <li>Laita sen jälkeen juuri tekemäsi muutokset syrjään stashiin.</li>
 <li>Avaa sen jälkeen muokkaamasi tiedosto, näetkö tekemiäsi muutoksia?</li>
-<li>Muokkaa GitHubin kautta <code>tarina.txt</code>-tiedoston _ensimmäistä_ lausetta ja tee siitä commit.</li>
-<li>Muokkaa sitten paikallisesti saman tiedoston _viimeistä_ lausetta, mutta **älä tee committia**.</li>
+<li>Muokkaa GitHubin kautta <code>tarina.txt</code>-tiedoston <i>ensimmäistä</i> lausetta ja tee siitä commit.</li>
+<li>Muokkaa sitten paikallisesti saman tiedoston <i>viimeistä</i> lausetta, mutta <strong>älä tee committia</strong>.</li>
 <li>Hae sen jälkeen etärepositoriossa tekemäsi muutokset <code>tarina.txt</code>-tiedoston ensimmäiseen lauseeseen projektin paikalliseen versioon. Käytä apuna stashia.</li>
 <li>Kun olet saanut haettua muutokset, tee viimeiseen lauseeseen tekemistäsi muutoksista uusi commit.</li>
 <li>Puske tämän jälkeen lopputulos GitHubiin.</li>
