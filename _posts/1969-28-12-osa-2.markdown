@@ -553,7 +553,7 @@ Projektin historian säilyttäminen on yksi versionhallinan suurimmista eduista.
 
 ### Historian tarkasteleminen
 
-Projektin historia näkyy helposti Githubissa. Tarkastellaan historiaan ensin sitä kautta.
+Projektin historia näkyy helposti Githubissa. Tarkastellaan historiaa ensin sitä kautta.
 
 Navigoidessa projektin sivulle yläpalkissa on ensimmäisenä vasemmalla välilehti, josta pääsee tarkastelemaan committeja.
 
