@@ -416,7 +416,7 @@ Jatketaan vielä kahden rinnakkaisen tilan kanssa.
 
 Äskeisessä tilanteessa etärepositoriossa ja paikallisesti vallitsivat eri tilat, sillä molemmissa oli tietoa, jota toisella ei ollut. Koska paikallisia muutoksia ei oltu commitoitu, voitiin ne piilottaa stashiin. Mitä olisi tapahtunut, jos paikallisesti oltaisiin ehditty commitoida?
 
-Tilanne voidaan ratkaista _mergellä_, eli yhdistämällä kaksi rinnakkaista tilaa. Sellaiset haarat, jotka eivät ole ristriiidassa keskenään, eli toisin sanoen eivät tee päällekkäisiä muutoksia, Git osaa yhdistää automaattisesti. Tällöin Git luo uuden merge-commitin.
+Tilanne voidaan ratkaista _mergellä_, eli yhdistämällä kaksi rinnakkaista tilaa. Sellaiset haarat, jotka eivät ole ristriidassa keskenään, eli toisin sanoen eivät tee päällekkäisiä muutoksia, Git osaa yhdistää automaattisesti. Tällöin Git luo uuden merge-commitin.
 
 Oikeastaan komento `git pull` sisältää jo valmiiksi merge-toiminnallisuuden. Riittää siis ajaa komento `git pull`, ja antaa tekstieditorin avautuessa commitille otsikko, jotta saadaan yhdistettyä paikallinen master-haara etärepositorion master-haaraan. GitHub ehdottaa valmiiksi viestiä, jota voi halutessaan muokata mieleisekseen. Merge on valmis, kun merge-commitin viestin tallentaa.
 
