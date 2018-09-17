@@ -95,7 +95,7 @@ Tämä on kiva **lause**
 <p>Tämä on kiva <strong>lause</strong></p>
 ```
 
-On kuitenkin tärkeää sulkea HTML-elementit järjestyksessä. Edellisessä esimerkikssä avasimme ensimmäiseksi `<p>` elementin, jonka jälkeen avasimme `<strong>` elementin. Suljimme `</strong>` elementin ensimmäisenä ja `</p>` elementin sen jälkeen. Oikeaoppisessa HTML:ssä on virheellistä sulkea elementit väärässä järjestyksessä. Aina pitää sulkea viimeiseksi aukaistu elementti. Jos emme tee näin,yrittää selain arvata parhaan tavan esittää koodin. Eri selaimet arvaavat voivat arvata eri tavalla, joten emme voi olla varmoja dokumentin esitystavasta.
+On kuitenkin tärkeää sulkea HTML-elementit järjestyksessä. Edellisessä esimerkikssä avasimme ensimmäiseksi `<p>` elementin, jonka jälkeen avasimme `<strong>` elementin. Suljimme `</strong>` elementin ensimmäisenä ja `</p>` elementin sen jälkeen. Oikeaoppisessa HTML:ssä on virheellistä sulkea elementit väärässä järjestyksessä. Aina pitää sulkea viimeiseksi aukaistu elementti. Jos emme tee näin,yrittää selain arvata parhaan tavan esittää koodin. Eri selaimet voivat arvata eri tavalla, joten emme voi olla varmoja dokumentin esitystavasta.
 
 On olemassa kahta eri kategoriaa HTML-elementtejä. Niin sanotut _lohkotason_ elementit ja _sisätason_ elementit.
 
