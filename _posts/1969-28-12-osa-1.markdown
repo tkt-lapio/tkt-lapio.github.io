@@ -552,12 +552,14 @@ Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla, ja avaa tallen
 <div class="exercise">
 <h3>Tehtävä 13: Wget, grep ja Linus Torvalds {% include points.html text="10%" %}</h3>
 
+Tässsä tehtävässä lasketaan, monellako rivillä Linus Torvaldista kertovassa artikkelissa esiintyy sana "Linux".
+
 <p>
-Hae wgetillä Linus Torvaldsista kertova <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia-artikkeli</a> koneellesi. Tarkista sen jälkeen <code>grep</code>-komentoa käyttäen, kuinka monella rivillä esiintyy sana "Linux". Kirjoita nämä rivit tiedostoon.
+Hae wgetillä Linus Torvaldsista kertova <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia-artikkeli</a> koneellesi. Hae syntyneestä tiedostosta <code>grep</code>-komentoa käyttäen ne rivit, joissa lukee "Linux". Kirjoita nämä rivit tiedostoon.
 </p>
 
 <p>
-Etsi sitten netistä, miten voit laskea tulosteen rivien määrät, ja laske monellako rivillä sana "Linux" esiintyy.
+Etsi sitten netistä, miten voit laskea tulosteen tai tiedoston rivien määrät, ja laske monellako rivillä sana "Linux" esiintyy.
 </p>
 
 Bonustehtävä: Tee sama operaatio, mutta älä kirjoita mitään välissä tiedostoon.
@@ -589,7 +591,7 @@ Seuraavat yhdeksän merkkiä on varattu tiedoston tai kansion oikeuksille. Näm�
 
 Seuraavat kolme merkkiä kertovat samaan tapaan _ryhmän_ oikeudet. Ryhmä on tapa, jolla samanlaisia käyttäjiä voi hallita - esimerkiksi kaikki opiskelijat saattaisivat olla osaston järjestelmissä yhdessä ryhmässä, jotta ryhmälle voidaan antaa tiettyjä oikeuksia. Viimeiset kolme merkkiä taas näyttävät kaikkien muiden käyttäjien oikeudet.
 
-Oikeuksien jälkeen näkyy kansioon johtavien linkkien määrä: Tiedostoilla tämä luku on yksi, ja tyhjillä kansioilla kaksi. Kansioissa linkkien lukumäärään sisältyy myös sen sisältämät tiedostot. Emme käsittele linkkejä enempää, eikä niistä kysytä tentissä. Voit etsiä linkeistä tietoa esimerkiksi sanoilla "Hard and soft links in Unix".
+Oikeuksien jälkeen näkyy tiedostoon johtavien linkkien määrä. Kansioissa linkkien lukumäärään sisältyy myös sen sisältämät tiedostot. Emme käsittele linkkejä enempää, eikä niistä kysytä tentissä. Voit etsiä linkeistä tietoa esimerkiksi sanoilla "Hard and soft links in Unix".
 
 Sen jälkeen on tiedoston omistajan nimi ja ryhmän nimi. Tässä tapauksessa ryhmän nimi on käyttäjänimi `tunnus`. Viimeisenä tulostuksessa näkyy kansion tai tiedoston koko [tavuina](<https://fi.wikipedia.org/wiki/Tavu_(tietotekniikka)>), sekä viimeinen muokkauspäivä, ja lopuksi sen nimi.
 

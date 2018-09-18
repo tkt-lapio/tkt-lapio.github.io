@@ -36,7 +36,7 @@ Tarvitset tässä osassa tekstieditoria. Suosittelemme [vscodea](https://code.vi
 <ol>
 <li>Luo "Lapio-website"-niminen kansio komentoriviä käyttäen ja tee tästä kansiosta git-projekti.</li>
 <li>Luo Githubiin uusi <strong>tyhjä</strong> repo nimellä Lapio-website.</li>
-<li>Lisää Github.projekti Git-projektin etärepositorioksi.</li>
+<li>Lisää Github-projekti Git-projektin etärepositorioksi.</li>
 <li>Lisää kansioon <code>index.html</code> tiedosto joka löytyy <a href="https://github.com/rovaniemi/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">täältä</a>. Tiedoston sisältöä ei tarvitse vielä ymmärtää.</li>
 <li>Tee commit viestillä <code>Osa 3. Ensimmäinen tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
@@ -635,7 +635,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 <li>Ota tavoitteeksi, että saat edellisessä tehtävässä tehdyn sivun näyttämään tältä.</li>
 <li>Älä välitä vaikka sivusto on ruma, vaan keskity tutkimaan mitä eri CSS ominaisuudet tekevät.</li>
 <img src="/assets/html-ex-10.png" alt="HTML sivu ilman CSS-koodia"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kymmenes tehtävä ja puske tehtävä Githubiin.</code></li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kymmenes tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
 
