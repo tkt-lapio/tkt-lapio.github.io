@@ -95,7 +95,7 @@ Tämä on kiva **lause**
 <p>Tämä on kiva <strong>lause</strong></p>
 ```
 
-On kuitenkin tärkeää sulkea HTML-elementit järjestyksessä. Edellisessä esimerkikssä avasimme ensimmäiseksi `<p>` elementin, jonka jälkeen avasimme `<strong>` elementin. Suljimme `</strong>` elementin ensimmäisenä ja `</p>` elementin sen jälkeen. Oikeaoppisessa HTML:ssä on virheellistä sulkea elementit väärässä järjestyksessä. Aina pitää sulkea viimeiseksi aukaistu elementti. Jos emme tee näin,yrittää selain arvata parhaan tavan esittää koodin. Eri selaimet arvaavat voivat arvata eri tavalla, joten emme voi olla varmoja dokumentin esitystavasta.
+On kuitenkin tärkeää sulkea HTML-elementit järjestyksessä. Edellisessä esimerkikssä avasimme ensimmäiseksi `<p>` elementin, jonka jälkeen avasimme `<strong>` elementin. Suljimme `</strong>` elementin ensimmäisenä ja `</p>` elementin sen jälkeen. Oikeaoppisessa HTML:ssä on virheellistä sulkea elementit väärässä järjestyksessä. Aina pitää sulkea viimeiseksi aukaistu elementti. Jos emme tee näin,yrittää selain arvata parhaan tavan esittää koodin. Eri selaimet voivat arvata eri tavalla, joten emme voi olla varmoja dokumentin esitystavasta.
 
 On olemassa kahta eri kategoriaa HTML-elementtejä. Niin sanotut _lohkotason_ elementit ja _sisätason_ elementit.
 
@@ -273,7 +273,7 @@ Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia.
 <li>Lisää kuva kansioon ja muista lisätä myös se Gittiin.</li>
 <li>Lisää kuva edellisistä tehtävistä tuttuun html -dokumenttiin dynaamisella osoitteella.</li>
 <li>Säädä kuvan koko oikeaksi.</li>
-<li>Muista lisätä <code>alt</code> tagi.</li>
+<li>Muista lisätä <code>alt</code> attribuutti.</li>
 <li>Lisää kuvan elementin yläpuolelle kommentti että kuva esittää seitsemän veljeksen kirjan ensimmäistä sivua.</li>
 <li>Lopputuloksen pitäisi näyttää seuraavanlaiselta.</li>
 <img src="/assets/html-ex5.png" alt="Viidennen tehtävän lopputulos"/>
