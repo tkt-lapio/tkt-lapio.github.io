@@ -740,7 +740,7 @@ Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mist
 
 # Verkkosivun julkaiseminen ja Github pages
 
-Staattisen verkkosivun voi julkaista monessa paikassa. Yleinen tapa on vuokrata/ostaa oma palvelin ja tarjota sieltä dokumenttejä maailmalle. Harjoittelemme kuitenkin tällä kurssilla verkkosivun julkaisua Github sivuna.
+Staattisen verkkosivun voi julkaista monessa paikassa. Yleinen tapa on vuokrata/ostaa oma palvelin ja tarjota sieltä dokumentteja maailmalle. Harjoittelemme kuitenkin tällä kurssilla verkkosivun julkaisua Github sivuna.
 
 Github sivut on ilmainen Githubin palvelu, joka mahdollistaa staattisten sivujen tarjoamisen suoraan Githubin repositoriosta.
 Tehdään uusi repositorio, jonne lisäämme `index.html` tiedoston ja `css` kansioon `styles.css` tiedoston. Tämän jälkeen kirjoitamme `index.html` tiedostoon seuraavan pätkän.
