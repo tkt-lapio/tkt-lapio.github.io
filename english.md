@@ -14,7 +14,7 @@ The course is passed with an online exam, which is held in [Moodle](https://mood
 
 Please also read the introductions to the department's IT systems page. They include vital information.
 
-There is currently no material in English. Please take the exam in order to pass the course. If you have problems passing the exam, please contact <a href="mailto:karlin@cs.helsinki.fi" target="_top">karlin@cs.helsinki.fi</a> or <a href="mailto:irene.nikkarinen@helsinki.fi" target="_top">irene.nikkarinen@helsinki.fi</a>.
+There is currently no material in English. Please take the exam in order to pass the course. If you have problems passing the exam, please contact <a href="mailto:karlin@cs.helsinki.fi" target="_top">karlin ät cs.helsinki.fi</a> or <a href="mailto:irene.nikkarinen@helsinki.fi" target="_top">irene.nikkarinen ät helsinki.fi</a>.
 
 <a href="/exam">About the exam and grading</a>
 

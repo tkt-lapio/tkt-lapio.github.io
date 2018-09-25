@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Tietokone Työvälineenä
-email: karlin@helsinki.fi irene.nikkarinen@helsinki.fi
+email: karlin ät cs.helsinki.fi, irene.nikkarinen ät helsinki.fi
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: '' # the subpath of your site, e.g. /blog
 url: https://tkt-lapio.github.io/
