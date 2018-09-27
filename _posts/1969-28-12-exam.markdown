@@ -18,7 +18,7 @@ One must pass the exam in order to receive a grade from the course. The exam is 
 - The computer you pass the exam on has to have Git installed.
 - If you have access to the CS department's computers, we recommend passing the exam on one of them.
 - Each question and answer option is written in Finnish and in English. Please let us know immediately if this is not the case.
-- The consists of mostly multiple choice questions, and "short answers", where the answer is for example a command name. In some questions the user is required to for example download a file and run commands on the command line.
+- The exam consists of mostly multiple choice questions, and "short answers", where the answer is for example a command name. In some questions the user is required to for example download a file and run commands on the command line.
 
 <h3>Grading:</h3>
 - The grading scale is the following:
@@ -26,7 +26,7 @@ One must pass the exam in order to receive a grade from the course. The exam is 
   - 3
   - 5
 - The exam counts for 18 points.
-- Definitive grade limits are determined based on the first period of 2018, but a priori 9 points are required to pass the course and 17 points are required for the grade 5.
+- 9 points are required to pass the course and 17 points are required for the grade 5.
 - If you don't pass the exam, you can retake it for an unlimited amount of times, until May 31st 2019 at 23:59. There must be a week between each retake.
 - The exam contains exercises of one and two points.
 - If you have trouble passing the exam please contact the course organizers.

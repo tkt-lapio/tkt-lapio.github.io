@@ -20,11 +20,12 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
 - Tentti koostuu pääosin monivalintatehtävistä, sekä "lyhyt vastaus" -tehtävistä, jossa oikea vastaus on esimerkiksi komennon nimi. Osassa tehtävistä opiskelijan on tarkoitus etsiä itse vastaus internetistä. Joissain tehtävissä opiskelijan tulee ladata tiedostoja ja ajaa komentoja komentorivillä saadakseen oikean vastauksen.
 
 <h3>Arvostelu:</h3>
-- Kurssin arvosana-asteikossa on kolme arvosanaa
-  - hylätty
-  - 3
-  - 5
-- Kurssin arviointi varmistetaan ensimmäisen kuukauden suoritusten perusteella. Tentistä voi saada maksimissaan 18 pistettä. Alustavasti vähintään puolet (9 pistettä) on saatava, jotta kurssista pääsee läpi. Alustavasti jokaisen osan tehtävistä on mahdollista saada 2 laskaripistettä. Maksimissaan laskaripisteitä voi siis saada 6. Kurssipisteet koostuvat tentin pisteistä, sekä laskaripisteistä. Alustavasti arvosana 5 vaatii 17 kurssipistettä.
+- Kurssilla on käytössä koeleikkuri: tentistä on saatava vähintään 9 pistettä, jotta kurssista voi päästä läpi.
+- Kurssipisteet koostuvat laskari- ja tenttipisteistä. Tentistä voi saada maksimissaan 18 pistettä. Jokaisen osan tehtävistä on mahdollista saada 2 laskaripistettä, ja osia on kolme. Enintään kurssipisteitä voi siis saada 18 + 2 * 3 = 24.
+- Kurssin arvosana-asteikossa on kolme arvosanaa:
+  - alle 9 tenttipistettä: hylätty
+  - vähintään 9 tenttipistettä: 3
+  - vähintään 17 kurssipistettä: 5
 - Mikäli et pääse tentistä läpi, voit suorittaa sen uudestaan aikaisintaan viikon päästä edellisestä suorituskerrasta, aina 31.5.2019 asti. Suorituskertojen määrälle ei ole ylärajaa.
 - Tentti sisältää yhden ja kahden pisteen tehtäviä.
 - Laskaripisteet merkitään Moodle-alueella jokaiselle osalle erikseen. Älä lähetä laskaripisteitä sähköpostilla, emme ota niitä silloin huomioon. Merkitse laskaripisteet ennen kuin suoritat tentin.
