@@ -29,6 +29,8 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
 - Mikäli et pääse tentistä läpi, voit suorittaa sen uudestaan aikaisintaan viikon päästä edellisestä suorituskerrasta, aina 31.5.2019 asti. Suorituskertojen määrälle ei ole ylärajaa.
 - Tentti sisältää yhden ja kahden pisteen tehtäviä.
 - Laskaripisteet merkitään Moodle-alueella jokaiselle osalle erikseen. Älä lähetä laskaripisteitä sähköpostilla, emme ota niitä silloin huomioon. Merkitse laskaripisteet ennen kuin suoritat tentin.
+- Moodle antaa epävirallisen arvosanan kurssipisteiden perusteella Arvioinnit -sivulla. Moodle ei kutienkaan ota huomioon koeleikkuria.
+- Merkitsemme opiskelijoiden arvosanat aina kuukauden vaihteessa. Tämän jälkeen kestää jonkin aikaa, ennen kuin arvosana näkyy opiskelijan Weboodissa.
 
 <h3> Opintovilpistä</h3>
 Kurssilla seurataan Helsingin yliopiston opintokäytäntöjä. Plagiarismi ja opintovilppi, eli esimerkiksi netissä olevien tai kaverilta saatujen vastausten kopiointi ja niiden palauttaminen omana työnä on kiellettyä.

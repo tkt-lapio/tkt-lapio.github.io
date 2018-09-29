@@ -30,6 +30,8 @@ One must pass the exam in order to receive a grade from the course. The exam is 
 - If you don't pass the exam, you can retake it for an unlimited amount of times, until May 31st 2019 at 23:59. There must be a week between each retake.
 - The exam contains exercises of one and two points.
 - If you have trouble passing the exam please contact the course organizers.
+- Moodle gives you an unofficial grade which you can see in your gradebook.
+- The grades are marked after each month. It will take a while before you can see your grade in Weboodi.
 
 <h3>Subjects covered in the exam</h3>
 
