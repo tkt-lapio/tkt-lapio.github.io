@@ -31,6 +31,7 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
 - Laskaripisteet merkitään Moodle-alueella jokaiselle osalle erikseen. Älä lähetä laskaripisteitä sähköpostilla, emme ota niitä silloin huomioon. Merkitse laskaripisteet ennen kuin suoritat tentin.
 - Moodle antaa epävirallisen arvosanan kurssipisteiden perusteella Arvioinnit -sivulla. Moodle ei kutienkaan ota huomioon koeleikkuria.
 - Merkitsemme opiskelijoiden arvosanat aina kuukauden vaihteessa. Tämän jälkeen kestää jonkin aikaa, ennen kuin arvosana näkyy opiskelijan Weboodissa.
+- Jokaisen kuukauden jälkeen siihen mennessä suorittaneiden opiskelijoiden arvosanajakauma julkistetaan Moodlessa.
 
 <h3> Opintovilpistä</h3>
 Kurssilla seurataan Helsingin yliopiston opintokäytäntöjä. Plagiarismi ja opintovilppi, eli esimerkiksi netissä olevien tai kaverilta saatujen vastausten kopiointi ja niiden palauttaminen omana työnä on kiellettyä.

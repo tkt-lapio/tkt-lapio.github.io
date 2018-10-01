@@ -32,6 +32,7 @@ One must pass the exam in order to receive a grade from the course. The exam is 
 - If you have trouble passing the exam please contact the course organizers.
 - Moodle gives you an unofficial grade which you can see in your gradebook.
 - The grades are marked after each month. It will take a while before you can see your grade in Weboodi.
+- THe grade distribution is published in Moodle after each month
 
 <h3>Subjects covered in the exam</h3>
 
