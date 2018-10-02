@@ -489,7 +489,7 @@ Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. T�
 
 Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Lisätään siis `.pub`-päätteisen tiedoston sisältö yliopiston kotihakemiston polkuun `~/.ssh/authorized_keys`, siis kansioon `.ssh`, tiedostoon nimeltä `authorized_keys`. Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Joudut luultavasti luomaan kansion ja tiedoston itse.
 
-Helpoiten saa julkisen avaimen siirrettyä kohdepalvelimelle komennolla <code>scp</code>. Komentoa käytetään seuraavasti:
+Helpoiten saa julkisen avaimen siirrettyä kohdepalvelimelle komennolla <code>scp</code>, jonka avulla on mahdollista kopioida tiedostoja palvelimelta toiselle (vrt komento `cp`). Komentoa käytetään seuraavasti:
 
 ```
 scp polku/kopioitavaan/tiedostoon tunnus@palvelmen.osoite:polku/kohdekansioon
@@ -499,7 +499,7 @@ Huomaa palvelimen osoitteen jälkeen lisättävä kaksoispiste!
 
 <div class="note">
 
-Voit esimerkiksi kopioida julkisen avaimen <code>.ssh</code>-kansioon, ja sen jälkeen uudelleennimetä sen sopivasti.
+Voit esimerkiksi kopioida julkisen avaimen kohdepalvelimen kotihakemiston <code>.ssh</code>-kansioon (joudut luultavasti luomaan sen itse), ja sen jälkeen uudelleennimetä avaintiedoston sopivasti.
 
 <br/>
 <i>
@@ -526,6 +526,10 @@ Voit lukea lisää `ssh`-komennosta ja sen konfiguroimisesta esimerkiksi [tääl
 <h3>Tehtävä 11: SSH-yhteys {% include points.html text="10%" %}</h3>
 
 Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus, mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta.
+
+<div class="note">
+Mikäli teet tehtävän laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.
+</div>
 
 <div class="note">
 Mikäli loit avainparin itse määrittelemääsi polkuun, ja yhteys kysyy vielä yliopiston salasanaa, tarkenna yksityisen avaimen polku:
