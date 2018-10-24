@@ -755,7 +755,7 @@ Tehdään uusi repositorio, jonne lisäämme `index.html` tiedoston ja `css`-kan
 
   <title>Github page testi</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
