@@ -25,7 +25,7 @@ Tehtäviä tekemällä ansaitsee laskaripisteitä, jotka lasketaan mukaan kurssi
 
 Kurssilla on kaksi tukikanavaa: Syksyn 2018 ensimmäisen periodin ajan järjestetään pajaohjausta, jolloin opiskelijoiden on mahdollista tulla tekemään tehtäviä osaston tiloihin, ja saada halutessaan apua kurssin assistenteilta. Lue lisää pajasta, ja sen aikatauluista [täältä](/paja).
 
-Kurssilla on myös sähköinen tukikanava, joka on sillattu IRCistä telegrammiin.
+Kurssilla on myös sähköinen tukikanava, ~~joka on sillattu IRCistä telegrammiin~~. IRC-kanavan kanssa ylläpito-ongelmia, joten silta Telegrammiin on väliaikaisesti poistettu. Kysymyksiä voi toki esittää myös IRCissä, mutta ohjaajat ovat paikalla vain Telegrammissa.
 
 - #lapio2017 @IRCnet
 - <a href="https://t.me/tktlapio">Liittymislinkki Telegram-ryhmään</a>
