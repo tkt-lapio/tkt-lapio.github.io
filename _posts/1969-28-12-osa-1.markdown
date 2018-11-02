@@ -105,7 +105,7 @@ ls "olen vähän hassusti nimetty tiedosto" # tai ls 'olen vähän hassusti nime
 ```
 
 <div class="note">
-Voit selata <code>man</code>-sivua nuolinäppäimellä, ja postua painamalla <code>q</code>.
+Voit selata <code>man</code>-sivua nuolinäppäimellä, ja poistua painamalla <code>q</code>.
 </div>
 
 <div class="note">
