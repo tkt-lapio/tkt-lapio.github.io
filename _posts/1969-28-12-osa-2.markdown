@@ -30,6 +30,7 @@ Tämän osan tavoitteina on, että opiskelija
   - Tietää, mikä on issue.
   - Tietää, mitä tarkoittaa forkkaaminen.
   - Tietää, mikä on pull request.
+- Osaa hakea tietoa Gitin käytöstä internetistä.
 
 # Versionhallinta: Git ja GitHub
 

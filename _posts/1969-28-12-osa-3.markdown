@@ -20,6 +20,7 @@ Tämän osan tavoitteina on, että opiskelija
 - osaa sijoittaa elementtejä verkkosivuilla.
 - ymmärtää, miten sivuista voi tehdä luettavammat.
 - ymmärtää, miten verkkosivuja voi julkaista.
+- osaa hakea tietoa HTML- ja CSS-kielistä internetistä.
 
 # Staattiset verkkosivut: HTML ja CSS
 
@@ -842,6 +843,8 @@ Pidä jälleen tauko, ja anna aivojesi levätä. Onnittele itseäsi siitä, ett�
 
 Kun osaat mielestäsi kurssin aiheet tarpeeksi hyvin, siirry Moodle-alueelle. Merkitse siellä tekemäsi laskaritehtävät. Varmista, että olet ilmoittautunut kurssille Weboodissa. Tämän jälkeen olet valmis tekemään tentin. Saat arvosanan kuluvan kuukauden lopussa.
 
-Anna vielä lopuksi kurssista anonyymiä palautetta <a href="https://ilmo.cs.helsinki.fi/kurssit/servlet/Valinta"> täällä</a>.
+<div class="warning">
+Muista antaa kurssista anonyymiä palautetta <a href="https://ilmo.cs.helsinki.fi/kurssit/servlet/Valinta"> täällä</a>.
+</div>
 
 Kiitos kurssista ja onnea tuleviin opintoihin! Opiskelukavereiden ja Googlen avulla selviää vaikeimmistakin kursseista :)

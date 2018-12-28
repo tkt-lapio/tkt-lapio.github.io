@@ -39,6 +39,7 @@ Tämän osan tavoitteina on, että opiskelija
   - chmod
 - Osaa kirjoittaa yksinkertaisen bash-skriptin ja ajaa sen.
 - Ymmärtää sudo-komennon merkityksen ja vaarat.
+- Osaa hakea tietoa komentorivityökalujen käytöstä internetistä.
 
 <h2>Komentorivi</h2>
 
@@ -487,9 +488,9 @@ The key's randomart image is:
 
 Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. Tämä `.pub`-päätteinen tiedosto sisältää julkisen avaimen, jonka voit turvallisesti jakaa muille, toinen tiedosto yksityisen avaimen, jota kannattaa kohdella samalla varovaisuudella kuin tavallista salasanaa.
 
-Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Lisätään siis `.pub`-päätteisen tiedoston sisältö yliopiston kotihakemiston polkuun `~/.ssh/authorized_keys`, siis kansioon `.ssh`, tiedostoon nimeltä `authorized_keys`. Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Joudut luultavasti luomaan kansion ja tiedoston itse.
+Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Lisätään siis `.pub`-päätteisen tiedoston sisältö yliopiston kotihakemiston polkuun `~/.ssh/authorized_keys`, siis kotihakemiston kansioon `.ssh`, tiedostoon nimeltä `authorized_keys`. Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Joudut luultavasti luomaan kansion ja tiedoston itse.
 
-Helpoiten saa julkisen avaimen siirrettyä kohdepalvelimelle komennolla <code>scp</code>, jonka avulla on mahdollista kopioida tiedostoja palvelimelta toiselle (vrt komento `cp`). Komentoa käytetään seuraavasti:
+Helpoiten saa julkisen avaimen siirrettyä kohdepalvelimelle komennolla <code>scp</code>, jonka avulla on mahdollista kopioida tiedostoja palvelimelta toiselle (vertaa komentoon `cp`). Komentoa käytetään seuraavasti:
 
 ```
 scp polku/kopioitavaan/tiedostoon tunnus@palvelmen.osoite:polku/kohdekansioon
@@ -507,7 +508,7 @@ Kannatta myös kokeilla, miten <code>scp</code> toimii, jos kohdekansiota ei ole
 </i>
 </div>
 
-Autentikaatio toimii oikein, kun otettaessa SSH-yhteyttä yliopiston koneisiin pääsee kirjautumaan SSH-avaimelle antamalla salasanalla.
+Autentikaatio toimii oikein, kun otettaessa SSH-yhteyttä yliopiston koneisiin pääsee kirjautumaan SSH-avaimelle antamalla salasanalla yliopiston käyttäjätunnuksen sijaan.
 
 Jotta et joudu kirjoittamaan salasanaa joka kerralla, kannattaa yksityinen avain lisätä ssh-agentille, jolloin salasana tarvitsee kirjoittaa vain kirjauduttuasi järjestelmästä ulos. Tämä tapahtuu kahdella komennolla:
 
@@ -525,7 +526,7 @@ Voit lukea lisää `ssh`-komennosta ja sen konfiguroimisesta esimerkiksi [tääl
 <div class="exercise">
 <h3>Tehtävä 11: SSH-yhteys {% include points.html text="10%" %}</h3>
 
-Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus, mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta.
+Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus (eli olet aktivoinut käyttöluvan [näiden ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan), mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
 
 <div class="note">
 Mikäli teet tehtävän laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.
@@ -664,17 +665,19 @@ Voit lukea lisää oikeuksista esimerkiksi [täältä](https://csguide.cs.prince
 
 <h2>Skriptit</h2>
 
-Skriptit (englanniksi _scripts_) ovat tiedostoja, jotka sisältävät komentorivillä ajettavaa koodia. Niitä käytetään paljon erilaisten tietokoneella tehtävien tehtävien automatisoinnissa. Skriptin voi ajaa kirjoittamalla terminaaliin sen polun. Jos ollaan skriptin kanssa samassa kansiossa, voidaan se ajaa komennolla `./skriptin_nimi`.
+Skriptit (englanniksi _scripts_) ovat tiedostoja, jotka sisältävät komentorivillä ajettavaa koodia. Niitä käytetään paljon erilaisten tietokoneella suoritettavien tehtävien automatisoinnissa. Skriptin voi ajaa kirjoittamalla terminaaliin sen polun. Jos ollaan skriptin kanssa samassa kansiossa, voidaan se ajaa komennolla `./skriptin_nimi`.
 
 Skriptien kirjoittamiseen on olemassa niille tarkoitettuja ohjelmointikieliä. Yksi niistä on [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>). Se on Unix-käyttöjärjestelmien komentorivien oletustulkki, eli esimerkiksi Linuxin versioissa ja macOSissa voidaan oletuksena ajaa Bashilla kirjoitettuja skriptejä. Bash-skriptin aluksi tulee kirjoittaa seuraavanlainen taikarivi: `#!/bin/bash`. Skriptitiedostojen nimet myös yleensä lopetetaan päätteellä `.sh`.
 
-Skripteihin voi kirjoittaa myös komentorivin ohjelmakomentoja. Esimerkiksi seuraavanlainen skirpti:
+Skripteihin voi kirjoittaa myös komentorivin ohjelmakomentoja. Esimerkiksi kansion sisällön näyttävä skripti kirjoitetaan seuraavasti:
+
+Avataan tekstitiedosto nimeltä `script.sh`, ja kirjoitetaan sisään:
 
 ```
 ls
 ```
 
-tekee ajettaessa juuri, mitä sen sisältämä komento käskee:
+Tallennetaan sen jälkeen tiedosto. Kun skripti ajetaan, se tekee juuri, mitä sen sisältämä komento käskee:
 
 ```
 hal9000:~ tunnus$ ./script.sh
@@ -718,14 +721,14 @@ Järjestelmän ympäristö voidaan määritellä skripteissä niin, että niitä
 
 Tähän päättyy kurssin ensimmäinen osa. Komentorivin opettelussa voi mennä aikaa, mutta ajan kanssa uuteen työkaluun tottuu. Unix-yhteisö tarjoaa paljon apuja internetissä: Linuxille on muun muassa wiki-sivut [linux.fi](https://www.linux.fi/wiki/Etusivu), sekä Unixille foorumi [Stack Exchangessa](https://unix.stackexchange.com/). MacOSille on olemassa käyttäjäystävällinen virallinen dokumentaatio, sekä myös oma [foorumi](https://discussions.apple.com/welcome).
 
-Komentorivin peruskäyttö kannattaa opetella, vaikka se tuntuisi aluksi turhalta: osaathan samat asiat jo graafisessa ympäristössä. Monen mielestä komentorivillä toimiminen on koodatessa lopulta nopeampaa, kun välissä ei tarvitse käyttää hiirtä, ja yleensä koodatessa käytettäville ohjelmille on olemassa komentoriviohjelma. Tällöin graafisen selaimen avaaminen tiedoston kopioimiseksi voi oikeasti vain hidastaa. Loppujen lopuksi kyse on tietenkin tottumisesta ja mielipiteistä.
+Komentorivin peruskäyttö kannattaa opetella, vaikka se tuntuisi aluksi turhalta. Komentorivi on edelleen erottamaton osa koodaajan työtä. Monen mielestä komentorivillä toimiminen on koodatessa lopulta nopeampaa, ja yleensä koodatessa käytettäville ohjelmille on olemassa komentoriviohjelma. Tällöin graafisen selaimen avaaminen tiedoston kopioimiseksi voi oikeasti vain hidastaa. Joskus graafista vaihtoehtoa ei ole olemassa. Loppujen lopuksi kyse on tietenkin tottumisesta ja mielipiteistä.
 
 Pidä nyt pieni tauko: voit taputtaa itseäsi selkään, sait käytyä ensimmäisen osan läpi! Palaa sen jälkeen tämän sivun alusta löytyviin oppimistavoitteisiin, ja selvitä itsellesi, mitkä aiheet tarvitsevat vielä kertausta.
 
 Tämä osa toimi esittelynä komentoriviin. Komentorivi tarjoaa kuitenkin vielä paljon erilaisia työkaluja ja komentoja, joita ei tässä käyty läpi. Tulet oppimaan ne tulevilla kursseilla sitä mukaan kuin niitä tarvitset. Alla vielä listaus hyödyllisistä komennoista, joihin kannattaa ehkä tutustua, vaikkei niitä käyty tässä läpi:
 
 - `watch`: toista komentoa tietyin väliajoin
-- `&& tai ;`: ketjuta komentoja peräjälkeen
+- `&&` tai `;`: ketjuta komentoja peräjälkeen
 - `alias`: määrittele komennoille aliaksia, joiden avulla voit kutsua niitä esimerkiksi nopeammin.
 - `&`: kirjoittamalla merkin komennon loppuun sen aloittama prosessi jää taustalle, eikä lukitse komentoriviä
 - `history`: tarkastele komentohistoriaa
