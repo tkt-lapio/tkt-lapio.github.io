@@ -27,8 +27,8 @@ Kurssilla on kaksi tukikanavaa: Syksyn 2018 ensimmäisen periodin ajan järjeste
 
 Kurssilla on myös sähköinen tukikanava, ~~joka on sillattu IRCistä telegrammiin~~. IRC-kanavan kanssa ylläpito-ongelmia, joten silta Telegrammiin on väliaikaisesti poistettu. Kysymyksiä voi toki esittää myös IRCissä, mutta ohjaajat ovat paikalla vain Telegrammissa.
 
-- #lapio2017 @IRCnet
 - <a href="https://t.me/tktlapio">Liittymislinkki Telegram-ryhmään</a>
+- #lapio2017 @IRCnet
 - <a href="https://riot.im/app/#/room/#_ircnet_#lapio2017:irc.snt.utwente.nl">Riot-linkki Matrixin kautta IRC-kanavalle (ei vaadi ohjelman asentamista tai kirjautumista)</a> Ohjaajat eivät tällä hetkellä ole IRC-kanavalla, helpoiten apua saa Telegram-ryhmästä.
 
 Tukikanavalla saa esittää mitä tahansa kurssiin liittyviä kysymksiä. Kurssikavereiden auttaminen on suotavaa.
