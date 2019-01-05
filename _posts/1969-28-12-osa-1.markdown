@@ -440,14 +440,14 @@ Olemme tähän asti käyttäneet komentoriviä lähinnä omalla koneella olevien
 
 Unix-ympäristössä ssh-yhteyden voi luoda komennolla `ssh`. Komennon perustoiminnalisuus on seuraava: `ssh tunnus@palvelimen.osoite` ottaa yhteyden palvelimeen osoitteessa `palvelimen.osoite` ja yrittää kirjautua tunnuksella `tunnus`. Käyttäjältä pyydetään tunnuksen salasanaa, ja autentikoinnin onnistuessa yhteys avautuu. Tämän jälkeen komentoriviltä voidaan ajaa tavalliseen tapaan komentoja, mutta nykyinen kansio sijaitseekin palvelimella, johon yhteys on luotu.
 
-Tietojenkäsittelytieteen osasto tarjoaa neljä eri palvelinta osaston koneisiin etäyhteyden luomiseksi. Näihin palvelimiin on pääsy opiskelijoilla, joilla on tietojenkäsittelytieteen osaston tunnus:
+Tietojenkäsittelytieteen osasto tarjoaa neljä eri palvelinta osaston koneisiin etäyhteyden luomiseksi. Näille palvelimille kirjaudutaan yliopiston tunnuksilla:
 
 1.  melkki.cs.helsinki.fi
 2.  melkinpaasi.cs.helsinki.fi
 3.  shell.cs.helsinki.fi
 4.  melkinkari.cs.helsinki.fi
 
-Kaikki nämä palvelimet ohjaavat siis samaan käyttäjäkohtaiseen kotihakemistoon, johon pääsee kaikilta osaston koneilta. Kirjautuminen tapahtuu osaston käyttäjätunnuksilla.
+Kaikki nämä palvelimet ohjaavat siis samaan käyttäjäkohtaiseen kotihakemistoon, johon pääsee kaikilta osaston koneilta.
 
 Käytetään `ssh`-komentoa osaston koneelle yhteyden ottamiseen:
 
