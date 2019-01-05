@@ -391,11 +391,7 @@ Aborting
 
 Pullaus ei toimi, koska paikallisessa versiossa on muutoksia samaan tiedostoon, kuin etärepositoriossa, eikä paikallisia muutoksia ole commitoitu.
 
-<<<<<< master
-Tällaisessa tilanteessa voidaan laittaa paikalliset muutokset syrjään _stashiin_ komennolla `git stash`. Kun ajetaan `git stash`, paikallisesti lisätyt muutokset Gitin seuraamissa kansioissa laitetaan syrjään. Tämä siis tarkoittaa, että tehdyt muutoksen poistuvat näkyvistä, mutta niitä ei ole menetetty kokonaan. Laittaaksesi syrjään myös muutokset Gittiin vielä lisäämättömissä tiedostoissa (`untracked`), aja komento vivulla `-u`, eli `git stash -u`. Saat muutokset takaisin käskyllä `git stash pop`.
-======
 Tällaisessa tilanteessa voidaan laittaa paikalliset muutokset syrjään _stashiin_ komennolla `git stash`. Kun ajetaan `git stash`, paikallisesti lisätyt muutokset Gitin seuraamissa tiedostoissa laitetaan syrjään. Tämä siis tarkoittaa, että tehdyt muutoksen poistuvat näkyvistä, mutta niitä ei ole menetetty kokonaan. Laittaaksesi syrjään myös muutokset Gittiin vielä lisäämättömissä tiedostoissa (`untracked`), aja komento vivulla `-u`, eli `git stash -u`. Saat muutokset takaisin käskyllä `git stash pop`.
->>>>>> master
 
 <div class="exercise">
 <h3>Tehtävä 9: Stashin käyttäminen pullatessa {% include points.html text="10%" %}</h3>
