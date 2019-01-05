@@ -10,7 +10,7 @@ tag: eng
 
 - The university offers its students two ways for wireless internet connection: Eduroam and HUPnet. You can also get guest access to HUPnet. HUPnet is not secured, so we heavily recommend using Eduroam. You can also access it in some campus sites overseas. Instructions on installing Eduroam are found [here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/networks/setting-eduroam-installer-package). You can also install it on your mobile device: [Android](https://helpdesk.it.helsinki.fi/en/instructions/computer-and-printing/mobile-devices/eduroam-on-android-devices) and [iPhone](https://helpdesk.it.helsinki.fi/en/instructions/computer-and-printing/mobile-devices/ipad-and-iphone-wireless-connections).
 
-- The CS departmens offers several servers for accessing your personal university AD home folder. You can access these via SSH if you have a CS department account (see link in first bullet):
+- The CS departmens offers several servers for accessing your personal university AD home folder. Login using your university account.
 
   - melkki.cs.helsinki.fi
   - melkinpaasi.cs.helsinki.fi
