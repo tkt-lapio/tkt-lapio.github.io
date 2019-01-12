@@ -272,7 +272,7 @@ Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia.
 <li>Lataa omalle koneelle <a href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Seitsem%C3%A4n_veljest%C3%A4.png">kuva</a>. Kuvaa saa käyttää uudestaan.</li>
 <li>Tee edellisistä tehtävistä tuttuun repositorioon uusi kansio, jonka nimi on <code>assets</code> ja lisää se Gittiin.</li>
 <li>Lisää kuva kansioon ja muista lisätä myös se Gittiin.</li>
-<li>Lisää kuva edellisistä tehtävistä tuttuun HTML-dokumenttiin dynaamisella osoitteella.</li>
+<li>Lisää kuva edellisistä tehtävistä tuttuun HTML-dokumenttiin suhteellisella osoitteella.</li>
 <li>Säädä kuvan koko oikeaksi.</li>
 <li>Muista lisätä <code>alt</code>-attribuutti.</li>
 <li>Lisää kuvan elementin yläpuolelle kommentti, jossa kerrotaan kuvan esittävän Seitsemän veljestä -kirjan ensimmäistä sivua.</li>
