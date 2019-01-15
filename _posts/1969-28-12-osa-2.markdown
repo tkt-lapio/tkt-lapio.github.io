@@ -497,7 +497,7 @@ terveisiä GitHubista
 >>>>>> baaf2c96cw031e11138d42c1a35065b9bf8b4400b
 ```
 
-Toisensa poissulkevat commitit on siis eroteltu <, > ja = -merkkien avulla. HEAD tarkoittaa tämänhetkistä committia, ja kirjain-numero-yhdistelmä on toisen etärepositoriossa tehdyn commitin id. Hienostuneemmat editorit, kuten VSCode mahdollistavat konfliktien ratkaisemisen yhdellä klikkauksella, mutta muuten ainoa vaihtoehto on poistaa sen ne rivit, joita ei haluta pitää jatkossa.
+Toisensa poissulkevat commitit on siis eroteltu <, > ja = -merkkien avulla. HEAD tarkoittaa tämänhetkistä committia (eli nykyisen haaran viimeisintä committia), ja kirjain-numero-yhdistelmä on toisen etärepositoriossa tehdyn commitin id. Hienostuneemmat editorit, kuten VSCode mahdollistavat konfliktien ratkaisemisen yhdellä klikkauksella, mutta muuten ainoa vaihtoehto on poistaa sen ne rivit, joita ei haluta pitää jatkossa.
 
 Poistetaan kaikki merkeillä <, = tai > alkavat rivit, ja muokataan terveisiä. Konfliktien ratkaisija siis saa päättää, mitä konfliktin sisältämään tiedostoon jää. Jätetään tiedoston sisällöksi seuraava:
 
