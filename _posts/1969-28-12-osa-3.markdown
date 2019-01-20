@@ -326,7 +326,7 @@ Jotta CSS voi vaikuttaa HTML-elementteihin, pitää HTML-dokumentin löytää CS
 
 ```html
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 ```
 
