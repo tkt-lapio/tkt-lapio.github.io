@@ -47,7 +47,7 @@ Tietokoneet ovat erottamaton osa nyky-yhteiskuntaa, ja jokainen tulee melko varm
 
 Olet luultavasti varsin tottunut käyttämään tietokoneita tietyllä tavalla. Esimerkiksi tiedostojen etsiminen ja tarkasteleminen on melko varmasti mielestäsi helppoa: Osaat siirtyä kansioon kaksoisklikkaamalla sitä, avata tiedoston sopimalla ohjelmalla tai klikata tiedostoa oikealla näppäimellä ja valita vaihtoehdoista "poista" tuhotaksesi sen.
 
-Edellä mainitussa tapauksessa kyseessä on _graafinen käyttöliittymä_: Näet edessäsi kaikki toimintovaihtoehdot, ja valinnat tehdään valikoista klikkailemalla, ja voit esimerkiksi myös vain raahata tiedostoja ja kansioita haluamiisi paikkoihin. Komentorivi, eli terminaali sen sijaan on _tekstikäyttöliittymä_. Tällöin tietokoneelle annetaan käskyjä kirjoittamalla, komentojen ja näppäinyhdistelmien avulla. Vaihtoehtoja ei esitetä samalla tavalla, eikä hiirtä käytetä juuri ollenkaan.
+Edellä mainitussa tapauksessa kyseessä on _graafinen käyttöliittymä_: Toimintovaihtoehdot esitetään jonkinlaisessa valikossa, ja valinnat tehdään klikkailemalla. Tiedostoja ja kansioita voi esimerkiksi myös vain raahata haluttuihin paikkoihin. Komentorivi, eli terminaali sen sijaan on _tekstikäyttöliittymä_. Tällöin tietokoneelle annetaan käskyjä kirjoittamalla, komentojen ja näppäinyhdistelmien avulla. Vaihtoehtoja ei esitetä samalla tavalla, eikä hiirtä käytetä juuri ollenkaan.
 
 <div class="note">
 Rakkaalla lapsella on monta nimeä: Komentorivi on englanniksi command line tai terminal. Siihen viitataan joskus myös sanalla shell tai console.
@@ -81,8 +81,6 @@ Itse komento määrittää, minkä operaation koneen halutaan suorittavan. Se vo
 
 Argumentti taas on käyttäjän vapaasti määrittelemä arvo, esimerkiksi tiedoston nimi. Argumentti on usein komennon toiminnan kohde.
 
-Vivuille määritellään joskus kaksi muotoa: lyhyt, eli yleensä yhden kirjaimen pituinen, ja pitkä muoto. Lyhyt muoto annetaan yhden, ja pitkä muoto kahden väliviivan kanssa.
-
 Seuraavassa on esimerkkejä komennoista, joissa niiden toimintaa on muutettu vipujen avulla:
 
 ```bash
@@ -97,17 +95,33 @@ git add -p
 
 Kun halutaan kutsua komentoriviltä jotain ohjelmaa, tulee ensimmäisenä komentoon kirjoittaa ajettavan ohjelman nimi. Yllä näkyvässä esimerkissä kutsutaan ohjelmaa nimeltä _Git_, johon tutustumme paremmin ensi osassa. Näin ollen ensin kirjoitetaan `git`. Ohjelma määrittelee erilaisia komentoja eri toiminnillaisuuksille. Tässä esimerkissä ajettavan komennon nimi on `add`, ja sille annetaan sen toimintaa muuttava vipu `-p`. Sinun ei tarvitse ajaa kyseistä koodia, tutustumme Gittiin vasta seuraavassa osassa.
 
-Kutsuttava ohjelma määrittää, mitä komentoja se tarjoaa. Usein mahdolliset komennot on mahdollista nähdä komentoriviltä lisäämällä ohjelman perään vivun `--help` tai lyhyemmin `-h`. Tarkan ohjeen ohjelman käytöstä saa komennolla `man` ja antamalla parametriksi ohjelman nimen (esimerkiksi siis `man git`). `man`-sivut eivät ole järin aloittelijaystävällisiä, mutta tarjoavat yleensä kattavimman dokumentaation tietystä ohjelmasta.
+Kutsuttava ohjelma määrittää, mitä komentoja se tarjoaa. Usein mahdolliset komennot on mahdollista nähdä komentoriviltä lisäämällä ohjelman perään vivun `--help` tai lyhyemmin `-h`. Tarkan ohjeen ohjelman käytöstä saa komennolla `man` ja antamalla parametriksi ohjelman nimen (esimerkiksi siis `man git`). 
 
-Huomaa, että jos haluat antaa komennolle argumentiksi jotain, mikä sisältää välilyönnin, se on annettava lainausmerkkien sisällä. Muuten komentorivillä tulkitaan, että erilliset sanat ovat omia komentojaan, eivätkä osa yhtä argumenttia.
+Tutkitaan `ls`-komennon `man`-sivua. Ajetaan siis komentorivillä `man ls`, jolloin aukeaa jotain seuraavannäköistä.
 
-```
-ls "olen vähän hassusti nimetty tiedosto" # tai ls 'olen vähän hassusti nimetty tiedosto'
-```
+![ls-komennin man-sivu](/assets/man.png)
+
+Vaikka `man`-sivut eivät ole järin aloittelijaystävällisiä, ne tarjoavat yleensä kattavimman dokumentaation tietystä ohjelmasta. 
+
+"Name"-kohdasta saa yleiskäsityksen siitä, mitä komento tekee. "Synopsis" kertoo, miten komentoa voidaan kutsua. Esimerkiksi komennon `ls` tapauksessa ensin annetaan kommenolle vivut, ja viimeisenä kohdekansion polku. Molemmat ovat valinnaisia parametreja, eli komento toimii ilmankin, minkä takia ne ovat hakasulkujen sisällä.
 
 <div class="note">
 Voit selata <code>man</code>-sivua nuolinäppäimellä, ja poistua painamalla <code>q</code>.
 </div>
+
+Vivuille määritellään joskus kaksi muotoa: lyhyt, eli yleensä yhden kirjaimen pituinen, ja pitkä muoto. Lyhyt muoto annetaan yhden, ja pitkä muoto kahden väliviivan kanssa. `man`-sivu listaa molemmat, kuten ylläolevassa kuvassa näkyy.
+
+Huomaa, että jos haluat antaa komennolle argumentiksi jotain, mikä sisältää välilyönnin, se on annettava lainausmerkkien sisällä. Muuten komentorivillä tulkitaan, että erilliset sanat ovat omia komentojaan, eivätkä osa yhtä argumenttia.
+
+```
+ls "olen vähän hassusti nimetty tiedosto"
+```
+
+tai
+
+```
+ls 'olen vähän hassusti nimetty tiedosto'
+```
 
 <div class="note">
 Komennot voivat vaikuttaa aluksi hieman erikoisesti nimetyiltä, sillä komennot ovat usein lyhenteitä englanninkielisistä sanoista. Komento man ei tarkoita kuitenkaan miestä, vaan on lyhenne sanasta "manual", ls on lyhenne sanasta "list", ja niin edelleen. Materiaalissa on mainittu joitain komentojen lyhenteitä, tarkoituksena avata komentojen merkityksiä.
@@ -115,9 +129,11 @@ Komennot voivat vaikuttaa aluksi hieman erikoisesti nimetyiltä, sillä komennot
 
 <h2> Tiedostohallinta komentoriviltä</h2>
 
-Komentoriviltä voi selata ja hallinnoida tiedostoja samaan tapaan kuin graafisesta ympäristöstä.
+Komentoriviltä voi selata ja hallinnoida tiedostoja samaan tapaan kuin graafisesta ympäristöstä. Vertaillaan seuraavakasi tiedostohallintaa graafisella ja tekstikäyttöliittymällä.
 
-Avaa graafinen tiedostoselain. Se löytyy Ubuntu-ympäristössä ohjelmana nimeltä "Files" tai kirjoittamalla komentoriville `nautilus` ja painamalla <kbd>ENTER</kbd>. MacOSissa avaa finder, ja paina näppäinyhdistelmää `Shift + Cmd + H`. Windowsissa `nautilus` ei toimi. Tiedostoselaimessa tulisi näkyä _kotihakemistosi_. Kotihakemisto tarkoittaa hakemistoa, joka sisältää kaikki tietyn käyttäjän henkilökohtaiset tiedostot ja kansiot. Mikäli olet laitoksen koneella, kotihakemistosi sisältää samat asiat riippumatta siitä millä _fyysisellä_ koneella satut olemaan: tietokoneen sisältö haetaan toisaalta. Jos taas luet materiaalia omalta koneeltasi, kotihakemistossasi on vain ne asiat mitkä sillä fyysisellä koneella on.
+Avaa graafinen tiedostoselain. Se löytyy Ubuntu-ympäristössä ohjelmana nimeltä "Files" tai kirjoittamalla komentoriville `nautilus` ja painamalla <kbd>ENTER</kbd>. Windowsissa `nautilus` ei toimi. MacOSissa avaa finder, ja paina näppäinyhdistelmää `Shift + Cmd + H`.
+
+Tiedostoselaimessa tulisi näkyä _kotihakemistosi_. Kotihakemisto tarkoittaa hakemistoa, joka sisältää kaikki tietyn käyttäjän henkilökohtaiset tiedostot ja kansiot. Mikäli olet laitoksen koneella, kotihakemistosi sisältää samat asiat riippumatta siitä millä _fyysisellä_ koneella satut olemaan: tietokoneen sisältö haetaan toisaalta. Jos taas luet materiaalia omalta koneeltasi, kotihakemistossasi on vain ne asiat mitkä sillä fyysisellä koneella on.
 
 Huomaa, että jos avasit graafisen tiedostoselaimen komentoriviltä, komentorivi jäi ikään kuin lukkoon, ja sillä ei voinut tehdä muuta ellei graafista ohjelmaa suljeta. Voit aina sulkea käynnissä olevan ohjelman painamalla näppäinyhdistelmää <kbd>CTRL + C</kbd>. Joskus kerta ei riitä, ja voit huoletta painaa sitä monta kertaa.
 
@@ -125,13 +141,16 @@ Huomaa, että jos avasit graafisen tiedostoselaimen komentoriviltä, komentorivi
 Koska yhdistelmällä CTRL + C on terminaalissa erityinen merkitys, joudut Linuxissa käyttämään yhdistelmää CTRL + SHIFT + C terminaalista maalatun tekstin kopioimiseen, sekä CTRL + SHIFT + V tekstin liittämiseen.
 </div>
 
-Kotihakemistosi sisältää luultavasti paljon sälää, esimerkiksi _Downloads_ ja _Documents_ -nimiset kansiot. Haluamme nähdä samat asiat komentoriviltä, joten avaa viereen komentorivi, kirjoita siihen komento `ls`, ja paina <kbd>ENTER</kbd>. Enteriä painamista ennen tilanne näyttää suurinpiirtein tältä
+Kotihakemistosi sisältää luultavasti paljon sälää, esimerkiksi _Downloads_ ja _Documents_ -nimiset kansiot. Haluamme nähdä samat asiat komentoriviltä, joten avaa viereen komentorivi, kirjoita siihen komento `ls`, ja paina <kbd>ENTER</kbd>. Tilanne tulee näyttämään suurin piirtein tältä:
 
 ```bash
-tunnus@tietokone:~$ ls
+tunnus@ltietokones:~$ ls 
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 ```
 
-`ls` listaa hakemistot ja kansiot joita hakemistosta löytyy. Tulos on likimain sama kuin miten graafinen tiedostoselain näyttää kotihakemiston tiedostot. Oletuksena uuden komentorivin avaaminen avaa sen nimenomaan kotihakemistoon, joten tarvitsemme tavan vaihtaa aktiivista kansiota jotta voimme vierailla muissa kansioissa ja tarkastella niiden sisältöjä. Tarvittava komento on `cd`, eli **c**hange **d**irectory. `cd`-komennolle annetaan parametrina kansio, johon halutaan siirtyä. Mikäli et anna `cd`:lle argumentteja, se siirtää sinut kotihakemistoosi.
+`ls` siis listaa hakemistot ja kansiot joita hakemistosta löytyy. Komentorivin ja graafisen selaimen pitäisi näyttää samat tiedostot ja kansiot, mutta komentorivi esittää sisällön hieman yksinkertaisemmin. 
+
+Oletuksena uuden komentorivin avaaminen avaa sen nimenomaan kotihakemistoon, joten tarvitsemme tavan vaihtaa aktiivista kansiota jotta voimme vierailla muissa kansioissa ja tarkastella niiden sisältöjä. Tarvittava komento on `cd`, eli **c**hange **d**irectory. `cd`-komennolle annetaan parametrina se kansio, johon halutaan siirtyä. Mikäli et anna `cd`:lle argumentteja, se siirtää sinut kotihakemistoosi.
 
 Navigoi _Downloads_-kansioon antamalla komento `cd Downloads`. Kansion nimi tulee aina olla täsmälleen kirjoitettu, sillä isoilla ja pienillä kirjaimilla kirjoitetut nimet ovat erilaisia. Muutos näkyy heti komentorivillä, sillä se näyttää nyt kutakuinkin tältä:
 
@@ -141,12 +160,15 @@ tunnus@tietokone:~/Downloads$
 
 `:`-merkin jälkeinen osa kertoo siis aktiivisen kansion. `~` viittaa käyttäjän kotihakemistoon.
 
-Komenna jälleen `ls`. Vaihdoimme aktiivista hakemistoa, ja koska `ls` kertoo aina aktiivisen kansion sisällön, on tulos nyt eri. Komentorivi toimii siis loppujen lopuksi hyvin samalla tavalla kuin graafinen tiedostoselain: `cd` vastaa kansiota klikkaamista, ja `ls` näyttää hakemiston tiedostot ja kansiot.
+Komenna jälleen `ls`. Vaihdoimme aktiivista hakemistoa, ja koska `ls` kertoo aina aktiivisen kansion sisällön, on tulos nyt eri. 
 
-Komento `ls` voi näyttää myös tarkempaa tietoa.
-Pidä graafinen tiedostoselain vierellä, ja aja komentorivillä kotihakemistossa komento `ls -a`. Huomaa, miten komentorivillä näkyy nyt paljon enemmän tiedostoja, kuin graafisessa ympäristössä. Tämä johtuu vivusta `-a`. Sen avulla on mahdollista kaikki tiedostot, myös _piilotetut_ tiedostot ja kansiot.
+Komento `ls` voi näyttää myös tarkempaa tietoa. Pidä graafinen tiedostoselain vierellä, ja aja komentorivillä kotihakemistossa komento `ls -a`. Huomaa, miten komentorivillä näkyy nyt paljon enemmän tiedostoja, kuin graafisessa ympäristössä. Tämä johtuu vivusta `-a`. Sen avulla on mahdollista kaikki tiedostot, myös _piilotetut_ tiedostot ja kansiot.
 
 Unix-ympäristössä piilotettu tiedosto tai kansio tarkoittaa tarkoittaa sellaisia, joiden nimi alkaa pisteellä, esimerkiksi `.config`. Tällaisia ovat usein tiedostot, jotka sisältävät joitain asetuksia tai tietoja, joita käyttäjän tarvitsee harvoin muuttaa. Linuxissa piilotetut tiedostot on mahdollista nähdä painamalla graafisessa tiedostoselaimessa `CTRL + h`, macOSissa `cmd + SHIFT + .`.
+
+Graafisessa tiedostoselaimessa voi luoda kansioita käyttämällä hiiren oikeaa näppäintä. Unix-tyyppisissä järjestelmissä tämä tapahtuu komennolla <code>mkdir</code>. Kyseessä on jälleen lyhenne, joka muodostuu sanoista <i>make directory</i>. Komennolle annetaan argumenttina luotavan kansion nimi.
+
+Komentorivi toimii siis loppujen lopuksi hyvin samalla tavalla kuin graafinen tiedostoselain: `cd` vastaa kansiota klikkaamista, ja `ls` näyttää hakemiston tiedostot ja kansiot. Tässä osassa opitaan tekemään tekstikäyttöliittymässä asioita, jotka osataan jo tehdä graafisella käyttöliittymällä.
 
 <div class="exercise">
 <h3>Tehtävä 1: Graafinen vs. tekstikäyttöliittymä {% include points.html text="5%" %}</h3>
@@ -154,22 +176,27 @@ Voit merkata tämän tehtävän tehdyksi, kun olet käynyt läpi alun esimerkin 
 </div>
 
 <div class="exercise">
-
-<h3>Tehtävä 2: Kansion luominen {% include points.html text="5%" %}</h3>
- Graafisessa tiedostoselaimessa voi luoda kansioita käyttämällä hiiren oikeaa näppäintä. Unix-tyyppisissä järjestelmissä tämä tapahtuu komennolla <code>mkdir</code>. Kyseessä on jälleen lyhenne, vähemmän yllättäen sanoista <i>make directory</i>. Komennolle annetaan argumenttina luotavan kansion nimi. Luo kansio nimeltä <b>lapio</b> kotihakemistoosi. Varmista että loit kansion komennolla <code>ls</code>.
+<h3>Tehtävä 2: Kansion luominen {% include points.html text="5%" %}</h3> 
+ Luo komentoriviltä kansio nimeltä "lapio" kotihakemistoosi. Varmista että loit kansion komennolla <code>ls</code>.
 </div>
 
 Jos olet tottunut käyttämään graafista käyttöliittymää, mietit luultavasti nyt, miten hidasta ja raskasta komentorivin käyttäminen varmasti on. Kyseessä on luonnollisesti tottumiskysymys, mutta sen lisäksi komentorivillä on olemassa kirjoittamista nopeuttava seikka: tab-täydennys. Tab-täydennys täydentää nykyisen kansion tiedostojen nimiä parametreiksi sekä (joskus, ohjelmasta riippuen) ohjelmien komentoja.
 
-Kokeile tab-täydennystä kirjoittamalla kotihakemistossa `cd D`, ja painamalla sen jälkeen tab-näppäintä (löytyy näppämistöstä caps-lockin yläpuolelta) pari kertaa. Terminaaliin tulostuu kaikki kotihakemiston D-kirjaimella alkavat hakemistot, ainakin siis "Downloads" ja "Documents". Oletetaan, että haluat siirtyä Downloads-kansioon. Tällöin riittää kirjoittaa cd-komennon parametriksi vain `Dow` ja painaa tab-näppäintä, jonka jälkeen Downloads-kansion nimi täydennetään komennon parametriksi (olettaen että kotihakemistossasi ei ole mitään muuta kansiota, jonka nimi alkaisi merkkijonolla `Dow`).
+Kokeile tab-täydennystä kirjoittamalla kotihakemistossa `cd D`, ja painamalla sen jälkeen tabular-näppäintä (löytyy näppämistöstä caps-lockin yläpuolelta) pari kertaa. Terminaaliin tulostuu kaikki kotihakemiston D-kirjaimella alkavat hakemistot, ainakin siis "Downloads" ja "Documents". Oletetaan, että haluat siirtyä Downloads-kansioon. Tällöin riittää kirjoittaa cd-komennon parametriksi vain `Dow` ja painaa tab-näppäintä, jonka jälkeen Downloads-kansion nimi täydennetään komennon parametriksi (olettaen että kotihakemistossasi ei ole mitään muuta kansiota, jonka nimi alkaisi merkkijonolla `Dow`).
 
 Toinen nopeuttava apu on vanhojen komentojen selaaminen: voit tehdä sen painamalla nuolinäppäimiä ylös- ja alaspäin. Kun olet kirjoittamassa komentoa, et voi käyttää kursoria siirtyäksesi tekstissä taaksepäin: voit liikkua komentorivin tekstissä esimerkiksi vasemmalla ja oikealla nuolinäppäimellä. Komentorivi tukee valtavasti erilaisia käteviä näppäinyhdistelmiä, joista voit lukea esimerkiksi [täältä](https://unix.stackexchange.com/a/255716).
 
 <h2> Tekstinkäsittely</h2>
 
-Gedit on yksinkertainen graafinen tekstieditori, jolla voi muokata mitä tahansa teksitiedostoja. Löydät geditin Linuxissa esimerkiksi kirjoittamalla "gedit" Launcheriin, johon pääset painamalla "windows-nappia". MacOSilla kannattaa käyttää ohjelmaa TextEdit, jotta voit määrittää tiedoston tallennuspaikan ja löydät sen helposti jälkeenpäin. Avaa graafinen tekstieditori ja luo sillä `esimerkki.txt`-niminen tiedosto aiemmin tehtyyn _lapio_-hakemistoosi. Lisää sen jälkeen tiedostoon jotain tekstiä.
+Gedit on yksinkertainen graafinen tekstieditori, jolla voi muokata mitä tahansa teksitiedostoja. Löydät geditin Linuxissa esimerkiksi kirjoittamalla "gedit" Launcheriin, johon pääset painamalla "windows-nappia". MacOSilla kannattaa käyttää ohjelmaa TextEdit, jotta voit määrittää tiedoston tallennuspaikan ja löydät sen helposti jälkeenpäin. 
 
-Tehtyäsi `esimerkki.txt`-tiedoston navigoi komentorivillä `lapio`-kansioon, ja avaa se komentamalla `nano esimerkki.txt`. Nano on tekstieditori, jossa on tekstikäyttöliittymä, eli jota käytetään suoraan komentoriviltä. Tämä tarkoittaa esimerkiksi, että muokkausikkunaa ei suljeta raksista, kuten vaikka geditissä, vaan se tehdään näppäinyhdistelmällä `CTRL + X`. Jos tiedostoon on tehty muutoksia, on varmistettava halutaanko ne tallentaa vai ei (vastaus on `y`es tai `n`o). Viimeisenä editori varmistaa, minkä nimisenä tiedosto tallennetaan.
+Avaa graafinen tekstieditori ja luo sillä `esimerkki.txt`-niminen tiedosto aiemmin tehtyyn _lapio_-hakemistoosi. Pääte `.txt` kertoo, että tiedosto sisältää tavallista tekstiä, eikä esimerkiksi ajettavaa koodia. Lisää sen jälkeen tiedostoon jotain tekstiä.
+
+Tehtyäsi `esimerkki.txt`-tiedoston navigoi komentorivillä `lapio`-kansioon, ja avaa se komentamalla `nano esimerkki.txt`. Nano on tekstieditori, jossa on tekstikäyttöliittymä, eli jota käytetään suoraan komentoriviltä. Tämä tarkoittaa, että ohjelmaa hallinoidaan tietyillä näppäinyhdistelmillä. 
+
+Muokkausikkunaa ei suljeta raksista, kuten vaikka geditissä, vaan se tehdään näppäinyhdistelmällä `CTRL + X`. Jos tiedostoon on tehty muutoksia, on varmistettava halutaanko ne tallentaa vai ei painamalla näppäintä `y` tai `n` (valinnat tulevat sanoista "yes" ja "no"). Viimeisenä editori varmistaa, minkä nimisenä tiedosto tallennetaan. 
+
+Huomaa, että `nano` kertoo joka askeleella, mitä valintaa mitkäkin näppäimet vastaavat. Tämä on varsin yleistä, ja siksi onkin tärkeää aina lukea käyttämäsi ohjelman tulostukset (niin tyhmän yksinkertaiselta neuvolta kuin se kuulostaakin). Yleensä ohjelma kertoo itse, mitä käyttäjän tulee tehdä seuraavaksi.
 
 <div class="note">
 Jos saat virheviestin <code>nano: command not found</code>, nanoa ei ole asennettu koneellesi. Helpoiten sen saa asennettua pakettienhallintajärjestelmän avulla. Katso osan lopusta linkki pakettienhallintajärjestelmien käyttöohjeisiin.
@@ -196,7 +223,7 @@ Ota selvää miten <code>nano</code> toimii käyttämällä Googlea tai <code>ma
 <li> Miten voin kopioida ja liittää nanoon</li>
 </ul>
 
-Tarkista, että osaat tehdä nämä asiat: Avaa tiedosto <code>eximerkki.txt</code>, lisää sinne tekstiä ja tallenna. Avaa sen jälkeen tiedoston jollain tekstieditorilla varmistaaksesi, että sisältö on tallentunut.
+Tarkista, että osaat tehdä nämä asiat: Avaa tiedosto <code>eimerkki.txt</code>, lisää sinne tekstiä ja tallenna. Avaa sen jälkeen tiedoston jollain tekstieditorilla varmistaaksesi, että sisältö on tallentunut.
 
 </div>
 
@@ -230,6 +257,16 @@ Tässä vielä esimerkki absoluuttisista ja suhteellisista poluista:
 
 Oletetaan, että olet ladannut Downloads-kansioon kissakuvia jokaiselle vuoden kuukaudelle niin, että jokaisen kuukauden kuvat ovat omassa kansiossaan. Sen jälkeen olet siirtynyt komentorivillä "toukokuu"-nimiseen kansioon, jonka polku on `~/Downloads/kissakuvia/toukokuu/`. Voit nyt viitata toukokuu-kansion _sisältä_ esimerkiksi "Downloads"-kansioon polulla `../..`, `~/Downloads` tai `/home/tunnus/Downloads` Linuxilla ja `/Users/tunnus/Downloads` macOSilla. Jos haluaisit viitata toukokuu-kansiosta esimerkiksi marraskuu-kansioon (joka on siis kissakuvia-kansion sisällä), voit tehdä sen polulla `../marraskuu/`. Kauttaviiva polun lopussa alleviivaa, että kyseessä on kansio, mutta se ei ole välttämätön.
 
+```
+tunnus@tietokone:~/Downloads/kissakuvia/toukokuu$ ls
+kissa1.jpg
+tunnus@tietokone:~/Downloads/kissakuvia/toukokuu$ cd ../../
+tunnus@tietokone:~/Downloads$ cd kissakuvia/toukokuu/
+tunnus@tietokone:~/Downloads/kissakuvia/toukokuu$ cd ../marraskuu/
+tunnus@tietokone:~/Downloads/kissakuvia/marraskuu$ ls
+kissa2.jpg
+```
+
 <div class="note">
 Muista, että komentorivi näyttää sinulle koko ajan nykyisen kansiosi polun suhteessa kotihakemistoosi. Tämä helpottaa tiedostojen seassa navigointia ja polkujen kirjoittamista.
 </div>
@@ -246,7 +283,7 @@ Oheisessa kansiorakenteessa siis <code>koulu</code>-kansio sisältää kolme kan
 Luo ensin <code>koulu</code>-kansio, ja siirry sen jälkeen sen sisään. Tämän jälkeen luo kuvan mukainen tiedostorakennelma. Pyri luomaan osa tiedostoista suoraan koulu-kansiosta, ja osa niin, että siirryt alikansioon sisään ennen kuin luot sinne tiedoston.
 </p>
 
-<p class="note">Vinkki: voit luoda tekstitiedoston avaamalla sen tekstieditorilla ja tallentamalla, tai komennolla <code>touch</code>.</p>
+<p class="note">Voit luoda tekstitiedoston avaamalla sen tekstieditorilla ja tallentamalla, tai komennolla <code>touch</code>.</p>
 
 <p>Tarkista, että olet luonut oikeat kansiot ja tiedostot <code>ls</code>-komennolla.</p>
 
@@ -257,7 +294,7 @@ Graafisessa ympäristössä kopiointi onnistuu näppäinyhdistelmällä <kbd>CTR
 
 Kopiointia varten on komento `cp` eli <b>c</b>o<b>p</b>y. Se ottaa argumenteiksi kopioitavan tiedoston polun ja uuden tiedoston polun: `cp esimerkki.txt esimerkki2.txt` kopioisi siis `esimerkki.txt`:n `esimerkki2.txt` nimiseksi tiedostoksi samaan kansioon. Huomaa, että polkujen avulla voit viitata tiedostoihin tai kansioihin eri hakemistossa: `cp esimerkki.txt ~/Documents/esimerkki2.txt` kopioisi tiedoston suoraan `Documents`-kansioon nimellä `esimerkki2.txt`.
 
-Tiedostoja voi siirtää käyttäen `mv`-komentoa, <b>m</b>o<b>v</b>e. Komento toimii samalla tavalla kuin `cp`, paitsi että alkuperäinen tiedosto poistetaan, ja jää vain uusi tiedosto. Tämä vastaa graafisen käyttöliittymän "leikkaa"-toimintoa. Komennolla `mv` voi myös uudelleennimetä tiedostoja: jos toisena argumenttina annettu polku viittaa samaan kansioon kuin ensimmäinen polku, kopion nimeäminen ja alkuperäisen tiedoston poistamisen tuloksena on uudelleennimetty tiedosto.
+Tiedostoja voi siirtää käyttäen `mv`-komentoa, joka tulee sanoista <b>m</b>o<b>v</b>e. Komento toimii samalla tavalla kuin `cp`, paitsi että alkuperäinen tiedosto poistetaan, ja jää vain uusi tiedosto. Tämä vastaa graafisen käyttöliittymän "leikkaa"-toimintoa. Komennolla `mv` voi myös uudelleennimetä tiedostoja: jos toisena argumenttina annettu polku viittaa samaan kansioon kuin ensimmäinen polku, kopion nimeäminen ja alkuperäisen tiedoston poistamisen tuloksena on uudelleennimetty tiedosto.
 
 Esimerkkejä `mv`:n toiminnasta:
 
@@ -297,7 +334,6 @@ kohde teksti.txt muistio.txt toinen.png
 tunnus@hal9000:~/esimerkki$ mv *.txt kohde/
 tunnus@hal9000:~/esimerkki$ ls
 kohde toinen.png
-tunnus@hal9000:~/esimerkki$
 ```
 
 Samoin `mv test* tests/` siirtäisi kaikki `test`-alkuiset tiedostot ja hakemistot `tests`-nimiseen kansioon.
