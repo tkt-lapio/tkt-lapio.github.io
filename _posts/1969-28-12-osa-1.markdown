@@ -50,7 +50,7 @@ Olet luultavasti varsin tottunut käyttämään tietokoneita tietyllä tavalla. 
 Edellä mainitussa tapauksessa kyseessä on _graafinen käyttöliittymä_: Toimintovaihtoehdot esitetään jonkinlaisessa valikossa, ja valinnat tehdään klikkailemalla. Tiedostoja ja kansioita voi esimerkiksi myös vain raahata haluttuihin paikkoihin. Komentorivi, eli terminaali sen sijaan on _tekstikäyttöliittymä_. Tällöin tietokoneelle annetaan käskyjä kirjoittamalla, komentojen ja näppäinyhdistelmien avulla. Vaihtoehtoja ei esitetä samalla tavalla, eikä hiirtä käytetä juuri ollenkaan.
 
 <div class="note">
-Rakkaalla lapsella on monta nimeä: Komentorivi on englanniksi command line tai terminal. Siihen viitataan joskus myös sanalla shell tai console.
+Rakkaalla lapsella on monta nimeä: Komentorivi on englanniksi <i>command line</i> tai <i>terminal</i>. Siihen viitataan joskus myös sanalla <i>shell</i> tai <i>console</i>.
 </div>
 
 Aikaisemmin tekstikäyttöliittymä oli ainoa mahdollisuus hallinnoida konetta. Vaikka nykyään graafiset käyttöliittymät ovat yleisiä ja toimivia, komentorivi on koodareille edelleen erittäin tärkeä työkalu. Monille koodareiden käyttämille ohjelmille ei ole edes olemassa graafista käyttöliittymää, vaan niitä käytetään pelkästään komentoriviltä.
@@ -81,27 +81,42 @@ Itse komento määrittää, minkä operaation koneen halutaan suorittavan. Se vo
 
 Argumentti taas on käyttäjän vapaasti määrittelemä arvo, esimerkiksi tiedoston nimi. Argumentti on usein komennon toiminnan kohde.
 
-Seuraavassa on esimerkkejä komennoista, joissa niiden toimintaa on muutettu vipujen avulla:
+Seuraavassa on esimerkki komennosta, jonka toimintaa on muutettu vipujen avulla:
 
 ```bash
 ls -la Downloads/tiedosto
 ```
 
-`ls` on yleisesti käytetty komento, johon tutustumme tässä osassa. Oletuksena se näyttää nykyisen kansion tiedostojen nimet. Vivut `-a` ja `-l` (huomaa, miten kaksi vipua annetaan komennolle ylläolevassa esimerkissä) vaikuttavat siihen, mitä tietoa `ls` näyttää. Kun komennolle `ls` annetaan argumenttina jokin polku kansioon, se näyttää tietoa vain kyseisen kansion sisällöstä. Tällä tavalla vipujen ja argumenttien avulla voidaan muuttaa ja tarkentaa komennon toimintaa. Voit kokeilla ensin ajaa pelkän komennon `ls`, sitten `ls -la` ja lopulta `ls -la ~/Downloads`. Ei tarvitse vielä ymmärtää, mitä tulostus tarkoittaa, tärkeintä on huomata, että tulostus on erilainen joka kerralla.
+Kokeile ensin ajaa pelkkä komento `ls`, sitten `ls -la` ja lopulta `ls -la ~/Downloads`. Ei tarvitse vielä ymmärtää, mitä tulostus tarkoittaa, tärkeintä on huomata, että tulostus on erilainen joka kerralla.
 
-```bash
-git add -p
-```
-
-Kun halutaan kutsua komentoriviltä jotain ohjelmaa, tulee ensimmäisenä komentoon kirjoittaa ajettavan ohjelman nimi. Yllä näkyvässä esimerkissä kutsutaan ohjelmaa nimeltä _Git_, johon tutustumme paremmin ensi osassa. Näin ollen ensin kirjoitetaan `git`. Ohjelma määrittelee erilaisia komentoja eri toiminnillaisuuksille. Tässä esimerkissä ajettavan komennon nimi on `add`, ja sille annetaan sen toimintaa muuttava vipu `-p`. Sinun ei tarvitse ajaa kyseistä koodia, tutustumme Gittiin vasta seuraavassa osassa.
+`ls` on yleisesti käytetty komento, johon tutustumme tässä osassa. Oletuksena se näyttää nykyisen kansion tiedostojen nimet. Vivut `-a` ja `-l` (huomaa, miten kaksi vipua annetaan komennolle ylläolevassa esimerkissä) vaikuttavat siihen, mitä tietoa `ls` näyttää. Kun komennolle `ls` annetaan argumenttina jokin polku kansioon, se näyttää tietoa vain kyseisen kansion sisällöstä. Tällä tavalla vipujen ja argumenttien avulla voidaan muuttaa ja tarkentaa komennon toimintaa. 
 
 Kutsuttava ohjelma määrittää, mitä komentoja se tarjoaa. Usein mahdolliset komennot on mahdollista nähdä komentoriviltä lisäämällä ohjelman perään vivun `--help` tai lyhyemmin `-h`. Tarkan ohjeen ohjelman käytöstä saa komennolla `man` ja antamalla parametriksi ohjelman nimen (esimerkiksi siis `man git`). 
 
-Tutkitaan `ls`-komennon `man`-sivua. Ajetaan siis komentorivillä `man ls`, jolloin aukeaa jotain seuraavannäköistä.
+Mikäli tietokone ei tunnista kutsuttavaa ohjelmaa, tulostuu virheviesti:
+
+```
+tunnus@tietokone:~$ asdf
+
+Command 'asdf' not found, did you mean:
+
+  command 'asdfg' from deb aoeui
+  command 'sadf' from deb sysstat
+  command 'sdf' from deb sdf
+  command 'adsf' from deb ruby-adsf
+
+Try: sudo apt install <deb name>
+
+tunnus@tietokone:~$ 
+```
+
+Tietokone ehdottaa yleensä samanlaisia ohjelmia, ja lopulta kehottaa asentamaan oikean paketin.
+
+Tutkitaan seuraavaksi `ls`-komennon `man`-sivua. Ajetaan siis komentorivillä `man ls`, jolloin aukeaa jotain seuraavannäköistä.
 
 ![ls-komennin man-sivu](/assets/man.png)
 
-Vaikka `man`-sivut eivät ole järin aloittelijaystävällisiä, ne tarjoavat yleensä kattavimman dokumentaation tietystä ohjelmasta. 
+Vaikka `man`-sivut eivät ole järin aloittelijaystävällisiä, ne tarjoavat yleensä kattavimman dokumentaation tietystä ohjelmasta.
 
 "Name"-kohdasta saa yleiskäsityksen siitä, mitä komento tekee. "Synopsis" kertoo, miten komentoa voidaan kutsua. Esimerkiksi komennon `ls` tapauksessa ensin annetaan kommenolle vivut, ja viimeisenä kohdekansion polku. Molemmat ovat valinnaisia parametreja, eli komento toimii ilmankin, minkä takia ne ovat hakasulkujen sisällä.
 
@@ -340,7 +355,7 @@ Samoin `mv test* tests/` siirtäisi kaikki `test`-alkuiset tiedostot ja hakemist
 
 <div class="exercise">
 <h3>Tehtävä 8: Villikortti {% include points.html text="10%" %}</h3>
-Hyödyllinen villikortteihin liittyvä tutoriaali löytyy <a href="http://www.linfo.org/wildcard.html">täältä</a>. Tee kansio nimeltä <i>työväline</i> kotihakemistoosi, ja lataa sinne internetistä kaksi kuvaa, joista toinen on <code>jpg</code>-muotoinen, ja toinen <code>png</code>-muotoinen. Lisää sen lisäksi kansioon joitain tiedostoja, esimerkiksi nimillä <code>tiedosto.txt</code> ja <code>en_ole_kuva.txt</code>. Luo lopuksi kansio nimeltä <code>kuvat</code> ja kopioi sinne tutoriaalia hyödyntäen jokainen kuva.
+Tee kansio nimeltä <i>kuvia</i> komentorivillä, ja lataa sinne internetistä kaksi kuvaa, joista toinen on <code>jpg</code>-muotoinen, ja toinen <code>png</code>-muotoinen. Lisää sen lisäksi kansioon joitain tiedostoja, esimerkiksi nimillä <code>tiedosto.txt</code> ja <code>en_ole_kuva.txt</code>. Luo lopuksi kansio nimeltä <code>kuvat</code> ja kopioi sinne tutoriaalia hyödyntäen kaikki kuvat nykyisestä hakemistosta. Voit lukea muista mahdollisista villikorteista esimerkiksi <a href="http://www.linfo.org/wildcard.html">täältä</a>.
 </div>
 
 Kuten mainittu, villikortit toimivat myös muissa komennoissa. Esimerkiksi hyödyllistä `tree`-komentoa, joka näyttää kansioiden alikansiot ja tiedostot puumaisena rakenteena, voi käyttää näyttämään vain tietyillä kirjaimilla alkavat kansiot seuraavasti.
@@ -408,7 +423,15 @@ Huomaa, että osuma löytyy, vaikka se oli sanan keskellä. Useimmissa ympärist
 
 <div class="exercise">
 <h3>Tehtävä 9: grep {% include points.html text="10%" %}</h3>
-Ilman erillisiä vipuja <code>grep</code> ei kohtele kirjaimia samana, jos ne ovat eri kokoisia. Esimerkiksi "a" ja "A" ovat sille siis erilaisia kirjaimia. Tarkastele <code>grep --help</code> apusivun tulosta, ja ota selvää miten pääset eroon kirjainkoon erottelusta. Ota myös selvää esimerkiksi Googlettaen, miten saat haettua vain merkkijonoja, jotka ovat rivin alussa. Tarkista, että osaat tehdä tämän. Voit tehdä sen kirjoittamalla tiedostoon esimerkiksi
+Ilman erillisiä vipuja <code>grep</code> ei kohtele kirjaimia samana, jos ne ovat eri kokoisia. Esimerkiksi "a" ja "A" ovat sille siis erilaisia kirjaimia. 
+<ul>
+<li>Tarkastele <code>grep --help</code> apusivun tulosta tai `man`-sivua, ja ota selvää miten pääset eroon kirjainkoon erottelusta.</li>
+<div class="note">
+Vinkki: Kirjainkoko on englanniksi "case".
+</div>
+
+<li>Ota selvää esimerkiksi Googlettaen, miten saat haettua vain merkkijonoja, jotka ovat rivin alussa. Tarkista, että osaat tehdä tämän. Voit tehdä sen kirjoittamalla tiedostoon esimerkiksi</li>
+</ul>
 </div>
 ```
 Unix
@@ -442,7 +465,9 @@ muistio2.txt
 muistio.txt
 ```
 
-Esimerkissä siis `ls`-komennon tulostus ohjattiin putken avulla edelleen komennolle `grep`. Ilman `|`-komentoa, ensimmäisen komennon tulostus olisi pitänyt ensin kirjoittaa tiedostoon ja sen jälkeen lukea ja filtteröidä `grep`illä. Komentoa `grep` käyttäen tulosteen pystyi suoraan jakamaan komentojen välillä. Joskus voi kuitenkin olla hyödyllistä kirjoittaa tuloste tiedostoon esimerkiksi tallennusta varten, sillä terminaalin tulosteita voi selata taaksepäin vain rajallisen määrän. Tähän tarkoitukseen sopiva operaattori on nuoli oikealle `>`, joka siirtää komennon tulosteen _tiedostoon_. Esimerkiksi `ls > listaus.txt` siirtää tiedostolistauksen `listaus.txt`-nimiseen tiedostoon, luoden kyseisen tiedoston jos sitä ei ole jo olemassa.
+Esimerkissä siis `ls`-komennon tulostus ohjattiin putken avulla edelleen komennolle `grep`. Ilman `|`-komentoa, ensimmäisen komennon tulostus olisi pitänyt ensin kirjoittaa tiedostoon ja sen jälkeen lukea ja filtteröidä `grep`illä. Komentoa `grep` käyttäen tulosteen pystyi suoraan jakamaan komentojen välillä. 
+
+Joskus voi kuitenkin olla hyödyllistä kirjoittaa tuloste tiedostoon esimerkiksi tallennusta varten, sillä terminaalin tulosteita voi selata taaksepäin vain rajallisen määrän. Tähän tarkoitukseen sopiva operaattori on nuoli oikealle `>`, joka siirtää komennon tulosteen _tiedostoon_. Esimerkiksi `ls > listaus.txt` siirtää tiedostolistauksen `listaus.txt`-nimiseen tiedostoon, luoden kyseisen tiedoston jos sitä ei ole jo olemassa.
 
 <div class="note">
 Komento <code>></code> korvaa kohdetiedoston koko sisällön annetulla tekstillä, <code>>></code> lisää sen kohdetiedoston loppuun uudelle riville.
@@ -500,13 +525,15 @@ Kun yhteys on muodostettu, näyttää komentorivi erilaiselta:
 tunnus@melkki:~$
 ```
 
-Nykyinen kansio on siis muuttunut osaston koneiden kotihakemistoksi ja pääset käsiksi kaikkiin osaston koneella sijaitseviin tiedostoihin. Yhteyden voi lopettaa komennolla `exit`.
+Komentorivin nykyinen kansio on siis muuttunut osaston koneiden kotihakemistoksi ja pääset käsiksi kaikkiin osaston koneella sijaitseviin tiedostoihin. Yhteyden voi lopettaa komennolla `exit`.
+
+Voit lukea SSH:sta lisää esimerkiksi [täältä](https://www.ssh.com/ssh/).
 
 <h2> SSH-avainpari</h2>
 
 Äsken yhteys osaston koneeseen autentikoitiin osaston tunnuksilla. SSH-yhteys tarjoaa kuitenkin myös toisen tavan tunnistaa käyttäjä: julkinen ja yksityinen avainpari. Käytännössä avaimilla tarkoitetaan kahta pitkää ja satunnaiselta vaikuttavaa merkkijonoa, joita käytetään yhdessä varmistamaan, että vain halutuilla henkilöillä on pääsy tiettyyn tietoon. Kyseessä on salauksen tekniikka, joka ei kuulu sen enempää tämän kurssin aihealueisiin, mutta voit etsiä asiasta lisää tietoa avainsanoilla _public key encryption_ ja _asymmetric cryptography_. **Riittää ymmärtää, että yksityisen avaimen tulisi olla vain sen omistajan tiedossa, ja julkista avainta voi jakaa huoletta.**
 
-SSH-avainparin voi luodan komennolla `ssh-keygen`. Komento kysyy salasanaa ja avaimen tallennuspaikkaa. Oletussijaintia tai tiedoston nimeä ei lähtökohtaisesti tarvitse muuttaa, jolloin avain luodaan kotihakemistossa sijaitsevaan `.ssh`-kansioon.
+SSH-avainparin voi luodan komennolla `ssh-keygen`. Komento kysyy avaimelle salasanaa ja tallennuspaikkaa. Oletussijaintia tai tiedoston nimeä ei lähtökohtaisesti tarvitse muuttaa, jolloin avain luodaan kotihakemistossa sijaitsevaan `.ssh`-kansioon.
 
 <div class="warning">Käytä SSH-avainta luodessasi aina salasanaa. Jos käytät SSH-avainta osaston palvelimien kanssa, on salasanan asettaminen pakollista yliopiston määräysten mukaan.</div>
 
@@ -519,14 +546,28 @@ Enter same passphrase again:
 Your identification has been saved in /home/tunnus/.ssh/id_rsa.
 Your public key has been saved in /home/tunnus/.ssh/id_rsa.pub.
 The key fingerprint is:
+SHA256:asdasdadsfasdasdasdasdasdasd
 The key's randomart image is:
++---[RSA 2048]----+
+|    .      ..oo..|
+|   . . .  . .o.X.|
+|    . . o.  ..+ B|
+|   .   o.o  .+ ..|
+|    ..o.S   o..  |
+|   . %o=      .  |
+|    @.B...     . |
+|   o.=. o. . .  .|
+|    .oo  E. . .. |
++----[SHA256]-----+
 ```
 
-Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. Tämä `.pub`-päätteinen tiedosto sisältää julkisen avaimen, jonka voit turvallisesti jakaa muille, toinen tiedosto yksityisen avaimen, jota kannattaa kohdella samalla varovaisuudella kuin tavallista salasanaa.
+Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. Tämä `.pub`-päätteinen tiedosto sisältää julkisen avaimen, jonka voit turvallisesti jakaa muille. Toinen, pääteetön tiedosto sisältää yksityisen avaimen, jota kannattaa kohdella samalla varovaisuudella kuin tavallista salasanaa.
 
-Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Lisätään siis `.pub`-päätteisen tiedoston sisältö yliopiston kotihakemiston polkuun `~/.ssh/authorized_keys`, siis kotihakemiston kansioon `.ssh`, tiedostoon nimeltä `authorized_keys`. Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Joudut luultavasti luomaan kansion ja tiedoston itse.
+Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Julkinen avain lisätään polkuun `~/.ssh/authorized_keys`, siis kotihakemiston kansioon `.ssh`, tiedostoon nimeltä [authorized_keys](https://www.ssh.com/ssh/authorized_keys/). Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Yliopiston palvelimella oudut luultavasti luomaan kansion ja tiedoston itse.
 
-Helpoiten saa julkisen avaimen siirrettyä kohdepalvelimelle komennolla <code>scp</code>, jonka avulla on mahdollista kopioida tiedostoja palvelimelta toiselle (vertaa komentoon `cp`). Komentoa käytetään seuraavasti:
+![Kuva SSH-avaimen käytöstä](/assets/ssh-selitys.png)
+
+Julkisen avaimen saa siirrettyä kohdepalvelimelle esimerkiksi komennolla <code>scp</code>, jonka avulla on mahdollista kopioida tiedostoja palvelimelta toiselle (vertaa komentoon `cp`). Komentoa käytetään seuraavasti:
 
 ```
 scp polku/kopioitavaan/tiedostoon tunnus@palvelmen.osoite:polku/kohdekansioon
@@ -544,25 +585,29 @@ Kannatta myös kokeilla, miten <code>scp</code> toimii, jos kohdekansiota ei ole
 </i>
 </div>
 
+Julkisen avaimen kopioimisen voi myös delegoida komennolle [ssh-copy-id](https://www.ssh.com/ssh/copy-id).
+
 Autentikaatio toimii oikein, kun otettaessa SSH-yhteyttä yliopiston koneisiin pääsee kirjautumaan SSH-avaimelle antamalla salasanalla yliopiston käyttäjätunnuksen sijaan.
 
 Jotta et joudu kirjoittamaan salasanaa joka kerralla, kannattaa yksityinen avain lisätä ssh-agentille, jolloin salasana tarvitsee kirjoittaa vain kirjauduttuasi järjestelmästä ulos. Tämä tapahtuu kahdella komennolla:
 
 ```
-eval `ssh-agent` # varmistetaan, että ssh-agentti on toimintavalmiudessa
-ssh-add ~/.ssh/id_rsa # olettaen, ettet muuttanut yksityisen avaimen polkua sitä luodessasi, muuten käytä valitsemaasi polkua.
+# varmistetaan, että ssh-agentti on toimintavalmiudessa
+eval `ssh-agent`
+# olettaen, ettet muuttanut yksityisen avaimen polkua sitä luodessasi
+# muuten anna argumentiksi yksityisen avaimen polku
+ssh-add 
 ```
+<div class="note">
+`ssh-keygen`-komento kannattaa ajaa vivuilla <code>-t rsa -b 4096</code>. Ne varmistavat, että käytetty salausalgoritmi on <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA</a> ja että avaimesta tulee 4096 bittiä pitkä. Pitempi pituus tekee RSA:lla luodusta avaimesta turvallisemman.
+</div>
 
-Huomaa siis, että agentille lisätyllä avaimella ei ollut `.pub`-päätettä, se on siis yksityinen!
-
-`ssh-keygen`-komento kannattaa ajaa vivuilla `-t rsa -b 4096`. Ne varmistavat, että käytetty salausalgoritmi on [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) ja että avaimesta tulee 4096 bittiä pitkä. Pitempi pituus tekee RSA:lla luodusta avaimesta turvallisemman.
-
-Voit lukea lisää `ssh`-komennosta ja sen konfiguroimisesta esimerkiksi [täällä](https://linux.fi/wiki/SSH)
+Voit lukea lisää SSH:n konfiguroimisesta esimerkiksi [täältä](https://linux.fi/wiki/SSH).
 
 <div class="exercise">
 <h3>Tehtävä 11: SSH-yhteys {% include points.html text="10%" %}</h3>
 
-Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus (eli olet aktivoinut käyttöluvan [näiden ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan), mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
+Luo koneellesi SSH-avainpari. Mahdollista sen jälkeen avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, eli sinulla ei ole yliopiston tunnusta, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
 
 <div class="note">
 Mikäli teet tehtävän laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.
@@ -586,24 +631,31 @@ Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toim
 <div class="exercise">
 <h3>Tehtävä 12: Wget ja HTML-koodi {% include points.html text="10%" %}</h3>
 
-Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla, ja avaa tallennettu <code>.html</code>-päätteinen tiedosto selaimella, esim Firefoxilla tai Chromella (saat tiedoston helpoiten selaimella auki graafisesta tiedostonhallinnasta). Sivu näyttää luultavasti hieman erilaiselta kuin yleensä. Avaa sitten tiedosto niin, että näet sen sisällä olevan HTML-koodin (toisin sanoen avaa se niin, että näet tiedoston sisällön koodina, eikä tiedosto aukea selaimessa). Tutustumme HTML-kieleen kolmannessa osassa.
+<ol>
+<li>Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla</li>
+<li>Avaa tallennettu <code>.html</code>-päätteinen tiedosto selaimella, esim Firefoxilla tai Chromella (saat tiedoston helpoiten selaimella auki graafisesta tiedostonhallinnasta). Sivu näyttää luultavasti hieman erilaiselta kuin yleensä. </li> 
+<li> Avaa tiedosto niin, että näet sen sisällä olevan HTML-koodin (toisin sanoen avaa se niin, että näet tiedoston sisällön koodina, eikä tiedosto aukea selaimessa).</li>
+<li>Mikä oli ohjelma, jota käytit kussakin tapauksessa tiedoston avaamiseen? Mieti, miten ohjelma käsitteli tiedoston sisällön.</li>
+</ol>
+
+Tutustumme HTML-kieleen ja verkkosivuihin kolmannessa osassa, jossa opit myös kirjoittamaan HTML-dokumentteja.
 
 </div>
 
 <div class="exercise">
 <h3>Tehtävä 13: Wget, grep ja Linus Torvalds {% include points.html text="10%" %}</h3>
 
-Tässsä tehtävässä lasketaan, monellako rivillä Linus Torvaldista kertovassa artikkelissa esiintyy sana "Linux".
-
 <p>
-Hae wgetillä Linus Torvaldsista kertova <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia-artikkeli</a> koneellesi. Hae syntyneestä tiedostosta <code>grep</code>-komentoa käyttäen ne rivit, joissa lukee "Linux". Kirjoita nämä rivit tiedostoon.
+Tässä tehtävässä lasketaan, monellako rivillä Linus Torvaldista kertovassa artikkelissa esiintyy sana "Linux".
 </p>
 
-<p>
-Etsi sitten netistä, miten voit laskea tulosteen tai tiedoston rivien määrät, ja laske monellako rivillä sana "Linux" esiintyy.
-</p>
+<ol>
+<li>Hae wgetillä Linus Torvaldsista kertova <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia-artikkeli</a> koneellesi.</li>
+<li>Hae syntyneestä tiedostosta <code>grep</code>-komentoa käyttäen ne rivit, joissa lukee "Linux". Kirjoita nämä rivit tiedostoon.</li>
+<li>Etsi sitten netistä, miten voit laskea tulosteen tai tiedoston rivien määrät, ja laske monellako rivillä sana "Linux" esiintyy.</li>
+</ol>
 
-Bonustehtävä: Tee sama operaatio, mutta älä kirjoita mitään välissä tiedostoon.
+Mikäli haluat, voit yrittää tehdä saman tehtävä ilman, että kirjoitat mitään välissä tiedostoon.
 
 </div>
 
@@ -611,7 +663,7 @@ Bonustehtävä: Tee sama operaatio, mutta älä kirjoita mitään välissä tied
 
 Unix-tyyppisissä järjestelmissä käyttäjät omaavat tiettyjä oikeuksia tiedostojen ja kansioiden muokkaamista ja katsomista varten. Esimerkiksi jos useampi ihminen käyttää samaa järjestelmää, kuten osaston koneita käytetään, on tarve määrittää mitä kukakin käyttäjä pystyy lukemaan, kirjoittamaan ja suorittamaan.
 
-Lukuoikeus antaa käyttäjän tarkastella tiedoston sisältöä, kun taas kirjoitusoikeuden omaava käyttäjä pystyy muokkaamaan sitä. Suoritusoikeus taas tarkoittaa, että jos kyseinen tiedosto on esimerkiksi ohjelma, on se mahdollista ajaa. Kansioilla on oltava suoritusoikeus, jotta niiden sisään voidaan siirtyä esimerkiksi `cd`-komennolla.
+Lukuoikeus antaa käyttäjän tarkastella tiedoston sisältöä, kun taas kirjoitusoikeuden omaava käyttäjä pystyy muokkaamaan sitä. Suoritusoikeus taas tarkoittaa, että jos kyseinen tiedosto on esimerkiksi ohjelma, on se mahdollista ajaa. Kansioilla on oltava suoritusoikeus, jotta niiden sisään voidaan siirtyä esimerkiksi `cd`-komennolla. Mikäli käyttäjällä ei ole tarvittavia oikeuksia yrittämäänsä operaatioon, antaa järjestelmä yleensä virheviestin `Permission denied`.
 
 Jokaisella tiedostolla ja kansiolla on omat oikeutensa. Lisäksi niillä on myös omistaja. Käyttäjä, joka loi tiedoston, on oletuksena sen omistaja (joskin omistajuutta voi myös vaihtaa).
 
@@ -630,7 +682,9 @@ Ensimmäinen sarake, joka sisältää hassuja sekoituksia kirjaimista ja merkeis
 
 Seuraavat yhdeksän merkkiä on varattu tiedoston tai kansion oikeuksille. Nämä oikeudet merkitään aina järjestyksessä lukuoikeus (r), kirjoitusoikeus (w) ja suoritusoikeus (x). Ensimmäiset kolme merkkiä kertovat sen omistajan oikeudet. Jos vastaavan kirjaimen tilalla on viiva, tarkoittaa merkintä, että oikeus puuttuu, eli sitä ei ole annettu.
 
-Seuraavat kolme merkkiä kertovat samaan tapaan _ryhmän_ oikeudet. Ryhmä on tapa, jolla samanlaisia käyttäjiä voi hallita - esimerkiksi kaikki opiskelijat saattaisivat olla osaston järjestelmissä yhdessä ryhmässä, jotta ryhmälle voidaan antaa tiettyjä oikeuksia. Viimeiset kolme merkkiä taas näyttävät kaikkien muiden käyttäjien oikeudet.
+Seuraavat kolme merkkiä kertovat samaan tapaan _ryhmän_ oikeudet. Ryhmä on tapa, jolla samanlaisia käyttäjiä voi hallita - esimerkiksi kaikki opiskelijat saattaisivat olla osaston järjestelmissä yhdessä ryhmässä, jotta ryhmälle voidaan antaa tiettyjä oikeuksia. 
+
+Viimeiset kolme merkkiä taas näyttävät kaikkien muiden käyttäjien oikeudet. Tähän sarakkeeseen kuuluvat kaikki käyttäjät, jotka eivät ole tiedoston omistajia, tai kuulu sen ryhmään.
 
 Oikeuksien jälkeen näkyy tiedostoon johtavien linkkien määrä. Kansioissa linkkien lukumäärään sisältyy myös sen sisältämät tiedostot. Emme käsittele linkkejä enempää, eikä niistä kysytä tentissä. Voit etsiä linkeistä tietoa esimerkiksi sanoilla "Hard and soft links in Unix".
 
