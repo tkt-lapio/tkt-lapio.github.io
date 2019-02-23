@@ -686,15 +686,17 @@ Seuraavat kolme merkkiä kertovat samaan tapaan _ryhmän_ oikeudet. Ryhmä on ta
 
 Viimeiset kolme merkkiä taas näyttävät kaikkien muiden käyttäjien oikeudet. Tähän sarakkeeseen kuuluvat kaikki käyttäjät, jotka eivät ole tiedoston omistajia, tai kuulu sen ryhmään.
 
-Oikeuksien jälkeen näkyy tiedostoon johtavien linkkien määrä. Kansioissa linkkien lukumäärään sisältyy myös sen sisältämät tiedostot. Emme käsittele linkkejä enempää, eikä niistä kysytä tentissä. Voit etsiä linkeistä tietoa esimerkiksi sanoilla "Hard and soft links in Unix".
+Oikeuksien jälkeen näkyy tiedostoon johtavien linkkien määrä. Kansioissa linkkien lukumäärään sisältyy myös sen sisältämät tiedostot. Linkkien avulla voidaan viitata tiettyihin tiedostoihin.
 
 Sen jälkeen on tiedoston omistajan nimi ja ryhmän nimi. Tässä tapauksessa ryhmän nimi on käyttäjänimi `tunnus`. Viimeisenä tulostuksessa näkyy kansion tai tiedoston koko [tavuina](<https://fi.wikipedia.org/wiki/Tavu_(tietotekniikka)>), sekä viimeinen muokkauspäivä, ja lopuksi sen nimi.
 
 Yllä näkyvässä esimerkissä siis `muistio.txt`-tiedostolle on omistajalla luku, kirjoitus ja ajo-oikeus, ryhmällä ja muilla taas on lukuoikeus. Kansiolla `päiväkirjamerkinnät` taas on vain sen omistajalle luku, muokkaus ja ajo-oikeudet, eikä ryhmällä tai muilla käyttäjillä ole näitä oikeuksia. Tiedostoa `artikkeli.txt` voivat kaikki lukea, mutteivät muokata tai ajaa.
 
+![Kuva komennon ls -l tulostuksen osista](/assets/permission-selitys.png)
+
 Oikeuksia voi muuttaa tiedoston tai kansion omistaja, tai järjestelmän ylläpitäjä. Niiden muokkaamiseen komentoriviltä tarkoitettu komento on `chmod` (_change mode_). Se ottaa argumenttina merkkijonon, joka kertoo lisätäänkö vai poistetaanko oikeuksia, kenelle oikeuksia annetaan, sekä tiedoston tai kansion jolle komento tulee suorittaa.
 
-Annettu oikeus ja sen saaja määritellään kirjainten avulla:
+Annettu oikeus ja sen saaja voidaan määritellä kirjainten avulla:
 
 - r = lukuoikeus
 - w = kirjoitusoikeus
@@ -753,6 +755,10 @@ Mikäli teet tehtävän osaston koneella, tee se kansiossa, jonka polku on <code
 
 Voit lukea lisää oikeuksista esimerkiksi [täältä](https://csguide.cs.princeton.edu/account/groups).
 
+<div class="warning">
+Ole varovainen oikeuksien kanssa! Liiallisten oikeuksien antaminen esimerkiksi kotihakemistoosi on turvallisuusuhka. Useimmiten tarvitset ajo- ja lukuoikeuksia vain itse.
+</div>
+
 <h2>Skriptit</h2>
 
 Skriptit (englanniksi _scripts_) ovat tiedostoja, jotka sisältävät komentorivillä ajettavaa koodia. Niitä käytetään paljon erilaisten tietokoneella suoritettavien tehtävien automatisoinnissa. Skriptin voi ajaa kirjoittamalla terminaaliin sen polun. Jos ollaan skriptin kanssa samassa kansiossa, voidaan se ajaa komennolla `./skriptin_nimi`.
@@ -783,17 +789,19 @@ Jotta skriptin voi ajaa, käyttäjälle tulee ensin antaa siihen ajo-oikeudet ko
 <div class="exercise">
 <h3>Tehtävä 15: Pieni bash-skripti {% include points.html text="5%" %}</h3>
 
-Etsi netistä, miten <code>bash</code>issä voi tulostaa tekstiä terminaaliin. Kirjoita sen jälkeen skripti, joka tulostaa "Hello world!". Selvitä sen jälkeen, miksi yleensä ensimmäisessä ohjelmointitehtävässä tulostetaan teksti "Hello world!". Aja lopuksi kirjoittamasi skripti.
+<ol>
+<li>Etsi netistä, miten bash-kielessä voi tulostaa tekstiä terminaaliin. </li>
+<li>Kirjoita pieni skripti, joka tulostaa "Hello world!". </li>
+<li> Aja kirjoittamasi skripti.</li>
+<li>Selvitä sen jälkeen, miksi yleensä ensimmäisessä ohjelmointitehtävässä tulostetaan teksti "Hello world!".</li >
+</ol>
 
 </div>
 
-<div class="warning">
-Ole varovainen oikeuksien kanssa! Liiallisten oikeuksien antaminen esimerkiksi kotihakemistoosi on turvallisuusuhka. Useimmiten tarvitset ajo- ja lukuoikeuksia vain itse.
-</div>
 
 <h2> Sudo</h2>
 
-Tietoturvallisiin tapoihin kuuluu, että tietokoneessa erotellaan pääkäyttäjä (_superuser_) sekä tavalliset käyttäjät. Pääkäyttäjällä on kaikki oikeudet järjestelmään, ja kaikki pääkäyttäjän ajamat ohjelmat ajetaan etuoikeutetussa tilassa. Tämä voi olla vaarallista, jos pahantahtoista koodia päätyy ajoon, siksi tietokonetta tulee käyttää yleensä normaalina käyttäjänä. Normaali käyttäjä voi kuitenkin ajaa komentoja pääkäyttäjänän oikeuksin, jos käyttäjä kuuluu (_sudoers_) ryhmään. Tämä tapahtuu lisäämällä komennon alkuun `sudo` (alunperin _superuser do_). Tällöin ennen komennon ajamista käyttäjältä pyydetään käyttäjän oma salasana. Riippuen järjestelmästä, `sudo`-oikeuksia voidaan tarvita esimerkiksi ohjelmien asentamiseen. Komennon käyttöä tulee kuitenkin välttää, jos mahdollista.
+Tietoturvallisiin tapoihin kuuluu, että tietokoneessa erotellaan pääkäyttäjä (_superuser_) sekä tavalliset käyttäjät. Pääkäyttäjällä on kaikki oikeudet järjestelmään, ja kaikki pääkäyttäjän ajamat ohjelmat ajetaan etuoikeutetussa tilassa. Tämä voi olla vaarallista, jos pahantahtoista koodia päätyy ajoon, siksi tietokonetta tulee käyttää yleensä normaalina käyttäjänä. Normaalikäyttäjä voi kuitenkin ajaa komentoja pääkäyttäjänän oikeuksin, jos käyttäjä kuuluu (_sudoers_) ryhmään. Tämä tapahtuu lisäämällä komennon alkuun `sudo` (alunperin _superuser do_). Tällöin ennen komennon ajamista käyttäjältä pyydetään käyttäjän oma salasana. Riippuen järjestelmästä, `sudo`-oikeuksia voidaan tarvita esimerkiksi ohjelmien asentamiseen. Komennon käyttöä tulee kuitenkin välttää, jos mahdollista.
 
 Yliopiston tai osaston koneilla, eli niillä joihin kirjaudut yliopiston tai osaston tunnuksilla esimerkiksi SSH-yhteyden kautta tai pajaluokissa, **ei saa ajaa mitään sudo-komentoja** - siitä lähtee ylläpidolle väärinkäyttöilmoitus.
 
@@ -801,11 +809,29 @@ Yliopiston tai osaston koneilla, eli niillä joihin kirjaudut yliopiston tai osa
 
 <h2> Asentamisesta</h2>
 
-Helpoiten komentorivityökalujen asentaminen tapahtuu pakettienhallintajärjestelmien avulla. Tällaisia ovat esimerkiksi apt-get (Linux) tai homebrew (macOS). Ubuntussa (osaston koneilla käytettävä Linuxin versio) pitäisi olla apt-get valmiina, macOSissa joudut asentamaan homebrew:n erikseen [täältä](https://brew.sh/). Ohjeita apt-getin käyttöön löytyy [täältä](https://help.ubuntu.com/community/AptGet/Howto). **Suosittelemme vahvasti pakettienhallintajärjestelmän käyttämistä.**
+Helpoiten komentorivityökalujen asentaminen tapahtuu pakettienhallintajärjestelmien avulla. Tällaisia ovat esimerkiksi apt-get (Linux) tai homebrew (macOS). 
+
+Ubuntussa ja Cubblissa (osaston koneilla käytettävä Linuxin versio) pitäisi olla apt valmiina, macOSissa joudut asentamaan homebrew:n erikseen [täältä](https://brew.sh/). Ohjeita aptin käyttöön löytyy [täältä](https://help.ubuntu.com/community/AptGet/Howto) tai suomeksi [täältä]8https://www.linux.fi/wiki/APT). **Suosittelemme vahvasti pakettienhallintajärjestelmän käyttämistä.**
+
+Yksinkertaisimmillaan paketinhallintajärjestelmän avulla asennetaan paketti ajamalla komento `install`, ja antamalla sille parametriksi asennettavan paketin nimen. Paketinhallintajärjestelmän avulla voidaan myös päivittää ja poistaa paketteja.
+
+Esimerkiksi tekstieditori `nano` asennettaisiin homebrew:n avulla ajamalla seuraava komento:
+
+```
+brew install nano
+```
+
+ja apt:in avulla ajamalla
+
+```
+apt install nano
+```
+
+Yleensä ohjelmien asentaminen vaatii pääkäyttäjän oikeudet, eli komennon eteen on lisättävä `sudo`.
 
 Ohjelman asentaminen ilman pakettienhallintajärjestelmää sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
 
-Järjestelmän ympäristö voidaan määritellä skripteissä niin, että niitä ei tarvitse erikseen määritellä session loputtua. Tällaisia on esimerkiksi `~/.bashrc`, joka ajetaan joka kerta, kun terminaali käynnistetään ja `~/bash_profile`, joka ajetaan jokaisella kirjautumisella. Voit lukea näistä tiedostoista ja niiden käytöstä muun muassa [täältä](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html). Esimerkiksi `PATH` määritellään yleensä `.bashrc`-tiedostoon.
+Järjestelmän ympäristö voidaan lisäksi määritellä skripteissä niin, että niitä ei tarvitse erikseen määritellä session loputtua. Tällaisia on esimerkiksi `~/.bashrc`, joka ajetaan joka kerta, kun terminaali käynnistetään ja `~/bash_profile`, joka ajetaan jokaisella kirjautumisella. Voit lukea näistä tiedostoista ja niiden käytöstä muun muassa [täältä](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html). Esimerkiksi `PATH`-ympäristömuuttuja määritellään yleensä `.bashrc`-tiedostoon.
 
 <h2> Loppusanat</h2>
 
