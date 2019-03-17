@@ -1,102 +1,106 @@
 ---
 layout: material
-title: 'Osa 1 - Komentorivi'
+title: 'Part 1 - The Command Line'
 date: 1969-12-28 00:04:00 +0200
-permalink: /komentorivi/
+permalink: /command-line/
 tag: material
 ---
 
-Tästä alkaa ensimmäisen osan materiaali. Ensimmäisen osan keskeisin tavoite on tutustua komentoriviin Unix-tyyppisessä ympäristössä.
+This is the beginning of the course material. The primary goal of the first part is to get to know the command line in a Unix-like environment.
 
-<h2>Tämän osan oppimistavoitteet</h2>
+<h2>The learning goals for this part</h2>
 
-Tämän osan tavoitteina on, että opiskelija
+The goal is that after this part the student
 
-- Ymmärtää graafisen ja tekstikäyttöliittymän erot.
-- Osaa navigoida tiedostohallinnassa komentorivillä.
-  - ls ja vivut -a ja -l
+- Will understand the differences between a graphical and a text-based user interface.
+- Can navigate in the file system using the command line.
+  - ls and the options -a and -l
   - cd
   - mkdir
-- Osaa luoda ja avata, tallentaa ja sulkea tiedoston jollain komentorivin tekstieditorilla.
+- Can create and open, save and close a file with some command line text editor
   - nano
-  - vim
-- Osaa käyttää suhteellisia ja absoluuttisia polkuja viittaamaan tiedostoihin ja kansioihin.
-- Ymmärtää kotihakemiston ja juurihakemiston eron.
-- Osa kopioida ja leikata tiedostoja ja kansioita komentoriviltä
-- Osaa antaa useita tiedostoja komentoriville argumenttina \*-villikortin avulla
-- Osaa käsitellä tekstiä komentorivillä
+  vim
+- Can use relative and absolute paths to refer to files and folders
+- Understands the difference between the home folder and the root folder.
+- Can copy and paste files and folders from the command line
+- Can give several files to a program as an argument with the \* wild card.
+- Can handle text files on the command line.
   - cat
-  - tail ja head, myös n-vivun kanssa
+  - tail and head, and the option `n`
   - grep
-- Tulosteen käsittely
-  - Putki \|
-  - \> ja \>\>
-- Osaa luoda SSH-avainparin, sekä muodostaa SSH-yhteyden toiseen järjestelmään.
-- Osaa hakea internetistä sisältöä komentorivillä
-  - Wget
-- Osaa lukea komennon ls -l tulostusta.
-- Osaa muokata tiedoston ja kansion oikeuksia.
+- Can handle output on the command line
+  - The pipe \|
+  - \> and \>\>
+- Can create an SSH key pair and establish an SSH connection to another system.
+- Can search content from the internet using the command line
+  - wget
+- Can read the output of the command ls -l.
+- Can modify the permissions of a file or a folder.
   - chmod
-- Osaa kirjoittaa yksinkertaisen bash-skriptin ja ajaa sen.
-- Ymmärtää sudo-komennon merkityksen ja vaarat.
-- Osaa hakea tietoa komentorivityökalujen käytöstä internetistä.
+- Can write a simple bash script and run it.
+- Understands the meaning and the possible dangers of using sudo.
+- Can search for information about the command line and its programs from the Internet.
 
-<h2>Komentorivi</h2>
 
-Tietokoneet ovat erottamaton osa nyky-yhteiskuntaa, ja jokainen tulee melko varmasti päivittäin käyttäneeksi useampaa erilaista ja eri kokoista tietokonetta. Tietokone on myös tietojenkäsittelytieteilijän tärkein työkalu.
+<h2>The command Line</h2>
 
-Olet luultavasti varsin tottunut käyttämään tietokoneita tietyllä tavalla. Esimerkiksi tiedostojen etsiminen ja tarkasteleminen on melko varmasti mielestäsi helppoa: Osaat siirtyä kansioon kaksoisklikkaamalla sitä, avata tiedoston sopimalla ohjelmalla tai klikata tiedostoa oikealla näppäimellä ja valita vaihtoehdoista "poista" tuhotaksesi sen.
+Computers are an inseparable part of the modern society. The average citizen is likely to use several different kinds of computers every day. Computers are also arguably the most important tool for computer scientists.
 
-Edellä mainitussa tapauksessa kyseessä on _graafinen käyttöliittymä_: Toimintovaihtoehdot esitetään jonkinlaisessa valikossa, ja valinnat tehdään klikkailemalla. Tiedostoja ja kansioita voi esimerkiksi myös vain raahata haluttuihin paikkoihin. Komentorivi, eli terminaali sen sijaan on _tekstikäyttöliittymä_. Tällöin tietokoneelle annetaan käskyjä kirjoittamalla, komentojen ja näppäinyhdistelmien avulla. Vaihtoehtoja ei esitetä samalla tavalla, eikä hiirtä käytetä juuri ollenkaan.
+You are probably used to using computers in a certain way. Creating, searching and deleting files is probably easy for you. You know that double clicking a folder moves you inside it, you know how to open the window prompt for deleting a file, or how to open an image with a specific program.
+
+The former is an example of a _graphical user interface_ (GUI): The possible actions are presented in some sort of menu and chosen by clicking. Files can also be drag and dropped to new places. Contraty to the graphical user interface, the command line, is a _text-based user interface_. This means that one does not use the mouse in order to choose specific actions. Instead, the computer is given commands by writing them and pressing enter. The options are not presented in the same way as in a graphical environment, and one can get by without using the mouse at all.
 
 <div class="note">
-Rakkaalla lapsella on monta nimeä: Komentorivi on englanniksi <i>command line</i> tai <i>terminal</i>. Siihen viitataan joskus myös sanalla <i>shell</i> tai <i>console</i>.
+The command line can also be called the <i>terminal</i>. It's also sometimes referred to as the <i>shell</i> or <i>console</i>.
 </div>
 
-Aikaisemmin tekstikäyttöliittymä oli ainoa mahdollisuus hallinnoida konetta. Vaikka nykyään graafiset käyttöliittymät ovat yleisiä ja toimivia, komentorivi on koodareille edelleen erittäin tärkeä työkalu. Monille koodareiden käyttämille ohjelmille ei ole edes olemassa graafista käyttöliittymää, vaan niitä käytetään pelkästään komentoriviltä.
+There was a time when a text-based user interface was the only possible way to use a computer. Nowadays graphical user interfaces are common and function well. However, the command line remains a vital tool for programmers. For lots of tools created for programmers, a GUI doesn't exist, and using the command line is the only option. In addition, a GUI can be tediously slow for some use cases, when handling large amounts of data for example.
 
-Aloitetaan avaamalla komentorivi. Ubuntussa ja useissa Linux-käyttöjärjestelmissä voit tehdä sen painamalla `CTRL + ALT + T`. MacOS:issa kirjoita Spotlightiin (`⌘ + Välilyönti`) "terminal" ja paina Enter. Voit myös etsiä tietokoneen sovelluksista sanalla "terminal". Eteesi tulisi joka tapauksessa avautua musta laatikko, jossa vilkkuu kursori ja lukee jotain seuraavanlaista (esimerkki on Linux-koneesta, macOSissa terminaali on hieman erinäköinen)
+Let's start by opening the command line. In Ubuntu and several other Linux-systems you can do this by pressing `CTRL`, `ALT` and `T` at the same time. In MacOS write "terminal" to Spotlight (`⌘ + Space`) and press <kbd>Enter</kbd>. YOu can also search the computer's applications for "terminal".
+
+In any case, a new window should open in front of you. There should be a blinking cursor and some text which looks something like the following (the example is from a Linux computer):
 
 ```bash
-tunnus@tietokone:~$
+user@computer:~$
 ```
 
-`@` merkin edessä oleva teksti on käyttäjänimesi tietokoneella, ja sen jälkeen, ennen kaksoispistettä näkyvä teksti on tietokoneen nimi. Suoritettavan komennon voi kirjoittaa kursorin osoittamaan kohtaan, ja ajaa painamalla <kbd>ENTER</kbd>.
+The text in front of `@` is your username on the computer, and the following text before `:` is the computer's name. The executable command is written to the space pointed by the blinking cursor, and run by pressing <kbd>Enter</kbd>.
 
 <div class="note">
-Huomaa, että netistä löytyvissä ohjeissa on joskus <code>$</code>-merkki komennon edessä. Se symboloi sitä, että komento tulee ajaa nimenomaan komentorivillä normaalikäyttäjänä, eikä esimerkiksi jonkin ohjelmointikielen tulkissa. Se <strong>ei</strong> tarkoita, että käyttäjän tulisi laittaa dollarimerkki osaksi käskyä.
+Note that in the instructions found online there is often the <code>$</code>-symbol in front of the command. The dollar sign is used to indicate that the command should be run in the command line as a normal user. You should not include it in the command.
 </div>
 
-![Terminaali macOSissa](/assets/mac_terminal.png)
 
-![Terminaali linuxissa](/assets/ubuntu_terminal.jpg)
+![A MacOS terminal](/assets/mac_terminal.png)
 
-Yllä näkyy macOSin ja Ubuntun oletus-terminaalit.
+![A Linux terminal](/assets/ubuntu_terminal.jpg)
 
-<h2>Komennot</h2>
+You can see the default terminals for MacOS and Ubuntu above.
 
-Tekstikäyttöliittymät toimivat komentoperusteisesti. Komento tarkoittaa kirjoitettua käskyä: komennolla tietokone saadaan tekemään jotain.
+<h2>Commands</h2>
 
-Itse komento määrittää, minkä operaation koneen halutaan suorittavan. Se voi olla tiedoston kopiointa, yhteyden ottamista, tai tietyn ohjelman ajamista. _Vipu_, englanniksi _option_ tai _flag_, tarkoittaa komennolle annettavaa parametria, jonka avulla komennon toiminnalle voidaan määrittää ylimääräisiä asetuksia. Joillekin vivuille tulee antaa parametreja, toisille ei. Komento tai ohjelma itse määrittää, minkälaisia vipuja sille on mahdollista antaa. Vipu annetaan komennolle käyttäen väliviivaa (-).
+Text-based user interfaces work with _commands_. A command is a piece of text you write to the command line to make the computer do something. With commands you can run programs, which can for example copy files or establish connections between systems.
 
-Argumentti taas on käyttäjän vapaasti määrittelemä arvo, esimerkiksi tiedoston nimi. Argumentti on usein komennon toiminnan kohde.
+_An option or _a flag_ is parameter which allows the user to add features to the command. They are most often binary, behavioral settings, which the user turns on or off. Some options require additional parameters, which are written after the option. The possible options are predefined by the command. They are given to the command with a dash (-).
 
-Seuraavassa on esimerkki komennosta, jonka toimintaa on muutettu vipujen avulla:
+An argument is a free value defined by the user. The most common example of an argument is a file name. The argument defines usually the target of the command: where a file should be copied, or what it should be renamed to.
+
+Here are two examples of commands, where you can see how options and parameters can be used:
 
 ```bash
 ls -la Downloads/tiedosto
 ```
 
-Kokeile ensin ajaa pelkkä komento `ls`, sitten `ls -la` ja lopulta `ls -la ~/Downloads`. Ei tarvitse vielä ymmärtää, mitä tulostus tarkoittaa, tärkeintä on huomata, että tulostus on erilainen joka kerralla.
+First, try to run just the command `ls` in your home folder and observe the output. Then run `ls -la` and `ls -la ~/Downloads`. You don't have to understand what the command does, but you should notice that the outputs look different each time.
 
-`ls` on yleisesti käytetty komento, johon tutustumme tässä osassa. Oletuksena se näyttää nykyisen kansion tiedostojen nimet. Vivut `-a` ja `-l` (huomaa, miten kaksi vipua annetaan komennolle ylläolevassa esimerkissä) vaikuttavat siihen, mitä tietoa `ls` näyttää. Kun komennolle `ls` annetaan argumenttina jokin polku kansioon, se näyttää tietoa vain kyseisen kansion sisällöstä. Tällä tavalla vipujen ja argumenttien avulla voidaan muuttaa ja tarkentaa komennon toimintaa.
+`ls` is a very commonly used command, which you will learn how to use in this part. It displays information about the files in your file system. By default, it prints out the names of the files in the current directory. With the options `-a` and `-l` (notice how two options are given to the command in the example above) affect what information is printed out. If you give the command `ls` a path to a directory as an argument, it will only display information about the contents of that directory. This demonstrates how options are used to change and specify the behaviour of a command.
 
-Kutsuttava ohjelma määrittää, mitä komentoja se tarjoaa. Usein mahdolliset komennot on mahdollista nähdä komentoriviltä lisäämällä ohjelman perään vivun `--help` tai lyhyemmin `-h`. Tarkan ohjeen ohjelman käytöstä saa komennolla `man` ja antamalla parametriksi ohjelman nimen (esimerkiksi siis `man ls`).
+The callable program defines which commands it offers. Usually you can see the possible commands by adding the option `--help` (or `-h` for short) to the end of the command. You can see a more specific user guide with the command `man` by giving the program name as argument (for example `man ls`).
 
-Mikäli tietokone ei tunnista kutsuttavaa ohjelmaa, tulostuu virheviesti:
+If the computer doesn't recognise the command given, an error message will appear:
 
 ```
-tunnus@tietokone:~$ asdf
+user@computer:~$ asdf
 
 Command 'asdf' not found, did you mean:
 
@@ -107,125 +111,128 @@ Command 'asdf' not found, did you mean:
 
 Try: sudo apt install <deb name>
 
-tunnus@tietokone:~$
+user@computer:~$
 ```
 
-Tietokone ehdottaa yleensä samanlaisia ohjelmia, ja lopulta kehottaa asentamaan oikean paketin.
+The computer suggests similar programs, and finally advises to install the program.
 
-Tutkitaan seuraavaksi `ls`-komennon `man`-sivua. Ajetaan siis komentorivillä `man ls`, jolloin aukeaa jotain seuraavannäköistä.
+Let's take a look at the `man` page for the command `ls`. Running the command `man ls` on the command line will yield the following:
 
-![ls-komennin man-sivu](/assets/man.png)
+![man page for ls](/assets/man.png)
 
-Vaikka `man`-sivut eivät ole järin aloittelijaystävällisiä, ne tarjoavat yleensä kattavimman dokumentaation tietystä ohjelmasta.
+Even though man pages can be hard to read for beginners, they usually offer the most comprehensive documentation available for a specific command.
 
-"Name"-kohdasta saa yleiskäsityksen siitä, mitä komento tekee. "Synopsis" kertoo, miten komentoa voidaan kutsua. Esimerkiksi komennon `ls` tapauksessa ensin annetaan kommenolle vivut, ja viimeisenä kohdekansion polku. Molemmat ovat valinnaisia parametreja, eli komento toimii ilmankin, minkä takia ne ovat hakasulkujen sisällä.
+The "name" section gives you an overall understanding about that the command does. "Synopsis" tells how you can call the program. In the case of the command `ls` for example, the options should be given to the command before the file path. Both the options and the file name are optional parameters, which is why they're written inside square brackets.
 
 <div class="note">
-Voit selata <code>man</code>-sivua nuolinäppäimellä, ja poistua painamalla <code>q</code>.
+You can browse the <code>man</code> page using the arrow keys, and exit by pressing <code>q</code>.
 </div>
 
-Vivuille määritellään joskus kaksi muotoa: lyhyt, eli yleensä yhden kirjaimen pituinen, ja pitkä muoto. Lyhyt muoto annetaan yhden, ja pitkä muoto kahden väliviivan kanssa. `man`-sivu listaa molemmat, kuten ylläolevassa kuvassa näkyy.
+Options are sometimes given two forms: a short form, which is usually just on character, and a long one. The short form is given to the command with just one dash (-), and the long form using two dashes (--). The `man` page displays both options, as you can see in the image above.
 
-Huomaa, että jos haluat antaa komennolle argumentiksi jotain, mikä sisältää välilyönnin, se on annettava lainausmerkkien sisällä. Muuten komentorivillä tulkitaan, että erilliset sanat ovat omia komentojaan, eivätkä osa yhtä argumenttia.
+Notice that if you want to give a command an argument, which contains spaces, it has to be given inside quotation marks. Otherwise the command line will interpret it as a separate command or argument.
 
 ```
-ls "olen vähän hassusti nimetty tiedosto"
+ls "i am a badly named file"
 ```
 
 tai
 
 ```
-ls 'olen vähän hassusti nimetty tiedosto'
+ls 'i am a badly named file'
 ```
 
 <div class="note">
-Komennot voivat vaikuttaa aluksi hieman erikoisesti nimetyiltä, sillä komennot ovat usein lyhenteitä englanninkielisistä sanoista. Komento man ei tarkoita kuitenkaan miestä, vaan on lyhenne sanasta "manual", ls on lyhenne sanasta "list", ja niin edelleen. Materiaalissa on mainittu joitain komentojen lyhenteitä, tarkoituksena avata komentojen merkityksiä.
+The names of commands are usually abbreviations of english words. "man" stands for "manual", "ls" for "list", and so on. You can find the origins for some commands in this material, in the hope of making them easier to remember.
 </div>
 
-<h2> Tiedostohallinta komentoriviltä</h2>
+<h2> File management using the command line</h2>
 
-Komentoriviltä voi selata ja hallinnoida tiedostoja samaan tapaan kuin graafisesta ympäristöstä. Vertaillaan seuraavakasi tiedostohallintaa graafisella ja tekstikäyttöliittymällä.
+You can browse and manage files using the command line just as in the graphical environment. Let's compare managing files using a graphical and a text user interface.
 
-Avaa graafinen tiedostoselain. Se löytyy Ubuntu-ympäristössä ohjelmana nimeltä "Files" tai kirjoittamalla komentoriville `nautilus` ja painamalla <kbd>ENTER</kbd>. Windowsissa `nautilus` ei toimi. MacOSissa avaa finder, ja paina näppäinyhdistelmää `Shift + Cmd + H`.
+Open the graphical file browser. In ubuntu, open the application called "Files", or write the command `nautilus` and press <kbd>ENTER</kbd>. `nautilus` won't work in Windows. In MacOS, open finder and press the keys `Shift + Cmd + H`.
 
-Tiedostoselaimessa tulisi näkyä _kotihakemistosi_. Kotihakemisto tarkoittaa hakemistoa, joka sisältää kaikki tietyn käyttäjän henkilökohtaiset tiedostot ja kansiot. Mikäli olet laitoksen koneella, kotihakemistosi sisältää samat asiat riippumatta siitä millä _fyysisellä_ koneella satut olemaan: tietokoneen sisältö haetaan toisaalta. Jos taas luet materiaalia omalta koneeltasi, kotihakemistossasi on vain ne asiat mitkä sillä fyysisellä koneella on.
+You should now be in your _home folder_. The home folder holds all the personal files and folders of a user. If you are using one of the department's computers, the contents of your home folders are the same, regardless of which physical computer you are using. This is because the contents are fetched from elsewhere. If you are using your personal computer, the home folder only includes the files on that physical computer.
 
-Huomaa, että jos avasit graafisen tiedostoselaimen komentoriviltä, komentorivi jäi ikään kuin lukkoon, ja sillä ei voinut tehdä muuta ellei graafista ohjelmaa suljeta. Voit aina sulkea käynnissä olevan ohjelman painamalla näppäinyhdistelmää <kbd>CTRL + C</kbd>. Joskus kerta ei riitä, ja voit huoletta painaa sitä monta kertaa.
+Note thath if you opened the graphical file browser using the command line, the shell is "locked", and you can't run any other commands using that window. You can close the currently running program by pressing <kbd>CTRL + C</kbd>. You can press the keys repeatedly if necessary.
 
 <div class="note">
-Koska yhdistelmällä CTRL + C on terminaalissa erityinen merkitys, joudut Linuxissa käyttämään yhdistelmää CTRL + SHIFT + C terminaalista maalatun tekstin kopioimiseen, sekä CTRL + SHIFT + V tekstin liittämiseen.
+Because the combination <kbd>CTRL + C</kbd> has a special meaning on the command line, in Linux you will have to use <kbd>CTRL + SHIFT + C</kbd> to copy selected text and <kbd>CTRL + SHIFT + V</kbd> to paste.
 </div>
 
-Kotihakemistosi sisältää luultavasti paljon sälää, esimerkiksi _Downloads_ ja _Documents_ -nimiset kansiot. Haluamme nähdä samat asiat komentoriviltä, joten avaa viereen komentorivi, kirjoita siihen komento `ls`, ja paina <kbd>ENTER</kbd>. Tilanne tulee näyttämään suurin piirtein tältä:
+Your home folder probably contains a bunch of miscellanous files and folders, like _Downloads_ and _Documents_. Open the command line in order to see the same folders on the text-based interface. You can do this by writing down `ls` and pressing <kbd>ENTER</kbd>. The output should something like this:
 
 ```bash
-tunnus@ltietokones:~$ ls
+user@lcomputers:~$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 ```
 
-`ls` siis listaa hakemistot ja kansiot joita hakemistosta löytyy. Komentorivin ja graafisen selaimen pitäisi näyttää samat tiedostot ja kansiot, mutta komentorivi esittää sisällön hieman yksinkertaisemmin.
+You'll notice how `ls` lists out all the files and folders in your home folder. You should see the same ones as in the graphical user interface, only in a simpler form.
 
-Oletuksena uuden komentorivin avaaminen avaa sen nimenomaan kotihakemistoon, joten tarvitsemme tavan vaihtaa aktiivista kansiota jotta voimme vierailla muissa kansioissa ja tarkastella niiden sisältöjä. Tarvittava komento on `cd`, eli **c**hange **d**irectory. `cd`-komennolle annetaan parametrina se kansio, johon halutaan siirtyä. Mikäli et anna `cd`:lle argumentteja, se siirtää sinut kotihakemistoosi.
+By default the command line opens up the home folder. In order to visit other foldersS, you need a command for changing directories. This can be done with `cd`, abbreviated from **c**hange **d**irectory. The `cd` command is given the directory where you want to go as an argument. If you don't give `cd` any arguments, it will take you to the home folder.
 
-Navigoi _Downloads_-kansioon antamalla komento `cd Downloads`. Kansion nimi tulee aina olla täsmälleen kirjoitettu, sillä isoilla ja pienillä kirjaimilla kirjoitetut nimet ovat erilaisia. Muutos näkyy heti komentorivillä, sillä se näyttää nyt kutakuinkin tältä:
+Now navigate to the _Downloads_ folder by running `cd Downloads`. Note that the command is _case sensitive_, so the folder name should be given exactly correctly. After running `cd`, your command line should look like this:
 
 ```bash
-tunnus@tietokone:~/Downloads$
+user@computer:~/Downloads$
 ```
 
-`:`-merkin jälkeinen osa kertoo siis aktiivisen kansion. `~` viittaa käyttäjän kotihakemistoon.
+The part after `:` is the current, active folder. `~` refers to the user's home folder.
 
-Komenna jälleen `ls`. Vaihdoimme aktiivista hakemistoa, ja koska `ls` kertoo aina aktiivisen kansion sisällön, on tulos nyt eri.
+Run the command `ls` again. You have now changed directories, so the output should be different from last time.
 
-Komento `ls` voi näyttää myös tarkempaa tietoa. Pidä graafinen tiedostoselain vierellä, ja aja komentorivillä kotihakemistossa komento `ls -a`. Huomaa, miten komentorivillä näkyy nyt paljon enemmän tiedostoja, kuin graafisessa ympäristössä. Tämä johtuu vivusta `-a`. Sen avulla on mahdollista kaikki tiedostot, myös _piilotetut_ tiedostot ja kansiot.
+The command `ls` can also display more specific information. Move back to the home folder, keeping the graphical user interface open next to the command line, and run `ls -a`. Notice how you can now see a lot more information on the commnad line compared to the file browser. This is due to the option `-a`. When using it, `ls` shows all the files in a folder, including the _hidden_ ones.
 
-Unix-ympäristössä piilotettu tiedosto tai kansio tarkoittaa tarkoittaa sellaisia, joiden nimi alkaa pisteellä, esimerkiksi `.config`. Tällaisia ovat usein tiedostot, jotka sisältävät joitain asetuksia tai tietoja, joita käyttäjän tarvitsee harvoin muuttaa. Linuxissa piilotetut tiedostot on mahdollista nähdä painamalla graafisessa tiedostoselaimessa `CTRL + h`, macOSissa `cmd + SHIFT + .`.
+In a Unix environment, a hidden file or folder means that it starts with a dot (.), for example `.config`. Hidden files usually contain settings and information, that the user rarely needs to change. In linux, it is possible to see hidden files in the graphical user interface by pressing <kbd>CTRL + h</kbd>. If you're using MacOS, press <kbd>cmd + SHIFT + .</kbd>
 
-Graafisessa tiedostoselaimessa voi luoda kansioita käyttämällä hiiren oikeaa näppäintä. Unix-tyyppisissä järjestelmissä tämä tapahtuu komennolla <code>mkdir</code>. Kyseessä on jälleen lyhenne, joka muodostuu sanoista <i>make directory</i>. Komennolle annetaan argumenttina luotavan kansion nimi.
+In the graphical user interface, you can create folders by right-clicking with your mouse, and pressing "create new folder". In a Unix-like environment, this is done with the command `mdkir`, abbreviated from "make directory". The command is given the name of the folder as an argument.
 
-Komentorivi toimii siis loppujen lopuksi hyvin samalla tavalla kuin graafinen tiedostoselain: `cd` vastaa kansiota klikkaamista, ja `ls` näyttää hakemiston tiedostot ja kansiot. Tässä osassa opitaan tekemään tekstikäyttöliittymässä asioita, jotka osataan jo tehdä graafisella käyttöliittymällä.
-
-<div class="exercise">
-<h3>Tehtävä 1: Graafinen vs. tekstikäyttöliittymä {% include points.html text="5%" %}</h3>
-Voit merkata tämän tehtävän tehdyksi, kun olet käynyt läpi alun esimerkin graafisen ja tekstikäyttöliittymän eroista tehden samalla esimerkit komentorivillä.
-</div>
+In the end, the command line works in a similar way to the graphical user interface: `cd` is the same as clicking a folder and `ls` shows the contents of a folder. In this part, you will learn how to things you already know how to do in a graphical environment using the command line.
 
 <div class="exercise">
-<h3>Tehtävä 2: Kansion luominen {% include points.html text="5%" %}</h3>
- Luo komentoriviltä kansio nimeltä "lapio" kotihakemistoosi. Varmista että loit kansion komennolla <code>ls</code>.
+<h3>Exercise 1: Graphical vs. text-based user interface {% include points.html text="5%" %}</h3>
+
+You can mark this exercise as done after you've gone through the previous example of the differences between the graphical and text-based user interfaces. Make sure you replicated the examples yourself using the command line.</div>
+
+<div class="exercise">
+<h3>Exercise 2: Creating a folder {% include points.html text="5%" %}</h3>
+Create a folder named "lapio" in your home folder. Make sure you crated the folder correctly by checking the output of <code>ls</code>.
 </div>
 
-Jos olet tottunut käyttämään graafista käyttöliittymää, mietit luultavasti nyt, miten hidasta ja raskasta komentorivin käyttäminen varmasti on. Kyseessä on luonnollisesti tottumiskysymys, mutta sen lisäksi komentorivillä on olemassa kirjoittamista nopeuttava seikka: tab-täydennys. Tab-täydennys täydentää nykyisen kansion tiedostojen nimiä parametreiksi sekä (joskus, ohjelmasta riippuen) ohjelmien komentoja.
+If you're used to using the graphical file browser, you're probably wondering how slow and inefficient using the command line must be. It is naturally a question of custom, but there's also one feature on the command line, which makes writing commands a lot faster: tab completion. With the tab key you can automatically complete filenames (and sometimes even commands, depending on the program) when using a command.
 
-Kokeile tab-täydennystä kirjoittamalla kotihakemistossa `cd D`, ja painamalla sen jälkeen tabular-näppäintä (löytyy näppämistöstä caps-lockin yläpuolelta) pari kertaa. Terminaaliin tulostuu kaikki kotihakemiston D-kirjaimella alkavat hakemistot, ainakin siis "Downloads" ja "Documents". Oletetaan, että haluat siirtyä Downloads-kansioon. Tällöin riittää kirjoittaa cd-komennon parametriksi vain `Dow` ja painaa tab-näppäintä, jonka jälkeen Downloads-kansion nimi täydennetään komennon parametriksi (olettaen että kotihakemistossasi ei ole mitään muuta kansiota, jonka nimi alkaisi merkkijonolla `Dow`).
+Let's try tab completion. Nagivate to your home folder. First, write down `cd D` and press the tab key (located above <kbd>CAPS LOCK</kbd>) a couple of times. All the directories starting with the letter "D" should be printed to the command line, including at least `Downloads` and `Documents`.
 
-Toinen nopeuttava apu on vanhojen komentojen selaaminen: voit tehdä sen painamalla nuolinäppäimiä ylös- ja alaspäin. Kun olet kirjoittamassa komentoa, et voi käyttää kursoria siirtyäksesi tekstissä taaksepäin: voit liikkua komentorivin tekstissä esimerkiksi vasemmalla ja oikealla nuolinäppäimellä. Komentorivi tukee valtavasti erilaisia käteviä näppäinyhdistelmiä, joista voit lukea esimerkiksi [täältä](https://unix.stackexchange.com/a/255716).
+Let's assume that you want to move to the `Downloads` folder. It suffices to write down "Dow", and press the tab key, and the rest of the folder name will be completed to the command line (assuming that there are no other folders starting with "Dow" in your home folder).
 
-<h2> Tekstinkäsittely</h2>
+Another useful trick to know is browsing old commands. This can be done by pressing the arrow key up and down. This is a useful habit you should try and adopt as early as possible. Note that when you are writing a command, you cannot use the cursor to move in the written text. You have to use the arrow keys instead, for example. You can read more about other useful keyboard combinations [here](https://unix.stackexchange.com/a/255716).
 
-Gedit on yksinkertainen graafinen tekstieditori, jolla voi muokata mitä tahansa teksitiedostoja. Löydät geditin Linuxissa esimerkiksi kirjoittamalla "gedit" Launcheriin, johon pääset painamalla "windows-nappia". MacOSilla kannattaa käyttää ohjelmaa TextEdit, jotta voit määrittää tiedoston tallennuspaikan ja löydät sen helposti jälkeenpäin.
+<h2>Text processing</h2>
 
-Avaa graafinen tekstieditori ja luo sillä `esimerkki.txt`-niminen tiedosto aiemmin tehtyyn _lapio_-hakemistoosi. Pääte `.txt` kertoo, että tiedosto sisältää tavallista tekstiä, eikä esimerkiksi ajettavaa koodia. Lisää sen jälkeen tiedostoon jotain tekstiä.
+Gedit is a simple graphical text editor, which allows you to edit all kinds of text files. You can find gedit in Linuc by writing "gedit" to the Launcher, opened by pressing the "Windows" key. In MacOS we recommend using the application "TextEdit" for this section of the material, as it allows defining the saving location of a file, and you will be able to find it easily using the command line.
 
-Tehtyäsi `esimerkki.txt`-tiedoston navigoi komentorivillä `lapio`-kansioon, ja avaa se komentamalla `nano esimerkki.txt`. Nano on tekstieditori, jossa on tekstikäyttöliittymä, eli jota käytetään suoraan komentoriviltä. Tämä tarkoittaa, että ohjelmaa hallinoidaan tietyillä näppäinyhdistelmillä.
+Open a graphical text editor and create a file called `example.txt`. Save it in the `lapio` folder you created earlier. The `.txt` is a file extension, which means that the file contains ordinary text, and not runnable code for example. Add some arbitrary text to the file.
 
-Muokkausikkunaa ei suljeta raksista, kuten vaikka geditissä, vaan se tehdään näppäinyhdistelmällä `CTRL + X`. Jos tiedostoon on tehty muutoksia, on varmistettava halutaanko ne tallentaa vai ei painamalla näppäintä `y` tai `n` (valinnat tulevat sanoista "yes" ja "no"). Viimeisenä editori varmistaa, minkä nimisenä tiedosto tallennetaan.
+After creating the `example.txt` file, navigate to the "lapio" folder and open it with the command `nano example.txt`. Nano is a text-based text editor, which is used from the command line. This means that the editor is controlled using specific key combinations instead of clicking on buttons.
 
-Huomaa, että `nano` kertoo joka askeleella, mitä valintaa mitkäkin näppäimet vastaavat. Tämä on varsin yleistä, ja siksi onkin tärkeää aina lukea käyttämäsi ohjelman tulostukset (niin tyhmän yksinkertaiselta neuvolta kuin se kuulostaakin). Yleensä ohjelma kertoo itse, mitä käyttäjän tulee tehdä seuraavaksi.
+In order to close the editor, you have to press <kbd>CTRL + X</kbd>. If some changes have been made, you have to confirm whether you wish to save or discard them, by pressing `y` for "yes" or `n` for "no". Lastly, the editor confirms the name of the saved file.
+
+Note that `nano` helps you by telling the keys for specific actions at each step. This is rather common, which is why it is important to learn to read the outputs of the command you are using (as simple and stupid as it may sound). Usually the program tells your directly, which keys you should press next.
 
 <div class="note">
-Jos saat virheviestin <code>nano: command not found</code>, nanoa ei ole asennettu koneellesi. Helpoiten sen saa asennettua pakettienhallintajärjestelmän avulla. Katso osan lopusta linkki pakettienhallintajärjestelmien käyttöohjeisiin.
+If you see the error message  <code>nano: command not found</code>, nano is not installed in your system. The easiest way to install it is by using a package manager. See the end of the part for some instructions on installing applications via the command line.
 </div>
 
 <div class="note">
-Windowsissa voit käyttää geditin sijaan notepad-ohjelmaa, jonka pitäisi olla valmiiksi asennettuna koneelle. Suosittelemme kuitenkin <a href="https://notepad-plus-plus.org/">notepad++</a>-editorin käyttämistä. Windows käsittelee rivinvaihtoja (merkki, joka lisätään tekstiin, kun painat enter-näppäintä) eri tavalla kuin Unix-tyyppiset järjestelmät: Windowsissa merkki on <code>\r\n</code> ja Unixissa <code>\n</code>. Tämän takia, kun tutkit notepadilla luotua tiedostoa komentorivillä, se näyttää oudolta.
+In Windows you can use a program called notepad instead of gedit. It should be installed to your system by default. However, we recommend the <a href="https://notepad-plus-plus.org/">notepad++</a> editor. Windows handles line breaks differently from Unix systems: In Windows, the line break symbol is <code>\r\n</code> whereas in Unix it's <code>\n</code>. Thus inspecting Windows documents created with notepad can look bizarre when accessing them using the Ubuntu command line.
+
 <br/><br/>
-Alla näkyy, miten voit notepad++ -editorissa luoda tiedoston, jossa rivinvaihdot käsitellään oikein myös Unix-komentorivillä.
+Below are some instructions on creating a file using notepad++ with Unix new lines.
 
-<img alt="Rivinvaihto-merkin vaihtaminen notepad++ -editorilla" src="/assets/notepad++_lf.png" />
+<img alt="Changing the new line symbol with notepad++" src="/assets/notepad++_lf.png" />
 <br/>
 
-Huomaa, että notepadillä luomasi tiedosto on luotu Windwos-käyttäjällä, ja bash-komentorivillä käytät Unix-käyttäjää. Löydät Windows-käyttäjän tiedostot komentorivillä esimerkiksi kansiosta <code>/mnt/c</code>, jos tallensit tiedoston C-asemalle.
+Note that the file you created with notepad has been created as a Windows user. In Windows 10, the command line is used as a separate Unix user. You can find the Windows user's files from the directory <code>/mnt/c</code>, if you saved them to the C drive.
 </div>
 
 <div class="exercise">
@@ -258,27 +265,27 @@ Vastaavanlainen, mutta paljon enemmän ominaisuuksia sisältävä komentolinjall
 
 Polku (englanniksi _path_) tarkoittaa osoitetta tiettyyn tiedostoon tai kansioon. Se koostuu lähinnä kansioiden ja tiedostojen nimistä ja `/`-merkistä. Polkuja käytetään komentojen argumenteissa.
 
-Polku voi olla _suhteellinen_ tai _absoluuttinen_: suhteellinen polku merkitään suhteessa nykyiseen kansioon, absoluuttinen suhteessa järjestelmän _juurikansioon_. Juurikansio sisältää kaikki tietokoneen tiedostot, eikä sitä tule sekoittaa käyttäjäkohtaiseen kotihakemistoon. Juurikansio sisältää siis kaikkien käyttäjien kotihakemistot.
+Polku voi olla _suhteellinen_ tai _absoluuttinen_: suhteellinen polku merkitään suhteessa nykyiseen kansioon, absoluuttinen suhteessa järjestelmän _juurikansioon_. Juurikansio sisältää kaikki computeren tiedostot, eikä sitä tule sekoittaa käyttäjäkohtaiseen kotihakemistoon. Juurikansio sisältää siis kaikkien käyttäjien kotihakemistot.
 
 <div class="warning">
 Ole varovainen juurihakemiston kanssa! Se sisältää kaikenlaista tärkeää, älä siis muuta turhaan tiedostoja tai poista kansioita juuressa.
 </div>
 
-Absoluuttinen polku alkaa aina `/`-merkillä, sillä juurikansion absoluuttinen polku on `/`. Jos polkua ei aloita merkillä `/`, järjestelmä luulee, että viitataan kansioon joka on nykyisessä hakemistossa. Nykyisen kansion absoluuttisen polun näkee komennolla `pwd` (**p**rint **w**orking **d**irectory). Kotihakemiston absoluuttinen polku on Linuxissa yleensä `/home/tunnus/` ja macOSissa `/Users/tunnus/`. Siihen voidaan myös viitata merkillä `~`. Esimerkiksi absoluuttinen polku kotihakemiston Downloads-kansioon olisi Linuxissa `/home/tunnus/Downloads` tai `~/Downloads`.
+Absoluuttinen polku alkaa aina `/`-merkillä, sillä juurikansion absoluuttinen polku on `/`. Jos polkua ei aloita merkillä `/`, järjestelmä luulee, että viitataan kansioon joka on nykyisessä hakemistossa. Nykyisen kansion absoluuttisen polun näkee komennolla `pwd` (**p**rint **w**orking **d**irectory). Kotihakemiston absoluuttinen polku on Linuxissa yleensä `/home/user/` ja macOSissa `/Users/user/`. Siihen voidaan myös viitata merkillä `~`. Esimerkiksi absoluuttinen polku kotihakemiston Downloads-kansioon olisi Linuxissa `/home/user/Downloads` tai `~/Downloads`.
 
 Suhteellisissa poluissa käytetään usein merkkejä `.` ja `..`. Yksi piste `.` viittaa nykyiseen kansioon, kaksi pistettä `..` viittaa edelliseen kansioon tai ylä- eli äitikansioon. Esimerkiksi komennolla `cd ../..` siirryttäisiin kaksi kansiota "ylöspäin". Kotihakemistosta suhteellinen polku kansioon Downloads on `./Downloads` tai pelkkä `Downloads`.
 
 Tässä vielä esimerkki absoluuttisista ja suhteellisista poluista:
 
-Oletetaan, että olet ladannut Downloads-kansioon kissakuvia jokaiselle vuoden kuukaudelle niin, että jokaisen kuukauden kuvat ovat omassa kansiossaan. Sen jälkeen olet siirtynyt komentorivillä "toukokuu"-nimiseen kansioon, jonka polku on `~/Downloads/kissakuvia/toukokuu/`. Voit nyt viitata toukokuu-kansion _sisältä_ esimerkiksi "Downloads"-kansioon polulla `../..`, `~/Downloads` tai `/home/tunnus/Downloads` Linuxilla ja `/Users/tunnus/Downloads` macOSilla. Jos haluaisit viitata toukokuu-kansiosta esimerkiksi marraskuu-kansioon (joka on siis kissakuvia-kansion sisällä), voit tehdä sen polulla `../marraskuu/`. Kauttaviiva polun lopussa alleviivaa, että kyseessä on kansio, mutta se ei ole välttämätön.
+Oletetaan, että olet ladannut Downloads-kansioon kissakuvia jokaiselle vuoden kuukaudelle niin, että jokaisen kuukauden kuvat ovat omassa kansiossaan. Sen jälkeen olet siirtynyt komentorivillä "toukokuu"-nimiseen kansioon, jonka polku on `~/Downloads/kissakuvia/toukokuu/`. Voit nyt viitata toukokuu-kansion _sisältä_ esimerkiksi `Downloads`-kansioon polulla `../..`, `~/Downloads` tai `/home/user/Downloads` Linuxilla ja `/Users/user/Downloads` macOSilla. Jos haluaisit viitata toukokuu-kansiosta esimerkiksi marraskuu-kansioon (joka on siis kissakuvia-kansion sisällä), voit tehdä sen polulla `../marraskuu/`. Kauttaviiva polun lopussa alleviivaa, että kyseessä on kansio, mutta se ei ole välttämätön.
 
 ```bash
-tunnus@tietokone:~/Downloads/kissakuvia/toukokuu$ ls
+user@computer:~/Downloads/kissakuvia/toukokuu$ ls
 kissa1.jpg
-tunnus@tietokone:~/Downloads/kissakuvia/toukokuu$ cd ../../
-tunnus@tietokone:~/Downloads$ cd kissakuvia/toukokuu/
-tunnus@tietokone:~/Downloads/kissakuvia/toukokuu$ cd ../marraskuu/
-tunnus@tietokone:~/Downloads/kissakuvia/marraskuu$ ls
+user@computer:~/Downloads/kissakuvia/toukokuu$ cd ../../
+user@computer:~/Downloads$ cd kissakuvia/toukokuu/
+user@computer:~/Downloads/kissakuvia/toukokuu$ cd ../marraskuu/
+user@computer:~/Downloads/kissakuvia/marraskuu$ ls
 kissa2.jpg
 ```
 
@@ -344,10 +351,10 @@ Tiedostoja voidaan poistaa komennolla <code>rm</code>, eli <b>r</b>e<b>m</b>ove.
 Sekä `mv` että `cp` (ja melkein kaikki muutkin Unix-tyyppisen ympäristön komennot) tukevat ns. villikortteja, joiden avulla on kätevää suorittaa operaatioita useammalle tiedostolle samaan aikaan. Ehkä yleisin villikortti, eli `*`, toimii siten, että se vastaa mitä tahansa määrää mitä tahansa merkkiä. Esimerkiksi komento `mv *.txt esimerkki/` siirtäisi kaikki nykyisen kansion `.txt`-päätteiset tiedostot esimerkki-nimiseen kansioon nykyisen kansion alla.
 
 ```bash
-tunnus@hal9000:~/esimerkki$ ls
+user@hal9000:~/esimerkki$ ls
 kohde teksti.txt muistio.txt toinen.png
-tunnus@hal9000:~/esimerkki$ mv *.txt kohde/
-tunnus@hal9000:~/esimerkki$ ls
+user@hal9000:~/esimerkki$ mv *.txt kohde/
+user@hal9000:~/esimerkki$ ls
 kohde toinen.png
 ```
 
@@ -361,9 +368,9 @@ Tee kansio nimeltä <i>kuvia</i> komentorivillä, ja lataa sinne internetistä k
 Kuten mainittu, villikortit toimivat myös muissa komennoissa. Esimerkiksi hyödyllistä `tree`-komentoa, joka näyttää kansioiden alikansiot ja tiedostot puumaisena rakenteena, voi käyttää näyttämään vain tietyillä kirjaimilla alkavat kansiot seuraavasti.
 
 ```
-tunnus@hal9000:~/esimerkki$ ls
+user@hal9000:~/esimerkki$ ls
 kohde kohteeton muistio.txt
-tunnus@hal9000:~/esimerkki$ tree
+user@hal9000:~/esimerkki$ tree
 .
 ├── kohde
 │   └── olen_tiedosto_kansion_kohde_sisällä.txt
@@ -372,7 +379,7 @@ tunnus@hal9000:~/esimerkki$ tree
 └── muistio.txt
 
 2 directories, 3 files
-tunnus@hal9000:~/esimerkki$ tree koh*
+user@hal9000:~/esimerkki$ tree koh*
 kohde
 │   └── olen_tiedosto_kansion_kohde_sisällä.txt
 kohteeton
@@ -386,7 +393,7 @@ kohteeton
 Joskus on hyödyllistä pystyä tarkastelemaan tekstitiedostoja suoraan komentoriviltä avaamatta erillistä editoria. Helpoin komento tätä varten on `cat` (katenoi), joka tulostaa suoraan tiedoston sisällön:
 
 ```
-tunnus@hal9000:~/esimerkki$ cat esimerkki.txt
+user@hal9000:~/esimerkki$ cat esimerkki.txt
 olen
 esimerkkitiedoston
 sisältö
@@ -395,9 +402,9 @@ sisältö
 Jos tiedosto on kovin iso, tulee rivejä paljon. Usein niistä tarvitsee vain alun tai lopun, jossa auttavat komennot `head` ja `tail`. Molemmat komennot tulostavat vakiona 10 riviä, mutta sitä voi vaihtaa `-n`-vivulla. Esimerkiksi vain ensimmäisen ja viimeisen rivin saa näin:
 
 ```
-tunnus@hal9000:~/esimerkki$ tail -n 1 esimerkki.txt
+user@hal9000:~/esimerkki$ tail -n 1 esimerkki.txt
 sisältö
-tunnus@hal9000:~/esimerkki$ head -n 1 esimerkki.txt
+user@hal9000:~/esimerkki$ head -n 1 esimerkki.txt
 olen
 ```
 
@@ -406,14 +413,14 @@ Tässä siis vivulle `-n` annettiin argumenttina luku 1.
 On myös mahdollista etsiä tiettyjä rivejä tiedostoista. Tähän löytyy erittäin hyödyllinen `grep`-komento (search <b>g</b>lobally for a <b>r</b>egular <b>e</b>xpression and <b>p</b>rint), joka antaa käyttäjän filtteröidä rivejä tiedostoista annettujen ehtojen perusteella. Grep toimii perustapauksessa niin, että se palauttaa kaikki **rivit** joissa esiintyy annettu merkkijono juuri sellaisenaan kun se annettiin. Yksinkertaisimmillaan sen toiminta on siis seuraavanlaista:
 
 ```
-tunnus@hal9000:~/esimerkki$ cat päiväkirja.txt
+user@hal9000:~/esimerkki$ cat päiväkirja.txt
 Lokakuun kuudes päivä.
 
 Tämä on päiväkirjani, se sisältää paljon salaisuuksia.
 
 Tämä rivi taas on vähemmän salainen.
 
-tunnus@hal9000:~/esimerkki$ grep "salai" päiväkirja.txt
+user@hal9000:~/esimerkki$ grep "salai" päiväkirja.txt
 Tämä on päiväkirjani, se sisältää paljon salaisuuksia.
 Tämä rivi taas on vähemmän salainen.
 ```
@@ -458,9 +465,9 @@ Edellä mainitut ovat tärkeitä komentoja komentorivillä työskentelijän arse
 Putki siirtää eteenpäin ensimmäisen komennon tulosteen toiselle komennolle. Esimerkiksi `ls` komennon näyttämistä tiedostonnimistä voi helposti hakea `grep`illä tiettyä tiedostoa putken avulla:
 
 ```
-tunnus@hal9000:~/esimerkki$ ls
+user@hal9000:~/esimerkki$ ls
 esimerkki.txt muistio2.txt muistio.txt
-tunnus@hal9000:~/esimerkki$ ls | grep muistio
+user@hal9000:~/esimerkki$ ls | grep muistio
 muistio2.txt
 muistio.txt
 ```
@@ -497,9 +504,9 @@ Eriytä tämän jälkeen viikon ruokalista omaksi tiedostokseen <code>unicafe.tx
 
 <h2> SSH-yhteys</h2>
 
-Olemme tähän asti käyttäneet komentoriviä lähinnä omalla koneella olevien asioiden tarkasteluun. Komentoriviltä voidaan kuitenkin ottaa myös yhteys toiseen tietokoneeseen. SSH on salattu yhteystyyppi, joka mahdollistaa järjestelmään kirjautumisen etänä komentorivin kautta. Salattu yhteys tarkoittaa, että tietoa ei jaeta suoraan luettavassa muodossa: tarkoitus on, että vain valikoidut vastaanottajat pystyvät purkamaan salauksen ja lukemaan sisällön.
+Olemme tähän asti käyttäneet komentoriviä lähinnä omalla koneella olevien asioiden tarkasteluun. Komentoriviltä voidaan kuitenkin ottaa myös yhteys toiseen computereseen. SSH on salattu yhteystyyppi, joka mahdollistaa järjestelmään kirjautumisen etänä komentorivin kautta. Salattu yhteys tarkoittaa, että tietoa ei jaeta suoraan luettavassa muodossa: tarkoitus on, että vain valikoidut vastaanottajat pystyvät purkamaan salauksen ja lukemaan sisällön.
 
-Unix-ympäristössä ssh-yhteyden voi luoda komennolla `ssh`. Komennon perustoiminnalisuus on seuraava: `ssh tunnus@palvelimen.osoite` ottaa yhteyden palvelimeen osoitteessa `palvelimen.osoite` ja yrittää kirjautua tunnuksella `tunnus`. Käyttäjältä pyydetään tunnuksen salasanaa, ja autentikoinnin onnistuessa yhteys avautuu. Tämän jälkeen komentoriviltä voidaan ajaa tavalliseen tapaan komentoja, mutta nykyinen kansio sijaitseekin palvelimella, johon yhteys on luotu.
+Unix-ympäristössä ssh-yhteyden voi luoda komennolla `ssh`. Komennon perustoiminnalisuus on seuraava: `ssh user@palvelimen.osoite` ottaa yhteyden palvelimeen osoitteessa `palvelimen.osoite` ja yrittää kirjautua tunnuksella `user`. Käyttäjältä pyydetään tunnuksen salasanaa, ja autentikoinnin onnistuessa yhteys avautuu. Tämän jälkeen komentoriviltä voidaan ajaa tavalliseen tapaan komentoja, mutta nykyinen kansio sijaitseekin palvelimella, johon yhteys on luotu.
 
 Tietojenkäsittelytieteen osasto tarjoaa neljä eri palvelinta osaston koneisiin etäyhteyden luomiseksi. Näille palvelimille kirjaudutaan yliopiston tunnuksilla:
 
@@ -513,8 +520,8 @@ Kaikki nämä palvelimet ohjaavat siis samaan käyttäjäkohtaiseen kotihakemist
 Käytetään `ssh`-komentoa osaston koneelle yhteyden ottamiseen:
 
 ```
-tunnus@hal9000:~$ ssh tunnus@melkki.cs.helsinki.fi
-tunnus@melkki.cs.helsinki.fi's password:
+user@hal9000:~$ ssh user@melkki.cs.helsinki.fi
+user@melkki.cs.helsinki.fi's password:
 ```
 
 <div class="note">Huomaa, että salasanaa kirjoittaessasi on normaalia, että komentoriville ei ilmesty tekstiä.</div>
@@ -522,7 +529,7 @@ tunnus@melkki.cs.helsinki.fi's password:
 Kun yhteys on muodostettu, näyttää komentorivi erilaiselta:
 
 ```
-tunnus@melkki:~$
+user@melkki:~$
 ```
 
 Komentorivin nykyinen kansio on siis muuttunut osaston koneiden kotihakemistoksi ja pääset käsiksi kaikkiin osaston koneella sijaitseviin tiedostoihin. Yhteyden voi lopettaa komennolla `exit`.
@@ -538,13 +545,13 @@ SSH-avainparin voi luodan komennolla `ssh-keygen`. Komento kysyy avaimelle salas
 <div class="warning">Käytä SSH-avainta luodessasi aina salasanaa. Jos käytät SSH-avainta osaston palvelimien kanssa, on salasanan asettaminen pakollista yliopiston määräysten mukaan.</div>
 
 ```
-tunnus@hal9000$ ssh-keygen
+user@hal9000$ ssh-keygen
 Generating public/private rsa key pair.
-Enter file in which to save the key (/home/tunnus/.ssh/id_rsa): /home/tunnus/.ssh/id_rsa_test
+Enter file in which to save the key (/home/user/.ssh/id_rsa): /home/user/.ssh/id_rsa_test
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in /home/tunnus/.ssh/id_rsa.
-Your public key has been saved in /home/tunnus/.ssh/id_rsa.pub.
+Your identification has been saved in /home/user/.ssh/id_rsa.
+Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 The key fingerprint is:
 SHA256:asdasdadsfasdasdasdasdasdasd
 The key's randomart image is:
@@ -570,7 +577,7 @@ Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvel
 Julkisen avaimen saa siirrettyä kohdepalvelimelle esimerkiksi komennolla <code>scp</code>, jonka avulla on mahdollista kopioida tiedostoja palvelimelta toiselle (vertaa komentoon `cp`). Komentoa käytetään seuraavasti:
 
 ```
-scp polku/kopioitavaan/tiedostoon tunnus@palvelmen.osoite:polku/kohdekansioon
+scp polku/kopioitavaan/tiedostoon user@palvelmen.osoite:polku/kohdekansioon
 ```
 
 Huomaa palvelimen osoitteen jälkeen lisättävä kaksoispiste!
@@ -607,7 +614,7 @@ Voit lukea lisää SSH:n konfiguroimisesta esimerkiksi [täältä](https://linux
 <div class="exercise">
 <h3>Tehtävä 11: SSH-yhteys {% include points.html text="10%" %}</h3>
 
-Luo koneellesi SSH-avainpari. Mahdollista sen jälkeen avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, eli sinulla ei ole yliopiston tunnusta, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
+Luo koneellesi SSH-avainpari. Mahdollista sen jälkeen avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, eli sinulla ei ole yliopiston userta, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
 
 <div class="note">
 Mikäli teet tehtävän laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.
@@ -617,7 +624,7 @@ Mikäli teet tehtävän laitoksen koneella, yhteys käyttäytyy oudosti, koska o
 Mikäli loit avainparin itse määrittelemääsi polkuun, ja yhteys kysyy vielä yliopiston salasanaa, tarkenna yksityisen avaimen polku:
 
 <div>
-<code>ssh -i polku/yksityiseen/avaimeen tunnus@kohde.palvelimen.osoite</code>
+<code>ssh -i polku/yksityiseen/avaimeen user@kohde.palvelimen.osoite</code>
 </div>
 </div>
 </div>
@@ -670,12 +677,12 @@ Jokaisella tiedostolla ja kansiolla on omat oikeutensa. Lisäksi niillä on myö
 Oikeudet ja omistajuudet selviävät `ls`-komennon `-l`-vivun avulla. Tältä näyttävää komennon tuloste "esimerkki"-kansiolla:
 
 ```
-tunnus@hal9000:~/esimerkki$ ls -l
+user@hal9000:~/esimerkki$ ls -l
 total 8
--rw-r--r-- 1 tunnus tunnus 16 touko 31 21:41 esimerkki.txt
--rwxr--r-- 1 tunnus tunnus 0 kesä 14 17:25 muistio.txt
--r--r--r-- 1 tunnus tunnus 0 touko 3 23:13 artikkeli.txt
-drwx------ 2 tunnus tunnus 130 kesä 14 17:54 päiväkirjamerkinnät
+-rw-r--r-- 1 user user 16 touko 31 21:41 esimerkki.txt
+-rwxr--r-- 1 user user 0 kesä 14 17:25 muistio.txt
+-r--r--r-- 1 user user 0 touko 3 23:13 artikkeli.txt
+drwx------ 2 user user 130 kesä 14 17:54 päiväkirjamerkinnät
 ```
 
 Ensimmäinen sarake, joka sisältää hassuja sekoituksia kirjaimista ja merkeistä on kyseisen tiedoston oikeudet kertova merkkijono. Tässä sen ensimmäinen merkki on joko `d` tai `-`, joka kertoo onko kyseessä tiedosto (`-`) vai kansio, eli **d**irectory.
@@ -688,7 +695,7 @@ Viimeiset kolme merkkiä taas näyttävät kaikkien muiden käyttäjien oikeudet
 
 Oikeuksien jälkeen näkyy tiedostoon johtavien linkkien määrä. Kansioissa linkkien lukumäärään sisältyy myös sen sisältämät tiedostot. Linkkien avulla voidaan viitata tiettyihin tiedostoihin.
 
-Sen jälkeen on tiedoston omistajan nimi ja ryhmän nimi. Tässä tapauksessa ryhmän nimi on käyttäjänimi `tunnus`. Viimeisenä tulostuksessa näkyy kansion tai tiedoston koko [tavuina](<https://fi.wikipedia.org/wiki/Tavu_(tietotekniikka)>), sekä viimeinen muokkauspäivä, ja lopuksi sen nimi.
+Sen jälkeen on tiedoston omistajan nimi ja ryhmän nimi. Tässä tapauksessa ryhmän nimi on käyttäjänimi `user`. Viimeisenä tulostuksessa näkyy kansion tai tiedoston koko [tavuina](<https://fi.wikipedia.org/wiki/Tavu_(tietotekniikka)>), sekä viimeinen muokkauspäivä, ja lopuksi sen nimi.
 
 Yllä näkyvässä esimerkissä siis `muistio.txt`-tiedostolle on omistajalla luku, kirjoitus ja ajo-oikeus, ryhmällä ja muilla taas on lukuoikeus. Kansiolla `päiväkirjamerkinnät` taas on vain sen omistajalle luku, muokkaus ja ajo-oikeudet, eikä ryhmällä tai muilla käyttäjillä ole näitä oikeuksia. Tiedostoa `artikkeli.txt` voivat kaikki lukea, mutteivät muokata tai ajaa.
 
@@ -718,20 +725,20 @@ Esimerkkejä `chmod`in käytöstä:
 `chmod go+r esimerkki.txt` antaa ryhmälle ja muille käyttäjille oikeuden lukea tiedoston.
 
 ```
-tunnus@hal9000:~/esimerkki$ chmod -r esimerkki.txt
-tunnus@hal9000:~/esimerkki$ cat esimerkki.txt
+user@hal9000:~/esimerkki$ chmod -r esimerkki.txt
+user@hal9000:~/esimerkki$ cat esimerkki.txt
 cat: esimerkki.txt: Permission denied
-tunnus@hal9000:~/esimerkki$ chmod +r esimerkki.txt
-tunnus@hal9000:~/esimerkki$ cat esimerkki.txt
+user@hal9000:~/esimerkki$ chmod +r esimerkki.txt
+user@hal9000:~/esimerkki$ cat esimerkki.txt
 paras
 esimerkki
-tunnus@hal9000:~/esimerkki$ chmod o+w esimerkki.txt
-tunnus@hal9000:~/esimerkki$ ls -l
+user@hal9000:~/esimerkki$ chmod o+w esimerkki.txt
+user@hal9000:~/esimerkki$ ls -l
 total 8
--rw-r--rw- 1 tunnus tunnus 16 touko 31 21:41 esimerkki.txt
--rw-r--r-- 1 tunnus tunnus 0 kesä 14 17:25 muistio2.txt
--rw-r--r-- 1 tunnus tunnus 0 touko 3 23:13 muistio.txt
-drw-r--r-- 1 tunnus tunnus 130 kesä 14 17:54 päiväkirjamerkinnät
+-rw-r--rw- 1 user user 16 touko 31 21:41 esimerkki.txt
+-rw-r--r-- 1 user user 0 kesä 14 17:25 muistio2.txt
+-rw-r--r-- 1 user user 0 touko 3 23:13 muistio.txt
+drw-r--r-- 1 user user 130 kesä 14 17:54 päiväkirjamerkinnät
 ```
 
 <div class="exercise">
@@ -761,7 +768,7 @@ Ole varovainen oikeuksien kanssa! Liiallisten oikeuksien antaminen esimerkiksi k
 
 <h2>Skriptit</h2>
 
-Skriptit (englanniksi _scripts_) ovat tiedostoja, jotka sisältävät komentorivillä ajettavaa koodia. Niitä käytetään paljon erilaisten tietokoneella suoritettavien tehtävien automatisoinnissa. Skriptin voi ajaa kirjoittamalla terminaaliin sen polun. Jos ollaan skriptin kanssa samassa kansiossa, voidaan se ajaa komennolla `./skriptin_nimi`.
+Skriptit (englanniksi _scripts_) ovat tiedostoja, jotka sisältävät komentorivillä ajettavaa koodia. Niitä käytetään paljon erilaisten computerella suoritettavien tehtävien automatisoinnissa. Skriptin voi ajaa kirjoittamalla terminaaliin sen polun. Jos ollaan skriptin kanssa samassa kansiossa, voidaan se ajaa komennolla `./skriptin_nimi`.
 
 Skriptien kirjoittamiseen on olemassa niille tarkoitettuja ohjelmointikieliä. Yksi niistä on [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>). Se on Unix-käyttöjärjestelmien komentorivien oletustulkki, eli esimerkiksi Linuxin versioissa ja macOSissa voidaan oletuksena ajaa Bashilla kirjoitettuja skriptejä. Bash-skriptin aluksi tulee kirjoittaa seuraavanlainen taikarivi: `#!/bin/bash`. Skriptitiedostojen nimet myös yleensä lopetetaan päätteellä `.sh`.
 
@@ -776,7 +783,7 @@ ls
 Tallennetaan sen jälkeen tiedosto. Kun skripti ajetaan, se tekee juuri, mitä sen sisältämä komento käskee:
 
 ```
-hal9000:~ tunnus$ ./script.sh
+hal9000:~ user$ ./script.sh
 Applications	Library		      Pictures	      kissakuvia
 Desktop		    Linus_Torvalds	Public          script.sh
 Documents	    Movies	        Downloads	Music
@@ -801,7 +808,7 @@ Jotta skriptin voi ajaa, käyttäjälle tulee ensin antaa siihen ajo-oikeudet ko
 
 <h2> Sudo</h2>
 
-Tietoturvallisiin tapoihin kuuluu, että tietokoneessa erotellaan pääkäyttäjä (_superuser_) sekä tavalliset käyttäjät. Pääkäyttäjällä on kaikki oikeudet järjestelmään, ja kaikki pääkäyttäjän ajamat ohjelmat ajetaan etuoikeutetussa tilassa. Tämä voi olla vaarallista, jos pahantahtoista koodia päätyy ajoon, siksi tietokonetta tulee käyttää yleensä normaalina käyttäjänä. Normaalikäyttäjä voi kuitenkin ajaa komentoja pääkäyttäjänän oikeuksin, jos käyttäjä kuuluu (_sudoers_) ryhmään. Tämä tapahtuu lisäämällä komennon alkuun `sudo` (alunperin _superuser do_). Tällöin ennen komennon ajamista käyttäjältä pyydetään käyttäjän oma salasana. Riippuen järjestelmästä, `sudo`-oikeuksia voidaan tarvita esimerkiksi ohjelmien asentamiseen. Komennon käyttöä tulee kuitenkin välttää, jos mahdollista.
+Tietoturvallisiin tapoihin kuuluu, että computeressa erotellaan pääkäyttäjä (_superuser_) sekä tavalliset käyttäjät. Pääkäyttäjällä on kaikki oikeudet järjestelmään, ja kaikki pääkäyttäjän ajamat ohjelmat ajetaan etuoikeutetussa tilassa. Tämä voi olla vaarallista, jos pahantahtoista koodia päätyy ajoon, siksi computertta tulee käyttää yleensä normaalina käyttäjänä. Normaalikäyttäjä voi kuitenkin ajaa komentoja pääkäyttäjänän oikeuksin, jos käyttäjä kuuluu (_sudoers_) ryhmään. Tämä tapahtuu lisäämällä komennon alkuun `sudo` (alunperin _superuser do_). Tällöin ennen komennon ajamista käyttäjältä pyydetään käyttäjän oma salasana. Riippuen järjestelmästä, `sudo`-oikeuksia voidaan tarvita esimerkiksi ohjelmien asentamiseen. Komennon käyttöä tulee kuitenkin välttää, jos mahdollista.
 
 Yliopiston tai osaston koneilla, eli niillä joihin kirjaudut yliopiston tai osaston tunnuksilla esimerkiksi SSH-yhteyden kautta tai pajaluokissa, **ei saa ajaa mitään sudo-komentoja** - siitä lähtee ylläpidolle väärinkäyttöilmoitus.
 
@@ -833,7 +840,7 @@ Paketinhallintajärjestelmän avulla voidaan myös päivittää ja poistaa paket
 
 Järjestelmästä riippuen ohjelmien asentaminen voi vaatia pääkäyttäjän oikeudet, jolloin komennon eteen on lisättävä `sudo`.
 
-Ohjelman asentaminen ilman pakettienhallintajärjestelmää sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
+Ohjelman asentaminen ilman pakettienhallintajärjestelmää sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä computeressa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
 
 Järjestelmän ympäristö voidaan lisäksi määritellä skripteissä niin, että niitä ei tarvitse erikseen määritellä session loputtua. Tällaisia on esimerkiksi `~/.bashrc`, joka ajetaan joka kerta, kun terminaali käynnistetään ja `~/bash_profile`, joka ajetaan jokaisella kirjautumisella. Voit lukea näistä tiedostoista ja niiden käytöstä muun muassa [täältä](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html). Esimerkiksi `PATH`-ympäristömuuttuja määritellään yleensä `.bashrc`-tiedostoon.
 

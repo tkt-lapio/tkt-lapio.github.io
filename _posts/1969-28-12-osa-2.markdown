@@ -48,14 +48,16 @@ Git on eräs versionhallintatyökalu. Tässä osassa käsitellään Gitin ja sii
 
 Gitin on luonut Helsingin yliopiston tietojenkäsittelytieteen laitoksella 90-luvulla opiskellut Linus Torvalds. Torvalds tunnetaan luultavasti paremmin Linux-kernelin kehittäjänä, joka toimii "sydämenä" monille erittäin suosituille käyttöjärjestelmille, kuten Googlen [Androidille](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Lähes kaikissa osaston koneissa on Linux-käyttöjärjestelmä. Torvalds kehitti Gitin nimenomaan omiin tarpeisiinsa koodatessaan Linux-kerneliä: hän tarvitsi työkalun, jolla voi säilyttää eri versioita omasta koodistaan, sekä jakaa sitä muiden kehitykseen osallistuneiden kanssa.
 
-GitHub on myöhemmin kehitetty palvelu, joka säilyttää Git-projekteja. GitHubiin verrannollisia palveluita on useita, kuten esimerkiksi [GitLab](https://about.gitlab.com/). Laitoksellamme GitHubin käyttö on kuitenkin yleisempää, siksi tämä osa käsittelee GitHubia.
+GitHub on myöhemmin kehitetty palvelu, jonka avulla voidaan säilyttää ja julkaista Git-projekteja. GitHubiin verrannollisia palveluita on useita, kuten esimerkiksi [GitLab](https://about.gitlab.com/). Laitoksellamme GitHubin käyttö on kuitenkin yleisempää, siksi tämä osa käsittelee GitHubia.
 
-Gittiä ja GitHubia käytetään yliopistolla yksilö- ja ryhmätöissä, sekä yleisesti työelämässä. Niiden käyttö ei rajoitu pelkästään koodiin, vaan moni pitää esimerkiksi kandinsa tai maisterinsa Gitissä. Tässä osassa keskitytään lähinnä koodin jakamiseen Gitin avulla GitHubissa, ja siinä usein kohdattuihin ongelmiin. Lisää Gitistä oppii esimerkiksi kursseilla Ohjelmistotekniikan menetelmät ja Ohjelmistotuotanto.
+Gittiä ja GitHubia käytetään yliopistolla yksilö- ja ryhmätöissä, sekä yleisesti työelämässä. Niiden käyttö ei rajoitu pelkästään koodiin, vaan moni pitää esimerkiksi kandinsa tai maisterinsa Gitissä. Tässä osassa keskitytään lähinnä koodin jakamiseen Gitin avulla GitHubissa, ja siinä usein kohdattuihin ongelmiin. Lisää Gitistä oppii esimerkiksi kursseilla Ohjelmistotekniikka ja Ohjelmistotuotanto.
 
 <div class="exercise">
 <h3>Tehtävä 1: Github-tunnuksen luonti {% include points.html text="5%" %}</h3>
 
 Luo aluksi GitHub-tunnus osoitteessa <a href="https://github.com/"> https://github.com/ </a>. GitHubiin rakennetaan eräänlainen koodiportfolio, joka usein linkataan myös CV:seen, kannattaa siis valita siisti käyttäjänimi.
+
+<br><br>
 Git löytyy laitoksen koneilta ja Ubuntusta valmiiksi. Muussa tapauksessa sen voi asentaa esimerkiksi <a href="https://git-scm.com/downloads" >täältä</a>, tai <a href="/komentorivi#asentamisesta">pakettienhallintajärjestelmän</a> kautta. Käytämme näissä ohjeissa Gittiä terminaalin kautta.
 
 </div>
@@ -70,8 +72,8 @@ Liitä nimesi ja sähköpostiosoitteesi Gittiin niin, että kaikkiin projekteihe
 </div>
 
 ```bash
-$ git config --global user.name "Minun Nimeni"
-$ git config --global user.email sähköposti@osoite.com
+git config --global user.name "Minun Nimeni"
+git config --global user.email sähköposti@osoite.com
 ```
 
 <div class="exercise">
@@ -81,7 +83,13 @@ Jos et halua sähköpostiasi julkiseksi, GitHub tarjoaa erityisen <a href="https
 Huomaa Note-kohta äsken linkatulla sivulla! Noreplyn muoto riippuu siitä, milloin olet luonut käyttäjätunnuksen, ja jos loit tunnuksesi vasta lapio-kurssilla, saat asetettua noreply-sähköpostiosoitteen vasta kun asetat käyttäjätilisi asetuksista sähköpostiosoitteesi yksityiseksi.
 </div>
 
-Jos et ole tottunut Vimin käyttäjä, muuta Gitin oletuseditoriksi nano komennolla <code>git config --global core.editor nano</code>. Windowsissa vaihda nanon paikalle <code>notepad</code>.
+Jos et ole tottunut Vimin käyttäjä, muuta Gitin oletuseditoriksi nano seuraavalla komennolla:
+</div>
+```
+git config --global core.editor nano
+```
+<div class="exercise">
+Windowsissa vaihda nanon paikalle <code>notepad</code>.
 
 </div>
 
@@ -238,9 +246,9 @@ Usein haaroja käytetään niin, että päähaarasta erotetaan uuden toiminnalli
 <ol>
 <li>Luo kansio komentorivillä ja tee siitä Git-projekti.</li>
 <li>Luo projektikansioosi tiedosto nimeltä <code>tarina.txt</code>. Lisää sinne jokin pitkä pätkä tekstiä.</li>
-<li>Lisää projektiin tiedosto <code>ostoslista.txt</code>, jonne kirjoitat, mitä tarvitset kaupasta, tai muuten vaan paljon </li>rivejä.
-<li>Lisää sen jälkeen vielä alikansio <code>kouluprojektit</code>, ja lisää sinne ainakin yksi tiedosto <code>lapio.txt</code>. Tulet </li>tarvitsemaan näitä tiedostoja tulevissa tehtävissä.
-<li>Kun olet tehnyt kaikki edellä mainitut muutokset, tee yhteensä kolme committia: yksi, jossa lisäät tarinan, toinen,</li> jossa lisäät ostoslistan, ja kolmas, jossa lisäät projektikansion sisällön. Kirjoita commiteille kuvaavat otsikot.
+<li>Lisää projektiin tiedosto <code>ostoslista.txt</code>, jonne kirjoitat, mitä tarvitset kaupasta, tai muuten vaan paljon rivejä.</li>
+<li>Lisää sen jälkeen vielä alikansio <code>kouluprojektit</code>, ja lisää sinne ainakin yksi tiedosto <code>lapio.txt</code>. Tulet tarvitsemaan näitä tiedostoja tulevissa tehtävissä.</li>
+<li>Kun olet tehnyt kaikki edellä mainitut muutokset, tee yhteensä kolme committia: yksi, jossa lisäät tarinan, toinen,jossa lisäät ostoslistan, ja kolmas, jossa lisäät projektikansion sisällön. Kirjoita commiteille kuvaavat otsikot.</li>
 <li>Tarkista komennolla <code>git log</code>, että olet luonut kolme committia.</li>
 <li>Muuta ostoslistalta jokin ostos, ja tee vielä yksi commit. Käytä muutoksen lisäämisessä komentoa <code>git add -p</code>.</li>
 <li>Tarkista, että kaikki commitit näkyvät <code>git log</code>-komennolla.</li>
@@ -297,15 +305,25 @@ Uusi origin-niminen etärepositorio lisätään SSH-yhteyttä käyttäen ajamall
 
 <div class="exercise">
 <h3>Tehtävä 5: SSH-avain GitHubiin {% include points.html text="5%" %}</h3>
+<p>
 Jos et ole luonut koneellesi ssh-avainparia, tee se ensin. Ohjeet löytyy <a href="/komentorivi#SSH-avainpari">ensimmäisestä osasta</a>.
+</p>
+<p>
 Lisää julkinen ssh-avaimesi GitHubin käyttäjällesi. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">Sille löytyy ohjeet GitHubissa</a>.
+</p>
+<p class="note">
 Voit tulostaa ssh-avaimen terminaaliisi komennolla <code>cat avaintiedoston_nimi</code> ja kopioida sen painamalla <code>ctrl + shift + c</code>, ja jatkaa GitHubin ohjeiden seuraamista kohdasta 2. Tällöin sinun ei tarvitse asentaa uutta ohjelmaa, kuten GitHubin ohjeet ehdottavat.
+</p>
 </div>
 
 <div class="exercise">
 <h3>Tehtävä 6: Etärepositorion luominen Githubissa {% include points.html text="5%" %}</h3>
-Luo aikaisemmin tekemällesi projektille vastapari, eli repositorio GitHubiin. Älä luo projektille GitHubissa valmiiksi lisenssiä, READMEtä tai .gitignore-tiedostoa, muuten kohtaat myöhemmin ongelmia.
-Liitä GitHubin repo projektisi etärepositorioksi. Jos teit edellisen tehtävän, käytä SSH-osoitetta, muuten käytä https-osoitetta.
+<p>Luo aikaisemmin tekemällesi projektille vastapari, eli repositorio GitHubiin. </p>
+
+<p><b>Älä luo projektille GitHubissa valmiiksi lisenssiä, READMEtä tai .gitignore-tiedostoa, muuten kohtaat myöhemmin ongelmia.</b></p>
+
+<p>
+Liitä GitHubin repo projektisi etärepositorioksi. Jos teit edellisen tehtävän, käytä SSH-osoitetta, muuten käytä https-osoitetta.</p>
 </div>
 
 ## Etärepositorion kanssa työskentely
@@ -396,7 +414,7 @@ Tällaisessa tilanteessa voidaan laittaa paikalliset muutokset syrjään _stashi
 <div class="exercise">
 <h3>Tehtävä 9: Stashin käyttäminen pullatessa {% include points.html text="10%" %}</h3>
 <ol>
-<li>Tee muutoksia paikallisesti jo kertaalleen Gittiin lisäämiisi tiedostoihin (eivät ole <code>untracked</code>-otsikon alla </li>komennon <code>git status</code> tulostuksessa).
+<li>Tee muutoksia paikallisesti jo kertaalleen Gittiin lisäämiisi tiedostoihin (eivät ole <code>untracked</code>-otsikon alla komennon <code>git status</code> tulostuksessa).</li>
 <li>Laita sen jälkeen juuri tekemäsi muutokset syrjään stashiin.</li>
 <li>Avaa sen jälkeen muokkaamasi tiedosto, näetkö tekemiäsi muutoksia?</li>
 <li>Muokkaa GitHubin kautta <code>tarina.txt</code>-tiedoston <i>ensimmäistä</i> lausetta ja tee siitä commit.</li>
@@ -445,7 +463,7 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-Git antaa jälleen vihjeen, miten kuuluu toimia. Haetaan ja yhdistetään siis etärepositorion uusin tila paikalliseen versioon komennolla `git pull`. Tällöin tulostuu:
+Git antaa jälleen vihjeen, miten kuuluu toimia. Haetaan ja yhdistetään siis etärepositorion uusin tila paikalliseen versioon komennolla `git pull`. Annetaan commitille tekstieditorin auetessa otsikko, ja tallennetaan. Tällöin tulostuu:
 
 ```
 From github.com:kayttaja/repo
@@ -599,7 +617,7 @@ Jatkossa, kun aloitat uuden Git-projektin, voit joko luoda sen komentoriviltä k
 
 ![Kloonausosoite](/assets/clone.png)
 
-Jotta kloonaamaansa repositorioon tekemänsä muutokset voi puskea takaisin etärepositorioon, projektin omistajan tulee [lisätä kloonaaja projektin kehittäjäksi](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/). Muussa tapauksessa komento `git push` ei onnistu.
+Jotta kloonaamaansa repositorioon tekemänsä muutokset voi puskea takaisin etärepositorioon, projektin omistajan tulee [lisätä kloonaaja projektin kehittäjäksi](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/). Muussa tapauksessa komento `git push` ei onnistu. Yhteisissä koodiprojekteissa voidaan siis luoda Git-projekti, jonka etärepositoriossa kaikki osallistujat ovat kehittäjinä, jolloin kaikki voivat vapaasti lisätä projektiin koodia.
 
 On kuitenkin myös toinen tapa ehdottaa muutoksia olemassaolevaan projektiin: _fork_. Kun forkkaa projektin, kopio siitä lisätään käyttäjän omaksi repositorioksi hänen omaan profiiliiinsa. Tästä tulee ilmoitus GitHubin "feediin", ja projektin omistaja voi nähdä, kuka on forkannut projektin. Kun olet forkannut projektin, voit kloonata oman kopiosi koneellesi tavalliseen tapaan _omasta profiilistasi_, ja puskea muuutoksia _omaan kopioosi_.
 
