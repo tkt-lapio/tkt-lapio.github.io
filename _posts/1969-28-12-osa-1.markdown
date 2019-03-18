@@ -526,7 +526,7 @@ Voit lukea lisää `ssh`-komennosta ja sen konfiguroimisesta esimerkiksi [tääl
 <div class="exercise">
 <h3>Tehtävä 11: SSH-yhteys {% include points.html text="10%" %}</h3>
 
-Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus (eli olet aktivoinut käyttöluvan [näiden ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan), mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
+Luo koneellesi SSH-avainpari. Jos olet tietojenkäsittelytieteen läsnäoleva pää- tai sivuaineopiskelija, ja sinulla on tietojenkäsittelytieteen osaston käyttäjätunnus (eli olet aktivoinut käyttöluvan <a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat">näiden ohjeiden</a> mukaan), mahdollista avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
 
 <div class="note">
 Mikäli teet tehtävän laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.

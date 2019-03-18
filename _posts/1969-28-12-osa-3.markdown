@@ -463,7 +463,7 @@ Tehtävän ideana on testata kaikkia eri selektoreita värittämisen avulla edel
 <li>Korjataan sivusto näyttämään paremmalta myöhemmin, nyt on tärkeintä että testaat, mitä eri selektorit tekevät.</li>
 Yritä saada lopputulos näyttämään tältä:
    <img src="/assets/html-ex-8.png" alt="Kahdeksannen tehtävän lopputulos kuvana"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kahdeksas tehtävä ja puske tehtävä Githubiin.</code></li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kahdeksas tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
 </div>
 
