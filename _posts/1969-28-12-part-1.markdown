@@ -213,7 +213,7 @@ Gedit is a simple graphical text editor, which allows you to edit all kinds of t
 
 Open a graphical text editor and create a file called `example.txt`. Save it in the `lapio` folder you created earlier. The `.txt` is a file extension, which means that the file contains ordinary text, and not runnable code for example. Add some arbitrary text to the file.
 
-After creating the `example.txt` file, navigate to the "lapio" folder and open it with the command `nano example.txt`. Nano is a text-based text editor, which is used from the command line. This means that the editor is controlled using specific key combinations instead of clicking on buttons.
+After creating the `example.txt` file, navigate to the `lapio` folder and open it with the command `nano example.txt`. Nano is a text-based text editor, which is used from the command line. This means that the editor is controlled using specific key combinations instead of clicking on buttons.
 
 In order to close the editor, you have to press <kbd>CTRL + X</kbd>. If some changes have been made, you have to confirm whether you wish to save or discard them, by pressing `y` for "yes" or `n` for "no". Lastly, the editor confirms the name of the saved file.
 
@@ -236,113 +236,131 @@ Note that the file you created with notepad has been created as a Windows user. 
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 3: nano {% include points.html text="5%" %}</h3>
+<h3>Exercise 3: nano {% include points.html text="5%" %}</h3>
 
-Ota selvää miten <code>nano</code> toimii käyttämällä Googlea tai <code>man</code>-komentoa. Selvitä seuraavat asiat:
+Find out how the text editor <code>nano</code> works by using Google or the <code>man</code> command. Make sure you know how to do at least the following things:
 
 <ul>
-<li> Miten voin tallentaa tiedoston sulkematta nanoa</li>
-<li> Miten voin kopioida ja liittää nanoon</li>
+<li> Sainvg a file without closing nano</li>
+<li> Copying and pasteing in nano</li>
 </ul>
 
-Tarkista, että osaat tehdä nämä asiat: Avaa tiedosto <code>eimerkki.txt</code>, lisää sinne tekstiä ja tallenna. Avaa sen jälkeen tiedoston jollain tekstieditorilla varmistaaksesi, että sisältö on tallentunut.
+Test out the procedures in practice! For example, open a file <code>example.txt</code>, add some text into it and save without closing. Then open the file using another text editor to make sure that the contents were saved.
 
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 4: vim {% include points.html text="5%" %}</h3>
+<h3>Exercise 4: vim {% include points.html text="5%" %}</h3>
 
-Vastaavanlainen, mutta paljon enemmän ominaisuuksia sisältävä komentolinjalla toimiva tekstieditori on <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>. Se on kuitenkin myös huomattavasti monimutkaisempi käyttää. Ota selvää vimistä seuraavat asiat:
+Another command line text editor with a lot more features is <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>. However, it is notoriously unintuitive to use at first. Find out the following things about using vim:
 
 <ul>
-<li>Mitä ovat "insert mode" ja "command mode"</li>
-<li>Miten niiden välillä vaihdetaan</li>
-<li>Miten saat vimin suljettua <br></li>
+<li>What are "insert mode" and "command mode"?</li>
+<li>How can you switch between then?</li>
+<li>How can you close vim? <br></li>
 </ul>
 </div>
 
-<h2> Polut</h2>
+<h2> Paths</h2>
 
-Polku (englanniksi _path_) tarkoittaa osoitetta tiettyyn tiedostoon tai kansioon. Se koostuu lähinnä kansioiden ja tiedostojen nimistä ja `/`-merkistä. Polkuja käytetään komentojen argumenteissa.
+A path is a pointer to a specific file or folder in a file system. It is like an address, which allows one to uniquely identify the location of a desired resource. It consists mostly of filenames and slashes (`/`). Paths are often used as command arguments.
 
-Polku voi olla _suhteellinen_ tai _absoluuttinen_: suhteellinen polku merkitään suhteessa nykyiseen kansioon, absoluuttinen suhteessa järjestelmän _juurikansioon_. Juurikansio sisältää kaikki computeren tiedostot, eikä sitä tule sekoittaa käyttäjäkohtaiseen kotihakemistoon. Juurikansio sisältää siis kaikkien käyttäjien kotihakemistot.
+A path can be _relative_ or _absolute_: A relative path is interpreted with respect to the current folder, whereas an absolute path is interpreted with respect to the _root folder_, or sometimes just _the root_. The root folder contains all the files and folders of the system, and it should not be confused with the personal _home folder_. The root folder contains all the users' home folders. In consequence, an absolute path to a specific file is the same no matter which folder in the system it is written in. A reltavite path to the same folder however depends on the current folder.
 
 <div class="warning">
-Ole varovainen juurihakemiston kanssa! Se sisältää kaikenlaista tärkeää, älä siis muuta turhaan tiedostoja tai poista kansioita juuressa.
+Be careful with the root! Some of it's contents are vital to the computer. Don't delete or move folders in the root without a good reason.
 </div>
 
-Absoluuttinen polku alkaa aina `/`-merkillä, sillä juurikansion absoluuttinen polku on `/`. Jos polkua ei aloita merkillä `/`, järjestelmä luulee, että viitataan kansioon joka on nykyisessä hakemistossa. Nykyisen kansion absoluuttisen polun näkee komennolla `pwd` (**p**rint **w**orking **d**irectory). Kotihakemiston absoluuttinen polku on Linuxissa yleensä `/home/user/` ja macOSissa `/Users/user/`. Siihen voidaan myös viitata merkillä `~`. Esimerkiksi absoluuttinen polku kotihakemiston Downloads-kansioon olisi Linuxissa `/home/user/Downloads` tai `~/Downloads`.
+An absolute path always start with the slash symbol `/`, because the absolute path of the root is `/`. If a path isn't started with a slash the system will interpret that the user is referring to a file or folder in the current folder. The absolute path of the current folder can be printed out with `pwd` (**p**rint **w**orking **d**irectory). In linux, the home folder of a user is usually located in `/home/user/`, and in `/Users/user/` in MacOS. In both systems the home folder can be referred to with `~`. For example, the path to the Downdloads folder in Linux would be either `/home/user/Downloads` or `~/Downloads`.
 
-Suhteellisissa poluissa käytetään usein merkkejä `.` ja `..`. Yksi piste `.` viittaa nykyiseen kansioon, kaksi pistettä `..` viittaa edelliseen kansioon tai ylä- eli äitikansioon. Esimerkiksi komennolla `cd ../..` siirryttäisiin kaksi kansiota "ylöspäin". Kotihakemistosta suhteellinen polku kansioon Downloads on `./Downloads` tai pelkkä `Downloads`.
+Dots are often used in relative paths. One dot `.` refers to the current folder, and two dots `..` refers to the folder the current folder is in, or its "mother folder". For example running `cd ../..` would move the user two folders up. The relative path of the Downloads folder from the home folder is `./Downloads` or just `Downloads`.
 
-Tässä vielä esimerkki absoluuttisista ja suhteellisista poluista:
+Here is a longer example of using absolute and relative paths:
 
-Oletetaan, että olet ladannut Downloads-kansioon kissakuvia jokaiselle vuoden kuukaudelle niin, että jokaisen kuukauden kuvat ovat omassa kansiossaan. Sen jälkeen olet siirtynyt komentorivillä "toukokuu"-nimiseen kansioon, jonka polku on `~/Downloads/kissakuvia/toukokuu/`. Voit nyt viitata toukokuu-kansion _sisältä_ esimerkiksi `Downloads`-kansioon polulla `../..`, `~/Downloads` tai `/home/user/Downloads` Linuxilla ja `/Users/user/Downloads` macOSilla. Jos haluaisit viitata toukokuu-kansiosta esimerkiksi marraskuu-kansioon (joka on siis kissakuvia-kansion sisällä), voit tehdä sen polulla `../marraskuu/`. Kauttaviiva polun lopussa alleviivaa, että kyseessä on kansio, mutta se ei ole välttämätön.
+Let's assume that you have downloaded cat pictures for each year of the month. The pictures of each month are in their own folders, all located in a subfolder of Downloads. You have moved to the folder which contains all the cute pictured for May, whose path is `~/Downloads/cat-pictures/may/`. Given that you are _inside_ the May folder, you can refer to the Downloads folder with the path `../..`, `~/Downloads` or `/home/user/Downloads` in Linux and `/Users/user/Downloads` in MacOS. If you wish to refer to the November folder from the May folder, you can do so for example with the path `../marraskuu/`. The slash at the end of the path highlights that the resource in question is indeed a folder, but it is not necessary for the path to work.
 
 ```bash
-user@computer:~/Downloads/kissakuvia/toukokuu$ ls
-kissa1.jpg
-user@computer:~/Downloads/kissakuvia/toukokuu$ cd ../../
-user@computer:~/Downloads$ cd kissakuvia/toukokuu/
-user@computer:~/Downloads/kissakuvia/toukokuu$ cd ../marraskuu/
-user@computer:~/Downloads/kissakuvia/marraskuu$ ls
-kissa2.jpg
+user@computer:~/Downloads/cat-pictures/may$ ls
+cat1.jpg
+user@computer:~/Downloads/cat-pictures/may$ cd ../../
+user@computer:~/Downloads$ cd cat-pictures/may/
+user@computer:~/Downloads/cat-pictures/may$ cd ../november/
+user@computer:~/Downloads/cat-pictures/november$ ls
+cat2.jpg
 ```
 
 <div class="note">
-Muista, että komentorivi näyttää sinulle koko ajan nykyisen kansiosi polun suhteessa kotihakemistoosi. Tämä helpottaa tiedostojen seassa navigointia ja polkujen kirjoittamista.
+<strong>Remember to use tab completion when writing paths!</strong> In addition, the command line shows you the path of the current folder with respect to your home folder. This makes it easier to navigate and write paths in the command line.
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 5: Tiedostonhallinnan harjoittelu 1 {% include points.html text="5%" %}</h3>
+<h3>Exercise 5: File management 1 {% include points.html text="5%" %}</h3>
 
-Harjoitellaan tässä tiedostohallintaa komentoriviltä.
-Luo ensin kuvaa vastaava kansiorakenne:
-<img src="/assets/lapio_start.png" alt="Alkutilanne"/>
+In this exercise you'll practice file management from the command line. Start by creating a folder structure described in the figure below:
+
+<img src="/assets/file_management_1.png" alt="Figure describing the starting position"/>
 
 <p>
-Oheisessa kansiorakenteessa siis <code>koulu</code>-kansio sisältää kolme kansiota: <code>lapio</code>, <code>ohpe</code> ja <code>ohja</code>, joista jokainen sisältää puolestaan vähintään yhden tiedoston.
-Luo ensin <code>koulu</code>-kansio, ja siirry sen jälkeen sen sisään. Tämän jälkeen luo kuvan mukainen tiedostorakennelma. Pyri luomaan osa tiedostoista suoraan koulu-kansiosta, ja osa niin, että siirryt alikansioon sisään ennen kuin luot sinne tiedoston.
+In the folder structure the directory <code>school</code> contains three folders: <code>lapio</code>, <code>CS1</code> and <code>CS2</code>. The <code>lapio</code> folder contains a file called <code>cmnd-line.txt</code>, the <code>CS1</code> folder contains <code>lecture1.txt</code> and the <code>CS2</code> folder contains the files <code>lecture2.txt</code> and <code>java.txt</code>.
+
+<br><br>
+
+First create the <code>school</code> folder and move inside it. Then create the folder structure described above. Create some of the files and folders directly from the <code>school</code> folder, by using longer paths, and some by moving into the subfolder before creating a new file.
 </p>
 
-<p class="note">Voit luoda tekstitiedoston avaamalla sen tekstieditorilla ja tallentamalla, tai komennolla <code>touch</code>.</p>
+<p class="note">
+You can create a text file by opening it in a text editor and saving, or with the command <code>touch</code>.</p>
 
-<p>Tarkista, että olet luonut oikeat kansiot ja tiedostot <code>ls</code>-komennolla.</p>
-
-</div>
-<h2> Tiedostojen siirtäminen ja uudelleennimeäminen</h2>
-
-Graafisessa ympäristössä kopiointi onnistuu näppäinyhdistelmällä <kbd>CTRL + C</kbd>, leikkaus yhdistelmällä <kbd> CTRL + X</kbd> ja liittäminen yhdistelmällä <kbd>CTRL + V</kbd>. Katsotaan miten vastaavat asiat saadaan tehtyä komentorivillä.
-
-Kopiointia varten on komento `cp` eli <b>c</b>o<b>p</b>y. Se ottaa argumenteiksi kopioitavan tiedoston polun ja uuden tiedoston polun: `cp esimerkki.txt esimerkki2.txt` kopioisi siis `esimerkki.txt`:n `esimerkki2.txt` nimiseksi tiedostoksi samaan kansioon. Huomaa, että polkujen avulla voit viitata tiedostoihin tai kansioihin eri hakemistossa: `cp esimerkki.txt ~/Documents/esimerkki2.txt` kopioisi tiedoston suoraan `Documents`-kansioon nimellä `esimerkki2.txt`.
-
-Tiedostoja voi siirtää käyttäen `mv`-komentoa, joka tulee sanoista <b>m</b>o<b>v</b>e. Komento toimii samalla tavalla kuin `cp`, paitsi että alkuperäinen tiedosto poistetaan, ja jää vain uusi tiedosto. Tämä vastaa graafisen käyttöliittymän "leikkaa"-toimintoa. Komennolla `mv` voi myös uudelleennimetä tiedostoja: jos toisena argumenttina annettu polku viittaa samaan kansioon kuin ensimmäinen polku, kopion nimeäminen ja alkuperäisen tiedoston poistamisen tuloksena on uudelleennimetty tiedosto.
-
-Esimerkkejä `mv`:n toiminnasta:
-
-`mv esmerkki.txt esimerkki.txt` uudelleennimeää tiedoston `esmerkki.txt` tiedostoksi `esimerkki.txt`.
-
-`mv esimerkki.txt ~` siirtää tiedoston `esimerkki.txt` nykyisestä kansiosta kotihakemistoon.
-
-`mv esmerkki.txt ~/esimerkki.txt` muuttaa nykyisen kansion tiedoston `esmerkki.txt` nimeksi `esimerkki.txt` ja siirtää sen kotihakemistoon.
-
-`mv ~/esimerkki.txt ~/Downloads/` siirtää tiedoston `esimerkki.txt` kotihakemistosta Downloads-kansioon.
-
-<div class="exercise">
-<h3>Tehtävä 6: Tiedostonhallinnan harjoittelu 2 {% include points.html text="5%" %}</h3>
-
-Tämä on jatkoa edelliseen tehtävään.
-Kun olet luonut alkutilanteen, muuta se komennoilla <code>mv</code> ja <code>cp</code> seuraavan näköiseksi:
-
-Huomaa, että kiusallinen kirjoitusvirhe tiedoston <code>kmntorivi.txt</code> nimessä on korjattu. Tiedosto <code>javasta.txt</code> on uudelleennimetty ja siirretty kansioon <code>ohpe</code>.
-<img src="/assets/lapio_goal.png" alt="Lopputilanne"/>
-
+Make sure you've created all the proper files and folders with <code>ls</code>.
 </div>
 
-<div class="exercise">
-<h3>Tehtävä 7: Kansion poistaminen {% include points.html text="5%" %}</h3>
 
-Tiedostoja voidaan poistaa komennolla <code>rm</code>, eli <b>r</b>e<b>m</b>ove. Käyttäen komentoriviä, poista edellisessä tehtävässä luomasi tiedostot. Selvitä sitten, miten voit poistaa hakemiston komentoriviltä, ja poista koko <code>koulu</code>-hakemisto. <div class="warning">Huomaa, että kun poistat jotain komentoriviltä, se ei siirry roskakoriin vaan poistuu heti, ole siis varovainen.</div>
+<h2> Moving and renaming files</h2>
+
+In a graphical environment copying is done with the key combination <kbd>CTRL + C</kbd>, cutting with <kbd> CTRL + X</kbd> and pasteing is done with <kbd>CTRL + V</kbd>. Let's see how these three procedures can be done using the command line.
+
+Copying is done using the command `cp` (<b>c</b>o<b>p</b>y). It takes the path to the file to be copied and the target path as arguments. For example, `cp example.txt example2.txt` copies the file `exapmle.txt` as a file called `example2.txt` in the current folder. Paths also allow you to move files between folders. Running `cp example.txt ~/Documents/example2.txt` moves the file `example.txt` to the `Documents` folder and renames it to `example2.txt`. Giving an existing folder as the second argument copies the file without changing its name: `cp example.txt ~/Documents/` copies the file to `Documents` and keeps the name as `example.txt`.
+
+Files and folders can be moved with the command `mv` (<b>m</b>o<b>v</b>e). The command works in a very similiar way to `cp`, except that the original file is deleted from the system after copying it. This corresponds to the "cutting" feature in a graphical user interface. One can also rename files using `mv`: if the second argument points to the same folder as the first one, the result is a renamed file.
+
+
+Examples of using `mv`:
+
+`mv exmple.txt example.txt` renames the file `exmple.txt` to `example.txt`.
+
+`mv example.txt ~` moves the file `example.txt` from the current folder to the home folder.
+
+`mv exmple.txt ~/example.txt` renames the file `exmple.txt` from the current folder to `example.txt` and moves it to the home folder.
+
+`mv ~/example.txt ~/Downloads/` moves the file `example.txt` from the home folder to the `Downloads` folder.
+
+<div class="exercise">
+<h3>Exercise 6: File management 2 {% include points.html text="5%" %}</h3>
+
+This exercise continues where the previous exercise left off.
+
+After creating the initial folder structure, change it to the following with commands <code>mv</code> and <code>cp</code>:
+
+<p><img src="/assets/file_management_2.png" alt="Target folder structure"/></p>
+
+The folder <code>lapio</code> should now contain a file called <code>command-line.txt</code>. The folder <code>CS1</code> should contain a file called <code>intro.txt</code>, and the folder <code>CS2</code> the files <code>lecture1.txt</code> and <code>lecture2.txt</code>.
+
+<br><br>
+
+Notice that the awkward typo in <code>cmnd-line.txt</code> has been fixed. The file <code>java.txt</code> was moved and renamed to the file <code>CS1</code>.
+</div>
+
+<div class="exercise">
+<h3>Exercise 7: Removing a folder {% include points.html text="5%" %}</h3>
+
+Files can be removed with the command <code>rm</code> (<b>r</b>e<b>m</b>ove).
+
+<ol>
+<li>By using the command line, remove the files you created in the previous exercise. </li>
+<li>Find out how you can remove a folder from the command line.</li>
+<li>Remove the whole <code>school</code> folder.</li>
+</ol>
+<div class="warning">Note that when you remove something on the command line, it is not moved to the rubbish bin, but deleted right away.</div>
 
 </div>
 
@@ -361,7 +379,7 @@ kohde toinen.png
 Samoin `mv test* tests/` siirtäisi kaikki `test`-alkuiset tiedostot ja hakemistot `tests`-nimiseen kansioon.
 
 <div class="exercise">
-<h3>Tehtävä 8: Villikortti {% include points.html text="10%" %}</h3>
+<h3>Exercise 8: Villikortti {% include points.html text="10%" %}</h3>
 Tee kansio nimeltä <i>kuvia</i> komentorivillä, ja lataa sinne internetistä kaksi kuvaa, joista toinen on <code>jpg</code>-muotoinen, ja toinen <code>png</code>-muotoinen. Lisää sen lisäksi kansioon joitain tiedostoja, esimerkiksi nimillä <code>tiedosto.txt</code> ja <code>en_ole_kuva.txt</code>. Luo lopuksi kansio nimeltä <code>kuvat</code> ja kopioi sinne tutoriaalia hyödyntäen kaikki kuvat nykyisestä hakemistosta. Voit lukea muista mahdollisista villikorteista esimerkiksi <a href="http://www.linfo.org/wildcard.html">täältä</a>.
 </div>
 
@@ -429,7 +447,7 @@ Huomaa, että osuma löytyy, vaikka se oli sanan keskellä. Useimmissa ympärist
 ![grep-esimerkki](/assets/päiväkirja.png){:class="img-responsive"}
 
 <div class="exercise">
-<h3>Tehtävä 9: grep {% include points.html text="10%" %}</h3>
+<h3>Exercise 9: grep {% include points.html text="10%" %}</h3>
 Ilman erillisiä vipuja <code>grep</code> ei kohtele kirjaimia samana, jos ne ovat eri kokoisia. Esimerkiksi "a" ja "A" ovat sille siis erilaisia kirjaimia.
 <ul>
 <li>Tarkastele <code>grep --help</code> apusivun tulosta tai <code>man</code>-sivua, ja ota selvää miten pääset eroon kirjainkoon erottelusta.</li>
@@ -481,7 +499,7 @@ Komento <code>></code> korvaa kohdetiedoston koko sisällön annetulla tekstill�
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 10: Opiskelijan muistiinpanot {% include points.html text="5%" %}</h3>
+<h3>Exercise 10: Opiskelijan muistiinpanot {% include points.html text="5%" %}</h3>
 Luo tekstitiedosto <code>muistiinpanot.txt</code> komentorivillä. Kopioi sinne seuraava teksti, joka kuvailee erään opiskelijan ajatuksia tiettynä viikkona:
 </div>
 ```
@@ -612,12 +630,12 @@ ssh-add
 Voit lukea lisää SSH:n konfiguroimisesta esimerkiksi [täältä](https://linux.fi/wiki/SSH).
 
 <div class="exercise">
-<h3>Tehtävä 11: SSH-yhteys {% include points.html text="10%" %}</h3>
+<h3>Exercise 11: SSH-yhteys {% include points.html text="10%" %}</h3>
 
-Luo koneellesi SSH-avainpari. Mahdollista sen jälkeen avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, eli sinulla ei ole yliopiston userta, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
+Luo koneellesi SSH-avainpari. Mahdollista sen jälkeen avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, eli sinulla ei ole yliopiston userta, voit merkitä Exercisen tehdyksi luotuasi SSH-avaimen.
 
 <div class="note">
-Mikäli teet tehtävän laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.
+Mikäli teet Exercisen laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.
 </div>
 
 <div class="note">
@@ -636,7 +654,7 @@ Graafisessa ympäristössä selain antaa tarkastella sivuja internetissä. Komen
 Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toimii yksinkertaisimmillaan `wget sivun.osoite`, joka lataa annetun sivun koneellesi. Internet-sivut on tehty HTML-kielellä, johon tutustumme seuraavassa osassa, joten saat kutsun tuloksena koneellesi `.html`-päätteisen tiedoston.
 
 <div class="exercise">
-<h3>Tehtävä 12: Wget ja HTML-koodi {% include points.html text="10%" %}</h3>
+<h3>Exercise 12: Wget ja HTML-koodi {% include points.html text="10%" %}</h3>
 
 <ol>
 <li>Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla</li>
@@ -650,10 +668,10 @@ Tutustumme HTML-kieleen ja verkkosivuihin kolmannessa osassa, jossa opit myös k
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 13: Wget, grep ja Linus Torvalds {% include points.html text="10%" %}</h3>
+<h3>Exercise 13: Wget, grep ja Linus Torvalds {% include points.html text="10%" %}</h3>
 
 <p>
-Tässä tehtävässä lasketaan, monellako rivillä Linus Torvaldista kertovassa artikkelissa esiintyy sana "Linux".
+Tässä Exercisessä lasketaan, monellako rivillä Linus Torvaldista kertovassa artikkelissa esiintyy sana "Linux".
 </p>
 
 <ol>
@@ -662,7 +680,7 @@ Tässä tehtävässä lasketaan, monellako rivillä Linus Torvaldista kertovassa
 <li>Etsi sitten netistä, miten voit laskea tulosteen tai tiedoston rivien määrät, ja laske monellako rivillä sana "Linux" esiintyy.</li>
 </ol>
 
-Mikäli haluat, voit yrittää tehdä saman tehtävä ilman, että kirjoitat mitään välissä tiedostoon.
+Mikäli haluat, voit yrittää tehdä saman Exercise ilman, että kirjoitat mitään välissä tiedostoon.
 
 </div>
 
@@ -742,7 +760,7 @@ drw-r--r-- 1 user user 130 kesä 14 17:54 päiväkirjamerkinnät
 ```
 
 <div class="exercise">
-<h3>Tehtävä 14: Oikeuksien harjoittelua {% include points.html text="10%" %}</h3>
+<h3>Exercise 14: Oikeuksien harjoittelua {% include points.html text="10%" %}</h3>
 
 Luo tiedosto <code>oikeus.txt</code> ja harjoittele sen avulla oikeuksien hallinnointia. Anna sille vuorotellen seuraavanlaiset oikeudet:
 
@@ -756,7 +774,7 @@ Luo tiedosto <code>oikeus.txt</code> ja harjoittele sen avulla oikeuksien hallin
 </pre>
 
 <div class="note">
-Mikäli teet tehtävän osaston koneella, tee se kansiossa, jonka polku on <code>/cs/home/yliopiston_tunnuksesi</code>. Mikäli kansiota ei löydy (yrittäessäsi siirtyä kansioon komennolla <code>cd</code> tulostuu <code>No such file or directory</code>), aktivoi ensin CS-käyttäjätunnuksesi <a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> täältä </a> löytyvien ohjeiden mukaan.
+Mikäli teet Exercisen osaston koneella, tee se kansiossa, jonka polku on <code>/cs/home/yliopiston_tunnuksesi</code>. Mikäli kansiota ei löydy (yrittäessäsi siirtyä kansioon komennolla <code>cd</code> tulostuu <code>No such file or directory</code>), aktivoi ensin CS-käyttäjätunnuksesi <a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> täältä </a> löytyvien ohjeiden mukaan.
 </div>
 </div>
 
@@ -794,13 +812,13 @@ Huomaa kuitenkin, että jotkin asiat toimivat skripteissä eri tavalla kuin olet
 Jotta skriptin voi ajaa, käyttäjälle tulee ensin antaa siihen ajo-oikeudet komennolla `chmod`.
 
 <div class="exercise">
-<h3>Tehtävä 15: Pieni bash-skripti {% include points.html text="5%" %}</h3>
+<h3>Exercise 15: Pieni bash-skripti {% include points.html text="5%" %}</h3>
 
 <ol>
 <li>Etsi netistä, miten bash-kielessä voi tulostaa tekstiä terminaaliin. </li>
 <li>Kirjoita pieni skripti, joka tulostaa "Hello world!". </li>
 <li> Aja kirjoittamasi skripti.</li>
-<li>Selvitä sen jälkeen, miksi yleensä ensimmäisessä ohjelmointitehtävässä tulostetaan teksti "Hello world!".</li >
+<li>Selvitä sen jälkeen, miksi yleensä ensimmäisessä ohjelmointiExercisessä tulostetaan teksti "Hello world!".</li >
 </ol>
 
 </div>

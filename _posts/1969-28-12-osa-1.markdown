@@ -238,7 +238,8 @@ Ota selvää miten <code>nano</code> toimii käyttämällä Googlea tai <code>ma
 <li> Miten voin kopioida ja liittää nanoon</li>
 </ul>
 
-Tarkista, että osaat tehdä nämä asiat: Avaa tiedosto <code>eimerkki.txt</code>, lisää sinne tekstiä ja tallenna. Avaa sen jälkeen tiedoston jollain tekstieditorilla varmistaaksesi, että sisältö on tallentunut.
+
+Tarkista, että osaat tehdä nämä asiat käytännössä! Esimerkiksi avaa tiedosto <code>esimerkki.txt</code>, lisää sinne tekstiä ja tallenna. Avaa sen jälkeen tiedoston jollain tekstieditorilla varmistaaksesi, että sisältö on tallentunut.
 
 </div>
 
@@ -258,7 +259,7 @@ Vastaavanlainen, mutta paljon enemmän ominaisuuksia sisältävä komentolinjall
 
 Polku (englanniksi _path_) tarkoittaa osoitetta tiettyyn tiedostoon tai kansioon. Se koostuu lähinnä kansioiden ja tiedostojen nimistä ja `/`-merkistä. Polkuja käytetään komentojen argumenteissa.
 
-Polku voi olla _suhteellinen_ tai _absoluuttinen_: suhteellinen polku merkitään suhteessa nykyiseen kansioon, absoluuttinen suhteessa järjestelmän _juurikansioon_. Juurikansio sisältää kaikki tietokoneen tiedostot, eikä sitä tule sekoittaa käyttäjäkohtaiseen kotihakemistoon. Juurikansio sisältää siis kaikkien käyttäjien kotihakemistot.
+Polku voi olla _suhteellinen_ tai _absoluuttinen_: Suhteellinen polku merkitään suhteessa nykyiseen kansioon, absoluuttinen suhteessa järjestelmän _juurikansioon_ (englanniksi _root folder_ tai _the root_). Juurikansio sisältää kaikki tietokoneen tiedostot, eikä sitä tule sekoittaa käyttäjäkohtaiseen kotihakemistoon. Juurikansio sisältää siis kaikkien käyttäjien kotihakemistot.
 
 <div class="warning">
 Ole varovainen juurihakemiston kanssa! Se sisältää kaikenlaista tärkeää, älä siis muuta turhaan tiedostoja tai poista kansioita juuressa.
@@ -294,7 +295,8 @@ Luo ensin kuvaa vastaava kansiorakenne:
 <img src="/assets/lapio_start.png" alt="Alkutilanne"/>
 
 <p>
-Oheisessa kansiorakenteessa siis <code>koulu</code>-kansio sisältää kolme kansiota: <code>lapio</code>, <code>ohpe</code> ja <code>ohja</code>, joista jokainen sisältää puolestaan vähintään yhden tiedoston.
+Oheisessa kansiorakenteessa siis <code>koulu</code>-kansio sisältää kolme kansiota: <code>lapio</code>, <code>ohpe</code> ja <code>ohja</code>. <code>lapio</code> kansio sisältää tiedoston <code>kmntorivi.txt`</code>, <code>ohpe</code> kansio tiedoston <code>luento1.txt</code>, ja <code>ohja</code> tiedostot <code>luento2.txt</code> sekä <code>java.txt</code>.
+
 Luo ensin <code>koulu</code>-kansio, ja siirry sen jälkeen sen sisään. Tämän jälkeen luo kuvan mukainen tiedostorakennelma. Pyri luomaan osa tiedostoista suoraan koulu-kansiosta, ja osa niin, että siirryt alikansioon sisään ennen kuin luot sinne tiedoston.
 </p>
 
@@ -307,7 +309,7 @@ Luo ensin <code>koulu</code>-kansio, ja siirry sen jälkeen sen sisään. Tämä
 
 Graafisessa ympäristössä kopiointi onnistuu näppäinyhdistelmällä <kbd>CTRL + C</kbd>, leikkaus yhdistelmällä <kbd> CTRL + X</kbd> ja liittäminen yhdistelmällä <kbd>CTRL + V</kbd>. Katsotaan miten vastaavat asiat saadaan tehtyä komentorivillä.
 
-Kopiointia varten on komento `cp` eli <b>c</b>o<b>p</b>y. Se ottaa argumenteiksi kopioitavan tiedoston polun ja uuden tiedoston polun: `cp esimerkki.txt esimerkki2.txt` kopioisi siis `esimerkki.txt`:n `esimerkki2.txt` nimiseksi tiedostoksi samaan kansioon. Huomaa, että polkujen avulla voit viitata tiedostoihin tai kansioihin eri hakemistossa: `cp esimerkki.txt ~/Documents/esimerkki2.txt` kopioisi tiedoston suoraan `Documents`-kansioon nimellä `esimerkki2.txt`.
+Kopiointia varten on komento `cp` eli <b>c</b>o<b>p</b>y. Se ottaa argumenteiksi kopioitavan tiedoston polun ja uuden tiedoston polun: `cp esimerkki.txt esimerkki2.txt` kopioisi siis `esimerkki.txt`:n `esimerkki2.txt` nimiseksi tiedostoksi samaan kansioon. Huomaa, että polkujen avulla voit viitata tiedostoihin tai kansioihin eri hakemistossa: `cp esimerkki.txt ~/Documents/esimerkki2.txt` kopioisi tiedoston suoraan `Documents`-kansioon nimellä `esimerkki2.txt`. Mikäli toisena argumenttina annetaan olemassaoleva kansio, tiedosto kopioidaan muuttamatta sen nimeä. Esimerkiksi ajamalla `cp esimerkki.txt ~/Documents/` tiedosto `esimerkki.txt` siirretään `Documents`-kansioon, mutta sen nimi ei muutu.
 
 Tiedostoja voi siirtää käyttäen `mv`-komentoa, joka tulee sanoista <b>m</b>o<b>v</b>e. Komento toimii samalla tavalla kuin `cp`, paitsi että alkuperäinen tiedosto poistetaan, ja jää vain uusi tiedosto. Tämä vastaa graafisen käyttöliittymän "leikkaa"-toimintoa. Komennolla `mv` voi myös uudelleennimetä tiedostoja: jos toisena argumenttina annettu polku viittaa samaan kansioon kuin ensimmäinen polku, kopion nimeäminen ja alkuperäisen tiedoston poistamisen tuloksena on uudelleennimetty tiedosto.
 
@@ -833,9 +835,11 @@ Paketinhallintajärjestelmän avulla voidaan myös päivittää ja poistaa paket
 
 Järjestelmästä riippuen ohjelmien asentaminen voi vaatia pääkäyttäjän oikeudet, jolloin komennon eteen on lisättävä `sudo`.
 
-Ohjelman asentaminen ilman pakettienhallintajärjestelmää sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
+Ohjelman asentaminen on myös mahdollista ilman pakettienhallintajärjestelmää. Prosessi on jonkin verran pidempi ja monimutkaisempi. Tällöin asentaminen sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
 
-Järjestelmän ympäristö voidaan lisäksi määritellä skripteissä niin, että niitä ei tarvitse erikseen määritellä session loputtua. Tällaisia on esimerkiksi `~/.bashrc`, joka ajetaan joka kerta, kun terminaali käynnistetään ja `~/bash_profile`, joka ajetaan jokaisella kirjautumisella. Voit lukea näistä tiedostoista ja niiden käytöstä muun muassa [täältä](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html). Esimerkiksi `PATH`-ympäristömuuttuja määritellään yleensä `.bashrc`-tiedostoon.
+Järjestelmän ympäristö voidaan lisäksi määritellä skripteissä niin, että niitä ei tarvitse erikseen määritellä uudelleen aina session loputtua. Tällaisia on esimerkiksi `~/.bashrc`, joka ajetaan Linuxissa joka kerta, kun terminaali käynnistetään ja `~/.bash_profile`, joka ajetaan jokaisella kirjautumisella. MacOSin oletusterminaali ajaa `~/.bashrc`-tiedoston sijaan jokaisen uuden terminaali-ikkunan avautuessa `~/.bash_profile`-tiedoston.
+
+Voit lukea näistä tiedostoista ja niiden käytöstä muun muassa [täältä](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html). Esimerkiksi `PATH`-ympäristömuuttuja määritellään Linuxissa yleensä `.bashrc`-tiedostoon.
 
 <h2> Loppusanat</h2>
 
