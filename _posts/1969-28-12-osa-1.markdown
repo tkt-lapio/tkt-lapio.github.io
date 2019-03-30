@@ -409,7 +409,7 @@ muistio.txt
 Esimerkissä siis `ls`-komennon tulostus ohjattiin putken avulla edelleen komennolle `grep`. Ilman `|`-komentoa, ensimmäisen komennon tulostus olisi pitänyt ensin kirjoittaa tiedostoon ja sen jälkeen lukea ja filtteröidä `grep`illä. Komentoa `grep` käyttäen tulosteen pystyi suoraan jakamaan komentojen välillä. Joskus voi kuitenkin olla hyödyllistä kirjoittaa tuloste tiedostoon esimerkiksi tallennusta varten, sillä terminaalin tulosteita voi selata taaksepäin vain rajallisen määrän. Tähän tarkoitukseen sopiva operaattori on nuoli oikealle `>`, joka siirtää komennon tulosteen _tiedostoon_. Esimerkiksi `ls > listaus.txt` siirtää tiedostolistauksen `listaus.txt`-nimiseen tiedostoon, luoden kyseisen tiedoston jos sitä ei ole jo olemassa.
 
 <div class="note">
-Komento <code>></code> korvaa kohdetiedoston koko sisällön annetulla tekstillä, <code>>></code> lisää sen kohdetiedoston loppuun uudelle riville.
+Operaattori <code>></code> korvaa kohdetiedoston koko sisällön annetulla tekstillä, <code>>></code> lisää sen kohdetiedoston loppuun uudelle riville.
 </div>
 
 <div class="exercise">
