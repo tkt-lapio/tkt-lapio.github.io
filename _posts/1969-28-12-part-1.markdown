@@ -71,9 +71,9 @@ Note that in the instructions found online there is often the <code>$</code>-sym
 </div>
 
 
-![A MacOS terminal](/assets/mac_terminal.png)
+![A MacOS terminal](/assets/mac_terminal.png){:class="img-responsive"}
 
-![A Linux terminal](/assets/ubuntu_terminal.jpg)
+![A Linux terminal](/assets/ubuntu_terminal.jpg){:class="img-responsive"}
 
 You can see the default terminals for MacOS and Ubuntu above.
 
@@ -130,7 +130,7 @@ You can browse the <code>man</code> page using the arrow keys, and exit by press
 
 Options are sometimes given two forms: a short form, which is usually just on character, and a long one. The short form is given to the command with just one dash (-), and the long form using two dashes (--). The `man` page displays both options, as you can see in the image above.
 
-Notice that if you want to give a command an argument, which contains spaces, it has to be given inside quotation marks. Otherwise the command line will interpret it as a separate command or argument.
+Note that if you want to give a command an argument, which contains spaces, it has to be given inside quotation marks. Otherwise the command line will interpret it as a separate command or argument.
 
 ```
 ls "i am a badly named file"
@@ -364,98 +364,80 @@ Files can be removed with the command <code>rm</code> (<b>r</b>e<b>m</b>ove).
 
 </div>
 
-<h2> Villikortit</h2>
+<h2> Wild cards</h2>
 
-Sekä `mv` että `cp` (ja melkein kaikki muutkin Unix-tyyppisen ympäristön komennot) tukevat ns. villikortteja, joiden avulla on kätevää suorittaa operaatioita useammalle tiedostolle samaan aikaan. Ehkä yleisin villikortti, eli `*`, toimii siten, että se vastaa mitä tahansa määrää mitä tahansa merkkiä. Esimerkiksi komento `mv *.txt esimerkki/` siirtäisi kaikki nykyisen kansion `.txt`-päätteiset tiedostot esimerkki-nimiseen kansioon nykyisen kansion alla.
+_Wild cards_ allow one to perform operations on several files at the same time. Their use is supported by almost all commands in the Unix environment, unlcuding `mv` and `cp`. Perhaps the most common wild card `*` corresponds to any amount of any given symbol. It can be used at any point of a string. For example the command `mv *.txt example/` moves all the files in the current directory ending with `.txt` to a folder caller `example`. Similarly `mv test* tests/` would move all the files starting with `test` to a  folder called `tests`.
+
 
 ```bash
-user@hal9000:~/esimerkki$ ls
-kohde teksti.txt muistio.txt toinen.png
-user@hal9000:~/esimerkki$ mv *.txt kohde/
-user@hal9000:~/esimerkki$ ls
-kohde toinen.png
+user@hal9000:~/example$ ls
+target file.txt note.txt picture.png
+user@hal9000:~/example$ mv *.txt target/
+user@hal9000:~/example$ ls
+target toinen.png
 ```
-
-Samoin `mv test* tests/` siirtäisi kaikki `test`-alkuiset tiedostot ja hakemistot `tests`-nimiseen kansioon.
 
 <div class="exercise">
-<h3>Exercise 8: Villikortti {% include points.html text="10%" %}</h3>
-Tee kansio nimeltä <i>kuvia</i> komentorivillä, ja lataa sinne internetistä kaksi kuvaa, joista toinen on <code>jpg</code>-muotoinen, ja toinen <code>png</code>-muotoinen. Lisää sen lisäksi kansioon joitain tiedostoja, esimerkiksi nimillä <code>tiedosto.txt</code> ja <code>en_ole_kuva.txt</code>. Luo lopuksi kansio nimeltä <code>kuvat</code> ja kopioi sinne tutoriaalia hyödyntäen kaikki kuvat nykyisestä hakemistosta. Voit lukea muista mahdollisista villikorteista esimerkiksi <a href="http://www.linfo.org/wildcard.html">täältä</a>.
+<h3>Exercise 8: Wild cards {% include points.html text="10%" %}</h3>
+Create a file called <i>pictures</i> on the command line, and download a <code>jpg</code> and a <code>jpg</code> formatted picture. Then add some text files to the folder, for example <code>i_am_a_file.txt</code> or <code>i_am_not_a_picture.txt</code>. Finally create a folder called <code>pictures</code> and copy all the pictures in the subfolder using wild cards. You can read about other wild cards from <a href="http://www.linfo.org/wildcard.html">here</a> for example.
 </div>
 
-Kuten mainittu, villikortit toimivat myös muissa komennoissa. Esimerkiksi hyödyllistä `tree`-komentoa, joka näyttää kansioiden alikansiot ja tiedostot puumaisena rakenteena, voi käyttää näyttämään vain tietyillä kirjaimilla alkavat kansiot seuraavasti.
+<h2> Other useful commands</h2>
+
+Sometimes one might one to examine text files without opening a text editor. The easiest command for doing this is `cat`, which prints tout the contents of a text file:
 
 ```
-user@hal9000:~/esimerkki$ ls
-kohde kohteeton muistio.txt
-user@hal9000:~/esimerkki$ tree
-.
-├── kohde
-│   └── olen_tiedosto_kansion_kohde_sisällä.txt
-├── kohteeton
-│   └── olen_tiedosto_kansion_kohteeton_sisällä.txt
-└── muistio.txt
-
-2 directories, 3 files
-user@hal9000:~/esimerkki$ tree koh*
-kohde
-│   └── olen_tiedosto_kansion_kohde_sisällä.txt
-kohteeton
-└── olen_tiedosto_kansion_kohteeton_sisällä.txt
-
-0 directories, 2 files
+user@hal9000:~/esimerkki$ cat example.txt
+i am 
+inside
+the example file
 ```
 
-<h2> Muita hyödyllisiä komentoja</h2>
+However, if the text file is large, we might not want to print out all the lines. Using `head` or `tail` one can print only a specific amount of lines from the beginning or end of a file. The amount of lines printed is given to a parameter for the flag `-n`.
 
-Joskus on hyödyllistä pystyä tarkastelemaan tekstitiedostoja suoraan komentoriviltä avaamatta erillistä editoria. Helpoin komento tätä varten on `cat` (katenoi), joka tulostaa suoraan tiedoston sisällön:
-
-```
-user@hal9000:~/esimerkki$ cat esimerkki.txt
-olen
-esimerkkitiedoston
-sisältö
-```
-
-Jos tiedosto on kovin iso, tulee rivejä paljon. Usein niistä tarvitsee vain alun tai lopun, jossa auttavat komennot `head` ja `tail`. Molemmat komennot tulostavat vakiona 10 riviä, mutta sitä voi vaihtaa `-n`-vivulla. Esimerkiksi vain ensimmäisen ja viimeisen rivin saa näin:
+For example you can only print the first and the last rows with:
 
 ```
-user@hal9000:~/esimerkki$ tail -n 1 esimerkki.txt
-sisältö
-user@hal9000:~/esimerkki$ head -n 1 esimerkki.txt
-olen
+user@hal9000:~/example$ tail -n 1 example.txt
+the example file
+user@hal9000:~/example$ head -n 1 example.txt
+i am
 ```
 
-Tässä siis vivulle `-n` annettiin argumenttina luku 1.
+In the above example we gave 1 as an argument for the flag `-n`.
 
-On myös mahdollista etsiä tiettyjä rivejä tiedostoista. Tähän löytyy erittäin hyödyllinen `grep`-komento (search <b>g</b>lobally for a <b>r</b>egular <b>e</b>xpression and <b>p</b>rint), joka antaa käyttäjän filtteröidä rivejä tiedostoista annettujen ehtojen perusteella. Grep toimii perustapauksessa niin, että se palauttaa kaikki **rivit** joissa esiintyy annettu merkkijono juuri sellaisenaan kun se annettiin. Yksinkertaisimmillaan sen toiminta on siis seuraavanlaista:
+It is also possible to search for specific lines in a file. This can be done with the commans `grep` (search <b>g</b>lobally for a <b>r</b>egular <b>e</b>xpression and <b>p</b>rint). The command `grep` allows you to filter out specific lines from a file based on some criteria. By default `grep` returns all the **lines** which contain the exact string given as an argument. Here is an example demonstrating the basic functionality:
 
 ```
-user@hal9000:~/esimerkki$ cat päiväkirja.txt
-Lokakuun kuudes päivä.
+user@hal9000:~/example$ cat diary.txt
+October 6th
 
-Tämä on päiväkirjani, se sisältää paljon salaisuuksia.
+Dear diary,
 
-Tämä rivi taas on vähemmän salainen.
+I can't wait to tell you all my secrets. 
 
-user@hal9000:~/esimerkki$ grep "salai" päiväkirja.txt
-Tämä on päiväkirjani, se sisältää paljon salaisuuksia.
-Tämä rivi taas on vähemmän salainen.
+Today was a good day. I was appointed the secretary of my student association.
+
+I won't be secretive, I'm so happy!
+
+I'll write again soon.
+user@hal9000:~/example$ grep "secret" diary.txt 
+I can't wait to tell you all my secrets. 
+Today was a good day. I was appointed the secretary of my student association.
+I won't be secretive, I'm so happy!
 ```
 
-Huomaa, että osuma löytyy, vaikka se oli sanan keskellä. Useimmissa ympäristöissä komento myös maalaa (järjestelmästä riippuen) täsmätyn osan tiedostosta esimerkiksi punaisella:
-![grep-esimerkki](/assets/päiväkirja.png){:class="img-responsive"}
+Note that the filtering also included occurences inside another string. In most environments grep also highlights the found words with red:
+![grep-example](/assets/secret.png){:class="img-responsive"}
 
 <div class="exercise">
 <h3>Exercise 9: grep {% include points.html text="10%" %}</h3>
-Ilman erillisiä vipuja <code>grep</code> ei kohtele kirjaimia samana, jos ne ovat eri kokoisia. Esimerkiksi "a" ja "A" ovat sille siis erilaisia kirjaimia.
-<ul>
-<li>Tarkastele <code>grep --help</code> apusivun tulosta tai <code>man</code>-sivua, ja ota selvää miten pääset eroon kirjainkoon erottelusta.</li>
-<div class="note">
-Vinkki: Kirjainkoko on englanniksi "case".
-</div>
+By default <code>grep</code> is case sensitive, which means that it treats "a" and "A" differently when searching for matches.
 
-<li>Ota selvää esimerkiksi Googlettaen, miten saat haettua vain merkkijonoja, jotka ovat rivin alussa. Tarkista, että osaat tehdä tämän. Voit tehdä sen kirjoittamalla tiedostoon esimerkiksi</li>
+<ul>
+<li>Take a look at the output of <code>grep --help</code> or grep's <code>man</code> page, and find out how you can make grep ignore case.</li>
+
+<li>Find out (using Google for example) how you can only match occurences which are at the beginning of a line. Make sure you understood how to do this by practicing. You can for example write the following to a file:</li>
 </ul>
 </div>
 ```
@@ -463,61 +445,77 @@ Unix
 Linux
 macOS
 UNiX
-päivänkakkara-unix
+unique-unix
 unIX
-Käyttöjärjästelmänä unix
+Operating system unix
 UNIX
 unix
 unisport
 ```
 <div class="exercise">
-ja tarkistamalla että saat <code>grep</code>in avulla valittua oikeat sanat.
+and then make sure you can filter out the appropriate words with grep.
 </div>
 
 <div class="note">
-Etsiessäsi tietoa netistä komennoista ja niiden toiminnoista, varmista aina, että ymmärrät varmasti lukemasi testaamalla mahdollisuuksien mukaan niiden toiminnallisuutta. Tällä tavalla opit helpommin, ja huomaat nopeammin mahdolliset väärinymmärrykset.
+When looking for information on the internet about any commands, always make sure you test out their functionality on the command line. This makes it easier to notice if you've misunderstood something.
 </div>
 
-Edellä mainitut ovat tärkeitä komentoja komentorivillä työskentelijän arsenaalissa, mutta niiden hyöty tulee kunnolla esille vasta kun ne yhdistetään muihin komentoihin. Komentorivillä komentojen yhdistäminen tapahtuu yleensä joko putkella `|`, tai nuolella `>`. Tarkastellaan seuraavaksi näitä operaattoreita.
+The true power of tools like `grep` comes out when it is paired with other commands. The output of another command can be passed on to another command with the operator `|`, usually called _the pipe_. With the pipe you can do more complicated operations which require several programs with just one line.
 
-Putki siirtää eteenpäin ensimmäisen komennon tulosteen toiselle komennolle. Esimerkiksi `ls` komennon näyttämistä tiedostonnimistä voi helposti hakea `grep`illä tiettyä tiedostoa putken avulla:
+An example of using a pipe is to pass the output of `ls` to `grep` in order to filter out specific filenames:
 
 ```
-user@hal9000:~/esimerkki$ ls
-esimerkki.txt muistio2.txt muistio.txt
-user@hal9000:~/esimerkki$ ls | grep muistio
-muistio2.txt
-muistio.txt
+user@hal9000:~/example$ ls
+example.txt note2.txt note.txt
+user@hal9000:~/example$ ls | grep note
+note2.txt
+note.txt
 ```
 
-Esimerkissä siis `ls`-komennon tulostus ohjattiin putken avulla edelleen komennolle `grep`. Ilman `|`-komentoa, ensimmäisen komennon tulostus olisi pitänyt ensin kirjoittaa tiedostoon ja sen jälkeen lukea ja filtteröidä `grep`illä. Komentoa `grep` käyttäen tulosteen pystyi suoraan jakamaan komentojen välillä.
+If one couldn't use the pipe, the output of `ls` would have had to be written to a separate file before filtering with grep. The pipe allowed sharing the output of `ls` between the commands seamlessly.
 
-Joskus voi kuitenkin olla hyödyllistä kirjoittaa tuloste tiedostoon esimerkiksi tallennusta varten, sillä terminaalin tulosteita voi selata taaksepäin vain rajallisen määrän. Tähän tarkoitukseen sopiva operaattori on nuoli oikealle `>`, joka siirtää komennon tulosteen _tiedostoon_. Esimerkiksi `ls > listaus.txt` siirtää tiedostolistauksen `listaus.txt`-nimiseen tiedostoon, luoden kyseisen tiedoston jos sitä ei ole jo olemassa.
+However, sometimes writing outputs to files can be useful. The size of a terminal window is limited, and its contents cannot be scrolled backwards infinitely. Large outputs should be written to files in order to access tehm fully. This can be done with the operator `>`, which takes the name of the file to be written as an argument. For example `ls > listing.txt` moves the file listing to a file called "listing.txt", creating the file if it doesn't already exist.
+
+Similarly, the operator `<` allows giving the contents of files as an argument to a command. This is again useful, if the input in question is too large to paste or the task has to be automated.
+
+```
+user@hal9000:~/example$ ls 
+Applications	Library		      Pictures	      kissakuvia
+Desktop		    Linus_Torvalds	Public          script.sh
+Documents	    Movies	        Downloads	Music
+user@hal9000:~/example$ ls | grep Do
+Documents
+Downloads
+user@hal9000:~/example$ ls > listing.txt
+user@hal9000:~/example$ grep Do listing.txt 
+Documents
+Downloads
+user@hal9000:~/example$ 
+```
 
 <div class="note">
-Komento <code>></code> korvaa kohdetiedoston koko sisällön annetulla tekstillä, <code>>></code> lisää sen kohdetiedoston loppuun uudelle riville.
+The operator <code>></code> overwrites the contents of the file with the given text and <code>>></code> appends them to a new line, not affecting the old contents.
 </div>
 
 <div class="exercise">
-<h3>Exercise 10: Opiskelijan muistiinpanot {% include points.html text="5%" %}</h3>
-Luo tekstitiedosto <code>muistiinpanot.txt</code> komentorivillä. Kopioi sinne seuraava teksti, joka kuvailee erään opiskelijan ajatuksia tiettynä viikkona:
+<h3>Exercise 10: A student's notes {% include points.html text="5%" %}</h3>
+Create a text file called <code>notes.txt</code> on the command line. Paste inside the following text which describes the week of a typical student:
 </div>
 ```
-maanantai ohpe: Java on ohjelmointikieli
-maanantai unicafe: Kalakeittoa
-tiistai ohpe: Luokka voi toteuttaa rajapinnan
-tiistai jtkt: Turingin testi on vaikea läpäistä
-tiistai unicafe: Kanawokkia
-keskiviikko ohpe: Java-ohjelmalla on oltava main-metodi
-keskiviikko jtkt: Internet on iso paikka
-keskiviikko unicafe: Papupataa
-torstai unicafe: Hernekeittoa ja pannukakkua
-torstai lapio: Komentorivi on musta laatikko
-perjantai unicafe: Pitsaa
+monday intro to java: Java is a programming language
+monday unicafe: Fish shoup
+tuesday intro to java: A class can implement an interface
+tuesday intro to cs: Turing tests are hard to pass
+tuesday unicafe: Chicken and noodles
+wednesday intro to java: A java program has to have a main method
+wednesday intro to cs: The internet is a big place
+wednesday unicafe: beans and rice
+thursday unicafe: Hernekeittoa ja pannukakkua
+thursday lapio: The command line is a black box
+friday unicafe: Pizza
 ```
 <div class="exercise">
-Eriytä tämän jälkeen viikon ruokalista omaksi tiedostokseen <code>unicafe.txt</code>. Ruokalistoja ei tarvitse poistaa <code>muistiinpanot.txt</code>-tiedostosta. Eriytä myös kurssiin <code>ohpe</code> liittyvät muistiinpanot.
-
+Then separate the menu of this week to its own file <code>unicafe.txt</code>. You don't have to remove the menu from the <code>notes</code> file. Also separate the notes concerning the course Introduction to Java.
 </div>
 
 <h2> SSH-yhteys</h2>
@@ -590,7 +588,7 @@ Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. T�
 
 Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Julkinen avain lisätään polkuun `~/.ssh/authorized_keys`, siis kotihakemiston kansioon `.ssh`, tiedostoon nimeltä [authorized_keys](https://www.ssh.com/ssh/authorized_keys/). Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Yliopiston palvelimella joudut luultavasti luomaan kansion ja tiedoston itse.
 
-![Kuva SSH-avaimen käytöstä](/assets/ssh-selitys.png)
+![Kuva SSH-avaimen käytöstä](/assets/ssh-selitys.png){:class="img-responsive"}
 
 Julkisen avaimen saa siirrettyä kohdepalvelimelle esimerkiksi komennolla <code>scp</code>, jonka avulla on mahdollista kopioida tiedostoja palvelimelta toiselle (vertaa komentoon `cp`). Komentoa käytetään seuraavasti:
 
@@ -717,7 +715,7 @@ Sen jälkeen on tiedoston omistajan nimi ja ryhmän nimi. Tässä tapauksessa ry
 
 Yllä näkyvässä esimerkissä siis `muistio.txt`-tiedostolle on omistajalla luku, kirjoitus ja ajo-oikeus, ryhmällä ja muilla taas on lukuoikeus. Kansiolla `päiväkirjamerkinnät` taas on vain sen omistajalle luku, muokkaus ja ajo-oikeudet, eikä ryhmällä tai muilla käyttäjillä ole näitä oikeuksia. Tiedostoa `artikkeli.txt` voivat kaikki lukea, mutteivät muokata tai ajaa.
 
-![Kuva komennon ls -l tulostuksen osista](/assets/permission-selitys.png)
+![Kuva komennon ls -l tulostuksen osista](/assets/permission-selitys.png){:class="img-responsive"}
 
 Oikeuksia voi muuttaa tiedoston tai kansion omistaja, tai järjestelmän ylläpitäjä. Niiden muokkaamiseen komentoriviltä tarkoitettu komento on `chmod` (_change mode_). Se ottaa argumenttina merkkijonon, joka kertoo lisätäänkö vai poistetaanko oikeuksia, kenelle oikeuksia annetaan, sekä tiedoston tai kansion jolle komento tulee suorittaa.
 

@@ -343,7 +343,8 @@ Tiedostoja voidaan poistaa komennolla <code>rm</code>, eli <b>r</b>e<b>m</b>ove.
 
 <h2> Villikortit</h2>
 
-Sekä `mv` että `cp` (ja melkein kaikki muutkin Unix-tyyppisen ympäristön komennot) tukevat ns. villikortteja, joiden avulla on kätevää suorittaa operaatioita useammalle tiedostolle samaan aikaan. Ehkä yleisin villikortti, eli `*`, toimii siten, että se vastaa mitä tahansa määrää mitä tahansa merkkiä. Esimerkiksi komento `mv *.txt esimerkki/` siirtäisi kaikki nykyisen kansion `.txt`-päätteiset tiedostot esimerkki-nimiseen kansioon nykyisen kansion alla.
+Sekä `mv` että `cp` (ja melkein kaikki muutkin Unix-tyyppisen ympäristön komennot) tukevat ns. villikortteja, joiden avulla on kätevää suorittaa operaatioita useammalle tiedostolle samaan aikaan. Ehkä yleisin villikortti, eli `*`, toimii siten, että se vastaa mitä tahansa määrää mitä tahansa merkkiä. Sitä voi käyttää missä tahansa kohdassa merkkijonoa. Esimerkiksi komento `mv *.txt esimerkki/` siirtäisi kaikki nykyisen kansion `.txt`-päätteiset tiedostot esimerkki-nimiseen kansioon nykyisen kansion alla. Samoin `mv test* tests/` siirtäisi kaikki `test`-alkuiset tiedostot ja hakemistot `tests`-nimiseen kansioon.
+
 
 ```bash
 tunnus@hal9000:~/esimerkki$ ls
@@ -353,35 +354,10 @@ tunnus@hal9000:~/esimerkki$ ls
 kohde toinen.png
 ```
 
-Samoin `mv test* tests/` siirtäisi kaikki `test`-alkuiset tiedostot ja hakemistot `tests`-nimiseen kansioon.
-
 <div class="exercise">
 <h3>Tehtävä 8: Villikortti {% include points.html text="10%" %}</h3>
 Tee kansio nimeltä <i>kuvia</i> komentorivillä, ja lataa sinne internetistä kaksi kuvaa, joista toinen on <code>jpg</code>-muotoinen, ja toinen <code>png</code>-muotoinen. Lisää sen lisäksi kansioon joitain tiedostoja, esimerkiksi nimillä <code>tiedosto.txt</code> ja <code>en_ole_kuva.txt</code>. Luo lopuksi kansio nimeltä <code>kuvat</code> ja kopioi sinne tutoriaalia hyödyntäen kaikki kuvat nykyisestä hakemistosta. Voit lukea muista mahdollisista villikorteista esimerkiksi <a href="http://www.linfo.org/wildcard.html">täältä</a>.
 </div>
-
-Kuten mainittu, villikortit toimivat myös muissa komennoissa. Esimerkiksi hyödyllistä `tree`-komentoa, joka näyttää kansioiden alikansiot ja tiedostot puumaisena rakenteena, voi käyttää näyttämään vain tietyillä kirjaimilla alkavat kansiot seuraavasti.
-
-```
-tunnus@hal9000:~/esimerkki$ ls
-kohde kohteeton muistio.txt
-tunnus@hal9000:~/esimerkki$ tree
-.
-├── kohde
-│   └── olen_tiedosto_kansion_kohde_sisällä.txt
-├── kohteeton
-│   └── olen_tiedosto_kansion_kohteeton_sisällä.txt
-└── muistio.txt
-
-2 directories, 3 files
-tunnus@hal9000:~/esimerkki$ tree koh*
-kohde
-│   └── olen_tiedosto_kansion_kohde_sisällä.txt
-kohteeton
-└── olen_tiedosto_kansion_kohteeton_sisällä.txt
-
-0 directories, 2 files
-```
 
 <h2> Muita hyödyllisiä komentoja</h2>
 
@@ -471,8 +447,11 @@ Esimerkissä siis `ls`-komennon tulostus ohjattiin putken avulla edelleen komenn
 
 Joskus voi kuitenkin olla hyödyllistä kirjoittaa tuloste tiedostoon esimerkiksi tallennusta varten, sillä terminaalin tulosteita voi selata taaksepäin vain rajallisen määrän. Tähän tarkoitukseen sopiva operaattori on nuoli oikealle `>`, joka siirtää komennon tulosteen _tiedostoon_. Esimerkiksi `ls > listaus.txt` siirtää tiedostolistauksen `listaus.txt`-nimiseen tiedostoon, luoden kyseisen tiedoston jos sitä ei ole jo olemassa.
 
+Samoin operaattorin `<` avulla voidaan antaa tiedoston sisältö syötteenä ohjelmalle. Tämä on hyödyllistä käsiteltäessä suuria syötteitä, tai automatisoidessa tehtäviä.
+
+
 <div class="note">
-Komento <code>></code> korvaa kohdetiedoston koko sisällön annetulla tekstillä, <code>>></code> lisää sen kohdetiedoston loppuun uudelle riville.
+Operaattori <code>></code> korvaa kohdetiedoston koko sisällön annetulla tekstillä, <code>>></code> lisää sen kohdetiedoston loppuun uudelle riville.
 </div>
 
 <div class="exercise">
