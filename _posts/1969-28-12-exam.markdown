@@ -26,7 +26,7 @@ One must pass the exam in order to receive a grade from the course. The exam is 
   - 3
   - 5
 - The exam counts for 18 points.
-- 9 points are required to pass the course and 17 points are required for the grade 5.
+- 9 points are required to pass the course and 17 points (rounded up) are required for the grade 5.
 - If you don't pass the exam, you can retake it for an unlimited amount of times, until May 31st 2019 at 23:59. There must be a week between each retake.
 - The exam contains exercises of one and two points.
 - If you have trouble passing the exam please contact the course organizers.

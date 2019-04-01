@@ -25,7 +25,7 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
 - Kurssin arvosana-asteikossa on kolme arvosanaa:
   - alle 9 tenttipistettä: hylätty
   - vähintään 9 tenttipistettä: 3
-  - vähintään 17 kurssipistettä: 5
+  - vähintään 17 kurssipistettä (pyöristäen ylöspäin): 5
 - Mikäli et pääse tentistä läpi, voit suorittaa sen uudestaan aikaisintaan viikon päästä edellisestä suorituskerrasta, aina 31.5.2019 asti. Suorituskertojen määrälle ei ole ylärajaa.
 - Tentti sisältää yhden ja kahden pisteen tehtäviä.
 - Laskaripisteet merkitään Moodle-alueella jokaiselle osalle erikseen. Älä lähetä laskaripisteitä sähköpostilla, emme ota niitä silloin huomioon. Merkitse laskaripisteet ennen kuin suoritat tentin.
