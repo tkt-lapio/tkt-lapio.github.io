@@ -518,9 +518,11 @@ friday unicafe: Pizza
 Then separate the menu of this week to its own file <code>unicafe.txt</code>. You don't have to remove the menu from the <code>notes</code> file. Also separate the notes concerning the course Introduction to Java.
 </div>
 
-<h2> SSH-yhteys</h2>
+<h2> SSH connection</h2>
 
-Olemme tähän asti käyttäneet komentoriviä lähinnä omalla koneella olevien asioiden tarkasteluun. Komentoriviltä voidaan kuitenkin ottaa myös yhteys toiseen computereseen. SSH on salattu yhteystyyppi, joka mahdollistaa järjestelmään kirjautumisen etänä komentorivin kautta. Salattu yhteys tarkoittaa, että tietoa ei jaeta suoraan luettavassa muodossa: tarkoitus on, että vain valikoidut vastaanottajat pystyvät purkamaan salauksen ja lukemaan sisällön.
+Up until now we have used the command line to run programs on the local fule system. However, it is also possible to connect to another system using the command line. SSH is an encrypted connection protocol, which allows logging in to another computer using the command line. An encrypted connection means that infromation is not shared in a human readable plain text form. The goal is to make sure that only the intended recipients can decrypt the message and read its contents.
+
+In a Unix environment an SSH connection can be established with the command `ssh`. Its basic functionality is the following: `ssh user@server.address` connects to a server at `server.address` and tries to login as `user`. The user is asked their password, and if authentication is successfull, a connection is opened. Now the user can use the remote 
 
 Unix-ympäristössä ssh-yhteyden voi luoda komennolla `ssh`. Komennon perustoiminnalisuus on seuraava: `ssh user@palvelimen.osoite` ottaa yhteyden palvelimeen osoitteessa `palvelimen.osoite` ja yrittää kirjautua tunnuksella `user`. Käyttäjältä pyydetään tunnuksen salasanaa, ja autentikoinnin onnistuessa yhteys avautuu. Tämän jälkeen komentoriviltä voidaan ajaa tavalliseen tapaan komentoja, mutta nykyinen kansio sijaitseekin palvelimella, johon yhteys on luotu.
 

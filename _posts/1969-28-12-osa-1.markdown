@@ -812,7 +812,7 @@ Kun ohjelma on asennettu pakettienhallintajärjestelmän avulla, voidaan sitä y
 
 Paketinhallintajärjestelmän avulla voidaan myös päivittää ja poistaa paketteja. Ensimmäinen tapahtuu homebrew:ssa, aptissa ja apt-getissä kommenolla `upgrade` ja jälkimmäinen komennolla `remove`.
 
-Järjestelmästä riippuen ohjelmien asentaminen voi vaatia pääkäyttäjän oikeudet, jolloin komennon eteen on lisättävä `sudo`.
+Pakettienhallintajärjestelmällä ohjelmien asentaminen voi vaatia pääkäyttäjän oikeudet, jolloin komennon eteen on lisättävä `sudo`.
 
 Ohjelman asentaminen on myös mahdollista ilman pakettienhallintajärjestelmää. Prosessi on jonkin verran pidempi ja monimutkaisempi. Tällöin asentaminen sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
 
