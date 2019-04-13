@@ -410,8 +410,7 @@ Vinkki: Kirjainkoko on englanniksi "case".
 
 <li>Ota selvää esimerkiksi Googlettaen, miten saat haettua vain merkkijonoja, jotka ovat rivin alussa. Tarkista, että osaat tehdä tämän. Voit tehdä sen kirjoittamalla tiedostoon esimerkiksi</li>
 </ul>
-</div>
-```
+<pre>
 Unix
 Linux
 macOS
@@ -422,8 +421,7 @@ Käyttöjärjästelmänä unix
 UNIX
 unix
 unisport
-```
-<div class="exercise">
+</pre>
 ja tarkistamalla että saat <code>grep</code>in avulla valittua oikeat sanat.
 </div>
 
@@ -500,6 +498,8 @@ tunnus@melkki.cs.helsinki.fi's password:
 
 <div class="note">Huomaa, että salasanaa kirjoittaessasi on normaalia, että komentoriville ei ilmesty tekstiä.</div>
 
+Kun SSH-yhteys muodostetaan ensimmäisen kerran, ilmestyy varoitusviesti, jossa kysytään luottaako käyttäjä palvelimeen, johon yhteyttä ollana muodostamassa. Kun kirjoittaa `yes`, muistaa tietokoneesi palvelimesta tietyn sormenjäljen. Vaikka SSH-yhteys on suojattu, se ei ole täysin immuuni hyökkäyksille (kuten ei oikeastaan mikään internetissä toimiva asia). Jos saat viestin käyttäessäsi SSH-yhteyttä esimerkiksi julkisessa internetissä, kannattaa yhteys jättää muodostamatta, sillä koneesi saattaa olla hyökkäyksen kohteena.
+
 Kun yhteys on muodostettu, näyttää komentorivi erilaiselta:
 
 ```
@@ -508,7 +508,7 @@ tunnus@melkki:~$
 
 Komentorivin nykyinen kansio on siis muuttunut osaston koneiden kotihakemistoksi ja pääset käsiksi kaikkiin osaston koneella sijaitseviin tiedostoihin. Yhteyden voi lopettaa komennolla `exit`.
 
-Voit lukea SSH:sta lisää esimerkiksi [täältä](https://www.ssh.com/ssh/).
+Voit lukea SSH:sta lisää esimerkiksi [täältä](https://www.ssh.com/ssh/) tai [täältä](https://www.linux.fi/wiki/SSH).
 
 <h2> SSH-avainpari</h2>
 
@@ -546,6 +546,8 @@ Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. T�
 
 Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Julkinen avain lisätään polkuun `~/.ssh/authorized_keys`, siis kotihakemiston kansioon `.ssh`, tiedostoon nimeltä [authorized_keys](https://www.ssh.com/ssh/authorized_keys/). Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Yliopiston palvelimella joudut luultavasti luomaan kansion ja tiedoston itse.
 
+Alla näkyy kuva avainten oikeasta sijainneista, kun SSH-avainta käytetään osaston koneille kirjautumiseen.
+
 ![Kuva SSH-avaimen käytöstä](/assets/ssh-selitys.png)
 
 Julkisen avaimen saa siirrettyä kohdepalvelimelle esimerkiksi komennolla <code>scp</code>, jonka avulla on mahdollista kopioida tiedostoja palvelimelta toiselle (vertaa komentoon `cp`). Komentoa käytetään seuraavasti:
@@ -570,7 +572,7 @@ Julkisen avaimen kopioimisen voi myös delegoida komennolle [ssh-copy-id](https:
 
 Autentikaatio toimii oikein, kun otettaessa SSH-yhteyttä yliopiston koneisiin pääsee kirjautumaan SSH-avaimelle antamalla salasanalla yliopiston käyttäjätunnuksen sijaan.
 
-Jotta et joudu kirjoittamaan salasanaa joka kerralla, kannattaa yksityinen avain lisätä ssh-agentille, jolloin salasana tarvitsee kirjoittaa vain kirjauduttuasi järjestelmästä ulos. Tämä tapahtuu kahdella komennolla:
+Jotta et joudu kirjoittamaan salasanaa joka kerralla, kannattaa yksityinen avain lisätä ssh-agentille. Tällöin salasana tarvitsee kirjoittaa vain kirjauduttuasi järjestelmästä ulos. Tämä tapahtuu kahdella komennolla:
 
 ```
 # varmistetaan, että ssh-agentti on toimintavalmiudessa
@@ -579,10 +581,6 @@ eval `ssh-agent`
 # muuten anna argumentiksi yksityisen avaimen polku
 ssh-add
 ```
-<div class="note">
-`ssh-keygen`-komento kannattaa ajaa vivuilla <code>-t rsa -b 4096</code>. Ne varmistavat, että käytetty salausalgoritmi on <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA</a> ja että avaimesta tulee 4096 bittiä pitkä. Pitempi pituus tekee RSA:lla luodusta avaimesta turvallisemman.
-</div>
-
 Voit lukea lisää SSH:n konfiguroimisesta esimerkiksi [täältä](https://linux.fi/wiki/SSH).
 
 <div class="exercise">
@@ -615,8 +613,8 @@ Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toim
 <ol>
 <li>Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla</li>
 <li>Avaa tallennettu <code>.html</code>-päätteinen tiedosto selaimella, esim Firefoxilla tai Chromella (saat tiedoston helpoiten selaimella auki graafisesta tiedostonhallinnasta). Sivu näyttää luultavasti hieman erilaiselta kuin yleensä. </li>
-<li> Avaa tiedosto niin, että näet sen sisällä olevan HTML-koodin (toisin sanoen avaa se niin, että näet tiedoston sisällön koodina, eikä tiedosto aukea selaimessa).</li>
-<li>Mikä oli ohjelma, jota käytit kussakin tapauksessa tiedoston avaamiseen? Mieti, miten ohjelma käsitteli tiedoston sisällön.</li>
+<li> Avaa tiedosto niin, että näet sen sisällä olevan HTML-koodin (toisin sanoen avaa se niin, että näet tiedoston sisällön koodina, eikä tiedosto aukea selaimessa). Tunnistat koodin tageista, jotka määritellään merkeillä ">" ja "<". Alussa pitäisi myös näkyä tagi, jonka sisällä lukee "html".</li>
+<li>Mikä oli ohjelma, jota käytit kussakin tapauksessa tiedoston avaamiseen? Mieti yleisellä tasolla, miten ohjelma käsitteli tiedoston sisällön.</li>
 </ol>
 
 Tutustumme HTML-kieleen ja verkkosivuihin kolmannessa osassa, jossa opit myös kirjoittamaan HTML-dokumentteja.
@@ -659,11 +657,11 @@ total 8
 drwx------ 2 tunnus tunnus 130 kesä 14 17:54 päiväkirjamerkinnät
 ```
 
-Ensimmäinen sarake, joka sisältää hassuja sekoituksia kirjaimista ja merkeistä on kyseisen tiedoston oikeudet kertova merkkijono. Tässä sen ensimmäinen merkki on joko `d` tai `-`, joka kertoo onko kyseessä tiedosto (`-`) vai kansio, eli **d**irectory.
+Jokasiella kansion tiedostolla ja kansiolla on tulostuksessa oma rivinsä. Ensimmäinen sarake, joka sisältää hassuja sekoituksia kirjaimista ja merkeistä on kyseisen tiedoston oikeudet kertova merkkijono. Tässä sen ensimmäinen merkki on joko `d` tai `-`, joka kertoo onko kyseessä tiedosto (`-`) vai kansio, eli **d**irectory.
 
 Seuraavat yhdeksän merkkiä on varattu tiedoston tai kansion oikeuksille. Nämä oikeudet merkitään aina järjestyksessä lukuoikeus (r), kirjoitusoikeus (w) ja suoritusoikeus (x). Ensimmäiset kolme merkkiä kertovat sen omistajan oikeudet. Jos vastaavan kirjaimen tilalla on viiva, tarkoittaa merkintä, että oikeus puuttuu, eli sitä ei ole annettu.
 
-Seuraavat kolme merkkiä kertovat samaan tapaan _ryhmän_ oikeudet. Ryhmä on tapa, jolla samanlaisia käyttäjiä voi hallita - esimerkiksi kaikki opiskelijat saattaisivat olla osaston järjestelmissä yhdessä ryhmässä, jotta ryhmälle voidaan antaa tiettyjä oikeuksia.
+Seuraavat kolme merkkiä kertovat samaan tapaan _ryhmän_ oikeudet. Jokaiselle tiedostolle annetaan jokin ryhmä. Ryhmä on tapa, jolla samanlaisia käyttäjiä voi hallita - esimerkiksi kaikki opiskelijat saattaisivat olla osaston järjestelmissä yhdessä ryhmässä. Ryhmälle voidaan antaa tiettyjä oikeuksia, jotka pätevät kaikkiin sen jäseniin.
 
 Viimeiset kolme merkkiä taas näyttävät kaikkien muiden käyttäjien oikeudet. Tähän sarakkeeseen kuuluvat kaikki käyttäjät, jotka eivät ole tiedoston omistajia, tai kuulu sen ryhmään.
 
@@ -688,7 +686,7 @@ Annettu oikeus ja sen saaja voidaan määritellä kirjainten avulla:
 
 Jos oikeuden saajaa ei määritellä, chmod antaa kyseisen oikeuden kaikille käyttäjäryhmille (käyttäjälle, ryhmälle ja muille).
 
-`-` argumentti poistaa oikeuden, ja `+` antaa oikeuksia.
+Väliviiva `-` argumentti poistaa oikeuden, ja plussa `+` antaa oikeuksia.
 
 Esimerkkejä `chmod`in käytöstä:
 

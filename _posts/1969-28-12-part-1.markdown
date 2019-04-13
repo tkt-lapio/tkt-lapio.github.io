@@ -160,7 +160,7 @@ Note thath if you opened the graphical file browser using the command line, the 
 Because the combination <kbd>CTRL + C</kbd> has a special meaning on the command line, in Linux you will have to use <kbd>CTRL + SHIFT + C</kbd> to copy selected text and <kbd>CTRL + SHIFT + V</kbd> to paste.
 </div>
 
-Your home folder probably contains a bunch of miscellanous files and folders, like _Downloads_ and _Documents_. Open the command line in order to see the same folders on the text-based interface. You can do this by writing down `ls` and pressing <kbd>ENTER</kbd>. The output should something like this:
+Your home folder probably contains a bunch of miscellanous files and folders, like _Downloads_ and _Documents_. Open the command line in order to see the same folders on the text-based interface. You can do this by writing `ls` on the command line and pressing <kbd>ENTER</kbd>. The output should something like this:
 
 ```bash
 user@lcomputers:~$ ls
@@ -439,8 +439,7 @@ By default <code>grep</code> is case sensitive, which means that it treats "a" a
 
 <li>Find out (using Google for example) how you can only match occurences which are at the beginning of a line. Make sure you understood how to do this by practicing. You can for example write the following to a file:</li>
 </ul>
-</div>
-```
+<pre>
 Unix
 Linux
 macOS
@@ -451,8 +450,7 @@ Operating system unix
 UNIX
 unix
 unisport
-```
-<div class="exercise">
+</pre>
 and then make sure you can filter out the appropriate words with grep.
 </div>
 
@@ -522,45 +520,46 @@ Then separate the menu of this week to its own file <code>unicafe.txt</code>. Yo
 
 Up until now we have used the command line to run programs on the local fule system. However, it is also possible to connect to another system using the command line. SSH is an encrypted connection protocol, which allows logging in to another computer using the command line. An encrypted connection means that infromation is not shared in a human readable plain text form. The goal is to make sure that only the intended recipients can decrypt the message and read its contents.
 
-In a Unix environment an SSH connection can be established with the command `ssh`. Its basic functionality is the following: `ssh user@server.address` connects to a server at `server.address` and tries to login as `user`. The user is asked their password, and if authentication is successfull, a connection is opened. Now the user can use the remote 
+In a Unix environment an SSH connection can be established with the command `ssh`. Its basic functionality is the following: `ssh user@server.address` connects to a server at `server.address` and tries to login as `user`. The user is asked their password, and if authentication is successfull, a connection is opened. The working directory is changed to the remote server on the command line, and one can run commands as in the local environment, except the commands are run in the remote system where one just connected.
 
-Unix-ympäristössä ssh-yhteyden voi luoda komennolla `ssh`. Komennon perustoiminnalisuus on seuraava: `ssh user@palvelimen.osoite` ottaa yhteyden palvelimeen osoitteessa `palvelimen.osoite` ja yrittää kirjautua tunnuksella `user`. Käyttäjältä pyydetään tunnuksen salasanaa, ja autentikoinnin onnistuessa yhteys avautuu. Tämän jälkeen komentoriviltä voidaan ajaa tavalliseen tapaan komentoja, mutta nykyinen kansio sijaitseekin palvelimella, johon yhteys on luotu.
-
-Tietojenkäsittelytieteen osasto tarjoaa neljä eri palvelinta osaston koneisiin etäyhteyden luomiseksi. Näille palvelimille kirjaudutaan yliopiston tunnuksilla:
+The department of computer science has four different servers for remote connection. Authentication is done using the university's account.
 
 1.  melkki.cs.helsinki.fi
 2.  melkinpaasi.cs.helsinki.fi
 3.  shell.cs.helsinki.fi
 4.  melkinkari.cs.helsinki.fi
 
-Kaikki nämä palvelimet ohjaavat siis samaan käyttäjäkohtaiseen kotihakemistoon, johon pääsee kaikilta osaston koneilta.
+All these servers direct the user to the same, personal home directory, which you can acces using all the computers at the department.
 
-Käytetään `ssh`-komentoa osaston koneelle yhteyden ottamiseen:
+Let's use the `ssh` command to create a connection to the department's servers:
 
 ```
 user@hal9000:~$ ssh user@melkki.cs.helsinki.fi
 user@melkki.cs.helsinki.fi's password:
 ```
 
-<div class="note">Huomaa, että salasanaa kirjoittaessasi on normaalia, että komentoriville ei ilmesty tekstiä.</div>
+<div class="note">Note that it's normal for text not to appear when you are inserting your password.</div>
 
-Kun yhteys on muodostettu, näyttää komentorivi erilaiselta:
+When connecting to a system for the first time, an error message will be displayed, stating that the server is not yet trusted. If you write `yes` to indicate that the server is trusted, its fingerprint will be remembered. Even though SSH is encrypted, it is not totally attack proof (as nothing in the internet generally is). If you receive this message when using a public internet for example, it could be safer not to establish a connection, since you could be the victim of an attack.
+
+When the connection has been established, the command line will look slightly different:
 
 ```
 user@melkki:~$
 ```
 
-Komentorivin nykyinen kansio on siis muuttunut osaston koneiden kotihakemistoksi ja pääset käsiksi kaikkiin osaston koneella sijaitseviin tiedostoihin. Yhteyden voi lopettaa komennolla `exit`.
+The current folder in the command line has changed to the home directory of your department's user, and you can access all its files. You can end the connection by running `exit`.
 
-Voit lukea SSH:sta lisää esimerkiksi [täältä](https://www.ssh.com/ssh/).
+You can read more about SSH from [for example](https://www.ssh.com/ssh/).
 
-<h2> SSH-avainpari</h2>
+<h2> SSH key pairs</h2>
 
-Äsken yhteys osaston koneeseen autentikoitiin osaston tunnuksilla. SSH-yhteys tarjoaa kuitenkin myös toisen tavan tunnistaa käyttäjä: julkinen ja yksityinen avainpari. Käytännössä avaimilla tarkoitetaan kahta pitkää ja satunnaiselta vaikuttavaa merkkijonoa, joita käytetään yhdessä varmistamaan, että vain halutuilla henkilöillä on pääsy tiettyyn tietoon. Kyseessä on salauksen tekniikka, joka ei kuulu sen enempää tämän kurssin aihealueisiin, mutta voit etsiä asiasta lisää tietoa avainsanoilla _public key encryption_ ja _asymmetric cryptography_. **Riittää ymmärtää, että yksityisen avaimen tulisi olla vain sen omistajan tiedossa, ja julkista avainta voi jakaa huoletta.**
+When using the ssh command in the previous section, you authenticated yourself with the department's user credentials. There is also another way: a public and a private key pair. In practice, the keys are two long strings, which seem random. They are used to make sure that only authorized people can access certain information. This is an encryption technique we will not cover more in detail on this course, but which you can read more about by searching for example _public key encryption_ or _asymmetric cryptography_. **It suffices to understand that the private key should only be known by its owner, whereas the public key can safely be shared with others.**.
 
-SSH-avainparin voi luodan komennolla `ssh-keygen`. Komento kysyy avaimelle salasanaa ja tallennuspaikkaa. Oletussijaintia tai tiedoston nimeä ei lähtökohtaisesti tarvitse muuttaa, jolloin avain luodaan kotihakemistossa sijaitsevaan `.ssh`-kansioon.
+You can create an SSH key pair with the command `ssh-keygen`. The command asks for a password and a location for the key. We recommend not changing the default location of a key pair without a specific reason. The default location is the `.ssh` folder in the current user's home directory.
 
-<div class="warning">Käytä SSH-avainta luodessasi aina salasanaa. Jos käytät SSH-avainta osaston palvelimien kanssa, on salasanan asettaminen pakollista yliopiston määräysten mukaan.</div>
+
+<div class="warning">Always use a password when creating an SSH key pair. If you use an SSH key with the department's servers, you have to set a password according to the department's rules.</div>
 
 ```
 user@hal9000$ ssh-keygen
@@ -586,183 +585,182 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. Tämä `.pub`-päätteinen tiedosto sisältää julkisen avaimen, jonka voit turvallisesti jakaa muille. Toinen, pääteetön tiedosto sisältää yksityisen avaimen, jota kannattaa kohdella samalla varovaisuudella kuin tavallista salasanaa.
+The command creates two files in the `.ssh` folder. The file with the `.pub` extension contains the public key, which you can safely share with others. The other file without an extension contains the private key, which you should treat with equal care as you would a password.
 
-Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Julkinen avain lisätään polkuun `~/.ssh/authorized_keys`, siis kotihakemiston kansioon `.ssh`, tiedostoon nimeltä [authorized_keys](https://www.ssh.com/ssh/authorized_keys/). Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Yliopiston palvelimella joudut luultavasti luomaan kansion ja tiedoston itse.
+Authentication with an SSH key pair is possible, when the public key is added to the server where one wishes to be authenticated. Then one can log in to the system, if one knows the private key corresponding to the public key. The puvlic key is added to the path `~/.ssh/authorized_keys`, that is to the folder `.ssh` in the user's home folder, to the file [authorized_keys](https://www.ssh.com/ssh/authorized_keys/). If you are using multiple keys, each one is added to a new line in the file. You'll probably have to create the folder and file yourself on the university's server.
 
-![Kuva SSH-avaimen käytöstä](/assets/ssh-selitys.png){:class="img-responsive"}
+Here is a picture of the correct locations of the keys when logging in to the department's servers with an SSH key pair:
 
-Julkisen avaimen saa siirrettyä kohdepalvelimelle esimerkiksi komennolla <code>scp</code>, jonka avulla on mahdollista kopioida tiedostoja palvelimelta toiselle (vertaa komentoon `cp`). Komentoa käytetään seuraavasti:
+![About using an SSH key pair](/assets/ssh-explanation.png){:class="img-responsive"}
+
+The public key can be moved to the remote server with the command <code>scp</code> for example, which allows copying files between two distinct systems (`cp` was for copying inside the local system). The command is used in the following way:
 
 ```
-scp polku/kopioitavaan/tiedostoon user@palvelmen.osoite:polku/kohdekansioon
+scp path/to/copyable/file user@palvelmen.osoite:path/to/target/folder
 ```
 
-Huomaa palvelimen osoitteen jälkeen lisättävä kaksoispiste!
+Notice the colon between the remote server's address and the target path!
 
 <div class="note">
 
-Voit esimerkiksi kopioida julkisen avaimen kohdepalvelimen kotihakemiston <code>.ssh</code>-kansioon (joudut luultavasti luomaan sen itse), ja sen jälkeen uudelleennimetä avaintiedoston sopivasti.
+You can for example copy the public key to the <code>.ssh</code> file on the remote server (you'll probably have to create it yourself) and then rename the key file appropriately.
+
 
 <br/>
 <i>
-Kannatta myös kokeilla, miten <code>scp</code> toimii, jos kohdekansiota ei ole olemassa.
+It's also a good idea to see how <code>scp</code> works if the target file doesn't exist.
 </i>
 </div>
 
-Julkisen avaimen kopioimisen voi myös delegoida komennolle [ssh-copy-id](https://www.ssh.com/ssh/copy-id).
+The copying of the public file can also be delegated to the command [ssh-copy-id](https://www.ssh.com/ssh/copy-id).
 
-Autentikaatio toimii oikein, kun otettaessa SSH-yhteyttä yliopiston koneisiin pääsee kirjautumaan SSH-avaimelle antamalla salasanalla yliopiston käyttäjätunnuksen sijaan.
+The authentication works correctly, when creating an SSH connection you can login using the password set for the SSH key pair.
 
-Jotta et joudu kirjoittamaan salasanaa joka kerralla, kannattaa yksityinen avain lisätä ssh-agentille, jolloin salasana tarvitsee kirjoittaa vain kirjauduttuasi järjestelmästä ulos. Tämä tapahtuu kahdella komennolla:
+In order not to rewrite the passoword each time you want to log in, you might want to add the password to an ssh agent. Then the password has to only be written once you've logged out of the system. This can happen using two commands.
 
 ```
-# varmistetaan, että ssh-agentti on toimintavalmiudessa
+# make sure the agent is ready
 eval `ssh-agent`
-# olettaen, ettet muuttanut yksityisen avaimen polkua sitä luodessasi
-# muuten anna argumentiksi yksityisen avaimen polku
+# assuming you are using the default path
+# otherwise provide the path to the private key
 ssh-add
 ```
-<div class="note">
-`ssh-keygen`-komento kannattaa ajaa vivuilla <code>-t rsa -b 4096</code>. Ne varmistavat, että käytetty salausalgoritmi on <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA</a> ja että avaimesta tulee 4096 bittiä pitkä. Pitempi pituus tekee RSA:lla luodusta avaimesta turvallisemman.
-</div>
-
-Voit lukea lisää SSH:n konfiguroimisesta esimerkiksi [täältä](https://linux.fi/wiki/SSH).
 
 <div class="exercise">
-<h3>Exercise 11: SSH-yhteys {% include points.html text="10%" %}</h3>
+<h3>Exercise 11: SSH connection {% include points.html text="10%" %}</h3>
 
-Luo koneellesi SSH-avainpari. Mahdollista sen jälkeen avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, eli sinulla ei ole yliopiston userta, voit merkitä Exercisen tehdyksi luotuasi SSH-avaimen.
+Create an SSH key pair on your computer. Then enable logging in to the department's servers with the key when establishing an SSH connection. Then test out the key pair. 
+
+If possible, do this using other than the department's computers. If you don't have access to the department's servers, i.e. you do not have a university account, you can mark the exercise don after generating the SSH key pair.
 
 <div class="note">
-Mikäli teet Exercisen laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.
+If you do the exercise using a department's computer, the connection is likely to act weirdly, because the connection is established to the same system. The password of the SSH key  might not be asked even if you had set it correctly.
 </div>
 
 <div class="note">
-Mikäli loit avainparin itse määrittelemääsi polkuun, ja yhteys kysyy vielä yliopiston salasanaa, tarkenna yksityisen avaimen polku:
-
+If you defined the location of the key pair yourseld, and the connection still asks for your university password, specify the path to the private key:
 <div>
-<code>ssh -i polku/yksityiseen/avaimeen user@kohde.palvelimen.osoite</code>
+<code>ssh -i path/to/private/key user@remote.server.address</code>
 </div>
 </div>
 </div>
 
 <h2> Wget</h2>
 
-Graafisessa ympäristössä selain antaa tarkastella sivuja internetissä. Komentorivillä toimivien ohjelmien on vaikeaa näyttää internet-sivuja samoin kuin graafinen selain, ([joskin se on mahdollista](https://en.wikipedia.org/wiki/Text-based_web_browser)) mutta pohjimmiltaan nettisivu internetissä on vain tiedosto, jonka voimme toki ladata koneellemme tarkasteltavaksi.
+You are probably using a browser like Firefox or Googl Chrome to read this material right now. They are both used in a graphical environment. Internet can also be browsed using [the command line](https://en.wikipedia.org/wiki/Text-based_web_browser), but essentially a website on the internet is just a file which you can download to your computer and view locally. 
 
-Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toimii yksinkertaisimmillaan `wget sivun.osoite`, joka lataa annetun sivun koneellesi. Internet-sivut on tehty HTML-kielellä, johon tutustumme seuraavassa osassa, joten saat kutsun tuloksena koneellesi `.html`-päätteisen tiedoston.
+The command required to download something from the internet is `wget` (_world wide web get_). The simplest way to download a site at `site.address` is with `wget site.address`. Websites are written in a language called HTML, which you will learn more about in the third part of this course. Thus the file you will download has the extension `.html`.
 
 <div class="exercise">
-<h3>Exercise 12: Wget ja HTML-koodi {% include points.html text="10%" %}</h3>
+<h3>Exercise 12: Wget and HTML code {% include points.html text="10%" %}</h3>
 
 <ol>
-<li>Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla</li>
-<li>Avaa tallennettu <code>.html</code>-päätteinen tiedosto selaimella, esim Firefoxilla tai Chromella (saat tiedoston helpoiten selaimella auki graafisesta tiedostonhallinnasta). Sivu näyttää luultavasti hieman erilaiselta kuin yleensä. </li>
-<li> Avaa tiedosto niin, että näet sen sisällä olevan HTML-koodin (toisin sanoen avaa se niin, että näet tiedoston sisällön koodina, eikä tiedosto aukea selaimessa).</li>
-<li>Mikä oli ohjelma, jota käytit kussakin tapauksessa tiedoston avaamiseen? Mieti, miten ohjelma käsitteli tiedoston sisällön.</li>
+<li>Download a site of your liking to your computer using <code>wget</code></li>
+<li>Open the <code>.html</code> extensioned file using a graphical browser, esim Firefoxilla tai Chromella (try clicking it in the graphical file browser). The site will most likely look different from what you're used to. </li>
+<li> Open the file in such a way that allows you to see the actual HTML code. In other words, open the file using something other than a browser. The code has a lot of tags marked with "<" and ">", and one of the first ones should contain "html".</li>
+<li>What was the program you used to open the file in each case? Think about how the program processed the file (in a very general way).</li>
 </ol>
 
-Tutustumme HTML-kieleen ja verkkosivuihin kolmannessa osassa, jossa opit myös kirjoittamaan HTML-dokumentteja.
+You'll learn how to write HTML documents in the third part of the course.
 
 </div>
 
 <div class="exercise">
-<h3>Exercise 13: Wget, grep ja Linus Torvalds {% include points.html text="10%" %}</h3>
+<h3>Exercise 13: Wget, grep and Linus Torvalds {% include points.html text="10%" %}</h3>
 
 <p>
-Tässä Exercisessä lasketaan, monellako rivillä Linus Torvaldista kertovassa artikkelissa esiintyy sana "Linux".
+The goal of this exercise is to count how many lines of the Wikipedia article about Linus Torvalds contain the word "Linux".
 </p>
 
 <ol>
-<li>Hae wgetillä Linus Torvaldsista kertova <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia-artikkeli</a> koneellesi.</li>
-<li>Hae syntyneestä tiedostosta <code>grep</code>-komentoa käyttäen ne rivit, joissa lukee "Linux". Kirjoita nämä rivit tiedostoon.</li>
-<li>Etsi sitten netistä, miten voit laskea tulosteen tai tiedoston rivien määrät, ja laske monellako rivillä sana "Linux" esiintyy.</li>
+<li>Download the <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia article</a> about Linus Torvalds to your computer using wget.</li>
+<li>Using <code>grep</code> filter out the lines containing the word "Linux". Write the lines to a new file.</li>
+<li>Search online how you can count the lines of a file using the command line. Count the number of lines in the file you created.</li>
 </ol>
 
-Mikäli haluat, voit yrittää tehdä saman Exercise ilman, että kirjoitat mitään välissä tiedostoon.
-
+If you wish, you can do the same exercise without writing anyting to a separate file in between.
 </div>
 
-<h2> Oikeudet</h2>
+<h2> Permissions</h2>
 
-Unix-tyyppisissä järjestelmissä käyttäjät omaavat tiettyjä oikeuksia tiedostojen ja kansioiden muokkaamista ja katsomista varten. Esimerkiksi jos useampi ihminen käyttää samaa järjestelmää, kuten osaston koneita käytetään, on tarve määrittää mitä kukakin käyttäjä pystyy lukemaan, kirjoittamaan ja suorittamaan.
+In Unix-like systems, the ability to read, edit and execute files and folders is controlled with permissions. This is especially useful in a system which is used by several users, such as the the department's systems.
 
-Lukuoikeus antaa käyttäjän tarkastella tiedoston sisältöä, kun taas kirjoitusoikeuden omaava käyttäjä pystyy muokkaamaan sitä. Suoritusoikeus taas tarkoittaa, että jos kyseinen tiedosto on esimerkiksi ohjelma, on se mahdollista ajaa. Kansioilla on oltava suoritusoikeus, jotta niiden sisään voidaan siirtyä esimerkiksi `cd`-komennolla. Mikäli käyttäjällä ei ole tarvittavia oikeuksia yrittämäänsä operaatioon, antaa järjestelmä yleensä virheviestin `Permission denied`.
+Reading permission allows the user to _read_ the contents of a file. A user with the permission to _write_ can edit a file. The permission to _execute_ means that if the file is a program for example, the user can run it. Execute permissions are also required in order to move inside a folder with `cd`. If a user doesn't have the necessary persmission, usually the error `Permission denied` is printed out.
 
-Jokaisella tiedostolla ja kansiolla on omat oikeutensa. Lisäksi niillä on myös omistaja. Käyttäjä, joka loi tiedoston, on oletuksena sen omistaja (joskin omistajuutta voi myös vaihtaa).
+Each file and folder have their own permissions. In addition, they all have an owner. The user who created the file is the owner by default, but ownership can also be transferred.
 
-Oikeudet ja omistajuudet selviävät `ls`-komennon `-l`-vivun avulla. Tältä näyttävää komennon tuloste "esimerkki"-kansiolla:
+The permissions and ownerships of a file can be seen with the flag `-l` of the command `ls`. Here is an example of the output of `ls` in an example folder.
 
 ```
-user@hal9000:~/esimerkki$ ls -l
+user@hal9000:~/example$ ls -l
 total 8
--rw-r--r-- 1 user user 16 touko 31 21:41 esimerkki.txt
--rwxr--r-- 1 user user 0 kesä 14 17:25 muistio.txt
--r--r--r-- 1 user user 0 touko 3 23:13 artikkeli.txt
-drwx------ 2 user user 130 kesä 14 17:54 päiväkirjamerkinnät
+-rw-r--r-- 1 user user 16 Jun 31 21:41 example.txt
+-rwxr--r-- 1 user user 0 Jun 14 17:25 notes.txt
+-r--r--r-- 1 user user 0 Jun 3 23:13 article.txt
+drwx------ 2 user user 130 Jun 14 17:54 diart
 ```
 
-Ensimmäinen sarake, joka sisältää hassuja sekoituksia kirjaimista ja merkeistä on kyseisen tiedoston oikeudet kertova merkkijono. Tässä sen ensimmäinen merkki on joko `d` tai `-`, joka kertoo onko kyseessä tiedosto (`-`) vai kansio, eli **d**irectory.
+Each file and folder in the directory has its own line. The first column in the output, containing mixtures of letters and dashes describes the permissions of the file. Here the first letter is either `-` or `d`, which tells if the resource is a file `-` or a directory `d`.
 
-Seuraavat yhdeksän merkkiä on varattu tiedoston tai kansion oikeuksille. Nämä oikeudet merkitään aina järjestyksessä lukuoikeus (r), kirjoitusoikeus (w) ja suoritusoikeus (x). Ensimmäiset kolme merkkiä kertovat sen omistajan oikeudet. Jos vastaavan kirjaimen tilalla on viiva, tarkoittaa merkintä, että oikeus puuttuu, eli sitä ei ole annettu.
+The following nine symbols are reserved for the permissions themselves. The permissions are always marked in the same order: read (r), write (w) and execute (x). The first three symbols describe the permissions of the owner. If there is a dash `-` at the place of a specific permission, the permission is missing, i.e. it has not been given.
 
-Seuraavat kolme merkkiä kertovat samaan tapaan _ryhmän_ oikeudet. Ryhmä on tapa, jolla samanlaisia käyttäjiä voi hallita - esimerkiksi kaikki opiskelijat saattaisivat olla osaston järjestelmissä yhdessä ryhmässä, jotta ryhmälle voidaan antaa tiettyjä oikeuksia.
+The next three symbols reveal the permissions of the group og the file. A group is a way of bundling users together. For example all the students of the Department of computer science could be in the same group. A file is assigned to a group, and the group can have certain permissions. These permissions apply to all members of the group.
 
-Viimeiset kolme merkkiä taas näyttävät kaikkien muiden käyttäjien oikeudet. Tähän sarakkeeseen kuuluvat kaikki käyttäjät, jotka eivät ole tiedoston omistajia, tai kuulu sen ryhmään.
+The last three symbols describe the permissions of other users: Those who are not the owner, or belong to the group of the file.
 
-Oikeuksien jälkeen näkyy tiedostoon johtavien linkkien määrä. Kansioissa linkkien lukumäärään sisältyy myös sen sisältämät tiedostot. Linkkien avulla voidaan viitata tiettyihin tiedostoihin.
+After permissions one can see the number of links pointing to a file. In folders this amount also contains the files inside the folder. Links are pointers to other files.
 
-Sen jälkeen on tiedoston omistajan nimi ja ryhmän nimi. Tässä tapauksessa ryhmän nimi on käyttäjänimi `user`. Viimeisenä tulostuksessa näkyy kansion tai tiedoston koko [tavuina](<https://fi.wikipedia.org/wiki/Tavu_(tietotekniikka)>), sekä viimeinen muokkauspäivä, ja lopuksi sen nimi.
+Next one can see the owner and the group of a file. In this case the group of the file is the username `user`. Lastly you can see the size of the file in [bytes](https://en.wikipedia.org/wiki/Byte), the day it was last edited, and its name.
 
-Yllä näkyvässä esimerkissä siis `muistio.txt`-tiedostolle on omistajalla luku, kirjoitus ja ajo-oikeus, ryhmällä ja muilla taas on lukuoikeus. Kansiolla `päiväkirjamerkinnät` taas on vain sen omistajalle luku, muokkaus ja ajo-oikeudet, eikä ryhmällä tai muilla käyttäjillä ole näitä oikeuksia. Tiedostoa `artikkeli.txt` voivat kaikki lukea, mutteivät muokata tai ajaa.
+In the example above the `notes.txt` file's owner has read, write and execute permissions. The group and others only have the read permission. The `diary` directory has read, write and execute permissions only for its owner, the group and others don't have any permissions. The file `article.txt` can be read by everyone, but it can be read or edited by no one.
 
-![Kuva komennon ls -l tulostuksen osista](/assets/permission-selitys.png){:class="img-responsive"}
 
-Oikeuksia voi muuttaa tiedoston tai kansion omistaja, tai järjestelmän ylläpitäjä. Niiden muokkaamiseen komentoriviltä tarkoitettu komento on `chmod` (_change mode_). Se ottaa argumenttina merkkijonon, joka kertoo lisätäänkö vai poistetaanko oikeuksia, kenelle oikeuksia annetaan, sekä tiedoston tai kansion jolle komento tulee suorittaa.
+![A picture depicting the components of the output of ls -l](/assets/permission-exp.png){:class="img-responsive"}
 
-Annettu oikeus ja sen saaja voidaan määritellä kirjainten avulla:
+Permissions can be changed by the file owner or the system administrator. They can be altered with the command `chmod` (_change mode_). It takes a string describing the alterations and the target file path as arguments. The permission string tells which permissions are added or removed, and who the permissions concern.
 
-- r = lukuoikeus
-- w = kirjoitusoikeus
-- x = ajo-oikeus
-- u = tiedoston omistaja
-- g = ryhmään kuuluvat
-- o = kaikki muut käyttäjät
+The symbols desribing the permissions is built using the following components:
 
-Jos oikeuden saajaa ei määritellä, chmod antaa kyseisen oikeuden kaikille käyttäjäryhmille (käyttäjälle, ryhmälle ja muille).
+- r = read permission
+- w = write permission
+- x = execute permission
+- u = owner of the file
+- g = users belonging to the group of the file
+- o = all other users
 
-`-` argumentti poistaa oikeuden, ja `+` antaa oikeuksia.
+If the recipent of permissions is not defined, the permissions are given to all user groups (owner, group and others).
 
-Esimerkkejä `chmod`in käytöstä:
+The dash symbol `-` removes a permission and the plus sign`+` gives a permission.
 
-`chmod u+x esimerkki.txt` antaa tiedoston omistajalle oikeuden ajaa tiedosto.
+Here are some examples of using `chmod`:
 
-`chmod o-w esimerkki.txt` poistaa muilta käyttäjiltä oikeuden kirjoittaa tiedostoon.
+`chmod u+x example.txt` gives the owner of the file execute permission.
 
-`chmod go+r esimerkki.txt` antaa ryhmälle ja muille käyttäjille oikeuden lukea tiedoston.
+`chmod o-w example.txt` removes other users the write permission.
+
+`chmod go+r example.txt` gives the group of the file and other users the permission to read the file.
 
 ```
-user@hal9000:~/esimerkki$ chmod -r esimerkki.txt
-user@hal9000:~/esimerkki$ cat esimerkki.txt
-cat: esimerkki.txt: Permission denied
-user@hal9000:~/esimerkki$ chmod +r esimerkki.txt
-user@hal9000:~/esimerkki$ cat esimerkki.txt
+user@hal9000:~/example$ chmod -r example.txt
+user@hal9000:~/example$ cat example.txt
+cat: example.txt: Permission denied
+user@hal9000:~/example$ chmod +r example.txt
+user@hal9000:~/example$ cat example.txt
 paras
-esimerkki
-user@hal9000:~/esimerkki$ chmod o+w esimerkki.txt
-user@hal9000:~/esimerkki$ ls -l
+example
+user@hal9000:~/example$ chmod o+w example.txt
+user@hal9000:~/example$ ls -l
 total 8
--rw-r--rw- 1 user user 16 touko 31 21:41 esimerkki.txt
--rw-r--r-- 1 user user 0 kesä 14 17:25 muistio2.txt
--rw-r--r-- 1 user user 0 touko 3 23:13 muistio.txt
-drw-r--r-- 1 user user 130 kesä 14 17:54 päiväkirjamerkinnät
+-rw-r--rw- 1 user user 16 Jun 31 21:41 example.txt
+-rw-r--r-- 1 user user 0 Jun 14 17:25 note2.txt
+-rw-r--r-- 1 user user 0 Jun 3 23:13 note.txt
+drw-r--r-- 1 user user 130 Jun 14 17:54 diary
 ```
 
 <div class="exercise">
-<h3>Exercise 14: Oikeuksien harjoittelua {% include points.html text="10%" %}</h3>
+<h3>Exercise 14: Practicing permissions {% include points.html text="10%" %}</h3>
 
-Luo tiedosto <code>oikeus.txt</code> ja harjoittele sen avulla oikeuksien hallinnointia. Anna sille vuorotellen seuraavanlaiset oikeudet:
+Create a file called <code>permission.txt</code> and practice giving and removing permissions. Define the file's permissions to be each of the following:
 
 <pre>
 <code>
@@ -774,14 +772,14 @@ Luo tiedosto <code>oikeus.txt</code> ja harjoittele sen avulla oikeuksien hallin
 </pre>
 
 <div class="note">
-Mikäli teet Exercisen osaston koneella, tee se kansiossa, jonka polku on <code>/cs/home/yliopiston_tunnuksesi</code>. Mikäli kansiota ei löydy (yrittäessäsi siirtyä kansioon komennolla <code>cd</code> tulostuu <code>No such file or directory</code>), aktivoi ensin CS-käyttäjätunnuksesi <a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> täältä </a> löytyvien ohjeiden mukaan.
+If you're doing the exercise on one of the department's computers, do it in the following path: <code>/cs/home/your_uni_username</code>. If the folder is not found, (you get <code>No such file or directory</code> when trying to <code>cd</code> into it), please activate your CS account following<a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> these </a> instructions.
 </div>
 </div>
 
-Voit lukea lisää oikeuksista esimerkiksi [täältä](https://csguide.cs.princeton.edu/account/groups).
+You can read more about permissions for example [here](https://csguide.cs.princeton.edu/account/groups).
 
 <div class="warning">
-Ole varovainen oikeuksien kanssa! Liiallisten oikeuksien antaminen esimerkiksi kotihakemistoosi on turvallisuusuhka. Useimmiten tarvitset ajo- ja lukuoikeuksia vain itse.
+Be careful with permissions! Giving too loose permissions is a security threat. You usually only need write and execute permissions yourself.
 </div>
 
 <h2>Skriptit</h2>
