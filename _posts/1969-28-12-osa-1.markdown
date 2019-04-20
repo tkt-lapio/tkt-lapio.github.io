@@ -780,7 +780,9 @@ Jotta skriptin voi ajaa, käyttäjälle tulee ensin antaa siihen ajo-oikeudet ko
 
 <h2> Sudo</h2>
 
-Tietoturvallisiin tapoihin kuuluu, että tietokoneessa erotellaan pääkäyttäjä (_superuser_) sekä tavalliset käyttäjät. Pääkäyttäjällä on kaikki oikeudet järjestelmään, ja kaikki pääkäyttäjän ajamat ohjelmat ajetaan etuoikeutetussa tilassa. Tämä voi olla vaarallista, jos pahantahtoista koodia päätyy ajoon, siksi tietokonetta tulee käyttää yleensä normaalina käyttäjänä. Normaalikäyttäjä voi kuitenkin ajaa komentoja pääkäyttäjänän oikeuksin, jos käyttäjä kuuluu (_sudoers_) ryhmään. Tämä tapahtuu lisäämällä komennon alkuun `sudo` (alunperin _superuser do_). Tällöin ennen komennon ajamista käyttäjältä pyydetään käyttäjän oma salasana. Riippuen järjestelmästä, `sudo`-oikeuksia voidaan tarvita esimerkiksi ohjelmien asentamiseen. Komennon käyttöä tulee kuitenkin välttää, jos mahdollista.
+Tietoturvallisiin tapoihin kuuluu, että tietokoneessa erotellaan pääkäyttäjä (_superuser_) sekä tavalliset käyttäjät. Pääkäyttäjällä on kaikki oikeudet järjestelmään, ja kaikki pääkäyttäjän ajamat ohjelmat ajetaan etuoikeutetussa tilassa. Tämä voi olla vaarallista, jos pahantahtoista koodia päätyy ajoon, siksi tietokonetta tulee käyttää yleensä normaalina käyttäjänä. 
+
+Normaalikäyttäjä voi kuitenkin ajaa komentoja pääkäyttäjänän oikeuksin, jos käyttäjä kuuluu (_sudoers_) ryhmään. Tämä tapahtuu lisäämällä komennon alkuun `sudo` (alunperin _superuser do_). Tällöin ennen komennon ajamista käyttäjältä pyydetään käyttäjän oma salasana. Riippuen järjestelmästä, `sudo`-oikeuksia voidaan tarvita esimerkiksi ohjelmien asentamiseen. Komennon käyttöä tulee kuitenkin välttää, jos mahdollista. Sudon käyttö on joskus tarpeellista, mutta älä esimerkiksi lisää sitä jokaisen komennon alkuun välttääksesi virheviestejä tiedostojen oikeuksista.
 
 Yliopiston tai osaston koneilla, eli niillä joihin kirjaudut yliopiston tai osaston tunnuksilla esimerkiksi SSH-yhteyden kautta tai pajaluokissa, **ei saa ajaa mitään sudo-komentoja** - siitä lähtee ylläpidolle väärinkäyttöilmoitus.
 
@@ -788,19 +790,21 @@ Yliopiston tai osaston koneilla, eli niillä joihin kirjaudut yliopiston tai osa
 
 <h2> Asentamisesta</h2>
 
-Helpoiten komentorivityökalujen asentaminen tapahtuu pakettienhallintajärjestelmien avulla. Tällaisia ovat esimerkiksi apt, apt-get (Linux) tai homebrew (macOS).
+Maailma on täynnä ohjelmia, jotka on suunniteltu käytettäviksi komentoriviltä. Helpoiten komentorivityökalujen asentaminen tapahtuu pakettienhallintajärjestelmien avulla. Tällaisia ovat esimerkiksi Apt (Linux) tai Homebrew (macOS).
 
-Ubuntussa ja Cubblissa (osaston koneilla käytettävä Linuxin versio) pitäisi olla apt ja apt-get valmiina, macOSissa joudut asentamaan homebrew:n erikseen [täältä](https://brew.sh/). Ohjeita aptin käyttöön löytyy [täältä](https://help.ubuntu.com/community/AptGet/Howto) tai suomeksi [täältä](https://www.linux.fi/wiki/APT). **Suosittelemme vahvasti pakettienhallintajärjestelmän käyttämistä.**
+Ubuntussa ja Cubblissa (osaston koneilla käytettävä Linuxin versio) pitäisi olla apt (tai hyvin samanlainen ohjelma apt-get) valmiina, macOSissa joudut asentamaan homebrew:n erikseen [täältä](https://brew.sh/). Ohjeita aptin käyttöön löytyy [täältä](https://help.ubuntu.com/lts/serverguide/apt.html.en) tai suomeksi [täältä](https://www.linux.fi/wiki/APT). **Suosittelemme vahvasti pakettienhallintajärjestelmän käyttämistä.**
 
 Yksinkertaisimmillaan paketinhallintajärjestelmän avulla asennetaan paketti ajamalla komento `install`, ja antamalla sille parametriksi asennettavan paketin nimen.
 
 Esimerkiksi tekstieditori `nano` asennettaisiin homebrew:n avulla ajamalla seuraava komento:
 
+Homebrewin avulla:
+
 ```
 brew install nano
 ```
 
-ja apt:in avulla ajamalla
+ja Apt:in avulla ajamalla
 
 ```
 apt install nano
@@ -808,9 +812,9 @@ apt install nano
 
 Kun ohjelma on asennettu pakettienhallintajärjestelmän avulla, voidaan sitä yleensä kutsua komennolla suoraan komentoriviltä. Itse komennon nimi kannattaa tarkistaa käyttöohjeista.
 
-Paketinhallintajärjestelmän avulla voidaan myös päivittää ja poistaa paketteja. Ensimmäinen tapahtuu homebrew:ssa, aptissa ja apt-getissä kommenolla `upgrade` ja jälkimmäinen komennolla `remove`.
+Paketinhallintajärjestelmän avulla voidaan myös päivittää ja poistaa paketteja. Pakettien päivittämiseksi ajetaan ensin komeno `update`, joka hakee uusimmat tiedot asennetuista paketeista, ja  `upgrade` päivittää ne. Paketti voidaan poistaa komennolla `remove`.
 
-Pakettienhallintajärjestelmällä ohjelmien asentaminen voi vaatia pääkäyttäjän oikeudet, jolloin komennon eteen on lisättävä `sudo`.
+Usein pakettien asentaminen, päivittäminen ja poistaminen vaatii sudo-oikeudet, jolloin komentojen eteen on lisättävä `sudo`.
 
 Ohjelman asentaminen on myös mahdollista ilman pakettienhallintajärjestelmää. Prosessi on jonkin verran pidempi ja monimutkaisempi. Tällöin asentaminen sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
 
