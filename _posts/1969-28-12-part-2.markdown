@@ -167,7 +167,7 @@ Untracked files:
 	empty.txt
 ```
 
-Now let's break down the output
+Now let's break down the output.
 
 First there is the title `Changes to be committed.` The changes under this title will be added to the next commit.
 
@@ -182,18 +182,18 @@ Changes can also be cancelled with Git. Adding some text to `lapio_w2.txt` could
 By running `git add -p` one can choose change by change, if one wishes the change to be added to Git (y=add, n=don't add). The command only takes into consideration changes in files which are tracked, or _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command.
 
 <div class="warning">
-If you think there is a possibility that you will want to share a project with other people some day, don't add anything secret to Git. Even if you remove the secret content in the next commit, the delicate information stays in the project's hsitory, and can be found from GitHub easily.
+If you think there is a possibility that you will want to share a project with other people some day, don't add anything secret to Git. Even if you remove the secret content in the next commit, the delicate information stays in the project's history, and can be found from GitHub easily.
 </div>
 
-It's a good habit to constantly check which changes will be added to the next commit with `git status`. This might save you a lot of trouble later on.
+A good habit to form is to constantly check which changes will be added to the next commit with `git status`. This might save you a lot of trouble later on.
 
-### Commitin paketointi
+### Creating a commit
 
-Kun ollaan valittu, mitä muutoksia halutaan lisätä committiin, paketoidaan se komennolla `git commit`. Jokaisella commitilla on otsikko, joka kuvaa siinä tehtyjä muutoksia. Otsikko voidaan lisätä komennolla `git commit -m "kuvaava otsikko"`, jossa kuvaava otsikko kertoo, mitä muutoksia tehtiin suhteessa edelliseen committiin. Jos komennosta jättää vivun `-m` ja viestin sen jälkeen pois, tekstieditori aukeaa, ja voit kirjoittaa otsikon, sekä pidemmän viestin sen alle.
+After choosing which changes will be included in the next commit, you can finally create the commit with the command `git commit`. Every commit has a message attached, which describes the changes included in the commit. The message is added as the commit is created by running: `git commit -m "a descriptive message"`, where your descriptive message specifies what has changed since the last commit. If you leave out the flag `-m` and the message, a text editor will open. In the editor you can write a longer, detailed description below the title message. The commit is then created by saving and exiting the text editor.
 
 [Täältä](https://github.com/erlang/otp/wiki/writing-good-commit-messages) löytyy nopeat ohjeet hyvän commit-viestin kirjoittamiseksi.
 
-Jatketaan edellistä esimerkkiä. Lisätään seuraavaan committiin kaikki muutokset, paitsi tiedoston `tyhja_tiedosto` luonti. Ennen komennon `git commit` ajamista, komennon `git status` tulostus oli seuraava:
+We'll continue where the previous example left off. Let's add all the changes we made to the next commit, except creating the file `empty`. Before running `git commit`, the output of `git status` is:
 
 ```bash
 On branch master
@@ -208,9 +208,9 @@ Untracked files:
 	empty.txt
 ```
 
-Ajetaan seuraavaksi `git commit -m "Lisää uusi lapio-tiedosto"`
+Then we'll run `git commit -m "Add new empty file"`
 
-Nyt `git status` tulostaa :
+Now the output of `git status` is:
 
 ```
 On branch master
@@ -222,111 +222,113 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Commitoidut muutokset eivät siis enää näy statuksessa. Ne eivät kuitenkaan ole hävinneet: ne on siirretty committiin. Komennolla `git log` pystyt tarkastelemaan luotuja committeja:
+The changes which were commited are no longer visible in the output. However, they are not lost, on the contrary, they have been moved to the commit. You can view the commits of a project with the command `git log`:
 
 ```
 commit 51bf544c786a671c28f70713b6cb33d87cc38
 Author:
 Date:
 
-    Lisättiin lapio_w2.txt -tiedosto
+    Add new empty file
 ```
 
-Komento `git log` siis tulostaa commitin tekijän, luontiajan, sekä commitille annetun otsikon. Jokaisella commitilla on sen identifioiva merkkijono eli id, joka on [SHA-1](https://en.wikipedia.org/wiki/SHA-1)-muodossa. Komennon `git log` tulostuksessa id näkyy pitkänä merkkijonona, esimerkiksi tässä tapauksessa se on `51bf544c786a671c28f70713b6cb33d87cc38`.
+The command `git log` outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of `git log` the id can be seen as a long string next to the word "commit", which is `51bf544c786a671c28f70713b6cb33d87cc38` in this case.
 
 <div class="note">
-Commitin luominen voi aluksi tuntua epäintuitiiviselta. Seuraava ajatusleikki saattaa auttaa: Kuvittele, että commit on lahjapaketti. Istut lattialla. Muutokset ovat puupalikoita, jotka on levitetty lattialle viereesi. <code>Changes to be commited</code>-tila on eteesi levitetty käärepaperi. Komennolla <code>git add</code> lisäät muutoksia käärepaperin päälle, ja komennolla <code>git commit</code> sidot käärepaperin muutosten ympärille.
+The process of creating a commit might seem unintuitive at first. Te next thought experiment might help: Picture the commit as a package. You are sitting on the flor, all the changes layed out in front of you in wooden blocks. The <code>Changes to be commited</code> state is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
 </div>
 
-### Haarat
+### Branches
 
-Komennon `git status` tulosteen yläreunassa näkyy: `On branch master`. Haarat, eli englanniksi _branchit_, mahdollistavat joidenkin committien eriyttäimisen toisistaan niin, että voidaan testata uusia toiminnallisuuksia ilman, että menetetään toimiva versio ohjelmasta. Jokaisella projektilla on päähaara eli `master` -haara, jossa pidetään senhetkistä toimivaa ja käytössä olevaa versiota.
+At the top of of the output of `git status`, you can see the following text: `On branch master`. Branches allow separating some commits from others. This means that a new branch can be developed independently from an old branch. All projects usually have a main branch, or the `master` branch, which contains the version currently in use.
 
-Usein haaroja käytetään niin, että päähaarasta erotetaan uuden toiminnallisuuden testaamiseksi toinen haara, jossa koodataan lisäominaisuuksia. Haarat eivät vaikuta toistensa tiloihin, eli uudella koodilla voidaan leikkiä huolimatta päähaarasta. Kun ollaan todettu uusi koodi toimivaksi, voidaan se lisätä päähaaraan, ja poistaa uusi haara. Tässä osassa ei käsitellä haaroja sen enempää: riittää ymmärtää, että käytämme nyt vain master-, eli päähaaraa.
+Branches are usually used for testing out new features, so that a working version of the program is not broken. Since branches don't affect each other states, the new branch can be played with without worrying about old branches. When the changes made to the new branch are deemed ready, the branch can be merged to the master branch, and thus the new features will be published. This course will not focus on branches. It suffices to understand that we will only use the master branch in the exercises and in the exam.
 
 <div class="exercise">
-<h3>Exercise 3: Committien harjoittelua {% include points.html text="10%" %}</h3>
+<h3>Exercise 3: Practising working with commits {% include points.html text="10%" %}</h3>
 <ol>
-<li>Luo kansio komentorivillä ja tee siitä Git-projekti.</li>
-<li>Luo projektikansioosi tiedosto nimeltä <code>tarina.txt</code>. Lisää sinne jokin pitkä pätkä tekstiä.</li>
-<li>Lisää projektiin tiedosto <code>ostoslista.txt</code>, jonne kirjoitat, mitä tarvitset kaupasta, tai muuten vaan paljon rivejä.</li>
-<li>Lisää sen jälkeen vielä alikansio <code>kouluprojektit</code>, ja lisää sinne ainakin yksi tiedosto <code>lapio.txt</code>. Tulet tarvitsemaan näitä tiedostoja tulevissa tehtävissä.</li>
-<li>Kun olet tehnyt kaikki edellä mainitut muutokset, tee yhteensä kolme committia: yksi, jossa lisäät tarinan, toinen,jossa lisäät ostoslistan, ja kolmas, jossa lisäät projektikansion sisällön. Kirjoita commiteille kuvaavat otsikot.</li>
-<li>Tarkista komennolla <code>git log</code>, että olet luonut kolme committia.</li>
-<li>Muuta ostoslistalta jokin ostos, ja tee vielä yksi commit. Käytä muutoksen lisäämisessä komentoa <code>git add -p</code>.</li>
-<li>Tarkista, että kaikki commitit näkyvät <code>git log</code>-komennolla.</li>
+<li>Create a folder on the command line and turn it into a Git project.</li>
+<li>Create a file called <code>story.txt</code> in your project. Add a lot of text inside.</li>
+<li>Add another file called <code>shopping_list.txt</code> to the project, and write down what you need from the store (or just many rows of text).</li>
+<li>Create a subfolder called <code>school</code> into the project, and create a file called<code>lapio.txt</code> inside. You will need these files in the future exercises.</li>
+<li>After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.</li>
+<li>Using the command <code>git log</code>, check that you have properly created three commits.</li>
+<li>Add something new to the shopping list, and create another commit. Use the command <code>git add -p</code>.</li>
+<li>Make sure you can see all the commits in the output of <code>git log</code>.</li>
 </ol>
 
 <div class="note">
-Jos committia luodessa tulostuu virheviesti <code>error: cannot run : No such file or directory error: unable to start editor</code>, varmista, että olet konfiguroinut oletuseditorin oikein (tämä tehtiin Exercisessä 2).
+If you see the following message when creating a commit <code>error: cannot run : No such file or directory error: unable to start editor</code>, make sure you configured the default text editor of Git properly (go back to exercise 2).
 </div>
 </div>
 
 <div class="exercise">
-<h3>Exercise 4: Muutosten poistaminen {% include points.html text="10%" %}</h3>
+<h3>Exercise 4: Removing changes {% include points.html text="10%" %}</h3>
 <ol>
-<li>Selvitä, miten saat poistettua muutoksen tilasta, jossa olet lisäämässä sitä committiin (näkyy vihreänä tulostuksessa), ja siirrettyä muutoksen otsikon <code>Changes not staged for commit</code> alle? Vinkki: <code>git status</code> auttaa.</li>
-<li>Lisää uusia tuotteita ostoslistaan, ja aseta muutokset lisättäväksi seuraavaan committiin (<code>Changes to be commited</code>). <strong>Älä kuitenkaan paketoi committia.</strong></li>
-<li>Poista sen jälkeen muutokset seuraavasta commitista.</li>
-<li>Poista sen jälkeen muutokset Gitin avulla niin, että kun avaat ostoslistan, uusimmat tuotteet puuttuvat.</li>
+<li>Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be commited</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.</li>
+<li>Add some new products to the shopping list, and add them to the next commit (so that they are under <code>Changes to be commited</code>). <strong>Don't create the commit yet.</strong></li>
+<li>Then remove the changes from the next commit.</li>
+<li>Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.</li>
 </ol>
 </div>
 
-## Koodin jakaminen GitHubissa
+## Sharing code via GitHub
 
-### Etärepositorion luominen
+### Creating a remote repository
 
-Jotta projektin voi jakaa GitHubin kautta, sille pitää luoda oma repositorio (kavereille repo) GitHubiin, ja tämä repositorio pitää liittää oman koneen Git-projektiin. Tämä tapahtuu lisäämällä repo Git-projektin etärepositorioksi, eli _remoteksi_. Kun Git-projektille lisätään etärepositorio, on mahdollistä siirtää tietoa sen ja omalla koneella olevan projektin välillä. Tällöin projektista on olemassa kaksi versiota: paikallinen (_local_), eli "omalla koneella" oleva projekti ja etärepositorion versio (_remote_), eli GitHubissa säilöttävä versio.
+In order to share a project through GitHub, a repository (or simply a repo) has to be created for it, and it has to be linked to the local project. After a remote repository has been added to a project, information can be shared between them. In consequence, two concurrent versions of the project will exist: the remote in GitHub and the local version a local version on a specific computer.
 
-Tässä siis näkyy, miten GitHubia voidaan käyttää varmuuskopiona: kun projektin tila päivitetään GitHubiin, pääsee tietoon käsiksi internetin kautta, ja projektia voi jatkaa, vaikka paikalliselle versiolle tapahtuisikin jotain.
+This shows how GitHub functions as a backup storage. When the state of a project is updated to its remote in GitHub, it can be accessed from anywhere with internet. Thus the project can be continued even if its local version is destroyed or damaged.
 
-GitHubissa saa luotua repositorion oikeasta yläkulmasta:
+You can create a repository to GitHub by pressing the button on the upper right corner:
 
-![Uuden repon luominen](/assets/new-repo.png)
+![Creating a new repository](/assets/new-repo.png)
 
-Avautuu näkymä, jossa lisätään repolle nimi ja kuvaus. Repositorio voi olla joko julkinen tai yksityinen. Julkisen repostorion näkee kuka vaan, yksityisen vain omistajan valitsemat käyttäjät.
+A window will open where you can add the repository a name and a description. A repository can be public or private: a public repository can be accessed by anyone, whereas a private repository can only be seen by people chosen by the owner.
 
-GitHub myös tarjoaa mahdollisuuden luoda projektille _README:n_, _lisenssin_ ja _.gitignore_-tiedoston. Ohjelmistotuotannossa on tapana, että ohjelmistoprojektiin lisätään README-niminen tiedosto, joka sisältää yleishyödyllistä tietoa koko projektista. Hyvä README sisältää esimerkiksi lyhyen kuvauksen projektista, asennusohjeet ja linkin mahdolliseen dokumentaatioon. Lisenssi tarkoittaa dokumenttia, jossa määritellään, mitkä ovat ohjelman tekijän ja käyttäjän vastuut ja vapaudet. `.gitignore` on erittäin hyödyllinen tiedosto, jonka avulla Gittiä voi pyytää jättämään joitain tiedostoja huomiotta committeja tehdessä. `.gitignoren` käytöstä voit lukea esimerkiksi [täältä](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
+You can also create a _README_, a _license_ and a _.gitignore_ file when creating a repository. The point of a README file is to display useful information about the project. A good README contains a short description of the project, installing instructions and a link to the documentation for example. A license refers to a document stating the responsabilities and rights of the creator and the users of the project. The `.gitignore` allows automatically ignoring some files when creating a commit, and it is often quite useful. You can read more about it
+[here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
 
 <div class="note">
-Kun halutaan siirtää valmiiksi luotu projektikansio GitHubiin, ei kannata antaa GitHubin luoda tiedostoja automaattisesti. Tämä johtaisi vaikeuksiin, sillä tällöin GitHubissa olisi tiedosto, jota lokaalissa versiossa ei ole. Tällaisen tilanteen ongelmallisuus selviää myöhemmin tässä osassa.
+When you wish to update a pre-existing project to GitHub, it is not a good idea to let GitHub create files such as a README automatically. This will lead to problems, because GiHub contains files initially which are not found in the local project. You'll learn more about these kinds of situations later in this part.
 </div>
 
-Nappi `Create repository` lisää projektin omaan profiiliin. Kun projektiin navigoi, tarjoaa GitHub hyödyllisiä ohjeita koodin sinne lisäämiseksi. Projektiin löytää käyttäjän profiilista, tai suoraan osoitteella `https://www.github.com/kayttajanimi/projektinnimi`.
+The button `Create repository` adds the project to your personal account. When you navigate to the empty project, you can see some useful instructions about adding a new porject to tour profile. You can find all your projects from your profile, or navigate to them directly with `https://www.github.com/username/projectname`.
 
-### Etärepositorion lisääminen
+### Adding a remote
 
-Etärepositorio yhdistetään paikalliseen projektiin komennolla `git remote add`.
+A remote can be linked to a local project with the command `git remote add`.
 
-Komento ottaa argumentikseen lisättävän etärepositorion nimen sekä osoitteen. GitHub tarjoaa kaksi vaihtoehtoa etärepositorion lisäysprotokollaksi: SSH ja https. Ensimmäisen vaihtoehdon pitäisi olla tuttu ensimmäisestä osasta, toisen selaimen osoitekentästä. SSH on siis sama yhteystyyppi, jolla vierailtiin laitoksen koneilla komennolla `ssh`. Tätä yhteystyyppia on mahdollista käyttää, jos koneella on luotu yksityinen ja julkinen avainpari, joista julkinen on lisätty GitHubiin. Jos käyttää https-yhteyttä, autentikointi tapahtuu GitHub-käyttäjänimellä ja salasanalla. SSH-yhteyden käyttö on siis paljon vaivattomampaa, sillä jos yksityisen avaimen lisää ssh-agentille, ei salasanaa tarvitse kirjoittaa jatkuvasti. SSH-avaimia käsiteltiin [ensimmäisessä osasssa](/komentorivi#SSH-avainpari).
+The command takes the name and the address of the remote repository as arguments. GitHub offers two options for the repository address protocol: SSH and HTTPS. The first option should be familiar to you from the first part of the course, where the command `ssh` was used. This type of connection is possible to use also with GitHub, if the local system has an SSH key pair, and the public key has been added to GitHub. If the user uses the HTTPS connection type, they will be authenticated with their GitHub username and password. Using an SSH connection is therefore a little less tedious, since the private key can be added to the ssh-agent. You can read more about SSH keys from the first part.
 
-Valitaan GitHubin ohjeista SSH-osoite projektille, jotta siihen voidaan muodostaa SSH-yhteys:
+We'll choose the SSH address for the remote project:
 
-![SSH osoite GitHubissa](/assets/ssh-clone.png)
+![SSH address in GitHub](/assets/ssh-clone.png)
 
-Uusi origin-niminen etärepositorio lisätään SSH-yhteyttä käyttäen ajamalla projektikansiossa komento `git remote add origin git@github.com:kayttaja/projekti.git`. Https-osoite olisi melkein sama, kuin selaimen osoiterivillä. Etärepositorion nimi voi olla muutakin kuin "origin", mutta se on yleinen valinta. Yhdelle projektille voi lisätä useita etärepositorioita, jolloin niiden järkevä nimeäminen on oleellista.
+A new repository called "origin" is added using an SSH connection by running the command `git remote add origin git@github.com:user/project.git`. An HTTPS address would be almost identical to the URL in your browser. A remote can be called practically anything besides "origin", but it is a good and a common choice. It is possible to add several remotes, when properly naming them becomes important.
 
 <div class="exercise">
-<h3>Exercise 5: SSH-avain GitHubiin {% include points.html text="5%" %}</h3>
+<h3>Exercise 5: SSH key to GitHub {% include points.html text="5%" %}</h3>
 <p>
-Jos et ole luonut koneellesi ssh-avainparia, tee se ensin. Ohjeet löytyy <a href="/komentorivi#SSH-avainpari">ensimmäisestä osasta</a>.
+If you haven't created an SSH key pair on your computer, do it first. The instructions can be found from <a href="/command-line">the first part</a>.
 </p>
 <p>
-Lisää julkinen ssh-avaimesi GitHubin käyttäjällesi. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">Sille löytyy ohjeet GitHubissa</a>.
+Add your public SSH key to your GitHub account. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">GitHub has instructions for it</a>.
 </p>
 <p class="note">
-Voit tulostaa ssh-avaimen terminaaliisi komennolla <code>cat avaintiedoston_nimi</code> ja kopioida sen painamalla <code>ctrl + shift + c</code>, ja jatkaa GitHubin ohjeiden seuraamista kohdasta 2. Tällöin sinun ei tarvitse asentaa uutta ohjelmaa, kuten GitHubin ohjeet ehdottavat.
+If you don't want to install a new program (as suggested by the instructions), you can print the SSH key to your terminal with the command <code>cat</code>, copy it by hand, and continue following GitHub's instructions from step 2.
 </p>
 </div>
 
 <div class="exercise">
-<h3>Exercise 6: Etärepositorion luominen Githubissa {% include points.html text="5%" %}</h3>
-<p>Luo aikaisemmin tekemällesi projektille vastapari, eli repositorio GitHubiin. </p>
+<h3>Exercise 6: Creating a remote in GitHub {% include points.html text="5%" %}</h3>
+<p>Create a remote repository for the project you created locally. </p>
 
-<p><b>Älä luo projektille GitHubissa valmiiksi lisenssiä, READMEtä tai .gitignore-tiedostoa, muuten kohtaat myöhemmin ongelmia.</b></p>
+<p><b>Don't let GitHub create a README, license or a .gitignore file when creating the repository. Doing so will cause problems later.</b></p>
 
 <p>
-Liitä GitHubin repo projektisi etärepositorioksi. Jos teit edellisen Exercisen, käytä SSH-osoitetta, muuten käytä https-osoitetta.</p>
+
+Add the repository as a remote of your project. If you did the previous exercise, use an SSH address, otherwise use HTTPS.</p>
 </div>
 
 ## Etärepositorion kanssa työskentely
