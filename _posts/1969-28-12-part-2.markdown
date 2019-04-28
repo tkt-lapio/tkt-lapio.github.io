@@ -8,6 +8,7 @@ tag: material
 
 # Learning goals
 
+<div>
 <h4>The goal is that after this week, the student will</h4>
 
 <ul>
@@ -34,8 +35,9 @@ tag: material
 <li>Know what a pull request is.</li>
 </ul>
 </ul>
+</div>
 
-# Version control: Git and GitHub
+## Version control: Git and GitHub
 
 This part of the course handles version control. Version control refers to a service, which stores code. There are two primary reasons for using it: Version control allows sotring backups of both the current and older versions of a program. In addition, code and projects can easily be shared with others, which makes collaboration easy.
 
@@ -331,45 +333,46 @@ If you don't want to install a new program (as suggested by the instructions), y
 Add the repository as a remote of your project. If you did the previous exercise, use an SSH address, otherwise use HTTPS.</p>
 </div>
 
-## Etärepositorion kanssa työskentely
+## Working with a remote
 
-### Julkaiseminen
+### Publishing
 
-Kun projekti on liitetty johonkin GitHubin repositorioon, voidaan committeja julkaista _puskemalla_.
-Muutokset voi puskea tietyn etärepositorion tiettyyn haaraan seuraavasti: `git push remotennimi haarannimi`. Tässä osassa käytämme vain master-haaraa. Jos lisäät sanan `push` jälkeen vivun `-u`, riittää ensi kerralla ajaa `git push`, jolloin muutokset pusketaan automaattisesti samaan paikkaan. Tämän vivun käyttö on suositeltavaa.
+After a project has been added to a repository in GitHub, commits can be published by _pushing_ them to the remote repository.
 
-Pusketaan `lapio_w2.txt`-tiedostoon tekemämme muutokset komennolla `git push -u origin master`, sillä lisäsimme etärepositorion nimellä `origin`, ja käytämme `master`-haaraa. Navigoidaan GitHubissa projektisivulle. Tiedosto `lapio_w2.txt` näkyy nyt GitHubissa.
+Changes can be pushed to a specific branch in the remote repository as follows: `git push remotenae branchname`. In this part we will only use the master branch. If you add the flag `-u` after the command `push`, next time you do not need to specigy the name of the remote and branch to push changes to the same place. We recommend using the flag `-u`.
+
+Let's push the changes we made to the file `lapio_w2.txt` by running `git push -u origin master`, since we named the remote `origin` and we are using the master branch. Next we'll navigate to the project site on GitHub. There we will find the file `lapio_w2.txt`.
 
 <div class="exercise">
-<h3>Exercise 7: Commitin julkaiseminen {% include points.html text="5%" %}</h3>
+<h3>Exercise 7: Publishing a commit {% include points.html text="5%" %}</h3>
 <ol>
-<li>Puske tekemäsi kolme committia etärepositoriosi <code>master</code>-haaraan.</li>
-<li>Käy tarkistamassa GitHubissa, että kyseiset commitit näkyvät etärepositoriossa.</li>
+<li>Push the three commits you made earlier to the master branch of the remote repository.</li>
+<li>Check on GitHub that you can find all the changes in the remote.</li>
 </ol>
 </div>
 
-### Koodin hakeminen GitHubista
+### Fetching code from GitHub
 
-Samasta projektista on nyt siis olemassa kaksi tilaa kahdessa paikassa: paikallinen ja etärepositorio. Katsotaan seuraavaksi, mitä käy, kun nämä kaksi tilaa eivät ole aina täysin samat.
+There now exists two versions of the project: one locally, and one in the remote at GitHub. Let's see what happens, when thsese two versions don't stay properly synced.
 
-Aloitetaan tekemällä muutoksia projektiin GitHubin kautta. GitHubissa pääsee muokkaamaan tiedostoja painamalla niiden nimeä, ja oikealla olevaa kynä-ikonia.
+We'll start by making changes to the project via GitHub. You can edit files on GutHub by clicking on their name and then clicking on pen icon on the right side of the page.
 
-![Kynä-ikoni Githubissa](/assets/edit.png)
+![Pen icon at GitHub](/assets/edit.png)
 
-Lisätään tiedostoon `lapio_w2.txt` uusi rivi tekstiä, ja luodaan commit sivun alalaidasta vihreästä napista. Muutokset eivät kuitenkaan näy omalla koneella heti.
+Next we'll add a new line of text to `lapio_w2.txt`, and create a commit of the change using the green button at the bottom of the page. However, you can't see these changes locally.
 
-Ajetaan seuraavat komennot:
+We'll run the following commands:
 
 ```bash
 git fetch
 git status
 ```
 
-`git fetch` hakee projektin uusimman tilan GitHubista, mutta ei tee muutoksia paikalliseen työhön. **Jos `git status` ei jatkossa näytä ajankohtaista tietoa, aja ensin `git fetch`**.
+The command `git fetch` fetches the newest state of the project from GitHub, but doesn't change the local version. **If you find that `git status` doesn't show up-to-date information about the state of the remote, you should run `git fetch first.`**
 
-Muutokset eivät vieläkään näy. Jos puskit committisi etärepositorioon vivun `-u` kanssa, Git osaa kertoa, että GitHubissa on muutoksia, joita paikallisessa versiossa ei ole: `Your branch is behind 'origin/master'`.
+We still can't see the new line of text locally. However, if you pushed with the flag `-u`, Git will notice, that the remote repository contains some changes it doesn't see locally:  `Your branch is behind 'origin/master'`is printed at the top of the status output.
 
-Nyt voidaan hakea muutokset paikalliseen versioon komennolla `git pull`. Jos aikaisemmin oltiin ajettu `push` vivulla `-u`, ei etärepositoriota tai haaran nimeä tarvitse kirjoittaa. Ajetaan `git pull`, jolloin tulostuu jotain seuraavankaltaista:
+You can get the new changes to the local version by running `git pull`. If you used the flag `-u` with `push` earlier, there is no need to specify a remote or a branch. We'll run `git pull`, which results in an output along the lines of the following:
 
 ```bash
 remote: Counting objects: 3, done.
@@ -385,22 +388,22 @@ Fast-forward
  1 file changed, 1 insertion(+)
 ```
 
-Nyt muutokset näkyvät myös paikallisesti.
+Now you can find the new line of text in the file you changed via GitHub.
 
 <div class="exercise">
-<h3>Exercise 8: Koodin hakeminen etärepositoriosta {% include points.html text="5%" %}</h3>
-Luo GitHubissa kouluprojektit-alikansioon uusi tiedosto, ja hae se sitten omaan projektiisi.
+<h3>Exercise 8: Fetching code from GitHub {% include points.html text="5%" %}</h3>
+Create a new file to the school subfolder on GitHub, and fetch it to your local version.
 </div>
 
-Käytännössä tämä tilanne vastaa sitä, että tehdään yhteisprojektia, ja joku muu on lisännyt projektiin koodia. Tällöin uuden ominaisuuden lisännyt julkaisee koodinsa puskemalla sen GitHubiin, jolloin muut projektin tekijät voivat hakea ne komennolla `git pull`.
+In practice the situation handled above corresponds to working on a collaborative project, where someone else has added commits to the project and pushed them to GitHub. Other developers should then fetch the new changes with the command `git pull`.
 
 ## Stash
 
-Kokeillaan seuraavaksi mitä käy, jos GitHubissa on jotain tietoa, mitä paikallisesti ei ole, ja paikallisesti jotain, mitä GitHubissa ei.
+Next we'll find out what happens, if GitHub contains some information not found in the local version, and vice versa.
 
-Muutetaan tiedoston `lapio_w2.txt` ensimmäistä riviä GitHubin kautta. Tästä syntyy siis yksi commit. Lisätään paikallisesti saman tiedoston loppuun uusi rivi, **mutta ei tehdä paikallisesta muutoksesta committia**.
+Let's change the first row of `lapio_w2.txt` via GitHub. This will create a new commit to the remote version. Then let's add a new line at the end of the same file in the local version, **but without creatin a new commit of the new change**.
 
-Jos nyt kokeillaan hakea uusimmat muutokset komennolla `git pull`, tulostuu:
+Now if we try to fetch the latest changes with the command `git pull` we'll get:
 
 ```bash
 From github.com:
@@ -412,39 +415,39 @@ Please, commit your changes or stash them before you can merge.
 Aborting
 ```
 
-Pullaus ei toimi, koska paikallisessa versiossa on muutoksia samaan tiedostoon, kuin etärepositoriossa, eikä paikallisia muutoksia ole commitoitu.
+Pulling does not work, because the local verison holds changes to the same file as the remote repository, and the local changes have not been created into a commit.
 
-Tällaisessa tilanteessa voidaan laittaa paikalliset muutokset syrjään _stashiin_ komennolla `git stash`. Kun ajetaan `git stash`, paikallisesti lisätyt muutokset Gitin seuraamissa tiedostoissa laitetaan syrjään. Tämä siis tarkoittaa, että tehdyt muutoksen poistuvat näkyvistä, mutta niitä ei ole menetetty kokonaan. Laittaaksesi syrjään myös muutokset Gittiin vielä lisäämättömissä tiedostoissa (`untracked`), aja komento vivulla `-u`, eli `git stash -u`. Saat muutokset takaisin käskyllä `git stash pop`.
+In situations like this one can put the local changes aside to the _stash_. This is done with the command `git stash`. When the command is run, the local changes in files tracked by Git will by hidden, but not lost completely. In order to also stash changes in untracked files, add the flag `-u`. Changes can be returned from the stash by running `git stash pop`.
 
 <div class="exercise">
-<h3>Exercise 9: Stashin käyttäminen pullatessa {% include points.html text="10%" %}</h3>
+<h3>Exercise 9: Using stash when pulling from the remote {% include points.html text="10%" %}</h3>
 <ol>
-<li>Tee muutoksia paikallisesti jo kertaalleen Gittiin lisäämiisi tiedostoihin (eivät ole <code>untracked</code>-otsikon alla komennon <code>git status</code> tulostuksessa).</li>
-<li>Laita sen jälkeen juuri tekemäsi muutokset syrjään stashiin.</li>
-<li>Avaa sen jälkeen muokkaamasi tiedosto, näetkö tekemiäsi muutoksia?</li>
-<li>Muokkaa GitHubin kautta <code>tarina.txt</code>-tiedoston <i>ensimmäistä</i> lausetta ja tee siitä commit.</li>
-<li>Muokkaa sitten paikallisesti saman tiedoston <i>viimeistä</i> lausetta, mutta <strong>älä tee committia</strong>.</li>
-<li>Hae sen jälkeen etärepositoriossa tekemäsi muutokset <code>tarina.txt</code>-tiedoston ensimmäiseen lauseeseen projektin paikalliseen versioon. Käytä apuna stashia.</li>
-<li>Kun olet saanut haettua muutokset, tee viimeiseen lauseeseen tekemistäsi muutoksista uusi commit.</li>
-<li>Puske tämän jälkeen lopputulos GitHubiin.</li>
-<li>Varmista, että sekä ensimmäiseen, että viimeiseen lauseeseen tekemäsi muutokset ovat näkyvillä Githubissa.</li>
+<li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline <code>untracked</code> in the output of <code>git status</code>).</li>
+<li>Stash the changes you just made using Git.</li>
+<li>Open the files you last and check if you can still see the changes</li>
+<li>Edit the <i>first</i> sentence of the file <code>story.txt</code> in GitHub and create a commit.</li>
+<li>Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.</li>
+<li>Fetch the changes you made to <code>story.txt</code> in the remote repository to the local version. Use the stash.</li>
+<li>After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of <code>story.txt</code>.</li>
+<li>Push the end result to GitHub.</li>
+<li>Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.</li>
 <div class="note">
-Jos terminaaliin tulostuu "CONFLICT", saat apua osiosta <a href="#merge-konflikti">merge-konflikti</a>.
+If you see "CONFLICT" outputted to the terminal when popping changes from the stash, the section "merge conflict" will help.
 </div>
 </ol>
 </div>
 
 ## Merge
 
-Jatketaan vielä kahden rinnakkaisen tilan kanssa.
+We'll continue working with two parallel states, as they are probably the biggest stumbling block for new users of Git.
 
-Äskeisessä tilanteessa etärepositoriossa ja paikallisesti vallitsivat eri tilat, sillä molemmissa oli tietoa, jota toisella ei ollut. Koska paikallisia muutoksia ei oltu commitoitu, voitiin ne piilottaa stashiin. Mitä olisi tapahtunut, jos paikallisesti oltaisiin ehditty commitoida?
+In the previous example, the remote and local versions had different states, because both contained infromation which the other did not have. Because local changes hadn't been commited, they could be put aside to the stash. What had happende, if the local changes had been commited?
 
-Tilanne voidaan ratkaista _mergellä_, eli yhdistämällä kaksi rinnakkaista tilaa. Sellaiset haarat, jotka eivät ole ristriidassa keskenään, eli toisin sanoen eivät tee päällekkäisiä muutoksia, Git osaa yhdistää automaattisesti. Tällöin Git luo uuden merge-commitin.
+The situation can be solved by _merging_ the commit in the remote version and the commit in the local version. Merging simply means combining parallel states. If the two states do not conflict, meaning that they do not contain changes overriding each other, Git can merge them automatically. A new commit, called a merge commit, is created in a merge.
 
-Oikeastaan komento `git pull` sisältää jo valmiiksi merge-toiminnallisuuden. Riittää siis ajaa komento `git pull`, ja antaa tekstieditorin avautuessa commitille otsikko, jotta saadaan yhdistettyä paikallinen master-haara etärepositorion master-haaraan. GitHub ehdottaa valmiiksi viestiä, jota voi halutessaan muokata mieleisekseen. Merge on valmis, kun merge-commitin viestin tallentaa.
+Actually the command `git pull` has built-in merge functionality. It suffices to run `git pull` in order to combine the state of the remote to the state of the local version. In order to finish the automatic merge, the merge commit has to be given a message. Thus when you run `git pull`, a text editor will open, where Git has added a suggestion for the commit message. You can edit this message as you please, and create the commit by saving the message and exiting the editor, which concludes the merge.
 
-Lisätään sekä paikallisesti että etärepositorioon uudet, keskenään erinimiset tiedostot ja commitoidaan. Kun sen jälkeen ajaa `git status` (aja ensin `git fetch`, jos `git status` ei näytä uusinta tilaa), tulostuu:
+Let's test merging in practice. We'll start by creating two non-conflicting commits by creating two new files, one in the remote repository and the other in the local version. After creating the two commits, running `git status` will output:
 
 ```
 On branch master
@@ -454,24 +457,28 @@ and have 1 and 1 different commit each, respectively.
 nothing to commit, working directory clean
 ```
 
-Git siis huomauttaa, että sekä etärepositorioon että paikallisesti on luotu committeja.
+Notice how Git is kind enough to notify us of the two parallel, differing states, and it even advices us on how to proceed.
 
-Jos yritetään puskea commit, se ei onnistu:
+<div class="note">
+Remember that if <code>git status</code> doesn't display the newest state of the remote, you shoud run <code>git fetch</code> first.
+</div>
+
+Pushing the now commits will not work, as the command `git push` will output the following:
 
 ```
-To git@github.com:kayttaja/repo.git
+To git@github.com:user/repo.git
  ! [rejected]        master -> master (non-fast-forward)
-error: failed to push some refs to 'git@github.com:kayttaja/repo.git'
+error: failed to push some refs to 'git@github.com:user/repo.git'
 hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
 hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-Git antaa jälleen vihjeen, miten kuuluu toimia. Haetaan ja yhdistetään siis etärepositorion uusin tila paikalliseen versioon komennolla `git pull`. Annetaan commitille tekstieditorin auetessa otsikko, ja tallennetaan. Tällöin tulostuu:
+However, Git gives instructions on what to do next. We'll fetch the new state of the remote and combine it with the local version by running `git pull`. When a text editor opens, we'll give the merge commit a message, save it, and exit. The following will be printed out to the terminal:
 
 ```
-From github.com:kayttaja/repo
+From github.com:user/repo
  * branch            master     -> FETCH_HEAD
 Merge made by the 'recursive' strategy.
  new_file.txt | 1 +
@@ -479,22 +486,22 @@ Merge made by the 'recursive' strategy.
  create mode 100644 new_file.txt
 ```
 
-Nyt komennon `git status` mukaan ollaan tehty 2 committia (`ahead by 2 commits`). Ensimmäinen niistä on se, joka luotiin paikallisesti, ja toinen on uusi, automaattisesti luotu merge-commit.
+Now according to the output of `git status` we have  mukaan ollaan tehty 2 committia (`ahead by 2 commits`). Ensimmäinen niistä on se, joka luotiin paikallisesti, ja toinen on uusi, automaattisesti luotu merge-commit.
 
 <div class="exercise">
-<h3>Exercise 10: Mergeäminen {% include points.html text="5%" %}</h3>
+<h3>Exercise 10: Merging {% include points.html text="5%" %}</h3>
 <ol>
-<li>Luo etärepositorioon GitHubissa ja paikallisesti sellaiset commitit, että niissä tapahtuvat muutokset eivät ole ristiriidassa keskenään, eli eivät muokkaa samoja rivejä. Toimi esimerkiksi seuraavasti: muokkaa ostoslistan ensimmäistä tuotetta GitHubissa, ja tee commit. Lisää sitten paikallisesti ostoslistan loppuun uusi tuote ja tee uusi commit.</li>
-<li>Kokeile puskea paikallinen committisi etärepositorioon. Minkä virheviestin saat?</li>
-<li>Hae sen jälkeen GitHubin muutos paikalliseen versioon, ja kirjoita commit-viestiksi "Ensimmäinen mergeni".</li>
+<li>Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.</li>
+<li>Try pushing the local commit to the remote repository and observer the error message.</li>
+<li>Pull the commit from the remote repository to your local version and write "my first merge" as the commit message.</li>
 <div class="note">
-Jos pullatessa tulostui "CONFLICT" lue seuraava osio "Merge-konflikti".
+If you see "CONFLICT" printed out while pulling, read the next section "Merge Conflict".
 </div>
-<li>Puske lopuksi tekemäsi muutokset GitHubiin.</li>
+<li>Finally, push all the changes to GitHub.</li>
 </ol>
 </div>
 
-## Merge-konflikti
+## Merge Conflicts
 
 Tehtäessä yhteistyötä aina välillä käy niin, että kaksi koodaria muokkaavat samoja rivejä. Miten Git tietää mergeä tehdessään, kumpi muutos halutaan pitää? No, ei se tiedäkään, eli joskus automaattinen merge ei onnistu. Etärepositorion ja paikallisen version ristiriitaista tilaa mergettäessä kutsutaan _merge-konfliktiksi_. Silloin jonkun täytyy käsin valita pidettävät muutokset, eli ratkottava merge-konflikti.
 

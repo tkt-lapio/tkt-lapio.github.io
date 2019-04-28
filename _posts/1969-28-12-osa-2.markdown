@@ -362,9 +362,9 @@ git fetch
 git status
 ```
 
-`git fetch` hakee projektin uusimman tilan GitHubista, mutta ei tee muutoksia paikalliseen työhön. **Jos `git status` ei jatkossa näytä ajankohtaista tietoa, aja ensin `git fetch`**.
+`git fetch` hakee projektin uusimman tilan GitHubista, mutta ei tee muutoksia paikalliseen työhön. **Jos `git status` ei jatkossa näytä ajankohtaista tietoa etärepositorion tilasta, aja ensin `git fetch`**.
 
-Muutokset eivät vieläkään näy. Jos puskit committisi etärepositorioon vivun `-u` kanssa, Git osaa kertoa, että GitHubissa on muutoksia, joita paikallisessa versiossa ei ole: `Your branch is behind 'origin/master'`.
+Muutokset eivät vieläkään näy. Jos puskit committisi etärepositorioon vivun `-u` kanssa, Git osaa kertoa, että GitHubissa on muutoksia, joita paikallisessa versiossa ei ole: status-komento tulostaa yläreunaan `Your branch is behind 'origin/master'`.
 
 Nyt voidaan hakea muutokset paikalliseen versioon komennolla `git pull`. Jos aikaisemmin oltiin ajettu `push` vivulla `-u`, ei etärepositoriota tai haaran nimeä tarvitse kirjoittaa. Ajetaan `git pull`, jolloin tulostuu jotain seuraavankaltaista:
 
@@ -421,7 +421,7 @@ Tällaisessa tilanteessa voidaan laittaa paikalliset muutokset syrjään _stashi
 <li>Avaa sen jälkeen muokkaamasi tiedosto, näetkö tekemiäsi muutoksia?</li>
 <li>Muokkaa GitHubin kautta <code>tarina.txt</code>-tiedoston <i>ensimmäistä</i> lausetta ja tee siitä commit.</li>
 <li>Muokkaa sitten paikallisesti saman tiedoston <i>viimeistä</i> lausetta, mutta <strong>älä tee committia</strong>.</li>
-<li>Hae sen jälkeen etärepositoriossa tekemäsi muutokset <code>tarina.txt</code>-tiedoston ensimmäiseen lauseeseen projektin paikalliseen versioon. Käytä apuna stashia.</li>
+<li>Hae sen jälkeen etärepositoriossa <code>tarina.txt</code>-tiedoston ensimmäiseen lauseeseen tekemäsi muutokset projektin paikalliseen versioon. Käytä apuna stashia.</li>
 <li>Kun olet saanut haettua muutokset, tee viimeiseen lauseeseen tekemistäsi muutoksista uusi commit.</li>
 <li>Puske tämän jälkeen lopputulos GitHubiin.</li>
 <li>Varmista, että sekä ensimmäiseen, että viimeiseen lauseeseen tekemäsi muutokset ovat näkyvillä Githubissa.</li>
