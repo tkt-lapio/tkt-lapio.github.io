@@ -493,10 +493,10 @@ Jos pullatessa tulostui "CONFLICT" lue seuraava osio "Merge-konflikti".
 
 ## Merge-konflikti
 
-Tehtäessä yhteistyötä aina välillä käy niin, että kaksi koodaria muokkaavat samoja rivejä. Miten Git tietää mergeä tehdessään, kumpi muutos halutaan pitää? No, ei se tiedäkään, eli joskus automaattinen merge ei onnistu. Etärepositorion ja paikallisen version ristiriitaista tilaa mergettäessä kutsutaan _merge-konfliktiksi_. Silloin jonkun täytyy käsin valita pidettävät muutokset, eli ratkottava merge-konflikti.
+Tehtäessä yhteistyötä aina välillä käy niin, että kaksi koodaria muokkaavat samoja rivejä. Miten Git tietää mergeä tehdessään, kumpi muutos halutaan pitää? No, ei se tiedäkään, eli joskus automaattinen merge ei onnistu. Kahden commitin version ristiriitaista tilaa mergettäessä kutsutaan _merge-konfliktiksi_. Esimerkikki merge-konfliktista on tilanne, jossa etärepositoriossa ja lokaalisti on toisensa poissulkevia muutoksia sisältävät commitit. Silloin jonkun täytyy käsin valita pidettävät muutokset, eli ratkottava merge-konflikti.
 
-Kirjoitetaan GitHubissa tiedostoon `lapio_vko2.txt` jollekin riville `terveisiä GitHubista`, ja tehdään muutoksesta commit.
-Muokataan sitten _täsmälleen_ samaa riviä paikallisessa versiossa kirjoittamalla `terveisiä mun koneelta` ja tehdään commit.
+Kirjoitetaan GitHubissa tiedostoon `lapio_vko2.txt` jollekin riville "terveisiä GitHubista", ja tehdään muutoksesta commit.
+Muokataan sitten _täsmälleen_ samaa riviä paikallisessa versiossa kirjoittamalla "terveisiä mun koneelta" ja tehdään commit.
 
 Nyt kun yritetään yhdistää etärepositoriosta uusin tila paikalliseen versioon komennolla `git pull`, tulostuu:
 
@@ -506,7 +506,7 @@ CONFLICT (content): Merge conflict in lapio_vko2.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-`CONFLICT` kertoo missä tiedostossa päällekkäiset muutokset ovat tapahtuneet.
+Rivi, joka alkaa sanalla `CONFLICT` kertoo missä tiedostossa päällekkäiset muutokset ovat tapahtuneet.
 Avataan tämä tiedosto. Siellä näkyy:
 
 ```bash
@@ -576,7 +576,7 @@ Projektin historian säilyttäminen on yksi versionhallinan suurimmista eduista.
 
 Projektin historia näkyy helposti Githubissa. Tarkastellaan historiaa ensin sitä kautta.
 
-Navigoidessa projektin sivulle yläpalkissa on ensimmäisenä vasemmalla välilehti, josta pääsee tarkastelemaan committeja.
+Navigoidessa projektin sivulle yläpalkissa on ensimmäisenä vasemmalla välilehti, josta pääsee tarkastelemaan committeja. Esimerkiksi alla näkyvässä kuvassa kyseisessä välilehdessä lukee "4 commits".
 
 ![Commitit GitHubissa](/assets/commits.png)
 
@@ -611,13 +611,15 @@ Tämä on muistutus, että etärepositorioon ei pidä puskea mitään salaista: 
 
 ## GitHubin workflow
 
-GitHubin kaltaiset palvelut helpottavat merkittävästi yhteisten projektein kehittämistä. Käyttäjät huomaavat projektien ongelmat parhaiten. Projektille voi tehdä GitHubissa _issuen_, ja kertoa ohjelman vajaavaisuuksista. Jos tietää ongelman ratkaisun, voi sitä ehdottaa projektin omistajalle koodin muodossa.
+GitHubin kaltaiset palvelut helpottavat merkittävästi yhteisten projektien kehittämistä. Käyttäjät huomaavat projektien ongelmat parhaiten. Projektille voi tehdä GitHubissa _issuen_, ja kertoa ohjelman vajaavaisuuksista. Tavallisimpia issueiden aiheita ovat bugit ohjelman toiminnassa, ongelmia asennuksessa, tai puuttuvat toiminnallisuudet.
 
-GitHubissa sijaitsevan projektin voi kopioida kokonaisuudessaan omalle koneelleen komennolla `git clone`. Komento ottaa argumentiksi repositorion osoitteen, jonka saa projektikansion oikeasta yläkulmasta vihreästä napista. Kyseessä on siis sama osoite, joka annettiin aikaisemmin `git remote add`-komennolle argumentiksi. Projektin omistaja ei saa ilmoitusta siitä, että hänen projektinsa on kloonattu.
-
-Jatkossa, kun aloitat uuden Git-projektin, voit joko luoda sen komentoriviltä komennolla `git init` ja lisätä sen jälkeen projektille etärepositorion, tai sitten voit ensin luoda GitHubissa repositorion, ja kloonata sen sitten koneellesi.
+Jos tietää ongelman ratkaisun, voi sitä ehdottaa projektin omistajalle koodin muodossa. GitHubissa sijaitsevan projektin voi kopioida kokonaisuudessaan omalle koneelleen komennolla `git clone`. Komento ottaa argumentiksi repositorion osoitteen, jonka saa projektikansion oikeasta yläkulmasta vihreästä napista. 
 
 ![Kloonausosoite](/assets/clone.png)
+
+Kyseessä on siis sama osoite, joka annettiin aikaisemmin `git remote add`-komennolle argumentiksi. Projektin omistaja ei saa ilmoitusta siitä, että hänen projektinsa on kloonattu.
+
+Jatkossa, kun aloitat uuden Git-projektin, on olemassa kaksi vaihtoehtoa etärepostorion linkittämiseksi. Voit joko luoda projektin ensin komentoriviltä komennolla `git init` ja lisätä sen jälkeen projektille etärepositorion. Toinen vaihtoehto on ensin luoda GitHubissa repositorio, ja kloonata sitten tyhjä projekti koneelle.
 
 Jotta kloonaamaansa repositorioon tekemänsä muutokset voi puskea takaisin etärepositorioon, projektin omistajan tulee [lisätä kloonaaja projektin kehittäjäksi](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/). Muussa tapauksessa komento `git push` ei onnistu. Yhteisissä koodiprojekteissa voidaan siis luoda Git-projekti, jonka etärepositoriossa kaikki osallistujat ovat kehittäjinä, jolloin kaikki voivat vapaasti lisätä projektiin koodia.
 
@@ -629,7 +631,7 @@ Jos oman kopioosi tekemäsi muutokset ovat mielestäsi niin hyviä, että haluat
 <h3>Tehtävä 13: Kloonaaminen {% include points.html text="10%" %}</h3>
 <ol>
 <li>Selvitä ensin Googlen avulla, miten saat selville komentoriviltä Git-projektin etärepositorioiden nimet ja osoitteet. Kyseessä on siis komento, joka ajetaan Git-projektin sisällä, kun sille on asetettu etärepositorio.</li>
-<li>Etsi vapaavalintainen <a href="https://en.wikipedia.org/wiki/Open-source_software">vapaan lähdekoodin</a>-projekti GitHubista (esim. <a href="https://github.com/google/guava">Googlen Guava</a> tai <a href="https://github.com/orfjackal/varjocafe">VarjoCafe</a>). Kloonaa se ensin koneellesi. Selvitä sitten, minkä nimiseksi etärepositorio asetetaan automaattisesti kloonatessa. Voit tehdä tämän ajamalla edellisessä kohdassa selvittämäsi komennon kloonatun projektin sisällä.</li>
+<li>Etsi vapaavalintainen <a href="https://en.wikipedia.org/wiki/Open-source_software">vapaan lähdekoodin</a>-projekti GitHubista (esim. <a href="https://github.com/orfjackal/varjocafe">VarjoCafe</a> tai jokin <a href="https://github.com/TKOaly">TKO-älyn projekti</a>). Kloonaa se ensin koneellesi. Selvitä sitten, minkä nimiseksi etärepositorio asetetaan automaattisesti kloonatessa. Voit tehdä tämän ajamalla edellisessä kohdassa selvittämäsi komennon kloonatun projektin sisällä.</li>
 </ol>
 </div>
 
@@ -640,7 +642,9 @@ Tutki sen jälkeen jonkin vapaan lähdekoodin projektin repoa GitHubissa. Etsi, 
 
 ## Loppusanat
 
-Vasta-alkajana yhteistyöprojekteissa versionhallinnan avulla hukkaa ja rikkoo helposti koodia - jos törmäät outoon virheeseen, kysy rohkeasti apua, äläkä ajele sokkona komentoja. Pitkälle pääsee pitämällä silmällä `git status`-komennon tulosteita, puskemalla varmuuskopioita ajoittain, ja kommunikoimalla muiden projektilaisten kanssa muuallakin kuin commit-viesteissä. Gittiä oppii parhaiten käyttämällä sitä, älä siis lannistu ja poista projektia heti epäonnistuessasi. Pahimmassa tapausessa voi aina kloonata projektin uudestaan, kunhan on muistanut siirtää työnsä GitHubiin.
+Vasta-alkajana yhteistyöprojekteissa versionhallinnan avulla hukkaa ja rikkoo helposti koodia. Versionhallinnan käyttäminen koodaamisessa on kuitenkin eräs tärkeimmistä koodarin taidoista. Vaikka työpaikalla ei käytettäisi Gittiä, pätevät versionhallintaohjelmiin usein samat periaatteet.
+
+Jos törmäät outoon virheeseen, kysy rohkeasti apua, äläkä ajele sokkona komentoja. Pitkälle pääsee pitämällä silmällä `git status`-komennon tulosteita, puskemalla varmuuskopioita ajoittain, ja kommunikoimalla muiden projektilaisten kanssa muuallakin kuin commit-viesteissä. Gittiä oppii parhaiten käyttämällä sitä, älä siis lannistu ja poista projektia heti epäonnistuessasi. Pahimmassa tapausessa voi aina kloonata projektin uudestaan, kunhan on muistanut siirtää työnsä GitHubiin.
 
 On jälleen aika hengähtää ja pitää tauko. Anna mielesi levätä, ennen kuin palaat materiaaliin ja sen oppimistavoitteisiin.
 
