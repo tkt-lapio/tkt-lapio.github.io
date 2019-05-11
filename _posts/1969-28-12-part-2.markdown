@@ -39,13 +39,13 @@ tag: material
 
 ## Version control: Git and GitHub
 
-This part of the course handles version control. Version control refers to a service, which stores code. There are two primary reasons for using it: Version control allows sotring backups of both the current and older versions of a program. In addition, code and projects can easily be shared with others, which makes collaboration easy.
+This part of the course handles version control. Version control refers to a service, which stores code. There are two primary reasons for using it: Version control allows storing backups of both the current and older versions of a program. In addition, code and projects can easily be shared with others, which makes collaboration easy.
 
-Version control tools allow marking a specific state of a project as such that one can return to it later. Thus, if something goes wrong when developing new features, one can return to an older and functional version of the project. Version control stores all the marked states. Therefore all the developers can follow the evolution of the program, who has done what and when. This also makes finding bugs, or errors in the program, a lot easier.
+Version control tools allow marking a specific state of a project as such that one can return to it later. Thus, if something goes wrong when developing new features, one can return to an older and functional version of the project. Version control stores all the marked states. Therefore all the developers can follow the evolution of the program, like who has done what and when. This also makes finding bugs, or errors in the program, a lot easier.
 
 Contrary to what many people think, programming is mostly done in groups. With version control tools it is possible to use and develop others' code, even without ever meeting in person. People can give verbal feedback, such as report issues, as well as make concrete suggestions for improvement by providing code to the project. All developers are kept up to date about the state of the project, which makes cooperation smoother.
 
-Visul Studio hassummarized reasons for using version control on their [website](https://www.visualstudio.com/learn/what-is-version-control/?rr=https%3A%2F%2Fwww.google.fi%2F). Bitbucket [has also written](https://www.atlassian.com/git/tutorials/what-is-version-control) a longer text about version control.
+Visul Studio has summarized reasons for using version control on their [website](https://www.visualstudio.com/learn/what-is-version-control/?rr=https%3A%2F%2Fwww.google.fi%2F). Bitbucket [has also written](https://www.atlassian.com/git/tutorials/what-is-version-control) a longer text about version control.
 
 Git is a version control tool. This part handles using Git and Github, a service related to Git especially in the context of programming projects.
 
@@ -57,16 +57,16 @@ Torvalds started developing Git for his own needs initially when coding the Linu
 
 GitHub is a service which was created later on, which one can store and publish projects with. There are several sites similar to GitHub, such as [GitLab](https://about.gitlab.com/). However, this part deals with using GitHub as it is more popular at out department.
 
-Git and GitHub are used for solo as well as collaboration projects at the department of computer science and in the industry. It's usage isn't limited only to code however, and many people like to for example backup their thesis using Git. However, this part focuses on sharing code with GitHub, and some of the common problems in it. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
+Git and GitHub are used in solo as well as collaborative projects at the Department of Computer Science and in the industry. It's usage isn't limited only to code, and many people like to for example backup their thesis using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems of the process. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
 
 
 <div class="exercise">
 <h3>Exercise 1: Creating a GitHub account {% include points.html text="5%" %}</h3>
 
-Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind inserting to your CV.
+Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
 
 <br><br>
-Git should be already installed on the department's computers and Ubuntu. If this is not the case, you can install it according to these  <a href="https://git-scm.com/downloads" >instructions</a>, or using a <a href="/komentorivi#asentamisesta">package manager</a> kautta.  We'll use Git from the command line.
+Git should be already installed on the department's computers and Ubuntu. If this is not the case, you can install it according to these  <a href="https://git-scm.com/downloads" >instructions</a>, or using a <a href="/komentorivi#asentamisesta">package manager</a>.  We'll use Git from the command line.
 
 </div>
 
@@ -76,14 +76,11 @@ Git should be already installed on the department's computers and Ubuntu. If thi
 Let's configure Git a bit.
 
 Link your name and email address to Git so that all the changes you make to different projects are properly associated with you. This can be done by running the following commands:
-</div>
 
-```bash
+<pre>
 git config --global user.name "My Name"
 git config --global user.email email@address.com
-```
-
-<div class="exercise">
+</pre>
 If you don't want your email to be public, GitHub offers a specific <a href="https://help.github.com/articles/about-commit-email-addresses/">noreply email</a>.
 
 <div class="note">
@@ -103,7 +100,7 @@ In Windows replace <code>nano</code> with <code>notepad</code>.
 
 ## Starting a Git project
 
-You can turn a directory into a Git project by running the command `git init` inside it. This will allow running git commands inside the folder. In consequence, a subfolder `.git` is created. This folder stores all sorts of information about the project in the directory it is located in.
+A project is a directory containing some files. These files can for example have code in them. You can turn a directory into a Git project by running the command `git init` inside it. This will allow running git commands inside the folder. In consequence, a subfolder `.git` is created. This folder stores all sorts of information about the project in the directory it is located in.
 
 ### Commits
 
@@ -433,7 +430,7 @@ In situations like this one can put the local changes aside to the _stash_. This
 <li>Push the end result to GitHub.</li>
 <li>Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.</li>
 <div class="note">
-If you see "CONFLICT" outputted to the terminal when popping changes from the stash, the section "merge conflict" will help.
+If you see "CONFLICT" outputted to the terminal when popping changes from the stash, the section "Merge Conflicts" will help.
 </div>
 </ol>
 </div>
@@ -496,7 +493,7 @@ Now according to the output of `git status` we have  mukaan ollaan tehty 2 commi
 <li>Try pushing the local commit to the remote repository and observer the error message.</li>
 <li>Pull the commit from the remote repository to your local version and write "my first merge" as the commit message.</li>
 <div class="note">
-If you see "CONFLICT" printed out while pulling, read the next section "Merge Conflict".
+If you see "CONFLICT" printed out while pulling, read the next section "Merge Conflicts".
 </div>
 <li>Finally, push all the changes to GitHub.</li>
 </ol>
@@ -504,7 +501,7 @@ If you see "CONFLICT" printed out while pulling, read the next section "Merge Co
 
 ## Merge Conflicts
 
-When several people are working on the same projects, it is not uncommon for two developers to make changes to the same lines in some file. When merging the two changes together, how does Git know which change to discard and which to keep? Well, it doesn't, and so when mutually exclusive changes are found when merging, the automatic merge will fail. The conflict between two commits (or branches) is called a _merge conflict_. In these cases, someone has to hand pick the changes which will be kept in the project. This is called resolving a merge conflict.
+When several people are working on the same project, it is not uncommon for two developers to make changes to the same lines in some file. When merging the two changes together, how does Git know which change to discard and which to keep? Well, it doesn't, and so when mutually exclusive changes are found when merging, the automatic merge will fail. The conflict between two commits (or branches) is called a _merge conflict_. In these cases, someone has to hand pick the changes which will be kept in the project. This is called resolving a merge conflict.
 
 Next we'll create a merge conflict. We'll start by writing "Greetings from GitHub" to a line in the `lapio_w2.txt` file via GitHub, finishing by creating a commit. Then we'll edit the _exact_ same line locally by replacing it with "Greetings from my computer" wrapping the change up to another commit.
 
@@ -571,14 +568,14 @@ Merge conflicts are enfuriating, but rather common when collaborating with other
 Merge conflicts can also occur when taking changes out of the stash, if the hidden changes overlap with new ones.
 
 <div class="exercise">
-<h3>Exercise 11: Merge conflicts {% include points.html text="10%" %}</h3>
+<h3>Exercise 11: A Merge Conflict {% include points.html text="10%" %}</h3>
 
-Create a merge conflict in your project and resolve. Make sure to push the end result in GitHub.
+Create a merge conflict in your project and resolve it. Make sure to push the end result to GitHub.
 </div>
 
 ## Commit history
 
-All the commits added to a Git project add up to its _commit history_. Commit history is like a chain of commits, when commits are created on top of each other.
+All the commits added to a Git project add up to its _commit history_. Commit history is like a chain of commits, formed when commits are created on top of each other.
 
 Storing a project's commit history is one of the greatest benefits of using version control. It allows returning back in time to a working version of the program, or observing how certaing files and features have changed over time.
 

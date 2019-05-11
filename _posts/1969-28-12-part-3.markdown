@@ -1,175 +1,183 @@
 ---
 layout: material
-title: 'Osa 3 - Staattiset verkkosivut'
+title: 'Part 3 - Static websites'
 date: 1969-12-28 00:02:00 +0200
-permalink: /verkkosivut/
+permalink: /websites/
 tag: material
 ---
 
-# Oppimistavoitteet
+# Learning goals
 
-Tämän osan tavoitteina on, että opiskelija
+<h4>The goal is that after this week, the student will</h4>
 
-- ymmärtää, mitä tarkoittaa staattinen verkkosivu.
-- ymmärtää, mikä HTML on ja mihin sitä käytetään.
-- tietää, mikä on HTML-elementti ja mistä palasista se koostuu.
-- tietää, mistä palasista HTML-dokumentti koostuu.
-- osaa oikeaoppisen HTML-kieliopin ja sisennyksen.
-- ymmärtää, mikä CSS on ja mihin sitä käytetään.
-- osaa käyttää yleisimpiä CSS-ominaisuuksia.
-- osaa sijoittaa elementtejä verkkosivuilla.
-- ymmärtää, miten sivuista voi tehdä luettavammat.
-- ymmärtää, miten verkkosivuja voi julkaista.
-- osaa hakea tietoa HTML- ja CSS-kielistä internetistä.
+<ul>
+<li>Understand what a static website means.</li>
+<li>Understand what HTML is and what it's used for.</li>
+<li>Know what an HTML element is and what it consists of.</li>
+<li>Know what an HTML document consists of. </li>
+<li>Know how to correctly indent HTML and understands the syntax.</li>
+<li>Know how to place elements on a web site.</li>
+<li>Know how to make a simple web page more readable </li>
+<li>Know what CSS is and what it is used for.</li>
+<li>Know how to use the most common features of CSS</li>
+<li>Know how to publish static web pages written with vanilla HTML and CSS</li>
+</ul>
 
-# Staattiset verkkosivut: HTML ja CSS
+# Static websites: HTML ja CSS
 
-Kävimme edellisissä osissa läpi, mitä komentorivi ja versionhallinta ovat. Tässä osassa pääsemme käyttämään opeteltuja taitoja yksinkertaisten staattisten verkkosivujen avulla. Käsittelemme aluksi, mitä staattiset verkkosivut ovat ja mistä ne koostuvat.
+The previous parts of the course covered using the command line to do various tasks, and version control for storing code. In this part you will use those skills to create simple static websites. We will start by discussing what static websites actually are, and what they consist of.
 
-Yksinkertaistettuna verkkosivulla tarkoitetaan internetissä julkaistua tekstidokumenttia. Dokumentit sijaitsevat palvelinkoneella, josta käyttäjät voivat hakea niitä selaimella. Tyypillisesti verkkosivut jaotellaan kahteen kategoriaan: staattisiin verkkosivuihin ja dynaamisiin verkkosivuihin. Staattisilla sivustoilla tarkoitetaan sivustoja, joiden sisältö ei vaihdu, jos sitä ei erikseen vaihdeta palvelimelta. Jokaiselle käyttäjälle näkyy samanlainen sivusto. Staattisia verkkosivuja pystytään luomaan HTML-merkintäkielen avulla. Dynaamiset sivut taas luodaan samalla, kun selain pyytää sivua. Dynaamisista sivuista puhutaan lisää myöhemmillä kursseilla.
+To put it simply, a website is a document published on the Internet. The documents are located in servers which are computers allowing users to view them via a browser, such as Google Chrome or Firefox. Websites are typically divided into two categories: static and dynamic websites. The content of static websites doesn't change, unless it is explicitly changed on the server. This means that every user always sees the same content. Static websites can be created using a markup language called HTML. On the contrary, dynamic pages are created at the same time as the browser accesses a site. This course will only handle static websites. You may learn more about dynamic websites later on in your studies.
 
-# Järjestelyt
+# Setting up
 
-Tarvitset tässä osassa tekstieditoria. Suosittelemme [vscodea](https://code.visualstudio.com/download). Tämän lisäksi tarvitset verkkoselainta. Hyviä moderneja verkkoselaimia ovat muun muassa [Google Chrome](https://www.google.fi/chrome/index.html) ja [Firefox](https://www.mozilla.org/fi/firefox/). Osan pystyy suorittamaan myös jollain muulla tekstieditorilla tai selaimella.
+You will need a proper text editor in this part of the course. We recommend using Visual Studio Code, or [VSCode](https://code.visualstudio.com/download). In addition, you will need a web browser. Modern, recommended ones include [Google Chrome](https://www.google.fi/chrome/index.html) ja [Firefox](https://www.mozilla.org/fi/firefox/). It is possible to do the exercises using another text editor and browser, however these are the ones we recommend.
 
 <div class="exercise">
-<h3>Tehtävä 1: Järjestelyt {% include points.html text="5%" %}</h3>
+<h3>Exercise 1: Setting up {% include points.html text="5%" %}</h3>
 <ol>
-<li>Luo "Lapio-website"-niminen kansio komentoriviä käyttäen ja tee tästä kansiosta git-projekti.</li>
-<li>Luo Githubiin uusi <strong>tyhjä</strong> repo nimellä Lapio-website.</li>
-<li>Lisää Github-projekti Git-projektin etärepositorioksi.</li>
-<li>Lisää kansioon <code>index.html</code>-tiedosto, joka löytyy <a href="https://github.com/rovaniemi/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">täältä</a>. Tiedoston sisältöä ei tarvitse vielä ymmärtää.</li>
-<li>Tee commit viestillä <code>Osa 3. Ensimmäinen tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>Create a Git project called "lapio-website" using the command line.</li>
+<li>Create a new reposiotry to GitHub with the same name</li>
+<li>Add the newly created repository as a remote of the local project.</li>
+<li>Add a file called <code>index.html</code> to the project, and copy its contents from <a href="https://github.com/rovaniemi/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">here</a> You don't need to understand the contents yet.</li>
+<li>Create a new commit with the messafe <code>Osa 3. First exercise</code> and push it to GitHub.</li>
 </ol>
 </div>
 
-# Mikä HTML on?
+# What is HTML?
 
-HTML mielletään usein ohjelmointikieleksi, mikä ei pidä paikkaansa. HTML on merkintäkieli, joka määrittää verkkosivun sisällön rakenteen. HTML koostuu joukosta elementtejä, joita käytetään sisällön eri osien näyttämiseen ja joiden avulla osat voidaan saada toimimaan tietyllä tavalla. Elementit ja tagit voivat esimerkiksi tehdä sanasta linkin tai kursivoidun ja tehdä fontin suuremmaksi tai pienemmäksi.
+HTML is often referred to as a programming language, which is technically not true. It is a markup language, describing the structure of a document. HTML comprises a set of _elements_ and _tags_ used to define and show different sections of the document, also giving them specific functionalities. Tags can for example turn a word into a link, cursive, or a different size.
 
-Esimerkki HTML-elementistä.
+Here is an example of an HTML element:
 
 ```html
-<p>Tässä on tekstipätkä</p>
+<p>This is a piece of text.</p>
 ```
 
-Tarkastellaan HTML-elementin rakennetta. Yksi elementti koostuu kolmesta osasta:
+Let's look at the structure of the element. An HTML element is composed of three parts:
 
-1.  Aloitustagi `<p>`
-2.  Itse sisältö `Tässä on tekstipätkä`
-3.  Lopetustagi `</p>`
+1.  The start tag `<p>`
+2.  The content itself `This is a piece of text`
+3.  The end tag `</p>`
 
-HTML-tagit ovat sivuston piilotettuja avainsanoja, eli ne eivät näyttäydy silloin, kun katsot verkkosivua selaimella. Ne kuitenkin määrittävät, miten selaimesi muotoilee ja näyttää sisällön. Erilaisia HTML-tageja ja niistä syntyviä elementtejä on paljon, ja jokaiselle on oma käyttötarkoituksensa. Tutustutaan ensimmäiseksi tekstinmuokkaukseen tarkoitettuihin elementteihin.
+HTML tags are keywords hidden inside the site, not shown in the browser. Nevertheless, they define how the browser styles and shows the contents of the document you are viewing. There are countless different HTML tags and elements created with them, each serving a specific purpose. We'll start with the elements used to edit text.
 
-1.  `<h1></h1>` Elementtiä käytetään otsikkojen tekemiseen. Otsikkotageja on olemassa kuusi erilaista (h1-h6). Tärkein otsikko merkitään h1-tagilla ja vähiten tärkeä otsikko merkitään h6-tagilla.
-2.  `<p></p>` Elementtiä käytetään leipätekstin tekoon.
-3.  `<em></em>` Elementtiä käytetään kursivoidun kirjoitustyypin tekoon.
-4.  `<strong></strong>` Elementtiä käytetään lihavoidun kirjoitustyypin tekoon. Myös `<b>`- ja `<i>`-elementtejä käytetään lihavoimaan sekä kursivoimaan tekstiä.
+1.  `<h1></h1>`: This tag is used to create heading elements. There are six different heading tags, ranging from `h1` to `h6`. The primary heading is created using the first tag h1. The least important heading is created with h6.
+2.  `<p></p>`: The element created with the tag `p` contains the body text of the document.
+3.  `<em></em>`: The element with the tag `em` is shown in cursive.
+4.  `<strong></strong>`: The element with the tag `strong` is bolded. You can also create elements with `<b>` and `<i>` to show text in bold and cursive respectively.
 
-Katsotaan, miten HTML toimii käytännössä.
-Avataan edellisessä tehtävässä luotu <code>index.html</code>-tiedosto verkkoselaimessa sekä tekstieditorissa.
+Now let's see how HTML works in practice. We'll open the file <code>index.html</code> created in the first exercise in a browser and a text editor. Tou can open the file in the browser by clicking on it in the graphical user interface, or explicitly opening it using a browser program from the command line.
 
 <div class="note">
-Jos et saa tiedostoa auki verkkoselaimessa, voit myös etsiä tiedoston komentoriviltä, katsoa tiedoston sijainnin ja kirjoittaa sen verkkoselaimesi osoitepalkkiin.
+If you can't open the file in a browser, you can also write its path to the URL field.
 </div>
 
-Lisätään <code>index.html</code>-tiedostoon `<!--Tee tehtävät tänne-->` rivin alapuolelle `<p>Tässä on tekstipätkä</p>`. Tämän jälkeen katsomme, miltä dokumentti näyttää selaimessa.
+Let's add the following line in the <code>index.html</code> file just under `<!--Do the exercises here-->`: `<p>This is a piece of text</p>`. Then we'll see what the document looks like in the browser.
 
-![Esimerkki miten HTML näkyy selaimessa](/assets/html-example-01.png)
+
+![An example of viewing an HTML document in the browser](/assets/html-example-01.png)
 
 <div class="exercise">
-<h3>Tehtävä 2: Tutustuminen tekstielementteihin {% include points.html text="5%" %}</h3>
-Jatketaan <code>index.html</code>-tiedoston muokkaamista. Testaa eri tekstielementit läpi ja katso, mitä eri elementit tekevät. Tehtävän tavoitteena on saada sivustosta seuraavan näköinen:
-<img src="/assets/html-ex1.png" alt="Toinen tehtava kuvana"/>
-Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen tehtävä </code> ja puske tehtävä Githubiin.
+<h3>Exercise 2: Getting to know text elements {% include points.html text="5%" %}</h3>
+
+Let's continue editing the file <code>index.html</code>. Test out each of the different text elements and see what they look like. The goal of the exercise is to have the website look like the following:
+
+<img src="/assets/html-ex1.png" alt="Second exercise goal"/>
+
+After you are done in your opinion, create a new commit with the following message: <code>Part 3, add second exercise </code>. Finish by pushing the commit to GitHub.
 </div>
 
-# Sisäkkäin asetetut elementit
+# Nested elements
 
-HTML-elementtejä voi asettaa sisäkkäin. Helpoin tapa ymmärtää tämä on ajatella jokainen elementti laatikoksi, joka huolehtii omasta sisällöstään. Sisältö voi olla esimerkiksi tekstiä tai kuvia. Välillä kuitenkin tulee tarve sijoittaa toinen laatikko toisen laatikon sisälle. Tällöin käytetään sisäkkäin asetettuja elementtejä.
+HTML allows _nesting_ elements, i.e. creating element inside each other. It may help to picture each element as a box which takes care of its own contents. The content could be either text or images. In addition, sometimes one needs to put other boxes inside one. This is equivalent to nested elements.
 
-Jos haluamme esimerkiksi vahvistaa lauseesta vain osa, meidän on käytettävä sisäkkäin asetettuja HTML-elementtejä.
+For example, in order to only bold a specific word inside a sentence, one needs to use nested elements:
 
-Tämä on kiva **lause**
+This is a **sentence**
 
 ```html
-<p>Tämä on kiva <strong>lause</strong></p>
+<p>This is a <strong>sentence</strong></p>
 ```
 
-On kuitenkin tärkeää sulkea HTML-elementit järjestyksessä. Edellisessä esimerkikssä avasimme ensimmäiseksi `<p>`-elementin, jonka jälkeen avasimme `<strong>`-elementin. Suljimme `</strong>`-elementin ensimmäisenä ja `</p>`-elementin sen jälkeen. Oikeaoppisessa HTML:ssä on virheellistä sulkea elementit väärässä järjestyksessä. Aina pitää sulkea viimeiseksi aukaistu elementti. Jos emme tee näin, selain yrittää arvata parhaan tavan esittää koodin. Eri selaimet voivat arvata eri tavalla, joten emme voi olla varmoja dokumentin esitystavasta.
+However, when using nested elements, it is important to close the tags in the right order. In the previous example we opened the element `<p>` first, and the tag `<strong>` second. This means that we had to close the element `<strong>` first, i.e. the tag we opened the last, and only then close the tag `<p>`, which we opened first. Always close the last tag you opened first. Otherwiser the browser will try and guess the correct structure of the document. The site will be rendered even if the elements are closed in the wrong order, but the content will most likely be structured in a bizarre way, depending on the browser.
 
-On olemassa kahta eri kategoriaa HTML-elementtejä: niin sanotut _lohkotason_ elementit ja _sisätason_ elementit.
+HTML elements are divided into two distinct categories: _block-level_ elements and _inline_ elements.
 
-Lohkotason elementit ovat näkyvissä lohkoina verkkosivulla. Jokainen lohkotason elementti varaa oman rivin, eli toisin sanoen lohkotason elementtien sisältö näkyy aina uudelta riviltä. Lohkotason elementtiä ei pidä sisällyttää sisätason elementin sisään. Sisätason elementti on aina lohkotason elementin sisällä.
+Block level elements are displayed as blocks on the weviste. Each block-level element takes up a whole line of space, and so the contents are always displayed on a new line. A block element should not be put inside an inline element. An inline element is always inside a block element.
 
-Sisätason elementit on siis aina suljettu lohkotason elementin sisälle ja ne käsittelevät vain todella pientä palaa sivustosta. Ne eivät käsittele kokonaisia tekstipaloja tai kuvia. Yhdellä rivillä voi olla useita sisätason elementtejä. Yleensä sisätason elementtejä näkyy vain tekstin sisällä. Tällaisia elementtejä ovat esimerkiksi `<strong></strong>`- tai `<a></a>`-elementit.
+Inline elements should always be closed inside a block element, while only handling a small part of the document. They shouldn't contain whole pieces of text or picture. However, one line can contain several inline level elements. They are usually located inside text. Examples of inline elements are the tags `<strong></strong` and `<a></a>`.
 
-Käydään läpi lohkotason ja sisätason elementtejä esimerkin kautta.
+Next we'll look at block and inline element through an example.
 
-```
-<p>Tämä tässä on esimerkki <strong>sisätason elementtiä</strong> käyttäen</p>
-```
-
-Edellinen esimerkki näyttää selaimessa tältä:
-
-![Sisätason elementti](/assets/html-example-4.png)
 
 ```
-<p>Tämä tässä on esimerkki <p>lohkotason elementtiä</p> käyttäen</p>
+<p>This is an example of using <strong>inline </strong> </p>
 ```
 
-Edellinen esimerkki näyttää selaimessa tältä:
+The previous text will look like this in the browser:
+
+
+![Inline element](/assets/html-example-4.png)
+
+```
+<p>Here is an example of a <p> block</p> element</p>
+```
+
+The previous example looks like this in the browser:
 
 ![Lohkotason elementti](/assets/html-example-3.png)
 
-Sisäkkäin asettelu on hyvin tärkeä osa HTML-dokumenttia, ja sen rooli korostuu myöhemmin, kun alamme käyttämään css-tyylejä.
+Nesting elements is an essential part of HTML. Its role will be highlighted even more later on, once we learn how to create styles with CSS.
 
 <div class="exercise">
-<h3>Tehtävä 3: Sisäkkäin asetetut elementit {% include points.html text="10%" %}</h3>
-Tehtävänäsi on jatkaa edellisistä tehtävistä tuttua <code>index.html</code>-tiedostoa.
-Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi <code>Jukola</code>, kursivoi <code>Häme</code>ja lihavoi sekä kursivoi <code>Toukola</code>
-<img src="/assets/html-ex3.png" alt="Kolmas tehtava kuvana"/>
-Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kolmas tehtävä</code> ja puske tehtävä Githubiin.
+<h3>Exercise 3: Nested elements {% include points.html text="10%" %}</h3>
+Continue editing the file, introduced in the previous exercises <code>index.html</code>.
+Your task is to make the document inside the file look like the following picture. In other words, bold the text <code>Jukola</code>, italicize the text <code>Häme</code>, and both bold and italicize the text <code>Toukola</code>.
+
+<img src="/assets/html-ex3.png" alt="Third exercise as a picture"/>
+
+After you are done in your opinion, create a new commit with the following message: <code>Part 3, add third exercise </code>. Finish by pushing the commit to GitHub.
 </div>
 
-# HTML-dokumentin rakenne
+# The structure of an HTML document
 
-Kävimme läpi HTML-elementtien perusteet. Ne eivät kuitenkaan ole kovin hyödyllisiä yksinään. Katsotaan seuraavaksi, mistä koko HTML-dokumentti koostuu.
+Now you know the basics of HTML. However, they are not very useful on their own. Next we'll dive further into what makes an HTML document.
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Minun testi sivu</title>
+    <title>My test page</title>
   </head>
   <body>
-    <p>Tämä on minun testisivustoni</p>
+    <p>This is my test site</p>
   </body>
 </html>
 ```
 
-Käydään pala palalta läpi, mitä edellinen HTML-dokumentti pitää sisällään.
+Next we'll break down the contents of the previous document element by element.
 
-1.  `<!DOCTYPE html>`: kertoo mitä HTML-kielioppia käytetään. Tämän seurauksena selain osaa lukea kirjoittamaasi HTML-kieltä. Kurssilla käytetty kielioppi on HTML5-kieltä. Tällöin dokumenttityypiksi merkitään aina HTML-dokumentin ensimmäiselle riville `<!DOCTYPE html>` lauseella.
-2.  `<html></html>`: lohkotason elementti pitää sisällään koko sivuston koodin. Välillä `<html>`-elementistä puhutaan nimellä juurielementti. Se on aina HTML-dokumentin ensimmäinen elementti.
-3.  `<head></head>`: lohkotason elementti pitää sisällään sellaiset osat sivustosta, joita ei näytetä itse verkkosivulla käyttäjälle. Siellä voi olla esimerkiksi avainsanoja, jotka parantavat hakukonenäkyvyyttä, css-tyylilinkkauksia tai charsettejä eli kirjasimia, joita verkkosivu käyttää. Pääsemme vähän ajan kuluttua tutustumaan `<head></head>`-elementtiin.
-4.  `<meta charset="utf-8">` elementti kertoo, mitä merkistöä HTML-dokumentti käyttää. Suositeltu merkistö on UTF-8, jossa toimii ääkköset.
-5.  `<title></title>`: elementti kertoo sivuston otsikon. Yleensä otsikko näkyy selaimessa välilehden otsikkona. Kirjanmerkkeihin tallennettaessa kirjanmerkki nimetään otsikon mukaan.
-6.  `<body></body>`: lohkotason elementti pitää sisällään kaiken sisällön, joka näkyy varsinaisella verkkosivulla. Esimerkiksi tekstit, kuvat, videot sekä kaikki elementit, jotka olemme jo käyneet läpi.
+1.  `<!DOCTYPE html>`: This tag specifies which type of HTML the document is written in, i.e. the rules which the document follows. This way the browser can interpret the HTML properly. The type of HTML used in this course is HTML5. In this case, the first row of an HTML document should always be `<!DOCTYPE html>`.
+2.  `<html></html>`: This tag builds the block element containing all the code of the site. It is sometimes referred to as the root element. It is always the first element of an HTML document.
+3.  `<head></head>`: This block element contains metadata, or infromation about the website not shown to the user in the browser. The element may contain for example key words, improving the site's visibility for search engines, links to CSS files or charsets which the site uses. 
+4.  `<meta charset="utf-8">`: This element defines which character set the HTML document uses. UTF-8 is recommended as it can also handle nordic letters.
+5.  `<title></title>`: This elements defines the title of the website. You can usually see the title in the browser as the name of the tab of the website. In addition, sites are bookmarked using their title.
+6.  `<body></body>`: This block element comprises all the content of the actual webpage, such as text, pictures, and all the elements we have discussed up to this moment.
 
-### Sisennys
+### Indenting
 
-HTML-dokumentti täytyy sisentää oikein, jotta koodin luettavuus pysyy selkeänä. HTML-dokumentissa kannattaa käyttää seuraavia sisennyssääntöjä:
+An HTML document must be indentend properly in order to make sure the code is readable and clear. Here are the rules you should use when indenting HTML code:
 
-1.  Älä lisää tyhjää riviä ilman syytä. Esimerkiksi jos `<h1></h1>` on otsikko ja sen alla on `<p></p>`-elementti, joka liittyy otsikkoon, kannattaa ylimääräinen rivinvaihto jättää käyttämättä.
-2.  Sisennä aina lohkotasonelementit kahdella välilyönnillä verrattuna ulompaan lohkoon.
-3.  Älä sisennä sisätason elementtejä.
+1. Don't add a new line without a good reason. For example, if `<h1></h1>` is the primary heading and there's an element built with `<p></p>` underneath, you don't need to add an empty line between them.
+2. Alwats indent block elements with two spaces with respect to the previous block.
+3. Don't indent inline elements.
 
-**Esimerkki huonosti sisennetystä HTML-dokumentista**
+**Here is an example of a poorly indented HTML document:**
 
 ```html
-<h1>otsikko</h1>
+<h1>Heading</h1>
 
 <p>Lorem ipsum
 <em>dolor sit amet</em>
@@ -178,131 +186,135 @@ consectetur adipisicing elit,sed do
 </p>
 ```
 
-**Sama koodi oikein sisennettynä**
+**Here is the same code indented properly:**
 
 ```html
-<h1>otsikko</h1>
+<h1>Heading</h1>
 <p>
   Lorem ipsum<em>dolor sit amet</em>consectetur
   adipisicing elit,sed do<strong>eiusmod tempor</strong>
 </p>
 ```
 
-Google on tehnyt hyvän HTML-tyyliohjeen. Löydät sen [täältä](https://google.github.io/styleguide/htmlcssguide.html).
+Google has created a great HTML style guide, which you can find [here](https://google.github.io/styleguide/htmlcssguide.html).
 
-Monelle tekstieditorille on tehty hyviä lisäsovelluksia, jotka sisentävät HTML-koodin automaattisesti. VSCodella [beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify) hoitaa homman aina tallennuksen yhteydessä. Voit asentaa sen, jos haluat.
+In addition, many text editors provide extensions which indent HTML code automatically. For example, in VSCode the extension [beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify) properly indents the code on each save.
 
-# Listat
+# Lists
 
-Tutustutaan nyt listoihin. Listoja on kaikkialla. Tämä dokumentti on yksi lista, lomalle lähtiessä teet pakkauslistan ja kaupassa sinulla on mukanasi ostoslista. Myös Internet on täynnä listoja. HTML tukee kolmea erilaista listaa: järjestämätöntä, järjestettyä ja sisäkkäin asetettua listaa (listoja listojen sisällä).
+Next we'll get to know lists. Lists are everywhere, also on the Internet. HTML supports three different kinds of lists: unordered, ordered and nested lists (lists within lists).
 
-Järjestämättömällä listalla tarkoitetaan listaa, jossa järjestyksellä ei ole väliä. Esimerkiksi kauppalista on tälläinen. Järjestämättömän listan tekoon tarvitsemme `<ul></ul>`- ja `<li></li>`-HTML-elementit. Jokainen järjestämätön lista alkaa ja päättyy`<ul></ul>`-elementtiin. Jokainen listan elementti tai tekstipätkä on puolestaan `<li>`-elementin sisällä.
+An unordered list refers to a list where the order is not significant (hence the name). One example of an unordered list would be a shopping list. In practice, these kinds of lists are shown stacked, separated with bullets. You can create an unordered list with the tags `<ul></ul>` and `<li></li>`. Each unordered list starts and ends with the tags `<ul></ul>`. Each item on the list is inside, in an element created with `<li></li>`.
+
 
 ```html
 <ul>
-  <li>maito</li>
-  <li>leipä</li>
-  <li>irtokarkkipussi</li>
-  <li>sipsipussi</li>
+  <li>milk</li>
+  <li>break</li>
+  <li>candy</li>
+  <li>chips</li>
 </ul>
 ```
 
 <ul>
-  <li>maito</li>
-  <li>leipä</li>
-  <li>irtokarkkipussi</li>
-  <li>sipsipussi</li>
+  <li>milk</li>
+  <li>break</li>
+  <li>candy</li>
+  <li>chips</li>
 </ul>
 
-Järjestetty lista on muuten samanlainen kuin järjestämätön, mutta sen järjestyksellä on väliä. Esimerkiksi reittiohjeet on järjestetty lista. Järjestetyssä listassa `<ul>`-elementti korvataan `<ol></ol>`-elementillä.
+
+An ordered list is almost identical to the ordered list, with the exception that the order of the items matters. Thus the contents of the list are displayed using incremental numbers. For example, route directions would create an ordered list. The list is created with the tags `<ol></ol>`.
+
 
 ```html
 <ol>
-  <li>Aja tien päähän.</li>
-  <li>Käänny oikealle.</li>
-  <li>Aja auto parkkiin.</li>
+  <li>Drive to the end of the road.</li>
+  <li>Turn to the right.</li>
+  <li>Park the car.</li>
 </ol>
 ```
 <ol>
-  <li>Aja tien päähän.</li>
-  <li>Käänny oikealle.</li>
-  <li>Aja auto parkkiin.</li>
+  <li>Drive to the end of the road.</li>
+  <li>Turn to the right.</li>
+  <li>Park the car.</li>
 </ol>
 
-
-Sisäkkäin asetetulla listalla tarkoitetaan listaa, jossa on listoja listojen sisällä. Esimerkiksi koiranhoito-ohje:
+Nested lists can combine both ordered and unordered lists. For example, here are some instructions for taking care of a dog:
 
 ```html
 <ol>
-  <li>Käytä koira aamulenkillä.</li>
-  <li>Anna koiralle ruokaa, ruoka sisältää:</li>
+  <li>Take the dog out for a walk.</li>
+  <li>Give the dog some food containing:</li>
   <ul>
-    <li>150g muroja</li>
-    <li>loraus öljyä</li>
-    <li>mitallinen niveljauhetta</li>
-    <li>mitallinen hammasjauhetta.</li>
+    <li>150g of cereal</li>
+    <li>a splash of oil</li>
+    <li>a spoonful of joint powder</li>
+    <li>a spoonful of tooth powder</li>
   </ul>
-  <li>Täytä vesikuppi.</li>
+  <li>Fill the water cup.</li>
 </ol>
 ```
+
 <ol>
-  <li>Käytä koira aamulenkillä.</li>
-  <li>Anna koiralle ruokaa, ruoka sisältää:</li>
+  <li>Take the dog out for a walk.</li>
+  <li>Give the dog some food containing:</li>
   <ul>
-    <li>150g muroja</li>
-    <li>loraus öljyä</li>
-    <li>mitallinen niveljauhetta</li>
-    <li>mitallinen hammasjauhetta</li>
+    <li>150g of cereal</li>
+    <li>a splash of oil</li>
+    <li>a spoonful of joint powder</li>
+    <li>a spoonful of tooth powder.</li>
   </ul>
-  <li>Täytä vesikuppi.</li>
+  <li>Fill the water cup.</li>
 </ol>
 
 <div class="exercise">
-<h3>Tehtävä 4: Listat {% include points.html text="10%" %}</h3>
+<h3>Exercise 4: Lists {% include points.html text="10%" %}</h3>
 
-Jatketaan edellisistä tehtävistä tuttua <code>index.html</code>-dokumentin muokkaamista. Testaa ensin dokumenttiin, mitä eri listatyypit tekevät. Tämän jälkeen yritä saada sivusto näyttämään seuraavanlaiselta:
+We'll continue editing the document inside <code>index.html</code>. First, test out the different list types in the document. Then try and make the site look like the following picture:
 
-<img src="/assets/html-ex4.png" alt="Neljannen tehtavan kuva" />
+<img src="/assets/html-ex4.png" alt="Picture for the fourth exercise" />
 
-Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Neljäs tehtävä</code> ja puske tehtävä Githubiin.
+When you are done in your opinion, create a commit with the message <code>Part 3, add exercise 4</code> and push it to GitHub.
 
 </div>
 
-# Kuvat ja kommenttit
+# Images and comments
 
-Kuvat ovat tärkeä osa verkkosivuja. Kuten vanha sanonta kuuluu, kuva kertoo enemmän kuin tuhat sanaa. Jotta kuvan voi näyttää, sen on sijaittava jollain palvelimella. Kuvan voi tarjota omalta palvelimelta HTML-dokumentin yhteydessä tai sen voi linkata suoraan toiselta palvelimelta. Perehdytään ensin jälkimmäiseen vaihtoehtoon.
+Images are an essential part of a website. As the old saying goes, a picture is worth a thousand words. In order to display an image, it has to be located on some server. One can use the same server where the HTML document is served from, or the image can be linked from elsewhere on the Internet. We'll start with the latter option.
 
-Kuvat lisätään `<img/>`-tagin avulla. Jos esimerkiksi haluaisimme lisätä HTML-dokumenttiin kuvan osoitteesta `https://cdn.pixabay.com/photo/2016/02/19/15/46/dog-1210559_1280.jpg`, niin kuva lisätään seuraavalla elementillä:
+Images are added to a web page with an element built with the `<img/>` tag. For example, if we wished to display the image from this address: `https://cdn.pixabay.com/photo/2016/02/19/15/46/dog-1210559_1280.jpg`, we would use the following element:
 
 ```html
 <img src="https://cdn.pixabay.com/photo/2016/02/19/15/46/dog-1210559_1280.jpg" alt="Smiling dog" height="240" width="320"/>
 ```
 
-Huomataan, että HTML-tagin sisällä on jotain uutta. Niitä kutsutaan attribuuteiksi. Jokainen HTML-elementti voi sisältää attribuutteja. Attribuutit lisätään seuraavalla kieliopilla: `nimi="arvo"`. Toisin sanoen attribuutin määrittelemiseksi tulee elementtiin kirjoittaa sen nimi, yhtäsuuruusmerkki, ja attribuutin arvo lainausmerkeissä. Attribuutit sisältävät lisätietoa elementeistä. Tässä tapauksessa `src`- attribuutti kertoo, missä kuva sijaitsee, `alt`-attribuutti kertoo, mitä kuva sisältää (luonnollisella kielellä, kuten suomeksi) ja `height`- ja `width`-attribuutit kertovat, minkä kokoinen kuva on. Näistä tärkeimmät ovat `src`- ja `alt`-attribuutit. Ilman `src`-attribuuttia kuva ei näy ja ilman `alt`-attribuuttia kuva ei näy jos verkkosivua luetaan vaihtoehtoisella tavalla. Vaihtoehtoista lukutapaa käyttävät esimerkiksi sokeat, jotka käyttävät internetiä näytönlukijan avulla.
+There are some new things inside the element, such as `alt` and `height`. These are called _attributes_. Each HTML element can contain attributes. Attributes are used based on the following rule: `name="value"`. That is, in order to define an attribute, you have to write its name inside an element, and give its value as a string. 
 
-Huomataan myös, että `<img/>`-tagilla ei ole lopetustagia. Se on niin sanottu tyhjä elementti. Tällä tarkoitetaan elementtiä, jossa lopetustagi on liitetty aloitustagiin. Tyhjät elementit ilmenevät yleensä dokumentissa sisätason elementteinä. Voit lukea lisää tyhjistä elementeistä [täältä](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element).
+Attributes provide additional information to an element. In the above example with the image, the `src` attribute defines the location of the linked image. The attribute `alt` defines what the image shows (written in a natural language such as English), and `height` and `width` determine the size of the image. Out of these four, the `src` and `alt` attributes are the most important. Without `src`, no image would be displayed, and without `alt` people viewing the page in alternative ways couldn't know what the image shows. For example, blind people use the Internet with the help of a screen reader, which can then use the contents of the `alt` tag to describe the picture.
 
-Jos kuva sijaitsee samalla koneella verkkosivun kanssa, käytetään <code>src</code>-attribuutissa suhteellista polkua. Voit lukea suhteellisesta polusta lisää [täältä](<https://en.wikipedia.org/wiki/Path_(computing)>).
+Note how the `<img/>` element does not have an end tag. It is a so called empty element. This means, that the end tag is integrated in the start tag. Empty elements are usually inline elements. You can read more about them [here](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element).
 
-HTML-dokumentissa voi olla kommentteja, jotka eivät näy lopullisessa verkkosivussa. Niiden tarkoitus on selventää kirjoittajan ajatuksia seuraavalle kirjoittajalle tai kirjoittajalle itselleen myöhempää käyttöä varten. Kommentin voi lisätä `<!-- ja -->`-elementtien väliin. Esimerkiksi seuraava on HTML-kommentti: `<!-- Tämä tässä on kommentti -->`.
+If the image is located at the same computer as the website, a relative path can be used for the <code>src</code> attribute. 
+
+An HTML document can also contain comments, which will not be displayed to the user in the browser. The point of comments is to clarify the thoughts of the person who has written the code, so that it is easier to interpret by others (and perhaps the developer themselves later on). A comment can be added by writing it between `<!--` and `-->`. For example, `<!-- this is a comment -->`
 
 <div class="exercise">
-<h3>Tehtävä 5: Kuvat ja kommentit {% include points.html text="10%" %}</h3>
+<h3>Exercise 5: Images and comments {% include points.html text="10%" %}</h3>
 <div class="warning">
-Jos liität omille verkkosivuille kuvan joltain toiselta sivulta, sinulla pitää olla oikeus käyttää kuvaa.
-Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia.
+If you attach an image to your site from another web page, make sure you actually have the right to use that image. There are several services online offering roalty-free images.
 </div>
 <ol>
-<li>Lataa omalle koneelle <a href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Seitsem%C3%A4n_veljest%C3%A4.png">kuva</a>. Kuvaa saa käyttää uudestaan.</li>
-<li>Tee edellisistä tehtävistä tuttuun repositorioon uusi kansio, jonka nimi on <code>assets</code> ja lisää se Gittiin.</li>
-<li>Lisää kuva kansioon ja muista lisätä myös se Gittiin.</li>
-<li>Lisää kuva edellisistä tehtävistä tuttuun HTML-dokumenttiin suhteellisella osoitteella.</li>
-<li>Säädä kuvan koko oikeaksi.</li>
-<li>Muista lisätä <code>alt</code>-attribuutti.</li>
-<li>Lisää kuvan elementin yläpuolelle kommentti, jossa kerrotaan kuvan esittävän Seitsemän veljestä -kirjan ensimmäistä sivua.</li>
-<li>Lopputuloksen pitäisi näyttää seuraavanlaiselta:</li>
-<img src="/assets/html-ex5.png" alt="Viidennen tehtävän lopputulos"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Viides tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>Download <a href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Seitsem%C3%A4n_veljest%C3%A4.png">this image</a> to your computer.</li>
+<li>Create a new folder to your project, called <code>assets</code> and add it to Git.</li>
+<li>Add the picture to the newly created folder and to Git.</li>
+<li>Add the image to your web site using a relative path, and add it to Git.</li>
+<li>Adjust the image size as you wish.</li>
+<li>Remember to add the <code>alt</code> attribute.</li>
+<li>Write a comment above the image, describing the contents.</li>
+<li>Here is what the final product should look like:</li>
+<img src="/assets/html-ex5.png" alt="The result of fifth exercise"/>
+<li>When you are done in your opinion, create a commit with the message <code>Part 3, fifth exercise</code> and push it to GitHub.</li>
 </ol>
 </div>
 
@@ -319,7 +331,7 @@ Linkkielementti sisältää `href`-attribuutin, jossa on osoite linkattavaan koh
 Linkille voi myös antaa myös `target`-attribuutin, jonka `_blank`-arvolla voi pakottaa linkin aukeamaan toisella välilehdellä. Lisää linkin attribuuteista voi lukea [täältä](https://www.w3schools.com/tags/tag_a.asp).
 
 <div class="exercise">
-<h3>Tehtävä 6: HTML-tiedostojen linkittäminen {% include points.html text="10%" %}</h3>
+<h3>Exercise 6: HTML-tiedostojen linkittäminen {% include points.html text="10%" %}</h3>
 <ol>
 <li>Tee toinen HTML-tiedosto ja sijoita se samaan kansioon edellisen tiedoston kanssa.</li>
 <li>Lisää tiedosto Gittiin.</li>
@@ -357,7 +369,7 @@ Jotta CSS voi vaikuttaa HTML-elementteihin, pitää HTML-dokumentin löytää CS
 Huomataan, että linkissä on kolme eri attribuuttia, joista vain yksi on tuttu. Attribuutti `rel` määrittää, että luettava tiedosto on tyylitiedosto. <code>Type</code> puolestaan määrittää, että kyseessä on CSS-tyyliarkkikieli. Näin selain tietää, että sen pitää lukea myös CSS-tiedosto ja ottaa huomioon myös sen tekemät muutokset.
 
 <div class="exercise">
-<h3>Tehtävä 7: CSS:n linkittäminen {% include points.html text="5%" %}</h3>
+<h3>Exercise 7: CSS:n linkittäminen {% include points.html text="5%" %}</h3>
 <ol>
 <li>Tee <code>style.css</code>-tiedosto samaan kansioon kuin aikaisemmat tehtävät.</li>
 <li>Lisää tiedosto Gittiin.</li>
@@ -479,7 +491,7 @@ Universaali selektori on helppo ymmärtää. Sillä valitaan jokainen elementti 
 ```
 
 <div class="exercise">
-<h3>Tehtävä 8: Selektorit {% include points.html text="10%" %}</h3>
+<h3>Exercise 8: Selektorit {% include points.html text="10%" %}</h3>
 
 Tehtävän ideana on testata kaikkia eri selektoreita värittämisen avulla edellisissä tehtävissä tekemäämme <code>index.html</code>-dokumenttiin.
 
@@ -594,7 +606,7 @@ Elementti on sijoittunut reunaan, mutta se ei varaa enää tilaa itse dokumentis
 Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosittelemme siihen tutustumista vielä lisää esimerkiksi [täältä](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 
 <div class="exercise">
-<h3>Tehtävä 9: Elementit vierekkäin {% include points.html text="10%" %}</h3>
+<h3>Exercise 9: Elementit vierekkäin {% include points.html text="10%" %}</h3>
 <ol>
 <li>Tee git-kansioon toinen tiedosto, ja nimeä se position.html-nimellä.</li>
 <li>Tee myös styles.css-tiedosto ja tee tarvittavat toimenpiteet, jotta saat linkitettyä tiedostot toisiinsa.</li>
@@ -654,7 +666,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 `border-color` määrittelee, minkä värinen reuna on. Tälle voi antaa samoja ominaisuuksia kuin `background-color`- tai `color`-ominaisuuksille.
 
 <div class="exercise">
-<h3>Tehtävä 10: CSS:n ominaisuuksia {% include points.html text="5%" %}</h3>
+<h3>Exercise 10: CSS:n ominaisuuksia {% include points.html text="5%" %}</h3>
 <ol>
 <li>Tehtävän ideana on, että tutustut äsken käytyihin ominaisuuksiin itsenäisesti.</li>
 <li>Ota tavoitteeksi, että saat edellisessä tehtävässä tehdyn sivun näyttämään tältä.</li>
@@ -755,7 +767,7 @@ code {
 Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mistä lähdimme liikkeelle.
 
 <div class="exercise">
-<h3>Tehtävä 11: Sivuista luettavat CSS:n avulla {% include points.html text="10%" %}</h3>
+<h3>Exercise 11: Sivuista luettavat CSS:n avulla {% include points.html text="10%" %}</h3>
 <ol>
 <li>Tee kappaleessa käsitellyt määrittelyt Seitsemän veljestä -verkkosivulle. Voit lisätä pidemmän jakson Seitsemän veljestä -romaanista, jotta näet paremmin lopputuloksen. Löydät koko kirjan <a href="http://www.gutenberg.org/cache/epub/11940/pg11940.txt" target="_blank">täältä.</a></li>
 <li>Testaa sivustolle mahdollisimman paljon oppimiasi asiota. Yhtä oikeaa lopputulosta ei ole.</li>
@@ -838,7 +850,7 @@ Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
 
 <div class="exercise">
 
-<h3>Tehtävä 12: Ansioluettelo {% include points.html text="10%" %}</h3>
+<h3>Exercise 12: Ansioluettelo {% include points.html text="10%" %}</h3>
 <ol>
 <li>Luo uusi repositorio Githubiin.</li>
 <li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna. Voit halutessasi tehdä ansioluettelon myös keksityillä tiedoilla.</li>
