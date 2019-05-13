@@ -6,7 +6,7 @@ permalink: /websites/
 tag: material
 ---
 
-# Learning goals
+## Learning goals
 
 <h4>The goal is that after this week, the student will</h4>
 
@@ -120,7 +120,7 @@ Next we'll look at block and inline element through an example.
 <p>This is an example of using <strong>inline </strong> </p>
 ```
 
-The previous text will look like this in the browser:
+The previous inline element will look like this in the browser:
 
 
 ![Inline element](/assets/html-example-4.png)
@@ -129,9 +129,9 @@ The previous text will look like this in the browser:
 <p>Here is an example of a <p> block</p> element</p>
 ```
 
-The previous example looks like this in the browser:
+The previous block element will look like this in the browser:
 
-![Lohkotason elementti](/assets/html-example-3.png)
+![Block element](/assets/html-example-3.png)
 
 Nesting elements is an essential part of HTML. Its role will be highlighted even more later on, once we learn how to create styles with CSS.
 
@@ -413,7 +413,9 @@ As you probably guessed, using a separate CSS file is often the best option when
 
 # Selectors
 
-Kuten edellisestä tehtävästä huomaamme, CSS koostuu selektoreista ja ominaisuuksista. Ominaisuudella tarkoitetaan esimerkiksi elementin väriä tai korkeutta. Selektorilla taas valitaan oikea HTML-elementti dokumentista. Yhdellä elementillä voi olla useampia eri selektoreita, ja ne vaikuttavat eri tavoin elementtiin.
+Selectors define which elements of the HTML document a specific style should be applied to. One element can match several selectors, which all can have a different effect on the element. On the other hand, one selector can match several elements.
+
+Here is a basic CSS example:
 
 ```css
 p {
@@ -421,12 +423,13 @@ p {
 }
 ```
 
-Esimerkissä `p` on selektori, ja `background-color: red;` on CSS-ominaisuus. Selektori merkitään aina rivin alkuun, jonka jälkeen ominaisuudet laitetaan lohkon sisään, joka erotetaan `{}`-merkeillä. Käymme läpi neljä yleisintä CSS-selektoria.
+In the example, `p` is the selector, and `background-color: red;` us the CSS property. The selector is always written at the beginning of a line, and it is followed by a block containing the properties, which will be used to change the appearances of the elements matched by the selector. 
 
-**Tyyppiselektori**
+Here are the four most common types of selectors:
 
-Tyyppiselektori valitsee kaikki tiettyä tyyppiä olevat elementit.
-Esimerkiksi:
+**Type selectors**
+
+A type selector matches all the elements of a specific type, based on their tags. For example, the following snippet of code
 
 ```css
 p {
@@ -434,59 +437,69 @@ p {
 }
 ```
 
-Värjää kaikki `<p></p>`-elementit siniseksi.
+would color all the elements defined with `<p></p>` as blue. Other possible types could be `div`, `a`, `h1`, or any HTML tag.
 
-**Luokkaselektori**
+**Class selectors**
 
-Luokkaselektorin käyttö edellyttää, että HTML-dokumenttia muokataan. Valitulle elementille pitää lisätä attribuutti `class="nimi"`.
+In order to use a class selector, one must first make alterations to the elements one wishes to style. The elements should be added a _class_, which is an atrribute defined by the user. These elements can then be matched with the class selector, regardless of the type of the element tag. The name of the class selector can be defined freely, but it should naturally be something descriptive.
 
-Tarkastellaan esimerkiksi, miten pääotsikko muokataan keltaiseksi. Elementille `<h1></h1>` pitää lisätä luokka, jonka voimme valita selektorilla.
+Here is an example, where we will color all the lines containing the word "yellow" with the color yellow.
 
 ```html
-<h1 class="paaotsikko">Pääotsikko</h1>
+<p>
+  <p>Look at the stars, look how they shine for you,</p>
+  <p class="yellow">yeah they were all yellow.</p>
+  <p>I came along, I wrote a song for you,</p>
+  <p class="yellow">and it was called yellow.</p>
+</p>
 ```
 
 ```css
-.paaotsikko {
+.yellow {
   color: yellow;
 }
 ```
 
-Luokkaselektorille voi myös antaa monta eri luokkaa. Tällöin luokat erotellaan välilyönnillä toisistaan.
+One can also give one element several classes. They should then be separated with a space, as follows:
 
 ```html
-<h1 class="paaotsikko alleviivattu">Pääotsikko</h1>
+  <p class="yellow chorus">yeah they were all yellow.</p>
 ```
 
-Huomaa että luokkaselektorin eteen tulee `.`, joka määrittelee, että kyseessä on luokkaselektori. Luokkaselektori on kaikista selektoreista käytetyin. Se ajaa yli tyyppiselektorin muutokset sellaisissa kohdissa, joissa molemmilla on samalla ominaisuudella poikkeava arvo. Eli jos otsikot olisi ensin merkitty tyyppiselektorilla siniksiksi ja sen jälkeen luokkaselektorilla keltaisiksi, on niiden lopullinen väri keltainen.
+Note how the class selector is preceeded by a dot `.` in the CSS. This specifies, that it's a class selector. Without the dot the selector would refer to a tag called "yellow".
 
-**Tunnisteselektorit**
+The class selector is possibly the type of selector the most widely used. It overrides the changes made with type selectors, in case the styles of an element have been defined using both. In other words, if in the above example you had also defined a style for all `p` tags, the desired lines would still appear as yellow, as the class selector is given more value.
 
-Tunnisteselektorin toiminta muistuttaa luokkaselektoria. Luokkaselektoria on tarkoitus käyttää monessa elementissä verkkosivulla. Tunnisteselektorin tarkoitus on kohdistua vain yhteen elementtiin.
+**ID selector**
 
-Myös tunnisteselektorin käyttö edellyttää muokkauksia HTML-dokumenttiin. Valitulle elementille pitää lisätä attribuutti `id="arvo"`.
+The ID selector is quite similar to the class selector. The difference is that, contrary to a class selector, an ID selector is designed to be used for _only one_ element at a time. In other words, one ID should only match one element.
 
-Jos meillä on esimerkiksi leipätekstiä edustava elementti `<p class="leipateksti"></p>` ja haluamme, että yksi kohta tekstistä on punainen, voimme lisätä sille id:n `<p class="leipateksti" id="punainen-kohta"></p>`. Tämän jälkeen voimme valita sen `#punainen-kohta`-tunnisteselektorilla.
+The use of an ID selector also requires adding new information to the HTML document edited. The attribute used for defining the name of the ID selector is "id". 
+
+For example, if we wish to color just one part of the whole document red, we could add the desired element the attribute `id="red-part"`:
+
 
 ```html
-<p class="leipateksti" id="punainen-kohta"></p>
+<p class="body" id="red-part">This text will be red</p>
 ```
 
 ```css
-.leipateksti {
+.body {
   color: yellow;
 }
 
-#punainen-kohta {
+#red-part {
   color: red;
 }
 ```
 
-Joskus kuulee sanottavan, ettei tunnisteselektoria kannata käyttää. Tämä ei ole totta, mutta kyseistä selektoria pitää käyttää harkitummin kuin luokkaselektoria. Tunnisteselektoria ei kannata käyttää yleisselektorina niin, että käytetään esimerkiksi `id="punainen-kohta"`-selektoria monessa elementissä. Tällöin kannattaisi tehdä toinen luokkaselektori, ja erotella selektorit toisistaan välilyönnillä `class="leipateksti punainen-leipateksti"`. Tunnisteselektoria kannattaa käyttää, kun vain kun pitää valita yksi elementti verkkosivulla. Silloin voi olla varma, että kyseinen muutos ei vaikuta mihinkään muuhun elementtiin. Tunnisteselektori ajaa yli tyyppiselektorin ja luokkaselektorin muutokset sellaisissa kohdissa, joissa samalla ominaisuudella on poikkeava arvo. Tyyppiselektorilla on siis suurempi tarkkuus kuin luokkaselektorilla.
+Note how it is possible to match an element with a class and an ID selector at the same time. In CSS, the ID selector is defined by starting the selector name with `#`.
 
-**Universaali selektori**
+Some people say, that ID selectors are useless and not to be used. This is definitely an overstatement. However, the ID selector should be used more conservatively than the class selector. For example, the class selector is the right choice for styling several elements in the same way. The styles given with an ID selector override the styles given with a class selector, i.e. in case of conflicts, the element will be styled based on the ID selector.
 
-Universaali selektori on helppo ymmärtää. Sillä valitaan jokainen elementti verkkosivuilta. Sen painoarvo on pienin, eli jos mikä tahansa muu selektori määrittää elementille jonkin toisen ominaisuuden, käyttää elementti sitä ominaisuutta.
+**The universal selector**
+
+The universal selector simply means choosing all the elements of an HTML document. It has the least weight, i.e. if an element is given some styles using any other selector, it will override the universal selector. The symbol of the universal selector should be familiar to you from the command line part, where it was used to match several filenames:
 
 ```
 * {
@@ -495,15 +508,15 @@ Universaali selektori on helppo ymmärtää. Sillä valitaan jokainen elementti 
 ```
 
 <div class="exercise">
-<h3>Exercise 8: Selektorit {% include points.html text="10%" %}</h3>
+<h3>Exercise 8: Selectors {% include points.html text="10%" %}</h3>
 
-Tehtävän ideana on testata kaikkia eri selektoreita värittämisen avulla edellisissä tehtävissä tekemäämme <code>index.html</code>-dokumenttiin.
+The idea of this exercise is to test out each of the selectors in order to add colors to the <code>index.html</code> we have been working with.
 
 <ol>
-<li>Korjataan sivusto näyttämään paremmalta myöhemmin, nyt on tärkeintä että testaat, mitä eri selektorit tekevät.</li>
-Yritä saada lopputulos näyttämään tältä:
-   <img src="/assets/html-ex-8.png" alt="Kahdeksannen tehtävän lopputulos kuvana"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kahdeksas tehtävä ja puske tehtävä Githubiin.</code></li>
+<li>Don't worry about making the site look pretty - we'll get to that later on - just try out all of the selectors describes above.</li>
+Try and make the site look like the following:
+   <img src="/assets/html-ex-8.png" alt="The result of the eight exercise"/>
+<li>When you are done in your opinion, create a commit with the message <code>Part 3, add eigth exercise</code>, and push it to GitHub.</li>
 </ol>
 </div>
 

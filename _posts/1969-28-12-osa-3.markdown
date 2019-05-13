@@ -401,7 +401,9 @@ Huomaamme, että erillinen tiedosto on melkein aina paras vaihtoehto. Voimme nim
 
 # Selektorit
 
-Kuten edellisestä tehtävästä huomaamme, CSS koostuu selektoreista ja ominaisuuksista. Ominaisuudella tarkoitetaan esimerkiksi elementin väriä tai korkeutta. Selektorilla taas valitaan oikea HTML-elementti dokumentista. Yhdellä elementillä voi olla useampia eri selektoreita, ja ne vaikuttavat eri tavoin elementtiin.
+Selektorilla valitaan oikea HTML-elementti dokumentista, jotta sille voidaan antaa tietty ominaisuus. Yhdellä elementillä voi olla useampia eri selektoreita, ja ne vaikuttavat eri tavoin elementtiin. Samoin yksi selektori voi valita monta elementtiä dokumentista.
+
+Tässä on yksinkertainen CSS tyylimäärittely:
 
 ```css
 p {
@@ -409,11 +411,13 @@ p {
 }
 ```
 
-Esimerkissä `p` on selektori, ja `background-color: red;` on CSS-ominaisuus. Selektori merkitään aina rivin alkuun, jonka jälkeen ominaisuudet laitetaan lohkon sisään, joka erotetaan `{}`-merkeillä. Käymme läpi neljä yleisintä CSS-selektoria.
+Esimerkissä `p` on selektori, ja `background-color: red;` on CSS-ominaisuus. Selektori merkitään aina rivin alkuun, jonka jälkeen ominaisuudet laitetaan lohkon sisään, joka erotetaan `{}`-merkeillä. 
+
+Seuraavaksi käymme läpi neljä yleisintä CSS-selektoria.
 
 **Tyyppiselektori**
 
-Tyyppiselektori valitsee kaikki tiettyä tyyppiä olevat elementit.
+Tyyppiselektori valitsee kaikki tiettyä tyyppiä olevat elementit niiden tagien perusteella.
 Esimerkiksi:
 
 ```css
@@ -422,20 +426,27 @@ p {
 }
 ```
 
-Värjää kaikki `<p></p>`-elementit siniseksi.
+Värjää kaikki `<p></p>`-elementit siniseksi. Muita vaihtoehtoisia tyyppejä ovat esimerkiksi `div`, `a`, ja `h1`, sekä kaikki muut HTML-tagit.
 
 **Luokkaselektori**
 
-Luokkaselektorin käyttö edellyttää, että HTML-dokumenttia muokataan. Valitulle elementille pitää lisätä attribuutti `class="nimi"`.
+Luokkaselektorin käyttö edellyttää, että HTML-dokumenttia muokataan. Valitulle elementille pitää lisätä attribuutti `class="nimi"`. Tämän jälkeen elementtejä voidaan valita niiden luokan perusteella, huolimatta niiden tagien tyypeistä. Luokkaselektorin voi nimetä vapaasti, mutta nimen kannattaa luonnollisestikin olla järkevä, ja kuvata tyylin tarkoitusta mielekkäästi.
 
-Tarkastellaan esimerkiksi, miten pääotsikko muokataan keltaiseksi. Elementille `<h1></h1>` pitää lisätä luokka, jonka voimme valita selektorilla.
+Tarkastellaan esimerkiksi, miten osia tekstistä voidaan värittää keltaiseksi.
+
+Tässä on pala HTML-dokumentista, josta haluamme värittää kesäiset rivit punaisiksi. Tämä tapahtuu antamalla halutuille riveille luokkamääreen "kesa", jonka perusteella antaa niille värikkään tyylin.
 
 ```html
-<h1 class="paaotsikko">Pääotsikko</h1>
+<p>
+  <p class="kesa">Keltainen toukokuu, mikset sä jo tuu?</p>
+  <p>Oon turhaan odottanut tuulta lempeää.</p>
+  <p class="kesa">Kesä antaa kaikille onnen tunteen,</p>
+  <p>jonka voi säilyttää</p>
+</p>
 ```
 
 ```css
-.paaotsikko {
+.kesa {
   color: yellow;
 }
 ```
@@ -443,10 +454,12 @@ Tarkastellaan esimerkiksi, miten pääotsikko muokataan keltaiseksi. Elementille
 Luokkaselektorille voi myös antaa monta eri luokkaa. Tällöin luokat erotellaan välilyönnillä toisistaan.
 
 ```html
-<h1 class="paaotsikko alleviivattu">Pääotsikko</h1>
+  <p class="kesa  kertsi">Keltainen toukokuu, mikset sä jo tuu?</p>
 ```
 
-Huomaa että luokkaselektorin eteen tulee `.`, joka määrittelee, että kyseessä on luokkaselektori. Luokkaselektori on kaikista selektoreista käytetyin. Se ajaa yli tyyppiselektorin muutokset sellaisissa kohdissa, joissa molemmilla on samalla ominaisuudella poikkeava arvo. Eli jos otsikot olisi ensin merkitty tyyppiselektorilla siniksiksi ja sen jälkeen luokkaselektorilla keltaisiksi, on niiden lopullinen väri keltainen.
+Huomaa että luokkaselektorin eteen tulee `.`, joka määrittelee, että kyseessä on luokkaselektori. Ilman pistettä kyseinen CSS olisi tarkoittanut, että tyyli tulisi lisätä kaikkiin elementteihin, jotka on rakennettu "kesa"-tagilla.
+
+Luokkaselektori on kaikista selektoreista käytetyin. Se ajaa yli tyyppiselektorin muutokset sellaisissa kohdissa, joissa molemmilla on samalla ominaisuudella poikkeava arvo. Eli jos ylläolevassa esimerkissä kaikki `p`-tagit olisi ensin merkitty tyyppiselektorilla siniksiksi, näkyisivät kesä-rivit edelleen keltaisina, sillä luokkaselektorille annetaan enemmän arvoa.
 
 **Tunnisteselektorit**
 
@@ -457,7 +470,7 @@ Myös tunnisteselektorin käyttö edellyttää muokkauksia HTML-dokumenttiin. Va
 Jos meillä on esimerkiksi leipätekstiä edustava elementti `<p class="leipateksti"></p>` ja haluamme, että yksi kohta tekstistä on punainen, voimme lisätä sille id:n `<p class="leipateksti" id="punainen-kohta"></p>`. Tämän jälkeen voimme valita sen `#punainen-kohta`-tunnisteselektorilla.
 
 ```html
-<p class="leipateksti" id="punainen-kohta"></p>
+<p class="leipateksti" id="punainen-kohta">Tämä teksti tulee olemaan punainen.</p>
 ```
 
 ```css
