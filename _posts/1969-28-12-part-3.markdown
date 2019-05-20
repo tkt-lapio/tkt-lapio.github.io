@@ -390,7 +390,7 @@ There are also other ways of adding styles besides linking a whole CSS file with
 
 **Inline CSS**
 
-Inlince CSS is a good way of defining the styles of individual elements. In practice, the styles are added directly to the `style` attribute of the desired elements. However, the method isn't very scalable, and shouldn't be used to any even slightly complicated sites.
+Inlince CSS is a good way of defining the styles of individual elements. In practice, the styles are added directly to the `style` attribute of the desired elements. However, the method isn't very scalable, and shouldn't be used on any even slightly complicated sites.
 
 ```html
 <h1 style="color:yellow;">This is a yellow heading</h1>
@@ -437,7 +437,7 @@ p {
 }
 ```
 
-would color all the elements defined with `<p></p>` as blue. Other possible types could be `div`, `a`, `h1`, or any HTML tag.
+would color all the elements defined with `<p></p>` as blue. Any HTML tag, such as `a` and `li` for example, can be used to define the type.
 
 **Class selectors**
 
@@ -520,15 +520,17 @@ Try and make the site look like the following:
 </ol>
 </div>
 
-# Elementtien koko, marginaali, sisennys sekä sijainti.
+# The size, margin, indentation and location of elements
 
-Emme ole vielä tutustuneet kahteen HTML-kielen käytetyimpään elementtiin. Ne ovat `<div></div>`- ja `<span></span>`-elementit. Span-elementti on sisätason elementti, ja `<div></div>` on lohkotason elementti. Molemmat ovat käytännössä tyhjiä kuoria, joiden sisälle voi laittaa uusia elementtejä. Ideana on, että elementeille annetaan CSS-ominaisuuksia, jolloin pystymme asettelemaan elementtien sisällä olevaa sisältöä paremmin. Tutustutaan tarkemmin näihin CSS-ominaisuuksiin.
+Next we'll get to know the two probably most commonly used elements in HTML: `<div></div>` and `<span></span>`. The `span` tag creates an inline element, and the `div` tag creates a block level element. In practice, both of them are empty shells, meaning that they do not impose a particular style or outlook on the elements they create. They are in fact usually used for wrapping groups of elements together. This facilitates adding CSS to a large group of elements, an particularly customizing the layot of page. Let's focus on the latter next.
 
-Elementeille voidaan antaa `height`- ja `width`-CSS-ominaisuudet, jotka kuvaavat elementin korkeutta ja leveyttä. Testataan tätä yksinkertaisen div-elementin avulla, jonka sisällä on p-elementti.
+The CSS properties `height` and `width` describe, you guessed it, the size of the height and width dimensions of an element. We'll demonstrate this with a simple `div` typed element, which contains a `p` element.
+
+Here are two snippets of HTML and CSS code, linked together:
 
 ```html
 <div class="container">
-  <p>Tekstipätkä div-elementin sisällä</p>
+  <p>Some text inside a div element</p>
 </div>
 ```
 
@@ -540,44 +542,74 @@ Elementeille voidaan antaa `height`- ja `width`-CSS-ominaisuudet, jotka kuvaavat
 }
 ```
 
-![Esimerkki korkeudesta ja leveydestä](/assets/html-example-12.png)
+![An example of height and width](/assets/html-example-12.png)
 
-Huomaamme, että tekstin taustalle on tullut suorakulmion muotoinen alue, jonka taustaväri on punainen.
+We notice that the CSS above created a red rectangle around the `p` element. This is due to the fact that we explicitly defined the size, i.e. the widht and the height of the `div` element, which contains the element containing the actual text you see on the website.
 
-Elementille voi myös määrittää CSS:n avulla `padding`- ja `margin`-ominaisuudet. Käytännössä ne lisäävät elementille marginaalia tai sisennystä seuraavalla tavalla:
+Other useful CSS properties for changing the appearance of a website are `padding` and `margin`. In practice, they add some space to the _inside_ or the _outside_ of an element, respectively, according to the following logic:
 
-![Margin ja padding](/assets/margin-padding.png)
+![Using margin and padding](/assets/margin-padding.png)
 
-`Paddingille`, `marginille` ja monille muille CSS-ominaisuuksille voi antaa arvoja eri tavoin ja eri mittayksiköillä. Käydään nämä tavat käyttäen esimerkkinä margin-ominaisuutta. Muiden ominaisuuksien kanssa `margin`-sana vain vaihtuu ko. ominaisuuden nimitykseksi.
+In other words, adding some margin to the container element would move it away from the borders of the website:
 
 ```css
 .container {
-  margin: 10px; /* Antaa marginaalia 10px kaikille neljälle arvolle (top, right, left, bottom) */
-  margin: 10px 5px 15px; /* Ylämarginaali on 10px, alamarginaali 15px, oikea- sekä vasen marginaali 5px */
-  margin: 10px 5px; /* Ylä- ja alamarginaalit ovat 10px, oikea sekä vasen 5px */
-  margin: 10px 5px 15px 20px; /* Ylämarginaali on 10px, oikea marginaali on 5px, alamarginaali 15px ja vasenta marginaalia 20px */
-  margin-top: 10px; /* Antaa vain ylämarginaalia 10px */
-  margin-right: 10px; /* Antaa vain oikeaa marginaalia 10px */
-  margin-left: 10px; /* Antaa vain vasenta marginaalia 10px */
-  margin-bottom: 10px; /* Antaa vain alamarginaalia 10px */
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    margin: 10px;
 }
 ```
 
-Marginaalille voi antaa myös `auto`-määritteen, jolloin marginaali määrittyy automaattisesti. Esimerkiksi `margin: 0 auto;`-ominaisuus keskittää sisemmän elementin ulommaisen elementin keskelle sivusuunnassa. Voit lukea tästä lisää [täältä](https://www.hongkiat.com/blog/css-margin-auto/).
+![Margin example](/assets/margin.png)
 
-Pärjäämme pitkälle pelkästään `marginin` ja `paddingin` avulla, mutta mitä jos haluamme siirtää elementtiä verkkosivuilla? Tähän tarvitsemme `position`- ja `right`-,`left`-, `top`- sekä `bottom`-ominaisuuksia.
+On the other hand, adding some padding to the same element, would actually move the position of the text inside it, as padding adds space inside an element:
 
-Lisätään edelliseen esimerkkikoodiin kaksi elementtiä:
+```css
+.container {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    padding: 10px;
+}
+```
+
+![Padding example](/assets/padding.png)
+
+There are several different ways and units used to define the value of the margin, padding and other CSS properties. We'll go through all these different possible ways by using the margin property as an example. The same rules apply to padding, for example, which is used in the same way.
+
+There are four possible locations for adding margin: the _top_ of the element, the _right_ side of the element, the _left_ side of the element, and finally the _bottom_ of the element. This is the order used to define the margins of different locations in CSS.
+
+It is also possible to define several locations to have the same value:
+
+```css
+.container {
+  margin: 10px; /* Adds margin to all of the four possible locations (top, right, left, bottom) */
+  margin: 10px 5px 15px; /* Top margin is 10px, bottom margin is 15px, and both left and right margins are 5px */
+  margin: 10px 5px; /* Top and bottom margins are 10px, right and left margins are 5px */
+  margin: 10px 5px 15px 20px; /* Top margin is 10px, right margin is 5px, bottom 15px ja vasenta marginaalia 20px */
+  margin-top: 10px; /* Add 10px margin only to the top */
+  margin-right: 10px; /* Add 10px margin only to the right */
+  margin-left: 10px; /* Add 10px margin only to the left */
+  margin-bottom: 10px; /* Add 10px margin only to the bottom */
+}
+```
+
+One can also use the attribute `auto`, which infers the sizes of the margins of an elemnt automatically. For example, the property `margin: 0 auto;` would center the element horizontally with regards to its parent element (the element which it is inside of). You can read more about using the `auto` attribute [here](https://www.hongkiat.com/blog/css-margin-auto/).
+
+The CSS properties margin and padding will take you far. However, in order to move the elements more flexibly, one needs also the following attributes: `position`, `right`, `left`, `top` and `bottom`.
+
+Let's add two more elements to the example code:
 
 ```html
 <div class="first-box-container">
-  <p>Ensimmäinen elementti</p>
+  <p>First element</p>
 </div>
 <div class="second-box-container">
-  <p>Toinen elementti</p>
+  <p>Second element</p>
 </div>
 <div class="third-box-container">
-  <p>Kolmas elementti</p>
+  <p>Third element</p>
 </div>
 ```
 
@@ -601,37 +633,40 @@ Lisätään edelliseen esimerkkikoodiin kaksi elementtiä:
 }
 ```
 
-![Esimerkki HTML-sivu, kahden elementin kanssa](/assets/html-example-13.png)
+![Example HTML page with two elements](/assets/html-example-13.png)
 
-Tutustutaan nyt CSS:n position-ominaisuuteen, jonka avulla on mahdollista siirtää elementtejä verkkosivuilla.
-Aloitetaan antamalla `.second-box-container`-selektorille CSS-ominaisuus `left: 250px;`. Tämän pitäisi siirtää keskimmäistä HMTL-elementtiä 250px vasemmasta reunasta poispäin.
+Let's start by getting to know the property whcih allows moving elements on a web page. 
 
-![Esimerkki HTML-sivu, kahden elementin kanssa](/assets/html-example-13.png)
+We'll strat by giving the `.second-box-container` selector the property `left: 250px;`. This should move the middle HTML element 250px away from the left side of the page:
 
-Huomaamme, että elementti ei siirtynyt yhtään. Tämä johtuu siitä, että oletusarvoisesti kaikilla HTML-elementeillä on CSS:n `position`-ominaisuuden arvo `static`, joten `top`-, `right`-, `bottom`- tai `left`-arvoilla ei ole vaikutusta elementin sijaintiin. Position-ominaisuudella on olemassa viisi erilaista arvoa, joista käymme läpi `static`-, `relative`- ja `absolute`-arvot.
+![Example HTML page with two elements](/assets/html-example-13.png)
 
-Lisätään `.second-box-container`-selektorilla elementille vielä `position: relative` -arvo.
+However, nothing seems to have changed. This is because of the `position` property, which defines how the location of an element is defined. There are five different values for `position` in total, of which we'll handle `static`, `relative` and `absolute`. The default value of `position` is `static`, which means that the properties `top`, `bottom`, `right` and `left` won't affect the location of the element.
 
-![Esimerkki HTML-sivu, relative positionin kanssa](/assets/html-example-14.png)
+Let's change the add the property `position: relative;` for the selector `.second-box-container`.
 
-Huomaamme, että saimme elementin liikkumaan. Position ominaisuuden `relative`-arvolla elementti on entisellä tavalla sijoitettuna dokumenttiin. Sen sijaintia pystyy kuitenkin muokkaamaan `top`-, `right`-, `bottom`- tai `left`-ominaisuuksilla verraten sen alkuperäiseen sijaintiin. Vaidetaan arvoksi `absolute` ja katsotaan mitä dokumentille tapahtuu.
+![Example HTML page with position relative](/assets/html-example-14.png)
 
-![Esimerkki HTML-sivu, absolute positionin kanssa](/assets/html-example-15.png)
+By also changing the value of `position`, we have managed to move the element as we wished. The value `relative` doesn't change the position of the element in the page structure, but allows moving the element with regards to it's original location. 
 
-Elementti on sijoittunut reunaan, mutta se ei varaa enää tilaa itse dokumentista. Tämä johtuu siitä, että `position: absolute`-ominaisuus poistaa elementin dokumentin normaalista esitysmuodosta. Elementille ei enää varata erikseen tilaa. Elementin sijainti on verrannollinen sen ensimmäiseen sijaintiin (elementti, jonka sisällä elementti on), ja jos sellaista ei ole, niin se on verrannollinen omaan normaaliin sijaintiinsa ilman `position: absolute` arvoa.
+Next we'll change the value to `absolute` and see what happens:
 
-Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosittelemme siihen tutustumista vielä lisää esimerkiksi [täältä](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
+![Example HTML page with position absolute](/assets/html-example-15.png)
+
+The element is still on the right side of the page, but it no longer reserves space from the original position. This is because `position: absolute;` deletes the element from the document's normal flow, meaning that the element is no longer given space in its original location. The element can be positioned with regards to its closest positioned ancestor, or if none is found, the `body` element. 
+
+The position property is often regarded as the one of the most complicated features of CSS. We recommend you read more about it for example from [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 
 <div class="exercise">
-<h3>Exercise 9: Elementit vierekkäin {% include points.html text="10%" %}</h3>
+<h3>Exercise 9: Aligned elements {% include points.html text="10%" %}</h3>
 <ol>
-<li>Tee git-kansioon toinen tiedosto, ja nimeä se position.html-nimellä.</li>
-<li>Tee myös styles.css-tiedosto ja tee tarvittavat toimenpiteet, jotta saat linkitettyä tiedostot toisiinsa.</li>
-<li>Jatketaan edellisen osion esimerkkiä, tee HTML- ja CSS-tiedostot niin pitkälle, että saat kolme eriväristä elementtiä alekkain.</li>
-<li>Nyt ideana on, että saisit samat elementit vierekkäin. Lopputuloksen pitäisi näyttää tältä:</li>
-<img src="/assets/html-ex-9.png" alt="Elementit vierekkäin"/>
-<li>Kun koet, että tehtävä on valmis, lisää tiedostot gittiin ja tee commit viestillä <code>Osa 3. Yhdeksäs tehtävä</code>. Puske tehtävä Githubiin.</li>
-<div class="note">Vinkki: Jos ei onnistu, niin testaa mitä tapahtuu, jos sijoitat elementtejä toisten sisälle eri position-arvoilla.</div>
+<li>Create a new file to your Git project, and name it <code>positions.html</code>.</li>
+<li>Create a CSS file and link it to the new HTML file in order to add styles to it.</li>
+<li>Add code to both files in order to create three adjacent elements of different colors on the website, according to the example given above.</li>
+<li>Edit the HTML and CSS code in order to make the webiste look like the following:</li>
+<img src="/assets/html-ex-9.png" alt="Adjacent elements"/>
+<li>When you think you are done, create a commit with the message <code>Part 3, ninth exercise</code>, and push it to GitHub.</li>
+<div class="note">Hint: Try adding elements inside others, and use the position property to change their locations.</div>
 </ol>
 </div>
 

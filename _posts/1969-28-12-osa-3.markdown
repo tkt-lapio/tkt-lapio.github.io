@@ -508,7 +508,7 @@ Yritä saada lopputulos näyttämään tältä:
 </ol>
 </div>
 
-# Elementtien koko, marginaali, sisennys sekä sijainti.
+# Elementtien koko, marginaali, sisennys sekä sijainti
 
 Emme ole vielä tutustuneet kahteen HTML-kielen käytetyimpään elementtiin. Ne ovat `<div></div>`- ja `<span></span>`-elementit. Span-elementti on sisätason elementti, ja `<div></div>` on lohkotason elementti. Molemmat ovat käytännössä tyhjiä kuoria, joiden sisälle voi laittaa uusia elementtejä. Ideana on, että elementeille annetaan CSS-ominaisuuksia, jolloin pystymme asettelemaan elementtien sisällä olevaa sisältöä paremmin. Tutustutaan tarkemmin näihin CSS-ominaisuuksiin.
 
@@ -532,11 +532,40 @@ Elementeille voidaan antaa `height`- ja `width`-CSS-ominaisuudet, jotka kuvaavat
 
 Huomaamme, että tekstin taustalle on tullut suorakulmion muotoinen alue, jonka taustaväri on punainen.
 
-Elementille voi myös määrittää CSS:n avulla `padding`- ja `margin`-ominaisuudet. Käytännössä ne lisäävät elementille marginaalia tai sisennystä seuraavalla tavalla:
+Elementille voi myös määrittää CSS:n avulla `padding`- ja `margin`-ominaisuudet. Käytännössä niiden avulla voidaan lisätä tilaa joko elementin sisä- tai ulkopuolelle, seuraavan logiikan mukaan:
 
 ![Margin ja padding](/assets/margin-padding.png)
 
-`Paddingille`, `marginille` ja monille muille CSS-ominaisuuksille voi antaa arvoja eri tavoin ja eri mittayksiköillä. Käydään nämä tavat käyttäen esimerkkinä margin-ominaisuutta. Muiden ominaisuuksien kanssa `margin`-sana vain vaihtuu ko. ominaisuuden nimitykseksi.
+Toisin sanoen, marginaalin (_margin_) lisääminen elementtiin, jonka luokka on `container`, siirtäisie elementtiä kauemmas sivun reunasta:
+
+```css
+.container {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    margin: 10px;
+}
+```
+
+![Margin-esimerkki](/assets/margin-fi.png)
+
+Toisaalta sisennyksen (_padding_) lisääminen siirtää käytännössä `container`-elementin sisällä olevaa tekstiä, sillä lisätila tulee elementin sisälle:
+
+```css
+.container {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    padding: 10px;
+}
+```
+
+![Padding example](/assets/padding-fi.png)
+
+
+`Padding`, `margin` ja monille muille CSS-ominaisuuksille voi antaa arvoja eri tavoin ja eri mittayksiköillä. Käydään nämä tavat läpi käyttäen esimerkkinä `margin`-ominaisuutta. Muiden ominaisuuksien kanssa `margin`-sana vain vaihtuu ko. ominaisuuden nimitykseksi.
+
+Elementille voidaan lisätä marginaalia neljään eri kohtaan: sen _päälle_ (top), _oikealle_ puoelle (right), _vasemmalle_ puolelle (left) sekä _alapuolelle_ (bottom). CSS:lle määritellään eri kohtien arvot juuri tässä järjestyksessä. On myös mahdollista määrittää usealle kohdalle samat arvot seuraavan logiikan mukaan:
 
 ```css
 .container {
@@ -553,7 +582,7 @@ Elementille voi myös määrittää CSS:n avulla `padding`- ja `margin`-ominaisu
 
 Marginaalille voi antaa myös `auto`-määritteen, jolloin marginaali määrittyy automaattisesti. Esimerkiksi `margin: 0 auto;`-ominaisuus keskittää sisemmän elementin ulommaisen elementin keskelle sivusuunnassa. Voit lukea tästä lisää [täältä](https://www.hongkiat.com/blog/css-margin-auto/).
 
-Pärjäämme pitkälle pelkästään `marginin` ja `paddingin` avulla, mutta mitä jos haluamme siirtää elementtiä verkkosivuilla? Tähän tarvitsemme `position`- ja `right`-,`left`-, `top`- sekä `bottom`-ominaisuuksia.
+Pärjäämme pitkälle pelkästään `marginin` ja `paddingin` avulla, mutta mitä jos haluamme siirtää elementtiä verkkosivuilla? Tähän tarvitsemme `position` ja `right`,`left`, `top` sekä `bottom`-ominaisuuksia.
 
 Lisätään edelliseen esimerkkikoodiin kaksi elementtiä:
 
@@ -596,17 +625,19 @@ Aloitetaan antamalla `.second-box-container`-selektorille CSS-ominaisuus `left: 
 
 ![Esimerkki HTML-sivu, kahden elementin kanssa](/assets/html-example-13.png)
 
-Huomaamme, että elementti ei siirtynyt yhtään. Tämä johtuu siitä, että oletusarvoisesti kaikilla HTML-elementeillä on CSS:n `position`-ominaisuuden arvo `static`, joten `top`-, `right`-, `bottom`- tai `left`-arvoilla ei ole vaikutusta elementin sijaintiin. Position-ominaisuudella on olemassa viisi erilaista arvoa, joista käymme läpi `static`-, `relative`- ja `absolute`-arvot.
+Huomaamme, että elementti ei siirtynyt yhtään. Tämä johtuu CSS:N ominaisuudesta `position`, joka määrittää, miten elementin sijainti määritellään. Ominaisuudella on olemassa viisi erilaista arvoa, joista käymme läpi `static`, `relative`- ja `absolute`-arvot. Oletusarvoisesti kaikilla HTML-elementeillä on CSS:n `position`-ominaisuuden arvo `static`, jolloin `top`, `right`, `bottom` tai `left`-arvoilla ei ole vaikutusta elementin sijaintiin. 
 
 Lisätään `.second-box-container`-selektorilla elementille vielä `position: relative` -arvo.
 
 ![Esimerkki HTML-sivu, relative positionin kanssa](/assets/html-example-14.png)
 
-Huomaamme, että saimme elementin liikkumaan. Position ominaisuuden `relative`-arvolla elementti on entisellä tavalla sijoitettuna dokumenttiin. Sen sijaintia pystyy kuitenkin muokkaamaan `top`-, `right`-, `bottom`- tai `left`-ominaisuuksilla verraten sen alkuperäiseen sijaintiin. Vaidetaan arvoksi `absolute` ja katsotaan mitä dokumentille tapahtuu.
+Huomaamme, että saimme elementin liikkumaan. Position ominaisuuden `relative`-arvolla elementti on entisellä tavalla sijoitettuna dokumenttiin. Sen sijaintia pystyy kuitenkin muokkaamaan `top`, `right`, `bottom` tai `left`-ominaisuuksilla verraten sen alkuperäiseen sijaintiin. 
+
+Vaidetaan seuraavaksi arvoksi `absolute` ja katsotaan mitä dokumentille tapahtuu.
 
 ![Esimerkki HTML-sivu, absolute positionin kanssa](/assets/html-example-15.png)
 
-Elementti on sijoittunut reunaan, mutta se ei varaa enää tilaa itse dokumentista. Tämä johtuu siitä, että `position: absolute`-ominaisuus poistaa elementin dokumentin normaalista esitysmuodosta. Elementille ei enää varata erikseen tilaa. Elementin sijainti on verrannollinen sen ensimmäiseen sijaintiin (elementti, jonka sisällä elementti on), ja jos sellaista ei ole, niin se on verrannollinen omaan normaaliin sijaintiinsa ilman `position: absolute` arvoa.
+Elementti on sijoittunut reunaan, mutta se ei varaa enää tilaa itse dokumentista. Tämä johtuu siitä, että `position: absolute`-ominaisuus poistaa elementin dokumentin normaalista esitysmuodosta. Elementille ei enää varata erikseen tilaa. Elementin sijainti on verrannollinen lähimpään vanhempi-elementtiin, jolle on asetettu sijainti, ja jos sellaista ei ole, niin se on verrannollinen omaan normaaliin sijaintiinsa ilman `position: absolute` arvoa.
 
 Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosittelemme siihen tutustumista vielä lisää esimerkiksi [täältä](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 
