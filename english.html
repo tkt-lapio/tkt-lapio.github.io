@@ -1,0 +1,52 @@
+---
+layout: page
+title: In English
+permalink: /en/
+---
+<div>
+
+<h2>Computing tools for CS studies</h2>
+
+<p>
+<p>Welcome to the home page of Lapio, or Computing tools for CS studies course.</p>
+
+<p>This course is primarly designed for CS major freshmen, and its purpose is to go through the basics of the command line in a Unix-like system, using Git for version control, and building a static website using HTML and CSS.</p>
+
+<p>The course is passed with an online exam, which is held in <a href="https://moodle.helsinki.fi/course/view.php?id=22186">Moodle</a>. The course key is <strong>lapio-on-tyovaline</strong>.
+Moodle is an learning platform which is used for e-learning at the University. Please read the instructions linked below carefully before taking the exam.</p>
+
+<p>Please also read the introductions to the department's IT systems page. They include vital information.</p>
+
+<p>There is currently no material in English. Please take the exam in order to pass the course. You can earn 6 extra points by writing short essays about the three subjects. For additional information and in case of any problems, please contact <a href="mailto:karlin@cs.helsinki.fi" target="_top">karlin ät cs.helsinki.fi</a> or <a href="mailto:irene.nikkarinen@helsinki.fi" target="_top">irene.nikkarinen ät helsinki.fi</a>.</p>
+</p>
+    <h2 class="post-list-heading">Material</h2>
+    <ul class="post-list">
+      {%- for post in site.tags.material-eng -%}
+      <li>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <h2 class="post-list-heading">Other Info</h2>
+    <ul class="post-list">
+      {%- for post in site.tags.info-eng -%}
+      <li>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+
+</div>

@@ -3,7 +3,7 @@ layout: material
 title: 'Part 3 - Static websites'
 date: 1969-12-28 00:02:00 +0200
 permalink: /websites/
-tag: material
+tag: material-eng
 ---
 
 ## Learning goals
@@ -25,13 +25,13 @@ tag: material
 
 ## Static websites: HTML ja CSS
 
-The previous parts of the course covered using the command line to do various tasks, and version control for storing code. In this part you will use those skills to create simple static websites. We will start by discussing what static websites actually are, and what they consist of.
+The previous parts of the course covered doing several tasks on the command line, and how version control can be used for storing and sharing code. In this part we will use those skills to create simple, static websites. We will start by discussing what static websites actually are, and what they consist of.
 
-To put it simply, a website is a document published on the Internet. The documents are located in servers which are computers allowing users to view them via a browser, such as Google Chrome or Firefox. Websites are typically divided into two categories: static and dynamic websites. The content of static websites doesn't change, unless it is explicitly changed on the server. This means that every user always sees the same content. Static websites can be created using a markup language called HTML. On the contrary, dynamic pages are created at the same time as the browser accesses a site. This course will only handle static websites. You may learn more about dynamic websites later on in your studies.
+To put it simply, a website is a document published on the Internet. The documents accessed via the Internet are located in servers, which are computers allowing users to view them via a browser such as Google Chrome or Firefox. Websites are typically divided into two categories: static and dynamic websites. The content of a static website doesn't change, unless it is explicitly changed on the server. This means that every user always sees the same content. Static websites can be created using a markup language called HTML. On the contrary, dynamic pages are created at the same time as the browser accesses a site. This course will only handle static websites. You may learn more about dynamic websites later on in your studies.
 
 ## Setting up
 
-You will need a proper text editor in this part of the course. We recommend using Visual Studio Code, or [VSCode](https://code.visualstudio.com/download). In addition, you will need a web browser. Modern, recommended ones include [Google Chrome](https://www.google.fi/chrome/index.html) ja [Firefox](https://www.mozilla.org/fi/firefox/). It is possible to do the exercises using another text editor and browser, however these are the ones we recommend.
+You will need a proper text editor in this part of the course. We recommend using Visual Studio Code, or [VSCode](https://code.visualstudio.com/download) for short. In addition, you will need a web browser. Modern, recommended ones include [Google Chrome](https://www.google.fi/chrome/index.html) ja [Firefox](https://www.mozilla.org/fi/firefox/). However, it is also possible to do the exercises using another text editor and browser.
 
 <div class="exercise">
 <h3>Exercise 1: Setting up {% include points.html text="5%" %}</h3>
@@ -39,14 +39,14 @@ You will need a proper text editor in this part of the course. We recommend usin
 <li>Create a Git project called "lapio-website" using the command line.</li>
 <li>Create a new reposiotry to GitHub with the same name</li>
 <li>Add the newly created repository as a remote of the local project.</li>
-<li>Add a file called <code>index.html</code> to the project, and copy its contents from <a href="https://github.com/rovaniemi/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">here</a> You don't need to understand the contents yet.</li>
-<li>Create a new commit with the messafe <code>Osa 3. First exercise</code> and push it to GitHub.</li>
+<li>Add a file called <code>index.html</code> to the project, and copy the code from <a href="https://github.com/rovaniemi/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">here</a> inside. You don't need to understand the contents of the file yet.</li>
+<li>Create a new commit with the message <code>Osa 3. First exercise</code> and push it to GitHub.</li>
 </ol>
 </div>
 
 ## HTML
 
-HTML is often referred to as a programming language, which is technically not true. It is a markup language, describing the structure of a document. HTML comprises a set of _elements_ and _tags_ used to define and show different sections of the document, also giving them specific functionalities. Tags can for example turn a word into a link, cursive, or a different size.
+HTML is often referred to as a programming language, which is technically not true. It is a markup language, describing the structure of a document. HTML comprises a set of _elements_ and _tags_ used to define and show different sections of the document, also giving them specific functionalities. Tags can for example turn a word into a link, make it cursive, or change its size.
 
 Here is an example of an HTML element:
 
@@ -60,12 +60,12 @@ Let's look at the structure of the element. An HTML element is composed of three
 2.  The content itself `This is a piece of text`
 3.  The end tag `</p>`
 
-HTML tags are keywords hidden inside the site, not shown in the browser. Nevertheless, they define how the browser styles and shows the contents of the document you are viewing. There are countless different HTML tags and elements created with them, each serving a specific purpose. We'll start with the elements used to edit text.
+HTML tags are keywords hidden inside the site, but not shown to the end user by browser. Nevertheless, they define how the browser styles and shows the contents of the document you are viewing. There are countless different HTML tags, each serving to create specific kinds of elements. We'll start with the elements used to edit text.
 
-1.  `<h1></h1>`: This tag is used to create heading elements. There are six different heading tags, ranging from `h1` to `h6`. The primary heading is created using the first tag h1. The least important heading is created with h6.
+1.  `<h1></h1>`: This tag is used to create heading elements. There are six different heading tags, ranging from `h1` to `h6`. The primary heading is created using the first tag `h1`. The least important heading is created with `h6`.
 2.  `<p></p>`: The element created with the tag `p` contains the body text of the document.
-3.  `<em></em>`: The element with the tag `em` is shown in cursive.
-4.  `<strong></strong>`: The element with the tag `strong` is bolded. You can also create elements with `<b>` and `<i>` to show text in bold and cursive respectively.
+3.  `<em></em>`: The text inside an element created with the tag `em` is shown in cursive.
+4.  `<strong></strong>`: The text inside an element created with the tag `strong` is shown in bold. You can also create elements with `<b>` and `<i>` to show text in bold and cursive respectively.
 
 Now let's see how HTML works in practice. We'll open the file <code>index.html</code> created in the first exercise in a browser and a text editor. You can open the file in the browser by clicking on it in the graphical user interface, or explicitly opening it using a browser program from the command line.
 
@@ -106,6 +106,10 @@ This is a **sentence**
 ```
 
 However, when using nested elements, it is important to close the tags in the right order. In the previous example we opened the element `<p>` first, and the tag `<strong>` second. This means that we had to close the element `<strong>` first, i.e. the tag we opened the last, and only then close the tag `<p>`, which we opened first. Always close the last tag you opened first. Otherwiser the browser will try and guess the correct structure of the document. The site will be rendered even if the elements are closed in the wrong order, but the content will most likely be structured in a bizarre way, depending on the browser.
+
+<div class="note">
+The element inside of which an element is located, is called its <i>parent</i>. Similarly, the elements inside another element are called its <i>children</i>.
+</div>
 
 HTML elements are divided into two distinct categories: _block-level_ elements and _inline_ elements.
 
@@ -647,7 +651,7 @@ Let's change the add the property `position: relative;` for the selector `.secon
 
 ![Example HTML page with position relative](/assets/html-example-14.png)
 
-By also changing the value of `position`, we have managed to move the element as we wished. The value `relative` doesn't change the position of the element in the page structure, but allows moving the element with regards to it's original location. 
+By also changing the value of `position`, we have managed to move the element as we wished. The value `relative` doesn't change the position of the element in the document flow, but allows moving the element with regards to it's original location. 
 
 Next we'll change the value to `absolute` and see what happens:
 
@@ -670,71 +674,74 @@ The position property is often regarded as the one of the most complicated featu
 </ol>
 </div>
 
-# CSS: mittayksiköt
+# CSS units of measure
 
-Käsittelimme äsken, miten elementtejä asetellaan verkkosivuilla. Käytimme `px`-mittayksikköä. Katsotaan nyt tarkemmin, mitä tämä tarkoittaa ja mitä muita mittayksiköitä CSS tarjoaa.
+In the previous section, we used the unit `px` for defining the amount of margin and padding of a specific element. Now let's see, what `px` actually means and what other units of measure CSS has to offer.
 
-Tietokone näyttää kuvaa pikseleissä. Tällä hetkellä yleisin käytössä oleva resoluutio on `1366x768`, mutta resoluutio riippuu täysin tietokoneen näytön mallista. Resoluutiolla tarkoitetaan kuinka monta pikseliä näytössä on. Ensimmäinen mitta kertoo pystysarakkeiden määrän (x-akseli) ja jälkimmäinen vaakarivien määrän (y-akseli). Otetaan esimerkiksi `1366x768`-resoluutio. Seuraava kuva havainnollistaa, miten pikselit asettuvat:
+A computer displays images using _pixels_. Images can be described using the notion of _resolution_, which means the amount of pixels on a screen. At the moment, the most common resolution is `1366x768`, but it can vary between different models and screens. The first value refers to the amount of columns (the x axis) and the second value on the amount of rows (the y axis). For example, here is a representation of the pixels of a screen with a resolution of `1366x768`:
 
-![Resoluutiota havainnollistava kuva](/assets/resolution-example.png)
+![An illustration of resolution](/assets/resolution-example.png)
 
-Eli `1366x768`-resoluutiolla varustetussa näytössä on yli **miljoona** pikseliä. Nyt kun tiedämme mistä tietokoneen kuva koostuu, voimme helpommin käsitellä eri mittayksiköitä. Käymme läpi CSS:n tärkeimmät mittayksiköt ja listaamme tämän jälkeen vähemmän tärkeät.
+This means that there are over **a million** pixels on a `1366x768` screen. 
 
-1. `px` tarkoittaa yksittäistä pikseliä näytöllä.
-2. `em` on verrannollinen sen elementin kirjasinkokoon, minkä sisällä kyseinen elementti on. Yksi `em` tarkoittaa yhtä kirjasinkokoa.  `2em` tarkoittaa kaksinkertaista kirjasinkokoa. Esimerkiksi jos ylemmän elementin kirjasinkoko on `12px`, on sisemmän elementin `1em` sama kuin `12px`, ja `2em` sama kuin `24px`.  Kirjaisinkoot eli `font-size`-ominaisuus kannattaa aina merkitä joko pikseleinä tai em-mittayksiköllä.
-3. `%` on verrannollinen elementtiin, jonka sisällä kyseinen elementti on. Jos ylempi elementti on `200px` leveä, ja sisempi on `20%` leveä, niin sen koko on `40px`.
-4. `rem` on muuten sama kuin `em`, mutta se on verrannollinen `<html></html>`-elementin kirjasinkokoon.
-5. `vw` on verrannollinen näytön leveyteen. Yksi yksikkö tarkoittaa yhtä prosenttia näytön leveydestä.
-6. `vh` on verrannollinen näytön korkeuteen. Yksi yksikkö tarkoittaa yhtä prosenttia näytön korkeudesta.
+Now that we know what an image on a computer screen actually consists of, it is easier to comprehend the units of measure used. We'll go through the most important units, and then just quickly mention the less common ones.
 
-Näiden lisäksi on käytössä mittayksiköt `cm`, `mm`, `in`, `pt`, `pc`, `ex`, `ch`, `vmin` ja `vmax`. Voit lukea niistä lisää [täältä](https://www.w3schools.com/cssref/css_units.asp).
 
-# CSS:n käytetyimmät ominaisuudet
+1. `px` refers to the amount of pixels used.
+2. `em` depends on the font size of the parent of the element this unit is used in. One `em` means the same font size as the parent of the element. Consequently `2em` corresponds to double the font size of the parent element. For example, if the parent element's font size is `12px`, then for its child, `1em` means `12px`, and `2em` is equal to `24px`.  One should always mark the font size of an element (the property is`font-size`) in pixels or in `em`.
+3. `%` is also defined with regards to the parent of the element. If the width of an element is set to `200px`, and the width of its child is then defined to be `20%`, the size of the child will be `40px`.
+4. `rem` is almost equal to `em`, with the exception that the font size is calculated using the font size of the `<html></html> element.
+5. `vw` refers to the width of the screen. `1vw` means one percent of the screens width. 
+6. `vh` refers to the height of the screen. Just like with `vw`, `1vh` is one percent of the height of the screen.
 
-CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä kaikkia läpi. Yritämme kuitenkin käydä tärkeimmät ominaisuudet läpi ja kertoa vähän miten niitä käytetään.
+In addition to the former units, there are also `cm`, `mm`, `in`, `pt`, `pc`, `ex`, `ch`, `vmin` and `vmax`. You can read more about them [here](https://www.w3schools.com/cssref/css_units.asp).
 
-`color: #RRGGBB (Red, Green, Blue)` antaa valita elementin värin, jonka voi antaa hex-arvolla tai yleisimpien värien kohdalla englanniksi. Emme ehdi tällä kurssilla käydä läpi mitä hex-arvo tarkoittaa, mutta voit lukea halutessasi aiheesta [täältä](https://en.wikipedia.org/wiki/Web_colors), ja valita erilaisia arvoja [hex-valitsemella](https://htmlcolorcodes.com/color-picker/).
+# The most commonly used properties of CSS
 
-`text-aling: left [ right [ center [ justify` kertoo mihin suuntaan teksti sisennetään.
+There exists an immense amount of different kinds of CSS properties designed for specific situations, all of which would be impossible to cover completely. However, here is an overview of the most important properties, including what they are used for. 
 
-`text-decoration: none | underline | overline | line-through | blink | inherit` mahdollistaa yleisimmät tekstin muokkaustavat, esimerkiksi alleviivauksen.
+`color: #RRGGBB (Red, Green, Blue)` allows defining the color of an element using a hex value, or, in the case of the most common colors, in plain English. The definition of a hex value is beyond the scope of this course, but you can read more about it [here](https://en.wikipedia.org/wiki/Web_colors) if you wish. There are also several sites and tools for finding the hex value of a color, such as [this one](https://htmlcolorcodes.com/color-picker/).
 
-`text-transform: none | capitalize | uppercase | lowercase` mahdollistaa koko tekstin pienellä/suurella kirjoitettuna, vaikka tekstin sisällössä olisi erikokoisia kirjaimia.
+`text-aling: left [ right [ center [ justify` defines which direction the text should be indented to.
 
-`line-height` voi säätää tekstien rivien välistä etäisyyttä. Tämä ominaisuus vaikuttaa vain tekstiin. Anna tälle arvot pikseleinä tai prosentteina.
+`text-decoration: none | underline | overline | line-through | blink | inherit` enables the most common modifications of text, such as underlining.
 
-`font-family` kertoo, millaista kirjaisinta käytetään.
+`text-transform: none | capitalize | uppercase | lowercase` enables changing the case of the whole element, regardless if some letters are capitalized or not.
 
-`font-size` kertoo, kuinka suurta tekstiä näytetään. Käytä tämän kanssa `px` tai `em` arvoja.
+`line-height` can be used to change the distance between lines. However, the property will only have an effect on text. The values should be given as pixels or percents.
 
-`font-style` mahdollistaa eri kirjasintyylien käytön, esimerkiksi lihavoidun. Kannattaa kuitenkin aina merkitä lihavointi `<strong></strong>`- tai `<strong></strong>`-elementeillä, ja kursivointi `<em></em>`-elementillä. Tämä sen takia, että esimerkiksi sokeiden lukuohjelmat lukevat verkkosivua suoraan HTML:stä, eikä tällöin CSS:ään tehdyt muutokset välity kuuntelijalle.
+`font-family` defines the font of the element.
 
-`background-color` värjää elementin taustan, tälle voi antaa samoja arvoja kuin color-elementille.
+`font-size` defines the size of the text. The values should be given in `px` or `em`.
 
-`border-style` kertoo millainen reuna elementillä on, esimerkiksi `solid` tai `dashed`.
+`font-style` allows styling the font further, by for example making it bold or cursive. Nevertheless, bolded text should always be created using `<strong></strong>` or `<b></b>` elements, and cursive with the elements `<em></em>`. This is because the screen readers, that for example blind people use, only use the HTML of the page, and thus wouldn't be able to make the distinction between normal text and text bolded with CSS.
 
-`border-width` määrittelee reunan leveyden. Annetaan yleensä pikseleinä.
+`background-color` adds color to the background of an element. The possible values are the same as for the `color` property.
 
-`border-color` määrittelee, minkä värinen reuna on. Tälle voi antaa samoja ominaisuuksia kuin `background-color`- tai `color`-ominaisuuksille.
+`border-style` defines the type of border of an element. Possible values are `solid` or `dashed`.
+
+`border-width` defines the width of a border, i.e. allows creating bigger, visible borders.
+
+`border-color` defines the color of the elements' border. It takes the same values as the properties `background-color` and `color`.
 
 <div class="exercise">
-<h3>Exercise 10: CSS:n ominaisuuksia {% include points.html text="5%" %}</h3>
+<h3>Exercise 10: Practicing CSS properties {% include points.html text="5%" %}</h3>
 <ol>
-<li>Tehtävän ideana on, että tutustut äsken käytyihin ominaisuuksiin itsenäisesti.</li>
-<li>Ota tavoitteeksi, että saat edellisessä tehtävässä tehdyn sivun näyttämään tältä.</li>
-<li>Älä välitä vaikka sivusto on ruma, vaan keskity tutkimaan mitä eri CSS-ominaisuudet tekevät.</li>
+<li>The idea of the exercise is to get to know some CSS properties independently.</li>
+<li>Try and make the site look like the following:</li>
 <img src="/assets/html-ex-10.png" alt="HTML-sivu ilman CSS-koodia"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kymmenes tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>At this point it doesn't matter that the page is quite ugly, just focus on trying out different properties.</li>
+<li>When you are done in your opinion, create a commit with the message <code>Part 3, tenth exercise</code> and push it to GitHub.</li>
 </ol>
 </div>
 
-# Miten tehdä sivuista luettavat CSS:n avulla
+# How to improve readibility using CSS
 
-Opimme äsken yleisimpiä CSS-ominaisuuksia. Katsotaan nyt, miten näitä kannattaisi käyttää, jotta verkkosivuista saisi luettavammat. Aloitetaan verkkosivusta, jonka materiaali on edellisistä osista tuttua:
+The styles you created in the previous example would be rather uncomfortable to use in real life. Next we'll see how CSS properties can be used to make sites more clear an easy to use. We'll use a piece of text, which might be familiar to you:
 
-![HTML sivu ilman CSS-koodia](/assets/html-example-7.png)
+![HTML with no CSS](/assets/html-example-7.png)
 
-Huomaamme, että ilman CSS:ää verkkosivua on todella vaikea lukea, ja asialle pitäisi tehdä jotain. Verkkosivun HTML-koodi on lyhennettynä tämännäköinen:
+The contents of the page are actually quite hard to read without any CSS. Here is the general structure of the HTML page:
 
 ```html
 <html>
@@ -742,18 +749,19 @@ Huomaamme, että ilman CSS:ää verkkosivua on todella vaikea lukea, ja asialle 
     ...
   </head>
   <body>
-    <h2>Tiedostonhallinta...</h2>
-    <p>Komentoriviltä...</p>
-    <p>Avaa graafinen...</p>
-    <p>Huomaa...</p>
-    <p>Huomaa...</p>
-    <p>Huomaa...</p>
-    <p>Navigoi...</p>
+    <h2>Command line...</h2>
+    <p>On the command line...</p>
+    <p>Open the graphical...</p>
+    <p>Note...</p>
+    <p>Note...</p>
+    <p>Note...</p>
+    <p>Navigate...</p>
   </body>
 </html>
 ```
 
-Aloitetaan yksinkertaisella CSS-ominaisuudella, eli tekstin keskittämisellä. Käytämme edellisestä kappaleesta tuttuja `margin`- ja `width`-ominaisuuksia `<body></body>`-elementtiin.
+Let's start by centering the text on teh page. This can be done by adding the `margin` property and the `max-width` properties to the `body` tag.
+
 
 ```css
 body {
@@ -762,9 +770,11 @@ body {
 }
 ```
 
-![HTML sivu ilman CSS-koodia](/assets/html-example-8.png)
+The effects of the CSS on the page are the following:
 
-Huomataan, että tekstiä on jo paljon helpompi lukea, koska teksti on keskellä näyttöä. Emme ole kuitenkaan vielä tyytyväisiä. Otetaan seuraavaksi tarkkailuun käytetyt fontit. Yleensä selaimet käyttävät valmiina `Times`-fonttia. Tämä voi kuitenkin näyttää epämielyttävältä silmään, mikä johtuu siitä, että `Times`on muuten todella vähän käytetty fontti. Vaihdetaan fontti `sans-serif`-tyyliseksi, jolloin sivuston ulkonäkö selkeästi kohenee. Tämä tehdään CSS-ominaisuudella `font-family: "Helvetica", "Arial", , sans-serif;`. Eli **lisätään** se body-määritelmään:
+![Centered HTML page](/assets/html-example-8.png)
+
+The text is instantly easier to read, as it is in the middle of the screen. However, some improvements can be made still. We'll focus on the font next. The default font of browsers is called "Times", but it is not very pleasing to the eye, as the default font is very rarely used. We'll change the font to `sans-serif`, which makes the text nicer to read. This can be done by adding the following property to CSS:
 
 ```css
 body {
@@ -772,7 +782,7 @@ body {
 }
 ```
 
-Yleensä sivusto näyttää myös vähän köykäiseltä sen takia, että teksti ei saa tarpeeksi tilaa. Lisätään `body`n riville enemmän korkeutta, ja kasvatetaan `padding`:illa `body`lle vähän lisää tilaa. Lisäksi otetaan otsikko enemmän erilleen yläreunasta.
+One common reason why text on a computer screen might look a bit awkawrd is because the lines don't have enough space around them. We'll add more height to the `body` tag's lines, and also add the whole element some space with `padding`. In addition, we'll push the title further from the top.
 
 ```css
 body {
@@ -786,9 +796,9 @@ h2 {
 }
 ```
 
-![HTML sivu ilman CSS-koodia](/assets/html-example-9.png)
+![HTML page with added space arount text](/assets/html-example-9.png)
 
-Ollaan tultu jo paljon eteenpäin alkuperäisestä sivusta, mutta vieläkin materaali näyttää vähän oudolta. Tekstiä ei ole kovin mukava lukea, koska tausta on täysin valkoinen, ja teksti täysin mustaa. Yleensä on hyvä, jos teksti on enemmän harmaaseen taitettua. Näin voimme myös korostaa enemmän otsikkoa laittamalla sitä vähän tummemmaksi.
+This is a huge improvement in the readibility of the page, but there still is some work to do. One way to make the text easier to read is by slightly reducing the contrast between the text and its background. In general, it is a good idea to make the text a white page a little grey, in order to make the text less harsh to read. Furthermore, this allows accentuating the headings by coloring them darker.
 
 ```
 body {
@@ -802,9 +812,9 @@ h2 {
 }
 ```
 
-![HTML sivu ilman CSS-koodia](/assets/html-example-10.png)
+![HTML page with less contrast](/assets/html-example-10.png)
 
-Näyttää jo paljon paremmalta. Vielä pitäisi korjata tekstissä erottuva koodi omiin lohkoihin. Tämä tapahtuu lisäämällä koodeille omat `<code></code>`-elementit ja antamalle code-elementille seuraavat CSS-ominaisuudet:
+Much better. Now let's make the code on the page stand out. This can be done by using separate elements, built with the tag `code`, for the code blocks, and giving them the following styles:
 
 ```
 code {
@@ -814,25 +824,26 @@ code {
 }
 ```
 
-![HTML sivu ilman CSS-koodia](/assets/html-example-11.png)
+![HTML page with separate code blocks](/assets/html-example-11.png)
 
-Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mistä lähdimme liikkeelle.
+The page now looks significantly better, at least compared to the original appearance.
 
 <div class="exercise">
-<h3>Exercise 11: Sivuista luettavat CSS:n avulla {% include points.html text="10%" %}</h3>
+<h3>Exercise 11: Making a site readable with CSS {% include points.html text="10%" %}</h3>
 <ol>
-<li>Tee kappaleessa käsitellyt määrittelyt Seitsemän veljestä -verkkosivulle. Voit lisätä pidemmän jakson Seitsemän veljestä -romaanista, jotta näet paremmin lopputuloksen. Löydät koko kirjan <a href="http://www.gutenberg.org/cache/epub/11940/pg11940.txt" target="_blank">täältä.</a></li>
-<li>Testaa sivustolle mahdollisimman paljon oppimiasi asiota. Yhtä oikeaa lopputulosta ei ole.</li>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Yhdestoista tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>Make the example website more readable accoring to the instructions above. // TODO: what to use as text?</a></li>
+<li>Test out as many properties and principles as you can think of. There is no single right solution.</li>
+<li>When you are done in your opinion, create a commit with the message <code>Part 3, eleventh exercise</code> and push it to GitHub.</li>
 </ol>
 </div>
 
-# Verkkosivun julkaiseminen ja Github pages
+# Publishing a website and GitHub pages
 
-Staattisen verkkosivun voi julkaista monessa paikassa. Yleinen tapa on vuokrata/ostaa oma palvelin ja tarjota sieltä dokumentteja maailmalle. Harjoittelemme kuitenkin tällä kurssilla verkkosivun julkaisua Github-sivuna.
+There are several different places one can use as a platform for publishing a static website. A common way is to buy or rent a server, and use it to serve documents to the world. On this course, we'll actually use GitHub to publish a static website. 
 
-Github-sivut on ilmainen Githubin palvelu, joka mahdollistaa staattisten sivujen tarjoamisen suoraan Githubin repositoriosta.
-Tehdään uusi repositorio, jonne lisäämme `index.html` tiedoston ja `css`-kansioon `styles.css`-tiedoston. Tämän jälkeen kirjoitamme `index.html`-tiedostoon seuraavan pätkän:
+GitHub pages is a free service by GitHub, which allows publishing static websites directly using a GitHub repository.
+
+We'll start by creating a new repository, with an `index.html` file and `styles.css` file in a `css` folder. Then we'll add the following snippet of code into `index.html`:
 
 ```html
 <!doctype html>
@@ -842,20 +853,20 @@ Tehdään uusi repositorio, jonne lisäämme `index.html` tiedoston ja `css`-kan
 <head>
   <meta charset="utf-8">
 
-  <title>Github page testi</title>
+  <title>Github page test</title>
 
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
-  <h1>Github pages testi</h1>
+  <h1>Github pages test</h1>
 </body>
 
 </html>
 ```
 
-Ja CSS-tiedostoon lisäämme seuraavan tyylin.
+To the CSS file, we'll add the following style:
 
 ```css
 h1 {
@@ -863,76 +874,73 @@ h1 {
 }
 ```
 
-Tämän jälkeen lisäämme tiedostot gittiin ja puskemme ne Githubiin. Avataan Githubista repositorion settings-valikko.
+Next, we'll add all the files to Git, and push them to GitHub. In order to publish the content, we'll have to navigate to the settings tab in GitHub:
 
-![Githubin settings valikon ohje](/assets/html-github-settings.png)
+![How to find the settings tab in GitHub](/assets/html-github-settings.png)
 
-Valitaan settings-valikosta "github pages", ja julkaistaan master-haara Github-sivuna.
+We'll scroll down to the section called "GitHub pages" and publish the master branch by choosing it from the dropdown menu. GitHub will let you know once the site has been published:
 
-![Github sivun julkaisu](/assets/html-github-pages.png)
+![Site has been published notification](/assets/html-github-pages.png)
 
-Tämän jälkeen mennään osoitteeseen, missä sivun pitäisi olla. Osoite on oletuksena muotoa `username.github.io/repository`.
+Now the site is live on the Internet, an we can simply navigate to it. The address is by default of the form `username.github.io/repository`.
 
-![Github sivu julkaistuna](/assets/html-github-pages-live.png)
+![A published GitHub page](/assets/html-github-pages-live.png)
 
-Huomaamme, että sivusto on julkisena ja jokaisen internetin käyttäjän saatavilla ympäri maailman.
+Now we have built a website, which is accessible to anyone using the Internet.
 
 <div class="note">
-<strong>Pääaineopiskelijoille</strong>
+<strong>For university students</strong>
 
-Yliopisto tarjoaa tietojenkäsittelytieteen pääaineopiskelijoille palvelintilaa, jossa voi pyörittää omia staattisia verkkosivuja. Käyttäjän dokumentit sijaitsee levypalvelimella käyttäjän CS-kotihakemiston public_html-alihakemistossa: <code>/cs/home/käyttäjätunnus/public_html/</code>.
+Student's who are currently enrolled at the University of Helsinki are given some server space to run their own static wevsites. The website can be published by adding the required documents to the user's CS home folde,r in the path <code>/cs/home/username/public_html/</code>. The website will be published to the following address: <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code>
 
-<p>Kotisivu näkyy maailmalle osoitteessa <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code>.</p>
-
-Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
+In practice, here are instructions on publishing the website:
 
 <ol>
-<li>Luo ensin kotihakemistoosi hakemisto <code>public_html</code>.</li>
-<li>Sen jälkeen luo <code>index.html</code>-tiedosto tähän hakemistoon ja täytä se tarvittavalla HTML-koodilla.</li>
-<li>Jotta WWW-palvelin voi näyttää kotisivun maailmalle, sille ja sen hakemistopolulle täytyy lisätä sopivasti oikeuksia:</li>
+<li>Start by creating the <code>public_html</code> folder in your CS home directory.</li>
+<li>Then create a file called <code>index.html</code> in the new folder, and fill it with the HTML code you want. This will be the published document.</li>
+<li>Publishing the page will require giving some sites some additional permissions:</li>
 <ol>
-<li>public_html: Kaikilla käyttäjillä tulee olla luku- ja suoritusoikeudet.</li>
-<li>cs-kotihakemisto (cs/home/tunnus): suoritusoikeudet kaikille.</li>
+<li>public_html: All users should have read and execute permissions.</li>
+<li>cs home folder (cs/home/username): execute permissions for everyone.</li>
+<li>The site should now be live.</li>
 </ol>
-
-<li>Tämän jälkeen sivuston pitäisi näkyä osoitteessa <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code></li>
 </ol>
 
 </div>
 
 <div class="exercise">
 
-<h3>Exercise 12: Ansioluettelo {% include points.html text="10%" %}</h3>
+<h3>Exercise 12: A personal CV website {% include points.html text="10%" %}</h3>
 <ol>
-<li>Luo uusi repositorio Githubiin.</li>
-<li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna. Voit halutessasi tehdä ansioluettelon myös keksityillä tiedoilla.</li>
-<li>Käytä ansioluettelon tekoon tässä osiossa opetettuja asioita. Voit hakea hakukoneella esimerkkejä esimerkiksi hakusanoilla <code>static website resumes</code>. Jos et osaa tehdä jotain tyyliä CSSllä niin hae rohkeasti netistä tietoa, miten sellainen tehdään.</li>
-<li>Puske lopuksi tekemäsi muutokset GitHubiin.</li>
-<li>Julkaise ansioluettelo Github-sivuna.</li>
+<li>Create a new repository on GitHub.</li>
+<li>Use the repository to create a CV website, where you write about yourself, your interests and your possible work experience.</li>
+<li>Take advantage of the things you have learned during this course. It might be a good idea to search for inspiration with for example the key owrds <code>static website resumes</code>. If you don't know how to do something, just try and Google it.</li>
+<li>Push all the changes you make to GitHub. Try and divide the process into sensible sized commits; don't just create one big commit.</li>
+<li>Publish the site as a GitHub page, or using the department's server space.</li>
 </ol>
 </div>
 
-## Loppusanat
+## The end
 
-Osa antaa hyvät perusteet HTML:n ja CSS:n kanssa. Nyt sinun pitäisi osata kertoa, mitä ne ovat ja mihin niitä käytetään. Pitää kuitenkin muistaa, että molemmat ovat todella laajoja kieliä, ja niiden opiskeluun voi käyttää halutessaan valtavasti aikaa. Aihe on tärkeä ja osaajia tarvitaan. Jos verkkosivujen tekeminen kiinnostaa tulevaisuudessa niin kannattaa jatkaa HTML:n ja CSS:n opiskelua.
+This is the end of the last part of the course. You should now have a basin understanding about the command line, Git and HTML/CSS. This knowledge will certaily deepen during your studies, as these are all important tools for a computer scientist.
 
-Lisää HTML:stä ja CSS:stä voi lukea esimerkiksi seuraavista lähteistä:
+Remember that HTML and CSS are both very versatile, and it may take a considerable amount of time to truly understand them. If you are especially interested in web development, or more specifically, [front-end development](https://en.wikipedia.org/wiki/Front-end_web_development), it's a good idea to spend some time on learning HTML and CSS. 
+
+Here are some useful links for learning more about the subject:
 
 - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a>
-  - Mozillan tekemä HTML- ja CSS -dokumentaatio kattaa tarkasti CSS:n ja HTML:n perusteet. Jos aihe kiinnostaa enemmän kannattaa kyseiset dokumentaatiot kahlata läpi.
-- Google on hyvä työkalu myös HTML- ja CSS-ongelmien kanssa. Kannattaa rohkeasti hakea tietoa, jos jokin asia mietityttää. Maailmassa on paljon ihmisiä, jotka ovat miettineet samoja asioita.
+  - The HTML and CSS documentation made by Mozilla is a comprehensice guide to the principles of both languages.
+- The Internet is also filled with questions about both languages, as they are so widely used. Don't be afraid to ask Google if you have any questions, as it is likely that you are not the first one.
 
-## Kurssin loppusanat
+## The end of the course
 
-Tähän päättyy Tietokone työvälineenä -kurssin materiaali.
+This is the end of the material for the Tools for CS studies course. 
 
-Pidä jälleen tauko, ja anna aivojesi levätä. Onnittele itseäsi siitä, että sait käytyä koko materiaalin läpi. Palaa sen jälkeen materiaalin oppimistavoitteisiin ja käy ne läpi ajatuksella. Mieti, mitä asioita muistat, ja mitä et. Pyri selventämään jokainen käsite nopeasti itsellesi katsomatta materiaaliin. Mikäli et muista jotain, etsi tieto netistä tai materiaalista. Lue lopuksi vielä tenttiä koskevat ohjeet tarkasti.
-
-Kun osaat mielestäsi kurssin aiheet tarpeeksi hyvin, siirry Moodle-alueelle. Merkitse siellä tekemäsi laskaritehtävät. Varmista, että olet ilmoittautunut kurssille Weboodissa. Tämän jälkeen olet valmis tekemään tentin. Saat arvosanan kuluvan kuukauden lopussa.
+Take a break, and congratulate yourself for finishing reading the material. Then go back to the learning goals you can find from the beginning of this part, and see which subjects seem distant to you. If you have trouble remembering something, check the material or the Internet for answers. Finally, make sure to read the exam instructions before starting it. Also make sure to mark all the exercises you have done on Moodle, so we can use them in grading, and that you have enrolled on the course in Weboodi. 
 
 <div class="warning">
-Muista antaa kurssista anonyymiä palautetta <a href="https://weboodi.helsinki.fi"> Weboodissa</a> kohdasta > Työkalut > Omat Palautteet.
+Give anonymous feedback <a href="https://weboodi.helsinki.fi/hy/etusivu.html?Kieli=6"> in Weboodi</a> kohdasta > Tools > My Feedback.
 </div>
 
-Kiitos kurssista ja onnea tuleviin opintoihin! Opiskelukavereiden ja Googlen avulla selviää vaikeimmistakin kursseista :)
+Thank you for participating on the course, and good luck with your studies! Google and fellow students will get you through anything :)

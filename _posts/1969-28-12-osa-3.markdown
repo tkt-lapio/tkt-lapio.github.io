@@ -109,6 +109,10 @@ Lohkotason elementit ovat näkyvissä lohkoina verkkosivulla. Jokainen lohkotaso
 
 Sisätason elementit on siis aina suljettu lohkotason elementin sisälle ja ne käsittelevät vain todella pientä palaa sivustosta. Ne eivät käsittele kokonaisia tekstipaloja tai kuvia. Yhdellä rivillä voi olla useita sisätason elementtejä. Yleensä sisätason elementtejä näkyy vain tekstin sisällä. Tällaisia elementtejä ovat esimerkiksi `<strong></strong>`- tai `<a></a>`-elementit.
 
+<div class="note">
+Elementtiä, jonka sisällä jokin elementti on, kutsutaan sen <i>vanhemmaksi</i>. Samoin jonkin elementin sisällä olevia elementtejä kutsutaan sen <i>lapsiksi</i>.
+</div>
+
 Käydään läpi lohkotason ja sisätason elementtejä esimerkin kautta.
 
 ```
@@ -658,14 +662,14 @@ Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosi
 
 Käsittelimme äsken, miten elementtejä asetellaan verkkosivuilla. Käytimme `px`-mittayksikköä. Katsotaan nyt tarkemmin, mitä tämä tarkoittaa ja mitä muita mittayksiköitä CSS tarjoaa.
 
-Tietokone näyttää kuvaa pikseleissä. Tällä hetkellä yleisin käytössä oleva resoluutio on `1366x768`, mutta resoluutio riippuu täysin tietokoneen näytön mallista. Resoluutiolla tarkoitetaan kuinka monta pikseliä näytössä on. Ensimmäinen mitta kertoo pystysarakkeiden määrän (x-akseli) ja jälkimmäinen vaakarivien määrän (y-akseli). Otetaan esimerkiksi `1366x768`-resoluutio. Seuraava kuva havainnollistaa, miten pikselit asettuvat:
+Tietokone näyttää kuvaa pikseleissä. _Resoluutio_, tarkoitetaan kuinka monta pikseliä näytössä on. Tällä hetkellä yleisin käytössä oleva resoluutio on `1366x768`, mutta se riippuu täysin tietokoneen näytön mallista. Ensimmäinen mitta kertoo pystysarakkeiden määrän (x-akseli) ja jälkimmäinen vaakarivien määrän (y-akseli). Otetaan esimerkiksi `1366x768`-resoluutio. Seuraava kuva havainnollistaa, miten pikselit asettuvat:
 
 ![Resoluutiota havainnollistava kuva](/assets/resolution-example.png)
 
 Eli `1366x768`-resoluutiolla varustetussa näytössä on yli **miljoona** pikseliä. Nyt kun tiedämme mistä tietokoneen kuva koostuu, voimme helpommin käsitellä eri mittayksiköitä. Käymme läpi CSS:n tärkeimmät mittayksiköt ja listaamme tämän jälkeen vähemmän tärkeät.
 
 1. `px` tarkoittaa yksittäistä pikseliä näytöllä.
-2. `em` on verrannollinen sen elementin kirjasinkokoon, minkä sisällä kyseinen elementti on. Yksi `em` tarkoittaa yhtä kirjasinkokoa.  `2em` tarkoittaa kaksinkertaista kirjasinkokoa. Esimerkiksi jos ylemmän elementin kirjasinkoko on `12px`, on sisemmän elementin `1em` sama kuin `12px`, ja `2em` sama kuin `24px`.  Kirjaisinkoot eli `font-size`-ominaisuus kannattaa aina merkitä joko pikseleinä tai em-mittayksiköllä.
+2. `em` on verrannollinen sen elementin kirjasinkokoon, minkä sisällä kyseinen elementti on, eli elementin vanhempaan. Yksi `em` tarkoittaa samaa kirjasinkokoa, kuin vanhemmalla.  `2em` tarkoittaa kaksinkertaista kirjasinkokoa. Esimerkiksi jos ylemmän elementin kirjasinkoko on `12px`, on sisemmän elementin `1em` sama kuin `12px`, ja `2em` sama kuin `24px`.  Kirjaisinkoot eli `font-size`-ominaisuus kannattaa aina merkitä joko pikseleinä tai em-mittayksiköllä.
 3. `%` on verrannollinen elementtiin, jonka sisällä kyseinen elementti on. Jos ylempi elementti on `200px` leveä, ja sisempi on `20%` leveä, niin sen koko on `40px`.
 4. `rem` on muuten sama kuin `em`, mutta se on verrannollinen `<html></html>`-elementin kirjasinkokoon.
 5. `vw` on verrannollinen näytön leveyteen. Yksi yksikkö tarkoittaa yhtä prosenttia näytön leveydestä.
@@ -687,11 +691,11 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 
 `line-height` voi säätää tekstien rivien välistä etäisyyttä. Tämä ominaisuus vaikuttaa vain tekstiin. Anna tälle arvot pikseleinä tai prosentteina.
 
-`font-family` kertoo, millaista kirjaisinta käytetään.
+`font-family` kertoo, millaista kirjaisinta (eli fonttia) käytetään.
 
 `font-size` kertoo, kuinka suurta tekstiä näytetään. Käytä tämän kanssa `px` tai `em` arvoja.
 
-`font-style` mahdollistaa eri kirjasintyylien käytön, esimerkiksi lihavoidun. Kannattaa kuitenkin aina merkitä lihavointi `<strong></strong>`- tai `<strong></strong>`-elementeillä, ja kursivointi `<em></em>`-elementillä. Tämä sen takia, että esimerkiksi sokeiden lukuohjelmat lukevat verkkosivua suoraan HTML:stä, eikä tällöin CSS:ään tehdyt muutokset välity kuuntelijalle.
+`font-style` mahdollistaa eri kirjasintyylien käytön, esimerkiksi lihavoidun. Kannattaa kuitenkin aina merkitä lihavointi `<strong></strong>` tai `<b></b>`-elementeillä, ja kursivointi `<em></em>`-elementillä. Tämä sen takia, että esimerkiksi sokeiden lukuohjelmat lukevat verkkosivua suoraan HTML:stä, eikä tällöin CSS:ään tehdyt muutokset välity kuuntelijalle.
 
 `background-color` värjää elementin taustan, tälle voi antaa samoja arvoja kuin color-elementille.
 
@@ -699,7 +703,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 
 `border-width` määrittelee reunan leveyden. Annetaan yleensä pikseleinä.
 
-`border-color` määrittelee, minkä värinen reuna on. Tälle voi antaa samoja ominaisuuksia kuin `background-color`- tai `color`-ominaisuuksille.
+`border-color` määrittelee, minkä värinen reuna on. Tälle voi antaa samoja ominaisuuksia kuin `background-color` tai `color`-ominaisuuksille.
 
 <div class="exercise">
 <h3>Tehtävä 10: CSS:n ominaisuuksia {% include points.html text="5%" %}</h3>
@@ -748,7 +752,7 @@ body {
 
 ![HTML sivu ilman CSS-koodia](/assets/html-example-8.png)
 
-Huomataan, että tekstiä on jo paljon helpompi lukea, koska teksti on keskellä näyttöä. Emme ole kuitenkaan vielä tyytyväisiä. Otetaan seuraavaksi tarkkailuun käytetyt fontit. Yleensä selaimet käyttävät valmiina `Times`-fonttia. Tämä voi kuitenkin näyttää epämielyttävältä silmään, mikä johtuu siitä, että `Times`on muuten todella vähän käytetty fontti. Vaihdetaan fontti `sans-serif`-tyyliseksi, jolloin sivuston ulkonäkö selkeästi kohenee. Tämä tehdään CSS-ominaisuudella `font-family: "Helvetica", "Arial", , sans-serif;`. Eli **lisätään** se body-määritelmään:
+Huomataan, että tekstiä on jo paljon helpompi lukea, koska teksti on keskellä näyttöä. Emme ole kuitenkaan vielä tyytyväisiä. Otetaan seuraavaksi tarkkailuun käytetyt fontit. Yleensä selaimet käyttävät valmiina "Times"-fonttia. Tämä voi kuitenkin näyttää epämielyttävältä silmään, mikä johtuu siitä, että "Times"on muuten todella vähän käytetty fontti. Vaihdetaan fontti `sans-serif`-tyyliseksi, jolloin sivuston ulkonäkö selkeästi kohenee. Tämä tehdään CSS-ominaisuudella `font-family: "Helvetica", "Arial", , sans-serif;`. Eli **lisätään** se body-määritelmään:
 
 ```css
 body {
@@ -816,7 +820,8 @@ Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mist
 Staattisen verkkosivun voi julkaista monessa paikassa. Yleinen tapa on vuokrata/ostaa oma palvelin ja tarjota sieltä dokumentteja maailmalle. Harjoittelemme kuitenkin tällä kurssilla verkkosivun julkaisua Github-sivuna.
 
 Github-sivut on ilmainen Githubin palvelu, joka mahdollistaa staattisten sivujen tarjoamisen suoraan Githubin repositoriosta.
-Tehdään uusi repositorio, jonne lisäämme `index.html` tiedoston ja `css`-kansioon `styles.css`-tiedoston. Tämän jälkeen kirjoitamme `index.html`-tiedostoon seuraavan pätkän:
+
+Aloitetaan luomalla uusi repositorio, jonne lisäämme `index.html` tiedoston ja `css`-kansioon `styles.css`-tiedoston. Tämän jälkeen kirjoitamme `index.html`-tiedostoon seuraavan pätkän:
 
 ```html
 <!doctype html>
@@ -839,7 +844,7 @@ Tehdään uusi repositorio, jonne lisäämme `index.html` tiedoston ja `css`-kan
 </html>
 ```
 
-Ja CSS-tiedostoon lisäämme seuraavan tyylin.
+Ja CSS-tiedostoon lisäämme seuraavan tyylin:
 
 ```css
 h1 {
@@ -862,7 +867,7 @@ Tämän jälkeen mennään osoitteeseen, missä sivun pitäisi olla. Osoite on o
 Huomaamme, että sivusto on julkisena ja jokaisen internetin käyttäjän saatavilla ympäri maailman.
 
 <div class="note">
-<strong>Pääaineopiskelijoille</strong>
+<strong>Yliopisto-opiskelijoille</strong>
 
 Yliopisto tarjoaa tietojenkäsittelytieteen pääaineopiskelijoille palvelintilaa, jossa voi pyörittää omia staattisia verkkosivuja. Käyttäjän dokumentit sijaitsee levypalvelimella käyttäjän CS-kotihakemiston public_html-alihakemistossa: <code>/cs/home/käyttäjätunnus/public_html/</code>.
 
@@ -889,10 +894,10 @@ Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
 <h3>Tehtävä 12: Ansioluettelo {% include points.html text="10%" %}</h3>
 <ol>
 <li>Luo uusi repositorio Githubiin.</li>
-<li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna. Voit halutessasi tehdä ansioluettelon myös keksityillä tiedoilla.</li>
+<li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna, jonne kirjoitat itsestäsi, kiinnostuksenkohtiestasi ja mahdollisesta työkokemuksestasi.</li>
 <li>Käytä ansioluettelon tekoon tässä osiossa opetettuja asioita. Voit hakea hakukoneella esimerkkejä esimerkiksi hakusanoilla <code>static website resumes</code>. Jos et osaa tehdä jotain tyyliä CSSllä niin hae rohkeasti netistä tietoa, miten sellainen tehdään.</li>
-<li>Puske lopuksi tekemäsi muutokset GitHubiin.</li>
-<li>Julkaise ansioluettelo Github-sivuna.</li>
+<li>Puske lopuksi tekemäsi muutokset GitHubiin. Yritä luoda committeja järkevistä kokonaisuuksista; älä siis esimerkiksi tee vain yhtä isoa committia.</li>
+<li>Julkaise ansioluettelo Github-sivuna tai laitoksen palvelimen kautta.</li>
 </ol>
 </div>
 

@@ -237,7 +237,7 @@ Commitin luominen voi aluksi tuntua epäintuitiiviselta. Seuraava ajatusleikki s
 
 ### Haarat
 
-Komennon `git status` tulosteen yläreunassa näkyy: `On branch master`. Haarat, eli englanniksi _branchit_, mahdollistavat joidenkin committien eriyttäimisen toisistaan. Näin ollen on mahdollista kehittää uuden haaran sisältöä ilman, että menetetään toimiva versio ohjelmasta. Jokaisella projektilla on päähaara eli `master` -haara, jossa pidetään senhetkistä toimivaa ja käytössä olevaa versiota.
+Komennon `git status` tulosteen yläreunassa näkyy: `On branch master`. Haarat, eli englanniksi _branchit_, mahdollistavat joidenkin committien eriyttäimisen toisistaan. Näin ollen on mahdollista kehittää uuden haaran sisältöä ilman, että menetetään toimiva versio ohjelmasta. Tavanomaisesti jokaisella projektilla on päähaara, joka on yleensä nimeltään`master`, ja jossa pidetään senhetkistä toimivaa ja käytössä olevaa versiota.
 
 Usein haaroja käytetään niin, että päähaarasta erotetaan uuden toiminnallisuuden testaamiseksi toinen haara, jossa koodataan lisäominaisuuksia. Haarat eivät vaikuta toistensa tiloihin, eli uudella koodilla voidaan leikkiä huolimatta päähaarasta. Kun ollaan todettu uusi koodi toimivaksi, voidaan se lisätä päähaaraan, ja poistaa uusi haara. Tässä osassa ei käsitellä haaroja sen enempää: riittää ymmärtää, että käytämme nyt vain master-, eli päähaaraa.
 
@@ -270,6 +270,8 @@ Jos committia luodessa tulostuu virheviesti <code>error: cannot run : No such fi
 </div>
 
 ## Koodin jakaminen GitHubissa
+
+Käsitellään seuraavaksi, miten GitHubia voidaan käyttää yhdessä Gitin kanssa koodin jakamiseksi ja julkaisemiseksi.
 
 ### Etärepositorion luominen
 
@@ -327,8 +329,6 @@ Voit tulostaa ssh-avaimen terminaaliisi komennolla <code>cat</code>, kopioida se
 <p>
 Liitä GitHubin repo projektisi etärepositorioksi. Jos teit edellisen tehtävän, käytä SSH-osoitetta, muuten käytä https-osoitetta.</p>
 </div>
-
-## Etärepositorion kanssa työskentely
 
 ### Julkaiseminen
 
@@ -476,7 +476,7 @@ Merge made by the 'recursive' strategy.
  create mode 100644 new_file.txt
 ```
 
-Nyt komennon `git status` mukaan ollaan tehty 2 committia (`ahead by 2 commits`). Ensimmäinen niistä on se, joka luotiin paikallisesti, ja toinen on uusi, automaattisesti luotu merge-commit.
+Nyt komennon `git status` mukaan ollaan tehty 2 committia (`ahead by 2 commits`). Ensimmäinen niistä on se, joka luotiin paikallisesti, ja toinen on uusi, automaattisesti luotu merge-commit. Nämä kaksi committia voitaisiin puskea GitHubiin ongelmitta.
 
 <div class="exercise">
 <h3>Tehtävä 10: Mergeäminen {% include points.html text="5%" %}</h3>
