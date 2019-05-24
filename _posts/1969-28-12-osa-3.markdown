@@ -299,7 +299,7 @@ HTML-dokumentissa voi olla kommentteja, jotka eivät näy lopullisessa verkkosiv
 <h3>Tehtävä 5: Kuvat ja kommentit {% include points.html text="10%" %}</h3>
 <div class="warning">
 Jos liität omille verkkosivuille kuvan joltain toiselta sivulta, sinulla pitää olla oikeus käyttää kuvaa.
-Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia.
+Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia. Voit etsiä näitä palveluita esimerkiksi <a href="https://commons.wikimedia.org/wiki/Commons:Free_media_resources/Photography)"> täältä </a>.
 </div>
 <ol>
 <li>Lataa omalle koneelle <a href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Seitsem%C3%A4n_veljest%C3%A4.png">kuva</a>. Kuvaa saa käyttää uudestaan.</li>
@@ -442,10 +442,10 @@ Tässä on pala HTML-dokumentista, josta haluamme värittää kesäiset rivit pu
 
 ```html
 <p>
-  <p class="kesa">Keltainen toukokuu, mikset sä jo tuu?</p>
-  <p>Oon turhaan odottanut tuulta lempeää.</p>
-  <p class="kesa">Kesä antaa kaikille onnen tunteen,</p>
-  <p>jonka voi säilyttää</p>
+  <p class="kesa">Keltainen on kaunis väri</p>
+  <p>Kunhan se ei ole lumessa</p>
+  <p class="kesa">Päivänkakkarat ovat myös keltaisia,</p>
+  <p>ja niitä voi syödä</p>
 </p>
 ```
 

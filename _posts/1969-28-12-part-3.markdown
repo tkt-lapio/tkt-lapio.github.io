@@ -39,9 +39,9 @@ You will need a proper text editor in this part of the course. We recommend usin
 <li>Create a Git project called "lapio-website" using the command line.</li>
 <li>Create a new reposiotry to GitHub with the same name</li>
 <li>Add the newly created repository as a remote of the local project.</li>
-<li>Add a file called <code>index.html</code> to the project, and copy the code from <a href="https://github.com/rovaniemi/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">here</a> inside. You don't need to understand the contents of the file yet.</li>
+<li>Add a file called <code>index.html</code> to the project, and copy the code from <a href="https://github.com/tkt-lapio/lapio-tehtavamateriaalia/blob/master/w3-ex1/index.html">here</a> inside. You don't need to understand the contents of the file yet.</li>
 <li>Create a new commit with the message <code>Osa 3. First exercise</code> and push it to GitHub.</li>
-</ol>
+</ol> 
 </div>
 
 ## HTML
@@ -76,7 +76,7 @@ If you can't open the file in a browser, you can also write its path to the URL 
 Let's add the following line in the <code>index.html</code> file just under `<!--Do the exercises here-->`: `<p>This is a piece of text</p>`. Then we'll see what the document looks like in the browser.
 
 
-![An example of viewing an HTML document in the browser](/assets/html-example-01.png)
+![An example of viewing an HTML document in the browser](/assets/html-ex-1.png)
 
 <div class="note">
 Note that when creating an HTML file, you should end the filename with <code>.html</code>, to let the file system know what kind of code the file holds.
@@ -88,7 +88,7 @@ Note that when creating an HTML file, you should end the filename with <code>.ht
 
 Let's continue editing the file <code>index.html</code>. Test out each of the different text elements and see what they look like. The goal of the exercise is to have the website look like the following:
 
-<img src="/assets/html-ex1.png" alt="Second exercise goal"/>
+<img src="/assets/html-ex-2.png" alt="Second exercise goal"/>
 
 After you are done in your opinion, create a new commit with the following message: <code>Part 3, add second exercise </code>. Finish by pushing the commit to GitHub.
 </div>
@@ -121,13 +121,13 @@ Next we'll look at block and inline element through an example.
 
 
 ```
-<p>This is an example of using <strong>inline </strong> </p>
+<p>This is an example of an <strong> inline </strong>element </p>
 ```
 
 The previous inline element will look like this in the browser:
 
 
-![Inline element](/assets/html-example-4.png)
+![Inline element](/assets/html-ex-4.png)
 
 ```
 <p>Here is an example of a <p> block</p> element</p>
@@ -135,16 +135,16 @@ The previous inline element will look like this in the browser:
 
 The previous block element will look like this in the browser:
 
-![Block element](/assets/html-example-3.png)
+![Block element](/assets/html-ex-5.png)
 
 Nesting elements is an essential part of HTML. Its role will be highlighted even more later on, once we learn how to create styles with CSS.
 
 <div class="exercise">
 <h3>Exercise 3: Nested elements {% include points.html text="10%" %}</h3>
 Continue editing the file, introduced in the previous exercises <code>index.html</code>.
-Your task is to make the document inside the file look like the following picture. In other words, bold the text <code>Jukola</code>, italicize the text <code>Häme</code>, and both bold and italicize the text <code>Toukola</code>.
+Your task is to make the document inside the file look like the following picture. In other words, bold the word <code>Here</code>, italicize the wprd <code>HTML</code>, and both bold and italicize the text <code>To be continued...</code>.
 
-<img src="/assets/html-ex3.png" alt="Third exercise as a picture"/>
+<img src="/assets/html-ex-6.png" alt="Third exercise as a picture"/>
 
 After you are done in your opinion, create a new commit with the following message: <code>Part 3, add third exercise </code>. Finish by pushing the commit to GitHub.
 </div>
@@ -282,7 +282,9 @@ Nested lists can combine both ordered and unordered lists. For example, here are
 
 We'll continue editing the document inside <code>index.html</code>. First, test out the different list types in the document. Then try and make the site look like the following picture:
 
-<img src="/assets/html-ex4.png" alt="Picture for the fourth exercise" />
+<img src="/assets/html-ex-7.png" alt="Picture for the fourth exercise" />
+
+In order, add more headings and a few nested lists. Remember to use the heading numbers properly!
 
 When you are done in your opinion, create a commit with the message <code>Part 3, add exercise 4</code> and push it to GitHub.
 
@@ -311,20 +313,22 @@ An HTML document can also contain comments, which will not be displayed to the u
 <div class="exercise">
 <h3>Exercise 5: Images and comments {% include points.html text="10%" %}</h3>
 <div class="warning">
-If you attach an image to your site from another web page, make sure you actually have the right to use that image. There are several services online offering roalty-free images.
+If you attach an image to your site from another web page, make sure you actually have the right to use that image. There are several services online offering roalty-free or copyright-free images, as listed <a href="https://commons.wikimedia.org/wiki/Commons:Free_media_resources/Photography)">here</a>.
 </div>
 <ol>
-<li>Download <a href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Seitsem%C3%A4n_veljest%C3%A4.png">this image</a> to your computer.</li>
+<li>Find an image you are allowed to use. You can for example use some images from Wikipedia, as long as you <a href="https://en.m.wikipedia.org/wiki/Wikipedia:Ten_things_you_may_not_know_about_images_on_Wikipedia">comply with the image's license terms</a>. You can also use a picture you've taken yourself.</li>
 <li>Create a new folder to your project, called <code>assets</code> and add it to Git.</li>
 <li>Add the picture to the newly created folder and to Git.</li>
 <li>Add the image to your web site using a relative path, and add it to Git.</li>
+<ul>
 <li>Adjust the image size as you wish.</li>
 <li>Remember to add the <code>alt</code> attribute.</li>
-<li>Write a comment above the image, describing the contents.</li>
-<li>Here is what the final product should look like:</li>
-<img src="/assets/html-ex5.png" alt="The result of fifth exercise"/>
-<li>When you are done in your opinion, create a commit with the message <code>Part 3, fifth exercise</code> and push it to GitHub.</li>
+</ul>
+<li>Write a comment above the image, describing the contents. The comment shouldn't be visible in the browser.</li>
 </ol>
+<li>Here is what the final product should look like:</li>
+<img src="/assets/html-exercise-5-en.png" alt="The result of fifth exercise"/>
+<li>When you are done in your opinion, create a commit with the message <code>Part 3, fifth exercise</code> and push it to GitHub.</li>
 </div>
 
 # Links
@@ -346,7 +350,7 @@ The `a` tag has several other attributes as well. For example the attribute `tar
 <li>Create a basic HTML structure to the document. You can reuse the one from the first exercise.</li>
 <li>Link the new document to the <code>index.html</code> document and vice versa.</li>
 <li>Here is an example of what the end result could look like:</li>
-<img src="/assets/html-ex6.png" alt="The result of sixth exercise"/>
+<img src="/assets/html-exercise-6-en.png" alt="The result of sixth exercise"/>
 <li>When you are done in your opinion, create a new commit with the message <code>Part 3, add sixth exercise</code> and push it to GitHub.</li>
 </ol>
 </div>
@@ -382,7 +386,7 @@ Note that there is a new attribute in the link above. The attribute `rel` tells 
 <li>Add the new file to Git.</li>
 <li>Add the following style to the CSS file: <code>p { background-color: red; }</code></li>
 <li>Link the CSS file to the initial HTML document, <code>index.html</code>, so that the result is the following:</li>
-<img src="/assets/html-ex7.png" alt="Result of seventh exercise"/>
+<img src="/assets/html-exercise-7-en.png" alt="Result of seventh exercise"/>
 
 When you are done in your opinion, create a commit with the message <code>Part 3, add seventh exercise</code> and push it to GitHub.
 </ol>
@@ -451,10 +455,10 @@ Here is an example, where we will color all the lines containing the word "yello
 
 ```html
 <p>
-  <p>Look at the stars, look how they shine for you,</p>
-  <p class="yellow">yeah they were all yellow.</p>
-  <p>I came along, I wrote a song for you,</p>
-  <p class="yellow">and it was called yellow.</p>
+  <p>Stars are beautiful,</p>
+  <p class="yellow">and they look yellow from here.</p>
+  <p>I also like flowers,</p>
+  <p class="yellow">mostly becauset they're yellow.</p>
 </p>
 ```
 
@@ -517,9 +521,9 @@ The universal selector simply means choosing all the elements of an HTML documen
 The idea of this exercise is to test out each of the selectors in order to add colors to the <code>index.html</code> we have been working with.
 
 <ol>
-<li>Don't worry about making the site look pretty - we'll get to that later on - just try out all of the selectors describes above.</li>
+<li>Don't worry about making the site look pretty - we'll get to that later on - just try out all of the selectors described above.</li>
 Try and make the site look like the following:
-   <img src="/assets/html-ex-8.png" alt="The result of the eight exercise"/>
+   <img src="/assets/html-exercise-8-en.png" alt="The result of the eight exercise"/>
 <li>When you are done in your opinion, create a commit with the message <code>Part 3, add eigth exercise</code>, and push it to GitHub.</li>
 </ol>
 </div>
@@ -546,7 +550,7 @@ Here are two snippets of HTML and CSS code, linked together:
 }
 ```
 
-![An example of height and width](/assets/html-example-12.png)
+![An example of height and width](/assets/html-example-1.png)
 
 We notice that the CSS above created a red rectangle around the `p` element. This is due to the fact that we explicitly defined the size, i.e. the widht and the height of the `div` element, which contains the element containing the actual text you see on the website.
 
@@ -637,25 +641,25 @@ Let's add two more elements to the example code:
 }
 ```
 
-![Example HTML page with two elements](/assets/html-example-13.png)
+![Example HTML page with two elements](/assets/html-example-three-boxes.png)
 
 Let's start by getting to know the property whcih allows moving elements on a web page. 
 
 We'll strat by giving the `.second-box-container` selector the property `left: 250px;`. This should move the middle HTML element 250px away from the left side of the page:
 
-![Example HTML page with two elements](/assets/html-example-13.png)
+![Example HTML page with two elements](/assets/html-example-three-boxes.png)
 
 However, nothing seems to have changed. This is because of the `position` property, which defines how the location of an element is defined. There are five different values for `position` in total, of which we'll handle `static`, `relative` and `absolute`. The default value of `position` is `static`, which means that the properties `top`, `bottom`, `right` and `left` won't affect the location of the element.
 
 Let's change the add the property `position: relative;` for the selector `.second-box-container`.
 
-![Example HTML page with position relative](/assets/html-example-14.png)
+![Example HTML page with position relative](/assets/html-example-position-relative.png)
 
 By also changing the value of `position`, we have managed to move the element as we wished. The value `relative` doesn't change the position of the element in the document flow, but allows moving the element with regards to it's original location. 
 
 Next we'll change the value to `absolute` and see what happens:
 
-![Example HTML page with position absolute](/assets/html-example-15.png)
+![Example HTML page with position absolute](/assets/html-example-position-absolute.png)
 
 The element is still on the right side of the page, but it no longer reserves space from the original position. This is because `position: absolute;` deletes the element from the document's normal flow, meaning that the element is no longer given space in its original location. The element can be positioned with regards to its closest positioned ancestor, or if none is found, the `body` element. 
 
@@ -667,8 +671,8 @@ The position property is often regarded as the one of the most complicated featu
 <li>Create a new file to your Git project, and name it <code>positions.html</code>.</li>
 <li>Create a CSS file and link it to the new HTML file in order to add styles to it.</li>
 <li>Add code to both files in order to create three adjacent elements of different colors on the website, according to the example given above.</li>
-<li>Edit the HTML and CSS code in order to make the webiste look like the following:</li>
-<img src="/assets/html-ex-9.png" alt="Adjacent elements"/>
+<li>Edit the HTML and CSS code in order to make the website look like the following:</li>
+<img src="/assets/html-exercise-9-en.png" alt="Adjacent elements"/>
 <li>When you think you are done, create a commit with the message <code>Part 3, ninth exercise</code>, and push it to GitHub.</li>
 <div class="note">Hint: Try adding elements inside others, and use the position property to change their locations.</div>
 </ol>
@@ -691,7 +695,7 @@ Now that we know what an image on a computer screen actually consists of, it is 
 2. `em` depends on the font size of the parent of the element this unit is used in. One `em` means the same font size as the parent of the element. Consequently `2em` corresponds to double the font size of the parent element. For example, if the parent element's font size is `12px`, then for its child, `1em` means `12px`, and `2em` is equal to `24px`.  One should always mark the font size of an element (the property is`font-size`) in pixels or in `em`.
 3. `%` is also defined with regards to the parent of the element. If the width of an element is set to `200px`, and the width of its child is then defined to be `20%`, the size of the child will be `40px`.
 4. `rem` is almost equal to `em`, with the exception that the font size is calculated using the font size of the `<html></html> element.
-5. `vw` refers to the width of the screen. `1vw` means one percent of the screens width. 
+5. `vw` refers to the width of the screen. `1vw` means one percent of the screen's width. 
 6. `vh` refers to the height of the screen. Just like with `vw`, `1vh` is one percent of the height of the screen.
 
 In addition to the former units, there are also `cm`, `mm`, `in`, `pt`, `pc`, `ex`, `ch`, `vmin` and `vmax`. You can read more about them [here](https://www.w3schools.com/cssref/css_units.asp).
@@ -714,7 +718,7 @@ There exists an immense amount of different kinds of CSS properties designed for
 
 `font-size` defines the size of the text. The values should be given in `px` or `em`.
 
-`font-style` allows styling the font further, by for example making it bold or cursive. Nevertheless, bolded text should always be created using `<strong></strong>` or `<b></b>` elements, and cursive with the elements `<em></em>`. This is because the screen readers, that for example blind people use, only use the HTML of the page, and thus wouldn't be able to make the distinction between normal text and text bolded with CSS.
+`font-style` allows styling the font further, by for example making it bold or cursive. Nevertheless, bolded text should always be created using `<strong></strong>` and cursive ones with `<em></em>`. This is because the screen readers, that for example blind people use, only use the HTML of the page, and thus wouldn't be able to make the distinction between normal text and text altered with CSS.
 
 `background-color` adds color to the background of an element. The possible values are the same as for the `color` property.
 
@@ -729,7 +733,7 @@ There exists an immense amount of different kinds of CSS properties designed for
 <ol>
 <li>The idea of the exercise is to get to know some CSS properties independently.</li>
 <li>Try and make the site look like the following:</li>
-<img src="/assets/html-ex-10.png" alt="HTML-sivu ilman CSS-koodia"/>
+<img src="/assets/html-exercise-10-en.png" alt="HTML-sivu ilman CSS-koodia"/>
 <li>At this point it doesn't matter that the page is quite ugly, just focus on trying out different properties.</li>
 <li>When you are done in your opinion, create a commit with the message <code>Part 3, tenth exercise</code> and push it to GitHub.</li>
 </ol>
@@ -739,7 +743,7 @@ There exists an immense amount of different kinds of CSS properties designed for
 
 The styles you created in the previous example would be rather uncomfortable to use in real life. Next we'll see how CSS properties can be used to make sites more clear an easy to use. We'll use a piece of text, which might be familiar to you:
 
-![HTML with no CSS](/assets/html-example-7.png)
+![HTML with no CSS](/assets/html-readibility-1.png)
 
 The contents of the page are actually quite hard to read without any CSS. Here is the general structure of the HTML page:
 
@@ -749,13 +753,13 @@ The contents of the page are actually quite hard to read without any CSS. Here i
     ...
   </head>
   <body>
-    <h2>Command line...</h2>
-    <p>On the command line...</p>
+    <h1>Command line...</h1>
+    <p>You can browse...</p>
     <p>Open the graphical...</p>
+    <p>You should now...</p>
     <p>Note...</p>
-    <p>Note...</p>
-    <p>Note...</p>
-    <p>Navigate...</p>
+    <p>Because the combination...</p>
+    <p>Your home folder...</p>
   </body>
 </html>
 ```
@@ -772,7 +776,7 @@ body {
 
 The effects of the CSS on the page are the following:
 
-![Centered HTML page](/assets/html-example-8.png)
+![Centered HTML page](/assets/html-readibility-2.png)
 
 The text is instantly easier to read, as it is in the middle of the screen. However, some improvements can be made still. We'll focus on the font next. The default font of browsers is called "Times", but it is not very pleasing to the eye, as the default font is very rarely used. We'll change the font to `sans-serif`, which makes the text nicer to read. This can be done by adding the following property to CSS:
 
@@ -790,15 +794,15 @@ body {
   padding: 4em 1em;
 }
 
-h2 {
+h1 {
   margin-top: 1em;
   padding-top: 1em;
 }
 ```
 
-![HTML page with added space arount text](/assets/html-example-9.png)
+![HTML page with added space arount text](/assets/html-readibilty-3.png)
 
-This is a huge improvement in the readibility of the page, but there still is some work to do. One way to make the text easier to read is by slightly reducing the contrast between the text and its background. In general, it is a good idea to make the text a white page a little grey, in order to make the text less harsh to read. Furthermore, this allows accentuating the headings by coloring them darker.
+This is a huge improvement in the readibility of the page, but there still is some work to do. One way to make the text easier to read is by slightly reducing the contrast between the text and its background. In general, it is a good idea to make black text on a white page a little grey, in order to make the text less harsh to read. Furthermore, this allows accentuating the headings by coloring them darker.
 
 ```
 body {
@@ -807,12 +811,12 @@ body {
 ```
 
 ```
-h2 {
+h1 {
   color: #333;
 }
 ```
 
-![HTML page with less contrast](/assets/html-example-10.png)
+![HTML page with less contrast](/assets/html-readibility-4.png)
 
 Much better. Now let's make the code on the page stand out. This can be done by using separate elements, built with the tag `code`, for the code blocks, and giving them the following styles:
 
@@ -824,14 +828,14 @@ code {
 }
 ```
 
-![HTML page with separate code blocks](/assets/html-example-11.png)
+![HTML page with separate code blocks](/assets/html-readibility-6.png)
 
 The page now looks significantly better, at least compared to the original appearance.
 
 <div class="exercise">
 <h3>Exercise 11: Making a site readable with CSS {% include points.html text="10%" %}</h3>
 <ol>
-<li>Make the example website more readable accoring to the instructions above. // TODO: what to use as text?</a></li>
+<li>Make the example website more readable accoring to the instructions above. You need a large body of text for the exercise. You can for example use the text from this tutorial, or any other text you are allowed to use.</li>
 <li>Test out as many properties and principles as you can think of. There is no single right solution.</li>
 <li>When you are done in your opinion, create a commit with the message <code>Part 3, eleventh exercise</code> and push it to GitHub.</li>
 </ol>
@@ -853,14 +857,14 @@ We'll start by creating a new repository, with an `index.html` file and `styles.
 <head>
   <meta charset="utf-8">
 
-  <title>Github page test</title>
+  <title>Github page testi</title>
 
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
-  <h1>Github pages test</h1>
+  <h1>Github pages testi</h1>
 </body>
 
 </html>
@@ -889,22 +893,22 @@ Now the site is live on the Internet, an we can simply navigate to it. The addre
 Now we have built a website, which is accessible to anyone using the Internet.
 
 <div class="note">
-<strong>For university students</strong>
-
-Student's who are currently enrolled at the University of Helsinki are given some server space to run their own static wevsites. The website can be published by adding the required documents to the user's CS home folde,r in the path <code>/cs/home/username/public_html/</code>. The website will be published to the following address: <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code>
-
-In practice, here are instructions on publishing the website:
+<strong>For university students:</strong>
+<p>
+Student's who are currently enrolled at the University of Helsinki are given some server space to run their own static wevsites. The website can be published by adding the required documents to the user's CS home folder in the path <code>/cs/home/username/public_html/</code>. The website will be published to the following address: <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code>
+</p>
+<p>In practice, here are instructions on publishing the website:</p>
 
 <ol>
 <li>Start by creating the <code>public_html</code> folder in your CS home directory.</li>
 <li>Then create a file called <code>index.html</code> in the new folder, and fill it with the HTML code you want. This will be the published document.</li>
 <li>Publishing the page will require giving some sites some additional permissions:</li>
 <ol>
-<li>public_html: All users should have read and execute permissions.</li>
-<li>cs home folder (cs/home/username): execute permissions for everyone.</li>
-<li>The site should now be live.</li>
+<li><code>public_html</code>: All users should have read and execute permissions.</li>
+<li>CS home folder (located at <code>cs/home/username</code>): execute permissions for everyone.</li>
 </ol>
 </ol>
+<p>When proper permissions have been given, you should be able to navigate to the site using your browser.</p>
 
 </div>
 
@@ -914,7 +918,7 @@ In practice, here are instructions on publishing the website:
 <ol>
 <li>Create a new repository on GitHub.</li>
 <li>Use the repository to create a CV website, where you write about yourself, your interests and your possible work experience.</li>
-<li>Take advantage of the things you have learned during this course. It might be a good idea to search for inspiration with for example the key owrds <code>static website resumes</code>. If you don't know how to do something, just try and Google it.</li>
+<li>Take advantage of the things you have learned during this course. It might be a good idea to search for inspiration with for example the keywords "static website resumes". If you don't know how to do something, just try and Google how to do it.</li>
 <li>Push all the changes you make to GitHub. Try and divide the process into sensible sized commits; don't just create one big commit.</li>
 <li>Publish the site as a GitHub page, or using the department's server space.</li>
 </ol>
