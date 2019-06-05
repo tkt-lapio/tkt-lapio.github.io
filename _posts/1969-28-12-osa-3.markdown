@@ -93,15 +93,19 @@ Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen t
 
 HTML-elementtejä voi asettaa sisäkkäin. Helpoin tapa ymmärtää tämä on ajatella jokainen elementti laatikoksi, joka huolehtii omasta sisällöstään. Sisältö voi olla esimerkiksi tekstiä tai kuvia. Välillä kuitenkin tulee tarve sijoittaa toinen laatikko toisen laatikon sisälle. Tällöin käytetään sisäkkäin asetettuja elementtejä.
 
-Jos haluamme esimerkiksi vahvistaa lauseesta vain osa, meidän on käytettävä sisäkkäin asetettuja HTML-elementtejä.
-
-Tämä on kiva **lause**
+Jos haluamme esimerkiksi vahvistaa lauseesta vain osa, meidän on käytettävä sisäkkäin asetettuja HTML-elementtejä. Esimerkiksi seuraava pätkä koodia
 
 ```html
 <p>Tämä on kiva <strong>lause</strong></p>
 ```
 
-On kuitenkin tärkeää sulkea HTML-elementit järjestyksessä. Edellisessä esimerkikssä avasimme ensimmäiseksi `<p>`-elementin, jonka jälkeen avasimme `<strong>`-elementin. Suljimme `</strong>`-elementin ensimmäisenä ja `</p>`-elementin sen jälkeen. Oikeaoppisessa HTML:ssä on virheellistä sulkea elementit väärässä järjestyksessä. Aina pitää sulkea viimeiseksi aukaistu elementti. Jos emme tee näin, selain yrittää arvata parhaan tavan esittää koodin. Eri selaimet voivat arvata eri tavalla, joten emme voi olla varmoja dokumentin esitystavasta.
+näyttäisi selaimessa seuraavalta:
+
+Tämä on kiva **lause**
+
+On tärkeää sulkea HTML-elementit järjestyksessä. Edellisessä esimerkikssä avasimme ensimmäiseksi `<p>`- tagilla elementin, jonka jälkeen avasimme `<strong>`-tagilla toisen elementin. Suljimme `strong`-elementin ensimmäisenä tagilla `</strong>` ja `p`-elementin sen jälkeen. Oikeaoppisessa HTML:ssä on virheellistä sulkea elementit väärässä järjestyksessä. Aina pitää sulkea viimeiseksi aukaistu elementti. 
+
+Vaikka HTML-elementtejä ei olisikaan rakennettu HTML:n sääntöjen mukaan, selain yrittää arvata parhaan tavan esittää koodin. Eri selaimet voivat arvata eri tavalla, joten emme voi olla varmoja dokumentin esitystavasta. Selain kyllä usein onnistuu näyttämään käyttäjilleen jotain järkevän oloista, mutta ulkoasu ei todennäköisesti näytä siltä, miltä oli tarkoitus.
 
 On olemassa kahta eri kategoriaa HTML-elementtejä: niin sanotut _lohkotason_ elementit ja _sisätason_ elementit.
 
@@ -272,6 +276,8 @@ Sisäkkäin asetetulla listalla tarkoitetaan listaa, jossa on listoja listojen s
 Jatketaan edellisistä tehtävistä tuttua <code>index.html</code>-dokumentin muokkaamista. Testaa ensin dokumenttiin, mitä eri listatyypit tekevät. Tämän jälkeen yritä saada sivusto näyttämään seuraavanlaiselta:
 
 <img src="/assets/html-ex4.png" alt="Neljannen tehtavan kuva" />
+
+Käytännössä tarkoitus on lisätä dokumenttiin sisäkkäin jokin lista.
 
 Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Neljäs tehtävä</code> ja puske tehtävä Githubiin.
 
@@ -498,6 +504,8 @@ Universaali selektori on helppo ymmärtää. Sillä valitaan jokainen elementti 
   color: green;
 }
 ```
+
+Edellä esitellyt selektorit ovat varsin yksinkertaisia, mutta toimivat useissa tilanteissa. Niiden lisäksi on myös mahdollista käyttää monimutkaisempia selektorirakenteita, esimerkiksi valitsemalla elementtejä sen mukaan, minkä elementin sisällä ne ovat. Voit lukea aiheesta lisää esimerkiksi [täältä](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Selectors).
 
 <div class="exercise">
 <h3>Tehtävä 8: Selektorit {% include points.html text="10%" %}</h3>

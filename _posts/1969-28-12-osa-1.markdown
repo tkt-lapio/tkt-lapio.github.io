@@ -498,7 +498,7 @@ tunnus@melkki.cs.helsinki.fi's password:
 
 <div class="note">Huomaa, että salasanaa kirjoittaessasi on normaalia, että komentoriville ei ilmesty tekstiä.</div>
 
-Kun SSH-yhteys muodostetaan ensimmäisen kerran, ilmestyy varoitusviesti, jossa kysytään luottaako käyttäjä palvelimeen, johon yhteyttä ollana muodostamassa. Kun kirjoittaa `yes`, muistaa tietokoneesi palvelimesta tietyn sormenjäljen. Vaikka SSH-yhteys on suojattu, se ei ole täysin immuuni hyökkäyksille (kuten ei oikeastaan mikään internetissä toimiva asia). Jos saat viestin käyttäessäsi SSH-yhteyttä esimerkiksi julkisessa internetissä, kannattaa yhteys jättää muodostamatta, sillä koneesi saattaa olla hyökkäyksen kohteena.
+Kun SSH-yhteys muodostetaan ensimmäisen kerran, ilmestyy varoitusviesti, jossa kysytään luottaako käyttäjä palvelimeen, johon yhteyttä ollaan muodostamassa. Kun kirjoittaa `yes`, muistaa tietokoneesi palvelimesta tietyn sormenjäljen. Vaikka SSH-yhteys on suojattu, se ei ole täysin immuuni hyökkäyksille (kuten ei oikeastaan mikään internetissä toimiva asia). Jos saat viestin käyttäessäsi SSH-yhteyttä esimerkiksi julkisessa internetissä, kannattaa yhteys jättää muodostamatta, sillä koneesi saattaa olla hyökkäyksen kohteena.
 
 Kun yhteys on muodostettu, näyttää komentorivi erilaiselta:
 
@@ -608,7 +608,7 @@ Graafisessa ympäristössä selain antaa tarkastella sivuja internetissä. Komen
 Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toimii yksinkertaisimmillaan `wget sivun.osoite`, joka lataa annetun sivun koneellesi. Internet-sivut on tehty HTML-kielellä, johon tutustumme seuraavassa osassa, joten saat kutsun tuloksena koneellesi `.html`-päätteisen tiedoston.
 
 <div class="exercise">
-<h3>Tehtävä 12: Wget ja HTML-koodi {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 12: Wget ja HTML-koodi {% include points.html text="5%" %}</h3>
 
 <ol>
 <li>Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla</li>
@@ -657,7 +657,7 @@ total 8
 drwx------ 2 tunnus tunnus 130 kesä 14 17:54 päiväkirjamerkinnät
 ```
 
-Jokasiella kansion tiedostolla ja kansiolla on tulostuksessa oma rivinsä. Ensimmäinen sarake, joka sisältää hassuja sekoituksia kirjaimista ja merkeistä on kyseisen tiedoston oikeudet kertova merkkijono. Tässä sen ensimmäinen merkki on joko `d` tai `-`, joka kertoo onko kyseessä tiedosto (`-`) vai kansio, eli **d**irectory.
+Jokaisella kansion tiedostolla ja kansiolla on tulostuksessa oma rivinsä. Ensimmäinen sarake, joka sisältää hassuja sekoituksia kirjaimista ja merkeistä on kyseisen tiedoston oikeudet kertova merkkijono. Tässä sen ensimmäinen merkki on joko `d` tai `-`, joka kertoo onko kyseessä tiedosto (`-`) vai kansio, eli **d**irectory.
 
 Seuraavat yhdeksän merkkiä on varattu tiedoston tai kansion oikeuksille. Nämä oikeudet merkitään aina järjestyksessä lukuoikeus (r), kirjoitusoikeus (w) ja suoritusoikeus (x). Ensimmäiset kolme merkkiä kertovat sen omistajan oikeudet. Jos vastaavan kirjaimen tilalla on viiva, tarkoittaa merkintä, että oikeus puuttuu, eli sitä ei ole annettu.
 

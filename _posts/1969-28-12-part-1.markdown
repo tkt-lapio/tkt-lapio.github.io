@@ -496,7 +496,7 @@ The operator <code>></code> overwrites the contents of the file with the given t
 </div>
 
 <div class="exercise">
-<h3>Exercise 10: A student's notes {% include points.html text="5%" %}</h3>
+<h3>Exercise 10: A Student's Notes {% include points.html text="5%" %}</h3>
 Create a text file called <code>notes.txt</code> on the command line. Paste inside the following text which describes the week of a typical student:
 </div>
 ```
@@ -652,7 +652,7 @@ You are probably using a browser like Firefox or Google Chrome to read this mate
 The command required to download something from the internet is `wget` (_world wide web get_). The simplest way to download a site at `site.address` is with `wget site.address`. Websites are written in a language called HTML, which you will learn more about in the third part of this course. Thus the file you will download has the extension `.html`.
 
 <div class="exercise">
-<h3>Exercise 12: Wget and HTML code {% include points.html text="10%" %}</h3>
+<h3>Exercise 12: Wget and HTML code {% include points.html text="5%" %}</h3>
 
 <ol>
 <li>Download a site of your liking to your computer using <code>wget</code>.</li>
