@@ -6,21 +6,27 @@ permalink: "/paja/"
 tag: info
 ---
 
+|Maanantai/ Monday | Tiistai / Tuesday      | Keskiviikko / Wednesday  | Torstai / Thursday  | Perjantai / Friday  |
+|   -    | 12-15, BK107 | - | 14-16, BK107 | 14-16, BK107 |
+
 Pajalla tarkoitetaan määrättyä hetkeä, jolloin kurssin assistentit ovat paikalla luokkahuoneessa, jonne opiskelijat voivat halutessaan tulla tekemään kurssin tehtäviä ja esittämään kysymyksiä. Pajaan ei tarvitse ilmoittautua, eikä paikalla tarvitse olla määrättyä aikaa: tarkoitus on, että opiskelija voi esittää matalalla kynnyksellä kysymyksiä ja esimerkiksi tehdä yhteistyötä toisten opiskelijoiden kanssa. Paja on erinomainen tapa opiskella, ja suosittelemme sitä lämpimästi.
 
 Tietojenkäsittelytieteen osastolla on kaksi pajaluokkaa, BK107 Exactumin kellarikerroksessa ruokalan vieressä, sekä B221 toisessa kerroksessa. Tunnistat ohjaajat neonvärisistä liiveistä. Nosta kätesi kun tarvitset apua, äläkä pelkää kysyä tyhmältäkin tuntuvia kysymyksiä.
 
 Lapio-kurssille tarjotaan ohjausta ensimmäisen periodin ajan. Paikalla on yksi tai kaksi ohjaajaa vähintään kahden tunnin ajan.
 
-Pajassa on ohjausta monille erilaisille kursseille. Alla näkyy Lapion ohjausajat. Alustavasti ohjausajat pysyvät koko periodin ajan samoina, mutta saatamme päivittää niitä kysynnän mukaan.
+Pajassa on ohjausta monille erilaisille kursseille. Yllä näkyy Lapion ohjausajat. Alustavasti ohjausajat pysyvät koko periodin ajan samoina, mutta saatamme päivittää niitä kysynnän mukaan.
 
-**Vain tietojenkäsittelytieteen pää- ja sivuaineopiskelijoilla on oikeus pajaohjaukseen. Valitettavasti pajaohjaus ei ole DEFA-opiskelijoille.**
+**Valitettavasti pajaohjaus ei ole tarkoitettu DEFA-opiskelijoille.**
 
-Pajaohjaus alkaa tiistaina **4.9.2018**.
+---------------------
 
-**HUOM: keskiviikon paja lopetettu kävijäpulan takia.**
+<br>
 
-**HUOM: Viimeisen kerran pajaa järjestetään perjantaina 5.10.2018**.
+"Paja" is a tutorial session, where a teaching assistant of the course is present in a specfic classroom, so that student's can come and ask questions if they wish. You don't have to enroll to participate in the tutorial sessions, nor do you have to stay any specific amount of time. The idea is to create a casual enviroment, where you can do the course's exercises, and ask for questions with a low thershold. In addition, collaboration between students is warmly recommended.
 
-|Maanantai | Tiistai      | Keskiviikko  | Torstai      | Perjantai  |
-|   -    | 12-15, BK107 | - | 14-16, BK107 | 14-16, BK107 |
+The Department of Computer Science has two classrooms designed for tutorials, BK107 in the cellar floor, next to Unicafe Exactum, and B221 in the second floor of Exactum. You'll recognize the TAs by their neon colored vests. If you need help, just raise your hand, and don't be afraid to ask -- the TAs are there for you. 
+
+A similar system is in use on several other courses as well. You can see the timetable of lapio's TAs at the top of this page. They might be updated according to demand.
+
+**Unfortunately the tutorial sessions are not meant for DEFA students.**
