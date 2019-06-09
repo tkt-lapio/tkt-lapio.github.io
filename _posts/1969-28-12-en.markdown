@@ -1,0 +1,81 @@
+---
+layout: home
+title: 'In English'
+date: 1969-12-28 00:04:00 +0200
+permalink: /en/
+tag: material-eng
+---
+
+<h1 id="main-title">Welcome to the course page of the course Computing tools for CS studies, or Lapio </h1>
+
+This course is primarly designed for CS freshmen, and its purpose is to go through the basics of the command line in a Unix-like system, using Git for version control, and building a static website using HTML and CSS. The course's nickname "lapio" is Finnish, and it simply means "shovel", as the course teaches the basic use of the essential tools in Computer Science.
+
+<h2>Passing the course</h2>
+The course is passed with an online exam, which is held in [Moodle](https://moodle.helsinki.fi/course/view.php?id=22186), an e-learning environment widely used in the University. In order to enter the course  in Moodle, you will need to enter a key, which is is **lapio-on-tyovaline**. The exam questions are primarly based on the material provided on this Website, which is divided into three sections, each covering a different subject: the command line, Git and Github, and static websites
+
+If you have experience of using the command line, Git and HTML/CSS, you are free to take the exam right away, without reading the material or doing the exercises. At the start of each section there is a list of learning goals, which will help you determine whether you should read the material or not. Even if you don't read the material, make sure to go through [this page](/departments-systems) as it provides important information about the department's IT systems.
+
+However, if you are not familiar with the tools discussed on this course, go through the material carefully. The course will cover skills you will definitely need in your CS studies and in the working life. There are exercises embedded in the material, and doing them will earn you course points. Read the [grading](/exam) page for more information.
+
+## Assistance
+
+Course uses Telegram channel for remote assistance.
+[Link to Telegram channel](https://t.me/tktlapio)
+
+You are free to ask any questions you have with regards to the exercises, the course, or the exam.
+
+Degrading, discriminatory or offensive language is not allowed, and will result in actions against the commenter.
+
+In addition to Telegram channel, there will be face-to-face assistance available at some point later. <!--You can find timetable [here](/paja) --->
+
+## Tools
+
+The exercises can be done using any Unix-type operating system. In practice, this often refers to a Linux or a MacOS computer. If possible, we recommend doing all exercises, excluding the SSH exercise in part one, to be done using the department's lab computers, which have the University's own Linux distribution, [Cubbli](https://wiki.helsinki.fi/display/it4sci/Cubbli+Linux), installed on them.
+
+If you only have access to a Windows computer, there are several things you can do. Otherwise passing the course doesn't make much sense, as the point is to get to know using Unix-like systems.
+
+### **Windows Subsystem for Linux**
+
+Windows 10 allows for installation of Ubuntu as an application. This way you can get Linux-environment good for this course without trouble.
+
+Installing Windows Subsystem for Linux:
+
+1. Launch [Elevated Powershell](https://www.thewindowsclub.com/how-to-open-an-elevated-powershell-prompt-in-windows-10) and copy to window 
+<br>*Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux*
+<br>(Code installs the feature if it's not yet installed. **NEVER run any code you get online unless you know what it does**)
+2. Install 'Ubuntu' application [From Microsoft Store](https://www.microsoft.com/fi-fi/p/ubuntu/9nblggh4msv6?activetab=pivot%3Aoverviewtab).
+3. Launch Ubuntu application and create user to use in it.
+
+More exact installation guide available [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+
+If using only textbased environment feels too scary or for some other reason you can't or don't want to use Subsystem you can install Ubuntu in VirtualBox instance.
+
+### **VirtualBox**
+
+Before installing VirtualBox, make sure you have at least 512M, preferably 1G of [free RAM](https://www.computerhope.com/issues/ch000149.htm) left on your machine.
+
+Installing VirtualBox
+
+1. Download and install VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads)
+2. Download the desktop image (.iso) of Ubuntu 16.04 [here](http://releases.ubuntu.com/16.04/). The contents of the file .iso are similar to a CD which you would use to install an operating system.
+3. Follow [these](http://www.psychocats.net/ubuntu/virtualbox) instructions in order to create the virtual machine.
+4. Launch the virtual machine from VirtualBox.
+
+Don't be afraid to ask for help, and please give us feedback, if the material can be improved with regards to instructions for Windows users!
+
+## Before you start reading the material
+
+Passing the course on your personal computer might require installing some software. If you don't plan on passing the course on the department's computer labs' computers, make sure you are able to install software on the computer you will be using.
+
+If you are working on a personal computer, you should install [Eduroam](https://www.eduroam.org/what-is-eduroam/), which will grant you a secure access to the Internet while on campus. [Here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/networks/setting-eduroam-installer-package) are the instructions. Note that you can also use it overseas and on mobile devices.
+
+If you are a student at the University of Helsinki, who majors or minors in CS, make sure you have activated your university account according to [these](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/user-account/activating-new-username) instructions and your CS account according to [these ones](https://www.cs.helsinki.fi/en/compfac/user-accounts). It is possible to do the exercises without doing either.
+
+
+## Ohjeita materiaalin lukemiseen
+
+The percentage after an exercise states what is its relative weight of that weeks exercises.
+
+The material is built in a way which allows following along the examples. We recommend doing that.
+
+If you find any errors or typos, you can fork [this](https://github.com/tkt-lapio/tkt-lapio.github.io) project, and create a pull request. If you don't know what either of those mean, they are discussed at the end of the second part.
