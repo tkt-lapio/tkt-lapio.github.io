@@ -3,5 +3,5 @@ _site
 .jekyll-metadata
 .DS_Store
 vendor
-.bundle.vscode
+.bundle
 .vscode
