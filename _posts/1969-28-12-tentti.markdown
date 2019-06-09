@@ -10,7 +10,9 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
 
 <h3>Tentin suorittamisen säännöt:</h3>
 
-- Tentin suorittamisen saa aloittaa missä vain, milloin vain, kunhan tentti on suoritettu ennen 31.5.2019 kello 23:59.
+{%- assign dates = site.data.dates -%}
+- Tentti aukeaa suoritettavaksi Moodlessa {{dates.exam.startdate}} kello {{dates.exam.starttime}}.
+- Tentin suorittamisen saa aloittaa missä vain, milloin vain, kunhan tentti on suoritettu ennen {{dates.exam.enddate}} kello {{dates.exam.endtime}}.
 - Tentin suorittamiseen on kolme (3) tuntia.
 - Opiskelija saa käyttää vapaasti nettiä tentin aikana.
 - Vastausten etsiminen netistä, kuten esimerkiksi foorumeilta tai kurssin materiaalista, on sallittua.
@@ -26,7 +28,7 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
   - alle 9 tenttipistettä: hylätty
   - vähintään 9 tenttipistettä: 3
   - vähintään 17 kurssipistettä: 5
-- Mikäli et pääse tentistä läpi, voit suorittaa sen uudestaan aikaisintaan viikon päästä edellisestä suorituskerrasta, aina 31.5.2019 asti. Suorituskertojen määrälle ei ole ylärajaa.
+- Mikäli et pääse tentistä läpi, voit suorittaa sen uudestaan aikaisintaan viikon päästä edellisestä suorituskerrasta, aina {{dates.exam.enddate}} asti. Suorituskertojen määrälle ei ole ylärajaa.
 - Tentti sisältää yhden ja kahden pisteen tehtäviä.
 - Laskaripisteet merkitään Moodle-alueella jokaiselle osalle erikseen. Älä lähetä laskaripisteitä sähköpostilla, emme ota niitä silloin huomioon. Merkitse laskaripisteet ennen kuin suoritat tentin.
 - Moodle antaa epävirallisen arvosanan kurssipisteiden perusteella Arvioinnit -sivulla. Moodle ei kutienkaan ota huomioon koeleikkuria.

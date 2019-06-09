@@ -1,0 +1,9 @@
+course:
+  startdate: 10.6.2019
+  enddate: 30.6.2019
+
+exam:
+  startdate: 10.6.2019
+  starttime: "00:00"
+  enddate: 30.6.2019
+  endtime: "23:59"
