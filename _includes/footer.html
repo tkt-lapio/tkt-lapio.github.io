@@ -21,6 +21,16 @@
         {%- include social.html -%}
       </div>
 
+    {%- if page.tag == 'material-eng' -%}
+      <div class="footer-col footer-col-3">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+          <img alt="Creative Commons license" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"
+          />
+        </a>
+        <br/> Material is licensed using
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons BY-NC-SA 3.0 license</a>.
+      </div>
+    {%- else -%}
       <div class="footer-col footer-col-3">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
           <img alt="Creative Commons -lisenssi" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"
@@ -29,6 +39,7 @@
         <br/> Materiaali on lisensoitu
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons BY-NC-SA 3.0 -lisenssillä</a>.
       </div>
+    {%- endif -%}
     </div>
 
   </div>

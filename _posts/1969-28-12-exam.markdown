@@ -3,13 +3,16 @@ layout: material
 title: "Exam and grading"
 date: 1969-12-28 00:00:10 +0200
 permalink: "/exam/"
-tag: eng
+tag: info-eng
 ---
 
 One must pass the exam in order to receive a grade from the course. The exam is taken in Moodle, where you log in using your University account.
 
 <h3>Rules in the exam:</h3>
-- Students can start the exam anywhere and anytime they wish, as long as it's done before May 31st 2019 at 23:59.
+
+{%- assign dates = site.data.dates -%}
+- Exam opens in Moodle {{dates.exam.startdate}} at {{dates.exam.endtime}}.
+- Students can start the exam anywhere and anytime they wish, as long as it's done before {{dates.exam.enddate}} at {{dates.exam.endtime}}.
 - You have three (3) hours to pass the exam.
 - Students are allowed to use the internet during the exam.
 - Students are allowed to search for information on the internet and visit for example forums or other similiar resources during the exam.
@@ -26,8 +29,8 @@ One must pass the exam in order to receive a grade from the course. The exam is 
   - 3
   - 5
 - The exam counts for 18 points.
-- 9 points are required to pass the course and 17 points (rounded up) are required for the grade 5.
-- If you don't pass the exam, you can retake it for an unlimited amount of times, until May 31st 2019 at 23:59. There must be a week between each retake.
+- 9 points are required to pass the course and 17 points are required for the grade 5.
+- If you don't pass the exam, you can retake it for an unlimited amount of times, until {{dates.exam.enddate}}. There must be a week between each retake.
 - The exam contains exercises of one and two points.
 - If you have trouble passing the exam please contact the course organizers.
 - Moodle gives you an unofficial grade which you can see in your gradebook.
