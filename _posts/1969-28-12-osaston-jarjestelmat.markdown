@@ -5,6 +5,9 @@ date: 1969-12-28 00:00:00 +0200
 permalink: /osaston-jarjestelmat/
 tag: info
 ---
+<div class="warning">
+    Materiaaleissa puhutaan CS-tunnuksista, jotka ovat todennäköisesti poistumassa jossain vaiheessa. Materiaaleja päivitetään, kun CS-tunnusten tilanne varmistuu. Tehtävien tekemiseen CS-tunnuksia ei tarvita.
+</div>
 
 - Mikäli olet tietojenkäsittelytieteen pää- tai sivuaineopiskelija, aktivoi yliopiston tunnuksesi [täällä](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/uuden-kayttajatunnuksen-aktivointi) ja CS-tunnuksesi seuraavan sivun [ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan.
 

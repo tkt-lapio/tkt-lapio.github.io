@@ -5,6 +5,9 @@ date: 1969-12-28 00:00:05 +0200
 permalink: /departments-systems/
 tag: info-eng
 ---
+<div class="warning">
+    This part of materials mentions CS account, which will probably be removed at some point. Materials will be updated once state of CS accounts become more clear. CS account is not required for any of courses exercises.
+</div>
 
 - If you are a CS major or minor, please activate university account [here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/user-account/activating-new-username) and your CS account according to [these](https://www.cs.helsinki.fi/en/compfac/user-accounts) instructions.
 
