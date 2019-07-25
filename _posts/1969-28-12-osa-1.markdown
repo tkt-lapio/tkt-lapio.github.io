@@ -146,9 +146,13 @@ Komennot voivat vaikuttaa aluksi hieman erikoisesti nimetyiltä, sillä komennot
 
 Komentoriviltä voi selata ja hallinnoida tiedostoja samaan tapaan kuin graafisesta ympäristöstä. Vertaillaan seuraavakasi tiedostohallintaa graafisella ja tekstikäyttöliittymällä.
 
-Avaa graafinen tiedostoselain. Se löytyy Ubuntu-ympäristössä ohjelmana nimeltä "Files" tai kirjoittamalla komentoriville `nautilus` ja painamalla <kbd>ENTER</kbd>. Windowsissa `nautilus` ei toimi. MacOSissa avaa finder, ja paina näppäinyhdistelmää `Shift + Cmd + H`.
+Avaa graafinen tiedostoselain. Se löytyy Ubuntu-ympäristössä ohjelmana nimeltä "Files" tai kirjoittamalla komentoriville `nautilus` ja painamalla <kbd>ENTER</kbd>. Windowsissa nautiluksen sijasta tulee kirjoittaa `explorer.exe`. MacOSissa avaa finder, ja paina näppäinyhdistelmää `Shift + Cmd + H`.
 
 Tiedostoselaimessa tulisi näkyä _kotihakemistosi_. Kotihakemisto tarkoittaa hakemistoa, joka sisältää kaikki tietyn käyttäjän henkilökohtaiset tiedostot ja kansiot. Mikäli olet laitoksen koneella, kotihakemistosi sisältää samat asiat riippumatta siitä millä _fyysisellä_ koneella satut olemaan: tietokoneen sisältö haetaan toisaalta. Jos taas luet materiaalia omalta koneeltasi, kotihakemistossasi on vain ne asiat mitkä sillä fyysisellä koneella on.
+
+<div class="note">
+Jos käytät Windows subsystem for Linuxia (tai Ubuntu -sovellusta) kotihakemistosi ei subsystemin kotihakemisto ole sama, kuin Windowsin kotihakemisto (C:/Users/käyttäjänimi). Huomioi tämä siirtymällä kansioon /mnt/c/Users/käyttäjänimi (cd /mnt/c/Users/käyttäjänimi) kun haluat nähdä Windowsin puolella olevat tiedostosi. Huomioi myös, että kun materiaalissa käytetään hakemistoa ~ tarkoitetaan sillä Linuxin kotihakemistoa.
+</div>
 
 Huomaa, että jos avasit graafisen tiedostoselaimen komentoriviltä, komentorivi jäi ikään kuin lukkoon, ja sillä ei voinut tehdä muuta ellei graafista ohjelmaa suljeta. Voit aina sulkea käynnissä olevan ohjelman painamalla näppäinyhdistelmää <kbd>CTRL + C</kbd>. Joskus kerta ei riitä, ja voit huoletta painaa sitä monta kertaa.
 
@@ -172,6 +176,15 @@ Navigoi _Downloads_-kansioon antamalla komento `cd Downloads`. Kansion nimi tule
 ```bash
 tunnus@tietokone:~/Downloads$
 ```
+
+Windowsilla saatat nähdä sen sijaan:
+
+```
+dir: cannot access 'Downloads': No such file or directory
+tunnus@tietokone:~$ 
+```
+Kokeile tällöin ensin `cd /mnt/c/Users/käyttäjänimi`.
+
 
 `:`-merkin jälkeinen osa kertoo siis aktiivisen kansion. `~` viittaa käyttäjän kotihakemistoon.
 

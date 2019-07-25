@@ -150,9 +150,13 @@ The names of commands are usually abbreviations of english words. "man" stands f
 
 You can browse and manage files using the command line just as in the graphical environment. Let's compare managing files using a graphical and a text user interface.
 
-Open the graphical file browser. In ubuntu, open the application called "Files", or write the command `nautilus` and press <kbd>ENTER</kbd>. `nautilus` won't work in Windows. In MacOS, open finder and press the keys `Shift + Cmd + H`.
+Open the graphical file browser. In ubuntu, open the application called "Files", or write the command `nautilus` and press <kbd>ENTER</kbd>. In Windows write `explorer.exe` instead. In MacOS, open finder and press the keys `Shift + Cmd + H`.
 
 You should now be in your _home folder_. The home folder holds all the personal files and folders of a user. If you are using one of the department's computers, the contents of your home folders are the same regardless of which physical computer you are using. This is because the contents are fetched from elsewhere. If you are using your personal computer, the home folder only includes the files on that physical computer.
+
+<div class="note">
+If using Windows Subsystem for Linux (or Ubuntu application), note that your Linux home is different than Windows home. If you need to access files or folders in your Windows home navigate to /mnt/c/Users/username (using cd /mnt/c/Users/username). Also note that most of the time directory ~ will refer to your Linux home
+</div>
 
 Note that if you opened the graphical file browser using the command line, the shell is "locked", and you can't run any other commands using that window. You can close the currently running program by pressing <kbd>CTRL + C</kbd>. You can press the keys repeatedly if necessary.
 
@@ -166,6 +170,15 @@ Your home folder probably contains a bunch of miscellanous files and folders, li
 user@lcomputers:~$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 ```
+
+When using Windows you might see following instead:
+
+```
+dir: cannot access 'Downloads': No such file or directory
+user@computer:~$ 
+```
+If so, try using `cd /mnt/c/Users/username` first.
+
 
 You'll notice how `ls` lists out all the files and folders in your home folder. You should see the same ones as in the graphical user interface, only in a simpler form.
 
