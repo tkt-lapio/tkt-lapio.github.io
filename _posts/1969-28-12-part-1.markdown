@@ -392,7 +392,7 @@ target toinen.png
 
 <div class="exercise">
 <h3>Exercise 8: Wild cards {% include points.html text="10%" %}</h3>
-Create a file called <i>pictures</i> on the command line, and download a <code>jpg</code> and a <code>png</code> formatted pictures. Then add some text files to the folder, for example <code>i_am_a_file.txt</code> or <code>i_am_not_a_picture.txt</code>. Finally create a folder called <code>pictures</code> and copy all the pictures in the subfolder using wild cards. You can read about other wild cards from <a href="http://www.linfo.org/wildcard.html">here</a> for example.
+Create a folder called <i>pictures</i> on the command line, and download a <code>jpg</code> and a <code>png</code> formatted pictures. Then add some text files to the folder, for example <code>i_am_a_file.txt</code> or <code>i_am_not_a_picture.txt</code>. Finally create a folder called <code>pictures</code> and copy all the pictures in the subfolder using wild cards. You can read about other wild cards from <a href="http://www.linfo.org/wildcard.html">here</a> for example.
 </div>
 
 <h2> Other useful commands</h2>
