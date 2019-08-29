@@ -1,6 +1,7 @@
 course:
   startdate: 10.6.2019
   enddate: 30.6.2019
+  moodle: https://moodle.helsinki.fi/course/view.php?id=34243
 
 exam:
   startdate: 10.6.2019
