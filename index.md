@@ -42,25 +42,25 @@ Tehtävät on mahdollista tehdä millä tahansa Unix-tyyppisellä käyttöjärje
 
 ### **Windows Subsystem for Linux**
 
-Windows 10 -käyttöjärjestelmässä voit asentaa Ubuntun Windowsiin ohjelmistona. Tällöin saat käyttöösi kurssin suorittamiseen soveltuvan Linux-ympäristön ilman suurempia säätöjä. Ubuntu on yksi lukuisista Linux-jakeluversioista (tuttavallisemmin distro),josta muokattua versiota käytetään myös osaston koneilla.
+Windows 10 -käyttöjärjestelmässä voit asentaa Ubuntun Windowsiin ohjelmistona. Tällöin saat käyttöösi kurssin suorittamiseen soveltuvan Linux-ympäristön ilman suurempia säätöjä. Ubuntu on yksi lukuisista Linux-jakeluversioista (tuttavallisemmin distro), josta muokattua versiota käytetään myös osaston koneilla.
 
 Windows Subsystem for Linuxin asennus:
 
 1. Avaa [Powershell järjestelmänvalvojana](https://www.thewindowsclub.com/how-to-open-an-elevated-powershell-prompt-in-windows-10) ja kopioi ilmestyvään tekstikenttään 
 <br>*Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux*
 <br>(Koodi asentaa ominaisuuden mikäli sitä ei ole asennettu. **Älä KOSKAAN suorita vierasta koodia koneellasi, jos et tiedä mitä se tekee**)
-2. Asenna 'Ubuntu' -sovellus [Microsoft Storesta](https://www.microsoft.com/fi-fi/p/ubuntu/9nblggh4msv6?activetab=pivot%3Aoverviewtab).
-3. Käynnistä Ubuntu -sovellus ja luo käyttäjä Ubuntua varten.
+2. Asenna 'Ubuntu'-sovellus [Microsoft Storesta](https://www.microsoft.com/fi-fi/p/ubuntu/9nblggh4msv6?activetab=pivot%3Aoverviewtab).
+3. Käynnistä Ubuntu-sovellus ja luo käyttäjä Ubuntua varten.
 
 Tarkat ohjeet asentamiseen löydät [tästä linkistä](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
-Ohjeisiin saattaa tulla muutoksia, kun Microsoft julkaisee uuden version Windows Subsystem for Linux ohjelmistosta vuoden 2019 loppu puolella.
+Ohjeisiin saattaa tulla muutoksia, kun Microsoft julkaisee uuden version Windows Subsystem for Linux -ohjelmistosta vuoden 2019 loppupuolella.
 
-Jos pelkkä tekstipohjainen käyttöliittymä vaikuttaa pelottavalta voit myös asentaa Ubuntun virtualisoituun ympäristöön käyttäen esimerkiksi alla esiteltyä VirtualBox ohjelmistoa.
+Jos pelkkä tekstipohjainen käyttöliittymä vaikuttaa pelottavalta voit myös asentaa Ubuntun virtualisoituun ympäristöön käyttäen esimerkiksi alla esiteltyä VirtualBox-ohjelmistoa.
 
 ### **VirtualBox**
 
-Varmista ennen asentamista, että sinulla on vähintään 512M, mutta mieluiten 1G [RAM-muistia](https://www.computerhope.com/issues/ch000149.htm) vapaana koneellasi.
+Varmista ennen asentamista, että sinulla on vähintään 512 Mt, mutta mieluiten 1 Gt [RAM-muistia](https://www.computerhope.com/issues/ch000149.htm) vapaana koneellasi.
 
 VirtualBoxin asennus:
 
@@ -75,7 +75,7 @@ Kysy rohkeasti apua, mikäli kohtaat ongelmia, ja ilmoita, mikäli voimme parant
 
 Kurssin suorittaminen vaatii muutaman ohjelman asentamista koneelle. Mikäli et suorita kurssia osaston koneilla, varmista, että sinulla on käyttämääsi järjestelmään asennusoikeus.
 
-Jos teet tehtäviä kotikoneella, ja olet läsnäoleva yliopisto-opiskelija, asenna ensin [Eduroam](https://www.eduroam.org/what-is-eduroam/), jolla pääset internetiin Helsingin yliopiston kampusalueilla. Helpdeskillä on sille [ohjeet](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/eduroam-verkon-asennus-asetustiedoston-avulla). Suosi aina Eduroamia yliopiston toisen verkon, HUPnetin yli. Internetin käyttö Eduroamin yli on turvallisempaa, ja se on saatavilla kampusalueilla myös ulkomailla.
+Jos teet tehtäviä omalla kannettavalla, ja olet läsnäoleva yliopisto-opiskelija, asenna ensin [Eduroam](https://www.eduroam.org/what-is-eduroam/), jolla pääset internetiin Helsingin yliopiston kampusalueilla. Helpdeskillä on sille [ohjeet](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/eduroam-verkon-asennus-asetustiedoston-avulla). Suosi aina Eduroamia yliopiston toisen verkon, HUPnetin yli. Internetin käyttö Eduroamin yli on turvallisempaa, ja se on saatavilla kampusalueilla myös ulkomailla.
 
 **Mikäli olet tietojenkäsittelytieteen pää- tai sivuaineopiskelija, aktivoi yliopiston tunnuksesi [täällä](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/uuden-kayttajatunnuksen-aktivointi) ja CS-tunnuksesi seuraavan sivun [ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan ennen materiaalin lukemista.** Tehtävät on mahdollista tehdä ilman tietojenkäsittelytieteen käyttölupaa, mutta tulet todennäköisesti tarvitsemaan sitä tulevaisuudessa. Joulun aikaan yliopiston järjestelmissä on katko, jolloin käyttöluvan aktivointi ei onnistu. Voit silloin tehdä silti tehtävät, ja aktivoida tunnuksen myöhemmin. 
 
