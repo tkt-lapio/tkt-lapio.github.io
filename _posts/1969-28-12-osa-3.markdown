@@ -577,7 +577,7 @@ Toisaalta sisennyksen (_padding_) lisääminen siirtää käytännössä `contai
 
 `Padding`, `margin` ja monille muille CSS-ominaisuuksille voi antaa arvoja eri tavoin ja eri mittayksiköillä. Käydään nämä tavat läpi käyttäen esimerkkinä `margin`-ominaisuutta. Muiden ominaisuuksien kanssa `margin`-sana vain vaihtuu ko. ominaisuuden nimitykseksi.
 
-Elementille voidaan lisätä marginaalia neljään eri kohtaan: sen _päälle_ (top), _oikealle_ puoelle (right), _vasemmalle_ puolelle (left) sekä _alapuolelle_ (bottom). CSS:lle määritellään eri kohtien arvot juuri tässä järjestyksessä. On myös mahdollista määrittää usealle kohdalle samat arvot seuraavan logiikan mukaan:
+Elementille voidaan lisätä marginaalia neljään eri kohtaan: sen _päälle_ (top), _oikealle_ puolelle (right), _vasemmalle_ puolelle (left) sekä _alapuolelle_ (bottom). CSS:lle määritellään eri kohtien arvot juuri tässä järjestyksessä. On myös mahdollista määrittää usealle kohdalle samat arvot seuraavan logiikan mukaan:
 
 ```css
 .container {
