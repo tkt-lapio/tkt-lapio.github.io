@@ -847,13 +847,13 @@ However, a regular user can run commands with the privileges of a superuser, if 
 
 <h2>Installing</h2>
 
-The world is filled with different programs designed for the command line. The easiest way to install command line tools is with a package manager. Probaboly the most common ones are Apt (Linux) and Homebrew (MacOS).
+The world is filled with different programs designed for the command line. The easiest way to install command line tools is with a package manager. Probably the most common ones are Apt (Linux) and Homebrew (MacOS).
 
-In Ubuntu and Cubbli (the version of Linux used in the department's systems) should have Apt (or a very similiar program called apt-get) installed by default. In MacOS you'll have to install Homebrew [yourself](https://brew.sh/). You can find instructions on how to use apt from [here](https://help.ubuntu.com/lts/serverguide/apt.html.en) for example. **Using a package manager is highly recommended.**
+Ubuntu and Cubbli (the version of Linux used in the department's systems) should have Apt (or a very similiar program called apt-get) installed by default. In MacOS you'll have to install Homebrew [yourself](https://brew.sh/). You can find instructions on how to use apt from [here](https://help.ubuntu.com/lts/serverguide/apt.html.en) for example. **Using a package manager is highly recommended.**
 
 The simplest way of using a package manager is by using the command `install`, and giving it the name of the desired program as an argument.
 
-For example here is how you could install the command line text editor `nano`:
+For example, here is how you could install the command line text editor `nano`:
 
 With Homebrew:
 
@@ -873,7 +873,7 @@ One can also update and remove packages using a package manager.  In order to up
 
 Installing, updating and removing packages via a package manager usually required sudo privileges. Then `sudo` should be appended before the command.
 
-It is also possible to install programs without package manager. This is much more tedious, and for example involves defining _environment variables_, such as `PATH`. Environment variables define the execution environment of the system. In practice this means defining values for some system wide variables. The [PATH variable]((<https://en.wikipedia.org/wiki/PATH_(variable)>)) defines where all runnable programs are located. This enables using a simple command for running them on the command line instead of writing out the specific location of the executable program. You can read more about environment variables from [here]((https://www.tutorialspoint.com/unix/unix-environment.htm)) for example.
+It is also possible to install programs without package manager. This is much more tedious, and involves, for example, defining _environment variables_, such as `PATH`. Environment variables define the execution environment of the system. In practice this means defining values for some system wide variables. The [PATH variable]((<https://en.wikipedia.org/wiki/PATH_(variable)>)) defines where all runnable programs are located. This enables using a simple command for running them on the command line instead of writing out the specific location of the executable program. You can read more about environment variables from [here]((https://www.tutorialspoint.com/unix/unix-environment.htm)) for example.
 
 The system's environment can be defined using scripts so that it doesn't have to be redefined with every new session. One of the scripts used for this is `~/.bashrc`, which in Linux is run each time a new terminal window is opened. Another one is `~/.bash_profile`, which is run on each log in. Thus `~/.bashrc` is where the PATH variable is usually defined. In MacOs the default terminal program runs `~/.bash_profile` on each new terminal window instead of `~/.bashrc`. You can read more about the differences of these two scripts [here](https://www.tutorialspoint.com/unix/unix-environment.htm).
 
