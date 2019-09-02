@@ -28,7 +28,7 @@ Mikäli käytät yliopiston palvelimia SSH-yhteyden yli, on yksityinen avain yli
 
 - Osaston tunnuksen myötä saa yliopiston ad-kotihakemiston lisäksi CS-kotihakemiston. CS-kotihakemisto sijaitsee polussa `/cs/home/<käyttäjätunnus>`. Pääset CS-kotihakemistoon samasta järjestelmästä, jossa ad-kotihakemisto sijaitsee. CS-kotihakemiston avulla on esimerkiksi mahdollista luoda itselleen laitoksen kotisivu osoitteeseen `https://www.cs.helsinki.fi/u/omatunnus/`. HTML-sivu luodaan polkuun `/cs/home/tunnus/public_html/index.html` (saatat joutua luomaan kansion `public_html`).
 
-- Osastolla on myös laskentaklusteri nimeltään [Ukko](https://www.cs.helsinki.fi/tietotekniikka/laskentaklusteri-ukko).
+- Osastolla on myös laskentaklusterit nimeltään [Ukko2](https://wiki.helsinki.fi/display/it4sci/Ukko2+User+Guide) sekä [Kale](https://wiki.helsinki.fi/display/it4sci/Kale+User+Guide). Pääsy klustereille on rajoitettu henkilökunnalle sekä erillisiä käyttöoikeuksia pyytäneille.
 
 - Älä aja laitoksen järjestelmissä sudo-komentoja. Siitä lähtee ylläpidolle väärinkäyttöilmoitus.
 
