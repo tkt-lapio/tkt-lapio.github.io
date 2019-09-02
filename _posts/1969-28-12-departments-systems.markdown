@@ -27,7 +27,7 @@ If you use the department's servers over SSH connection and have added your priv
 
 - In addition to the AD home folder, you get a CS home folder located in `/cs/home/your_username`, accessible from the departments systems. You can publish your own home page to https://www.cs.helsinki.fi/u/your_account_name by creating an HTML file to `/cs/home/tunnus/public_html/index.html`.
 
-- The departments also has a cluster called [Ukko](https://www.cs.helsinki.fi/en/compfac/high-performance-cluster-ukko).
+- The departments also has computing cluster called [Ukko2](https://wiki.helsinki.fi/display/it4sci/Ukko2+User+Guide) and [Kale](https://wiki.helsinki.fi/display/it4sci/Kale+User+Guide). Access to these clusters is limited to the department staff and those who have applied for separate access right.
 
 - Do not run sudo commands in the CS department's systems. Such behaviour is logged as malicious.
 
