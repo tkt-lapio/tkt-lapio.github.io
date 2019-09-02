@@ -741,7 +741,7 @@ The symbols desribing the permissions is built using the following components:
 - g = users belonging to the group of the file
 - o = all other users
 
-If the recipent of permissions is not defined, the permissions are given to all user groups (owner, group and others).
+If the recipient of permissions is not defined, the permissions are given to all user groups (owner, group and others).
 
 The dash symbol `-` removes a permission and the plus sign`+` gives a permission.
 
@@ -797,7 +797,7 @@ Be careful with permissions! Giving too loose permissions is a security threat. 
 
 <h2>Scripts</h2>
 
-Scripts are files containing code which can be run on the command line. They are used primarly for automating tasks, which can be tedious to do manually. A script can be run by writing it's path on the command line. When in the same folder with the script it can be run with the command `./script_name`.
+Scripts are files containing code which can be run on the command line. They are used primarily for automating tasks, which can be tedious to do manually. A script can be run by writing it's path on the command line. When in the same folder with the script it can be run with the command `./script_name`.
 
 There are different programming languages for writing scripts. One of them is called  [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>). It is the default interpreter in Unix systems, which means that you can run scripts written in Bash in Linux and MacOS commnd lines by default. Bash scripts should be started with a special line: `#!/bin/bash`. This string is called a shebang and it tells the system with which language the script should be interpreted as. The extension for script files is usually `.sh`.
 
