@@ -48,7 +48,7 @@ Git on eräs versionhallintatyökalu. Tässä osassa käsitellään Gitin ja sii
 
 Gitin on luonut Helsingin yliopiston tietojenkäsittelytieteen laitoksella 90-luvulla opiskellut Linus Torvalds. Torvalds tunnetaan luultavasti paremmin Linux-kernelin kehittäjänä, joka toimii "sydämenä" monille erittäin suosituille käyttöjärjestelmille, kuten Googlen [Androidille](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Lähes kaikissa osaston koneissa on Linux-käyttöjärjestelmä. Torvalds kehitti Gitin nimenomaan omiin tarpeisiinsa koodatessaan Linux-kerneliä: hän tarvitsi työkalun, jolla voi säilyttää eri versioita omasta koodistaan, sekä jakaa sitä muiden kehitykseen osallistuneiden kanssa.
 
-GitHub on myöhemmin kehitetty palvelu, jonka avulla voidaan säilyttää ja julkaista Git-projekteja. GitHubiin verrannollisia palveluita on useita, kuten esimerkiksi [GitLab](https://about.gitlab.com/). Laitoksellamme GitHubin käyttö on kuitenkin yleisempää, siksi tämä osa käsittelee GitHubia.
+GitHub on myöhemmin kehitetty palvelu, jonka avulla voidaan säilyttää ja julkaista Git-projekteja. GitHubiin verrannollisia palveluita on useita, kuten esimerkiksi [GitLab](https://about.gitlab.com/) sekä yliopiston oma GitLab-asennus osoitteessa https://version.helsinki.fi/. Laitoksellamme GitHubin käyttö on kuitenkin yleisempää, siksi tämä osa käsittelee GitHubia.
 
 Gittiä ja GitHubia käytetään yliopistolla yksilö- ja ryhmätöissä, sekä yleisesti työelämässä. Niiden käyttö ei rajoitu pelkästään koodiin, vaan moni pitää esimerkiksi kandinsa tai maisterinsa Gitissä. Tässä osassa keskitytään lähinnä koodin jakamiseen Gitin avulla GitHubissa, ja siinä usein kohdattuihin ongelmiin. Lisää Gitistä oppii esimerkiksi kursseilla Ohjelmistotekniikka ja Ohjelmistotuotanto.
 
