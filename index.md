@@ -26,7 +26,7 @@ Tehtäviä tekemällä ansaitsee laskaripisteitä, jotka lasketaan mukaan kurssi
 Kurssilla on käytössä sähköinen tukikanava, joka sijaitsee Telegramissa.
 - <a href="https://t.me/tktlapio">Liittymislinkki Telegram-ryhmään</a>
 
-Tukikanavalla saa esittää mitä tahansa kurssiin liittyviä kysymksiä. Kurssikavereiden auttaminen on suotavaa.
+Tukikanavalla saa esittää mitä tahansa kurssiin liittyviä kysymyksiä. Kurssikavereiden auttaminen on suotavaa.
 
 Syrjiviä tai asiattomia kommentteja ei sallita, ja niiden esittäjä poistetaan kanavalta.
 
