@@ -212,6 +212,8 @@ You can mark this exercise as done after you've gone through the previous exampl
 Create a folder named "lapio" in your home folder. Make sure you created the folder correctly by checking the output of <code>ls</code>.
 </div>
 
+<h2>Tips for using the command line more efficiently</h2>
+
 If you're used to using the graphical file browser, you're probably wondering how slow and inefficient using the command line must be. It is naturally a question of custom, but there's also one feature on the command line, which makes writing commands a lot faster: tab completion. With the tab key you can automatically complete filenames and sometimes even commands, depending on the program.
 
 Let's try tab completion. Nagivate to your home folder. First, write down `cd D` and press the tab key (located above <kbd>CAPS LOCK</kbd>) a couple of times. All the directories starting with the letter "D" should be printed to the command line, including at least `Downloads` and `Documents`.
@@ -303,7 +305,7 @@ cat2.jpg
 ```
 
 <div class="note">
-<strong>Remember to use tab completion when writing paths!</strong> In addition, the command line shows you the path of the current folder with respect to your home folder. This makes it easier to navigate and write paths in the command line.
+<strong>Remember to use tab completion when writing paths!</strong> Always check if you can complete the next component of the path automatically before writing it yourself. In addition, the command line shows you the path of the current folder with respect to your home folder. This makes it easier to navigate and write paths in the command line.
 </div>
 
 <div class="exercise">
@@ -325,6 +327,8 @@ First create the <code>school</code> folder and move inside it. Then create the 
 You can create a text file by opening it in a text editor and saving, or with the command <code>touch</code>.</p>
 
 Make sure you've created all the proper files and folders with <code>ls</code>.
+
+Remember to use tab completion!
 </div>
 
 
