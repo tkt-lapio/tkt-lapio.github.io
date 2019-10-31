@@ -444,7 +444,7 @@ Luokkaselektorin käyttö edellyttää, että HTML-dokumenttia muokataan. Valitu
 
 Tarkastellaan esimerkiksi, miten osia tekstistä voidaan värittää keltaiseksi.
 
-Tässä on pala HTML-dokumentista, josta haluamme värittää kesäiset rivit punaisiksi. Tämä tapahtuu antamalla halutuille riveille luokkamääreen "kesa", jonka perusteella antaa niille värikkään tyylin.
+Tässä on pala HTML-dokumentista, josta haluamme värittää kesäiset rivit keltaisiksi. Tämä tapahtuu antamalla halutuille riveille luokkamääreen "kesa", jonka perusteella antaa niille värikkään tyylin.
 
 ```html
 <p>
