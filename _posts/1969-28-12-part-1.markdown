@@ -633,7 +633,7 @@ In order not to rewrite the passoword each time you want to log in, you might wa
 
 ```
 # make sure the agent is ready
-eval `ssh-agent`
+eval $(ssh-agent -s)
 # assuming you are using the default path
 # otherwise provide the path to the private key
 ssh-add
