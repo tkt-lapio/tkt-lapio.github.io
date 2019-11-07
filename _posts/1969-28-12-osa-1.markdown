@@ -208,7 +208,9 @@ Voit merkata tämän tehtävän tehdyksi, kun olet käynyt läpi alun esimerkin 
  Luo komentoriviltä kansio nimeltä "lapio" kotihakemistoosi. Varmista että loit kansion komennolla <code>ls</code>.
 </div>
 
-Jos olet tottunut käyttämään graafista käyttöliittymää, mietit luultavasti nyt, miten hidasta ja raskasta komentorivin käyttäminen varmasti on. Kyseessä on luonnollisesti tottumiskysymys, mutta sen lisäksi komentorivillä on olemassa kirjoittamista nopeuttava seikka: tab-täydennys. Tab-täydennys täydentää nykyisen kansion tiedostojen nimiä parametreiksi sekä (joskus, ohjelmasta riippuen) ohjelmien komentoja.
+<h2>Komentorivin käyttöä nopeuttavia seikkoja</h2>
+
+Jos olet tottunut käyttämään graafista käyttöliittymää, mietit luultavasti nyt, miten hidasta ja raskasta komentorivin käyttäminen varmasti on. Kyseessä on luonnollisesti tottumiskysymys, mutta sen lisäksi komentorivillä on olemassa kirjoittamista nopeuttava seikka: tab-täydennys. Tab-täydennys osaa täydentää esimerkiksi tiedostojen nimiä parametreiksi sekä (joskus, ohjelmasta riippuen) ohjelmien komentoja.
 
 Kokeile tab-täydennystä kirjoittamalla kotihakemistossa `cd D`, ja painamalla sen jälkeen tabular-näppäintä (löytyy näppämistöstä caps-lockin yläpuolelta) pari kertaa. Terminaaliin tulostuu kaikki kotihakemiston D-kirjaimella alkavat hakemistot, ainakin siis "Downloads" ja "Documents". Oletetaan, että haluat siirtyä Downloads-kansioon. Tällöin riittää kirjoittaa cd-komennon parametriksi vain `Dow` ja painaa tab-näppäintä, jonka jälkeen Downloads-kansion nimi täydennetään komennon parametriksi (olettaen että kotihakemistossasi ei ole mitään muuta kansiota, jonka nimi alkaisi merkkijonolla `Dow`).
 
@@ -300,6 +302,11 @@ kissa2.jpg
 Muista, että komentorivi näyttää sinulle koko ajan nykyisen kansiosi polun suhteessa kotihakemistoosi. Tämä helpottaa tiedostojen seassa navigointia ja polkujen kirjoittamista.
 </div>
 
+<div class="note">
+Muista käyttää tab-taydennystä! Kokeile aina ennen kuin kirjoitat kokonaisen kansion tai tiedostonnimen, pystytkö täydentämään nimen suoraan painamalla tab-näppäintä.
+</div>
+
+
 <div class="exercise">
 <h3>Tehtävä 5: Tiedostonhallinnan harjoittelu 1 {% include points.html text="5%" %}</h3>
 
@@ -345,6 +352,7 @@ Kun olet luonut alkutilanteen, muuta se komennoilla <code>mv</code> ja <code>cp<
 Huomaa, että kiusallinen kirjoitusvirhe tiedoston <code>kmntorivi.txt</code> nimessä on korjattu. Tiedosto <code>javasta.txt</code> on uudelleennimetty ja siirretty kansioon <code>ohpe</code>.
 <img src="/assets/lapio_goal.png" alt="Lopputilanne"/>
 
+Muista käyttää tab-täydennystä!
 </div>
 
 <div class="exercise">
