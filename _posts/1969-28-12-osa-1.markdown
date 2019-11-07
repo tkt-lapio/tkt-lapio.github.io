@@ -589,7 +589,7 @@ Jotta et joudu kirjoittamaan salasanaa joka kerralla, kannattaa yksityinen avain
 
 ```
 # varmistetaan, että ssh-agentti on toimintavalmiudessa
-eval `ssh-agent`
+eval $(ssh-agent -s)
 # olettaen, ettet muuttanut yksityisen avaimen polkua sitä luodessasi
 # muuten anna argumentiksi yksityisen avaimen polku
 ssh-add

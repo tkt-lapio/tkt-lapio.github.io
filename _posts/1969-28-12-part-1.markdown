@@ -625,15 +625,15 @@ It's also a good idea to see how <code>scp</code> works if the target file doesn
 </i>
 </div>
 
-The copying of the public file can also be delegated to the command [ssh-copy-id](https://www.ssh.com/ssh/copy-id).
+Copying the public key file can also be delegated to the command [ssh-copy-id](https://www.ssh.com/ssh/copy-id).
 
 The authentication works correctly, when creating an SSH connection you can login using the password set for the SSH key pair.
 
-In order not to rewrite the passoword each time you want to log in, you might want to add the password to an ssh agent. Then the password has to only be written once you've logged out of the system. This can happen using two commands.
+In order not to rewrite the passoword each time you want to log in, you might want to add the password to the ssh agent. Having done that, the password has to only be written once you've logged out of the system. This can be done using two commands.
 
 ```
 # make sure the agent is ready
-eval `ssh-agent`
+eval $(ssh-agent -s)
 # assuming you are using the default path
 # otherwise provide the path to the private key
 ssh-add
@@ -642,7 +642,7 @@ ssh-add
 <div class="exercise">
 <h3>Exercise 11: SSH connection {% include points.html text="10%" %}</h3>
 
-Create an SSH key pair on your computer. Then enable logging in to the department's servers with the key when establishing an SSH connection. Then test out the key pair. 
+Create an SSH key pair on your computer. Then enable logging in to the department's servers with the key when establishing an SSH connection. Finally test out the key pair. 
 
 If possible, do this using other than the department's computers. If you don't have access to the department's servers, i.e. you do not have a university account, you can mark the exercise done after generating the SSH key pair.
 
