@@ -32,11 +32,7 @@ One must pass the exam in order to receive a grade from the course. The exam is 
 - 9 points are required to pass the course and 17 points are required for the grade 5.
 - If you don't pass the exam, you can retake it for an unlimited amount of times, until {{dates.exam.enddate}}. There must be a week between each retake.
 - The exam contains exercises of one and two points.
-- If you have trouble passing the exam please contact the course organizers.
-- Moodle gives you an unofficial grade which you can see in your gradebook.
-- The grades are marked after each month. It will take a while before you can see your grade in Weboodi.
-- The grade distribution is published in Moodle after each month.
-- You can earn up to 6 additional points by writing short essays about the subjects covered. Please contact the course organizers for instructions.
+- Moodle gives you an unofficial grade which you can see in your gradebook. This unofficial grade might be incorrect if you score under 9 points in exam.
 
 <h3>Subjects covered in the exam</h3>
 
