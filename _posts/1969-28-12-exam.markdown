@@ -10,9 +10,9 @@ One must pass the exam in order to receive a grade from the course. The exam is 
 
 <h3>Rules in the exam:</h3>
 
-{%- assign dates = site.data.dates -%}
-- Exam opens in Moodle {{dates.exam.startdate}} at {{dates.exam.endtime}}.
-- Students can start the exam anywhere and anytime they wish, as long as it's done before {{dates.exam.enddate}} at {{dates.exam.endtime}}.
+{%- assign data = site.data.data -%}
+- Exam opens in Moodle {{data.exam.startdate}} at {{data.exam.endtime}}.
+- Students can start the exam anywhere and anytime they wish, as long as it's done before {{data.exam.enddate}} at {{data.exam.endtime}}.
 - You have three (3) hours to pass the exam.
 - Students are allowed to use the internet during the exam.
 - Students are allowed to search for information on the internet and visit for example forums or other similiar resources during the exam.
@@ -30,7 +30,7 @@ One must pass the exam in order to receive a grade from the course. The exam is 
   - 5
 - The exam counts for 18 points.
 - 9 points are required to pass the course and 17 points are required for the grade 5.
-- If you don't pass the exam, you can retake it for an unlimited amount of times, until {{dates.exam.enddate}}. There must be a week between each retake.
+- If you don't pass the exam, you can retake it for an unlimited amount of times, until {{data.exam.enddate}}. There must be a week between each retake.
 - The exam contains exercises of one and two points.
 - Moodle gives you an unofficial grade which you can see in your gradebook. This unofficial grade might be incorrect if you score under 9 points in exam.
 

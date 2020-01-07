@@ -5,7 +5,7 @@
 layout: home
 list_title: Materiaali
 ---
-{%- assign course = site.data.dates.course -%}
+{%- assign course = site.data.data.course -%}
 
 <h3>A link to the English page is in the upper right corner</h3>
 
