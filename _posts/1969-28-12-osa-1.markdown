@@ -452,9 +452,9 @@ Etsiessäsi tietoa netistä komennoista ja niiden toiminnoista, varmista aina, e
 
 Edellä mainitut ovat tärkeitä komentoja komentorivillä työskentelijän arsenaalissa, mutta niiden hyöty tulee kunnolla esille vasta kun ne yhdistetään muihin komentoihin. Komentorivillä komentojen yhdistäminen tapahtuu yleensä joko putkella `|`, tai nuolella `>`. Tarkastellaan seuraavaksi näitä operaattoreita.
 
-Putki siirtää eteenpäin ensimmäisen komennon tulosteen toiselle komennolle. Esimerkiksi `ls` komennon näyttämistä tiedostonnimistä voi helposti hakea `grep`illä tiettyä tiedostoa putken avulla:
+Putki uudelleenohjaa ensimmäisen komennon tulosteen syötteeksi toiselle komennolle. Esimerkiksi `ls` komennon näyttämistä tiedostonnimistä voi helposti hakea `grep`illä tiettyä tiedostoa putken avulla:
 
-```
+```bash
 tunnus@hal9000:~/esimerkki$ ls
 esimerkki.txt muistio2.txt muistio.txt
 tunnus@hal9000:~/esimerkki$ ls | grep muistio
@@ -464,9 +464,9 @@ muistio.txt
 
 Esimerkissä siis `ls`-komennon tulostus ohjattiin putken avulla edelleen komennolle `grep`. Ilman `|`-komentoa, ensimmäisen komennon tulostus olisi pitänyt ensin kirjoittaa tiedostoon ja sen jälkeen lukea ja filtteröidä `grep`illä. Komentoa `grep` käyttäen tulosteen pystyi suoraan jakamaan komentojen välillä.
 
-Joskus voi kuitenkin olla hyödyllistä kirjoittaa tuloste tiedostoon esimerkiksi tallennusta varten, sillä terminaalin tulosteita voi selata taaksepäin vain rajallisen määrän. Tähän tarkoitukseen sopiva operaattori on nuoli oikealle `>`, joka siirtää komennon tulosteen _tiedostoon_. Esimerkiksi `ls > listaus.txt` siirtää tiedostolistauksen `listaus.txt`-nimiseen tiedostoon, luoden kyseisen tiedoston jos sitä ei ole jo olemassa.
+Joskus voi kuitenkin olla hyödyllistä kirjoittaa tuloste tiedostoon esimerkiksi tallennusta varten, sillä terminaalin tulosteita voi selata taaksepäin vain rajallisen määrän. Tähän tarkoitukseen sopiva operaattori on nuoli oikealle `>`, joka uudelleenohjaa komennon tulosteen _tiedostoon_. Esimerkiksi `ls > listaus.txt` uudelleenohjaa tiedostolistauksen `listaus.txt`-nimiseen tiedostoon, luoden kyseisen tiedoston jos sitä ei ole jo olemassa.
 
-Samoin operaattorin `<` avulla voidaan antaa tiedoston sisältö syötteenä ohjelmalle. Tämä on hyödyllistä käsiteltäessä suuria syötteitä, tai automatisoidessa tehtäviä.
+Samoin operaattorin `<` avulla voidaan antaa tiedoston sisältö syötteenä ohjelmalle. Tämä on hyödyllistä käsiteltäessä suuria syötteitä, tai tehtäviä automatisoitaessa.
 
 
 <div class="note">
