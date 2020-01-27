@@ -650,6 +650,7 @@ On jälleen aika hengähtää ja pitää tauko. Anna mielesi levätä, ennen kui
 
 Lisää Gitistä voi lukea esimerkiksi seuraavista lähteistä:
 
+- [Visual Git Guide](https://marklodato.github.io/visual-git-guide/index-en.html) Visuaalinen esitys Git:istä ja sen komennoista. Havainnollistaa hyvin mitä eroa on indeksillä, työhakemistolla ja commiteilla (historia)
 - <a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a>
   - Pro Git Book on kohtuullisen raskas, mutta erittäin kattava dokumentaatio Gitistä. Kannattaa käyttää yksittäisen asian opiskelemiseen, kokonaan läpi rämpiminen voi olla turhan pitkäveteinen operaatio.
 - <a href="http://ohshitgit.com/">http://ohshitgit.com/</a>
