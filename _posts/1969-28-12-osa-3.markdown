@@ -699,7 +699,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 
 `line-height` voi säätää tekstien rivien välistä etäisyyttä. Tämä ominaisuus vaikuttaa vain tekstiin. Anna tälle arvot pikseleinä tai prosentteina.
 
-`font-family` kertoo, millaista kirjaisinta (eli fonttia) käytetään.
+`font-family` kertoo, millaista kirjasinta (eli fonttia) käytetään.
 
 `font-size` kertoo, kuinka suurta tekstiä näytetään. Käytä tämän kanssa `px` tai `em` arvoja.
 
