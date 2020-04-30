@@ -136,7 +136,7 @@ Note that if you want to give a command an argument containing spaces, it has to
 ls "i am a badly named file"
 ```
 
-tai
+or
 
 ```
 ls 'i am a badly named file'
@@ -256,7 +256,7 @@ Note that the file you created with notepad has been created as a Windows user. 
 Find out how the text editor <code>nano</code> works by using Google or the <code>man</code> command. Make sure you know how to do at least the following things:
 
 <ul>
-<li> Sainvg a file without closing nano</li>
+<li> Saving a file without closing nano</li>
 <li> Copying and pasteing in nano</li>
 </ul>
 
