@@ -95,7 +95,7 @@ Windowsissa vaihda nanon paikalle <code>notepad</code>.
 
 ## Git-projektin aloittaminen
 
-Projekti on kansio, joka sisältää jotain tiedostoja. Näissä tiedostoissa voi esimerkiki olla koodia niin, että yhdessä projekti muodostaa monimutkaisen ongelman. Kansiosta saa luotua Git-projektin ajamalla komennon `git init` kyseisen kansion sisällä. Näin on tehtävä, jotta kansion sisällä voi ajaa git-komentoja. Seurauksena kansioon syntyy alikansio `.git`, johon git säilöö tietoa kyseisestä projektista.
+Projekti on kansio, joka sisältää jotain tiedostoja. Näissä tiedostoissa voi esimerkiksi olla koodia niin, että yhdessä projekti muodostaa monimutkaisen ongelman. Kansiosta saa luotua Git-projektin ajamalla komennon `git init` kyseisen kansion sisällä. Näin on tehtävä, jotta kansion sisällä voi ajaa git-komentoja. Seurauksena kansioon syntyy alikansio `.git`, johon git säilöö tietoa kyseisestä projektista.
 
 ### Commitit
 
