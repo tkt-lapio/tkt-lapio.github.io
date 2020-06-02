@@ -329,7 +329,7 @@ HTML-dokumentit voivat sisältää hyperlinkkejä toisiin HTML-dokumentteihin. L
 <a href="https://yle.fi/uutiset">Ylen uutissivusto</a>
 ```
 
-Linkkielementti sisältää `href`-attribuutin, jossa on osoite linkattavaan kohteeseen. Jos linkattava kohde sijaitsee toisella palvelimella, kirjoitetaan palvelimen osoite olla kokonaisuudessaan `href`-elementin perään. Jos dokumentti sijaitsee samalla palvelimella, voi hrefissä olla suora relatiivinen polku tiedostoon. `href="toinen.html"`.
+Linkkielementti sisältää `href`-attribuutin, jossa on osoite linkattavaan kohteeseen. Jos linkattava kohde sijaitsee toisella palvelimella, kirjoitetaan palvelimen osoite kokonaisuudessaan `href`-elementin perään. Jos dokumentti sijaitsee samalla palvelimella, voi hrefissä olla suora relatiivinen polku tiedostoon. `href="toinen.html"`.
 
 Linkille voi myös antaa myös `target`-attribuutin, jonka `_blank`-arvolla voi pakottaa linkin aukeamaan toisella välilehdellä. Lisää linkin attribuuteista voi lukea [täältä](https://www.w3schools.com/tags/tag_a.asp).
 

@@ -623,7 +623,7 @@ Jatkossa, kun aloitat uuden Git-projektin, on olemassa kaksi vaihtoehtoa etärep
 
 Jotta kloonaamaansa repositorioon tekemänsä muutokset voi puskea takaisin etärepositorioon, projektin omistajan tulee [lisätä kloonaaja projektin kehittäjäksi](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/). Muussa tapauksessa komento `git push` ei onnistu. Yhteisissä koodiprojekteissa voidaan siis luoda Git-projekti, jonka etärepositoriossa kaikki osallistujat ovat kehittäjinä, jolloin kaikki voivat vapaasti lisätä projektiin koodia.
 
-On kuitenkin myös toinen tapa ehdottaa muutoksia olemassaolevaan projektiin: _fork_. Kun forkkaa projektin, kopio siitä lisätään käyttäjän omaksi repositorioksi hänen omaan profiiliiinsa. Tästä tulee ilmoitus GitHubin "feediin", ja projektin omistaja voi nähdä, kuka on forkannut projektin. Kun olet forkannut projektin, voit kloonata oman kopiosi koneellesi tavalliseen tapaan _omasta profiilistasi_, ja puskea muuutoksia _omaan kopioosi_.
+On kuitenkin myös toinen tapa ehdottaa muutoksia olemassaolevaan projektiin: _fork_. Kun forkkaa projektin, kopio siitä lisätään käyttäjän omaksi repositorioksi hänen omaan profiiliiinsa. Tästä tulee ilmoitus GitHubin "feediin", ja projektin omistaja voi nähdä, kuka on forkannut projektin. Kun olet forkannut projektin, voit kloonata oman kopiosi koneellesi tavalliseen tapaan _omasta profiilistasi_, ja puskea muutoksia _omaan kopioosi_.
 
 Jos oman kopioosi tekemäsi muutokset ovat mielestäsi niin hyviä, että haluat ehdottaa niitä myös alkuperäiseen projektiin, sen voi tehdä [pull requestin](https://help.github.com/articles/about-pull-requests/) avulla. Tällöin alkuperäisen projektin omistaja voi halutessaan liittää mergen avulla muutoksesi projektiinsa.
 
