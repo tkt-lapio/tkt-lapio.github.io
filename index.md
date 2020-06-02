@@ -55,8 +55,6 @@ Windows Subsystem for Linuxin asennus:
 
 Tarkat ohjeet asentamiseen löydät [tästä linkistä](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
-Ohjeisiin saattaa tulla muutoksia, kun Microsoft julkaisee uuden version Windows Subsystem for Linux -ohjelmistosta vuoden 2019 loppupuolella.
-
 Jos pelkkä tekstipohjainen käyttöliittymä vaikuttaa pelottavalta voit myös asentaa Ubuntun virtualisoituun ympäristöön käyttäen esimerkiksi alla esiteltyä VirtualBox-ohjelmistoa.
 
 ### **VirtualBox**
