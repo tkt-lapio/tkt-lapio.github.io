@@ -205,7 +205,7 @@ Voit merkata tämän tehtävän tehdyksi, kun olet käynyt läpi alun esimerkin 
 
 <div class="exercise">
 <h3>Tehtävä 2: Kansion luominen {% include points.html text="5%" %}</h3>
- Luo komentoriviltä kansio nimeltä "lapio" kotihakemistoosi. Varmista että loit kansion komennolla <code>mkdir</code>.
+ Luo komentoriviltä kansio nimeltä "lapio" kotihakemistoosi. Kun olet luonut kansion tarkista että se on luotu komennolla <code>ls</code>
 </div>
 
 <h2>Komentorivin käyttöä nopeuttavia seikkoja</h2>
