@@ -907,7 +907,7 @@ Now we have built a website, which is accessible to anyone using the Internet.
 <div class="note">
 <strong>For university students:</strong>
 <p>
-Students who are currently enrolled at the University of Helsinki are given some server space to run their own static wevsites. The website can be published by adding the required documents to the user's CS home folder in the path <code>/cs/home/username/public_html/</code>. The website will be published to the following address: <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code>.
+Students who are currently enrolled at the University of Helsinki are given some server space to run their own static websites. The website can be published by adding the required documents to the user's CS home folder in the path <code>/cs/home/username/public_html/</code>. The website will be published to the following address: <code>http://www.cs.helsinki.fi/u/your_username/</code>.
 </p>
 <p>In practice, here are instructions on publishing the website:</p>
 

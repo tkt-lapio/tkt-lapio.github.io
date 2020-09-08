@@ -38,7 +38,7 @@ StackOverflow is a forum named after an error message, and created as a support 
 
 ## Use the proper Google search syntax.
 
-Google actually supports a variety of different search operators. Using a hyphen ("-") in front of a word will filter out irrelevatn words. For example, if you are searching for something related to the programming language Python, (and your search is history is not filled with programming related searches), it might be a good idea to search for "python -snake" for optimal results. If you want to search for a specific sentence, use quotation marks around it. You can find more info [here](https://support.google.com/websearch/answer/2466433).
+Google actually supports a variety of different search operators. Using a hyphen ("-") in front of a word will filter out irrelevant words. For example, if you are searching for something related to the programming language Python, (and your search is history is not filled with programming related searches), it might be a good idea to search for "python -snake" for optimal results. If you want to search for a specific sentence, use quotation marks around it. You can find more info [here](https://support.google.com/websearch/answer/2466433).
 
 ## Make use of error messages.
 
