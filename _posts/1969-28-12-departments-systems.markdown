@@ -13,7 +13,7 @@ tag: info-eng
 
 - The university offers its students two ways for wireless internet connection: Eduroam and HUPnet. You can also get guest access to HUPnet. HUPnet is not secured, so we heavily recommend using Eduroam. You can also access it in some campus sites overseas. Instructions on installing Eduroam are found [here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/networks/setting-eduroam-installer-package). You can also install it on your mobile device: [Android](https://helpdesk.it.helsinki.fi/en/instructions/computer-and-printing/mobile-devices/eduroam-on-android-devices) and [iPhone](https://helpdesk.it.helsinki.fi/en/instructions/computer-and-printing/mobile-devices/ipad-and-iphone-wireless-connections).
 
-- The CS departmens offers several servers for accessing your personal university AD home folder. Login using your university account.
+- The CS department offers several servers for accessing your personal university AD home folder. Login using your university account.
 
   - melkki.cs.helsinki.fi
   - melkinpaasi.cs.helsinki.fi
@@ -25,7 +25,7 @@ tag: info-eng
 If you use the department's servers over SSH connection and have added your private key to an SSH-agent, according to university regulations you have to secure the private key with a password.
 </div>
 
-- In addition to the AD home folder, you get a CS home folder located in `/cs/home/your_username`, accessible from the departments systems. You can publish your own home page to https://www.cs.helsinki.fi/u/your_account_name by creating an HTML file to `/cs/home/tunnus/public_html/index.html`.
+- In addition to the AD home folder, you get a CS home folder located in `/cs/home/your_username`, accessible from the departments systems. You can publish your own home page to https://www.cs.helsinki.fi/u/your_account_name by creating an HTML file to `/cs/home/your_username/public_html/index.html`.
 
 - The departments also has computing cluster called [Ukko2](https://wiki.helsinki.fi/display/it4sci/Ukko2+User+Guide) and [Kale](https://wiki.helsinki.fi/display/it4sci/Kale+User+Guide). Access to these clusters is limited to the department staff and those who have applied for separate access right.
 

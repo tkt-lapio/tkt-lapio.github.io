@@ -15,7 +15,7 @@ One must pass the exam in order to receive a grade from the course. The exam is 
 - Students can start the exam anywhere and anytime they wish, as long as it's done before {{data.exam.enddate}} at {{data.exam.endtime}}.
 - You have three (3) hours to pass the exam.
 - Students are allowed to use the internet during the exam.
-- Students are allowed to search for information on the internet and visit for example forums or other similiar resources during the exam.
+- Students are allowed to search for information on the internet and visit for example forums or other similar resources during the exam.
 - Students can also test out any commands they wish: actually this is highly recommended and sometimes even necessary. Make sure you pass the exam in a Unix-like environment or Windows' bash shell.
 - The exam must be taken alone. Students are not allowed to work together during the exam. Asking for help from a course assistant or any other person directly or indirectly is strictly forbidden. Students also must not use others' answers as their own. All such acts are perceived as cheating and will have consequences.
 - The computer you pass the exam on has to have Git installed.

@@ -164,7 +164,7 @@ Note that if you opened the graphical file browser using the command line, the s
 Because the combination <kbd>CTRL + C</kbd> has a special meaning on the command line, in Linux you will have to use <kbd>CTRL + SHIFT + C</kbd> to copy selected text and <kbd>CTRL + SHIFT + V</kbd> to paste.
 </div>
 
-Your home folder probably contains a bunch of miscellanous files and folders, like _Downloads_ and _Documents_. Open the command line in order to see the same folders on the text-based interface. You can do this by writing `ls` on the command line and pressing <kbd>ENTER</kbd>. The output should something like this:
+Your home folder probably contains a bunch of miscellaneous files and folders, like _Downloads_ and _Documents_. Open the command line in order to see the same folders on the text-based interface. You can do this by writing `ls` on the command line and pressing <kbd>ENTER</kbd>. The output should something like this:
 
 ```bash
 user@lcomputers:~$ ls
@@ -216,7 +216,7 @@ Create a folder named "lapio" in your home folder. Make sure you created the fol
 
 If you're used to using the graphical file browser, you're probably wondering how slow and inefficient using the command line must be. It is naturally a question of custom, but there's also one feature on the command line, which makes writing commands a lot faster: tab completion. With the tab key you can automatically complete filenames and sometimes even commands, depending on the program.
 
-Let's try tab completion. Nagivate to your home folder. First, write down `cd D` and press the tab key (located above <kbd>CAPS LOCK</kbd>) a couple of times. All the directories starting with the letter "D" should be printed to the command line, including at least `Downloads` and `Documents`.
+Let's try tab completion. Navigate to your home folder. First, write down `cd D` and press the tab key (located above <kbd>CAPS LOCK</kbd>) a couple of times. All the directories starting with the letter "D" should be printed to the command line, including at least `Downloads` and `Documents`.
 
 Let's assume that you want to move to the `Downloads` folder. It suffices to write down "Dow", and press the tab key, and the rest of the folder name will be completed to the command line (assuming that there are no other folders starting with "Dow" in your home folder).
 
@@ -257,7 +257,7 @@ Find out how the text editor <code>nano</code> works by using Google or the <cod
 
 <ul>
 <li> Saving a file without closing nano</li>
-<li> Copying and pasteing in nano</li>
+<li> Copying and pasting in nano</li>
 </ul>
 
 Test out the procedures in practice! For example, open a file <code>example.txt</code>, add some text into it and save without closing. Then open the file using another text editor to make sure that the contents were saved.
@@ -334,11 +334,11 @@ Remember to use tab completion!
 
 <h2> Moving and renaming files</h2>
 
-In a graphical environment copying is done with the key combination <kbd>CTRL + C</kbd>, cutting with <kbd> CTRL + X</kbd> and pasteing is done with <kbd>CTRL + V</kbd>. Let's see how these three procedures can be done using the command line.
+In a graphical environment copying is done with the key combination <kbd>CTRL + C</kbd>, cutting with <kbd> CTRL + X</kbd> and pasting is done with <kbd>CTRL + V</kbd>. Let's see how these three procedures can be done using the command line.
 
 Copying is done using the command `cp` (<b>c</b>o<b>p</b>y). It takes the path to the file to be copied and the target path as arguments. For example, `cp example.txt example2.txt` copies the file `example.txt` as a file called `example2.txt` in the current folder. Paths also allow you to move files between folders. Running `cp example.txt ~/Documents/example2.txt` moves the file `example.txt` to the `Documents` folder and renames it to `example2.txt`. Giving an existing folder as the second argument copies the file without changing its name: `cp example.txt ~/Documents/` copies the file to `Documents` and keeps the name as `example.txt`.
 
-Files and folders can be moved with the command `mv` (<b>m</b>o<b>v</b>e). The command works in a very similiar way to `cp`, except that the original file is deleted from the system after copying it. This corresponds to the "cutting" feature in a graphical user interface. One can also rename files using `mv`: if the second argument points to the same folder as the first one, the result is a renamed file.
+Files and folders can be moved with the command `mv` (<b>m</b>o<b>v</b>e). The command works in a very similar way to `cp`, except that the original file is deleted from the system after copying it. This corresponds to the "cutting" feature in a graphical user interface. One can also rename files using `mv`: if the second argument points to the same folder as the first one, the result is a renamed file.
 
 
 Examples of using `mv`:
@@ -383,7 +383,7 @@ Files can be removed with the command <code>rm</code> (<b>r</b>e<b>m</b>ove).
 
 <h2> Wild cards</h2>
 
-_Wild cards_ allow one to perform operations on several files at the same time. Their use is supported by almost all commands in the Unix environment, unlcuding `mv` and `cp`. Perhaps the most common wild card, the asterisk `*` corresponds to any amount of any given symbol. It can be used at any point of a string. For example the command `mv *.txt example/` moves all the files in the current directory ending with `.txt` to a folder caller `example`. Similarly `mv test* tests/` would move all the files starting with `test` to a  folder called `tests`.
+_Wild cards_ allow one to perform operations on several files at the same time. Their use is supported by almost all commands in the Unix environment, including `mv` and `cp`. Perhaps the most common wild card, the asterisk `*` corresponds to any amount of any given symbol. It can be used at any point of a string. For example the command `mv *.txt example/` moves all the files in the current directory ending with `.txt` to a folder caller `example`. Similarly `mv test* tests/` would move all the files starting with `test` to a  folder called `tests`.
 
 
 ```bash
@@ -423,7 +423,7 @@ i am
 
 In the above example we gave 1 as an argument for the flag `-n`.
 
-It is also possible to search for specific lines in a file. This can be done with the commans `grep` (search <b>g</b>lobally for a <b>r</b>egular <b>e</b>xpression and <b>p</b>rint). The command `grep` allows you to filter out specific lines from a file based on some criteria. By default `grep` returns all the **lines** which contain the exact string given as an argument. Here is an example demonstrating the basic functionality of grep:
+It is also possible to search for specific lines in a file. This can be done with the command `grep` (search <b>g</b>lobally for a <b>r</b>egular <b>e</b>xpression and <b>p</b>rint). The command `grep` allows you to filter out specific lines from a file based on some criteria. By default `grep` returns all the **lines** which contain the exact string given as an argument. Here is an example demonstrating the basic functionality of grep:
 
 ```
 user@hal9000:~/example$ cat diary.txt
@@ -444,7 +444,7 @@ Today was a good day. I was appointed the secretary of my student association.
 I won't be secretive, I'm so happy!
 ```
 
-Note that the filtering also included occurences inside another string. In most environments grep also highlights the found words with red:
+Note that the filtering also included occurrences inside another string. In most environments grep also highlights the found words with red:
 ![grep-example](/assets/secret.png){:class="img-responsive"}
 
 <div class="exercise">
@@ -454,7 +454,7 @@ By default <code>grep</code> is case sensitive, which means that it treats "a" a
 <ul>
 <li>Take a look at the output of <code>grep --help</code> or grep's <code>man</code> page, and find out how you can make grep ignore case.</li>
 
-<li>Find out (using Google for example) how you can only match occurences which are at the beginning of a line. Make sure you understood how to do this, by practicing using the command on the command line. You can for example write the following to a file:</li>
+<li>Find out (using Google for example) how you can only match occurrences which are at the beginning of a line. Make sure you understood how to do this, by practicing using the command on the command line. You can for example write the following to a file:</li>
 </ul>
 <pre>
 Unix
@@ -535,7 +535,7 @@ Then separate the menu of this week to its own file <code>unicafe.txt</code>. Yo
 
 <h2> SSH connection</h2>
 
-Up until now we have used the command line to run programs in the local file system. However, it is also possible to connect to another system using the command line. SSH is an encrypted connection protocol, which allows logging in to another computer using the command line. An encrypted connection means that infromation is not shared in a human readable plain text form. The goal is to make sure that only the intended recipients can decrypt messages and read their contents.
+Up until now we have used the command line to run programs in the local file system. However, it is also possible to connect to another system using the command line. SSH is an encrypted connection protocol, which allows logging in to another computer using the command line. An encrypted connection means that information is not shared in a human readable plain text form. The goal is to make sure that only the intended recipients can decrypt messages and read their contents.
 
 In a Unix environment an SSH connection can be established with the command `ssh`. Its basic functionality is the following: `ssh user@server.address` connects to a server at `server.address` and tries to login as `user`. The user is asked their password, and if authentication is successful, a connection is opened. The working directory is changed to the remote server on the command line, and one can run commands as in the local environment, except the commands are run in the remote system where one just connected.
 
@@ -546,7 +546,7 @@ The department of computer science has four different servers for remote connect
 3.  shell.cs.helsinki.fi
 4.  melkinkari.cs.helsinki.fi
 
-All these servers direct the user to the same, personal home directory, which you can acces using all the computers at the department.
+All these servers direct the user to the same, personal home directory, which you can access using all the computers at the department.
 
 Let's use the `ssh` command to create a connection to the department's servers:
 
@@ -633,7 +633,7 @@ Copying the public key file can also be delegated to the command [ssh-copy-id](h
 
 The authentication works correctly, when creating an SSH connection you can login using the password set for the SSH key pair.
 
-In order not to rewrite the passoword each time you want to log in, you might want to add the password to the ssh agent. Having done that, the password has to only be written once you've logged out of the system. This can be done using two commands.
+In order not to rewrite the password each time you want to log in, you might want to add the password to the ssh agent. Having done that, the password has to only be written once you've logged out of the system. This can be done using two commands:
 
 ```
 # make sure the agent is ready
@@ -695,14 +695,14 @@ The goal of this exercise is to count how many lines of the Wikipedia article ab
 <li>Search online how you can count the lines of a file using the command line. Count the number of lines in the file you created.</li>
 </ol>
 
-If you wish, you can do the same exercise without writing anyting to a separate file in between.
+If you wish, you can do the same exercise without writing anything to a separate file in between.
 </div>
 
 <h2> Permissions</h2>
 
 In Unix-like systems, the ability to read, edit and execute files and folders is controlled with permissions. This is especially useful in systems used by several users, such as the one at our department.
 
-The _Read_ permission allows the user to read the contents of a file. A user with the permission to _write_ can edit a file. The permission to _execute_ means that if the file is a program for example, the user can run it. Execute permissions are also required in order to move inside a folder with `cd`. If a user doesn't have the necessary persmission, usually the error `Permission denied` is printed out.
+The _Read_ permission allows the user to read the contents of a file. A user with the permission to _write_ can edit a file. The permission to _execute_ means that if the file is a program for example, the user can run it. Execute permissions are also required in order to move inside a folder with `cd`. If a user doesn't have the necessary permission, usually the error `Permission denied` is printed out.
 
 Each file and folder has their own permissions. In addition, they all have an owner. The user who created the file is the owner by default, but ownership can also be transferred.
 
@@ -853,7 +853,7 @@ However, a regular user can run commands with the privileges of a superuser, if 
 
 The world is filled with different programs designed for the command line. The easiest way to install command line tools is with a package manager. Probably the most common ones are Apt (Linux) and Homebrew (MacOS).
 
-Ubuntu and Cubbli (the version of Linux used in the department's systems) should have Apt (or a very similiar program called apt-get) installed by default. In MacOS you'll have to install Homebrew [yourself](https://brew.sh/). You can find instructions on how to use apt from [here](https://help.ubuntu.com/lts/serverguide/apt.html.en) for example. **Using a package manager is highly recommended.**
+Ubuntu and Cubbli (the version of Linux used in the department's systems) should have Apt (or a very similar program called apt-get) installed by default. In MacOS you'll have to install Homebrew [yourself](https://brew.sh/). You can find instructions on how to use apt from [here](https://help.ubuntu.com/lts/serverguide/apt.html.en) for example. **Using a package manager is highly recommended.**
 
 The simplest way of using a package manager is by using the command `install`, and giving it the name of the desired program as an argument.
 

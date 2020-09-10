@@ -50,7 +50,7 @@ Gitin on luonut Helsingin yliopiston tietojenkäsittelytieteen laitoksella 90-lu
 
 GitHub on myöhemmin kehitetty palvelu, jonka avulla voidaan säilyttää ja julkaista Git-projekteja. GitHubiin verrannollisia palveluita on useita, kuten esimerkiksi [GitLab](https://about.gitlab.com/) sekä yliopiston oma GitLab-asennus osoitteessa https://version.helsinki.fi/. Laitoksellamme GitHubin käyttö on kuitenkin yleisempää, siksi tämä osa käsittelee GitHubia.
 
-Gittiä ja GitHubia käytetään yliopistolla yksilö- ja ryhmätöissä, sekä yleisesti työelämässä. Niiden käyttö ei rajoitu pelkästään koodiin, vaan moni pitää esimerkiksi kandinsa tai maisterinsa Gitissä. Tässä osassa keskitytään lähinnä koodin jakamiseen Gitin avulla GitHubissa, ja siinä usein kohdattuihin ongelmiin. Lisää Gitistä oppii esimerkiksi kursseilla Ohjelmistotekniikka ja Ohjelmistotuotanto.
+Gittiä ja GitHubia käytetään yliopistolla yksilö- ja ryhmätöissä, sekä yleisesti työelämässä. Niiden käyttö ei rajoitu pelkästään koodiin, vaan moni pitää esimerkiksi kandinsa tai gradunsa Gitissä. Tässä osassa keskitytään lähinnä koodin jakamiseen Gitin avulla GitHubissa, ja siinä usein kohdattuihin ongelmiin. Lisää Gitistä oppii esimerkiksi kursseilla Ohjelmistotekniikka ja Ohjelmistotuotanto.
 
 <div class="exercise">
 <h3>Tehtävä 1: Github-tunnuksen luonti {% include points.html text="5%" %}</h3>

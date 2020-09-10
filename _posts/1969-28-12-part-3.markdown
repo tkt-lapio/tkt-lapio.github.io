@@ -37,7 +37,7 @@ You will need a proper text editor in this part of the course. We recommend usin
 <h3>Exercise 1: Setting up {% include points.html text="5%" %}</h3>
 <ol>
 <li>Create a Git project called "lapio-website" using the command line.</li>
-<li>Create a new reposiotry to GitHub with the same name.</li>
+<li>Create a new repository to GitHub with the same name.</li>
 <li>Add the newly created repository as a remote of the local project.</li>
 <li>Add a file called <code>index.html</code> to the project, and copy the code from <a href="https://github.com/tkt-lapio/lapio-tehtavamateriaalia/blob/master/w3-ex1/index.html">here</a> inside. You don't need to understand the contents of the file yet.</li>
 <li>Create a new commit with the message <code>Osa 3. First exercise</code> and push it to GitHub.</li>
@@ -174,17 +174,17 @@ Next we'll break down the contents of the previous document element by element.
 
 1.  `<!DOCTYPE html>`: This tag specifies which type of HTML the document is written in, i.e. the rules which the document follows. This way the browser can interpret the HTML properly. The type of HTML used in this course is HTML5. In this case, the first row of an HTML document should always be `<!DOCTYPE html>`.
 2.  `<html></html>`: This tag builds the block element containing all the code of the site. It is sometimes referred to as the root element. It is always the first element of an HTML document.
-3.  `<head></head>`: This block element contains metadata, or infromation about the website not shown to the user in the browser. The element may contain for example key words which improving the site's visibility for search engines, or links to CSS files. 
+3.  `<head></head>`: This block element contains metadata, or information about the website not shown to the user in the browser. The element may contain for example key words which improving the site's visibility for search engines, or links to CSS files. 
 4.  `<meta charset="utf-8">`: This element defines which character set the HTML document uses. UTF-8 is recommended as it can also handle nordic letters.
 5.  `<title></title>`: This elements defines the title of the website. You can usually see the title in the browser as the name of the tab of the website. In addition, sites are bookmarked using their title.
 6.  `<body></body>`: This block element comprises all the content of the actual webpage, such as text, pictures, and all the elements we have discussed up to this point.
 
 # Indenting
 
-An HTML document must be indentend properly in order to make sure the code is readable and clear. Here are some rules you should follow when indenting HTML code:
+An HTML document must be indented properly in order to make sure the code is readable and clear. Here are some rules you should follow when indenting HTML code:
 
 1. Don't add empty lines without a good reason. For example, if `<h1></h1>` is the primary heading and there's an element built with `<p></p>` underneath, you don't need to add an empty line between them.
-2. Alwats indent block elements with two spaces with respect to the previous block.
+2. Always indent block elements with two spaces with respect to the previous block.
 3. Don't indent inline elements.
 
 **Here is an example of a poorly indented HTML document:**
@@ -348,7 +348,7 @@ HTML documents can include hyperlinks to other HTML documents. Just like images,
 <a href="https://yle.fi/uutiset/osasto/news/">Yle news</a>
 ```
 
-The link element has an `href` attriibute, which defines the address of the linked resource. If the linked resource is located on another server, the server address should be written in its entirety. However, if the linked document is located on the same server, one can use a relative path, by for example writing `href="page2.html"`.
+The link element has an `href` attribute, which defines the address of the linked resource. If the linked resource is located on another server, the server address should be written in its entirety. However, if the linked document is located on the same server, one can use a relative path, by for example writing `href="page2.html"`.
 
 The `a` tag has several other attributes as well. For example the attribute `target="_blank"` would force the browser to open the resource in a new tab. You can learn more about the different attributes [here](https://www.w3schools.com/tags/tag_a.asp).
 
@@ -375,7 +375,7 @@ p {
 }
 ```
 
-CSS consists primarly of two sections: _selectors_ and _properties_. Selectors define the elements the styles should be applied to, and the properties describe the styles themselves. In the example above, the lone letter `p` is the selector. A selector is always followed by a block, outlined with `{}`, where the desired styles are defined. In the example, `color: green` is a CSS property. Properties are usually defined using key-value pairs.
+CSS consists primarily of two sections: _selectors_ and _properties_. Selectors define the elements the styles should be applied to, and the properties describe the styles themselves. In the example above, the lone letter `p` is the selector. A selector is always followed by a block, outlined with `{}`, where the desired styles are defined. In the example, `color: green` is a CSS property. Properties are usually defined using key-value pairs.
 
 # Linking CSS
 
@@ -408,7 +408,7 @@ There are also other ways of adding styles besides linking a whole CSS file with
 
 **Inline CSS**
 
-Inlince CSS is a good way of defining the styles of individual elements. In practice, the styles are added directly to the `style` attribute of the desired elements. However, the method isn't very scalable, and shouldn't be used on any even slightly complicated sites.
+Inline CSS is a good way of defining the styles of individual elements. In practice, the styles are added directly to the `style` attribute of the desired elements. However, the method isn't very scalable, and shouldn't be used on any even slightly complicated sites.
 
 ```html
 <h1 style="color:yellow;">This is a yellow heading</h1>
@@ -459,7 +459,7 @@ would color all the elements defined with `<p></p>` as blue. Any HTML tag, such 
 
 **Class selectors**
 
-In order to use a class selector, one must first make alterations to the elements one wishes to style. The elements should be added a _class_, which is an atrribute defined by the user. These elements can then be matched with the class selector, regardless of the type of the element tag. The name of the class selector can be defined freely, but it should naturally be something descriptive.
+In order to use a class selector, one must first make alterations to the elements one wishes to style. The elements should be added a _class_, which is an attribute defined by the user. These elements can then be matched with the class selector, regardless of the type of the element tag. The name of the class selector can be defined freely, but it should naturally be something descriptive.
 
 Here is an example, where we will color all the lines containing the word "yellow" with the color yellow.
 
@@ -484,7 +484,7 @@ One can also give one element several classes. They should then be separated wit
   <p class="yellow last-line">or actually just the yellow ones.</p>
 ```
 
-Note how the class selector is preceeded by a dot `.` in the CSS. This specifies, that it's a class selector. Without the dot the selector would refer to a tag called "yellow".
+Note how the class selector is preceded by a dot `.` in the CSS. This specifies, that it's a class selector. Without the dot the selector would refer to a tag called "yellow".
 
 The class selector is possibly the type of selector the most widely used. It overrides the changes made with type selectors, in case the styles of an element have been defined using both. In other words, if in the above example you had also defined a style for all `p` tags, the desired lines would still appear as yellow, as the class selector is given more emphasis.
 
@@ -564,7 +564,7 @@ Here are two snippets of HTML and CSS code, linked together:
 
 ![An example of height and width](/assets/html-example-1.png)
 
-We notice that the CSS above created a red rectangle around the `p` element. This is due to the fact that we explicitly defined the size, i.e. the widht and the height of the `div` element, which contains the element with the actual text you see on the website.
+We notice that the CSS above created a red rectangle around the `p` element. This is due to the fact that we explicitly defined the size, i.e. the width and the height of the `div` element, which contains the element with the actual text you see on the website.
 
 Other useful CSS properties for changing the appearance of a website are `padding` and `margin`. In practice, they add some space to the _inside_ or the _outside_ of an element, respectively, according to the following logic:
 
@@ -751,7 +751,7 @@ There exists an immense amount of different kinds of CSS properties designed for
 </ol>
 </div>
 
-# How to improve readibility using CSS
+# How to improve readability using CSS
 
 The styles you created in the previous example would be rather uncomfortable to use in real life. Next we'll see how CSS properties can be used to make sites more clear an easy to use. We'll use a piece of text, which might be familiar to you:
 
@@ -798,7 +798,7 @@ body {
 }
 ```
 
-One common reason why text on a computer screen might look a bit awkawrd is because the lines don't have enough space around them. We'll add more height to the `body` tag's lines, and also add the whole element some space with `padding`. In addition, we'll push the title further from the top.
+One common reason why text on a computer screen might look a bit awkward is because the lines don't have enough space around them. We'll add more height to the `body` tag's lines, and also add the whole element some space with `padding`. In addition, we'll push the title further from the top.
 
 ```css
 body {
@@ -812,9 +812,9 @@ h1 {
 }
 ```
 
-![HTML page with added space arount text](/assets/html-readibilty-3.png)
+![HTML page with added space around text](/assets/html-readibilty-3.png)
 
-This is a huge improvement in the readibility of the page, but there still is some work to do. One way to make the text easier to read is by slightly reducing the contrast between the text and its background. In general, it is a good idea to make black text on a white page a little grey, in order to make the text less harsh to read. Furthermore, this allows accentuating the headings by coloring them darker.
+This is a huge improvement in the readability of the page, but there still is some work to do. One way to make the text easier to read is by slightly reducing the contrast between the text and its background. In general, it is a good idea to make black text on a white page a little grey, in order to make the text less harsh to read. Furthermore, this allows accentuating the headings by coloring them darker.
 
 ```
 body {
@@ -847,7 +847,7 @@ The page now looks significantly better, at least compared to the original appea
 <div class="exercise">
 <h3>Exercise 11: Making a site readable with CSS {% include points.html text="10%" %}</h3>
 <ol>
-<li>Make the example website more readable accoring to the instructions above. You need a large body of text for the exercise. You can for example use the text from this tutorial, or any other text you are allowed to use.</li>
+<li>Make the example website more readable according to the instructions above. You need a large body of text for the exercise. You can for example use the text from this tutorial, or any other text you are allowed to use.</li>
 <li>Test out as many properties and principles as you can think of. There is no single right solution.</li>
 <li>When you are done in your opinion, create a commit with the message <code>Part 3, eleventh exercise</code> and push it to GitHub.</li>
 </ol>
@@ -907,7 +907,7 @@ Now we have built a website, which is accessible to anyone using the Internet.
 <div class="note">
 <strong>For university students:</strong>
 <p>
-Students who are currently enrolled at the University of Helsinki are given some server space to run their own static wevsites. The website can be published by adding the required documents to the user's CS home folder in the path <code>/cs/home/username/public_html/</code>. The website will be published to the following address: <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code>.
+Students who are currently enrolled at the University of Helsinki are given some server space to run their own static websites. The website can be published by adding the required documents to the user's CS home folder in the path <code>/cs/home/username/public_html/</code>. The website will be published to the following address: <code>http://www.cs.helsinki.fi/u/your_username/</code>.
 </p>
 <p>In practice, here are instructions on publishing the website:</p>
 
@@ -938,7 +938,7 @@ Students who are currently enrolled at the University of Helsinki are given some
 
 ## The end
 
-This is the end of the last part of the course. You should now have a basic understanding about the command line, Git and HTML/CSS. This knowledge will certaily deepen during your studies, as these are all important tools for a computer scientist.
+This is the end of the last part of the course. You should now have a basic understanding about the command line, Git and HTML/CSS. This knowledge will certainly deepen during your studies, as these are all important tools for a computer scientist.
 
 Remember that HTML and CSS are both very versatile, and it may take a considerable amount of time to truly understand them. If you are especially interested in web development, or more specifically, [front-end development](https://en.wikipedia.org/wiki/Front-end_web_development), it's a good idea to spend some time on learning HTML and CSS. 
 
@@ -946,7 +946,7 @@ Here are some useful links for learning more about the subject:
 
 - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a>
-  - The HTML and CSS documentation made by Mozilla is a comprehensice guide to the principles of both languages.
+  - The HTML and CSS documentation made by Mozilla is a comprehensive guide to the principles of both languages.
 - The Internet is also filled with questions about both languages, as they are so widely used. Don't be afraid to ask Google if you have any questions, as it is likely that you are not the first one.
 
 ## The end of the course

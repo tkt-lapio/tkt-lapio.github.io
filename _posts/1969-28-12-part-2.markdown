@@ -55,7 +55,7 @@ Git was initiated by Linus Torvalds, who studied at the department of Computer S
 
 Torvalds started developing Git for his own needs when coding the Linux kernel. He needed a tool for storing different versions of his own code and sharing it with other people.
 
-GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similiar to GitHub, such as [GitLab](https://about.gitlab.com/), however, this part deals with using GitHub as it is more popular in our department.
+GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similar to GitHub, such as [GitLab](https://about.gitlab.com/), however, this part deals with using GitHub as it is more popular in our department.
 
 Git and GitHub are used in solo as well as collaborative projects at University and in the industry. It's usage isn't limited only to code, and many people like to for example backup their thesis using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
 
@@ -63,7 +63,7 @@ Git and GitHub are used in solo as well as collaborative projects at University 
 <div class="exercise">
 <h3>Exercise 1: Creating a GitHub account {% include points.html text="5%" %}</h3>
 
-Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
+Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code portfolio, so make sure to choose a username which you don't mind adding to your CV.
 
 <br><br>
 Git should be already installed on the department's computers and Ubuntu. If this is not the case, you can install it according to these  <a href="https://git-scm.com/downloads" >instructions</a>, or using a <a href="/command-line#installing">package manager</a>.  We'll learn how to use the command line client of Git.
@@ -110,7 +110,7 @@ You can think of a commit as a step towards a finished project. Every commit add
 
 Let's go through how a commit is created. First, the changes one wants to include in the commit are added to the _staging_ state. When all the desired changes are in staging, the commit is wrapped together, sealing all the changes together. 
 
-The command `git status` will turn out to be very useful in the process of creating commits, as it gives information avout the current state of the project and all the files inside it.
+The command `git status` will turn out to be very useful in the process of creating commits, as it gives information about the current state of the project and all the files inside it.
 
 Let's create a Git project folder, and add an empty file called `lapio_w2.txt` inside. You can do this with the command `touch` for example. When a new file is added to a fresh Git project, `git status` will print the following:
 
@@ -130,7 +130,7 @@ Next we'll take a closer look on the output of `git status`.
 
 Changes can be added to the next commit by running `git add`. The command requires one argument, that is the path to the file containing the changes one wishes to move to staging and consequently include in the next commit. Before a file has been added to Git, it is under `Untracked files`. This also means that the changes inside that file will not be added to the next commit.
 
-Now let's add the changes in the file we created earler by running `git add lapio_w2.txt`. Then we'll insert some text into the file with `echo "this is the second part of lapio" >> lapio_w2.txt`. Then we'll run `git status`:
+Now let's add the changes in the file we created earlier by running `git add lapio_w2.txt`. Then we'll insert some text into the file with `echo "this is the second part of lapio" >> lapio_w2.txt`. Then we'll run `git status`:
 
 ```bash
 On branch master
@@ -175,7 +175,7 @@ The first title is called `Changes to be committed.` The changes under this titl
 
 Finally `Untracked files` contains all the files which are unknown to Git, meaning that the changes inside them are not being followed. For example, Git cannot distinguish what sort of changes have been done to the untracked files. In consequence, the changes are not being added to the next commit.
 
-You probably noticed that the file `lapio_w2` is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file `lapio_w2` was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file `lapio_w2` was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of `git status` is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example `new file`, `modified`, `deleted`).
+You probably noticed that the file `lapio_w2` is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file `lapio_w2` was created. Only after adding the change to Git was some text inserted into the file. Thus only the change where the file `lapio_w2` was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of `git status` is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example `new file`, `modified`, `deleted`).
 
 Changes can also be cancelled with Git. Adding some text to `lapio_w2.txt` could be cancelled by running `git checkout -- lapio_w2.txt`. The file will be empty after running the command because the command cancelled the change which added some text into `lapio_w2.txt`. In conclusion, the command `git checkout --` enables cancelling changes in tracked files.
 
@@ -222,7 +222,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-The changes which were commited are no longer visible in the output. However, they are not lost, they have just been moved to the commit. You can view the commits of a project with the command `git log`:
+The changes which were committed are no longer visible in the output. However, they are not lost, they have just been moved to the commit. You can view the commits of a project with the command `git log`:
 
 ```
 commit 51bf544c786a671c28f70713b6cb33d87cc38
@@ -235,7 +235,7 @@ Date:
 The command `git log` outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of `git log` the id can be seen as a long string next to the word "commit", which is `51bf544c786a671c28f70713b6cb33d87cc38` in this case.
 
 <div class="note">
-The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be commited</code>  is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
+The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be committed</code>  is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper around the changes to create a commit.
 </div>
 
 ### Branches
@@ -265,8 +265,8 @@ If you see the following message when creating a commit <code>error: cannot run 
 <div class="exercise">
 <h3>Exercise 4: Removing changes {% include points.html text="10%" %}</h3>
 <ol>
-<li>Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be commited</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.</li>
-<li>Add some new products to the shopping list, and add them to the next commit (so that they are under <code>Changes to be commited</code>). <strong>Don't create the commit yet.</strong></li>
+<li>Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be committed</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.</li>
+<li>Add some new products to the shopping list, and add them to the next commit (so that they are under <code>Changes to be committed</code>). <strong>Don't create the commit yet.</strong></li>
 <li>Then remove the changes from the next commit.</li>
 <li>Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.</li>
 </ol>
@@ -288,11 +288,11 @@ You can create a repository to GitHub by pressing the button on the upper right 
 
 A window will open where you can add the repository a name and a description. A repository can be public or private: a public repository can be accessed by anyone, whereas a private repository can only be seen by people chosen by the owner.
 
-You can also create a _README_, a _license_ and a _.gitignore_ file when creating a repository. The point of a README file is to display useful information about the project. A good README contains, for example, a short description of the project, installing instructions and a link to the documentation. A license refers to a document stating the responsabilities and rights of the creator and the users of the project. The `.gitignore` file allows automatically ignoring some files when creating a commit, and it is often quite useful. You can read more about it
+You can also create a _README_, a _license_ and a _.gitignore_ file when creating a repository. The point of a README file is to display useful information about the project. A good README contains, for example, a short description of the project, installing instructions and a link to the documentation. A license refers to a document stating the responsibilities and rights of the creator and the users of the project. The `.gitignore` file allows automatically ignoring some files when creating a commit, and it is often quite useful. You can read more about it
 [here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
 
 <div class="note">
-When you wish to update a pre-existing project to GitHub, it is not a good idea to let GitHub create files such as a README automatically. This will lead to problems, because GiHub contains files initially which are not found in the local project. You'll learn more about these kinds of situations later in this part.
+When you wish to update a pre-existing project to GitHub, it is not a good idea to let GitHub create files such as a README automatically. This will lead to problems, because GitHub contains files initially which are not found in the local project. You'll learn more about these kinds of situations later in this part.
 </div>
 
 The button `Create repository` adds the project to your personal account. When you navigate to the empty project, you can see some useful instructions about adding a new project to tour profile. You can find all your projects from your profile, or navigate to them directly with `https://www.github.com/username/projectname`.
@@ -413,7 +413,7 @@ Please, commit your changes or stash them before you can merge.
 Aborting
 ```
 
-Pulling the new commit from the remote does not work, because the local verison holds changes to the same file as the remote repository, and the local changes have not been wrapped into a commit.
+Pulling the new commit from the remote does not work, because the local version holds changes to the same file as the remote repository, and the local changes have not been wrapped into a commit.
 
 In situations like this one can put the local changes aside to the _stash_. This is done with the command `git stash`. When the command is run, the local changes in files tracked by Git will by hidden, but not lost completely. In order to also stash changes in untracked files, add the flag `-u`. Changes can be returned from the stash by running `git stash pop`.
 
@@ -439,7 +439,7 @@ If you see "CONFLICT" outputted to the terminal when popping changes from the st
 
 We'll continue working with two parallel states, as they are probably the biggest stumbling block for new users of Git.
 
-In the previous example, the remote and local versions had different states, because both contained infromation which the other did not have. Because local changes hadn't been commited, they could be put aside to the stash. What would have happened if the local changes had been commited, i.e. the remote repository and the local project had commits which the other one doesn't have?
+In the previous example, the remote and local versions had different states, because both contained information which the other did not have. Because local changes hadn't been committed, they could be put aside to the stash. What would have happened if the local changes had been committed, i.e. the remote repository and the local project had commits which the other one doesn't have?
 
 The situation can be solved by _merging_ together the commit in the remote version and the commit in the local version. Merging simply means combining parallel states. If the two states do not conflict, meaning that they do not contain changes overriding each other, Git can merge them automatically. A new commit, called a merge commit, is created in the process.
 
@@ -458,7 +458,7 @@ nothing to commit, working directory clean
 Notice how Git is kind enough to notify us of the two parallel, differing states, and it even advices us on how to proceed.
 
 <div class="note">
-Remember that if <code>git status</code> doesn't display the newest state of the remote, you shoud run <code>git fetch</code> first.
+Remember that if <code>git status</code> doesn't display the newest state of the remote, you should run <code>git fetch</code> first.
 </div>
 
 Pushing the now commits will not work, as the command `git push` will output the following:
@@ -565,7 +565,7 @@ Changes to be committed:
 
 Finally, we'll wrap up resolving the conflicts by, you guessed it, creating a new commit. The finishing touch is to push the result to GitHub, so that other developers can use the newest version.
 
-Merge conflicts are enfuriating, but rather common when collaborating with others. The easiest way to avoid them is by making sure to always start developing on the newest version from the remote, i.e. by pulling before starting development. However, sometimes they cannot be avoided, in which case one must patiently go through the conflicting files.
+Merge conflicts are infuriating, but rather common when collaborating with others. The easiest way to avoid them is by making sure to always start developing on the newest version from the remote, i.e. by pulling before starting development. However, sometimes they cannot be avoided, in which case one must patiently go through the conflicting files.
 
 Merge conflicts can also occur when taking changes out of the stash, if the hidden changes overlap with new ones.
 
@@ -579,7 +579,7 @@ Create a merge conflict in your project and resolve it. Make sure to push the en
 
 All the commits added to a Git project add up to its _commit history_. Commit history is like a chain of commits, formed when commits are created on top of each other.
 
-Storing a project's commit history is one of the greatest benefits of using version control. It allows returning back in time to a working version of the program, or observing how certaing files and features have changed over time.
+Storing a project's commit history is one of the greatest benefits of using version control. It allows returning back in time to a working version of the program, or observing how certain files and features have changed over time.
 
 
 ### Examining commit history
@@ -609,7 +609,7 @@ Of course, the same procedure can be repeated on the command line. You can brows
 <ol>
 <li>Create a new file to you project called <code>secret.txt</code>, and write something inside such as "this is a very important secret".</li>
 <li>Create a new commit of the new file and the contents added to it.</li>
-<li>Then remove the file <code>secret.txt</code>, and create a new commit of the deletition.</li>
+<li>Then remove the file <code>secret.txt</code>, and create a new commit of the deletion.</li>
 <li>Push the changes to GitHub.</li>
 <li>Navigate to the project page on GitHub. You shouldn't see the secret on the front page. Find the secret from your commit history. Find the secret also using the command line.</li>
 </ol>
@@ -621,7 +621,7 @@ Remember, don't push anything secret to the remote repository: no passwords, per
 
 ## GitHub's workflow
 
-Sites like GitHub make collaboraton in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features. 
+Sites like GitHub make collaboration in development projects a lot easier. No one notices problems more efficiently than the actual users, and GitHub creates a platform for reporting those complications. Any user can create an _issue_ to a public project in GitHub, where one can report any problems with regards to using the software. Common issue subjects are error messages in edge cases, problems in installing, or missing features. 
 
 If one knows the solution to a problem, they can even suggest their own improvements to the project. However, this requires having access to the source code of the project. A public project can be copied to a local computer with the command `git clone`. The command takes the address of the remote repository, which can be acquired from the upper right corner of the project page, as an argument. 
 
@@ -629,13 +629,13 @@ If one knows the solution to a problem, they can even suggest their own improvem
 
 Note that this is actually the same address you used before when adding a remote repository with the command `git remote add`. The owner of a project will not know who has cloned their project.
 
-In the future, when you start a new Git project, you have two options for linking the local project to a repostory in GitHub. One option is to start by running `git init` inside a folder, create a repository to it in GitHub, and link them together. Another possibility is to create the remote first and simply clone the empty project to your local machine.
+In the future, when you start a new Git project, you have two options for linking the local project to a repository in GitHub. One option is to start by running `git init` inside a folder, create a repository to it in GitHub, and link them together. Another possibility is to create the remote first and simply clone the empty project to your local machine.
 
 In order to push some new commits to a project one has cloned, the project's owner has to [add the user as a collaborator](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/). Otherwise the command `git push` will fail, because the user doesn't have sufficient permissions to the repository. In other words, when starting a collaborative project, all the developers should be added as collaborators, allowing them to push code to the remote repository freely.
 
 However, there exists another way of suggesting changes to an existing project. This is called _forking_. When one forks a project, a copy of it is added to the users _own profile_. This will create an event to GitHub's "feed", and the project's owner can see who has forked their repository. After forking a project, you can clone the project from your _own profile_, and push changes to your _own version_, which has been separated from the original one. The difference to cloning is, that the cloned repository will not appear in your GitHub profile.
 
-If the chages you have done to your own version are good enough in your own opinion, you can suggest merging them to the original project with a [pull request](https://help.github.com/articles/about-pull-requests/). The owner of the original project can then go through your suggested changes and to integrate them to the project if they wish.
+If the changes you have done to your own version are good enough in your own opinion, you can suggest merging them to the original project with a [pull request](https://help.github.com/articles/about-pull-requests/). The owner of the original project can then go through your suggested changes and to integrate them to the project if they wish.
 
 <div class="exercise">
 <h3>Exercise 13: Cloning {% include points.html text="10%" %}</h3>
@@ -667,6 +667,6 @@ Hungry for more? You can read about Git from the following sources:
   - Some commands include overwriting Git history, which was not covered in this part. This might cause more problems than it helps. However, the site may be helpful in desperate times. Especially the first command `git reflog` can get you out of many complicated situations.
 - <a href="https://try.github.io/">https://try.github.io/</a>
   - A tutorial by GitHub, starting from the basics. Handles some things which are not covered here, like `git diff`.
-- If you've already gotten to know Git, you might be interested in learning more about its history. Storing commit history, demonstrated in the exercise "A Secret", also enables overwriting history. Although this can be useful for covering up mistakes, rewriting history can be dangerous in collaborative projects, since it can make other people's versions invalid. There is a tutorial on the subject by [Atlassan](https://www.atlassian.com/git/tutorials/rewriting-history). They also have other [advanced tutorials](https://www.atlassian.com/git/tutorials/advanced-overview).
+- If you've already gotten to know Git, you might be interested in learning more about its history. Storing commit history, demonstrated in the exercise "A Secret", also enables overwriting history. Although this can be useful for covering up mistakes, rewriting history can be dangerous in collaborative projects, since it can make other people's versions invalid. There is a tutorial on the subject by [Atlassian](https://www.atlassian.com/git/tutorials/rewriting-history). They also have other [advanced tutorials](https://www.atlassian.com/git/tutorials/advanced-overview).
 
 P.S If you are a student at the University of Helsinki, check out GitHub's student pack [offers](https://education.github.com/pack/offers). You can get credits for several paid services, like AWS and Digital Ocean.
