@@ -633,7 +633,7 @@ Copying the public key file can also be delegated to the command [ssh-copy-id](h
 
 The authentication works correctly, when creating an SSH connection you can login using the password set for the SSH key pair.
 
-In order not to rewrite the passoword each time you want to log in, you might want to add the password to the ssh agent. Having done that, the password has to only be written once you've logged out of the system. This can be done using two commands.
+In order not to rewrite the passoword each time you want to log in, you might want to add the password to the ssh agent. Having done that, the password has to only be written once you've logged out of the system. This can be done using two commands:
 
 ```
 # make sure the agent is ready

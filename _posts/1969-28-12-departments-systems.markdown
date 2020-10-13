@@ -25,7 +25,7 @@ tag: info-eng
 If you use the department's servers over SSH connection and have added your private key to an SSH-agent, according to university regulations you have to secure the private key with a password.
 </div>
 
-- In addition to the AD home folder, you get a CS home folder located in `/cs/home/your_username`, accessible from the departments systems. You can publish your own home page to https://www.cs.helsinki.fi/u/your_account_name by creating an HTML file to `/cs/home/tunnus/public_html/index.html`.
+- In addition to the AD home folder, you get a CS home folder located in `/cs/home/your_username`, accessible from the departments systems. You can publish your own home page to https://www.cs.helsinki.fi/u/your_account_name by creating an HTML file to `/cs/home/your_username/public_html/index.html`.
 
 - The departments also has computing cluster called [Ukko2](https://wiki.helsinki.fi/display/it4sci/Ukko2+User+Guide) and [Kale](https://wiki.helsinki.fi/display/it4sci/Kale+User+Guide). Access to these clusters is limited to the department staff and those who have applied for separate access right.
 
