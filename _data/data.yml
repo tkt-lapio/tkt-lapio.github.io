@@ -1,9 +1,10 @@
 course:
-  startdate: 31.08.2020
-  enddate: 13.12.2020
-  moodle: https://moodle.helsinki.fi/course/view.php?id=39634
+  startdate: 18.01.2021
+  enddate: 09.05.2021
+  moodle: https://moodle.helsinki.fi/course/view.php?id=39645
+
 exam:
-  startdate: 28.09.2020
+  startdate: 15.02.2021
   starttime: "00:00"
-  enddate: 18.10.2020
+  enddate: 07.03.2021
   endtime: "23:59"
