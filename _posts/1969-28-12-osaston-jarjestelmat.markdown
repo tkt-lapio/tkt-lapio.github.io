@@ -13,7 +13,7 @@ tag: info
 
 - Yliopisto tarjoaa opiskelijoilleen kaksi langatonta verkkoa: HUPnetin ja Eduroamin. Näistä HUPnettiin on myös mahdollsita saada vierailijatunnuksia. Eduroamin käyttö on turvallisempaa (HUPnet on suojaamaton) ja suositeltavaa aina kun mahdollista. Eduroam-yhteys on tarjolla myös ulkomaisilla kampuksilla. Katso Helpdeskistä [ohjeet](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/eduroam-verkon-asennus-asetustiedoston-avulla)  Eduroamin asentamiseen. Löydät Helpdeskistä myös ohjeet Eduroamin asentamiseksi esimerkiksi [Androidille](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/eduroam-android-laitteissa) ja [iPhonelle ja iPadille](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/ipad-ja-iphone-langattomat-yhteydet). Lisätietoa Eduroamista löytyy [täältä](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/langattomat-yhteydet-yliopistolla) tai [täältä](https://www.eduroam.org/).
 
-- Tietojenkäsittelytieteen osasto tarjoaa neljä eri palvelinta osaston koneisiin SSH-etäyhteyden luomiseksi. Kirjautuminen tapahtuu yliopiston tunnuksilla.
+- Tietojenkäsittelytieteen osasto tarjoaa neljä eri palvelinta osaston koneisiin SSH-etäyhteyden luomiseksi. Kirjautuminen tapahtuu yliopiston tunnuksilla. Voit aktivoida käyttäjätunnuksesi näillä palvelimilla olemalla yhteydessä <a href="https://helpdesk.it.helsinki.fi/">Helpdeskiin</a>.
 
   - melkki.cs.helsinki.fi
   - melkinpaasi.cs.helsinki.fi

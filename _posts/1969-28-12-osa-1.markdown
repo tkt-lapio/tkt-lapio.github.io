@@ -510,6 +510,10 @@ Tietojenkäsittelytieteen osasto tarjoaa neljä eri palvelinta osaston koneisiin
 
 Kaikki nämä palvelimet ohjaavat siis samaan käyttäjäkohtaiseen kotihakemistoon, johon pääsee kaikilta osaston koneilta.
 
+<div class="warning">
+  Nykyään näiden palvelimien käyttäminen vaatii erillistä käyttäjätunnusten aktivointia, joka tapahtuu olemalla yhteydessä <a href="https://helpdesk.it.helsinki.fi/">Helpdeskiin</a>. Tällä käytännöllä pyritään minimoimaan vahinkoja tapauksissa, joissa opiskelijan AD-tunnukset ovat joutuneet vääriin käsiin.
+</div>
+
 Käytetään `ssh`-komentoa osaston koneelle yhteyden ottamiseen:
 
 ```

@@ -546,6 +546,12 @@ The department of computer science has four different servers for remote connect
 3.  shell.cs.helsinki.fi
 4.  melkinkari.cs.helsinki.fi
 
+<div class="note">
+  Nowadays, students are required to request access rights for these servers before connecting via SSH is possible.
+  All computer science students are entitled to these rights and they can be requested from <a href="https://helpdesk.it.helsinki.fi/">Helpdesk</a>.
+    This extra step was introduced in an effort to minimize the potential damage caused in case a student's AD credentials fall into the wrong hands.
+</div>
+
 All these servers direct the user to the same, personal home directory, which you can acces using all the computers at the department.
 
 Let's use the `ssh` command to create a connection to the department's servers:
