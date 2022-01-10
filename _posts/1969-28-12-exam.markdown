@@ -12,9 +12,9 @@ One must pass the exam in order to receive a grade from the course. The exam is 
 
 {%- assign data = site.data.data -%}
 - Exam is open in Moodle during the following times:
-{%- for exam in data.exams -%}
-  - Starting {exam.startdate} at {exam.starttime} and ending {exam.enddate} at {exam.endtime}
-{%- endfor -%}
+{%- for exam in data.exams %}
+  - Starting {{exam.startdate}} at {{exam.starttime}} and ending {{exam.enddate}} at {{exam.endtime}}.
+{%- endfor %}
 - Students can start the exam anywhere and anytime they wish, as long as it started _and_ completed in the above timeslots. 
 - You have three (3) hours to pass the exam.
 - Students are allowed to use the internet during the exam.

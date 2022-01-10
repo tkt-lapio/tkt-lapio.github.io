@@ -12,9 +12,9 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
 
 {%- assign data = site.data.data -%}
 - Tentti on suoritettavissa Moodlessa seuraavina ajanjaksoina:
-{%- for exam in data.exams -}
-  - Alkaen {exam.startdate} kello {exam.starttime} ja päättyen {exam.enddate} kello {exam.endtime}
-{%- endfor -%}
+{%- for exam in data.exams %}
+  - Alkaen {{exam.startdate}} kello {{exam.starttime}} ja päättyen {{exam.enddate}} kello {{exam.endtime}}.
+{%- endfor %}
 - Tentin saa aloittaa missä tahansa ja milloin tahansa näiden ajanjaksojen puitteissa.
 - Tentti tulee olla suoritettuna tentin suoritusajanjakson mennessä umpeen.
 - Tentin suorittamiseen on kolme (3) tuntia.
