@@ -11,12 +11,16 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
 <h3>Tentin suorittamisen säännöt:</h3>
 
 {%- assign data = site.data.data -%}
-- Tentti aukeaa suoritettavaksi Moodlessa {{data.exam.startdate}} kello {{data.exam.starttime}}.
-- Tentin suorittamisen saa aloittaa missä vain, milloin vain, kunhan tentti on suoritettu ennen {{data.exam.enddate}} kello {{data.exam.endtime}}.
+- Tentti on suoritettavissa Moodlessa seuraavina ajanjaksoina:
+{%- for exam in data.exams -}
+  - Alkaen {exam.startdate} kello {exam.starttime} ja päättyen {exam.enddate} kello {exam.endtime}
+{%- endfor -%}
+- Tentin saa aloittaa missä tahansa ja milloin tahansa näiden ajanjaksojen puitteissa.
+- Tentti tulee olla suoritettuna tentin suoritusajanjakson mennessä umpeen.
 - Tentin suorittamiseen on kolme (3) tuntia.
 - Opiskelija saa käyttää vapaasti nettiä tentin aikana.
 - Vastausten etsiminen netistä, kuten esimerkiksi foorumeilta tai kurssin materiaalista, on sallittua.
-- Opiskelija saa vapaasti testata haluamiaan komentoja komentorivillä: tämä on jopa suositeltavaa, ja joissain tehtävissä vaatimus. <strong>Varmista, että läpäiset tentin siis Unix-tyyppisessä ympäristössä, mieluiten samalla koneella, jolla teit tehtävät, tai osaston koneella.</strong>
+- Opiskelija saa vapaasti testata haluamiaan komentoja komentorivillä: tämä on jopa suositeltavaa, ja joissain tehtävissä vaatimus. <strong>Varmista, että suoritat tentin siis Unix-tyyppisessä ympäristössä, mieluiten samalla koneella, jolla teit tehtävät, tai osaston koneella.</strong>
 - Tentti on yksilösuoritus. Opiskelija ei saa tehdä yhteistyötä toisen opiskelijan kanssa tentin aikana, tai pyytää apua ohjaajalta tai muulta henkilöltä suoraan tai välillisesti, eikä käyttää toisen opiskelijan vastauksia ominaan. Kaikki yhteistyö ja plagiointi lasketaan opintovilpiksi, ja sillä on seuraukset.
 - <strong>Koneella, jolla teet tentin, on oltava Git asennettuna.</strong>
 - Tentti koostuu pääosin monivalintatehtävistä, sekä "lyhyt vastaus" -tehtävistä, jossa oikea vastaus on esimerkiksi komennon nimi. Osassa tehtävistä opiskelijan on tarkoitus etsiä itse vastaus internetistä. Joissain tehtävissä opiskelijan tulee ladata tiedostoja ja ajaa komentoja komentorivillä saadakseen oikean vastauksen.
@@ -28,7 +32,7 @@ Hyväksytty suoritus tentistä on edellytys kurssin läpipääsyyn. Verkkotentti
   - alle 9 tenttipistettä: hylätty
   - vähintään 9 tenttipistettä: 3
   - vähintään 17 kurssipistettä: 5
-- Mikäli et pääse tentistä läpi, voit suorittaa sen uudestaan aikaisintaan viikon päästä edellisestä suorituskerrasta, aina {{data.exam.enddate}} asti. Suorituskertojen määrälle ei ole ylärajaa.
+- Mikäli et pääse tentistä läpi, voit suorittaa sen uudestaan aikaisintaan viikon päästä edellisestä suorituskerrasta, yllä listattujen tentin suoritusaikojen puitteissa. Suorituskertojen määrälle ei ole ylärajaa.
 - Tentti sisältää yhden ja kahden pisteen tehtäviä.
 - Laskaripisteet merkitään Moodle-alueella jokaiselle osalle erikseen. Älä lähetä laskaripisteitä sähköpostilla, emme ota niitä silloin huomioon. Merkitse laskaripisteet ennen kuin suoritat tentin.
 - Moodle antaa epävirallisen arvosanan kurssipisteiden perusteella Arvioinnit -sivulla. Moodle ei kuitenkaan välttämättä ota huomioon koeleikkuria.

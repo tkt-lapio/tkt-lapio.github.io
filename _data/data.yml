@@ -1,10 +1,14 @@
 course:
-  startdate: 06.09.2021
-  enddate: 19.12.2021
-  moodle: https://moodle.helsinki.fi/course/view.php?id=46204
+  startdate: 17.01.2022
+  enddate: 08.05.2021
+  moodle: https://moodle.helsinki.fi/course/view.php?id=46213
 
-exam:
-  startdate: 04.10.2021
-  starttime: "00:00"
-  enddate: 24.10.2021
-  endtime: "23:59"
+exams:
+  - startdate: 14.02.2022
+    starttime: "00:00"
+    enddate: 06.03.2022
+    endtime: "23:59"
+  - startdate: 18.04.2022
+    starttime: "00:00"
+    enddate: 08.04.2022
+    endtime: "23:59"
