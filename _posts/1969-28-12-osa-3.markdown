@@ -356,7 +356,7 @@ p {
 }
 ```
 
-CSS koostuu lähtökohtaisesti kahdesta eri osasta: _selektoreista_ ja _ominaisuuksista_. Selektorit määrittävät, mihin elementteihin tyyliejä halutaan lisätä, ja ominaisuudet määrittävät itse tyylit. Edellisessä esimerkissä yksinäistä p-kirjainta kutsutaan selektoriksi. Selektorin jälkeen tulee aina lohko `{}`, jonka sisälle voimme sijoittaa monia CSS-ominaisuuksia. Esimerkissä `color: green` on CSS-ominaisuus. Ominaisuudet koostuvat yleensä avain-arvo-pareista.
+CSS koostuu lähtökohtaisesti kahdesta eri osasta: _selektoreista_ ja _ominaisuuksista_. Selektorit määrittävät, mihin elementteihin tyylejä halutaan lisätä, ja ominaisuudet määrittävät itse tyylit. Edellisessä esimerkissä yksinäistä p-kirjainta kutsutaan selektoriksi. Selektorin jälkeen tulee aina lohko `{}`, jonka sisälle voimme sijoittaa monia CSS-ominaisuuksia. Esimerkissä `color: green` on CSS-ominaisuus. Ominaisuudet koostuvat yleensä avain-arvo-pareista.
 
 # CSS:n linkittäminen
 
@@ -548,7 +548,7 @@ Elementille voi myös määrittää CSS:n avulla `padding`- ja `margin`-ominaisu
 
 ![Margin ja padding](/assets/margin-padding.png)
 
-Toisin sanoen, marginaalin (_margin_) lisääminen elementtiin, jonka luokka on `container`, siirtäisie elementtiä kauemmas sivun reunasta:
+Toisin sanoen, marginaalin (_margin_) lisääminen elementtiin, jonka luokka on `container`, siirtäisi elementtiä kauemmas sivun reunasta:
 
 ```css
 .container {
@@ -584,7 +584,7 @@ Elementille voidaan lisätä marginaalia neljään eri kohtaan: sen _päälle_ (
   margin: 10px; /* Antaa marginaalia 10px kaikille neljälle arvolle (top, right, left, bottom) */
   margin: 10px 5px 15px; /* Ylämarginaali on 10px, alamarginaali 15px, oikea- sekä vasen marginaali 5px */
   margin: 10px 5px; /* Ylä- ja alamarginaalit ovat 10px, oikea sekä vasen 5px */
-  margin: 10px 5px 15px 20px; /* Ylämarginaali on 10px, oikea marginaali on 5px, alamarginaali 15px ja vasenta marginaalia 20px */
+  margin: 10px 5px 15px 20px; /* Ylämarginaali on 10px, oikea marginaali on 5px, alamarginaali 15px ja vasen marginaali 20px */
   margin-top: 10px; /* Antaa vain ylämarginaalia 10px */
   margin-right: 10px; /* Antaa vain oikeaa marginaalia 10px */
   margin-left: 10px; /* Antaa vain vasenta marginaalia 10px */
@@ -637,7 +637,7 @@ Aloitetaan antamalla `.second-box-container`-selektorille CSS-ominaisuus `left: 
 
 ![Esimerkki HTML-sivu, kahden elementin kanssa](/assets/html-example-13.png)
 
-Huomaamme, että elementti ei siirtynyt yhtään. Tämä johtuu CSS:N ominaisuudesta `position`, joka määrittää, miten elementin sijainti määritellään. Ominaisuudella on olemassa viisi erilaista arvoa, joista käymme läpi `static`, `relative`- ja `absolute`-arvot. Oletusarvoisesti kaikilla HTML-elementeillä on CSS:n `position`-ominaisuuden arvo `static`, jolloin `top`, `right`, `bottom` tai `left`-arvoilla ei ole vaikutusta elementin sijaintiin. 
+Huomaamme, että elementti ei siirtynyt yhtään. Tämä johtuu CSS:n ominaisuudesta `position`, joka määrittää, miten elementin sijainti määritellään. Ominaisuudella on olemassa viisi erilaista arvoa, joista käymme läpi `static`, `relative`- ja `absolute`-arvot. Oletusarvoisesti kaikilla HTML-elementeillä on CSS:n `position`-ominaisuuden arvo `static`, jolloin `top`, `right`, `bottom` tai `left`-arvoilla ei ole vaikutusta elementin sijaintiin. 
 
 Lisätään `.second-box-container`-selektorilla elementille vielä `position: relative` -arvo.
 
