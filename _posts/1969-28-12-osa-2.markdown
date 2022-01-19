@@ -14,7 +14,7 @@ Tämän osan tavoitteina on, että opiskelija
 - Osaa luoda Git-projektin.
 - Tietää, mikä on commit, ja osaa luoda sellaisen.
 - Ymmärtää, missä eri tiloissa muutos on, kun sitä lisätään commitiin, ja miten muutoksia voi perua, ennen kuin ne on lisätty committiin.
-- Tietää, mikä on master-haara.
+- Tietää, mikä on main-haara.
 - Osaa lukea komennon `git status` tulostusta.
 - Osaa luoda GitHubissa repositorion, ja lisätä sen projektin etärepositorioksi.
   - Osaa käyttää GitHubia SSH-yhteyden kautta.
@@ -24,7 +24,7 @@ Tämän osan tavoitteina on, että opiskelija
 - Ymmärtää, mikä on merge-commit.
 - Ymmärtää, miten merge-konflikti muodostuu.
 - Osaa ratkaista merge-konfliktin.
-- Osaa tarkastella GitHubissa ja komentoriviltä vanhoja committeja, ja osaa siirtyä takaisin master-haaran viimeisimpään committiin.
+- Osaa tarkastella GitHubissa ja komentoriviltä vanhoja committeja, ja osaa siirtyä takaisin main-haaran viimeisimpään committiin.
 - Osaa kloonata Git-projektin omalle koneelleen.
 - Ymmärtää, miten Gittiä ja GitHubia voidaan hyödyntää yhteistyössä.
   - Tietää, mikä on issue.
@@ -112,7 +112,7 @@ Komento `git status` on erittäin hyödyllinen, sillä se antaa tietoa Git-proje
 Luodaan nyt Git-projektikansio, ja lisätään sinne tyhjä tiedosto `lapio_vko2.txt` vaikka komennolla `touch`. Kun ollaan vasta luotu Git-projekti, lisätty sinne tiedosto, ja ajetaan `git status`, tulostuu
 
 ```bash
-On branch master
+On branch main
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
@@ -130,7 +130,7 @@ Muutoksia voidaan lisätä seuraavaan committiin komennolla `git add`. Komennoll
 Lisätään nyt lapio-tiedoston muutokset seuraavaan committiin ajamalla `git add lapio_vko2.txt`. Lisätään tiedostoon sen jälkeen hieman tekstiä komennolla `echo "tämä on lapion toinen osa" >> lapio_vko2.txt`. Ajetaan sen jälkeen `git status`:
 
 ```bash
-On branch master
+On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
@@ -146,7 +146,7 @@ Changes not staged for commit:
 Lisätään tämän jälkeen projektikansioon vielä yksi tiedosto, nimeltään `tyhja_tiedosto.txt`. Ajetaan sen jälkeen uudelleen `git status`. Nyt tulostuu
 
 ```bash
-On branch master
+On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
@@ -193,7 +193,7 @@ Kun ollaan valittu, mitä muutoksia halutaan lisätä committiin, paketoidaan se
 Jatketaan edellistä esimerkkiä. Lisätään seuraavaan committiin kaikki muutokset, paitsi tiedoston `tyhja_tiedosto` luonti. Ennen komennon `git commit` ajamista, komennon `git status` tulostus on seuraava:
 
 ```bash
-On branch master
+On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
@@ -210,7 +210,7 @@ Ajetaan seuraavaksi `git commit -m "Lisää uusi lapio-tiedosto"`
 Nyt `git status` tulostaa :
 
 ```
-On branch master
+On branch main
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
@@ -237,9 +237,13 @@ Commitin luominen voi aluksi tuntua epäintuitiiviselta. Seuraava ajatusleikki s
 
 ### Haarat
 
-Komennon `git status` tulosteen yläreunassa näkyy: `On branch master`. Haarat, eli englanniksi _branchit_, mahdollistavat joidenkin committien eriyttäimisen toisistaan. Näin ollen on mahdollista kehittää uuden haaran sisältöä ilman, että menetetään toimiva versio ohjelmasta. Tavanomaisesti jokaisella projektilla on päähaara, joka on yleensä nimeltään`master`, ja jossa pidetään senhetkistä toimivaa ja käytössä olevaa versiota.
+Komennon `git status` tulosteen yläreunassa näkyy: `On branch main`. Haarat, eli englanniksi _branchit_, mahdollistavat joidenkin committien eriyttäimisen toisistaan. Näin ollen on mahdollista kehittää uuden haaran sisältöä ilman, että menetetään toimiva versio ohjelmasta. Tavanomaisesti jokaisella projektilla on päähaara, joka on oletuksena nimeltään `main`, ja jossa pidetään senhetkistä toimivaa ja käytössä olevaa versiota.
 
-Usein haaroja käytetään niin, että päähaarasta erotetaan uuden toiminnallisuuden testaamiseksi toinen haara, jossa koodataan lisäominaisuuksia. Haarat eivät vaikuta toistensa tiloihin, eli uudella koodilla voidaan leikkiä huolimatta päähaarasta. Kun ollaan todettu uusi koodi toimivaksi, voidaan se lisätä päähaaraan, ja poistaa uusi haara. Tässä osassa ei käsitellä haaroja sen enempää: riittää ymmärtää, että käytämme nyt vain master-, eli päähaaraa.
+<div class="note">
+Perinteisesti git on käyttänyt oletuspäähaarasta nimitystä *master*, mutta vuosien 2020 ja 2021 aikana moni palvelu, ja lopulta git itsessään, on luopunut master-sanan käytösä. Tämä päätös on osa suurempaa liikettä luopua master- ja slave-sanojen käytöstä avoimen lähdekoodin ohjelmistoissa.
+</div>
+
+Usein haaroja käytetään niin, että päähaarasta erotetaan uuden toiminnallisuuden testaamiseksi toinen haara, jossa koodataan lisäominaisuuksia. Haarat eivät vaikuta toistensa tiloihin, eli uudella koodilla voidaan leikkiä huolimatta päähaarasta. Kun ollaan todettu uusi koodi toimivaksi, voidaan se lisätä päähaaraan, ja poistaa uusi haara. Tässä osassa ei käsitellä haaroja sen enempää: riittää ymmärtää, että käytämme nyt vain main-, eli päähaaraa.
 
 <div class="exercise">
 <h3>Tehtävä 3: Committien harjoittelua {% include points.html text="10%" %}</h3>
@@ -333,17 +337,18 @@ Liitä GitHubin repo projektisi etärepositorioksi. Jos teit edellisen tehtävä
 ### Julkaiseminen
 
 Kun projekti on liitetty johonkin GitHubin repositorioon, voidaan committeja julkaista _puskemalla_.
-Muutokset voi puskea tietyn etärepositorion tiettyyn haaraan seuraavasti: `git push remotennimi haarannimi`. Tässä osassa käytämme vain master-haaraa. Jos lisäät sanan `push` jälkeen vivun `-u`, riittää ensi kerralla ajaa `git push`, jolloin muutokset pusketaan automaattisesti samaan paikkaan. Tämän vivun käyttö on suositeltavaa.
+Muutokset voi puskea tietyn etärepositorion tiettyyn haaraan seuraavasti: `git push remotennimi haarannimi`. Tässä osassa käytämme vain main-haaraa. Jos lisäät sanan `push` jälkeen vivun `-u`, riittää ensi kerralla ajaa `git push`, jolloin muutokset pusketaan automaattisesti samaan paikkaan. Tämän vivun käyttö on suositeltavaa.
 
-Pusketaan `lapio_vko2.txt`-tiedostoon tekemämme muutokset komennolla `git push -u origin master`, sillä lisäsimme etärepositorion nimellä `origin`, ja käytämme `master`-haaraa. Navigoidaan GitHubissa projektisivulle. Tiedosto `lapio_vko2.txt` näkyy nyt GitHubissa.
+Pusketaan `lapio_vko2.txt`-tiedostoon tekemämme muutokset komennolla `git push -u origin main`, sillä lisäsimme etärepositorion nimellä `origin`, ja käytämme `main`-haaraa. Navigoidaan GitHubissa projektisivulle. Tiedosto `lapio_vko2.txt` näkyy nyt GitHubissa.
 
 <div class="exercise">
 <h3>Tehtävä 7: Commitin julkaiseminen {% include points.html text="5%" %}</h3>
 <ol>
-<li>Puske tekemäsi kolme committia etärepositoriosi <code>master</code>-haaraan.</li>
+<li>Puske tekemäsi kolme committia etärepositoriosi <code>main</code>-haaraan.</li>
 <li>Käy tarkistamassa GitHubissa, että kyseiset commitit näkyvät etärepositoriossa.</li>
 </ol>
 </div>
+
 
 ### Koodin hakeminen GitHubista
 
@@ -364,7 +369,7 @@ git status
 
 `git fetch` hakee projektin uusimman tilan GitHubista, mutta ei tee muutoksia paikalliseen työhön. **Jos `git status` ei jatkossa näytä ajankohtaista tietoa etärepositorion tilasta, aja ensin `git fetch`**.
 
-Muutokset eivät vieläkään näy. Jos puskit committisi etärepositorioon vivun `-u` kanssa, Git osaa kertoa, että GitHubissa on muutoksia, joita paikallisessa versiossa ei ole: status-komento tulostaa yläreunaan `Your branch is behind 'origin/master'`.
+Muutokset eivät vieläkään näy. Jos puskit committisi etärepositorioon vivun `-u` kanssa, Git osaa kertoa, että GitHubissa on muutoksia, joita paikallisessa versiossa ei ole: status-komento tulostaa yläreunaan `Your branch is behind 'origin/main'`.
 
 Nyt voidaan hakea muutokset paikalliseen versioon komennolla `git pull`. Jos aikaisemmin oltiin ajettu `push` vivulla `-u`, ei etärepositoriota tai haaran nimeä tarvitse kirjoittaa. Ajetaan `git pull`, jolloin tulostuu jotain seuraavankaltaista:
 
@@ -374,8 +379,8 @@ remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
 From github.com
- * branch            master     -> FETCH_HEAD
-   8793615..c661629  master     -> origin/master
+ * branch            main       -> FETCH_HEAD
+   8793615..c661629  main       -> origin/main
 Updating 8793615..c661629
 Fast-forward
  lapio_vko2.txt | 1 +
@@ -401,7 +406,7 @@ Jos nyt kokeillaan hakea uusimmat muutokset komennolla `git pull`, tulostuu:
 
 ```bash
 From github.com:
- * branch            master     -> FETCH_HEAD
+ * branch            main     -> FETCH_HEAD
 Updating 061ca96..6920cd0
 error: Your local changes to the following files would be overwritten by merge:
 	lapio_vko2.txt
@@ -439,13 +444,13 @@ Jatketaan vielä kahden rinnakkaisen tilan kanssa.
 
 Tilanne voidaan ratkaista _mergellä_, eli yhdistämällä kaksi rinnakkaista tilaa. Sellaiset haarat, jotka eivät ole ristriidassa keskenään, eli toisin sanoen eivät tee päällekkäisiä muutoksia, Git osaa yhdistää automaattisesti. Tällöin Git luo uuden merge-commitin.
 
-Oikeastaan komento `git pull` sisältää jo valmiiksi merge-toiminnallisuuden. Riittää siis ajaa komento `git pull`, ja antaa tekstieditorin avautuessa commitille otsikko, jotta saadaan yhdistettyä paikallinen master-haara etärepositorion master-haaraan. GitHub ehdottaa valmiiksi viestiä, jota voi halutessaan muokata mieleisekseen. Merge on valmis, kun merge-commitin viestin tallentaa.
+Oikeastaan komento `git pull` sisältää jo valmiiksi merge-toiminnallisuuden. Riittää siis ajaa komento `git pull`, ja antaa tekstieditorin avautuessa commitille otsikko, jotta saadaan yhdistettyä paikallinen main-haara etärepositorion main-haaraan. GitHub ehdottaa valmiiksi viestiä, jota voi halutessaan muokata mieleisekseen. Merge on valmis, kun merge-commitin viestin tallentaa.
 
 Lisätään sekä paikallisesti että etärepositorioon uudet, keskenään erinimiset tiedostot ja commitoidaan. Kun sen jälkeen ajaa `git status` (aja ensin `git fetch`, jos `git status` ei näytä uusinta tilaa), tulostuu:
 
 ```
-On branch master
-Your branch and 'origin/master' have diverged,
+On branch main
+Your branch and 'origin/main' have diverged,
 and have 1 and 1 different commit each, respectively.
   (use "git pull" to merge the remote branch into yours)
 nothing to commit, working directory clean
@@ -457,7 +462,7 @@ Jos yritetään puskea commit, se ei onnistu:
 
 ```
 To git@github.com:kayttaja/repo.git
- ! [rejected]        master -> master (non-fast-forward)
+ ! [rejected]        main -> main (non-fast-forward)
 error: failed to push some refs to 'git@github.com:kayttaja/repo.git'
 hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
@@ -469,7 +474,7 @@ Git antaa jälleen vihjeen, miten kuuluu toimia. Haetaan ja yhdistetään siis e
 
 ```
 From github.com:kayttaja/repo
- * branch            master     -> FETCH_HEAD
+ * branch            main     -> FETCH_HEAD
 Merge made by the 'recursive' strategy.
  new_file.txt | 1 +
  1 file changed, 1 insertion(+)
@@ -528,8 +533,8 @@ terveisiä mun koneelta ja GitHubista
 Kun ajetaan `git status`, Git muistuttaa, että ollaan ratkaisemassa konflikteja tiedostossa `lapio_vko2.txt`:
 
 ```
-On branch master
-Your branch and 'origin/master' have diverged,
+On branch main
+Your branch and 'origin/main' have diverged,
 and have 1 and 1 different commit each, respectively.
  (use "git pull" to merge the remote branch into yours)
 You have unmerged paths.
@@ -546,7 +551,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 Lisätään ratkaisu Gittiin komennolla `git add` (huomaa, että vivun -p käyttäminen ei toimi). Kun sen jälkeen ajetaan `git status`, tulostuu
 
 ```
-On branch master
+On branch main
 All conflicts fixed but you are still merging.
   (use "git commit" to conclude merge)
 
@@ -588,11 +593,11 @@ Napeista keskimmäisessä näkyy tietyn commitin id:n alkuosa. Kyseistä nappia 
 
 ![Muutosten tarkasteleminen](/assets/changes_in_github.jpeg)
 
-Painamalla seuraavaksi "Browse files", tai edellisestä näkymästä oikeanpuolimmaista `<>`-painiketta, pääsee tarkastelemaan _koko projektia_ kyseisessä commitissa. Commit siis sisältää pelkästään muutokset, mutta Git mahdollistaa koko projektin tilan tarkastelemisen tietyn commitin jälkeen. Pääset palaamaan takaisin masteriin, eli päähaaran viimeisempään committiin painamalla painiketta vasemmalla, jossa lukee Tree, ja valitsemalla `master`.
+Painamalla seuraavaksi "Browse files", tai edellisestä näkymästä oikeanpuolimmaista `<>`-painiketta, pääsee tarkastelemaan _koko projektia_ kyseisessä commitissa. Commit siis sisältää pelkästään muutokset, mutta Git mahdollistaa koko projektin tilan tarkastelemisen tietyn commitin jälkeen. Pääset palaamaan takaisin mainiin, eli päähaaran viimeisempään committiin painamalla vasemmalla olevaa hakemistopuuta kuvaavalla ikonilla varustettua painiketta, jossa lukee tarkasetelussa olevan commitin tunniste, ja valitsemalla avautuvasta valikosta `main`.
 
-![Miten vaihtaa takaisin masteriin](/assets/back-to-master.png)
+![Miten vaihtaa takaisin mainiin](/assets/back-to-main.png)
 
-Saman voi tehdä myös komentorivillä. Kun ollaan Git-projektin kansiossa, tiettyyn committiin voidaan siirtyä komennolla `git checkout commitin_id`. Tämä vastaa samaa, kuin GitHubissa koko projektin tilan tarkasteleminen tietyn commitin jälkeen. Samalla tavalla takaisin viimeisimpään committiin pääsee komennolla `git checkout haarannimi`, eli yleisimmässä tapauksessa `git checkout master`. Yksittäisen commitin muutoksia voidaan tarkastella komennolla `git show commitin_id`.
+Saman voi tehdä myös komentorivillä. Kun ollaan Git-projektin kansiossa, tiettyyn committiin voidaan siirtyä komennolla `git checkout commitin_id`. Tämä vastaa samaa, kuin GitHubissa koko projektin tilan tarkasteleminen tietyn commitin jälkeen. Samalla tavalla takaisin viimeisimpään committiin pääsee komennolla `git checkout haarannimi`, eli yleisimmässä tapauksessa `git checkout main`. Yksittäisen commitin muutoksia voidaan tarkastella komennolla `git show commitin_id`.
 
 <div class="exercise">
 <h3>Tehtävä 12: Salaisuus {% include points.html text="10%" %}</h3>

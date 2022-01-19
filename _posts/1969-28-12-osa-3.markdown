@@ -864,7 +864,7 @@ Tämän jälkeen lisäämme tiedostot gittiin ja puskemme ne Githubiin. Avataan 
 
 ![Githubin settings valikon ohje](/assets/html-github-settings.png)
 
-Valitaan settings-valikosta "github pages", ja julkaistaan master-haara Github-sivuna.
+Valitaan settings-valikosta "github pages", ja julkaistaan main-haara Github-sivuna.
 
 ![Github sivun julkaisu](/assets/html-github-pages.png)
 

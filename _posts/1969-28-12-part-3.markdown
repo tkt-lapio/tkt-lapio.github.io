@@ -894,7 +894,7 @@ Next, we'll add all the files to Git, and push them to GitHub. In order to publi
 
 ![How to find the settings tab in GitHub](/assets/html-github-settings.png)
 
-We'll scroll down to the section called "GitHub pages" and publish the master branch by choosing it from the dropdown menu. GitHub will let you know once the site has been published:
+We'll scroll down to the section called "GitHub pages" and publish the main branch by choosing it from the dropdown menu. GitHub will let you know once the site has been published:
 
 ![Site has been published notification](/assets/html-github-pages.png)
 

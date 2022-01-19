@@ -10,13 +10,12 @@ tag: material-eng
 
 <div>
 <h4>The goal is that after this week, the student will</h4>
-
 <ul>
 <li>Understand the motivations for using version control.</li>
 <li>Know how to create a Git project.</li>
 <li>Understand what a commit is and knows how to create one.</li>
 <li>Understand the different states a change goes through before it's added to a commit.</li>
-<li>Understand what the master branch is.</li>
+<li>Understand what the main branch is.</li>
 <li>Know how to read the output of the command <code>git status</code></li>
 <li>Know how to create a repository on GitHub and add it to an existing Git project.</li>
 <li>Know how to use GitHub through an SSH connection.</li>
@@ -26,7 +25,7 @@ tag: material-eng
 <li>Know what a merge conflict is.</li>
 <li>Understand how a merge conflict is formed.</li>
 <li>Know how to solve a merge conflict.</li>
-<li>Know how to view old commits on GitHub and the command line, and how to move back to the latest commit of master after checking out old ones.</li>
+    <li>Know how to view old commits on GitHub and the command line, and how to move back to the latest commit of the <i>main</i> branch after checking out old ones.</li>
 <li>Know how to clone a Git project to their local machine.</li>
 <li>Understand how GitHub can be used in team projects.</li>
 <ul>
@@ -35,6 +34,7 @@ tag: material-eng
 <li>Know what a pull request is.</li>
 </ul>
 </ul>
+
 </div>
 
 ## Version control: Git and GitHub
@@ -115,7 +115,7 @@ The command `git status` will turn out to be very useful in the process of creat
 Let's create a Git project folder, and add an empty file called `lapio_w2.txt` inside. You can do this with the command `touch` for example. When a new file is added to a fresh Git project, `git status` will print the following:
 
 ```bash
-On branch master
+On branch main
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
@@ -133,7 +133,7 @@ Changes can be added to the next commit by running `git add`. The command requir
 Now let's add the changes in the file we created earler by running `git add lapio_w2.txt`. Then we'll insert some text into the file with `echo "this is the second part of lapio" >> lapio_w2.txt`. Then we'll run `git status`:
 
 ```bash
-On branch master
+On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
@@ -149,7 +149,7 @@ Changes not staged for commit:
 Next we'll add one more file to the project, called `empty.txt`. We'll then run `git status` again, which outputs the following:
 
 ```bash
-On branch master
+On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
@@ -196,7 +196,7 @@ After choosing which changes will be included in the next commit, you can finall
 We'll continue where the previous example left off. Let's add all the changes we made to the next commit, except the creation of the file `empty.txt`. Before running `git commit`, the output of `git status` is:
 
 ```bash
-On branch master
+On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
@@ -213,7 +213,7 @@ Then we'll run `git commit -m "Add new lapio file"`
 Now the output of `git status` is:
 
 ```
-On branch master
+On branch main
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
@@ -240,9 +240,13 @@ The process of creating a commit might seem unintuitive at first. The following 
 
 ### Branches
 
-At the top of of the output of `git status`, you can see the following text: `On branch master`. Branches allow separating some commits from others. This means that a new branch can be developed independently from an old branch. It is customary for projects to have a main branch, usually called the `master` branch, containing the version currently in use.
+At the top of of the output of `git status`, you can see the following text: `On branch main`. Branches allow separating some commits from others. This means that a new branch can be developed independently from an old branch. It is customary for projects to have a main branch, usually called literally `main` or alternatively `master`, containing the version currently in use.
 
-Branches are usually used for testing out new features without breaking a working version of the program. Since branches don't affect each other states, the new branch can be played with without worrying about other ones. When the changes made to the new branch are deemed ready, the branch can be merged to the master branch, and thus the new features will be published. Although branches are an important part of Git, this course will not focus on using them. It suffices to understand that we will only use the master branch in the exercises and in the exam.
+<div class="note">
+Traditionally git has used the term master to refer to the main or default branch. During years 2020 and 2021 many platforms, such as GitHub and Gitlab, transitioned into using main as the default name for this branch. Git itself followed suit in 2021 and recent versions of git create a branch named main by default.
+</div>
+
+Branches are usually used for testing out new features without breaking a working version of the program. Since branches don't affect each other states, the new branch can be played with without worrying about other ones. When the changes made to the new branch are deemed ready, the branch can be merged to the main branch, and thus the new features will be published. Although branches are an important part of Git, this course will not focus on using them. It suffices to understand that we will only use the main branch in the exercises and in the exam.
 
 <div class="exercise">
 <h3>Exercise 3: Practising working with commits {% include points.html text="10%" %}</h3>
@@ -337,14 +341,14 @@ Add the repository as a remote to your project. If you did the previous exercise
 
 After a project has been added to a repository in GitHub, commits can be published by _pushing_ them to the remote repository.
 
-Changes can be pushed to a specific branch in the remote repository as follows: `git push remotename branchname`. In this part we will only use the master branch. If you add the flag `-u` after the command `push`, next time you do not need to specify the name of the remote and the branch to push changes to the same place. Using the flag `-u` is recommended.
+Changes can be pushed to a specific branch in the remote repository as follows: `git push remotename branchname`. In this part we will only use the main branch. If you add the flag `-u` after the command `push`, next time you do not need to specify the name of the remote and the branch to push changes to the same place. Using the flag `-u` is recommended.
 
-Let's push the changes we made to the file `lapio_w2.txt` by running `git push -u origin master`, since we named the remote `origin` and we are using the master branch. Next we'll navigate to the project site on GitHub. There we will find the file `lapio_w2.txt`.
+Let's push the changes we made to the file `lapio_w2.txt` by running `git push -u origin main`, since we named the remote `origin` and we are using the main branch. Next we'll navigate to the project site on GitHub. There we will find the file `lapio_w2.txt`.
 
 <div class="exercise">
 <h3>Exercise 7: Publishing a commit {% include points.html text="5%" %}</h3>
 <ol>
-<li>Push the three commits you made earlier to the master branch of the remote repository.</li>
+<li>Push the three commits you made earlier to the main branch of the remote repository.</li>
 <li>Check on GitHub that you can find all the changes in the remote.</li>
 </ol>
 </div>
@@ -368,7 +372,7 @@ git status
 
 The command `git fetch` fetches the newest state of the project from GitHub, but doesn't change the local version. **If you find that `git status` doesn't show up-to-date information about the state of the remote, you should run `git fetch` first.**
 
-We still can't see the new line of text locally. However, if you pushed with the flag `-u`, Git will notice that the remote repository contains some changes it doesn't see locally:  `Your branch is behind 'origin/master'`is printed at the top of the status output.
+We still can't see the new line of text locally. However, if you pushed with the flag `-u`, Git will notice that the remote repository contains some changes it doesn't see locally:  `Your branch is behind 'origin/main'`is printed at the top of the status output.
 
 You can get the new changes to the local version by running `git pull`. If you used the flag `-u` with `push` earlier, there is no need to specify a remote or a branch. We'll run `git pull`, which results in an output along the lines of the following:
 
@@ -378,8 +382,8 @@ remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
 From github.com
- * branch            master     -> FETCH_HEAD
-   8793615..c661629  master     -> origin/master
+ * branch            main     -> FETCH_HEAD
+   8793615..c661629  main     -> origin/main
 Updating 8793615..c661629
 Fast-forward
  lapio_w2.txt | 1 +
@@ -405,7 +409,7 @@ Now if we try to fetch the latest changes with the command `git pull` we'll get:
 
 ```bash
 From github.com:
- * branch            master     -> FETCH_HEAD
+ * branch            main     -> FETCH_HEAD
 Updating 061ca96..6920cd0
 error: Your local changes to the following files would be overwritten by merge:
 	lapio_w2.txt
@@ -448,8 +452,8 @@ Actually, merging is built into the command `git pull`. In other words, it suffi
 Let's test merging in practice. We'll start by creating two non-conflicting commits by creating two new files, one in the remote repository and the other in the local version. After creating the two commits, running `git status` will output:
 
 ```
-On branch master
-Your branch and 'origin/master' have diverged,
+On branch main
+Your branch and 'origin/main' have diverged,
 and have 1 and 1 different commit each, respectively.
   (use "git pull" to merge the remote branch into yours)
 nothing to commit, working directory clean
@@ -465,7 +469,7 @@ Pushing the now commits will not work, as the command `git push` will output the
 
 ```
 To git@github.com:user/repo.git
- ! [rejected]        master -> master (non-fast-forward)
+ ! [rejected]        main -> main (non-fast-forward)
 error: failed to push some refs to 'git@github.com:user/repo.git'
 hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
@@ -477,7 +481,7 @@ However, Git gives instructions on what to do next. We'll fetch the new state of
 
 ```
 From github.com:user/repo
- * branch            master     -> FETCH_HEAD
+ * branch            main     -> FETCH_HEAD
 Merge made by the 'recursive' strategy.
  new_file.txt | 1 +
  1 file changed, 1 insertion(+)
@@ -536,8 +540,8 @@ Greetings from my computer and from GitHub
 Now running `git status` will output a message reminding us that we are currently resolving a merge conflict:
 
 ```
-On branch master
-Your branch and 'origin/master' have diverged,
+On branch main
+Your branch and 'origin/main' have diverged,
 and have 1 and 1 different commit each, respectively.
  (use "git pull" to merge the remote branch into yours)
 You have unmerged paths.
@@ -554,7 +558,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 Let's add the resolved file to Git with `git add` (note that the flag -p would not work in this particular case). Running `git status` will then yield:
 
 ```
-On branch master
+On branch main
 All conflicts fixed but you are still merging.
   (use "git commit" to conclude merge)
 
@@ -598,11 +602,11 @@ The button at the center of those three shows the beginning of a given commit's 
 
 ![Viewing changes](/assets/show-commit-en.png)
 
-Then by pressing "Browse files", or the rightmost button with `<>` written on it from the previous view, you can browse the state of the project after a specific commit. A commit only contains a set of changes, but Git still enables revisiting the whole project after a given commit. You can return back to the latest commit of the master branch by pressing the "tree" button on the left, and by choosing "master".
+Then by pressing "Browse files", or the rightmost button with `<>` written on it from the previous view, you can browse the state of the project after a specific commit. A commit only contains a set of changes, but Git still enables revisiting the whole project after a given commit. You can return back to the latest commit of the main branch by pressing the button the "tree" icon on the left, and by choosing "main".
 
-![Change back to master](/assets/back-to-master.png)
+![Change back to main](/assets/back-to-main.png)
 
-Of course, the same procedure can be repeated on the command line. You can browse the state of the project after a specific commit by running `git checkout commit_id`. You should check the id using `git log` for example. Similarly, you can move back to a specific branch by running `git checkout branch_name`, most commonly `git checkout master`. The changes made in a specific commit can be viewed with `git show commit_id`.
+Of course, the same procedure can be repeated on the command line. You can browse the state of the project after a specific commit by running `git checkout commit_id`. You should check the id using `git log` for example. Similarly, you can move back to a specific branch by running `git checkout branch_name`, most commonly `git checkout main`. The changes made in a specific commit can be viewed with `git show commit_id`.
 
 <div class="exercise">
 <h3>Exercise 12: A Secret {% include points.html text="10%" %}</h3>

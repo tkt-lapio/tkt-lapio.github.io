@@ -95,7 +95,7 @@ Here is a list of things covered in each part of the material:
 <li>Know how to create a Git project.</li>
 <li>Understand what a commit is and knows how to create one.</li>
 <li>Understand the different states a change goes through before it's added to a commit.</li>
-<li>Understand what the master branch is.</li>
+<li>Understand what the <i>main</i> branch is.</li>
 <li>Know how to read the output of the command <code>git status</code></li>
 <li>Know how to create a repository on GitHub and add it to an existing Git project.</li>
 <li>Know how to use GitHub through an SSH connection.</li>
@@ -105,7 +105,7 @@ Here is a list of things covered in each part of the material:
 <li>Know what a merge conflict is.</li>
 <li>Understand how a merge conflict is formed.</li>
 <li>Know how to solve a merge conflict.</li>
-<li>Know how to view old commits on GitHub and the command line, and how to move back to the latest commit of master after checking out old ones.</li>
+<li>Know how to view old commits on GitHub and the command line, and how to move back to the latest commit of the main branch after checking out old ones.</li>
 <li>Know how to clone a Git project to their local machine.</li>
 <li>Understand how GitHub can be used in team projects.</li>
 <ul>
