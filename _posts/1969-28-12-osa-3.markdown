@@ -140,7 +140,7 @@ Sisäkkäin asettelu on hyvin tärkeä osa HTML-dokumenttia, ja sen rooli korost
 <div class="exercise">
 <h3>Tehtävä 3: Sisäkkäin asetetut elementit {% include points.html text="10%" %}</h3>
 Tehtävänäsi on jatkaa edellisistä tehtävistä tuttua <code>index.html</code>-tiedostoa.
-Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi <code>Jukola</code>, kursivoi <code>Häme</code>ja lihavoi sekä kursivoi <code>Toukola</code>
+Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi <code>Jukola</code>, kursivoi <code>Häme</code> ja lihavoi sekä kursivoi <code>Toukola</code>.
 <img src="/assets/html-ex3.png" alt="Kolmas tehtava kuvana"/>
 Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kolmas tehtävä</code> ja puske tehtävä Githubiin.
 </div>
@@ -594,7 +594,7 @@ Elementille voidaan lisätä marginaalia neljään eri kohtaan: sen _päälle_ (
 
 Marginaalille voi antaa myös `auto`-määritteen, jolloin marginaali määrittyy automaattisesti. Esimerkiksi `margin: 0 auto;`-ominaisuus keskittää sisemmän elementin ulommaisen elementin keskelle sivusuunnassa. Voit lukea tästä lisää [täältä](https://www.hongkiat.com/blog/css-margin-auto/).
 
-Pärjäämme pitkälle pelkästään `marginin` ja `paddingin` avulla, mutta mitä jos haluamme siirtää elementtiä verkkosivuilla? Tähän tarvitsemme `position` ja `right`,`left`, `top` sekä `bottom`-ominaisuuksia.
+Pärjäämme pitkälle pelkästään `marginin` ja `paddingin` avulla, mutta mitä jos haluamme siirtää elementtiä verkkosivuilla? Tähän tarvitsemme `position` ja `right`, `left`, `top` sekä `bottom`-ominaisuuksia.
 
 Lisätään edelliseen esimerkkikoodiin kaksi elementtiä:
 
@@ -691,7 +691,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 
 `color: #RRGGBB (Red, Green, Blue)` antaa valita elementin värin, jonka voi antaa hex-arvolla tai yleisimpien värien kohdalla englanniksi. Emme ehdi tällä kurssilla käydä läpi mitä hex-arvo tarkoittaa, mutta voit lukea halutessasi aiheesta [täältä](https://en.wikipedia.org/wiki/Web_colors), ja valita erilaisia arvoja [hex-valitsemella](https://htmlcolorcodes.com/color-picker/).
 
-`text-align: left [ right [ center [ justify` kertoo mihin suuntaan teksti sisennetään.
+`text-align: left | right | center | justify` kertoo mihin suuntaan teksti sisennetään.
 
 `text-decoration: none | underline | overline | line-through | blink | inherit` mahdollistaa yleisimmät tekstin muokkaustavat, esimerkiksi alleviivauksen.
 
