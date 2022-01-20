@@ -2,6 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
+
 li {
   margin: 0.2rem 0;
 }
@@ -30,12 +31,6 @@ figcaption {
   font-size: 120%;
   color: red;
 }
-.exercise {
-  background-color: rgb(224, 242, 255);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
-}
 .note {
   border: 0.15rem solid rgb(180, 206, 255);
   padding: 0.7rem;
@@ -43,7 +38,7 @@ figcaption {
   margin: 0.5rem 0;
   color: rgb(83, 83, 83)
 }
-.warning {
+.warning:not(.message) {
   border: 0.15rem solid rgb(226, 84, 84);
   padding: 0.7rem;
   border-radius: 0.5rem;
@@ -55,3 +50,119 @@ figcaption {
 .note img {
   margin: 0.5rem 0;
 }
+
+.message {
+  display: flex;
+  overflow: hidden;
+  margin: 1em 0;
+  box-shadow: 0px 2px 5px -2px #00000038;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.post-content > .message {
+  margin: 1.5em 0em 2em 0em;
+}
+
+.message-accent {
+  width: 3em;
+  padding: 0.5em;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  fill: white;
+  border: 1px solid;
+  border-right: none;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.message.info .message-accent {
+  background: #00BCD4;
+  border-color: #00ACC1;
+}
+
+.message.warning .message-accent {
+  background: #F44336;
+  border-color: #E53935;
+}
+
+b, strong {
+  color: #373737;
+}
+
+.message-accent svg {
+  fill: white;
+  stroke: none;
+}
+
+.message-content {
+  flex-grow: 1;
+  padding: 0.8em 1em 0.8em 1em;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid #CFD8DC;
+  border-left: none;
+}
+
+.message-title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #373737;
+  margin-bottom: 0.3rem;
+}
+
+.message-text {
+  margin-bottom: 0;
+}
+
+.exercise {
+  overflow: hidden;
+  margin: 1em 0;
+  box-shadow: 0px 2px 5px -2px #00000038;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #CFD8DC;
+}
+
+.exercise-header {
+  display: flex;
+  border-bottom: 1px solid #CFD8DC;
+  align-items: stretch;
+}
+
+.exercise-header > div {
+  padding: 0.75em;
+  padding-bottom: 0.5em;
+  background: #ECEFF1;
+}
+
+.exercise-header-title {
+  flex-grow: 1;
+  font-size: 1.2em;
+}
+
+.exercise-header-points {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #CFD8DC;
+}
+
+.exercise-content {
+  padding: 0.8em 1em 0.8em 1em;
+}
+
+.post-header > h1, .post-content > h2, .post-content > h3, .post-content > h4 { position: relative }
+.post-header > h1::before,
+.post-content > h2::before,
+.post-content > h3::before,
+.post-content > h4::before
+{
+  color: #dfdfdf;
+  position: absolute;
+  right: 100%;
+  margin-right: 0.6rem;
+}
+.post-header > h1::before { content: '#'; }
+.post-content > h2::before { content: '##'; }
+.post-content > h3::before { content: '###'; }
+.post-content > h4::before { content: '####'; }

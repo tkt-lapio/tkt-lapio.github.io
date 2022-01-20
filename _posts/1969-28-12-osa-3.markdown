@@ -32,8 +32,7 @@ Yksinkertaistettuna verkkosivulla tarkoitetaan internetissä julkaistua tekstido
 
 Tarvitset tässä osassa tekstieditoria. Suosittelemme [vscodea](https://code.visualstudio.com/download). Tämän lisäksi tarvitset verkkoselainta. Hyviä moderneja verkkoselaimia ovat muun muassa [Google Chrome](https://www.google.fi/chrome/index.html) ja [Firefox](https://www.mozilla.org/fi/firefox/). Osan pystyy suorittamaan myös jollain muulla tekstieditorilla tai selaimella.
 
-<div class="exercise">
-<h3>Tehtävä 1: Järjestelyt {% include points.html text="5%" %}</h3>
+{% capture exercise_auto_1 %}
 <ol>
 <li>Luo "Lapio-website"-niminen kansio komentoriviä käyttäen ja tee tästä kansiosta git-projekti.</li>
 <li>Luo Githubiin uusi <strong>tyhjä</strong> repo nimellä Lapio-website.</li>
@@ -41,7 +40,9 @@ Tarvitset tässä osassa tekstieditoria. Suosittelemme [vscodea](https://code.vi
 <li>Lisää kansioon <code>index.html</code>-tiedosto, joka löytyy <a href="https://github.com/tkt-lapio/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">täältä</a>. Tiedoston sisältöä ei tarvitse vielä ymmärtää.</li>
 <li>Tee commit viestillä <code>Osa 3. Ensimmäinen tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="5%" title="Tehtävä 1: Järjestelyt" content=exercise_auto_1 %}
+
 
 ## HTML
 
@@ -69,25 +70,28 @@ HTML-tagit ovat sivuston piilotettuja avainsanoja, eli ne eivät näyttäydy sil
 Katsotaan, miten HTML toimii käytännössä.
 Avataan edellisessä tehtävässä luotu <code>index.html</code>-tiedosto verkkoselaimessa sekä tekstieditorissa.
 
-<div class="note">
+{% capture message_info_1 %}
 Jos et saa tiedostoa auki verkkoselaimessa, voit myös etsiä tiedoston komentoriviltä, katsoa tiedoston sijainnin ja kirjoittaa sen verkkoselaimesi osoitepalkkiin.
-</div>
+{% endcapture %}{% include message.html type="info" text=message_info_1 title="Tarkasta osoite komentoriviltä" %}
+
 
 Lisätään <code>index.html</code>-tiedostoon `<!--Tee tehtävät tänne-->` rivin alapuolelle `<p>Tässä on tekstipätkä</p>`. Tämän jälkeen katsomme, miltä dokumentti näyttää selaimessa.
 
 ![Esimerkki miten HTML näkyy selaimessa](/assets/html-example-01.png)
 
 
-<div class="note">
+{% capture message_info_2 %}
 Luodessasi HTML-dokumenttia, varmista aina, että tiedostonimi päättyy rimpsuun <code>.html</code>. Näin kerrot myös tiedostojärjestelmälle, minkälaista koodia tiedosto pitää sisällään.
-</div>
+{% endcapture %}{% include message.html type="info" text=message_info_2 title="Muista käyttää tiedostopäätettä" %}
 
-<div class="exercise">
-<h3>Tehtävä 2: Tutustuminen tekstielementteihin {% include points.html text="5%" %}</h3>
+
+{% capture exercise_auto_2 %}
 Jatketaan <code>index.html</code>-tiedoston muokkaamista. Testaa eri tekstielementit läpi ja katso, mitä eri elementit tekevät. Tehtävän tavoitteena on saada sivustosta seuraavan näköinen:
 <img src="/assets/html-ex1.png" alt="Toinen tehtava kuvana"/>
 Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen tehtävä </code> ja puske tehtävä Githubiin.
-</div>
+{% endcapture %}
+{% include exercise.html points="5%" title="Tehtävä 2: Tutustuminen tekstielementteihin" content=exercise_auto_2 %}
+
 
 # Sisäkkäin asetetut elementit
 
@@ -113,9 +117,10 @@ Lohkotason elementit ovat näkyvissä lohkoina verkkosivulla. Jokainen lohkotaso
 
 Sisätason elementit on siis aina suljettu lohkotason elementin sisälle ja ne käsittelevät vain todella pientä palaa sivustosta. Ne eivät käsittele kokonaisia tekstipaloja tai kuvia. Yhdellä rivillä voi olla useita sisätason elementtejä. Yleensä sisätason elementtejä näkyy vain tekstin sisällä. Tällaisia elementtejä ovat esimerkiksi `<strong></strong>`- tai `<a></a>`-elementit.
 
-<div class="note">
+{% capture message_info_3 %}
 Elementtiä, jonka sisällä jokin elementti on, kutsutaan sen <i>vanhemmaksi</i>. Samoin jonkin elementin sisällä olevia elementtejä kutsutaan sen <i>lapsiksi</i>.
-</div>
+{% endcapture %}{% include message.html type="info" text=message_info_3 title="Sanastoa" %}
+
 
 Käydään läpi lohkotason ja sisätason elementtejä esimerkin kautta.
 
@@ -137,13 +142,14 @@ Edellinen esimerkki näyttää selaimessa tältä:
 
 Sisäkkäin asettelu on hyvin tärkeä osa HTML-dokumenttia, ja sen rooli korostuu myöhemmin, kun alamme käyttämään css-tyylejä.
 
-<div class="exercise">
-<h3>Tehtävä 3: Sisäkkäin asetetut elementit {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_3 %}
 Tehtävänäsi on jatkaa edellisistä tehtävistä tuttua <code>index.html</code>-tiedostoa.
 Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi <code>Jukola</code>, kursivoi <code>Häme</code> ja lihavoi sekä kursivoi <code>Toukola</code>.
 <img src="/assets/html-ex3.png" alt="Kolmas tehtava kuvana"/>
 Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kolmas tehtävä</code> ja puske tehtävä Githubiin.
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 3: Sisäkkäin asetetut elementit" content=exercise_auto_3 %}
+
 
 # HTML-dokumentin rakenne
 
@@ -270,9 +276,7 @@ Sisäkkäin asetetulla listalla tarkoitetaan listaa, jossa on listoja listojen s
   <li>Täytä vesikuppi.</li>
 </ol>
 
-<div class="exercise">
-<h3>Tehtävä 4: Listat {% include points.html text="10%" %}</h3>
-
+{% capture exercise_auto_4 %}
 Jatketaan edellisistä tehtävistä tuttua <code>index.html</code>-dokumentin muokkaamista. Testaa ensin dokumenttiin, mitä eri listatyypit tekevät. Tämän jälkeen yritä saada sivusto näyttämään seuraavanlaiselta:
 
 <img src="/assets/html-ex4.png" alt="Neljannen tehtavan kuva" />
@@ -280,8 +284,9 @@ Jatketaan edellisistä tehtävistä tuttua <code>index.html</code>-dokumentin mu
 Käytännössä tarkoitus on lisätä dokumenttiin sisäkkäin jokin lista.
 
 Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Neljäs tehtävä</code> ja puske tehtävä Githubiin.
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 4: Listat" content=exercise_auto_4 %}
 
-</div>
 
 # Kuvat ja kommenttit
 
@@ -301,12 +306,12 @@ Jos kuva sijaitsee samalla koneella verkkosivun kanssa, käytetään <code>src</
 
 HTML-dokumentissa voi olla kommentteja, jotka eivät näy lopullisessa verkkosivussa. Niiden tarkoitus on selventää kirjoittajan ajatuksia seuraavalle kirjoittajalle tai kirjoittajalle itselleen myöhempää käyttöä varten. Kommentin voi lisätä `<!-- ja -->`-elementtien väliin. Esimerkiksi seuraava on HTML-kommentti: `<!-- Tämä tässä on kommentti -->`.
 
-<div class="exercise">
-<h3>Tehtävä 5: Kuvat ja kommentit {% include points.html text="10%" %}</h3>
-<div class="warning">
+{% capture exercise_auto_5 %}
+{% capture message_warning_1 %}
 Jos liität omille verkkosivuille kuvan joltain toiselta sivulta, sinulla pitää olla oikeus käyttää kuvaa.
 Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia. Voit etsiä näitä palveluita esimerkiksi <a href="https://commons.wikimedia.org/wiki/Commons:Free_media_resources/Photography)"> täältä </a>.
-</div>
+{% endcapture %}{% include message.html type="warning" text=message_warning_1 title="Tekijänoikeudet" %}
+
 <ol>
 <li>Lataa omalle koneelle <a href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Seitsem%C3%A4n_veljest%C3%A4.png">kuva</a>. Kuvaa saa käyttää uudestaan.</li>
 <li>Tee edellisistä tehtävistä tuttuun repositorioon uusi kansio, jonka nimi on <code>assets</code> ja lisää se Gittiin.</li>
@@ -319,7 +324,9 @@ Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia. 
 <img src="/assets/html-ex5.png" alt="Viidennen tehtävän lopputulos"/>
 <li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Viides tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 5: Kuvat ja kommentit" content=exercise_auto_5 %}
+
 
 # Linkit
 
@@ -333,8 +340,7 @@ Linkkielementti sisältää `href`-attribuutin, jossa on osoite linkattavaan koh
 
 Linkille voi myös antaa myös `target`-attribuutin, jonka `_blank`-arvolla voi pakottaa linkin aukeamaan toisella välilehdellä. Lisää linkin attribuuteista voi lukea [täältä](https://www.w3schools.com/tags/tag_a.asp).
 
-<div class="exercise">
-<h3>Tehtävä 6: HTML-tiedostojen linkittäminen {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_6 %}
 <ol>
 <li>Tee toinen HTML-tiedosto ja sijoita se samaan kansioon edellisen tiedoston kanssa.</li>
 <li>Lisää tiedosto Gittiin.</li>
@@ -344,7 +350,9 @@ Linkille voi myös antaa myös `target`-attribuutin, jonka `_blank`-arvolla voi 
 <img src="/assets/html-ex6.png" alt="Kuudennen tehtävän lopputulos"/>
 <li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kuudes tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 6: HTML-tiedostojen linkittäminen" content=exercise_auto_6 %}
+
 
 ## CSS
 
@@ -370,8 +378,7 @@ Jotta CSS voi vaikuttaa HTML-elementteihin, pitää HTML-dokumentin löytää CS
 
 Huomataan, että ylläolevassa linkissä on yksi uusi attribuutti. Attribuutti `rel` määrittää, että luettava tiedosto on tyylitiedosto. Näin selain tietää, että sen pitää lukea myös CSS-tiedosto ja ottaa huomioon myös sen tekemät muutokset.
 
-<div class="exercise">
-<h3>Tehtävä 7: CSS:n linkittäminen {% include points.html text="5%" %}</h3>
+{% capture exercise_auto_7 %}
 <ol>
 <li>Tee <code>style.css</code>-tiedosto samaan kansioon kuin aikaisemmat tehtävät.</li>
 <li>Lisää tiedosto Gittiin.</li>
@@ -380,7 +387,9 @@ Huomataan, että ylläolevassa linkissä on yksi uusi attribuutti. Attribuutti `
 <img src="/assets/html-ex7.png" alt="Seitsemännen tehtävän lopputulos"/>
 Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Seitsemäs tehtävä</code> ja puske tehtävä Githubiin.
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="5%" title="Tehtävä 7: CSS:n linkittäminen" content=exercise_auto_7 %}
+
 
 # Vaihtoehtoiset tavat linkata CSS-tyylejä HTML-dokumenttiin
 
@@ -507,9 +516,7 @@ Universaali selektori on helppo ymmärtää. Sillä valitaan jokainen elementti 
 
 Edellä esitellyt selektorit ovat varsin yksinkertaisia, mutta toimivat useissa tilanteissa. Niiden lisäksi on myös mahdollista käyttää monimutkaisempia selektorirakenteita, esimerkiksi valitsemalla elementtejä sen mukaan, minkä elementin sisällä ne ovat. Voit lukea aiheesta lisää esimerkiksi [täältä](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Selectors).
 
-<div class="exercise">
-<h3>Tehtävä 8: Selektorit {% include points.html text="10%" %}</h3>
-
+{% capture exercise_auto_8 %}
 Tehtävän ideana on testata kaikkia eri selektoreita värittämisen avulla edellisissä tehtävissä tekemäämme <code>index.html</code>-dokumenttiin.
 
 <ol>
@@ -518,7 +525,9 @@ Yritä saada lopputulos näyttämään tältä:
    <img src="/assets/html-ex-8.png" alt="Kahdeksannen tehtävän lopputulos kuvana"/>
 <li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kahdeksas tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 8: Selektorit" content=exercise_auto_8 %}
+
 
 # Elementtien koko, marginaali, sisennys sekä sijainti
 
@@ -653,8 +662,7 @@ Elementti on sijoittunut reunaan, mutta se ei varaa enää tilaa itse dokumentis
 
 Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosittelemme siihen tutustumista vielä lisää esimerkiksi [täältä](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 
-<div class="exercise">
-<h3>Tehtävä 9: Elementit vierekkäin {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_9 %}
 <ol>
 <li>Tee git-kansioon toinen tiedosto, ja nimeä se position.html-nimellä.</li>
 <li>Tee myös styles.css-tiedosto ja tee tarvittavat toimenpiteet, jotta saat linkitettyä tiedostot toisiinsa.</li>
@@ -662,9 +670,14 @@ Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosi
 <li>Nyt ideana on, että saisit samat elementit vierekkäin. Lopputuloksen pitäisi näyttää tältä:</li>
 <img src="/assets/html-ex-9.png" alt="Elementit vierekkäin"/>
 <li>Kun koet, että tehtävä on valmis, lisää tiedostot gittiin ja tee commit viestillä <code>Osa 3. Yhdeksäs tehtävä</code>. Puske tehtävä Githubiin.</li>
-<div class="note">Vinkki: Jos ei onnistu, niin testaa mitä tapahtuu, jos sijoitat elementtejä toisten sisälle eri position-arvoilla.</div>
+{% capture message_info_4 %}
+Jos ei onnistu, niin testaa mitä tapahtuu, jos sijoitat elementtejä toisten sisälle eri position-arvoilla.
+{% endcapture %}{% include message.html type="info" text=message_info_4 title="Vinkki" %}
+
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 9: Elementit vierekkäin" content=exercise_auto_9 %}
+
 
 # CSS: mittayksiköt
 
@@ -713,8 +726,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 
 `border-color` määrittelee, minkä värinen reuna on. Tälle voi antaa samoja ominaisuuksia kuin `background-color` tai `color`-ominaisuuksille.
 
-<div class="exercise">
-<h3>Tehtävä 10: CSS:n ominaisuuksia {% include points.html text="5%" %}</h3>
+{% capture exercise_auto_10 %}
 <ol>
 <li>Tehtävän ideana on, että tutustut äsken käytyihin ominaisuuksiin itsenäisesti.</li>
 <li>Ota tavoitteeksi, että saat edellisessä tehtävässä tehdyn sivun näyttämään tältä.</li>
@@ -722,7 +734,9 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 <img src="/assets/html-ex-10.png" alt="HTML-sivu ilman CSS-koodia"/>
 <li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kymmenes tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="5%" title="Tehtävä 10: CSS:n ominaisuuksia" content=exercise_auto_10 %}
+
 
 # Miten tehdä sivuista luettavat CSS:n avulla
 
@@ -814,14 +828,15 @@ code {
 
 Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mistä lähdimme liikkeelle.
 
-<div class="exercise">
-<h3>Tehtävä 11: Sivuista luettavat CSS:n avulla {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_11 %}
 <ol>
 <li>Tee kappaleessa käsitellyt määrittelyt Seitsemän veljestä -verkkosivulle. Voit lisätä pidemmän jakson Seitsemän veljestä -romaanista, jotta näet paremmin lopputuloksen. Löydät koko kirjan <a href="http://www.gutenberg.org/cache/epub/11940/pg11940.txt" target="_blank">täältä.</a></li>
 <li>Testaa sivustolle mahdollisimman paljon oppimiasi asiota. Yhtä oikeaa lopputulosta ei ole.</li>
 <li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Yhdestoista tehtävä</code> ja puske tehtävä Githubiin.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 11: Sivuista luettavat CSS:n avulla" content=exercise_auto_11 %}
+
 
 ## Verkkosivun julkaiseminen ja Github pages
 
@@ -874,7 +889,7 @@ Tämän jälkeen mennään osoitteeseen, missä sivun pitäisi olla. Osoite on o
 
 Huomaamme, että sivusto on julkisena ja jokaisen internetin käyttäjän saatavilla ympäri maailman.
 
-<div class="note">
+{% capture message_info_5 %}
 <strong>Yliopisto-opiskelijoille</strong>
 
 Yliopisto tarjoaa tietojenkäsittelytieteen pääaineopiskelijoille palvelintilaa, jossa voi pyörittää omia staattisia verkkosivuja. Käyttäjän dokumentit sijaitsee levypalvelimella käyttäjän CS-kotihakemiston public_html-alihakemistossa: <code>/cs/home/käyttäjätunnus/public_html/</code>.
@@ -894,12 +909,10 @@ Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
 
 <li>Tämän jälkeen sivuston pitäisi näkyä osoitteessa <code>http://www.cs.helsinki.fi/u/käyttäjätunnus/</code></li>
 </ol>
+{% endcapture %}{% include message.html type="info" text=message_info_5 title="Yliopiston tarjoamaa sivutilaa" %}
 
-</div>
 
-<div class="exercise">
-
-<h3>Tehtävä 12: Ansioluettelo {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_12 %}
 <ol>
 <li>Luo uusi repositorio Githubiin.</li>
 <li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna, jonne kirjoitat itsestäsi, kiinnostuksenkohtiestasi ja mahdollisesta työkokemuksestasi.</li>
@@ -907,7 +920,9 @@ Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
 <li>Puske lopuksi tekemäsi muutokset GitHubiin. Yritä luoda committeja järkevistä kokonaisuuksista; älä siis esimerkiksi tee vain yhtä isoa committia.</li>
 <li>Julkaise ansioluettelo Github-sivuna tai laitoksen palvelimen kautta.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 12: Ansioluettelo" content=exercise_auto_12 %}
+
 
 ## Loppusanat
 
@@ -928,8 +943,9 @@ Pidä jälleen tauko, ja anna aivojesi levätä. Onnittele itseäsi siitä, ett�
 
 Kun osaat mielestäsi kurssin aiheet tarpeeksi hyvin, siirry Moodle-alueelle. Merkitse siellä tekemäsi laskaritehtävät. Varmista, että olet ilmoittautunut kurssille Weboodissa. Tämän jälkeen olet valmis tekemään tentin. Saat arvosanan kuluvan kuukauden lopussa.
 
-<div class="warning">
+{% capture message_warning_2 %}
 Muista antaa kurssista anonyymiä palautetta <a href="https://weboodi.helsinki.fi"> Weboodissa</a> kohdasta > Työkalut > Omat Palautteet.
-</div>
+{% endcapture %}{% include message.html type="warning" text=message_warning_2 title="Anna palautetta" %}
+
 
 Kiitos kurssista ja onnea tuleviin opintoihin! Opiskelukavereiden ja Googlen avulla selviää vaikeimmistakin kursseista :)

@@ -5,9 +5,10 @@ date: 1969-12-28 00:00:00 +0200
 permalink: /osaston-jarjestelmat/
 tag: info
 ---
-<div class="warning">
-    Materiaaleissa puhutaan CS-tunnuksista, jotka ovat todennäköisesti poistumassa jossain vaiheessa. Materiaaleja päivitetään, kun CS-tunnusten tilanne varmistuu. Tehtävien tekemiseen CS-tunnuksia ei tarvita.
-</div>
+{% capture message_warning_1 %}
+Materiaaleissa puhutaan CS-tunnuksista, jotka ovat todennäköisesti poistumassa jossain vaiheessa. Materiaaleja päivitetään, kun CS-tunnusten tilanne varmistuu. Tehtävien tekemiseen CS-tunnuksia ei tarvita.
+{% endcapture %}{% include message.html type="warning" text=message_warning_1 title="CS-tunnusten käytöstä poistuminen" %}
+
 
 - Mikäli olet tietojenkäsittelytieteen pää- tai sivuaineopiskelija, aktivoi yliopiston tunnuksesi [täällä](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/uuden-kayttajatunnuksen-aktivointi) ja CS-tunnuksesi seuraavan sivun [ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan.
 
@@ -22,9 +23,10 @@ tag: info
 
 Kaikki nämä palvelimet ohjaavat siis samaan käyttäjäkohtaiseen yliopiston ad-kotihakemistoon, johon pääsee kaikilta osaston koneilta. Kirjautuminen tapahtuu osaston käyttäjätunnuksilla.
 
-<div class="warning">
+{% capture message_warning_2 %}
 Mikäli käytät yliopiston palvelimia SSH-yhteyden yli, on yksityinen avain yliopiston sääntöjen mukaan suojattava salasanalla.
-</div>
+{% endcapture %}{% include message.html type="warning" text=message_warning_2 title="Yliopiston linjaus SSH-avainten salasanoista" %}
+
 
 - Osaston tunnuksen myötä saa yliopiston ad-kotihakemiston lisäksi CS-kotihakemiston. CS-kotihakemisto sijaitsee polussa `/cs/home/<käyttäjätunnus>`. Pääset CS-kotihakemistoon samasta järjestelmästä, jossa ad-kotihakemisto sijaitsee. CS-kotihakemiston avulla on esimerkiksi mahdollista luoda itselleen laitoksen kotisivu osoitteeseen `https://www.cs.helsinki.fi/u/omatunnus/`. HTML-sivu luodaan polkuun `/cs/home/tunnus/public_html/index.html` (saatat joutua luomaan kansion `public_html`).
 

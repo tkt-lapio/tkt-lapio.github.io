@@ -33,16 +33,17 @@ To put it simply, a website is a document published on the Internet. The documen
 
 You will need a proper text editor in this part of the course. We recommend using Visual Studio Code, or [VSCode](https://code.visualstudio.com/download) for short. In addition, you will need a web browser. Modern, recommended ones include [Google Chrome](https://www.google.fi/chrome/index.html) ja [Firefox](https://www.mozilla.org/fi/firefox/). However, it is also possible to do the exercises using an another text editor and browser.
 
-<div class="exercise">
-<h3>Exercise 1: Setting up {% include points.html text="5%" %}</h3>
+{% capture exercise_auto_1 %}
 <ol>
 <li>Create a Git project called "lapio-website" using the command line.</li>
 <li>Create a new reposiotry to GitHub with the same name.</li>
 <li>Add the newly created repository as a remote of the local project.</li>
 <li>Add a file called <code>index.html</code> to the project, and copy the code from <a href="https://github.com/tkt-lapio/lapio-tehtavamateriaalia/blob/master/w3-ex1/index.html">here</a> inside. You don't need to understand the contents of the file yet.</li>
 <li>Create a new commit with the message <code>Osa 3. First exercise</code> and push it to GitHub.</li>
-</ol> 
-</div>
+</ol>
+{% endcapture %}
+{% include exercise.html points="5%" title="Exercise 1: Setting up" content=exercise_auto_1 %}
+
 
 ## HTML
 
@@ -69,29 +70,31 @@ HTML tags are keywords hidden inside the site, but not shown to the end user by 
 
 Now let's see how HTML works in practice. We'll open the file <code>index.html</code> created in the first exercise in a browser and a text editor. You can open the file in the browser by clicking on it in the graphical user interface, or explicitly opening it using a browser program from the command line.
 
-<div class="note">
+{% capture message_info_1 %}
 If you can't open the file in a browser, you can also write its path to the URL field.
-</div>
+{% endcapture %}{% include message.html type="info" text=message_info_1 title="There is always an another way" %}
+
 
 Let's add the following line in the <code>index.html</code> file just under `<!--Do the exercises here-->`: `<p>This is a piece of text</p>`. Then we'll see what the document looks like in the browser.
 
 
 ![An example of viewing an HTML document in the browser](/assets/html-ex-1.png)
 
-<div class="note">
+{% capture message_info_2 %}
 Note that when creating an HTML file, you should end the filename with <code>.html</code>, to let the file system know what kind of code the file contains.
-</div>
+{% endcapture %}{% include message.html type="info" text=message_info_2 title="Remember to use file name extensions" %}
 
 
-<div class="exercise">
-<h3>Exercise 2: Getting to know text elements {% include points.html text="5%" %}</h3>
 
+{% capture exercise_auto_2 %}
 Let's continue editing the file <code>index.html</code>. Test out each of the different text elements and see what they look like. The goal of the exercise is to have the website look like the following:
 
 <img src="/assets/html-ex-2.png" alt="Second exercise goal"/>
 
 After you are done in your opinion, create a new commit with the following message: <code>Part 3, add second exercise </code>. Finish by pushing the commit to GitHub.
-</div>
+{% endcapture %}
+{% include exercise.html points="5%" title="Exercise 2: Getting to know text elements" content=exercise_auto_2 %}
+
 
 # Nested elements
 
@@ -111,9 +114,10 @@ However, when using nested elements, it is important to close the tags in the ri
 
 Always close the last tag you opened first. Otherwise the browser will try and guess the correct structure of the document. The site will be rendered even if the elements are closed in the wrong order, but the content will most likely be structured in a bizarre way, depending on the browser.
 
-<div class="note">
+{% capture message_info_3 %}
 The element inside of which an element is located, is called its <i>parent</i>. Similarly, the elements inside another element are called its <i>children</i>.
-</div>
+{% endcapture %}{% include message.html type="info" text=message_info_3 title="Terminology" %}
+
 
 HTML elements are divided into two distinct categories: _block-level_ elements and _inline_ elements.
 
@@ -143,15 +147,16 @@ The previous block element will look like this in the browser:
 
 Nesting elements is an essential feature of HTML, allowing the creation of countless different document structures. Its role will be highlighted even more later on, once we learn how to create styles with CSS.
 
-<div class="exercise">
-<h3>Exercise 3: Nested elements {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_3 %}
 Continue editing the file, introduced in the previous exercises <code>index.html</code>.
 Your task is to make the document inside the file look like the following picture. In other words, bold the word <code>Here</code>, italicize the word <code>HTML</code>, and both bold and italicize the text <code>To be continued...</code>.
 
 <img src="/assets/html-ex-6.png" alt="Third exercise as a picture"/>
 
 After you are done in your opinion, create a new commit with the following message: <code>Part 3, add third exercise </code>. Finish by pushing the commit to GitHub.
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Exercise 3: Nested elements" content=exercise_auto_3 %}
+
 
 # The structure of an HTML document
 
@@ -287,9 +292,7 @@ and how the instructions will be shown:
   <li>Fill the water cup.</li>
 </ol>
 
-<div class="exercise">
-<h3>Exercise 4: Lists {% include points.html text="10%" %}</h3>
-
+{% capture exercise_auto_4 %}
 We'll continue editing the document inside <code>index.html</code>. First, test out the different list types in the document. Then try and make the site look like the following picture:
 
 <img src="/assets/html-ex-7.png" alt="Picture for the fourth exercise" />
@@ -297,8 +300,9 @@ We'll continue editing the document inside <code>index.html</code>. First, test 
 The point of the exercise is simply to add more headings and a few nested lists. Remember to use the heading numbers properly!
 
 When you are done in your opinion, create a commit with the message <code>Part 3, add exercise 4</code> and push it to GitHub.
+{% endcapture %}
+{% include exercise.html points="10%" title="Exercise 4: Lists" content=exercise_auto_4 %}
 
-</div>
 
 # Images and comments
 
@@ -320,11 +324,11 @@ If the image is located at the same computer as the website, a relative path can
 
 An HTML document can also contain comments, which will not be displayed to the user in the browser. The point of comments is to clarify the thoughts of the person who has written the code, so that it is easier to interpret by others (and by the developer themselves later on). A comment can be added by writing it between `<!--` and `-->`. For example, `<!-- this is a comment -->`
 
-<div class="exercise">
-<h3>Exercise 5: Images and comments {% include points.html text="10%" %}</h3>
-<div class="warning">
+{% capture exercise_auto_5 %}
+{% capture message_warning_1 %}
 If you attach an image to your site from another web page, make sure you actually have the right to use that image. There are several services online offering roalty-free or copyright-free images, as listed <a href="https://commons.wikimedia.org/wiki/Commons:Free_media_resources/Photography)">here</a>.
-</div>
+{% endcapture %}{% include message.html type="warning" text=message_warning_1 title="Copyright" %}
+
 <ol>
 <li>Find an image you are allowed to use. You can for example use some images from Wikipedia, as long as you <a href="https://en.m.wikipedia.org/wiki/Wikipedia:Ten_things_you_may_not_know_about_images_on_Wikipedia">comply with the image's license terms</a>. You can also use a picture you've taken yourself.</li>
 <li>Create a new folder to your project, called <code>assets</code> and add it to Git.</li>
@@ -339,7 +343,9 @@ If you attach an image to your site from another web page, make sure you actuall
 Here is what the final product should look like:
 <img src="/assets/html-exercise-5-en.png" alt="The result of fifth exercise"/>
 <li>When you are done in your opinion, create a commit with the message <code>Part 3, add fifth exercise</code> and push it to GitHub.</li>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Exercise 5: Images and comments" content=exercise_auto_5 %}
+
 
 # Links
 
@@ -352,8 +358,7 @@ The link element has an `href` attriibute, which defines the address of the link
 
 The `a` tag has several other attributes as well. For example the attribute `target="_blank"` would force the browser to open the resource in a new tab. You can learn more about the different attributes [here](https://www.w3schools.com/tags/tag_a.asp).
 
-<div class="exercise">
-<h3>Exercise 6: Linking HTML files {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_6 %}
 <ol>
 <li>Create a new HTML document in the same folder as the first one called "index.html".</li>
 <li>Add the new file to Git.</li>
@@ -363,7 +368,9 @@ The `a` tag has several other attributes as well. For example the attribute `tar
 <img src="/assets/html-exercise-6-en.png" alt="The result of sixth exercise"/>
 <li>When you are done in your opinion, create a new commit with the message <code>Part 3, add sixth exercise</code> and push it to GitHub.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Exercise 6: Linking HTML files" content=exercise_auto_6 %}
+
 
 ## CSS
 
@@ -389,8 +396,7 @@ In order to use CSS to influence the styles of an HTML document, it has to be li
 
 Note that there is a new attribute in the link above. The attribute `rel` tells the browser that the link is to a stylesheet. Thus the browser knows that it needs to read that file and use its contents when rendering the page.
 
-<div class="exercise">
-<h3>Exercise 7: Linking CSS {% include points.html text="5%" %}</h3>
+{% capture exercise_auto_7 %}
 <ol>
 <li>Create a new CSS file called <code>style.css</code> to the same location with the previous files.</li>
 <li>Add the new file to Git.</li>
@@ -400,7 +406,9 @@ Note that there is a new attribute in the link above. The attribute `rel` tells 
 
 When you are done in your opinion, create a commit with the message <code>Part 3, add seventh exercise</code> and push it to GitHub.
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="5%" title="Exercise 7: Linking CSS" content=exercise_auto_7 %}
+
 
 # Alternative ways of adding CSS styles
 
@@ -527,9 +535,7 @@ The universal selector simply means choosing all the elements of an HTML documen
 
 The selectors discussed above are rather simple, but they will get you a long way. Nevertheless, it is also possible to use more complex selector structures, to for example select elements based on the element they are inside of. You can read more for example [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Selectors).
 
-<div class="exercise">
-<h3>Exercise 8: Selectors {% include points.html text="10%" %}</h3>
-
+{% capture exercise_auto_8 %}
 The idea of this exercise is to test out each of the selectors in order to add colors to the <code>index.html</code> we have been working with.
 
 <ol>
@@ -538,7 +544,9 @@ Try and make the site look like the following:
    <img src="/assets/html-exercise-8-en.png" alt="The result of the eight exercise"/>
 <li>When you are done in your opinion, create a commit with the message <code>Part 3, add eigth exercise</code>, and push it to GitHub.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Exercise 8: Selectors" content=exercise_auto_8 %}
+
 
 # The size, margin, indentation and location of elements
 
@@ -677,8 +685,7 @@ The element is still on the right side of the page, but it no longer reserves sp
 
 The position property is often regarded as the one of the most complicated features of CSS. We recommend you read more about it for example from [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 
-<div class="exercise">
-<h3>Exercise 9: Aligned elements {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_9 %}
 <ol>
 <li>Create a new file to your Git project, and name it <code>positions.html</code>.</li>
 <li>Create a CSS file and link it to the new HTML file in order to add styles to it.</li>
@@ -686,9 +693,14 @@ The position property is often regarded as the one of the most complicated featu
 <li>Edit the HTML and CSS code in order to make the website look like the following:</li>
 <img src="/assets/html-exercise-9-en.png" alt="Adjacent elements"/>
 <li>When you think you are done, create a commit with the message <code>Part 3, add ninth exercise</code>, and push it to GitHub.</li>
-<div class="note">Hint: Try adding elements inside others, and use the position property to change their locations.</div>
+{% capture message_info_4 %}
+Try adding elements inside others, and use the position property to change their locations.
+{% endcapture %}{% include message.html type="info" text=message_info_4 title="Hint" %}
+
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Exercise 9: Aligned elements" content=exercise_auto_9 %}
+
 
 # CSS units of measure
 
@@ -740,8 +752,7 @@ There exists an immense amount of different kinds of CSS properties designed for
 
 `border-color` defines the color of the elements' border. It takes the same values as the properties `background-color` and `color`.
 
-<div class="exercise">
-<h3>Exercise 10: Practising CSS properties {% include points.html text="5%" %}</h3>
+{% capture exercise_auto_10 %}
 <ol>
 <li>The idea of the exercise is to get to know some CSS properties independently.</li>
 <li>Try and make the site look like the following:</li>
@@ -749,7 +760,9 @@ There exists an immense amount of different kinds of CSS properties designed for
 <li>At this point it doesn't matter that the page is quite ugly, just focus on trying out different properties.</li>
 <li>When you are done in your opinion, create a commit with the message <code>Part 3, add tenth exercise</code> and push it to GitHub.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="5%" title="Exercise 10: Practising CSS properties" content=exercise_auto_10 %}
+
 
 # How to improve readibility using CSS
 
@@ -844,14 +857,15 @@ code {
 
 The page now looks significantly better, at least compared to the original appearance.
 
-<div class="exercise">
-<h3>Exercise 11: Making a site readable with CSS {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_11 %}
 <ol>
 <li>Make the example website more readable accoring to the instructions above. You need a large body of text for the exercise. You can for example use the text from this tutorial, or any other text you are allowed to use.</li>
 <li>Test out as many properties and principles as you can think of. There is no single right solution.</li>
 <li>When you are done in your opinion, create a commit with the message <code>Part 3, eleventh exercise</code> and push it to GitHub.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Exercise 11: Making a site readable with CSS" content=exercise_auto_11 %}
+
 
 # Publishing a website and GitHub pages
 
@@ -904,7 +918,7 @@ Now the site is live on the Internet, an we can simply navigate to it. The addre
 
 Now we have built a website, which is accessible to anyone using the Internet.
 
-<div class="note">
+{% capture message_info_5 %}
 <strong>For university students:</strong>
 <p>
 Students who are currently enrolled at the University of Helsinki are given some server space to run their own static websites. The website can be published by adding the required documents to the user's CS home folder in the path <code>/cs/home/username/public_html/</code>. The website will be published to the following address: <code>http://www.cs.helsinki.fi/u/your_username/</code>.
@@ -921,12 +935,10 @@ Students who are currently enrolled at the University of Helsinki are given some
 </ol>
 </ol>
 <p>When proper permissions have been given, you should be able to navigate to the site using your browser.</p>
+{% endcapture %}{% include message.html type="info" text=message_info_5 title="University provided hosting space" %}
 
-</div>
 
-<div class="exercise">
-
-<h3>Exercise 12: A personal CV website {% include points.html text="10%" %}</h3>
+{% capture exercise_auto_12 %}
 <ol>
 <li>Create a new repository on GitHub.</li>
 <li>Use the repository to create a CV website, where you write about yourself, your interests and your possible work experience.</li>
@@ -934,7 +946,9 @@ Students who are currently enrolled at the University of Helsinki are given some
 <li>Push all the changes you make to GitHub. Try and divide the process into sensible sized commits; don't just create one big commit.</li>
 <li>Publish the site as a GitHub page, or using the department's server space.</li>
 </ol>
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Exercise 12: A personal CV website" content=exercise_auto_12 %}
+
 
 ## The end
 
@@ -957,8 +971,9 @@ Take a break, and congratulate yourself for finishing reading the material. Then
 
 Finally, make sure to read the exam instructions before starting. Also remember to mark all the exercises you have done on Moodle, so we can use them in grading, and that you have enrolled on the course in Weboodi. 
 
-<div class="warning">
+{% capture message_warning_2 %}
 Give anonymous feedback <a href="https://weboodi.helsinki.fi/hy/etusivu.html?Kieli=6"> in Weboodi</a> from > Tools > My Feedback.
-</div>
+{% endcapture %}{% include message.html type="warning" text=message_warning_2 title="Give feedback" %}
+
 
 Thank you for participating on the course, and good luck with your studies! Google and fellow students will get you through anything :)

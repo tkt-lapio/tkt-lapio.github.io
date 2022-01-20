@@ -1,0 +1,11 @@
+<div class="message {{ include.type }}">
+  <div class="message-accent">
+    {% include icons/{{ include.type }}.svg %}
+  </div>
+  <div class="message-content">
+    {% if include.title %}
+      <h5 class="message-title">{{ include.title }}</h5>
+    {% endif %}
+    <p class="message-text">{{ include.text }}</p>
+  </div>
+</div>

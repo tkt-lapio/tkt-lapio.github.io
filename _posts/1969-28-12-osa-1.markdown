@@ -49,9 +49,11 @@ Olet luultavasti varsin tottunut käyttämään tietokoneita tietyllä tavalla. 
 
 Edellä mainitussa tapauksessa kyseessä on _graafinen käyttöliittymä_: Toimintovaihtoehdot esitetään jonkinlaisessa valikossa, ja valinnat tehdään klikkailemalla. Tiedostoja ja kansioita voi esimerkiksi myös vain raahata haluttuihin paikkoihin. Komentorivi, eli terminaali sen sijaan on _tekstikäyttöliittymä_. Tällöin tietokoneelle annetaan käskyjä kirjoittamalla, komentojen ja näppäinyhdistelmien avulla. Vaihtoehtoja ei esitetä samalla tavalla, eikä hiirtä käytetä juuri ollenkaan.
 
-<div class="note">
-Rakkaalla lapsella on monta nimeä: Komentorivi on englanniksi <i>command line</i> tai <i>terminal</i>. Siihen viitataan joskus myös sanalla <i>shell</i> tai <i>console</i>.
-</div>
+{% capture note_auto_1 %}
+Komentorivi on englanniksi <i>command line</i> tai <i>terminal</i>. Siihen viitataan joskus myös sanalla <i>shell</i> tai <i>console</i>.
+{% endcapture %}
+
+{% include message.html type="info" title="Rakkaalla lapsella on monta nimeä" text=note_auto_1 %}
 
 Aikaisemmin tekstikäyttöliittymä oli ainoa mahdollisuus hallinnoida konetta. Vaikka nykyään graafiset käyttöliittymät ovat yleisiä ja toimivia, komentorivi on koodareille edelleen erittäin tärkeä työkalu. Monille koodareiden käyttämille ohjelmille ei ole edes olemassa graafista käyttöliittymää, vaan niitä käytetään pelkästään komentoriviltä.
 
@@ -63,9 +65,11 @@ tunnus@tietokone:~$
 
 `@` merkin edessä oleva teksti on käyttäjänimesi tietokoneella, ja sen jälkeen, ennen kaksoispistettä näkyvä teksti on tietokoneen nimi. Suoritettavan komennon voi kirjoittaa kursorin osoittamaan kohtaan, ja ajaa painamalla <kbd>ENTER</kbd>.
 
-<div class="note">
+{% capture note_dollar_sign %}
 Huomaa, että netistä löytyvissä ohjeissa on joskus <code>$</code>-merkki komennon edessä. Se symboloi sitä, että komento tulee ajaa nimenomaan komentorivillä normaalikäyttäjänä, eikä esimerkiksi jonkin ohjelmointikielen tulkissa. Se <strong>ei</strong> tarkoita, että käyttäjän tulisi laittaa dollarimerkki osaksi käskyä.
-</div>
+{% endcapture %}
+
+{% include message.html type="info" title="Vakiintunut käytäntö" text=note_dollar_sign %}
 
 ![Terminaali macOSissa](/assets/mac_terminal.png)
 
@@ -120,9 +124,11 @@ Vaikka `man`-sivut eivät ole järin aloittelijaystävällisiä, ne tarjoavat yl
 
 "Name"-kohdasta saa yleiskäsityksen siitä, mitä komento tekee. "Synopsis" kertoo, miten komentoa voidaan kutsua. Esimerkiksi komennon `ls` tapauksessa ensin annetaan kommenolle vivut, ja viimeisenä kohdekansion polku. Molemmat ovat valinnaisia parametreja, eli komento toimii ilmankin, minkä takia ne ovat hakasulkujen sisällä.
 
-<div class="note">
+{% capture note_man_pages %}
 Voit selata <code>man</code>-sivua nuolinäppäimellä, ja poistua painamalla <code>q</code>.
-</div>
+{% endcapture %}
+
+{% include message.html type="info" title="Manuaalin selaaminen" text=note_man_pages %}
 
 Vivuille määritellään joskus kaksi muotoa: lyhyt, eli yleensä yhden kirjaimen pituinen, ja pitkä muoto. Lyhyt muoto annetaan yhden, ja pitkä muoto kahden väliviivan kanssa. `man`-sivu listaa molemmat, kuten ylläolevassa kuvassa näkyy.
 
@@ -138,9 +144,11 @@ tai
 ls 'olen vähän hassusti nimetty tiedosto'
 ```
 
-<div class="note">
+{% capture note_abbrev_cmd %}
 Komennot voivat vaikuttaa aluksi hieman erikoisesti nimetyiltä, sillä komennot ovat usein lyhenteitä englanninkielisistä sanoista. Komento man ei tarkoita kuitenkaan miestä, vaan on lyhenne sanasta "manual", ls on lyhenne sanasta "list", ja niin edelleen. Materiaalissa on mainittu joitain komentojen lyhenteitä, tarkoituksena avata komentojen merkityksiä.
-</div>
+{% endcapture %}
+
+{% include message.html type="info" title="Komentojen lyh. nimet" text=note_abbrev_cmd %}
 
 <h2> Tiedostohallinta komentoriviltä</h2>
 
@@ -150,15 +158,19 @@ Avaa graafinen tiedostoselain. Se löytyy Ubuntu-ympäristössä ohjelmana nimel
 
 Tiedostoselaimessa tulisi näkyä _kotihakemistosi_. Kotihakemisto tarkoittaa hakemistoa, joka sisältää kaikki tietyn käyttäjän henkilökohtaiset tiedostot ja kansiot. Mikäli olet laitoksen koneella, kotihakemistosi sisältää samat asiat riippumatta siitä millä _fyysisellä_ koneella satut olemaan: tietokoneen sisältö haetaan toisaalta. Jos taas luet materiaalia omalta koneeltasi, kotihakemistossasi on vain ne asiat mitkä sillä fyysisellä koneella on.
 
-<div class="note">
+{% capture note_wsl_dir %}
 Jos käytät Windows subsystem for Linuxia (tai Ubuntu -sovellusta) kotihakemistosi ei subsystemin kotihakemisto ole sama, kuin Windowsin kotihakemisto (C:/Users/käyttäjänimi). Huomioi tämä siirtymällä kansioon /mnt/c/Users/käyttäjänimi (cd /mnt/c/Users/käyttäjänimi) kun haluat nähdä Windowsin puolella olevat tiedostosi. Huomioi myös, että kun materiaalissa käytetään hakemistoa ~ tarkoitetaan sillä Linuxin kotihakemistoa.
-</div>
+{% endcapture %}
+
+{% include message.html type="info" title="Kotihakemisto Windowsilla" text=note_wsl_dir %}
 
 Huomaa, että jos avasit graafisen tiedostoselaimen komentoriviltä, komentorivi jäi ikään kuin lukkoon, ja sillä ei voinut tehdä muuta ellei graafista ohjelmaa suljeta. Voit aina sulkea käynnissä olevan ohjelman painamalla näppäinyhdistelmää <kbd>CTRL + C</kbd>. Joskus kerta ei riitä, ja voit huoletta painaa sitä monta kertaa.
 
-<div class="note">
+{% capture note_term_copy %}
 Koska yhdistelmällä CTRL + C on terminaalissa erityinen merkitys, joudut Linuxissa käyttämään yhdistelmää CTRL + SHIFT + C terminaalista maalatun tekstin kopioimiseen, sekä CTRL + SHIFT + V tekstin liittämiseen.
-</div>
+{% endcapture %}
+
+{% include message.html type="info" title="Kopioiminen terminaalista" text=note_term_copy %}
 
 Kotihakemistosi sisältää luultavasti paljon sälää, esimerkiksi _Downloads_ ja _Documents_ -nimiset kansiot. Haluamme nähdä samat asiat komentoriviltä, joten avaa viereen komentorivi, kirjoita siihen komento `ls`, ja paina <kbd>ENTER</kbd>. Tilanne tulee näyttämään suurin piirtein tältä:
 
@@ -198,15 +210,17 @@ Graafisessa tiedostoselaimessa voi luoda kansioita käyttämällä hiiren oikeaa
 
 Komentorivi toimii siis loppujen lopuksi hyvin samalla tavalla kuin graafinen tiedostoselain: `cd` vastaa kansiota klikkaamista, ja `ls` näyttää hakemiston tiedostot ja kansiot. Tässä osassa opitaan tekemään tekstikäyttöliittymässä asioita, jotka osataan jo tehdä graafisella käyttöliittymällä.
 
-<div class="exercise">
-<h3>Tehtävä 1: Graafinen vs. tekstikäyttöliittymä {% include points.html text="5%" %}</h3>
+{% capture exercise_1 %}
 Voit merkata tämän tehtävän tehdyksi, kun olet käynyt läpi alun esimerkin graafisen ja tekstikäyttöliittymän eroista tehden samalla esimerkit komentorivillä.
-</div>
+{% endcapture %}
 
-<div class="exercise">
-<h3>Tehtävä 2: Kansion luominen {% include points.html text="5%" %}</h3>
+{% include exercise.html points="5%" title="Tehtävä 1: Graafinen vs. tekstikäyttöliittymä" content=exercise_1 %}
+
+{% capture exercise_2 %}
  Luo komentoriviltä kansio nimeltä "lapio" kotihakemistoosi. Kun olet luonut kansion tarkista että se on luotu komennolla <code>ls</code>
-</div>
+{% endcapture %}
+
+{% include exercise.html points="5%" title="Tehtävä 2: Kansion luominen" content=exercise_2 %}
 
 <h2>Komentorivin käyttöä nopeuttavia seikkoja</h2>
 
@@ -228,11 +242,13 @@ Muokkausikkunaa ei suljeta raksista, kuten vaikka geditissä, vaan se tehdään 
 
 Huomaa, että `nano` kertoo joka askeleella, mitä valintaa mitkäkin näppäimet vastaavat. Tämä on varsin yleistä, ja siksi onkin tärkeää aina lukea käyttämäsi ohjelman tulostukset (niin tyhmän yksinkertaiselta neuvolta kuin se kuulostaakin). Yleensä ohjelma kertoo itse, mitä käyttäjän tulee tehdä seuraavaksi.
 
-<div class="note">
+{% capture note_nano_not_found %}
 Jos saat virheviestin <code>nano: command not found</code>, nanoa ei ole asennettu koneellesi. Helpoiten sen saa asennettua pakettienhallintajärjestelmän avulla. Katso osan lopusta linkki pakettienhallintajärjestelmien käyttöohjeisiin.
-</div>
+{% endcapture %}
 
-<div class="note">
+{% include message.html type="info" title="Puuttuva nano" text=note_nano_not_found %}
+
+{% capture note_notepad %}
 Windowsissa voit käyttää geditin sijaan notepad-ohjelmaa, jonka pitäisi olla valmiiksi asennettuna koneelle. Suosittelemme kuitenkin <a href="https://notepad-plus-plus.org/">notepad++</a>-editorin käyttämistä. Windows käsittelee rivinvaihtoja (merkki, joka lisätään tekstiin, kun painat enter-näppäintä) eri tavalla kuin Unix-tyyppiset järjestelmät: Windowsissa merkki on <code>\r\n</code> ja Unixissa <code>\n</code>. Tämän takia, kun tutkit notepadilla luotua tiedostoa komentorivillä, se näyttää oudolta.
 <br/><br/>
 Alla näkyy, miten voit notepad++ -editorissa luoda tiedoston, jossa rivinvaihdot käsitellään oikein myös Unix-komentorivillä.
@@ -241,11 +257,11 @@ Alla näkyy, miten voit notepad++ -editorissa luoda tiedoston, jossa rivinvaihdo
 <br/>
 
 Huomaa, että notepadillä luomasi tiedosto on luotu Windwos-käyttäjällä, ja bash-komentorivillä käytät Unix-käyttäjää. Löydät Windows-käyttäjän tiedostot komentorivillä esimerkiksi kansiosta <code>/mnt/c</code>, jos tallensit tiedoston C-asemalle.
-</div>
+{% endcapture %}
 
-<div class="exercise">
-<h3>Tehtävä 3: nano {% include points.html text="5%" %}</h3>
+{% include message.html type="info" title="Notepad ja rivinvaihdot" text=note_notepad %}
 
+{% capture exercise_3 %}
 Ota selvää miten <code>nano</code> toimii käyttämällä Googlea tai <code>man</code>-komentoa. Selvitä seuraavat asiat:
 
 <ul>
@@ -253,14 +269,12 @@ Ota selvää miten <code>nano</code> toimii käyttämällä Googlea tai <code>ma
 <li> Miten voin kopioida ja liittää nanoon</li>
 </ul>
 
-
 Tarkista, että osaat tehdä nämä asiat käytännössä! Esimerkiksi avaa tiedosto <code>esimerkki.txt</code>, lisää sinne tekstiä ja tallenna. Avaa sen jälkeen tiedoston jollain tekstieditorilla varmistaaksesi, että sisältö on tallentunut.
+{% endcapture %}
 
-</div>
+{% include exercise.html points="5%" title="Tehtävä 3: nano" content=exercise_3 %}
 
-<div class="exercise">
-<h3>Tehtävä 4: vim {% include points.html text="5%" %}</h3>
-
+{% capture exercise_4 %}
 Vastaavanlainen, mutta paljon enemmän ominaisuuksia sisältävä komentolinjalla toimiva tekstieditori on <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>. Se on kuitenkin myös huomattavasti monimutkaisempi käyttää. Ota selvää vimistä seuraavat asiat:
 
 <ul>
@@ -268,17 +282,21 @@ Vastaavanlainen, mutta paljon enemmän ominaisuuksia sisältävä komentolinjall
 <li>Miten niiden välillä vaihdetaan</li>
 <li>Miten saat vimin suljettua <br></li>
 </ul>
-</div>
+{% endcapture %}
 
-<h2> Polut</h2>
+{% include exercise.html points="5%" title="Tehtävä 4: vim" content=exercise_4 %}
+
+<h2>Polut</h2>
 
 Polku (englanniksi _path_) tarkoittaa osoitetta tiettyyn tiedostoon tai kansioon. Se koostuu lähinnä kansioiden ja tiedostojen nimistä ja `/`-merkistä. Polkuja käytetään komentojen argumenteissa.
 
 Polku voi olla _suhteellinen_ tai _absoluuttinen_: Suhteellinen polku merkitään suhteessa nykyiseen kansioon, absoluuttinen suhteessa järjestelmän _juurikansioon_ (englanniksi _root folder_ tai _the root_). Juurikansio sisältää kaikki tietokoneen tiedostot, eikä sitä tule sekoittaa käyttäjäkohtaiseen kotihakemistoon. Juurikansio sisältää siis kaikkien käyttäjien kotihakemistot.
 
-<div class="warning">
+{% capture warn_caution_with_root %}
 Ole varovainen juurihakemiston kanssa! Se sisältää kaikenlaista tärkeää, älä siis muuta turhaan tiedostoja tai poista kansioita juuressa.
-</div>
+{% endcapture %}
+
+{% include message.html type="warning" title="Juurihakemisto" text=warn_caution_with_root %}
 
 Absoluuttinen polku alkaa aina `/`-merkillä, sillä juurikansion absoluuttinen polku on `/`. Jos polkua ei aloita merkillä `/`, järjestelmä luulee, että viitataan kansioon joka on nykyisessä hakemistossa. Nykyisen kansion absoluuttisen polun näkee komennolla `pwd` (**p**rint **w**orking **d**irectory). Kotihakemiston absoluuttinen polku on Linuxissa yleensä `/home/tunnus/` ja macOSissa `/Users/tunnus/`. Siihen voidaan myös viitata merkillä `~`. Esimerkiksi absoluuttinen polku kotihakemiston Downloads-kansioon olisi Linuxissa `/home/tunnus/Downloads` tai `~/Downloads`.
 
@@ -298,18 +316,19 @@ tunnus@tietokone:~/Downloads/kissakuvia/marraskuu$ ls
 kissa2.jpg
 ```
 
-<div class="note">
+{% capture note_relative %}
 Muista, että komentorivi näyttää sinulle koko ajan nykyisen kansiosi polun suhteessa kotihakemistoosi. Tämä helpottaa tiedostojen seassa navigointia ja polkujen kirjoittamista.
-</div>
+{% endcapture %}
 
-<div class="note">
+{% include message.html type="info" title="Suhteellinen sijainti" text=note_relative %}
+
+{% capture note_tab_completion %}
 Muista käyttää tab-taydennystä! Kokeile aina ennen kuin kirjoitat kokonaisen kansion tai tiedostonnimen, pystytkö täydentämään nimen suoraan painamalla tab-näppäintä.
-</div>
+{% endcapture %}
 
+{% include message.html type="info" title="Säästä sormiasi" text=note_tab_completion %}
 
-<div class="exercise">
-<h3>Tehtävä 5: Tiedostonhallinnan harjoittelu 1 {% include points.html text="5%" %}</h3>
-
+{% capture exercise_5 %}
 Harjoitellaan tässä tiedostohallintaa komentoriviltä.
 Luo ensin kuvaa vastaava kansiorakenne:
 <img src="/assets/lapio_start.png" alt="Alkutilanne"/>
@@ -320,11 +339,16 @@ Oheisessa kansiorakenteessa siis <code>koulu</code>-kansio sisältää kolme kan
 Luo ensin <code>koulu</code>-kansio, ja siirry sen jälkeen sen sisään. Tämän jälkeen luo kuvan mukainen tiedostorakennelma. Pyri luomaan osa tiedostoista suoraan koulu-kansiosta, ja osa niin, että siirryt alikansioon sisään ennen kuin luot sinne tiedoston.
 </p>
 
-<p class="note">Voit luoda tekstitiedoston avaamalla sen tekstieditorilla ja tallentamalla, tai komennolla <code>touch</code>.</p>
-
+{% capture note_touch %}
+<p>Voit luoda tekstitiedoston avaamalla sen tekstieditorilla ja tallentamalla, tai komennolla <code>touch</code>.</p>
 <p>Tarkista, että olet luonut oikeat kansiot ja tiedostot <code>ls</code>-komennolla.</p>
+{% endcapture %}
 
-</div>
+{% include message.html type="info" title="Tiedoston luominen" text=note_touch %}
+{% endcapture %}
+
+{% include exercise.html points="5%" title="Tehtävä 5: Tiedostonhallinnan harjoittelu 1/2" content=exercise_5 %}
+
 <h2> Tiedostojen siirtäminen ja uudelleennimeäminen</h2>
 
 Graafisessa ympäristössä kopiointi onnistuu näppäinyhdistelmällä <kbd>CTRL + C</kbd>, leikkaus yhdistelmällä <kbd> CTRL + X</kbd> ja liittäminen yhdistelmällä <kbd>CTRL + V</kbd>. Katsotaan miten vastaavat asiat saadaan tehtyä komentorivillä.
@@ -343,24 +367,32 @@ Esimerkkejä `mv`:n toiminnasta:
 
 `mv ~/esimerkki.txt ~/Downloads/` siirtää tiedoston `esimerkki.txt` kotihakemistosta Downloads-kansioon.
 
-<div class="exercise">
-<h3>Tehtävä 6: Tiedostonhallinnan harjoittelu 2 {% include points.html text="5%" %}</h3>
-
+{% capture exercise_6 %}
 Tämä on jatkoa edelliseen tehtävään.
 Kun olet luonut alkutilanteen, muuta se komennoilla <code>mv</code> ja <code>cp</code> seuraavan näköiseksi:
 
 Huomaa, että kiusallinen kirjoitusvirhe tiedoston <code>kmntorivi.txt</code> nimessä on korjattu. Tiedosto <code>javasta.txt</code> on uudelleennimetty ja siirretty kansioon <code>ohpe</code>.
-<img src="/assets/lapio_goal.png" alt="Lopputilanne"/>
-
+<div><img src="/assets/lapio_goal.png" alt="Lopputilanne"/></div>
 Muista käyttää tab-täydennystä!
-</div>
+{% endcapture %}
 
-<div class="exercise">
-<h3>Tehtävä 7: Kansion poistaminen {% include points.html text="5%" %}</h3>
+{% include exercise.html
+  points="5%"
+  title="Tehtävä 6: Tiedostonhallinnan harjoittelu 2/2"
+  content=exercise_6 %}
 
-Tiedostoja voidaan poistaa komennolla <code>rm</code>, eli <b>r</b>e<b>m</b>ove. Käyttäen komentoriviä, poista edellisessä tehtävässä luomasi tiedostot. Selvitä sitten, miten voit poistaa hakemiston komentoriviltä, ja poista koko <code>koulu</code>-hakemisto. <div class="warning">Huomaa, että kun poistat jotain komentoriviltä, se ei siirry roskakoriin vaan poistuu heti, ole siis varovainen.</div>
+{% capture exercise_7 %}
 
-</div>
+Tiedostoja voidaan poistaa komennolla <code>rm</code>, eli <b>r</b>e<b>m</b>ove. Käyttäen komentoriviä, poista edellisessä tehtävässä luomasi tiedostot. Selvitä sitten, miten voit poistaa hakemiston komentoriviltä, ja poista koko <code>koulu</code>-hakemisto.
+
+{% capture warn_no_trash %}
+Huomaa, että kun poistat jotain komentoriviltä, se ei siirry roskakoriin vaan poistuu heti, ole siis varovainen.
+{% endcapture %}
+
+{% include message.html type="warning" title="Poistaminen todellakin tarkoitaa poistamista" text=warn_no_trash %}
+{% endcapture %}
+
+{% include exercise.html points="5%" title="Tehtävä 7: Kansion poistaminen" content=exercise_7 %}
 
 <h2> Villikortit</h2>
 
@@ -375,10 +407,10 @@ tunnus@hal9000:~/esimerkki$ ls
 kohde toinen.png
 ```
 
-<div class="exercise">
-<h3>Tehtävä 8: Villikortti {% include points.html text="10%" %}</h3>
+{% capture exercise_8 %}
 Tee kansio nimeltä <i>kuvia</i> komentorivillä, ja lataa sinne internetistä kaksi kuvaa, joista toinen on <code>jpg</code>-muotoinen, ja toinen <code>png</code>-muotoinen. Lisää sen lisäksi kansioon joitain tiedostoja, esimerkiksi nimillä <code>tiedosto.txt</code> ja <code>en_ole_kuva.txt</code>. Luo lopuksi kansio nimeltä <code>kuvat</code> ja kopioi sinne tutoriaalia hyödyntäen kaikki kuvat nykyisestä hakemistosta. Voit lukea muista mahdollisista villikorteista esimerkiksi <a href="http://www.linfo.org/wildcard.html">täältä</a>.
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 8: Villikortti" content=exercise_8 %}
 
 <h2> Muita hyödyllisiä komentoja</h2>
 
@@ -420,14 +452,16 @@ Tämä rivi taas on vähemmän salainen.
 Huomaa, että osuma löytyy, vaikka se oli sanan keskellä. Useimmissa ympäristöissä komento myös maalaa (järjestelmästä riippuen) täsmätyn osan tiedostosta esimerkiksi punaisella:
 ![grep-esimerkki](/assets/päiväkirja.png){:class="img-responsive"}
 
-<div class="exercise">
-<h3>Tehtävä 9: grep {% include points.html text="10%" %}</h3>
+{% capture exercise_9 %}
 Ilman erillisiä vipuja <code>grep</code> ei kohtele kirjaimia samana, jos ne ovat eri kokoisia. Esimerkiksi "a" ja "A" ovat sille siis erilaisia kirjaimia.
 <ul>
 <li>Tarkastele <code>grep --help</code> apusivun tulosta tai <code>man</code>-sivua, ja ota selvää miten pääset eroon kirjainkoon erottelusta.</li>
-<div class="note">
+
+{% capture note_case %}
 Vinkki: Kirjainkoko on englanniksi "case".
-</div>
+{% endcapture %}
+
+{% include message.html type="info" text="Vinkki: Kirjainkoko on englanniksi \"case\"." %}
 
 <li>Ota selvää esimerkiksi Googlettaen, miten saat haettua vain merkkijonoja, jotka ovat rivin alussa. Tarkista, että osaat tehdä tämän. Voit tehdä sen kirjoittamalla tiedostoon esimerkiksi</li>
 </ul>
@@ -444,11 +478,14 @@ unix
 unisport
 </pre>
 ja tarkistamalla että saat <code>grep</code>in avulla valittua oikeat sanat.
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 9: grep" content=exercise_9 %}
 
-<div class="note">
+{% capture note_test %}
 Etsiessäsi tietoa netistä komennoista ja niiden toiminnoista, varmista aina, että ymmärrät varmasti lukemasi testaamalla mahdollisuuksien mukaan niiden toiminnallisuutta. Tällä tavalla opit helpommin, ja huomaat nopeammin mahdolliset väärinymmärrykset.
-</div>
+{% endcapture %}
+
+{% include message.html type="info" title="Kokeilemalla opit" text=note_test %}
 
 Edellä mainitut ovat tärkeitä komentoja komentorivillä työskentelijän arsenaalissa, mutta niiden hyöty tulee kunnolla esille vasta kun ne yhdistetään muihin komentoihin. Komentorivillä komentojen yhdistäminen tapahtuu yleensä joko putkella `|`, tai nuolella `>`. Tarkastellaan seuraavaksi näitä operaattoreita.
 
@@ -468,16 +505,17 @@ Joskus voi kuitenkin olla hyödyllistä kirjoittaa tuloste tiedostoon esimerkiks
 
 Samoin operaattorin `<` avulla voidaan antaa tiedoston sisältö syötteenä ohjelmalle. Tämä on hyödyllistä käsiteltäessä suuria syötteitä, tai tehtäviä automatisoitaessa.
 
-
-<div class="note">
+{% capture note_shell_redirect %}
 Operaattori <code>></code> korvaa kohdetiedoston koko sisällön annetulla tekstillä, <code>>></code> lisää sen kohdetiedoston loppuun uudelle riville.
-</div>
+{% endcapture %}
 
-<div class="exercise">
-<h3>Tehtävä 10: Opiskelijan muistiinpanot {% include points.html text="5%" %}</h3>
+{% include message.html type="info" title="Tulosteen ohjaaminen tiedostoon" text=note_shell_redirect %}
+
+{% capture exercise_10 %}
 Luo tekstitiedosto <code>muistiinpanot.txt</code> komentorivillä. Kopioi sinne seuraava teksti, joka kuvailee erään opiskelijan ajatuksia tiettynä viikkona:
-</div>
-```
+<br />
+<br />
+{% highlight text %}
 maanantai ohpe: Java on ohjelmointikieli
 maanantai unicafe: Kalakeittoa
 tiistai ohpe: Luokka voi toteuttaa rajapinnan
@@ -489,11 +527,11 @@ keskiviikko unicafe: Papupataa
 torstai unicafe: Hernekeittoa ja pannukakkua
 torstai lapio: Komentorivi on musta laatikko
 perjantai unicafe: Pitsaa
-```
-<div class="exercise">
-Eriytä tämän jälkeen viikon ruokalista omaksi tiedostokseen <code>unicafe.txt</code>. Ruokalistoja ei tarvitse poistaa <code>muistiinpanot.txt</code>-tiedostosta. Eriytä myös kurssiin <code>ohpe</code> liittyvät muistiinpanot.
+{% endhighlight %}
 
-</div>
+Eriytä tämän jälkeen viikon ruokalista omaksi tiedostokseen <code>unicafe.txt</code>. Ruokalistoja ei tarvitse poistaa <code>muistiinpanot.txt</code>-tiedostosta. Eriytä myös kurssiin <code>ohpe</code> liittyvät muistiinpanot.
+{% endcapture %}
+{% include exercise.html points="5%" title="Tehtävä 10: Opiskelijan muistiinpanot" content=exercise_10 %}
 
 <h2> SSH-yhteys</h2>
 
@@ -510,9 +548,11 @@ Tietojenkäsittelytieteen osasto tarjoaa neljä eri palvelinta osaston koneisiin
 
 Kaikki nämä palvelimet ohjaavat siis samaan käyttäjäkohtaiseen kotihakemistoon, johon pääsee kaikilta osaston koneilta.
 
-<div class="warning">
-  Nykyään näiden palvelimien käyttäminen vaatii erillistä käyttäjätunnusten aktivointia, joka tapahtuu olemalla yhteydessä <a href="https://helpdesk.it.helsinki.fi/">Helpdeskiin</a>. Tällä käytännöllä pyritään minimoimaan vahinkoja tapauksissa, joissa opiskelijan AD-tunnukset ovat joutuneet vääriin käsiin.
-</div>
+{% capture warn_cs_server_credentials %}
+Nykyään näiden palvelimien käyttäminen vaatii erillistä käyttäjätunnusten aktivointia, joka tapahtuu olemalla yhteydessä <a href="https://helpdesk.it.helsinki.fi/">Helpdeskiin</a>. Tällä käytännöllä pyritään minimoimaan vahinkoja tapauksissa, joissa opiskelijan AD-tunnukset ovat joutuneet vääriin käsiin. <b>Huomaa myös, että nämä palvelimet ovat ainoastaan Helsingin Yliopiston tietojenkäsittelytieteen pääaineopiskelijoiden käyttöön.</b>
+{% endcapture %}
+
+{% include message.html type="warning" title="Oikeudet Helsingin Yliopiston palvelimille" text=warn_cs_server_credentials %}
 
 Käytetään `ssh`-komentoa osaston koneelle yhteyden ottamiseen:
 
@@ -521,7 +561,11 @@ tunnus@hal9000:~$ ssh tunnus@melkki.cs.helsinki.fi
 tunnus@melkki.cs.helsinki.fi's password:
 ```
 
-<div class="note">Huomaa, että salasanaa kirjoittaessasi on normaalia, että komentoriville ei ilmesty tekstiä.</div>
+{% capture note_no_display_pw %}
+Huomaa, että salasanaa kirjoittaessasi on normaalia, että komentoriville ei ilmesty tekstiä.
+{% endcapture %}
+
+{% include message.html type="info" text=note_no_display_pw %}
 
 Kun SSH-yhteys muodostetaan ensimmäisen kerran, ilmestyy varoitusviesti, jossa kysytään luottaako käyttäjä palvelimeen, johon yhteyttä ollaan muodostamassa. Kun kirjoittaa `yes`, muistaa tietokoneesi palvelimesta tietyn sormenjäljen. Vaikka SSH-yhteys on suojattu, se ei ole täysin immuuni hyökkäyksille (kuten ei oikeastaan mikään internetissä toimiva asia). Jos saat viestin käyttäessäsi SSH-yhteyttä esimerkiksi julkisessa internetissä, kannattaa yhteys jättää muodostamatta, sillä koneesi saattaa olla hyökkäyksen kohteena.
 
@@ -541,7 +585,11 @@ Voit lukea SSH:sta lisää esimerkiksi [täältä](https://www.ssh.com/ssh/) tai
 
 SSH-avainparin voi luodan komennolla `ssh-keygen`. Komento kysyy avaimelle salasanaa ja tallennuspaikkaa. Oletussijaintia tai tiedoston nimeä ei lähtökohtaisesti tarvitse muuttaa, jolloin avain luodaan kotihakemistossa sijaitsevaan `.ssh`-kansioon.
 
-<div class="warning">Käytä SSH-avainta luodessasi aina salasanaa. Jos käytät SSH-avainta osaston palvelimien kanssa, on salasanan asettaminen pakollista yliopiston määräysten mukaan.</div>
+{% capture warn_passphrase %}
+Käytä SSH-avainta luodessasi aina salasanaa. Jos käytät SSH-avainta osaston palvelimien kanssa, on salasanan asettaminen pakollista yliopiston määräysten mukaan.
+{% endcapture %}
+
+{% include message.html type="warning" title="SSH-avaimen salasana" text=warn_passphrase %}
 
 ```
 tunnus@hal9000$ ssh-keygen
@@ -583,15 +631,17 @@ scp polku/kopioitavaan/tiedostoon tunnus@palvelmen.osoite:polku/kohdekansioon
 
 Huomaa palvelimen osoitteen jälkeen lisättävä kaksoispiste!
 
-<div class="note">
 
+{% capture note_copy_key %}
 Voit esimerkiksi kopioida julkisen avaimen kohdepalvelimen kotihakemiston <code>.ssh</code>-kansioon (joudut luultavasti luomaan sen itse), ja sen jälkeen uudelleennimetä avaintiedoston sopivasti.
 
 <br/>
 <i>
 Kannatta myös kokeilla, miten <code>scp</code> toimii, jos kohdekansiota ei ole olemassa.
 </i>
-</div>
+{% endcapture %}
+
+{% include message.html type="info" title="Avaimen tallennus palvelimelle" text=note_copy_key %}
 
 Julkisen avaimen kopioimisen voi myös delegoida komennolle [ssh-copy-id](https://www.ssh.com/ssh/copy-id).
 
@@ -608,32 +658,35 @@ ssh-add
 ```
 Voit lukea lisää SSH:n konfiguroimisesta esimerkiksi [täältä](https://linux.fi/wiki/SSH).
 
-<div class="exercise">
-<h3>Tehtävä 11: SSH-yhteys {% include points.html text="10%" %}</h3>
+{% capture exercise_11 %}
 
 Luo koneellesi SSH-avainpari. Mahdollista sen jälkeen avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, eli sinulla ei ole yliopiston tunnusta, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
 
-<div class="note">
+{% capture note_faculty_devices %}
 Mikäli teet tehtävän laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.
-</div>
+{% endcapture %}
 
-<div class="note">
+{% include message.html type="info" title="Seuraaminen osastoja laitteilla" text=note_faculty_devices %}
+
+{% capture note_specify_key %}
 Mikäli loit avainparin itse määrittelemääsi polkuun, ja yhteys kysyy vielä yliopiston salasanaa, tarkenna yksityisen avaimen polku:
 
 <div>
 <code>ssh -i polku/yksityiseen/avaimeen tunnus@kohde.palvelimen.osoite</code>
 </div>
-</div>
-</div>
+{% endcapture %}
 
-<h2> Wget</h2>
+{% include message.html type="info" title="Avaimen polun määritteleminen" text=note_specify_key %}
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 11: SSH-yhteys" content=exercise_11 %}
+
+<h2>Wget</h2>
 
 Graafisessa ympäristössä selain antaa tarkastella sivuja internetissä. Komentorivillä toimivien ohjelmien on vaikeaa näyttää internet-sivuja samoin kuin graafinen selain, ([joskin se on mahdollista](https://en.wikipedia.org/wiki/Text-based_web_browser)) mutta pohjimmiltaan nettisivu internetissä on vain tiedosto, jonka voimme toki ladata koneellemme tarkasteltavaksi.
 
 Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toimii yksinkertaisimmillaan `wget sivun.osoite`, joka lataa annetun sivun koneellesi. Internet-sivut on tehty HTML-kielellä, johon tutustumme seuraavassa osassa, joten saat kutsun tuloksena koneellesi `.html`-päätteisen tiedoston.
 
-<div class="exercise">
-<h3>Tehtävä 12: Wget ja HTML-koodi {% include points.html text="5%" %}</h3>
+{% capture exercise_12 %}
 
 <ol>
 <li>Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla</li>
@@ -643,11 +696,10 @@ Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toim
 </ol>
 
 Tutustumme HTML-kieleen ja verkkosivuihin kolmannessa osassa, jossa opit myös kirjoittamaan HTML-dokumentteja.
+{% endcapture %}
+{% include exercise.html points="5%" title="Tehtävä 12: Wget ja HTML-koodi" content=exercise_12 %}
 
-</div>
-
-<div class="exercise">
-<h3>Tehtävä 13: Wget, grep ja Linus Torvalds {% include points.html text="10%" %}</h3>
+{% capture exercise_13  %}
 
 <p>
 Tässä tehtävässä lasketaan, monellako rivillä Linus Torvaldista kertovassa artikkelissa esiintyy sana "Linux".
@@ -660,8 +712,8 @@ Tässä tehtävässä lasketaan, monellako rivillä Linus Torvaldista kertovassa
 </ol>
 
 Mikäli haluat, voit yrittää tehdä saman tehtävä ilman, että kirjoitat mitään välissä tiedostoon.
-
-</div>
+{% endcapture %}
+{% include exercise.html points="10%" title="Tehtävä 13: Wget, grep ja Linus Torvalds" content=exercise_13 %}
 
 <h2> Oikeudet</h2>
 
@@ -738,8 +790,7 @@ total 8
 drw-r--r-- 1 tunnus tunnus 130 kesä 14 17:54 päiväkirjamerkinnät
 ```
 
-<div class="exercise">
-<h3>Tehtävä 14: Oikeuksien harjoittelua {% include points.html text="10%" %}</h3>
+{% capture exercise_14 %}
 
 Luo tiedosto <code>oikeus.txt</code> ja harjoittele sen avulla oikeuksien hallinnointia. Anna sille vuorotellen seuraavanlaiset oikeudet:
 
@@ -752,16 +803,21 @@ Luo tiedosto <code>oikeus.txt</code> ja harjoittele sen avulla oikeuksien hallin
 </code>
 </pre>
 
-<div class="note">
+{% capture note_faculty_devices_2 %}
 Mikäli teet tehtävän osaston koneella, tee se kansiossa, jonka polku on <code>/cs/home/yliopiston_tunnuksesi</code>. Mikäli kansiota ei löydy (yrittäessäsi siirtyä kansioon komennolla <code>cd</code> tulostuu <code>No such file or directory</code>), aktivoi ensin CS-käyttäjätunnuksesi <a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> täältä </a> löytyvien ohjeiden mukaan.
-</div>
-</div>
+{% endcapture %}
+{% include message.html type="info" title="Osaston laitteita käytettäessä" text=note_faculty_devices_2 %}
+{% endcapture %}
+
+{% include exercise.html points="10%" title="Tehtävä 14: Oikeuksien harjoittelua" content=exercise_14 %}
 
 Voit lukea lisää oikeuksista esimerkiksi [täältä](https://csguide.cs.princeton.edu/account/groups).
 
-<div class="warning">
-Ole varovainen oikeuksien kanssa! Liiallisten oikeuksien antaminen esimerkiksi kotihakemistoosi on turvallisuusuhka. Useimmiten tarvitset ajo- ja lukuoikeuksia vain itse.
-</div>
+{% capture warn_permissive_permissions %}
+Ole varovainen oikeuksien kanssa! Liiallisten oikeuksien antaminen esimerkiksi kotihakemistoosi on turvallisuusuhka. Useimmiten tarvitset ajo- ja lukuoikeuksia vain itse. On hyvä käytäntö antaa tiedostoihin vain niin paljon oikeuksia, kuin tiedät olevan välttämätöntä. 
+{% endcapture %}
+
+{% include message.html type="warning" title="Vähimpien oikeuksien periaate" text=warn_permissive_permissions %}
 
 <h2>Skriptit</h2>
 
@@ -790,20 +846,17 @@ Huomaa kuitenkin, että jotkin asiat toimivat skripteissä eri tavalla kuin olet
 
 Jotta skriptin voi ajaa, käyttäjälle tulee ensin antaa siihen ajo-oikeudet komennolla `chmod`.
 
-<div class="exercise">
-<h3>Tehtävä 15: Pieni bash-skripti {% include points.html text="5%" %}</h3>
-
+{% capture exercise_15 %}
 <ol>
 <li>Etsi netistä, miten bash-kielessä voi tulostaa tekstiä terminaaliin. </li>
 <li>Kirjoita pieni skripti, joka tulostaa "Hello world!". </li>
 <li> Aja kirjoittamasi skripti.</li>
 <li>Selvitä sen jälkeen, miksi yleensä ensimmäisessä ohjelmointitehtävässä tulostetaan teksti "Hello world!".</li >
 </ol>
+{% endcapture %}
+{% include exercise.html points="5%" title="Tehtävä 15: Pieni bash-skripti" content=exercise_15 %}
 
-</div>
-
-
-<h2> Sudo</h2>
+<h2>Sudo</h2>
 
 Tietoturvallisiin tapoihin kuuluu, että tietokoneessa erotellaan pääkäyttäjä (_superuser_) sekä tavalliset käyttäjät. Pääkäyttäjällä on kaikki oikeudet järjestelmään, ja kaikki pääkäyttäjän ajamat ohjelmat ajetaan etuoikeutetussa tilassa. Tämä voi olla vaarallista, jos pahantahtoista koodia päätyy ajoon, siksi tietokonetta tulee käyttää yleensä normaalina käyttäjänä. 
 
@@ -811,7 +864,11 @@ Normaalikäyttäjä voi kuitenkin ajaa komentoja pääkäyttäjänän oikeuksin,
 
 Yliopiston tai osaston koneilla, eli niillä joihin kirjaudut yliopiston tai osaston tunnuksilla esimerkiksi SSH-yhteyden kautta tai pajaluokissa, **ei saa ajaa mitään sudo-komentoja** - siitä lähtee ylläpidolle väärinkäyttöilmoitus.
 
-<div class="warning">Älä esimerkiksi kopioi netistä komentoa, joka alkaa sanalla sudo, jos et ymmärrä mitä se tekee. Annat tällöin ajettaville ohjelmille täydet valtuudet järjestelmässäsi.</div>
+{% capture warn_sudo_power %}
+Älä esimerkiksi kopioi netistä komentoa, joka alkaa sanalla sudo, jos et ymmärrä mitä se tekee. Annat tällöin ajettaville ohjelmille täydet valtuudet järjestelmässäsi.
+{% endcapture %}
+
+{% include message.html type="warning" title="\"Suuren vallan mukana tulee suuri vastuu\"" text=warn_sudo_power %}
 
 <h2> Asentamisesta</h2>
 

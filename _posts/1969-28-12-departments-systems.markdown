@@ -5,9 +5,10 @@ date: 1969-12-28 00:00:05 +0200
 permalink: /departments-systems/
 tag: info-eng
 ---
-<div class="warning">
-    This part of materials mentions CS account, which will probably be removed at some point. Materials will be updated once state of CS accounts become more clear. CS account is not required for any of courses exercises.
-</div>
+{% capture message_warning_1 %}
+This part of materials mentions CS account, which will probably be removed at some point. Materials will be updated once state of CS accounts become more clear. CS account is not required for any of courses exercises.
+{% endcapture %}{% include message.html type="warning" text=message_warning_1 title="Deprecation of the CS accounts" %}
+
 
 - If you are a CS major or minor, please activate university account [here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/user-account/activating-new-username) and your CS account according to [these](https://www.cs.helsinki.fi/en/compfac/user-accounts) instructions.
 
@@ -20,9 +21,10 @@ tag: info-eng
   - shell.cs.helsinki.fi
   - melkinkari.cs.helsinki.fi
 
-<div class="warning">
+{% capture message_warning_2 %}
 If you use the department's servers over SSH connection and have added your private key to an SSH-agent, according to university regulations you have to secure the private key with a password.
-</div>
+{% endcapture %}{% include message.html type="warning" text=message_warning_2 title="University policy on SSH key passphrases" %}
+
 
 - In addition to the AD home folder, you get a CS home folder located in `/cs/home/your_username`, accessible from the departments systems. You can publish your own home page to https://www.cs.helsinki.fi/u/your_account_name by creating an HTML file to `/cs/home/your_username/public_html/index.html`.
 
