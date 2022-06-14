@@ -32,7 +32,9 @@ One must pass the exam in order to receive a grade from the course. The exam is 
   - 3
   - 5
 - The exam counts for 18 points.
-- 9 points are required to pass the course and 17 points are required for the grade 5.
+- Minimum of 9 points from the exam are required for passing the course.
+- Exercises from each part count for 2 points. A total of 6 points can be earned by doing the exercises.
+- A total of 17 combined exam and exercise points are required for the grade 5.
 - If you don't pass the exam, you can retake it for an unlimited amount of times, until {{data.exam.enddate}}. There must be a week between each retake.
 - The exam contains exercises of one and two points.
 - Moodle gives you an unofficial grade which you can see in your gradebook. This unofficial grade might be incorrect if you score under 9 points in exam.
