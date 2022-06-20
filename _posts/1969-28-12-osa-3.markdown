@@ -654,7 +654,7 @@ Lisätään `.second-box-container`-selektorilla elementille vielä `position: r
 
 Huomaamme, että saimme elementin liikkumaan. Position ominaisuuden `relative`-arvolla elementti on entisellä tavalla sijoitettuna dokumenttiin. Sen sijaintia pystyy kuitenkin muokkaamaan `top`, `right`, `bottom` tai `left`-ominaisuuksilla verraten sen alkuperäiseen sijaintiin. 
 
-Vaidetaan seuraavaksi arvoksi `absolute` ja katsotaan mitä dokumentille tapahtuu.
+Vaihdetaan seuraavaksi arvoksi `absolute` ja katsotaan mitä dokumentille tapahtuu.
 
 ![Esimerkki HTML-sivu, absolute positionin kanssa](/assets/html-example-15.png)
 
@@ -683,7 +683,7 @@ Jos ei onnistu, niin testaa mitä tapahtuu, jos sijoitat elementtejä toisten si
 
 Käsittelimme äsken, miten elementtejä asetellaan verkkosivuilla. Käytimme `px`-mittayksikköä. Katsotaan nyt tarkemmin, mitä tämä tarkoittaa ja mitä muita mittayksiköitä CSS tarjoaa.
 
-Tietokone näyttää kuvaa pikseleissä. _Resoluutio_, tarkoitetaan kuinka monta pikseliä näytössä on. Tällä hetkellä yleisin käytössä oleva resoluutio on `1366x768`, mutta se riippuu täysin tietokoneen näytön mallista. Ensimmäinen mitta kertoo pystysarakkeiden määrän (x-akseli) ja jälkimmäinen vaakarivien määrän (y-akseli). Otetaan esimerkiksi `1366x768`-resoluutio. Seuraava kuva havainnollistaa, miten pikselit asettuvat:
+Tietokone näyttää kuvaa pikseleissä. _Resoluutiolla_, tarkoitetaan kuinka monta pikseliä näytössä on. Tällä hetkellä yleisin käytössä oleva resoluutio on `1366x768`, mutta se riippuu täysin tietokoneen näytön mallista. Ensimmäinen mitta kertoo pystysarakkeiden määrän (x-akseli) ja jälkimmäinen vaakarivien määrän (y-akseli). Otetaan esimerkiksi `1366x768`-resoluutio. Seuraava kuva havainnollistaa, miten pikselit asettuvat:
 
 ![Resoluutiota havainnollistava kuva](/assets/resolution-example.png)
 
@@ -915,7 +915,7 @@ Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
 {% capture exercise_auto_12 %}
 <ol>
 <li>Luo uusi repositorio Githubiin.</li>
-<li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna, jonne kirjoitat itsestäsi, kiinnostuksenkohtiestasi ja mahdollisesta työkokemuksestasi.</li>
+<li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna, jonne kirjoitat itsestäsi, kiinnostuksenkohteistasi ja mahdollisesta työkokemuksestasi.</li>
 <li>Käytä ansioluettelon tekoon tässä osiossa opetettuja asioita. Voit hakea hakukoneella esimerkkejä esimerkiksi hakusanoilla <code>static website resumes</code>. Jos et osaa tehdä jotain tyyliä CSSllä niin hae rohkeasti netistä tietoa, miten sellainen tehdään.</li>
 <li>Puske lopuksi tekemäsi muutokset GitHubiin. Yritä luoda committeja järkevistä kokonaisuuksista; älä siis esimerkiksi tee vain yhtä isoa committia.</li>
 <li>Julkaise ansioluettelo Github-sivuna tai laitoksen palvelimen kautta.</li>
