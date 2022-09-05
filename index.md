@@ -76,8 +76,6 @@ Kurssin suorittaminen vaatii muutaman ohjelman asentamista koneelle. Mikäli et 
 
 Jos teet tehtäviä omalla kannettavalla, ja olet läsnäoleva yliopisto-opiskelija, asenna ensin [Eduroam](https://www.eduroam.org/what-is-eduroam/), jolla pääset internetiin Helsingin yliopiston kampusalueilla. Helpdeskillä on sille [ohjeet](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/eduroam-verkon-asennus-asetustiedoston-avulla). Suosi aina Eduroamia yliopiston toisen verkon, HUPnetin yli. Internetin käyttö Eduroamin yli on turvallisempaa, ja se on saatavilla kampusalueilla myös ulkomailla.
 
-**Mikäli olet tietojenkäsittelytieteen pää- tai sivuaineopiskelija, aktivoi yliopiston tunnuksesi [täällä](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/uuden-kayttajatunnuksen-aktivointi) ja CS-tunnuksesi seuraavan sivun [ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan ennen materiaalin lukemista.** Tehtävät on mahdollista tehdä ilman tietojenkäsittelytieteen käyttölupaa, mutta tulet todennäköisesti tarvitsemaan sitä tulevaisuudessa. Joulun aikaan yliopiston järjestelmissä on katko, jolloin käyttöluvan aktivointi ei onnistu. Voit silloin tehdä silti tehtävät, ja aktivoida tunnuksen myöhemmin. 
-
 ## Ohjeita materiaalin lukemiseen
 
 Prosenttiluku tehtävän nimen jälkeen kertoo, kuinka monta prosenttia se vastaa kyseisen osan laskaripisteistä.

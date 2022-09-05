@@ -6,15 +6,15 @@ permalink: /departments-systems/
 tag: info-eng
 ---
 {% capture message_warning_1 %}
-This part of materials mentions CS account, which will probably be removed at some point. Materials will be updated once state of CS accounts become more clear. CS account is not required for any of courses exercises.
+This course's materials, or materials linked from these pages, may mention CS accounts. CS accounts have been deprecated and are not needed for the completition of this course.
 {% endcapture %}{% include message.html type="warning" text=message_warning_1 title="Deprecation of the CS accounts" %}
 
 
-- If you are a CS major or minor, please activate university account [here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/user-account/activating-new-username) and your CS account according to [these](https://www.cs.helsinki.fi/en/compfac/user-accounts) instructions.
+- If you are a CS major or minor, please activate university account [here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/user-account/activating-new-username).
 
 - The university offers its students two ways for wireless internet connection: Eduroam and HUPnet. You can also get guest access to HUPnet. HUPnet is not secured, so we heavily recommend using Eduroam. You can also access it in some campus sites overseas. Instructions on installing Eduroam are found [here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/networks/setting-eduroam-installer-package). You can also install it on your mobile device: [Android](https://helpdesk.it.helsinki.fi/en/instructions/computer-and-printing/mobile-devices/eduroam-on-android-devices) and [iPhone](https://helpdesk.it.helsinki.fi/en/instructions/computer-and-printing/mobile-devices/ipad-and-iphone-wireless-connections).
 
-- The CS departmens offers several servers for accessing your personal university AD home folder. You can request account activation on these servers from <a href="https://helpdesk.it.helsinki.fi/">Helpdesk</a>, after which you can login using your AD credentials.
+- The CS departments offers several servers for accessing your personal university AD home folder. You can request account activation on these servers from <a href="https://helpdesk.it.helsinki.fi/">Helpdesk</a>, after which you can login using your AD credentials.
 
   - melkki.cs.helsinki.fi
   - melkinpaasi.cs.helsinki.fi

@@ -68,8 +68,6 @@ Passing the course on your personal computer might require installing some softw
 
 If you are working on a personal computer, you should install [Eduroam](https://www.eduroam.org/what-is-eduroam/), which will grant you a secure access to the Internet while on campus. [Here](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/networks/setting-eduroam-installer-package) are the instructions. Note that you can also use it overseas and on mobile devices.
 
-If you are a student at the University of Helsinki, who majors or minors in CS, make sure you have activated your university account according to [these](https://helpdesk.it.helsinki.fi/en/instructions/logging-and-connections/user-account/activating-new-username) instructions and your CS account according to [these ones](https://www.cs.helsinki.fi/en/compfac/user-accounts). It is possible to do the exercises without doing either.
-
 
 ## Ohjeita materiaalin lukemiseen
 
