@@ -48,7 +48,7 @@ Computers are an inseparable part of the modern society. The average citizen is 
 
 You are probably used to using computers in a certain way. Creating, searching and deleting files is most likely easy for you. You know that double clicking a folder moves you inside it, and you know how to open the window prompt for deleting a file, or how to open an image with a specific program.
 
-The former is an example of a _graphical user interface_ (GUI): The possible actions are presented in some sort of menu and chosen by clicking. Files can also be drag and dropped to new places. Contrary to the graphical user interface, the command line is a _text-based user interface_. This means that one does not use the mouse for choosing specific actions. Instead, the computer is given commands by writing them and pressing enter. The options are not presented in the same way as in a graphical environment, and one can get by without using the mouse at all.
+The former is an example of a _graphical user interface_ (GUI): The possible actions are presented in some sort of menu and chosen by clicking. Files can also be dragged and dropped to new places. Contrary to the graphical user interface, the command line is a _text-based user interface_. This means that one does not use the mouse for choosing specific actions. Instead, the computer is given commands by writing them and pressing enter. The options are not presented in the same way as in a graphical environment, and one can get by without using the mouse at all.
 
 <div class="note">
 The command line can also be called the <i>terminal</i>. It's also sometimes referred to as the <i>shell</i> or <i>console</i>.
