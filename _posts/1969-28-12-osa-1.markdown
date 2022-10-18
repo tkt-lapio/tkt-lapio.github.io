@@ -81,7 +81,7 @@ Yllä näkyy macOSin ja Ubuntun oletus-terminaalit.
 
 Tekstikäyttöliittymät toimivat komentoperusteisesti. Komento tarkoittaa kirjoitettua käskyä: komennolla tietokone saadaan tekemään jotain.
 
-Itse komento määrittää, minkä operaation koneen halutaan suorittavan. Se voi olla tiedoston kopiointa, yhteyden ottamista, tai tietyn ohjelman ajamista. _Vipu_, englanniksi _option_ tai _flag_, tarkoittaa komennolle annettavaa parametria, jonka avulla komennon toiminnalle voidaan määrittää ylimääräisiä asetuksia. Joillekin vivuille tulee antaa parametreja, toisille ei. Komento tai ohjelma itse määrittää, minkälaisia vipuja sille on mahdollista antaa. Vipu annetaan komennolle käyttäen väliviivaa (-).
+Itse komento määrittää, minkä operaation koneen halutaan suorittavan. Se voi olla tiedoston kopiointia, yhteyden ottamista, tai tietyn ohjelman ajamista. _Vipu_, englanniksi _option_ tai _flag_, tarkoittaa komennolle annettavaa parametria, jonka avulla komennon toiminnalle voidaan määrittää ylimääräisiä asetuksia. Joillekin vivuille tulee antaa parametreja, toisille ei. Komento tai ohjelma itse määrittää, minkälaisia vipuja sille on mahdollista antaa. Vipu annetaan komennolle käyttäen väliviivaa (-).
 
 Argumentti taas on käyttäjän vapaasti määrittelemä arvo, esimerkiksi tiedoston nimi. Argumentti on usein komennon toiminnan kohde.
 
@@ -175,7 +175,7 @@ Koska yhdistelmällä CTRL + C on terminaalissa erityinen merkitys, joudut Linux
 Kotihakemistosi sisältää luultavasti paljon sälää, esimerkiksi _Downloads_ ja _Documents_ -nimiset kansiot. Haluamme nähdä samat asiat komentoriviltä, joten avaa viereen komentorivi, kirjoita siihen komento `ls`, ja paina <kbd>ENTER</kbd>. Tilanne tulee näyttämään suurin piirtein tältä:
 
 ```bash
-tunnus@ltietokones:~$ ls
+tunnus@tietokone:~$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 ```
 
