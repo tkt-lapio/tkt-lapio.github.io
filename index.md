@@ -53,7 +53,9 @@ Windows Subsystem for Linuxin asennus:
 2. Asenna 'Ubuntu'-sovellus [Microsoft Storesta](https://www.microsoft.com/fi-fi/p/ubuntu/9nblggh4msv6?activetab=pivot%3Aoverviewtab).
 3. Käynnistä Ubuntu-sovellus ja luo käyttäjä Ubuntua varten.
 
-![opasvideo asennuksesta](/assets/wsl_v1.mp4)
+<video controls>
+  <source src="/assets/wsl_v1.mp4" type="video/mp4">
+</video>
 
 Tarkat ohjeet asentamiseen löydät [tästä linkistä](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
