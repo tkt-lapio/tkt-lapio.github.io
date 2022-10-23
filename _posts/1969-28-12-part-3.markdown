@@ -326,7 +326,7 @@ An HTML document can also contain comments, which will not be displayed to the u
 
 {% capture exercise_auto_5 %}
 {% capture message_warning_1 %}
-If you attach an image to your site from another web page, make sure you actually have the right to use that image. There are several services online offering roalty-free or copyright-free images, as listed <a href="https://commons.wikimedia.org/wiki/Commons:Free_media_resources/Photography)">here</a>.
+If you attach an image to your site from another web page, make sure you actually have the right to use that image. There are several services online offering roalty-free or copyright-free images, as listed <a href="https://commons.wikimedia.org/wiki/Commons:Free_media_resources/Photography">here</a>.
 {% endcapture %}{% include message.html type="warning" text=message_warning_1 title="Copyright" %}
 
 <ol>

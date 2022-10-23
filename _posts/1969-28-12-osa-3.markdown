@@ -309,7 +309,7 @@ HTML-dokumentissa voi olla kommentteja, jotka eivät näy lopullisessa verkkosiv
 {% capture exercise_auto_5 %}
 {% capture message_warning_1 %}
 Jos liität omille verkkosivuille kuvan joltain toiselta sivulta, sinulla pitää olla oikeus käyttää kuvaa.
-Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia. Voit etsiä näitä palveluita esimerkiksi <a href="https://commons.wikimedia.org/wiki/Commons:Free_media_resources/Photography)"> täältä </a>.
+Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia. Voit etsiä näitä palveluita esimerkiksi <a href="https://commons.wikimedia.org/wiki/Commons:Free_media_resources/Photography"> täältä </a>.
 {% endcapture %}{% include message.html type="warning" text=message_warning_1 title="Tekijänoikeudet" %}
 
 <ol>
