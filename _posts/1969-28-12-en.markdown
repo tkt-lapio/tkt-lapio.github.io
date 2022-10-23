@@ -51,12 +51,12 @@ If using only textbased environment feels too scary or for some other reason you
 
 ### **VirtualBox**
 
-Before installing VirtualBox, make sure you have at least 512M, preferably 1G of [free RAM](https://www.computerhope.com/issues/ch000149.htm) left on your machine.
+Before installing VirtualBox, make sure you have at least 512M, preferably 1G of [free RAM](https://www.computerhope.com/issues/ch000149.htm) left free on your machine.
 
 Installing VirtualBox
 
 1. Download and install VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads)
-2. Download the desktop image (.iso) of Ubuntu 16.04 [here](http://releases.ubuntu.com/16.04/). The contents of the file .iso are similar to a CD which you would use to install an operating system.
+2. Download the desktop image (.iso) of Ubuntu 22.04 [here](http://releases.ubuntu.com/22.04/). The contents of the file .iso are similar to a CD which you would use to install an operating system.
 3. Follow [these](http://www.psychocats.net/ubuntu/virtualbox) instructions in order to create the virtual machine.
 4. Launch the virtual machine from VirtualBox.
 

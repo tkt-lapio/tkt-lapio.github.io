@@ -64,7 +64,7 @@ Varmista ennen asentamista, että sinulla on vähintään 512 Mt, mutta mieluite
 VirtualBoxin asennus:
 
 1. Lataa ja asenna VirtualBox [täältä](https://www.virtualbox.org/wiki/Downloads).
-2. Lataa Ubuntu 16.04:n levykuva (.iso) [täältä](http://releases.ubuntu.com/16.04/). Jos olet koskaan asentanut käyttöjärjestelmää CD:ltä, tämä .iso-tiedosto on tavallaan sen sisältö.
+2. Lataa Ubuntu 22.04:n levykuva (.iso) [täältä](http://releases.ubuntu.com/22.04/). Jos olet koskaan asentanut käyttöjärjestelmää CD:ltä, tämä .iso-tiedosto on tavallaan sen sisältö.
 3. Seuraa [näitä ohjeita](http://www.psychocats.net/ubuntu/virtualbox) luodaksesi virtuaalikoneen.
 4. Käynnistä virtuaalikone VirtualBoxista.
 
