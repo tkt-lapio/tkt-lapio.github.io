@@ -10,7 +10,7 @@ tag: material
 
 Tämän osan tavoitteina on, että opiskelija
 
-- Ymmärtää, mitä hyötyöä versionhallinnan käyttämisessä on
+- Ymmärtää, mitä hyötyä versionhallinnan käyttämisessä on
 - Osaa luoda Git-projektin.
 - Tietää, mikä on commit, ja osaa luoda sellaisen.
 - Ymmärtää, missä eri tiloissa muutos on, kun sitä lisätään commitiin, ja miten muutoksia voi perua, ennen kuin ne on lisätty committiin.
@@ -64,7 +64,7 @@ Git löytyy laitoksen koneilta ja Ubuntusta valmiiksi. Muussa tapauksessa sen vo
 {% capture exercise_auto_2 %}
 Konfiguroidaan hieman Gittiä.
 
-Liitä nimesi ja sähköpostiosoitteesi Gittiin niin, että kaikkiin projekteihesi tekemät muutokset liitetään sinuun seuraavilla komennoilla.
+Liitä nimesi ja sähköpostiosoitteesi Gittiin niin, että kaikkiin projekteihisi tekemät muutokset liitetään sinuun seuraavilla komennoilla.
 
 {% highlight bash %}
 git config --global user.name "Minun Nimeni"
@@ -677,4 +677,4 @@ Lisää Gitistä voi lukea esimerkiksi seuraavista lähteistä:
   - GitHubin tutoriaali, joka alkaa ihan perusasioista. Käsittelee joitain asioita, joita ei käyty läpi tässä osassa, kuten `git diff` ja komentoriviltä haarojen yhdistäminen.
 - Mikäli olet jo tutustunut Gittiin jonkin verran, saatat olla kiinnostunut oppimaan lisää Gitin historiasta. Historian säilyttäminen, jota demonstroitiin esimerkiksi salaisuus-tehtävässä, mahdollistaa myös sen muokkaamisen jälkikäteen. Vanhaa sanontaa mukaillen, _Voittajat kirjoittavat historian, ja mokailijat ylikirjoittavat Gitin historian_. Historian muokkaaminen on kuitenkin varsin vaarallista erityisesti yhteistyöprojekteissa, sillä sen avulla voi pilata muiden ihmisten koneilla olevia versioita. Jos olet kuitenkin edelleen kiinnostunut, Atlassanilla on erikseen tutoriaali [historian ylikirjoittamisesta](https://www.atlassian.com/git/tutorials/rewriting-history), sekä muita [edistyneempiä tutoriaaleja](https://www.atlassian.com/git/tutorials/advanced-overview).
 
-P.S Mikäli olet läsnäoleva opiskelija yliopistossa, kannattaa käydä tarkistasssa GitHub student packin [tarjoukset](https://education.github.com/pack/offers), tarjolla on krediittejä esimerkiksi DigitalOcean ja AWS -palveluihin, sekä etuja myös itse Githubiin.
+P.S Mikäli olet läsnäoleva opiskelija yliopistossa, kannattaa käydä tarkistamassa GitHub student packin [tarjoukset](https://education.github.com/pack/offers), tarjolla on krediittejä esimerkiksi DigitalOcean ja AWS -palveluihin, sekä etuja myös itse Githubiin.
