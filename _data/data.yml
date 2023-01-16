@@ -4,7 +4,7 @@ course:
   moodle: https://moodle.helsinki.fi/course/view.php?id=51891
 
 exams:
-  - startdate: 13.01.2023
+  - startdate: 13.02.2023
     starttime: "16:00"
     enddate: 05.03.2023
     endtime: "23:59"
