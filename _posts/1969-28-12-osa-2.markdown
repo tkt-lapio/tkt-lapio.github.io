@@ -304,7 +304,7 @@ Nappi `Create repository` lisää projektin omaan profiiliin. Kun projektiin nav
 
 Etärepositorio yhdistetään paikalliseen projektiin komennolla `git remote add`.
 
-Komento ottaa argumentikseen lisättävän etärepositorion nimen sekä osoitteen. GitHub tarjoaa kaksi vaihtoehtoa etärepositorion lisäysprotokollaksi: SSH ja https. Ensimmäisen vaihtoehdon pitäisi olla tuttu ensimmäisestä osasta, toisen selaimen osoitekentästä. SSH on siis sama yhteystyyppi, jolla vierailtiin laitoksen koneilla komennolla `ssh`. Tätä yhteystyyppia on mahdollista käyttää myös GitHubissa, jos koneella on luotu yksityinen ja julkinen avainpari, joista julkinen on lisätty GitHubiin. 
+Komento ottaa argumentikseen lisättävän etärepositorion nimen sekä osoitteen. GitHub tarjoaa kaksi vaihtoehtoa etärepositorion lisäysprotokollaksi: SSH ja https. Ensimmäisen vaihtoehdon pitäisi olla tuttu ensimmäisestä osasta, toisen selaimen osoitekentästä. SSH on siis sama yhteystyyppi, jolla vierailtiin laitoksen koneilla komennolla `ssh`. Tätä yhteystyyppiä on mahdollista käyttää myös GitHubissa, jos koneella on luotu yksityinen ja julkinen avainpari, joista julkinen on lisätty GitHubiin. 
 
 Jos käyttää https-yhteyttä, autentikointi tapahtuu GitHub-käyttäjänimellä ja salasanalla. SSH-yhteyden käyttö on siis paljon vaivattomampaa, sillä jos yksityisen avaimen lisää ssh-agentille, ei salasanaa tarvitse kirjoittaa jatkuvasti. SSH-avaimia käsiteltiin [ensimmäisessä osassa](/komentorivi#SSH-avainpari).
 
