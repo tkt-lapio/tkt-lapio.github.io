@@ -222,7 +222,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-The changes which were commited are no longer visible in the output. However, they are not lost, they have just been moved to the commit. You can view the commits of a project with the command `git log`:
+The changes which were committed are no longer visible in the output. However, they are not lost, they have just been moved to the commit. You can view the commits of a project with the command `git log`:
 
 ```
 commit 51bf544c786a671c28f70713b6cb33d87cc38
@@ -235,7 +235,7 @@ Date:
 The command `git log` outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of `git log` the id can be seen as a long string next to the word "commit", which is `51bf544c786a671c28f70713b6cb33d87cc38` in this case.
 
 {% capture message_info_2 %}
-The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be commited</code>  is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
+The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be committed</code>  is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
 {% endcapture %}{% include message.html type="info" text=message_info_2 title="Analogy on commits" %}
 
 
@@ -272,8 +272,8 @@ If you see the following message when creating a commit <code>error: cannot run 
 
 {% capture exercise_auto_4 %}
 <ol>
-<li>Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be commited</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.</li>
-<li>Add some new products to the shopping list, and add them to the next commit (so that they are under <code>Changes to be commited</code>). <strong>Don't create the commit yet.</strong></li>
+<li>Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be committed</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.</li>
+<li>Add some new products to the shopping list, and add them to the next commit (so that they are under <code>Changes to be committed</code>). <strong>Don't create the commit yet.</strong></li>
 <li>Then remove the changes from the next commit.</li>
 <li>Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.</li>
 </ol>
@@ -452,7 +452,7 @@ If you see "CONFLICT" outputted to the terminal when popping changes from the st
 
 We'll continue working with two parallel states, as they are probably the biggest stumbling block for new users of Git.
 
-In the previous example, the remote and local versions had different states, because both contained infromation which the other did not have. Because local changes hadn't been commited, they could be put aside to the stash. What would have happened if the local changes had been commited, i.e. the remote repository and the local project had commits which the other one doesn't have?
+In the previous example, the remote and local versions had different states, because both contained infromation which the other did not have. Because local changes hadn't been committed, they could be put aside to the stash. What would have happened if the local changes had been committed, i.e. the remote repository and the local project had commits which the other one doesn't have?
 
 The situation can be solved by _merging_ together the commit in the remote version and the commit in the local version. Merging simply means combining parallel states. If the two states do not conflict, meaning that they do not contain changes overriding each other, Git can merge them automatically. A new commit, called a merge commit, is created in the process.
 
