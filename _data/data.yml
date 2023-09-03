@@ -1,14 +1,14 @@
 course:
-  startdate: 08.05.2023
-  enddate: 27.08.2023
-  moodle: https://moodle.helsinki.fi/course/view.php?id=58087
+  startdate: 04.09.2023
+  enddate: 17.12.2023
+  moodle: https://moodle.helsinki.fi/course/view.php?id=60502
 
 exams:
-  - startdate: 26.06.2023
-    starttime: "00:01"
-    enddate: 16.07.2023
+  - startdate: 2.10.2023
+    starttime: "16:00"
+    enddate: 22.10.2023
     endtime: "23:59"
-  - startdate: 07.08.2023
-    starttime: "00:01"
-    enddate: 27.08.2023
+  - startdate: 27.11.2023
+    starttime: "16:01"
+    enddate: 17.12.2023
     endtime: "23:59"
