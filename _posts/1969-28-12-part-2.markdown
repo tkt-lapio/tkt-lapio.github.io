@@ -45,7 +45,7 @@ Version control tools allow marking a specific state of a project as so that one
 
 Contrary to what many people think, programming is mostly done in groups. With version control tools it is possible to use and develop others' code, even without ever meeting in person. People can give verbal feedback, such as report issues, as well as make concrete suggestions for improvement by providing code to the project. All developers are kept up to date about the state of the project, which makes cooperation smoother.
 
-Visual Studio has summarized reasons for using version control on their [website](https://www.visualstudio.com/learn/what-is-version-control/?rr=https%3A%2F%2Fwww.google.fi%2F). Bitbucket [has also written](https://www.atlassian.com/git/tutorials/what-is-version-control) a longer text about version control.
+Microsoft has summarized reasons for using version control on their [website](https://learn.microsoft.com/en-us/devops/develop/git/what-is-version-control). Bitbucket [has also written](https://www.atlassian.com/git/tutorials/what-is-version-control) a longer text about version control.
 
 There are several different version control tools available, but this part will focus on using Git and Github, especially in the context of programming projects.
 
