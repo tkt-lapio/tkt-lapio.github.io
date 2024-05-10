@@ -1,14 +1,14 @@
 course:
-  startdate: 15.01.2024
-  enddate: 05.05.2024
+  startdate: 01.05.2024
+  enddate: 25.08.2024
   moodle: https://moodle.helsinki.fi/course/view.php?id=62556
 
 exams:
-  - startdate: 12.02.2024
+  - startdate: 24.06.2024
     starttime: "16:00"
-    enddate: 03.03.2024
+    enddate: 14.07.2024
     endtime: "23:59"
-  - startdate: 15.04.2024
+  - startdate: 05.08.2024
     starttime: "16:00"
-    enddate: 05.05.2024
+    enddate: 25.08.2024
     endtime: "23:59"
