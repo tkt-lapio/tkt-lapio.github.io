@@ -28,7 +28,7 @@ Ohjelmoinnissa apua saa usein kanssakoodareilta, eikä niinkään virallisilta l
 
 ## Opettele käyttämään <a href="https://stackoverflow.com/">StackOverflow:ta</a>.
 
-Harmillisen virheviestin mukaan nimensä saanut foorumi on luotu ohjelmoijien keskinäiseksi tukikanavaksi. Se onkin erittäin suosittu, ja ilmestyy varmasti usein hakutuloksissa. Et tarvitse käyttäjätunnusta selataksesi muiden vastauksia. Sivulla kannattaa kiinnittää huomiota pariin asiaan: käyttäjät voivat äänestää toisten vastauksia yös tai alaspäin. Mitä enemmän ääniä vastauksella on ylos, sitä ylempänä se näkyy sivulla. Lisäksi kysymyksen kysyjä voi merkata jonkin vastauksen toimivaksi. Tällöin vastauksessa näkyy vihreä oikein-merkki, ja se näkyy heti ensimmäisenä kysymyksen jälkeen. Kumpikaan näistä ei takaa, että vastaus on oikein, mutta erottavat usein hyödyttömimmät vastaukset pois.
+Harmillisen virheviestin mukaan nimensä saanut foorumi on luotu ohjelmoijien keskinäiseksi tukikanavaksi. Se onkin erittäin suosittu, ja ilmestyy varmasti usein hakutuloksissa. Et tarvitse käyttäjätunnusta selataksesi muiden vastauksia. Sivulla kannattaa kiinnittää huomiota pariin asiaan: käyttäjät voivat äänestää toisten vastauksia yös tai alaspäin. Mitä enemmän ääniä vastauksella on ylös, sitä ylempänä se näkyy sivulla. Lisäksi kysymyksen kysyjä voi merkata jonkin vastauksen toimivaksi. Tällöin vastauksessa näkyy vihreä oikein-merkki, ja se näkyy heti ensimmäisenä kysymyksen jälkeen. Kumpikaan näistä ei takaa, että vastaus on oikein, mutta erottavat usein hyödyttömimmät vastaukset pois.
 
 <figure class="stackoverflow-example">
 <img alt="Stackoverflow-esimerkki" src="/assets/exit_vim.png">
@@ -38,11 +38,11 @@ Harmillisen virheviestin mukaan nimensä saanut foorumi on luotu ohjelmoijien ke
 
 ## Käytä Googlen hakusyntaksia.
 
-Käytä merkkiä "-" sanan edessä poistaaksesi hausta epärelevantteja sanoja. Jos esimerkiksi haluaa etsiä tietoa Python-ohjelmointikielestä (eikä hakuhistoria ole vielä täynnä ohjelmointiin littyivä hakuja), voisi kirjoittaa hakusanaksi "python -snake". Jos haluat hakea sivuja, joissa esiintyy täsmälleen jokin lause, kirjoita se lainausmerkkien sisään. Löydät operaattorit esimerkiksi [täältä](https://support.google.com/websearch/answer/2466433).
+Käytä merkkiä "-" sanan edessä poistaaksesi hausta epärelevantteja sanoja. Jos esimerkiksi haluaa etsiä tietoa Python-ohjelmointikielestä (eikä hakuhistoria ole vielä täynnä ohjelmointiin littyviä hakuja), voisi kirjoittaa hakusanaksi "python -snake". Jos haluat hakea sivuja, joissa esiintyy täsmälleen jokin lause, kirjoita se lainausmerkkien sisään. Löydät operaattorit esimerkiksi [täältä](https://support.google.com/websearch/answer/2466433).
 
 ## Käytä virheviestejä hyödyksi.
 
-Mikäli ongelmasi liittyy jonkin tietyn ohjelman käyttöön, auttaa ohjelma todennäköisesti sinua virheviestillä. Virheviestit ovan kullanarvioisa debuggaamisessa, sillä ne on suunniteltu sisältämään oikeasti hyödyllistä tietoa ongelmasta. Ensinnäkin virheviesti kannattaa lukea itse läpi huolellisesti, sillä ohjelmasta riippuen ne saattavat olla hyvinkin yleistajuisia. Mikäli et kuitenkaan ymmärrä ongelmaa, usein kannattaa yksinkertaisesti googlettaa virheviesti suoraan -- yleensä se johtaa GitHubiin, jossa joku on tehnyt issuen samasta ongelmasta. Muista kuitenkin varmistaa, ettei virheviestissä ole omaa henkilökohtaista tietoa, esimerkiksi kotihakemistosi osoitetta. Pyri valitsemaan virheviestistä oleellisin osio, jota mahdollisimman moni muukin olisi Googlettanut. Virheviesti kannattaa antaa myös, kun pyytää apua vaikka kurssin tukikanavalla.
+Mikäli ongelmasi liittyy jonkin tietyn ohjelman käyttöön, auttaa ohjelma todennäköisesti sinua virheviestillä. Virheviestit ovat kullanarvoisia debuggaamisessa, sillä ne on suunniteltu sisältämään oikeasti hyödyllistä tietoa ongelmasta. Ensinnäkin virheviesti kannattaa lukea itse läpi huolellisesti, sillä ohjelmasta riippuen ne saattavat olla hyvinkin yleistajuisia. Mikäli et kuitenkaan ymmärrä ongelmaa, usein kannattaa yksinkertaisesti googlettaa virheviesti suoraan -- yleensä se johtaa GitHubiin, jossa joku on tehnyt issuen samasta ongelmasta. Muista kuitenkin varmistaa, ettei virheviestissä ole omaa henkilökohtaista tietoa, esimerkiksi kotihakemistosi osoitetta. Pyri valitsemaan virheviestistä oleellisin osio, jota mahdollisimman moni muukin olisi googlettanut. Virheviesti kannattaa antaa myös, kun pyytää apua vaikka kurssin tukikanavalla.
 
 ## Etsi samantyyppisiä ongelmia.
 
