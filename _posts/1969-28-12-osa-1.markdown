@@ -63,7 +63,7 @@ Aloitetaan avaamalla komentorivi. Ubuntussa ja useissa Linux-käyttöjärjestelm
 tunnus@tietokone:~$
 ```
 
-`@` merkin edessä oleva teksti on käyttäjänimesi tietokoneella, ja sen jälkeen, ennen kaksoispistettä näkyvä teksti on tietokoneen nimi. Suoritettavan komennon voi kirjoittaa kursorin osoittamaan kohtaan, ja ajaa painamalla <kbd>ENTER</kbd>.
+`@`-merkin edessä oleva teksti on käyttäjänimesi tietokoneella, ja sen jälkeen, ennen kaksoispistettä näkyvä teksti on tietokoneen nimi. Suoritettavan komennon voi kirjoittaa kursorin osoittamaan kohtaan, ja ajaa painamalla <kbd>ENTER</kbd>.
 
 {% capture note_dollar_sign %}
 Huomaa, että netistä löytyvissä ohjeissa on joskus <code>$</code>-merkki komennon edessä. Se symboloi sitä, että komento tulee ajaa nimenomaan komentorivillä normaalikäyttäjänä, eikä esimerkiksi jonkin ohjelmointikielen tulkissa. Se <strong>ei</strong> tarkoita, että käyttäjän tulisi laittaa dollarimerkki osaksi käskyä.
@@ -122,7 +122,7 @@ Tutkitaan seuraavaksi `ls`-komennon `man`-sivua. Ajetaan siis komentorivillä `m
 
 Vaikka `man`-sivut eivät ole järin aloittelijaystävällisiä, ne tarjoavat yleensä kattavimman dokumentaation tietystä ohjelmasta.
 
-"Name"-kohdasta saa yleiskäsityksen siitä, mitä komento tekee. "Synopsis" kertoo, miten komentoa voidaan kutsua. Esimerkiksi komennon `ls` tapauksessa ensin annetaan kommenolle vivut, ja viimeisenä kohdekansion polku. Molemmat ovat valinnaisia parametreja, eli komento toimii ilmankin, minkä takia ne ovat hakasulkujen sisällä.
+"Name"-kohdasta saa yleiskäsityksen siitä, mitä komento tekee. "Synopsis" kertoo, miten komentoa voidaan kutsua. Esimerkiksi komennon `ls` tapauksessa ensin annetaan komennolle vivut, ja viimeisenä kohdekansion polku. Molemmat ovat valinnaisia parametreja, eli komento toimii ilmankin, minkä takia ne ovat hakasulkujen sisällä.
 
 {% capture note_man_pages %}
 Voit selata <code>man</code>-sivua nuolinäppäimellä, ja poistua painamalla <code>q</code>.
@@ -181,7 +181,7 @@ Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 
 `ls` siis listaa hakemistot ja kansiot joita hakemistosta löytyy. Komentorivin ja graafisen selaimen pitäisi näyttää samat tiedostot ja kansiot, mutta komentorivi esittää sisällön hieman yksinkertaisemmin.
 
-Oletuksena uuden komentorivin avaaminen avaa sen nimenomaan kotihakemistoon, joten tarvitsemme tavan vaihtaa aktiivista kansiota jotta voimme vierailla muissa kansioissa ja tarkastella niiden sisältöjä. Tarvittava komento on `cd`, eli **c**hange **d**irectory. `cd`-komennolle annetaan parametrina se kansio, johon halutaan siirtyä. Mikäli et anna `cd`:lle argumentteja, se siirtää sinut kotihakemistoosi.
+Oletuksena uuden komentorivin avaaminen avaa sen nimenomaan kotihakemistoon, joten tarvitsemme tavan vaihtaa aktiivista kansiota jotta voimme vierailla muissa kansioissa ja tarkastella niiden sisältöjä. Tarvittava komento on `cd` (**c**hange **d**irectory). `cd`-komennolle annetaan parametrina se kansio, johon halutaan siirtyä. Mikäli et anna `cd`:lle argumentteja, se siirtää sinut kotihakemistoosi.
 
 Navigoi _Downloads_-kansioon antamalla komento `cd Downloads`. Kansion nimi tulee aina olla täsmälleen kirjoitettu, sillä isoilla ja pienillä kirjaimilla kirjoitetut nimet ovat erilaisia. Muutos näkyy heti komentorivillä, sillä se näyttää nyt kutakuinkin tältä:
 
@@ -236,7 +236,7 @@ Gedit on yksinkertainen graafinen tekstieditori, jolla voi muokata mitä tahansa
 
 Avaa graafinen tekstieditori ja luo sillä `esimerkki.txt`-niminen tiedosto aiemmin tehtyyn _lapio_-hakemistoosi. Pääte `.txt` kertoo, että tiedosto sisältää tavallista tekstiä, eikä esimerkiksi ajettavaa koodia. Lisää sen jälkeen tiedostoon jotain tekstiä.
 
-Tehtyäsi `esimerkki.txt`-tiedoston navigoi komentorivillä `lapio`-kansioon, ja avaa se komentamalla `nano esimerkki.txt`. Nano on tekstieditori, jossa on tekstikäyttöliittymä, eli jota käytetään suoraan komentoriviltä. Tämä tarkoittaa, että ohjelmaa hallinoidaan tietyillä näppäinyhdistelmillä.
+Tehtyäsi `esimerkki.txt`-tiedoston navigoi komentorivillä `lapio`-kansioon, ja avaa se komentamalla `nano esimerkki.txt`. Nano on tekstieditori, jossa on tekstikäyttöliittymä, eli jota käytetään suoraan komentoriviltä. Tämä tarkoittaa, että ohjelmaa hallinnoidaan tietyillä näppäinyhdistelmillä.
 
 Muokkausikkunaa ei suljeta raksista, kuten vaikka geditissä, vaan se tehdään näppäinyhdistelmällä `CTRL + X`. Jos tiedostoon on tehty muutoksia, on varmistettava halutaanko ne tallentaa vai ei painamalla näppäintä `y` tai `n` (valinnat tulevat sanoista "yes" ja "no"). Viimeisenä editori varmistaa, minkä nimisenä tiedosto tallennetaan.
 
@@ -323,7 +323,7 @@ Muista, että komentorivi näyttää sinulle koko ajan nykyisen kansiosi polun s
 {% include message.html type="info" title="Suhteellinen sijainti" text=note_relative %}
 
 {% capture note_tab_completion %}
-Muista käyttää tab-taydennystä! Kokeile aina ennen kuin kirjoitat kokonaisen kansion tai tiedostonnimen, pystytkö täydentämään nimen suoraan painamalla tab-näppäintä.
+Muista käyttää tab-täydennystä! Kokeile aina ennen kuin kirjoitat kokonaisen kansion tai tiedostonnimen, pystytkö täydentämään nimen suoraan painamalla tab-näppäintä.
 {% endcapture %}
 
 {% include message.html type="info" title="Säästä sormiasi" text=note_tab_completion %}
@@ -355,7 +355,7 @@ Graafisessa ympäristössä kopiointi onnistuu näppäinyhdistelmällä <kbd>CTR
 
 Kopiointia varten on komento `cp` eli <b>c</b>o<b>p</b>y. Se ottaa argumenteiksi kopioitavan tiedoston polun ja uuden tiedoston polun: `cp esimerkki.txt esimerkki2.txt` kopioisi siis `esimerkki.txt`:n `esimerkki2.txt` nimiseksi tiedostoksi samaan kansioon. Huomaa, että polkujen avulla voit viitata tiedostoihin tai kansioihin eri hakemistossa: `cp esimerkki.txt ~/Documents/esimerkki2.txt` kopioisi tiedoston suoraan `Documents`-kansioon nimellä `esimerkki2.txt`. Mikäli toisena argumenttina annetaan olemassaoleva kansio, tiedosto kopioidaan muuttamatta sen nimeä. Esimerkiksi ajamalla `cp esimerkki.txt ~/Documents/` tiedosto `esimerkki.txt` siirretään `Documents`-kansioon, mutta sen nimi ei muutu.
 
-Tiedostoja voi siirtää käyttäen `mv`-komentoa, joka tulee sanoista <b>m</b>o<b>v</b>e. Komento toimii samalla tavalla kuin `cp`, paitsi että alkuperäinen tiedosto poistetaan, ja jää vain uusi tiedosto. Tämä vastaa graafisen käyttöliittymän "leikkaa"-toimintoa. Komennolla `mv` voi myös uudelleennimetä tiedostoja: jos toisena argumenttina annettu polku viittaa samaan kansioon kuin ensimmäinen polku, kopion nimeäminen ja alkuperäisen tiedoston poistamisen tuloksena on uudelleennimetty tiedosto.
+Tiedostoja voi siirtää käyttäen `mv`-komentoa, joka tulee sanasta <b>m</b>o<b>v</b>e. Komento toimii samalla tavalla kuin `cp`, paitsi että alkuperäinen tiedosto poistetaan, ja jää vain uusi tiedosto. Tämä vastaa graafisen käyttöliittymän "leikkaa"-toimintoa. Komennolla `mv` voi myös uudelleennimetä tiedostoja: jos toisena argumenttina annettu polku viittaa samaan kansioon kuin ensimmäinen polku, kopion nimeäminen ja alkuperäisen tiedoston poistamisen tuloksena on uudelleennimetty tiedosto.
 
 Esimerkkejä `mv`:n toiminnasta:
 
@@ -386,10 +386,10 @@ Muista käyttää tab-täydennystä!
 Tiedostoja voidaan poistaa komennolla <code>rm</code>, eli <b>r</b>e<b>m</b>ove. Käyttäen komentoriviä, poista edellisessä tehtävässä luomasi tiedostot. Selvitä sitten, miten voit poistaa hakemiston komentoriviltä, ja poista koko <code>koulu</code>-hakemisto.
 
 {% capture warn_no_trash %}
-Huomaa, että kun poistat jotain komentoriviltä, se ei siirry roskakoriin vaan poistuu heti, ole siis varovainen.
+Huomaa, että kun poistat jotain komentoriviltä, se ei siirry roskakoriin vaan poistuu heti. Ole siis varovainen.
 {% endcapture %}
 
-{% include message.html type="warning" title="Poistaminen todellakin tarkoitaa poistamista" text=warn_no_trash %}
+{% include message.html type="warning" title="Poistaminen todellakin tarkoittaa poistamista" text=warn_no_trash %}
 {% endcapture %}
 
 {% include exercise.html points="5%" title="Tehtävä 7: Kansion poistaminen" content=exercise_7 %}
@@ -414,7 +414,7 @@ Tee kansio nimeltä <i>kuvia</i> komentorivillä, ja lataa sinne internetistä k
 
 <h2> Muita hyödyllisiä komentoja</h2>
 
-Joskus on hyödyllistä pystyä tarkastelemaan tekstitiedostoja suoraan komentoriviltä avaamatta erillistä editoria. Helpoin komento tätä varten on `cat` (katenoi), joka tulostaa suoraan tiedoston sisällön:
+Joskus on hyödyllistä pystyä tarkastelemaan tekstitiedostoja suoraan komentoriviltä avaamatta erillistä editoria. Helpoin komento tätä varten on `cat` (con<b>cat</b>enate), joka tulostaa suoraan tiedoston sisällön:
 
 ```
 tunnus@hal9000:~/esimerkki$ cat esimerkki.txt
@@ -463,7 +463,7 @@ Vinkki: Kirjainkoko on englanniksi "case".
 
 {% include message.html type="info" text="Vinkki: Kirjainkoko on englanniksi \"case\"." %}
 
-<li>Ota selvää esimerkiksi Googlettaen, miten saat haettua vain merkkijonoja, jotka ovat rivin alussa. Tarkista, että osaat tehdä tämän. Voit tehdä sen kirjoittamalla tiedostoon esimerkiksi</li>
+<li>Ota selvää esimerkiksi googlettaen, miten saat haettua vain merkkijonoja, jotka ovat rivin alussa. Tarkista, että osaat tehdä tämän. Voit tehdä sen kirjoittamalla tiedostoon esimerkiksi</li>
 </ul>
 <pre>
 Unix
@@ -477,19 +477,19 @@ UNIX
 unix
 unisport
 </pre>
-ja tarkistamalla että saat <code>grep</code>in avulla valittua oikeat sanat.
+ja tarkistamalla, että saat <code>grep</code>in avulla valittua oikeat sanat.
 {% endcapture %}
 {% include exercise.html points="10%" title="Tehtävä 9: grep" content=exercise_9 %}
 
 {% capture note_test %}
-Etsiessäsi tietoa netistä komennoista ja niiden toiminnoista, varmista aina, että ymmärrät varmasti lukemasi testaamalla mahdollisuuksien mukaan niiden toiminnallisuutta. Tällä tavalla opit helpommin, ja huomaat nopeammin mahdolliset väärinymmärrykset.
+Etsiessäsi tietoa netistä komennoista ja niiden toiminnoista, varmista aina, että ymmärrät varmasti lukemasi testaamalla mahdollisuuksien mukaan niiden toiminnallisuutta. Tällä tavalla opit helpommin ja huomaat nopeammin mahdolliset väärinymmärrykset.
 {% endcapture %}
 
 {% include message.html type="info" title="Kokeilemalla opit" text=note_test %}
 
 Edellä mainitut ovat tärkeitä komentoja komentorivillä työskentelijän arsenaalissa, mutta niiden hyöty tulee kunnolla esille vasta kun ne yhdistetään muihin komentoihin. Komentorivillä komentojen yhdistäminen tapahtuu yleensä joko putkella `|`, tai nuolella `>`. Tarkastellaan seuraavaksi näitä operaattoreita.
 
-Putki uudelleenohjaa ensimmäisen komennon tulosteen syötteeksi toiselle komennolle. Esimerkiksi `ls` komennon näyttämistä tiedostonnimistä voi helposti hakea `grep`illä tiettyä tiedostoa putken avulla:
+Putki uudelleenohjaa ensimmäisen komennon tulosteen syötteeksi toiselle komennolle. Esimerkiksi `ls`-komennon näyttämistä tiedostonnimistä voi helposti hakea `grep`illä tiettyä tiedostoa putken avulla:
 
 ```bash
 tunnus@hal9000:~/esimerkki$ ls
@@ -499,7 +499,7 @@ muistio2.txt
 muistio.txt
 ```
 
-Esimerkissä siis `ls`-komennon tulostus ohjattiin putken avulla edelleen komennolle `grep`. Ilman `|`-komentoa, ensimmäisen komennon tulostus olisi pitänyt ensin kirjoittaa tiedostoon ja sen jälkeen lukea ja filtteröidä `grep`illä. Komentoa `grep` käyttäen tulosteen pystyi suoraan jakamaan komentojen välillä.
+Esimerkissä siis `ls`-komennon tulostus ohjattiin putken avulla edelleen komennolle `grep`. Ilman `|`-operaattoria, ensimmäisen komennon tulostus olisi pitänyt ensin kirjoittaa tiedostoon ja sen jälkeen lukea ja filtteröidä `grep`illä. Komentoa `grep` käyttäen tulosteen pystyi suoraan jakamaan komentojen välillä.
 
 Joskus voi kuitenkin olla hyödyllistä kirjoittaa tuloste tiedostoon esimerkiksi tallennusta varten, sillä terminaalin tulosteita voi selata taaksepäin vain rajallisen määrän. Tähän tarkoitukseen sopiva operaattori on nuoli oikealle `>`, joka uudelleenohjaa komennon tulosteen _tiedostoon_. Esimerkiksi `ls > listaus.txt` uudelleenohjaa tiedostolistauksen `listaus.txt`-nimiseen tiedostoon, luoden kyseisen tiedoston jos sitä ei ole jo olemassa.
 
@@ -535,7 +535,7 @@ Eriytä tämän jälkeen viikon ruokalista omaksi tiedostokseen <code>unicafe.tx
 
 <h2> SSH-yhteys</h2>
 
-Olemme tähän asti käyttäneet komentoriviä lähinnä omalla koneella olevien asioiden tarkasteluun. Komentoriviltä voidaan kuitenkin ottaa myös yhteys toiseen tietokoneeseen. SSH on salattu yhteystyyppi, joka mahdollistaa järjestelmään kirjautumisen etänä komentorivin kautta. Salattu yhteys tarkoittaa, että tietoa ei jaeta suoraan luettavassa muodossa: tarkoitus on, että vain valikoidut vastaanottajat pystyvät purkamaan salauksen ja lukemaan sisällön.
+Olemme tähän asti käyttäneet komentoriviä lähinnä omalla koneella olevien asioiden tarkasteluun. Komentoriviltä voidaan kuitenkin ottaa myös yhteys toiseen tietokoneeseen. SSH on salattu yhteystyyppi, joka mahdollistaa järjestelmään kirjautumisen etänä komentorivin kautta. Salattu yhteys tarkoittaa, että tietoa ei siirretä suoraan luettavassa muodossa. Tarkoitus on, että vain valikoidut vastaanottajat pystyvät purkamaan salauksen ja lukemaan sisällön.
 
 Unix-ympäristössä ssh-yhteyden voi luoda komennolla `ssh`. Komennon perustoiminnalisuus on seuraava: `ssh tunnus@palvelimen.osoite` ottaa yhteyden palvelimeen osoitteessa `palvelimen.osoite` ja yrittää kirjautua tunnuksella `tunnus`. Käyttäjältä pyydetään tunnuksen salasanaa, ja autentikoinnin onnistuessa yhteys avautuu. Tämän jälkeen komentoriviltä voidaan ajaa tavalliseen tapaan komentoja, mutta nykyinen kansio sijaitseekin palvelimella, johon yhteys on luotu.
 
@@ -581,9 +581,9 @@ Voit lukea SSH:sta lisää esimerkiksi [täältä](https://www.ssh.com/ssh/) tai
 
 <h2> SSH-avainpari</h2>
 
-Äsken yhteys osaston koneeseen autentikoitiin osaston tunnuksilla. SSH-yhteys tarjoaa kuitenkin myös toisen tavan tunnistaa käyttäjä: julkinen ja yksityinen avainpari. Käytännössä avaimilla tarkoitetaan kahta pitkää ja satunnaiselta vaikuttavaa merkkijonoa, joita käytetään yhdessä varmistamaan, että vain halutuilla henkilöillä on pääsy tiettyyn tietoon. Kyseessä on salauksen tekniikka, joka ei kuulu sen enempää tämän kurssin aihealueisiin, mutta voit etsiä asiasta lisää tietoa avainsanoilla _public key encryption_ ja _asymmetric cryptography_. **Riittää ymmärtää, että yksityisen avaimen tulisi olla vain sen omistajan tiedossa, ja julkista avainta voi jakaa huoletta.**
+Edellä yhteys osaston koneeseen autentikoitiin osaston tunnuksilla. SSH-yhteys tarjoaa kuitenkin myös toisen tavan tunnistaa käyttäjä: julkinen ja yksityinen avainpari. Käytännössä avaimilla tarkoitetaan kahta pitkää ja satunnaiselta vaikuttavaa merkkijonoa, joita käytetään yhdessä varmistamaan, että vain halutuilla henkilöillä on pääsy tiettyyn tietoon. Kyseessä on salauksen tekniikka, joka ei kuulu sen enempää tämän kurssin aihealueisiin, mutta voit etsiä asiasta lisää tietoa avainsanoilla _public key encryption_ ja _asymmetric cryptography_. **Riittää ymmärtää, että yksityisen avaimen tulisi olla vain sen omistajan tiedossa, ja julkista avainta voi jakaa huoletta.**
 
-SSH-avainparin voi luodan komennolla `ssh-keygen`. Komento kysyy avaimelle salasanaa ja tallennuspaikkaa. Oletussijaintia tai tiedoston nimeä ei lähtökohtaisesti tarvitse muuttaa, jolloin avain luodaan kotihakemistossa sijaitsevaan `.ssh`-kansioon.
+SSH-avainparin voi luoda komennolla `ssh-keygen`. Komento kysyy avaimelle salasanaa ja tallennuspaikkaa. Oletussijaintia tai tiedoston nimeä ei lähtökohtaisesti tarvitse muuttaa, jolloin avain luodaan kotihakemistossa sijaitsevaan `.ssh`-kansioon.
 
 {% capture warn_passphrase %}
 Käytä SSH-avainta luodessasi aina salasanaa. Jos käytät SSH-avainta osaston palvelimien kanssa, on salasanan asettaminen pakollista yliopiston määräysten mukaan.
@@ -619,7 +619,7 @@ Komento luo `.ssh`-kansioon kaksi tiedostoa, joista toisen pääte on `.pub`. T�
 
 Avainparilla kirjautuminen on mahdollista, kun julkinen avain lisätään palvelimelle, jolla avainparilla halutaan autentikoitua. Tällöin kyseiseen järjestelmään pääsee kirjautumaan, jos tietää julkista avainta vastaavan yksityisen avaimen. Julkinen avain lisätään polkuun `~/.ssh/authorized_keys`, siis kotihakemiston kansioon `.ssh`, tiedostoon nimeltä [authorized_keys](https://www.ssh.com/ssh/authorized_keys/). Mikäli käytät useita avaimia, jokainen lisätään omalle rivilleen. Yliopiston palvelimella joudut luultavasti luomaan kansion ja tiedoston itse.
 
-Alla näkyy kuva avainten oikeasta sijainneista, kun SSH-avainta käytetään osaston koneille kirjautumiseen.
+Alla näkyy kuva avainten oikeista sijainneista, kun SSH-avainta käytetään osaston koneille kirjautumiseen.
 
 ![Kuva SSH-avaimen käytöstä](/assets/ssh-selitys.png)
 
@@ -660,13 +660,13 @@ Voit lukea lisää SSH:n konfiguroimisesta esimerkiksi [täältä](https://linux
 
 {% capture exercise_11 %}
 
-Luo koneellesi SSH-avainpari. Mahdollista sen jälkeen avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta, kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, eli sinulla ei ole yliopiston tunnusta, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
+Luo koneellesi SSH-avainpari. Mahdollista sen jälkeen avainparilla kirjautuminen yliopiston palvelimille SSH-yhteyttä luodessa. Testaa sen jälkeen avainparia. Mikäli mahdollista, ota yhteys muulta kuin osaston koneelta. Jos sinulla ei ole pääsyä yliopiston palvelimille, eli sinulla ei ole yliopiston tunnusta, voit merkitä tehtävän tehdyksi luotuasi SSH-avaimen.
 
 {% capture note_faculty_devices %}
 Mikäli teet tehtävän laitoksen koneella, yhteys käyttäytyy oudosti, koska otat oikeastaan yhteyttä samalle koneelle. Todennäköisesti SSH-avaimen salasanaa ei pyydetä, vaikka se olisi asetettu oikein.
 {% endcapture %}
 
-{% include message.html type="info" title="Seuraaminen osastoja laitteilla" text=note_faculty_devices %}
+{% include message.html type="info" title="Seuraaminen osaston laitteilla" text=note_faculty_devices %}
 
 {% capture note_specify_key %}
 Mikäli loit avainparin itse määrittelemääsi polkuun, ja yhteys kysyy vielä yliopiston salasanaa, tarkenna yksityisen avaimen polku:
@@ -684,13 +684,13 @@ Mikäli loit avainparin itse määrittelemääsi polkuun, ja yhteys kysyy vielä
 
 Graafisessa ympäristössä selain antaa tarkastella sivuja internetissä. Komentorivillä toimivien ohjelmien on vaikeaa näyttää internet-sivuja samoin kuin graafinen selain, ([joskin se on mahdollista](https://en.wikipedia.org/wiki/Text-based_web_browser)) mutta pohjimmiltaan nettisivu internetissä on vain tiedosto, jonka voimme toki ladata koneellemme tarkasteltavaksi.
 
-Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_), ja se toimii yksinkertaisimmillaan `wget sivun.osoite`, joka lataa annetun sivun koneellesi. Internet-sivut on tehty HTML-kielellä, johon tutustumme seuraavassa osassa, joten saat kutsun tuloksena koneellesi `.html`-päätteisen tiedoston.
+Tarvittavan komennon nimi on `wget` (alunperin _world wide web get_). Se toimii yksinkertaisimmillaan `wget sivun.osoite`, joka lataa annetun sivun koneellesi. Internet-sivut on tehty HTML-kielellä, johon tutustumme seuraavassa osassa, joten saat kutsun tuloksena koneellesi `.html`-päätteisen tiedoston.
 
 {% capture exercise_12 %}
 
 <ol>
 <li>Lataa mieleisesi sivusto koneellesi <code>wget</code>-komennolla</li>
-<li>Avaa tallennettu <code>.html</code>-päätteinen tiedosto selaimella, esim Firefoxilla tai Chromella (saat tiedoston helpoiten selaimella auki graafisesta tiedostonhallinnasta). Sivu näyttää luultavasti hieman erilaiselta kuin yleensä. </li>
+<li>Avaa tallennettu <code>.html</code>-päätteinen tiedosto selaimella, esimerkiksi Firefoxilla tai Chromella (saat tiedoston helpoiten selaimella auki graafisesta tiedostonhallinnasta). Sivu näyttää luultavasti hieman erilaiselta kuin yleensä. </li>
 <li> Avaa tiedosto niin, että näet sen sisällä olevan HTML-koodin (toisin sanoen avaa se niin, että näet tiedoston sisällön koodina, eikä tiedosto aukea selaimessa). Tunnistat koodin tageista, jotka määritellään merkeillä ">" ja "<". Alussa pitäisi myös näkyä tagi, jonka sisällä lukee "html".</li>
 <li>Mikä oli ohjelma, jota käytit kussakin tapauksessa tiedoston avaamiseen? Mieti yleisellä tasolla, miten ohjelma käsitteli tiedoston sisällön.</li>
 </ol>
@@ -750,7 +750,7 @@ Yllä näkyvässä esimerkissä siis `muistio.txt`-tiedostolle on omistajalla lu
 
 ![Kuva komennon ls -l tulostuksen osista](/assets/permission-selitys.png)
 
-Oikeuksia voi muuttaa tiedoston tai kansion omistaja, tai järjestelmän ylläpitäjä. Niiden muokkaamiseen komentoriviltä tarkoitettu komento on `chmod` (_change mode_). Se ottaa argumenttina merkkijonon, joka kertoo lisätäänkö vai poistetaanko oikeuksia, kenelle oikeuksia annetaan, sekä tiedoston tai kansion jolle komento tulee suorittaa.
+Oikeuksia voi muuttaa tiedoston tai kansion omistaja, tai järjestelmän ylläpitäjä. Niiden muokkaamiseen komentoriviltä tarkoitettu komento on `chmod` (<b>ch</b>ange <b>mod</b>e). Se ottaa argumenttina merkkijonon, joka kertoo lisätäänkö vai poistetaanko oikeuksia, kenelle oikeuksia annetaan, sekä tiedoston tai kansion jolle komento tulee suorittaa.
 
 Annettu oikeus ja sen saaja voidaan määritellä kirjainten avulla:
 
@@ -860,12 +860,12 @@ Jotta skriptin voi ajaa, käyttäjälle tulee ensin antaa siihen ajo-oikeudet ko
 
 Tietoturvallisiin tapoihin kuuluu, että tietokoneessa erotellaan pääkäyttäjä (_superuser_) sekä tavalliset käyttäjät. Pääkäyttäjällä on kaikki oikeudet järjestelmään, ja kaikki pääkäyttäjän ajamat ohjelmat ajetaan etuoikeutetussa tilassa. Tämä voi olla vaarallista, jos pahantahtoista koodia päätyy ajoon, siksi tietokonetta tulee käyttää yleensä normaalina käyttäjänä. 
 
-Normaalikäyttäjä voi kuitenkin ajaa komentoja pääkäyttäjänän oikeuksin, jos käyttäjä kuuluu (_sudoers_) ryhmään. Tämä tapahtuu lisäämällä komennon alkuun `sudo` (alunperin _superuser do_). Tällöin ennen komennon ajamista käyttäjältä pyydetään käyttäjän oma salasana. Riippuen järjestelmästä, `sudo`-oikeuksia voidaan tarvita esimerkiksi ohjelmien asentamiseen. Komennon käyttöä tulee kuitenkin välttää, jos mahdollista. Sudon käyttö on joskus tarpeellista, mutta älä esimerkiksi lisää sitä jokaisen komennon alkuun välttääksesi virheviestejä tiedostojen oikeuksista.
+Normaalikäyttäjä voi kuitenkin ajaa komentoja pääkäyttäjän oikeuksin, jos käyttäjä kuuluu (_sudoers_) ryhmään. Tämä tapahtuu lisäämällä komennon alkuun `sudo` (alunperin _superuser do_). Tällöin ennen komennon ajamista käyttäjältä pyydetään käyttäjän oma salasana. Riippuen järjestelmästä, `sudo`-oikeuksia voidaan tarvita esimerkiksi ohjelmien asentamiseen. Komennon käyttöä tulee kuitenkin välttää, jos mahdollista. Sudon käyttö on joskus tarpeellista, mutta älä esimerkiksi lisää sitä jokaisen komennon alkuun välttääksesi virheviestejä tiedostojen oikeuksista.
 
 Yliopiston tai osaston koneilla, eli niillä joihin kirjaudut yliopiston tai osaston tunnuksilla esimerkiksi SSH-yhteyden kautta tai pajaluokissa, **ei saa ajaa mitään sudo-komentoja** - siitä lähtee ylläpidolle väärinkäyttöilmoitus.
 
 {% capture warn_sudo_power %}
-Älä esimerkiksi kopioi netistä komentoa, joka alkaa sanalla sudo, jos et ymmärrä mitä se tekee. Annat tällöin ajettaville ohjelmille täydet valtuudet järjestelmässäsi.
+Älä esimerkiksi kopioi netistä komentoa, joka alkaa sanalla "sudo", jos et ymmärrä mitä se tekee. Annat tällöin ajettaville ohjelmille täydet valtuudet järjestelmässäsi.
 {% endcapture %}
 
 {% include message.html type="warning" title="\"Suuren vallan mukana tulee suuri vastuu\"" text=warn_sudo_power %}
@@ -874,7 +874,7 @@ Yliopiston tai osaston koneilla, eli niillä joihin kirjaudut yliopiston tai osa
 
 Maailma on täynnä ohjelmia, jotka on suunniteltu käytettäviksi komentoriviltä. Helpoiten komentorivityökalujen asentaminen tapahtuu pakettienhallintajärjestelmien avulla. Tällaisia ovat esimerkiksi Apt (Linux) tai Homebrew (macOS).
 
-Ubuntussa ja Cubblissa (osaston koneilla käytettävä Linuxin versio) pitäisi olla apt (tai hyvin samanlainen ohjelma apt-get) valmiina, macOSissa joudut asentamaan homebrew:n erikseen [täältä](https://brew.sh/). Ohjeita aptin käyttöön löytyy [täältä](https://help.ubuntu.com/lts/serverguide/apt.html.en) tai suomeksi [täältä](https://www.linux.fi/wiki/APT). **Suosittelemme vahvasti pakettienhallintajärjestelmän käyttämistä.**
+Ubuntussa ja Cubblissa (osaston koneilla käytettävä Linuxin versio) pitäisi olla apt (tai hyvin samanlainen ohjelma apt-get) valmiina, mutta macOSissa joudut asentamaan homebrew:n erikseen [täältä](https://brew.sh/). Ohjeita aptin käyttöön löytyy [täältä](https://help.ubuntu.com/lts/serverguide/apt.html.en) tai suomeksi [täältä](https://www.linux.fi/wiki/APT). **Suosittelemme vahvasti pakettienhallintajärjestelmän käyttämistä.**
 
 Yksinkertaisimmillaan paketinhallintajärjestelmän avulla asennetaan paketti ajamalla komento `install`, ja antamalla sille parametriksi asennettavan paketin nimen.
 
@@ -894,11 +894,11 @@ apt install nano
 
 Kun ohjelma on asennettu pakettienhallintajärjestelmän avulla, voidaan sitä yleensä kutsua komennolla suoraan komentoriviltä. Itse komennon nimi kannattaa tarkistaa käyttöohjeista.
 
-Paketinhallintajärjestelmän avulla voidaan myös päivittää ja poistaa paketteja. Pakettien päivittämiseksi ajetaan ensin komeno `update`, joka hakee uusimmat tiedot asennetuista paketeista, ja  `upgrade` päivittää ne. Paketti voidaan poistaa komennolla `remove`.
+Paketinhallintajärjestelmän avulla voidaan myös päivittää ja poistaa paketteja. Pakettien päivittämiseksi ajetaan ensin komento `update`, joka hakee uusimmat tiedot asennetuista paketeista, ja  `upgrade` päivittää ne. Paketti voidaan poistaa komennolla `remove`.
 
 Usein pakettien asentaminen, päivittäminen ja poistaminen vaatii sudo-oikeudet, jolloin komentojen eteen on lisättävä `sudo`.
 
-Ohjelman asentaminen on myös mahdollista ilman pakettienhallintajärjestelmää. Prosessi on jonkin verran pidempi ja monimutkaisempi. Tällöin asentaminen sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohteinen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
+Ohjelman asentaminen on myös mahdollista ilman pakettienhallintajärjestelmää. Prosessi on jonkin verran pidempi ja monimutkaisempi. Tällöin asentaminen sisältää usein `PATH`-nimisen _ympäristömuuttujan_ muokkaamista. Ympäristömuuttujien avulla voidaan määritellä järjestelmäkohtainen ympäristö. Käytännössä tämä tarkoittaa arvojen määrittelemistä koko järjestelmän laajuisille muuttujille. [`PATH`-muuttujaan](<https://en.wikipedia.org/wiki/PATH_(variable)>) määritellään, missä tietokoneessa sijaitsee suoritettavat ohjelmat, jolloin niihin voidaan viitata komennoilla tarkan sijainnin sijaan. Voit lukea ympäristömuuttujista lisää esimerkiksi [täältä](https://www.tutorialspoint.com/unix/unix-environment.htm).
 
 Järjestelmän ympäristö voidaan lisäksi määritellä skripteissä niin, että niitä ei tarvitse erikseen määritellä uudelleen aina session loputtua. Tällaisia on esimerkiksi `~/.bashrc`, joka ajetaan Linuxissa joka kerta, kun terminaali käynnistetään ja `~/.bash_profile`, joka ajetaan jokaisella kirjautumisella. MacOSin oletusterminaali ajaa `~/.bashrc`-tiedoston sijaan jokaisen uuden terminaali-ikkunan avautuessa `~/.bash_profile`-tiedoston.
 
