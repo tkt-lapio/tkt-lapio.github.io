@@ -10,7 +10,7 @@ tag: material
 
 Tämän osan tavoitteina on, että opiskelija
 
-- Ymmärtää, mitä hyötyöä versionhallinnan käyttämisessä on
+- Ymmärtää, mitä hyötyä versionhallinnan käyttämisestä on.
 - Osaa luoda Git-projektin.
 - Tietää, mikä on commit, ja osaa luoda sellaisen.
 - Ymmärtää, missä eri tiloissa muutos on, kun sitä lisätään commitiin, ja miten muutoksia voi perua, ennen kuin ne on lisätty committiin.
@@ -24,9 +24,9 @@ Tämän osan tavoitteina on, että opiskelija
 - Ymmärtää, mikä on merge-commit.
 - Ymmärtää, miten merge-konflikti muodostuu.
 - Osaa ratkaista merge-konfliktin.
-- Osaa tarkastella GitHubissa ja komentoriviltä vanhoja committeja, ja osaa siirtyä takaisin main-haaran viimeisimpään committiin.
+- Osaa tarkastella GitHubissa ja komentoriviltä vanhoja committeja, ja osaa siirtyä takaisin main-haaran viimeisimpään commitiin.
 - Osaa kloonata Git-projektin omalle koneelleen.
-- Ymmärtää, miten Gittiä ja GitHubia voidaan hyödyntää yhteistyössä.
+- Ymmärtää, miten Gitiä ja GitHubia voidaan hyödyntää yhteistyössä.
   - Tietää, mikä on issue.
   - Tietää, mitä tarkoittaa forkkaaminen.
   - Tietää, mikä on pull request.
@@ -34,7 +34,7 @@ Tämän osan tavoitteina on, että opiskelija
 
 # Versionhallinta: Git ja GitHub
 
-Tässä osassa käsitellään versionhallintaa. Versionhallinta tarkoittaa palvelua, joka säilöö koodia. Sen käyttöön on pääsääntöisesti kaksi motiivia: Versionhallinnan avulla voidaan pitää varmuuskopioita sekä ohjelman nykyisestä, että aiemmista versiosta. Lisäksi sen avulla voidaan helposti jakaa koodia muille, sekä osallistua muiden projekteihin.
+Tässä osassa käsitellään versionhallintaa. Versionhallinta tarkoittaa palvelua, joka säilöö koodia. Sen käyttöön on pääsääntöisesti kaksi motiivia. 1) Versionhallinnan avulla voidaan pitää varmuuskopioita sekä ohjelman nykyisestä, että aiemmista versiosta. 2) Lisäksi sen avulla voidaan helposti jakaa koodia muille, sekä osallistua muiden projekteihin.
 
 Versionhallintatyökalujen avulla on mahdollista merkitä jokin projektin tila sellaiseksi, että siihen voidaan palata myöhemmin. Näin ollen jos jotain menee pieleen uusien ominaisuuksien kehityksessä, voidaan palata aikaisempaan, toimivaan versioon. Versionhallinnassa pidetään kaikkia merkittyjä tiloja. Näin ollen nähdään, miten ohjelman kehitys on edistynyt, milloin ja millaisia muutoksia ollaan tehty, ja kenen toimesta. Tämä helpottaa myös esimerkiksi suurempien bugien, eli ohjelman toiminnassa esiintyvien virheiden metsästystä.
 
@@ -46,25 +46,25 @@ Git on eräs versionhallintatyökalu. Tässä osassa käsitellään Gitin ja sii
 
 ## Yleisesti Gitistä
 
-Gitin on luonut Helsingin yliopiston tietojenkäsittelytieteen laitoksella 90-luvulla opiskellut Linus Torvalds. Torvalds tunnetaan luultavasti paremmin Linux-kernelin kehittäjänä, joka toimii "sydämenä" monille erittäin suosituille käyttöjärjestelmille, kuten Googlen [Androidille](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Lähes kaikissa osaston koneissa on Linux-käyttöjärjestelmä. Torvalds kehitti Gitin nimenomaan omiin tarpeisiinsa koodatessaan Linux-kerneliä: hän tarvitsi työkalun, jolla voi säilyttää eri versioita omasta koodistaan, sekä jakaa sitä muiden kehitykseen osallistuneiden kanssa.
+Gitin on luonut Helsingin yliopiston tietojenkäsittelytieteen laitoksella 90-luvulla opiskellut Linus Torvalds. Torvalds tunnetaan luultavasti paremmin Linux-kernelin kehittäjänä, joka toimii "sydämenä" monille erittäin suosituille käyttöjärjestelmille, kuten Googlen [Androidille](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Lähes kaikissa osaston koneissa on Linux-käyttöjärjestelmä. Torvalds kehitti Gitin nimenomaan omiin tarpeisiinsa koodatessaan Linux-kerneliä. Hän tarvitsi työkalun, jolla voi säilyttää eri versioita omasta koodistaan, sekä jakaa sitä muiden kehitykseen osallistuneiden kanssa.
 
 GitHub on myöhemmin kehitetty palvelu, jonka avulla voidaan säilyttää ja julkaista Git-projekteja. GitHubiin verrannollisia palveluita on useita, kuten esimerkiksi [GitLab](https://about.gitlab.com/) sekä yliopiston oma GitLab-asennus osoitteessa https://version.helsinki.fi/. Laitoksellamme GitHubin käyttö on kuitenkin yleisempää, siksi tämä osa käsittelee GitHubia.
 
-Gittiä ja GitHubia käytetään yliopistolla yksilö- ja ryhmätöissä, sekä yleisesti työelämässä. Niiden käyttö ei rajoitu pelkästään koodiin, vaan moni pitää esimerkiksi kandinsa tai gradunsa Gitissä. Tässä osassa keskitytään lähinnä koodin jakamiseen Gitin avulla GitHubissa, ja siinä usein kohdattuihin ongelmiin. Lisää Gitistä oppii esimerkiksi kursseilla Ohjelmistotekniikka ja Ohjelmistotuotanto.
+Gitiä ja GitHubia käytetään yliopistolla yksilö- ja ryhmätöissä, sekä yleisesti työelämässä. Niiden käyttö ei rajoitu pelkästään koodiin, vaan moni pitää esimerkiksi kandinsa tai gradunsa Gitissä. Tässä osassa keskitytään lähinnä koodin jakamiseen Gitin avulla GitHubissa, ja siinä usein kohdattuihin ongelmiin. Lisää Gitistä oppii esimerkiksi kursseilla Ohjelmistotekniikka ja Ohjelmistotuotanto.
 
 {% capture exercise_auto_1 %}
 Luo aluksi GitHub-tunnus osoitteessa <a href="https://github.com/"> https://github.com/ </a>. GitHubiin rakennetaan eräänlainen koodiportfolio, joka usein linkataan myös CV:seen, kannattaa siis valita siisti käyttäjänimi.
 
 <br><br>
-Git löytyy laitoksen koneilta ja Ubuntusta valmiiksi. Muussa tapauksessa sen voi asentaa esimerkiksi <a href="https://git-scm.com/downloads" >täältä</a>, tai <a href="/komentorivi#asentamisesta">pakettienhallintajärjestelmän</a> kautta. Käytämme näissä ohjeissa Gittiä terminaalin kautta.
+Git löytyy laitoksen koneilta ja Ubuntusta valmiiksi. Muussa tapauksessa sen voi asentaa esimerkiksi <a href="https://git-scm.com/downloads" >täältä</a>, tai <a href="/komentorivi#asentamisesta">pakettienhallintajärjestelmän</a> kautta. Käytämme näissä ohjeissa Gitiä terminaalin kautta.
 {% endcapture %}
-{% include exercise.html points="5%" title="Tehtävä 1: Github-tunnuksen luonti" content=exercise_auto_1 %}
+{% include exercise.html points="5%" title="Tehtävä 1: GitHub-tunnuksen luonti" content=exercise_auto_1 %}
 
 
 {% capture exercise_auto_2 %}
-Konfiguroidaan hieman Gittiä.
+Konfiguroidaan hieman Gitiä.
 
-Liitä nimesi ja sähköpostiosoitteesi Gittiin niin, että kaikkiin projekteihesi tekemät muutokset liitetään sinuun seuraavilla komennoilla.
+Liitä nimesi ja sähköpostiosoitteesi Gitiin niin, että kaikkiin projekteihesi tekemät muutokset liitetään sinuun seuraavilla komennoilla:
 
 {% highlight bash %}
 git config --global user.name "Minun Nimeni"
@@ -74,7 +74,7 @@ git config --global user.email sähköposti@osoite.com
 Jos et halua sähköpostiasi julkiseksi, GitHub tarjoaa erityisen <a href="https://help.github.com/en/articles/setting-your-commit-email-address">noreply-sähköpostiosoitteen</a>.
 
 {% capture message_info_1 %}
-Huomaa Note-kohta äsken linkatulla sivulla! Noreplyn muoto riippuu siitä, milloin olet luonut käyttäjätunnuksen, ja jos loit tunnuksesi vasta lapio-kurssilla, saat asetettua noreply-sähköpostiosoitteen vasta kun asetat käyttäjätilisi asetuksista sähköpostiosoitteesi yksityiseksi.
+Huomaa Note-kohta äsken linkatulla sivulla! Noreplyn muoto riippuu siitä, milloin olet luonut käyttäjätunnuksen. Jos loit tunnuksesi vasta lapio-kurssilla, saat asetettua noreply-sähköpostiosoitteen vasta kun asetat käyttäjätilisi asetuksista sähköpostiosoitteesi yksityiseksi.
 {% endcapture %}{% include message.html type="info" text=message_info_1 title="Noreply-osoitteet uusilla käyttäjillä" %}
 
 
@@ -139,7 +139,7 @@ Changes not staged for commit:
 	modified:   lapio_vko2.txt
 ```
 
-Lisätään tämän jälkeen projektikansioon vielä yksi tiedosto, nimeltään `tyhja_tiedosto.txt`. Ajetaan sen jälkeen uudelleen `git status`. Nyt tulostuu
+Lisätään tämän jälkeen projektikansioon vielä yksi tiedosto, nimeltään `tyhja_tiedosto.txt`. Ajetaan sen jälkeen uudelleen `git status`. Nyt tulostuu:
 
 ```bash
 On branch main
@@ -172,7 +172,7 @@ Tulostuksessa on siis tiedosto `lapio_vko2` kahdesti, sillä Git seuraa _muutoks
 
 Gitin avulla voidaan myös perua muutoksia. Jos haluaisimme perua `lapio_vko2.txt`-tiedostoon lisäämämme tekstin, voitaisiin ajaa `git checkout -- lapio_vko2.txt`. Kun tämän jälkeen avaa kyseisen tiedoston, se on tyhjä, eli muutos, jossa lisättiin tekstiä, peruttiin. Komento `git checkout --` mahdollistaa siis seuratuista tiedostoista muutosten perumisen.
 
-Ajamalla `git add -p`, voit valita muutos kerrallaan, haluatko lisätä sen Gitin committiin (y=lisää, n=älä lisää). Komento ottaa huomioon vain muutokset tiedostoissa, _jotka on jo kertaalleen lisätty Gittiin_. Näin ollen esimerkiksi uusia tiedostoja ei voi lisätä Gittiin komennon `git add -p` avulla. Pelkkä `git add tiedosto` lisää kaikki tiedoston muutokset Gittiin. Samalla komennolla on myös mahdollista lisätä kerralla kokonaisen kansion sisältämät muutokset.
+Ajamalla `git add -p`, voit valita muutos kerrallaan, haluatko lisätä sen Gitin committiin (y=lisää, n=älä lisää). Komento ottaa huomioon vain muutokset tiedostoissa, _jotka on jo kertaalleen lisätty Gitiin_. Näin ollen esimerkiksi uusia tiedostoja ei voi lisätä Gitiin komennon `git add -p` avulla. Pelkkä `git add tiedosto` lisää kaikki tiedoston muutokset Gitiin. Samalla komennolla on myös mahdollista lisätä kerralla kokonaisen kansion sisältämät muutokset.
 
 {% capture message_warning_1 %}
 Jos pidät mahdollisena, että haluat jakaa projektin joskus muille, älä lisää sen commiteihin mitään salaista. Vaikka poistaisit tiedon seuraavassa commitissa, se jää Gitin projekti-historiaan, ja on löydettävissä GitHubista julkaisun jälkeen.
@@ -216,7 +216,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Commitoidut muutokset eivät siis enää näy statuksessa. Ne eivät kuitenkaan ole hävinneet: ne on siirretty committiin. Komennolla `git log` pystyt tarkastelemaan luotuja committeja:
+Commitoidut muutokset eivät siis enää näy statuksessa. Ne eivät kuitenkaan ole hävinneet - ne on siirretty committiin. Komennolla `git log` pystyt tarkastelemaan luotuja committeja:
 
 ```
 commit 51bf544c786a671c28f70713b6cb33d87cc38
@@ -235,7 +235,7 @@ Commitin luominen voi aluksi tuntua epäintuitiiviselta. Seuraava ajatusleikki s
 
 ### Haarat
 
-Komennon `git status` tulosteen yläreunassa näkyy: `On branch main`. Haarat, eli englanniksi _branchit_, mahdollistavat joidenkin committien eriyttäimisen toisistaan. Näin ollen on mahdollista kehittää uuden haaran sisältöä ilman, että menetetään toimiva versio ohjelmasta. Tavanomaisesti jokaisella projektilla on päähaara, joka on oletuksena nimeltään `main`, ja jossa pidetään senhetkistä toimivaa ja käytössä olevaa versiota.
+Komennon `git status` tulosteen yläreunassa näkyy: `On branch main`. Haarat, eli englanniksi _branchit_, mahdollistavat joidenkin committien eriyttämisen toisistaan. Näin ollen on mahdollista kehittää uuden haaran sisältöä ilman, että menetetään toimiva versio ohjelmasta. Tavanomaisesti jokaisella projektilla on päähaara, joka on oletuksena nimeltään `main`, ja jossa pidetään senhetkistä toimivaa ja käytössä olevaa versiota.
 
 {% capture message_info_3 %}
 Perinteisesti git on käyttänyt oletuspäähaarasta nimitystä *master*, mutta vuosien 2020 ja 2021 aikana moni palvelu, ja lopulta git itsessään, on luopunut master-sanan käytösä. Tämä päätös on osa suurempaa liikettä luopua master- ja slave-sanojen käytöstä avoimen lähdekoodin ohjelmistoissa.
@@ -291,11 +291,11 @@ GitHubissa saa luotua repositorion oikeasta yläkulmasta:
 
 Avautuu näkymä, jossa lisätään repolle nimi ja kuvaus. Repositorio voi olla joko julkinen tai yksityinen. Julkisen repostorion näkee kuka vaan, yksityisen vain omistajan valitsemat käyttäjät.
 
-GitHub myös tarjoaa mahdollisuuden luoda projektille _README:n_, _lisenssin_ ja _.gitignore_-tiedoston. Ohjelmistotuotannossa on tapana, että ohjelmistoprojektiin lisätään README-niminen tiedosto, joka sisältää yleishyödyllistä tietoa koko projektista. Hyvä README sisältää esimerkiksi lyhyen kuvauksen projektista, asennusohjeet ja linkin mahdolliseen dokumentaatioon. Lisenssi tarkoittaa dokumenttia, jossa määritellään, mitkä ovat ohjelman tekijän ja käyttäjän vastuut ja vapaudet. Tiedosto `.gitignore` on erittäin hyödyllinen tiedosto, jonka avulla Gittiä voi pyytää jättämään joitain tiedostoja huomiotta committeja tehdessä. `.gitignore`:n käytöstä voit lukea esimerkiksi [täältä](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
+GitHub myös tarjoaa mahdollisuuden luoda projektille _README:n_, _lisenssin_ ja _.gitignore_-tiedoston. Ohjelmistotuotannossa on tapana, että ohjelmistoprojektiin lisätään README-niminen tiedosto, joka sisältää yleishyödyllistä tietoa koko projektista. Hyvä README sisältää esimerkiksi lyhyen kuvauksen projektista, asennusohjeet ja linkin mahdolliseen dokumentaatioon. Lisenssi tarkoittaa dokumenttia, jossa määritellään, mitkä ovat ohjelman tekijän ja käyttäjän vastuut ja vapaudet. Tiedosto `.gitignore` on erittäin hyödyllinen tiedosto, jonka avulla Gitiä voi pyytää jättämään joitain tiedostoja huomiotta committeja tehdessä. `.gitignore`:n käytöstä voit lukea esimerkiksi [täältä](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
 
 {% capture message_info_5 %}
 Kun halutaan siirtää valmiiksi luotu projektikansio GitHubiin, ei kannata antaa GitHubin luoda tiedostoja automaattisesti. Tämä johtaisi vaikeuksiin, sillä tällöin GitHubissa olisi tiedosto, jota lokaalissa versiossa ei ole. Tällaisen tilanteen ongelmallisuus selviää myöhemmin tässä osassa.
-{% endcapture %}{% include message.html type="info" text=message_info_5 title="Älä anna Github luoda repositorioosi oletussisältöä" %}
+{% endcapture %}{% include message.html type="info" text=message_info_5 title="Älä anna GitHubin luoda repositorioosi oletussisältöä" %}
 
 
 Nappi `Create repository` lisää projektin omaan profiiliin. Kun projektiin navigoi, tarjoaa GitHub hyödyllisiä ohjeita koodin sinne lisäämiseksi. Projektiin löytää käyttäjän profiilista, tai suoraan osoitteella `https://www.github.com/kayttajanimi/projektinnimi`.
@@ -374,7 +374,7 @@ git status
 
 Muutokset eivät vieläkään näy. Jos puskit committisi etärepositorioon vivun `-u` kanssa, Git osaa kertoa, että GitHubissa on muutoksia, joita paikallisessa versiossa ei ole: status-komento tulostaa yläreunaan `Your branch is behind 'origin/main'`.
 
-Nyt voidaan hakea muutokset paikalliseen versioon komennolla `git pull`. Jos aikaisemmin oltiin ajettu `push` vivulla `-u`, ei etärepositoriota tai haaran nimeä tarvitse kirjoittaa. Ajetaan `git pull`, jolloin tulostuu jotain seuraavankaltaista:
+Nyt voidaan hakea muutokset paikalliseen versioon komennolla `git pull`. Jos aikaisemmin oltiin ajettu `push` vivulla `-u`, ei etärepositoriota tai haaran nimeä tarvitse kirjoittaa. Ajetaan `git pull`, jolloin tulostuu jotain seuraavan kaltaista:
 
 ```bash
 remote: Counting objects: 3, done.
@@ -420,7 +420,7 @@ Aborting
 
 Pullaus ei toimi, koska paikallisessa versiossa on muutoksia samaan tiedostoon, kuin etärepositoriossa, eikä paikallisia muutoksia ole commitoitu.
 
-Tällaisessa tilanteessa voidaan laittaa paikalliset muutokset syrjään _stashiin_ komennolla `git stash`. Kun ajetaan `git stash`, paikallisesti lisätyt muutokset Gitin seuraamissa tiedostoissa laitetaan syrjään. Tämä siis tarkoittaa, että tehdyt muutoksen poistuvat näkyvistä, mutta niitä ei ole menetetty kokonaan. Laittaaksesi syrjään myös muutokset Gittiin vielä lisäämättömissä tiedostoissa (`untracked`), aja komento vivulla `-u`, eli `git stash -u`. Saat muutokset takaisin käskyllä `git stash pop`.
+Tällaisessa tilanteessa voidaan laittaa paikalliset muutokset syrjään _stashiin_ komennolla `git stash`. Kun ajetaan `git stash`, paikallisesti lisätyt muutokset Gitin seuraamissa tiedostoissa laitetaan syrjään. Tämä siis tarkoittaa, että tehdyt muutoksen poistuvat näkyvistä, mutta niitä ei ole menetetty kokonaan. Laittaaksesi syrjään myös muutokset Gitiin vielä lisäämättömissä tiedostoissa (`untracked`), aja komento vivulla `-u`, eli `git stash -u`. Saat muutokset takaisin käskyllä `git stash pop`.
 
 {% capture exercise_auto_9 %}
 <ol>
@@ -487,7 +487,7 @@ Merge made by the 'recursive' strategy.
  create mode 100644 new_file.txt
 ```
 
-Nyt komennon `git status` mukaan ollaan tehty 2 committia (`ahead by 2 commits`). Ensimmäinen niistä on se, joka luotiin paikallisesti, ja toinen on uusi, automaattisesti luotu merge-commit. Nämä kaksi committia voitaisiin puskea GitHubiin ongelmitta.
+Nyt komennon `git status` mukaan ollaan tehty 2 committia (`ahead by 2 commits`). Ensimmäinen niistä on se, joka luotiin paikallisesti. Toinen on uusi, automaattisesti luotu merge-commit. Nämä kaksi committia voitaisiin puskea GitHubiin ongelmitta.
 
 {% capture exercise_auto_10 %}
 <ol>
@@ -556,7 +556,7 @@ Unmerged paths:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Lisätään ratkaisu Gittiin komennolla `git add` (huomaa, että vivun -p käyttäminen ei toimi). Kun sen jälkeen ajetaan `git status`, tulostuu
+Lisätään ratkaisu Gitiin komennolla `git add` (huomaa, että vivun -p käyttäminen ei toimi). Kun sen jälkeen ajetaan `git status`, tulostuu
 
 ```
 On branch main
@@ -588,13 +588,13 @@ Projektin historian säilyttäminen on yksi versionhallinan suurimmista eduista.
 
 ### Historian tarkasteleminen
 
-Projektin historia näkyy helposti Githubissa. Tarkastellaan historiaa ensin sitä kautta.
+Projektin historia näkyy helposti GitHubissa. Tarkastellaan historiaa ensin sitä kautta.
 
 Navigoidessa projektin sivulle yläpalkissa on ensimmäisenä vasemmalla välilehti, josta pääsee tarkastelemaan committeja. Esimerkiksi alla näkyvässä kuvassa kyseisessä välilehdessä lukee "4 commits".
 
 ![Commitit GitHubissa](/assets/commits.png)
 
-Kun välilehdettä painaa, näkee allekkain kaikki tehdyt commitit. Oikeassa reunassa näkyy kolme nappia.
+Kun välilehden avaa, näkee allekkain kaikki tehdyt commitit. Oikeassa reunassa näkyy kolme nappia.
 
 ![Commitin tarkasteleminen](/assets/browse-commit.png)
 
@@ -602,7 +602,7 @@ Napeista keskimmäisessä näkyy tietyn commitin id:n alkuosa. Kyseistä nappia 
 
 ![Muutosten tarkasteleminen](/assets/changes_in_github.jpeg)
 
-Painamalla seuraavaksi "Browse files", tai edellisestä näkymästä oikeanpuolimmaista `<>`-painiketta, pääsee tarkastelemaan _koko projektia_ kyseisessä commitissa. Commit siis sisältää pelkästään muutokset, mutta Git mahdollistaa koko projektin tilan tarkastelemisen tietyn commitin jälkeen. Pääset palaamaan takaisin mainiin, eli päähaaran viimeisempään committiin painamalla vasemmalla olevaa hakemistopuuta kuvaavalla ikonilla varustettua painiketta, jossa lukee tarkasetelussa olevan commitin tunniste, ja valitsemalla avautuvasta valikosta `main`.
+Painamalla seuraavaksi "Browse files", tai edellisestä näkymästä oikeanpuolimmaista `<>`-painiketta, pääsee tarkastelemaan _koko projektia_ kyseisessä commitissa. Commit siis sisältää pelkästään muutokset, mutta Git mahdollistaa koko projektin tilan tarkastelemisen tietyn commitin jälkeen. Pääset palaamaan takaisin mainiin, eli päähaaran viimeisempään committiin painamalla vasemmalla olevaa hakemistopuuta kuvaavalla ikonilla varustettua painiketta, jossa lukee tarkastelussa olevan commitin tunniste, ja valitsemalla avautuvasta valikosta `main`.
 
 ![Miten vaihtaa takaisin mainiin](/assets/back-to-main.png)
 
@@ -635,7 +635,7 @@ Jos tietää ongelman ratkaisun, voi sitä ehdottaa projektin omistajalle koodin
 
 Kyseessä on siis sama osoite, joka annettiin aikaisemmin `git remote add`-komennolle argumentiksi. Projektin omistaja ei saa ilmoitusta siitä, että hänen projektinsa on kloonattu.
 
-Jatkossa, kun aloitat uuden Git-projektin, on olemassa kaksi vaihtoehtoa etärepostorion linkittämiseksi. Voit joko luoda projektin ensin komentoriviltä komennolla `git init` ja lisätä sen jälkeen projektille etärepositorion. Toinen vaihtoehto on ensin luoda GitHubissa repositorio, ja kloonata sitten tyhjä projekti koneelle.
+Jatkossa, kun aloitat uuden Git-projektin, on olemassa kaksi vaihtoehtoa etärepositorion linkittämiseksi. Voit joko luoda projektin ensin komentoriviltä komennolla `git init` ja lisätä sen jälkeen projektille etärepositorion. Toinen vaihtoehto on ensin luoda GitHubissa repositorio, ja kloonata sitten tyhjä projekti koneelle.
 
 Jotta kloonaamaansa repositorioon tekemänsä muutokset voi puskea takaisin etärepositorioon, projektin omistajan tulee [lisätä kloonaaja projektin kehittäjäksi](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/). Muussa tapauksessa komento `git push` ei onnistu. Yhteisissä koodiprojekteissa voidaan siis luoda Git-projekti, jonka etärepositoriossa kaikki osallistujat ovat kehittäjinä, jolloin kaikki voivat vapaasti lisätä projektiin koodia.
 
@@ -660,21 +660,21 @@ Tutki sen jälkeen jonkin vapaan lähdekoodin projektin repoa GitHubissa. Etsi, 
 
 ## Loppusanat
 
-Vasta-alkajana yhteistyöprojekteissa versionhallinnan avulla hukkaa ja rikkoo helposti koodia. Versionhallinnan käyttäminen koodaamisessa on kuitenkin eräs tärkeimmistä koodarin taidoista. Vaikka työpaikalla ei käytettäisi Gittiä, pätevät versionhallintaohjelmiin usein samat periaatteet.
+Vasta-alkajana yhteistyöprojekteissa versionhallinnan avulla hukkaa ja rikkoo helposti koodia. Versionhallinnan käyttäminen koodaamisessa on kuitenkin eräs tärkeimmistä koodarin taidoista. Vaikka työpaikalla ei käytettäisi Gitiä, pätevät versionhallintaohjelmiin usein samat periaatteet.
 
-Jos törmäät outoon virheeseen, kysy rohkeasti apua, äläkä ajele sokkona komentoja. Pitkälle pääsee pitämällä silmällä `git status`-komennon tulosteita, puskemalla varmuuskopioita ajoittain, ja kommunikoimalla muiden projektilaisten kanssa muuallakin kuin commit-viesteissä. Gittiä oppii parhaiten käyttämällä sitä, älä siis lannistu ja poista projektia heti epäonnistuessasi. Pahimmassa tapausessa voi aina kloonata projektin uudestaan, kunhan on muistanut siirtää työnsä GitHubiin.
+Jos törmäät outoon virheeseen, kysy rohkeasti apua, äläkä ajele sokkona komentoja. Pitkälle pääsee pitämällä silmällä `git status`-komennon tulosteita, puskemalla varmuuskopioita ajoittain, ja kommunikoimalla muiden projektilaisten kanssa muuallakin kuin commit-viesteissä. Gitiä oppii parhaiten käyttämällä sitä. Älä siis lannistu ja poista projektia heti epäonnistuessasi. Pahimmassa tapausessa voi aina kloonata projektin uudestaan, kunhan on muistanut siirtää työnsä GitHubiin.
 
 On jälleen aika hengähtää ja pitää tauko. Anna mielesi levätä, ennen kuin palaat materiaaliin ja sen oppimistavoitteisiin.
 
 Lisää Gitistä voi lukea esimerkiksi seuraavista lähteistä:
 
 - <a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a>
-  - Pro Git Book on kohtuullisen raskas, mutta erittäin kattava dokumentaatio Gitistä. Kannattaa käyttää yksittäisen asian opiskelemiseen, kokonaan läpi rämpiminen voi olla turhan pitkäveteinen operaatio.
+  - Pro Git Book on kohtuullisen raskas, mutta erittäin kattava dokumentaatio Gitistä. Kannattaa käyttää yksittäisen asian opiskelemiseen. Kokonaan läpi rämpiminen voi olla turhan pitkäveteinen operaatio.
 - <a href="http://ohshitgit.com/">http://ohshitgit.com/</a>
   - Apuja yleisiin ongelmatilanteisiin hauskasti puettuna.
-  - Komennot sisältävät jonkin verran Gitin historian ylikirjoittamista, mitä emme tässä osassa käsitelleet, ja saattaa siten joskus viedä ojasta aallikkoon. Voi kuitenkin olla nopea apu epätoivon hetkinä, ja erityisesti ensimmäinen komento, `git reflog`, pelastaa tilanteissa, joissa on onnistunut sekoittamaan koko pakan.
+  - Komennot sisältävät jonkin verran Gitin historian ylikirjoittamista, mitä emme tässä osassa käsitelleet, ja saattaa siten joskus viedä ojasta allikkoon. Voi kuitenkin olla nopea apu epätoivon hetkinä, ja erityisesti ensimmäinen komento, `git reflog`, pelastaa tilanteissa, joissa on onnistunut sekoittamaan koko pakan.
 - <a href="https://try.github.io/">https://try.github.io/</a>
   - GitHubin tutoriaali, joka alkaa ihan perusasioista. Käsittelee joitain asioita, joita ei käyty läpi tässä osassa, kuten `git diff` ja komentoriviltä haarojen yhdistäminen.
 - Mikäli olet jo tutustunut Gittiin jonkin verran, saatat olla kiinnostunut oppimaan lisää Gitin historiasta. Historian säilyttäminen, jota demonstroitiin esimerkiksi salaisuus-tehtävässä, mahdollistaa myös sen muokkaamisen jälkikäteen. Vanhaa sanontaa mukaillen, _Voittajat kirjoittavat historian, ja mokailijat ylikirjoittavat Gitin historian_. Historian muokkaaminen on kuitenkin varsin vaarallista erityisesti yhteistyöprojekteissa, sillä sen avulla voi pilata muiden ihmisten koneilla olevia versioita. Jos olet kuitenkin edelleen kiinnostunut, Atlassanilla on erikseen tutoriaali [historian ylikirjoittamisesta](https://www.atlassian.com/git/tutorials/rewriting-history), sekä muita [edistyneempiä tutoriaaleja](https://www.atlassian.com/git/tutorials/advanced-overview).
 
-P.S Mikäli olet läsnäoleva opiskelija yliopistossa, kannattaa käydä tarkistasssa GitHub student packin [tarjoukset](https://education.github.com/pack/offers), tarjolla on krediittejä esimerkiksi DigitalOcean ja AWS -palveluihin, sekä etuja myös itse Githubiin.
+P.S Mikäli olet läsnäoleva opiskelija yliopistossa, kannattaa käydä tarkistasssa GitHub student packin [tarjoukset](https://education.github.com/pack/offers). Tarjolla on krediittejä esimerkiksi DigitalOcean- ja AWS-palveluihin, sekä etuja myös itse GitHubiin.
