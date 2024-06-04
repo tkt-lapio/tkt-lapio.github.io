@@ -603,7 +603,7 @@ Elementille voidaan lisätä marginaalia neljään eri kohtaan: sen _päälle_ (
 
 Marginaalille voi antaa myös `auto`-määritteen, jolloin marginaali määrittyy automaattisesti. Esimerkiksi `margin: 0 auto;`-ominaisuus keskittää sisemmän elementin ulommaisen elementin keskelle sivusuunnassa. Voit lukea tästä lisää [täältä](https://www.hongkiat.com/blog/css-margin-auto/).
 
-Pärjäämme pitkälle pelkästään `marginin` ja `paddingin` avulla, mutta mitä jos haluamme siirtää elementtiä verkkosivuilla? Tähän tarvitsemme `position`- ja `right`-, `left`-, `top`- sekä `bottom`-ominaisuuksia.
+Pärjäämme pitkälle pelkästään `margin`:in ja `padding`:in avulla, mutta mitä jos haluamme siirtää elementtiä verkkosivuilla? Tähän tarvitsemme `position`- ja `right`-, `left`-, `top`- sekä `bottom`-ominaisuuksia.
 
 Lisätään edelliseen esimerkkikoodiin kaksi elementtiä:
 
@@ -798,7 +798,7 @@ h2 {
 
 ![HTML sivu ilman CSS-koodia](/assets/html-example-9.png)
 
-Ollaan tultu jo paljon eteenpäin alkuperäisestä sivusta, mutta vieläkin materaali näyttää vähän oudolta. Tekstiä ei ole kovin mukava lukea, koska tausta on täysin valkoinen, ja teksti täysin mustaa. Yleensä on hyvä, jos teksti on enemmän harmaaseen taitettua. Näin voimme myös korostaa enemmän otsikkoa laittamalla sitä vähän tummemmaksi.
+Ollaan tultu jo paljon eteenpäin alkuperäisestä sivusta, mutta vieläkin materiaali näyttää vähän oudolta. Tekstiä ei ole kovin mukava lukea, koska tausta on täysin valkoinen, ja teksti täysin mustaa. Yleensä on hyvä, jos teksti on enemmän harmaaseen taitettua. Näin voimme myös korostaa enemmän otsikkoa laittamalla sitä vähän tummemmaksi.
 
 ```
 body {
