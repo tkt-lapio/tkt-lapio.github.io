@@ -666,7 +666,7 @@ Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosi
 <ol>
 <li>Tee git-kansioon toinen tiedosto, ja nimeä se position.html-nimellä.</li>
 <li>Tee myös styles.css-tiedosto ja tee tarvittavat toimenpiteet, jotta saat linkitettyä tiedostot toisiinsa.</li>
-<li>Jatketaan edellisen osion esimerkkiä, tee HTML- ja CSS-tiedostot niin pitkälle, että saat kolme eriväristä elementtiä alekkain.</li>
+<li>Jatketaan edellisen osion esimerkkiä, tee HTML- ja CSS-tiedostot niin pitkälle, että saat kolme eriväristä elementtiä allekkain.</li>
 <li>Nyt ideana on, että saisit samat elementit vierekkäin. Lopputuloksen pitäisi näyttää tältä:</li>
 <img src="/assets/html-ex-9.png" alt="Elementit vierekkäin"/>
 <li>Kun koet, että tehtävä on valmis, lisää tiedostot gittiin ja tee commit viestillä <code>Osa 3. Yhdeksäs tehtävä</code>. Puske tehtävä Githubiin.</li>
