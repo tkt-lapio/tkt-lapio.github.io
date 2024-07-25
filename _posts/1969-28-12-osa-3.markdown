@@ -30,15 +30,15 @@ Yksinkertaistettuna verkkosivulla tarkoitetaan internetissä julkaistua tekstido
 
 ## Järjestelyt
 
-Tarvitset tässä osassa tekstieditoria. Suosittelemme [vscodea](https://code.visualstudio.com/download). Tämän lisäksi tarvitset verkkoselainta. Hyviä moderneja verkkoselaimia ovat muun muassa [Google Chrome](https://www.google.fi/chrome/index.html) ja [Firefox](https://www.mozilla.org/fi/firefox/). Osan pystyy suorittamaan myös jollain muulla tekstieditorilla tai selaimella.
+Tarvitset tässä osassa tekstieditoria. Suosittelemme [VS Codea](https://code.visualstudio.com/download). Tämän lisäksi tarvitset verkkoselainta. Hyviä moderneja verkkoselaimia ovat muun muassa [Google Chrome](https://www.google.fi/chrome/index.html) ja [Firefox](https://www.mozilla.org/fi/firefox/). Osan pystyy suorittamaan myös jollain muulla tekstieditorilla tai selaimella.
 
 {% capture exercise_auto_1 %}
 <ol>
 <li>Luo "Lapio-website"-niminen kansio komentoriviä käyttäen ja tee tästä kansiosta git-projekti.</li>
-<li>Luo Githubiin uusi <strong>tyhjä</strong> repo nimellä Lapio-website.</li>
-<li>Lisää Github-projekti Git-projektin etärepositorioksi.</li>
+<li>Luo GitHubiin uusi <strong>tyhjä</strong> repo nimellä Lapio-website.</li>
+<li>Lisää GitHub-projekti Git-projektin etärepositorioksi.</li>
 <li>Lisää kansioon <code>index.html</code>-tiedosto, joka löytyy <a href="https://github.com/tkt-lapio/lapio-tehtavamateriaalia/blob/master/vk3-ex1/index.html">täältä</a>. Tiedoston sisältöä ei tarvitse vielä ymmärtää.</li>
-<li>Tee commit viestillä <code>Osa 3. Ensimmäinen tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>Tee commit viestillä <code>Osa 3. Ensimmäinen tehtävä</code> ja puske tehtävä GitHubiin.</li>
 </ol>
 {% endcapture %}
 {% include exercise.html points="5%" title="Tehtävä 1: Järjestelyt" content=exercise_auto_1 %}
@@ -88,7 +88,7 @@ Luodessasi HTML-dokumenttia, varmista aina, että tiedostonimi päättyy rimpsuu
 {% capture exercise_auto_2 %}
 Jatketaan <code>index.html</code>-tiedoston muokkaamista. Testaa eri tekstielementit läpi ja katso, mitä eri elementit tekevät. Tehtävän tavoitteena on saada sivustosta seuraavan näköinen:
 <img src="/assets/html-ex1.png" alt="Toinen tehtava kuvana"/>
-Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen tehtävä </code> ja puske tehtävä Githubiin.
+Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen tehtävä </code> ja puske tehtävä GitHubiin.
 {% endcapture %}
 {% include exercise.html points="5%" title="Tehtävä 2: Tutustuminen tekstielementteihin" content=exercise_auto_2 %}
 
@@ -97,7 +97,7 @@ Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Toinen t
 
 HTML-elementtejä voi asettaa sisäkkäin. Helpoin tapa ymmärtää tämä on ajatella jokainen elementti laatikoksi, joka huolehtii omasta sisällöstään. Sisältö voi olla esimerkiksi tekstiä tai kuvia. Välillä kuitenkin tulee tarve sijoittaa toinen laatikko toisen laatikon sisälle. Tällöin käytetään sisäkkäin asetettuja elementtejä.
 
-Jos haluamme esimerkiksi vahvistaa lauseesta vain osa, meidän on käytettävä sisäkkäin asetettuja HTML-elementtejä. Esimerkiksi seuraava pätkä koodia
+Jos haluamme esimerkiksi vahvistaa lauseesta vain osan, meidän on käytettävä sisäkkäin asetettuja HTML-elementtejä. Esimerkiksi seuraava pätkä koodia
 
 ```html
 <p>Tämä on kiva <strong>lause</strong></p>
@@ -140,13 +140,13 @@ Edellinen esimerkki näyttää selaimessa tältä:
 
 ![Lohkotason elementti](/assets/html-example-3.png)
 
-Sisäkkäin asettelu on hyvin tärkeä osa HTML-dokumenttia, ja sen rooli korostuu myöhemmin, kun alamme käyttämään css-tyylejä.
+Sisäkkäin asettelu on hyvin tärkeä osa HTML-dokumenttia, ja sen rooli korostuu myöhemmin, kun alamme käyttämään CSS-tyylejä.
 
 {% capture exercise_auto_3 %}
 Tehtävänäsi on jatkaa edellisistä tehtävistä tuttua <code>index.html</code>-tiedostoa.
 Tällä kertaa tiedosto pitää saada näkymään selaimessa seuraavalla tavalla. Eli lihavoi <code>Jukola</code>, kursivoi <code>Häme</code> ja lihavoi sekä kursivoi <code>Toukola</code>.
 <img src="/assets/html-ex3.png" alt="Kolmas tehtava kuvana"/>
-Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kolmas tehtävä</code> ja puske tehtävä Githubiin.
+Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kolmas tehtävä</code> ja puske tehtävä GitHubiin.
 {% endcapture %}
 {% include exercise.html points="10%" title="Tehtävä 3: Sisäkkäin asetetut elementit" content=exercise_auto_3 %}
 
@@ -172,8 +172,8 @@ Käydään pala palalta läpi, mitä edellinen HTML-dokumentti pitää sisällä
 
 1.  `<!DOCTYPE html>`: kertoo mitä HTML-kielioppia käytetään. Tämän seurauksena selain osaa lukea kirjoittamaasi HTML-kieltä. Kurssilla käytetty kielioppi on HTML5-kieltä. Tällöin dokumenttityypiksi merkitään aina HTML-dokumentin ensimmäiselle riville `<!DOCTYPE html>` lauseella.
 2.  `<html></html>`: lohkotason elementti pitää sisällään koko sivuston koodin. Välillä `<html>`-elementistä puhutaan nimellä juurielementti. Se on aina HTML-dokumentin ensimmäinen elementti.
-3.  `<head></head>`: lohkotason elementti pitää sisällään sellaiset osat sivustosta, joita ei näytetä itse verkkosivulla käyttäjälle. Siellä voi olla esimerkiksi avainsanoja, jotka parantavat hakukonenäkyvyyttä, css-tyylilinkkauksia tai charsettejä eli kirjasimia, joita verkkosivu käyttää. Pääsemme vähän ajan kuluttua tutustumaan `<head></head>`-elementtiin.
-4.  `<meta charset="utf-8">` elementti kertoo, mitä merkistöä HTML-dokumentti käyttää. Suositeltu merkistö on UTF-8, jossa toimii ääkköset.
+3.  `<head></head>`: lohkotason elementti pitää sisällään sellaiset osat sivustosta, joita ei näytetä itse verkkosivulla käyttäjälle. Siellä voi olla esimerkiksi avainsanoja, jotka parantavat hakukonenäkyvyyttä, CSS-tyylilinkkauksia tai charsettejä eli kirjasimia, joita verkkosivu käyttää. Pääsemme vähän ajan kuluttua tutustumaan `<head></head>`-elementtiin.
+4.  `<meta charset="utf-8">`: kertoo, mitä merkistöä HTML-dokumentti käyttää. Suositeltu merkistö on UTF-8, jossa toimii ääkköset.
 5.  `<title></title>`: elementti kertoo sivuston otsikon. Yleensä otsikko näkyy selaimessa välilehden otsikkona. Kirjanmerkkeihin tallennettaessa kirjanmerkki nimetään otsikon mukaan.
 6.  `<body></body>`: lohkotason elementti pitää sisällään kaiken sisällön, joka näkyy varsinaisella verkkosivulla. Esimerkiksi tekstit, kuvat, videot sekä kaikki elementit, jotka olemme jo käyneet läpi.
 
@@ -182,7 +182,7 @@ Käydään pala palalta läpi, mitä edellinen HTML-dokumentti pitää sisällä
 HTML-dokumentti täytyy sisentää oikein, jotta koodin luettavuus pysyy selkeänä. HTML-dokumentissa kannattaa käyttää seuraavia sisennyssääntöjä:
 
 1.  Älä lisää tyhjää riviä ilman syytä. Esimerkiksi jos `<h1></h1>` on otsikko ja sen alla on `<p></p>`-elementti, joka liittyy otsikkoon, kannattaa ylimääräinen rivinvaihto jättää käyttämättä.
-2.  Sisennä aina lohkotasonelementit kahdella välilyönnillä verrattuna ulompaan lohkoon.
+2.  Sisennä aina lohkotason elementit kahdella välilyönnillä verrattuna ulompaan lohkoon.
 3.  Älä sisennä sisätason elementtejä.
 
 **Esimerkki huonosti sisennetystä HTML-dokumentista**
@@ -209,7 +209,7 @@ consectetur adipisicing elit,sed do
 
 Google on tehnyt hyvän HTML-tyyliohjeen. Löydät sen [täältä](https://google.github.io/styleguide/htmlcssguide.html).
 
-Monelle tekstieditorille on tehty hyviä lisäsovelluksia, jotka sisentävät HTML-koodin automaattisesti. VSCodella [beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify) hoitaa homman aina tallennuksen yhteydessä. Voit asentaa sen, jos haluat.
+Monelle tekstieditorille on tehty hyviä lisäsovelluksia, jotka sisentävät HTML-koodin automaattisesti. VS Codella [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify) hoitaa homman aina tallennuksen yhteydessä. Voit asentaa sen, jos haluat.
 
 # Listat
 
@@ -283,7 +283,7 @@ Jatketaan edellisistä tehtävistä tuttua <code>index.html</code>-dokumentin mu
 
 Käytännössä tarkoitus on lisätä dokumenttiin sisäkkäin jokin lista.
 
-Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Neljäs tehtävä</code> ja puske tehtävä Githubiin.
+Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Neljäs tehtävä</code> ja puske tehtävä GitHubiin.
 {% endcapture %}
 {% include exercise.html points="10%" title="Tehtävä 4: Listat" content=exercise_auto_4 %}
 
@@ -304,7 +304,7 @@ Huomataan myös, että `<img/>`-tagilla ei ole lopetustagia. Se on niin sanottu 
 
 Jos kuva sijaitsee samalla koneella verkkosivun kanssa, käytetään <code>src</code>-attribuutissa suhteellista polkua. Voit lukea suhteellisesta polusta lisää [täältä](<https://en.wikipedia.org/wiki/Path_(computing)>).
 
-HTML-dokumentissa voi olla kommentteja, jotka eivät näy lopullisessa verkkosivussa. Niiden tarkoitus on selventää kirjoittajan ajatuksia seuraavalle kirjoittajalle tai kirjoittajalle itselleen myöhempää käyttöä varten. Kommentin voi lisätä `<!-- ja -->`-elementtien väliin. Esimerkiksi seuraava on HTML-kommentti: `<!-- Tämä tässä on kommentti -->`.
+HTML-dokumentissa voi olla kommentteja, jotka eivät näy lopullisessa verkkosivussa. Niiden tarkoitus on selventää kirjoittajan ajatuksia seuraavalle kirjoittajalle tai kirjoittajalle itselleen myöhempää käyttöä varten. Kommentin voi lisätä `<!--`- ja `-->`-elementtien väliin. Esimerkiksi seuraava on HTML-kommentti: `<!-- Tämä tässä on kommentti -->`.
 
 {% capture exercise_auto_5 %}
 {% capture message_warning_1 %}
@@ -322,7 +322,7 @@ Verkosta löytyy paljon palveluja, jotka tarjoavat tekijänoikeudettomia kuvia. 
 <li>Lisää kuvan elementin yläpuolelle kommentti, jossa kerrotaan kuvan esittävän Seitsemän veljestä -kirjan ensimmäistä sivua.</li>
 <li>Lopputuloksen pitäisi näyttää seuraavanlaiselta:</li>
 <img src="/assets/html-ex5.png" alt="Viidennen tehtävän lopputulos"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Viides tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Viides tehtävä</code> ja puske tehtävä GitHubiin.</li>
 </ol>
 {% endcapture %}
 {% include exercise.html points="10%" title="Tehtävä 5: Kuvat ja kommentit" content=exercise_auto_5 %}
@@ -336,7 +336,7 @@ HTML-dokumentit voivat sisältää hyperlinkkejä toisiin HTML-dokumentteihin. L
 <a href="https://yle.fi/uutiset">Ylen uutissivusto</a>
 ```
 
-Linkkielementti sisältää `href`-attribuutin, jossa on osoite linkattavaan kohteeseen. Jos linkattava kohde sijaitsee toisella palvelimella, kirjoitetaan palvelimen osoite kokonaisuudessaan `href`-elementin perään. Jos dokumentti sijaitsee samalla palvelimella, voi hrefissä olla suora relatiivinen polku tiedostoon. `href="toinen.html"`.
+Linkkielementti sisältää `href`-attribuutin, jossa on osoite linkattavaan kohteeseen. Jos linkattava kohde sijaitsee toisella palvelimella, kirjoitetaan palvelimen osoite kokonaisuudessaan `href`-elementin perään. Jos dokumentti sijaitsee samalla palvelimella, voi `href`:ssä olla suora relatiivinen polku tiedostoon. `href="toinen.html"`.
 
 Linkille voi myös antaa myös `target`-attribuutin, jonka `_blank`-arvolla voi pakottaa linkin aukeamaan toisella välilehdellä. Lisää linkin attribuuteista voi lukea [täältä](https://www.w3schools.com/tags/tag_a.asp).
 
@@ -348,7 +348,7 @@ Linkille voi myös antaa myös `target`-attribuutin, jonka `_blank`-arvolla voi 
 <li>Tee edellisistä tehtävistä tuttuun HTML-dokumenttiin linkki toiseen dokumenttiin ja toisesta dokumentista linkki <code>index.html</code>-dokumenttiin</li>
 <li>Lopputulos voi näyttää esimerkiksi seuraavanlaiselta:</li>
 <img src="/assets/html-ex6.png" alt="Kuudennen tehtävän lopputulos"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kuudes tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kuudes tehtävä</code> ja puske tehtävä GitHubiin.</li>
 </ol>
 {% endcapture %}
 {% include exercise.html points="10%" title="Tehtävä 6: HTML-tiedostojen linkittäminen" content=exercise_auto_6 %}
@@ -364,7 +364,7 @@ p {
 }
 ```
 
-CSS koostuu lähtökohtaisesti kahdesta eri osasta: _selektoreista_ ja _ominaisuuksista_. Selektorit määrittävät, mihin elementteihin tyylejä halutaan lisätä, ja ominaisuudet määrittävät itse tyylit. Edellisessä esimerkissä yksinäistä p-kirjainta kutsutaan selektoriksi. Selektorin jälkeen tulee aina lohko `{}`, jonka sisälle voimme sijoittaa monia CSS-ominaisuuksia. Esimerkissä `color: green` on CSS-ominaisuus. Ominaisuudet koostuvat yleensä avain-arvo-pareista.
+CSS koostuu lähtökohtaisesti kahdesta eri osasta: _selektoreista_ ja _ominaisuuksista_. Selektorit määrittävät, mihin elementteihin tyylejä halutaan lisätä, ja ominaisuudet määrittävät itse tyylit. Edellisessä esimerkissä yksinäistä p-kirjainta kutsutaan selektoriksi. Selektorin jälkeen tulee aina lohko `{}`, jonka sisälle voimme sijoittaa monia CSS-ominaisuuksia. Esimerkissä `color: green` on CSS-ominaisuus. Ominaisuudet koostuvat yleensä avain-arvo -pareista.
 
 # CSS:n linkittäminen
 
@@ -385,7 +385,7 @@ Huomataan, että ylläolevassa linkissä on yksi uusi attribuutti. Attribuutti `
 <li>Kirjoita tiedostoon seuraava pätkä: <code>p { background-color: red; }</code></li>
 <li>Linkkaa tyylitiedosto <code>index.html</code>-tiedostoon niin, että lopputulos näyttää selaimessa seuraavanlaiselta:</li>
 <img src="/assets/html-ex7.png" alt="Seitsemännen tehtävän lopputulos"/>
-Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Seitsemäs tehtävä</code> ja puske tehtävä Githubiin.
+Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Seitsemäs tehtävä</code> ja puske tehtävä GitHubiin.
 </ol>
 {% endcapture %}
 {% include exercise.html points="5%" title="Tehtävä 7: CSS:n linkittäminen" content=exercise_auto_7 %}
@@ -393,7 +393,7 @@ Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Seitsem�
 
 # Vaihtoehtoiset tavat linkata CSS-tyylejä HTML-dokumenttiin
 
-CSS-tyylejä voi linkata myös muilla tavoilla kuin `head`-elementtiin sijoitetulla `<link>`-elementillä. Kurssilla perehdytään etupäässä  linkattuun CSS-tiedostoon, mutta käydään myös muut vaihtoehtoiset tavat läpi.
+CSS-tyylejä voi linkata myös muilla tavoilla kuin `head`-elementtiin sijoitetulla `<link>`-elementillä. Kurssilla perehdytään etupäässä linkattuun CSS-tiedostoon, mutta käydään myös muut vaihtoehtoiset tavat läpi.
 
 **Inline CSS**
 
@@ -405,7 +405,7 @@ Tällä tavalla pystymme määrittelemään vain yhden elementin tyylejä. Tyyli
 
 **Internal CSS**
 
-Tämä tapa on lähellä erillistä css-tiedostoa ja `link`-elementin käyttöä. Määrittelemme vain kaikki CSS-tyylit suoraan `head`-elementin sisällä olevaan `style`-elementtiin.
+Tämä tapa on lähellä erillistä CSS-tiedostoa ja `link`-elementin käyttöä. Määrittelemme vain kaikki CSS-tyylit suoraan `head`-elementin sisällä olevaan `style`-elementtiin.
 
 ```html
   <head>
@@ -422,7 +422,7 @@ Huomaamme, että erillinen tiedosto on melkein aina paras vaihtoehto. Voimme nim
 
 Selektorilla valitaan oikea HTML-elementti dokumentista, jotta sille voidaan antaa tietty ominaisuus. Yhdellä elementillä voi olla useampia eri selektoreita, ja ne vaikuttavat eri tavoin elementtiin. Samoin yksi selektori voi valita monta elementtiä dokumentista.
 
-Tässä on yksinkertainen CSS tyylimäärittely:
+Tässä on yksinkertainen CSS-tyylimäärittely:
 
 ```css
 p {
@@ -523,7 +523,7 @@ Tehtävän ideana on testata kaikkia eri selektoreita värittämisen avulla edel
 <li>Korjataan sivusto näyttämään paremmalta myöhemmin, nyt on tärkeintä että testaat, mitä eri selektorit tekevät.</li>
 Yritä saada lopputulos näyttämään tältä:
    <img src="/assets/html-ex-8.png" alt="Kahdeksannen tehtävän lopputulos kuvana"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kahdeksas tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kahdeksas tehtävä</code> ja puske tehtävä GitHubiin.</li>
 </ol>
 {% endcapture %}
 {% include exercise.html points="10%" title="Tehtävä 8: Selektorit" content=exercise_auto_8 %}
@@ -603,7 +603,7 @@ Elementille voidaan lisätä marginaalia neljään eri kohtaan: sen _päälle_ (
 
 Marginaalille voi antaa myös `auto`-määritteen, jolloin marginaali määrittyy automaattisesti. Esimerkiksi `margin: 0 auto;`-ominaisuus keskittää sisemmän elementin ulommaisen elementin keskelle sivusuunnassa. Voit lukea tästä lisää [täältä](https://www.hongkiat.com/blog/css-margin-auto/).
 
-Pärjäämme pitkälle pelkästään `marginin` ja `paddingin` avulla, mutta mitä jos haluamme siirtää elementtiä verkkosivuilla? Tähän tarvitsemme `position` ja `right`, `left`, `top` sekä `bottom`-ominaisuuksia.
+Pärjäämme pitkälle pelkästään `margin`:in ja `padding`:in avulla, mutta mitä jos haluamme siirtää elementtiä verkkosivuilla? Tähän tarvitsemme `position`- ja `right`-, `left`-, `top`- sekä `bottom`-ominaisuuksia.
 
 Lisätään edelliseen esimerkkikoodiin kaksi elementtiä:
 
@@ -646,13 +646,13 @@ Aloitetaan antamalla `.second-box-container`-selektorille CSS-ominaisuus `left: 
 
 ![Esimerkki HTML-sivu, kahden elementin kanssa](/assets/html-example-13.png)
 
-Huomaamme, että elementti ei siirtynyt yhtään. Tämä johtuu CSS:n ominaisuudesta `position`, joka määrittää, miten elementin sijainti määritellään. Ominaisuudella on olemassa viisi erilaista arvoa, joista käymme läpi `static`, `relative`- ja `absolute`-arvot. Oletusarvoisesti kaikilla HTML-elementeillä on CSS:n `position`-ominaisuuden arvo `static`, jolloin `top`, `right`, `bottom` tai `left`-arvoilla ei ole vaikutusta elementin sijaintiin. 
+Huomaamme, että elementti ei siirtynyt yhtään. Tämä johtuu CSS:n ominaisuudesta `position`, joka määrittää, miten elementin sijainti määritellään. Ominaisuudella on olemassa viisi erilaista arvoa, joista käymme läpi `static`-, `relative`- ja `absolute`-arvot. Oletusarvoisesti kaikilla HTML-elementeillä on CSS:n `position`-ominaisuuden arvo `static`, jolloin `top`-, `right`-, `bottom`- tai `left`-arvoilla ei ole vaikutusta elementin sijaintiin. 
 
 Lisätään `.second-box-container`-selektorilla elementille vielä `position: relative` -arvo.
 
 ![Esimerkki HTML-sivu, relative positionin kanssa](/assets/html-example-14.png)
 
-Huomaamme, että saimme elementin liikkumaan. Position ominaisuuden `relative`-arvolla elementti on entisellä tavalla sijoitettuna dokumenttiin. Sen sijaintia pystyy kuitenkin muokkaamaan `top`, `right`, `bottom` tai `left`-ominaisuuksilla verraten sen alkuperäiseen sijaintiin. 
+Huomaamme, että saimme elementin liikkumaan. Position-ominaisuuden `relative`-arvolla elementti on entisellä tavalla sijoitettuna dokumenttiin. Sen sijaintia pystyy kuitenkin muokkaamaan `top`-, `right`-, `bottom`- tai `left`-ominaisuuksilla verraten sen alkuperäiseen sijaintiin. 
 
 Vaidetaan seuraavaksi arvoksi `absolute` ja katsotaan mitä dokumentille tapahtuu.
 
@@ -669,7 +669,7 @@ Position-ominaisuutta pidetään monesti yhtenä CSS:n vaikeimpana asiana. Suosi
 <li>Jatketaan edellisen osion esimerkkiä, tee HTML- ja CSS-tiedostot niin pitkälle, että saat kolme eriväristä elementtiä allekkain.</li>
 <li>Nyt ideana on, että saisit samat elementit vierekkäin. Lopputuloksen pitäisi näyttää tältä:</li>
 <img src="/assets/html-ex-9.png" alt="Elementit vierekkäin"/>
-<li>Kun koet, että tehtävä on valmis, lisää tiedostot gittiin ja tee commit viestillä <code>Osa 3. Yhdeksäs tehtävä</code>. Puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, lisää tiedostot gittiin ja tee commit viestillä <code>Osa 3. Yhdeksäs tehtävä</code>. Puske tehtävä GitHubiin.</li>
 {% capture message_info_4 %}
 Jos ei onnistu, niin testaa mitä tapahtuu, jos sijoitat elementtejä toisten sisälle eri position-arvoilla.
 {% endcapture %}{% include message.html type="info" text=message_info_4 title="Vinkki" %}
@@ -683,14 +683,14 @@ Jos ei onnistu, niin testaa mitä tapahtuu, jos sijoitat elementtejä toisten si
 
 Käsittelimme äsken, miten elementtejä asetellaan verkkosivuilla. Käytimme `px`-mittayksikköä. Katsotaan nyt tarkemmin, mitä tämä tarkoittaa ja mitä muita mittayksiköitä CSS tarjoaa.
 
-Tietokone näyttää kuvaa pikseleissä. _Resoluutio_, tarkoitetaan kuinka monta pikseliä näytössä on. Tällä hetkellä yleisin käytössä oleva resoluutio on `1366x768`, mutta se riippuu täysin tietokoneen näytön mallista. Ensimmäinen mitta kertoo pystysarakkeiden määrän (x-akseli) ja jälkimmäinen vaakarivien määrän (y-akseli). Otetaan esimerkiksi `1366x768`-resoluutio. Seuraava kuva havainnollistaa, miten pikselit asettuvat:
+Tietokone näyttää kuvaa pikseleissä. _Resoluutio_ tarkoittaa kuinka monta pikseliä näytössä on. Tällä hetkellä yleisin käytössä oleva resoluutio on `1366x768`, mutta se riippuu täysin tietokoneen näytön mallista. Ensimmäinen mitta kertoo pystysarakkeiden määrän (x-akseli) ja jälkimmäinen vaakarivien määrän (y-akseli). Otetaan esimerkiksi `1366x768`-resoluutio. Seuraava kuva havainnollistaa, miten pikselit asettuvat:
 
 ![Resoluutiota havainnollistava kuva](/assets/resolution-example.png)
 
 Eli `1366x768`-resoluutiolla varustetussa näytössä on yli **miljoona** pikseliä. Nyt kun tiedämme mistä tietokoneen kuva koostuu, voimme helpommin käsitellä eri mittayksiköitä. Käymme läpi CSS:n tärkeimmät mittayksiköt ja listaamme tämän jälkeen vähemmän tärkeät.
 
 1. `px` tarkoittaa yksittäistä pikseliä näytöllä.
-2. `em` on verrannollinen sen elementin kirjasinkokoon, minkä sisällä kyseinen elementti on, eli elementin vanhempaan. Yksi `em` tarkoittaa samaa kirjasinkokoa, kuin vanhemmalla.  `2em` tarkoittaa kaksinkertaista kirjasinkokoa. Esimerkiksi jos ylemmän elementin kirjasinkoko on `12px`, on sisemmän elementin `1em` sama kuin `12px`, ja `2em` sama kuin `24px`.  Kirjaisinkoot eli `font-size`-ominaisuus kannattaa aina merkitä joko pikseleinä tai em-mittayksiköllä.
+2. `em` on verrannollinen sen elementin kirjasinkokoon, minkä sisällä kyseinen elementti on, eli elementin vanhempaan. Yksi `em` tarkoittaa samaa kirjasinkokoa, kuin vanhemmalla. `2em` tarkoittaa kaksinkertaista kirjasinkokoa. Esimerkiksi jos ylemmän elementin kirjasinkoko on `12px`, on sisemmän elementin `1em` sama kuin `12px`, ja `2em` sama kuin `24px`. Kirjaisinkoot eli `font-size`-ominaisuus kannattaa aina merkitä joko pikseleinä tai em-mittayksiköllä.
 3. `%` on verrannollinen elementtiin, jonka sisällä kyseinen elementti on. Jos ylempi elementti on `200px` leveä, ja sisempi on `20%` leveä, niin sen koko on `40px`.
 4. `rem` on muuten sama kuin `em`, mutta se on verrannollinen `<html></html>`-elementin kirjasinkokoon.
 5. `vw` on verrannollinen näytön leveyteen. Yksi yksikkö tarkoittaa yhtä prosenttia näytön leveydestä.
@@ -732,7 +732,7 @@ CSS-ominaisuuksia on olemassa valtavasti ja emme ehdi millään käydä niitä k
 <li>Ota tavoitteeksi, että saat edellisessä tehtävässä tehdyn sivun näyttämään tältä.</li>
 <li>Älä välitä vaikka sivusto on ruma, vaan keskity tutkimaan mitä eri CSS-ominaisuudet tekevät.</li>
 <img src="/assets/html-ex-10.png" alt="HTML-sivu ilman CSS-koodia"/>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kymmenes tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Kymmenes tehtävä</code> ja puske tehtävä GitHubiin.</li>
 </ol>
 {% endcapture %}
 {% include exercise.html points="5%" title="Tehtävä 10: CSS:n ominaisuuksia" content=exercise_auto_10 %}
@@ -774,7 +774,7 @@ body {
 
 ![HTML sivu ilman CSS-koodia](/assets/html-example-8.png)
 
-Huomataan, että tekstiä on jo paljon helpompi lukea, koska teksti on keskellä näyttöä. Emme ole kuitenkaan vielä tyytyväisiä. Otetaan seuraavaksi tarkkailuun käytetyt fontit. Yleensä selaimet käyttävät valmiina "Times"-fonttia. Tämä voi kuitenkin näyttää epämielyttävältä silmään, mikä johtuu siitä, että "Times"on muuten todella vähän käytetty fontti. Vaihdetaan fontti `sans-serif`-tyyliseksi, jolloin sivuston ulkonäkö selkeästi kohenee. Tämä tehdään CSS-ominaisuudella `font-family: "Helvetica", "Arial", , sans-serif;`. Eli **lisätään** se body-määritelmään:
+Huomataan, että tekstiä on jo paljon helpompi lukea, koska teksti on keskellä näyttöä. Emme ole kuitenkaan vielä tyytyväisiä. Otetaan seuraavaksi tarkkailuun käytetyt fontit. Yleensä selaimet käyttävät valmiina "Times"-fonttia. Tämä voi kuitenkin näyttää epämiellyttävältä silmään, mikä johtuu siitä, että "Times" on muuten todella vähän käytetty fontti. Vaihdetaan fontti `sans-serif`-tyyliseksi, jolloin sivuston ulkonäkö selkeästi kohenee. Tämä tehdään CSS-ominaisuudella `font-family: "Helvetica", "Arial", , sans-serif;`. Eli **lisätään** se body-määritelmään:
 
 ```css
 body {
@@ -798,7 +798,7 @@ h2 {
 
 ![HTML sivu ilman CSS-koodia](/assets/html-example-9.png)
 
-Ollaan tultu jo paljon eteenpäin alkuperäisestä sivusta, mutta vieläkin materaali näyttää vähän oudolta. Tekstiä ei ole kovin mukava lukea, koska tausta on täysin valkoinen, ja teksti täysin mustaa. Yleensä on hyvä, jos teksti on enemmän harmaaseen taitettua. Näin voimme myös korostaa enemmän otsikkoa laittamalla sitä vähän tummemmaksi.
+Ollaan tultu jo paljon eteenpäin alkuperäisestä sivusta, mutta vieläkin materiaali näyttää vähän oudolta. Tekstiä ei ole kovin mukava lukea, koska tausta on täysin valkoinen, ja teksti täysin mustaa. Yleensä on hyvä, jos teksti on enemmän harmaaseen taitettua. Näin voimme myös korostaa enemmän otsikkoa laittamalla sitä vähän tummemmaksi.
 
 ```
 body {
@@ -832,19 +832,19 @@ Teksti näyttää jo suhteellisen luettavalta, ainakin kun vertaamme siihen mist
 <ol>
 <li>Tee kappaleessa käsitellyt määrittelyt Seitsemän veljestä -verkkosivulle. Voit lisätä pidemmän jakson Seitsemän veljestä -romaanista, jotta näet paremmin lopputuloksen. Löydät koko kirjan <a href="http://www.gutenberg.org/cache/epub/11940/pg11940.txt" target="_blank">täältä.</a></li>
 <li>Testaa sivustolle mahdollisimman paljon oppimiasi asiota. Yhtä oikeaa lopputulosta ei ole.</li>
-<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Yhdestoista tehtävä</code> ja puske tehtävä Githubiin.</li>
+<li>Kun koet, että tehtävä on valmis, tee commit viestillä <code>Osa 3. Yhdestoista tehtävä</code> ja puske tehtävä GitHubiin.</li>
 </ol>
 {% endcapture %}
 {% include exercise.html points="10%" title="Tehtävä 11: Sivuista luettavat CSS:n avulla" content=exercise_auto_11 %}
 
 
-## Verkkosivun julkaiseminen ja Github pages
+## Verkkosivun julkaiseminen ja GitHub Pages
 
-Staattisen verkkosivun voi julkaista monessa paikassa. Yleinen tapa on vuokrata/ostaa oma palvelin ja tarjota sieltä dokumentteja maailmalle. Harjoittelemme kuitenkin tällä kurssilla verkkosivun julkaisua Github-sivuna.
+Staattisen verkkosivun voi julkaista monessa paikassa. Yleinen tapa on vuokrata/ostaa oma palvelin ja tarjota sieltä dokumentteja maailmalle. Harjoittelemme kuitenkin tällä kurssilla verkkosivun julkaisua GitHub-sivuna.
 
-Github-sivut on ilmainen Githubin palvelu, joka mahdollistaa staattisten sivujen tarjoamisen suoraan Githubin repositoriosta.
+GitHub-sivut on ilmainen GitHubin palvelu, joka mahdollistaa staattisten sivujen tarjoamisen suoraan GitHubin repositoriosta.
 
-Aloitetaan luomalla uusi repositorio, jonne lisäämme `index.html` tiedoston ja `css`-kansioon `styles.css`-tiedoston. Tämän jälkeen kirjoitamme `index.html`-tiedostoon seuraavan pätkän:
+Aloitetaan luomalla uusi repositorio, jonne lisäämme `index.html`-tiedoston ja `css`-kansioon `styles.css`-tiedoston. Tämän jälkeen kirjoitamme `index.html`-tiedostoon seuraavan pätkän:
 
 ```html
 <!doctype html>
@@ -875,11 +875,11 @@ h1 {
 }
 ```
 
-Tämän jälkeen lisäämme tiedostot gittiin ja puskemme ne Githubiin. Avataan Githubista repositorion settings-valikko.
+Tämän jälkeen lisäämme tiedostot gittiin ja puskemme ne GitHubiin. Avataan GitHubista repositorion settings-valikko.
 
 ![Githubin settings valikon ohje](/assets/html-github-settings.png)
 
-Valitaan settings-valikosta "github pages", ja julkaistaan main-haara Github-sivuna.
+Valitaan settings-valikosta "pages", ja julkaistaan main-haara GitHub-sivuna.
 
 ![Github sivun julkaisu](/assets/html-github-pages.png)
 
@@ -914,11 +914,11 @@ Kotisivun laatiminen yliopiston palvelimelle onnistuu käytännössä näin:
 
 {% capture exercise_auto_12 %}
 <ol>
-<li>Luo uusi repositorio Githubiin.</li>
-<li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna, jonne kirjoitat itsestäsi, kiinnostuksenkohtiestasi ja mahdollisesta työkokemuksestasi.</li>
-<li>Käytä ansioluettelon tekoon tässä osiossa opetettuja asioita. Voit hakea hakukoneella esimerkkejä esimerkiksi hakusanoilla <code>static website resumes</code>. Jos et osaa tehdä jotain tyyliä CSSllä niin hae rohkeasti netistä tietoa, miten sellainen tehdään.</li>
+<li>Luo uusi repositorio GitHubiin.</li>
+<li>Tee repositorioon oma ansioluettelo staattisena verkkosivuna, jonne kirjoitat itsestäsi, kiinnostuksen kohteistasi ja mahdollisesta työkokemuksestasi.</li>
+<li>Käytä ansioluettelon tekoon tässä osiossa opetettuja asioita. Voit hakea hakukoneella esimerkkejä esimerkiksi hakusanoilla <code>static website resumes</code>. Jos et osaa tehdä jotain tyyliä CSS:llä niin hae rohkeasti netistä tietoa, miten sellainen tehdään.</li>
 <li>Puske lopuksi tekemäsi muutokset GitHubiin. Yritä luoda committeja järkevistä kokonaisuuksista; älä siis esimerkiksi tee vain yhtä isoa committia.</li>
-<li>Julkaise ansioluettelo Github-sivuna tai laitoksen palvelimen kautta.</li>
+<li>Julkaise ansioluettelo GitHub-sivuna tai laitoksen palvelimen kautta.</li>
 </ol>
 {% endcapture %}
 {% include exercise.html points="10%" title="Tehtävä 12: Ansioluettelo" content=exercise_auto_12 %}
@@ -932,7 +932,7 @@ Lisää HTML:stä ja CSS:stä voi lukea esimerkiksi seuraavista lähteistä:
 
 - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a>
-  - Mozillan tekemä HTML- ja CSS -dokumentaatio kattaa tarkasti CSS:n ja HTML:n perusteet. Jos aihe kiinnostaa enemmän kannattaa kyseiset dokumentaatiot kahlata läpi.
+  - Mozillan tekemä HTML- ja CSS-dokumentaatio kattaa tarkasti CSS:n ja HTML:n perusteet. Jos aihe kiinnostaa enemmän kannattaa kyseiset dokumentaatiot kahlata läpi.
 - Google on hyvä työkalu myös HTML- ja CSS-ongelmien kanssa. Kannattaa rohkeasti hakea tietoa, jos jokin asia mietityttää. Maailmassa on paljon ihmisiä, jotka ovat miettineet samoja asioita.
 
 ## Kurssin loppusanat
@@ -941,10 +941,10 @@ Tähän päättyy Tietokone työvälineenä -kurssin materiaali.
 
 Pidä jälleen tauko, ja anna aivojesi levätä. Onnittele itseäsi siitä, että sait käytyä koko materiaalin läpi. Palaa sen jälkeen materiaalin oppimistavoitteisiin ja käy ne läpi ajatuksella. Mieti, mitä asioita muistat, ja mitä et. Pyri selventämään jokainen käsite nopeasti itsellesi katsomatta materiaaliin. Mikäli et muista jotain, etsi tieto netistä tai materiaalista. Lue lopuksi vielä tenttiä koskevat ohjeet tarkasti.
 
-Kun osaat mielestäsi kurssin aiheet tarpeeksi hyvin, siirry Moodle-alueelle. Merkitse siellä tekemäsi laskaritehtävät. Varmista, että olet ilmoittautunut kurssille Weboodissa. Tämän jälkeen olet valmis tekemään tentin. Saat arvosanan kuluvan kuukauden lopussa.
+Kun osaat mielestäsi kurssin aiheet tarpeeksi hyvin, siirry Moodle-alueelle. Merkitse siellä tekemäsi laskaritehtävät. Varmista, että olet ilmoittautunut kurssille WebOodissa. Tämän jälkeen olet valmis tekemään tentin. Saat arvosanan kuluvan kuukauden lopussa.
 
 {% capture message_warning_2 %}
-Muista antaa kurssista anonyymiä palautetta <a href="https://weboodi.helsinki.fi"> Weboodissa</a> kohdasta > Työkalut > Omat Palautteet.
+Muista antaa kurssista anonyymiä palautetta <a href="https://weboodi.helsinki.fi"> WebOodissa</a> kohdasta > Työkalut > Omat Palautteet.
 {% endcapture %}{% include message.html type="warning" text=message_warning_2 title="Anna palautetta" %}
 
 
