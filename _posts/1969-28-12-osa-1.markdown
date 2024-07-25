@@ -45,7 +45,7 @@ Tämän osan tavoitteina on, että opiskelija
 
 Tietokoneet ovat erottamaton osa nyky-yhteiskuntaa, ja jokainen tulee melko varmasti päivittäin käyttäneeksi useampaa erilaista ja eri kokoista tietokonetta. Tietokone on myös tietojenkäsittelytieteilijän tärkein työkalu.
 
-Olet luultavasti varsin tottunut käyttämään tietokoneita tietyllä tavalla. Esimerkiksi tiedostojen etsiminen ja tarkasteleminen on melko varmasti mielestäsi helppoa: Osaat siirtyä kansioon kaksoisklikkaamalla sitä, avata tiedoston sopimalla ohjelmalla tai klikata tiedostoa oikealla näppäimellä ja valita vaihtoehdoista "poista" tuhotaksesi sen.
+Olet luultavasti varsin tottunut käyttämään tietokoneita tietyllä tavalla. Esimerkiksi tiedostojen etsiminen ja tarkasteleminen on melko varmasti mielestäsi helppoa: Osaat siirtyä kansioon kaksoisklikkaamalla sitä, avata tiedoston sopivalla ohjelmalla tai klikata tiedostoa oikealla näppäimellä ja valita vaihtoehdoista "poista" tuhotaksesi sen.
 
 Edellä mainitussa tapauksessa kyseessä on _graafinen käyttöliittymä_: Toimintovaihtoehdot esitetään jonkinlaisessa valikossa, ja valinnat tehdään klikkailemalla. Tiedostoja ja kansioita voi esimerkiksi myös vain raahata haluttuihin paikkoihin. Komentorivi, eli terminaali sen sijaan on _tekstikäyttöliittymä_. Tällöin tietokoneelle annetaan käskyjä kirjoittamalla, komentojen ja näppäinyhdistelmien avulla. Vaihtoehtoja ei esitetä samalla tavalla, eikä hiirtä käytetä juuri ollenkaan.
 
