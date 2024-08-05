@@ -18,14 +18,14 @@ However, if you are not familiar with the tools discussed on this course, go thr
 
 ## Assistance
 
-Course uses Telegram channel for remote assistance.
-[Link to Telegram channel](https://t.me/tktlapio)
+Course uses Discord server for remote assistance.
+[Link to Discord servre](https://study.cs.helsinki.fi/discord/join/lapio)
 
 You are free to ask any questions you have with regards to the exercises, the course, or the exam.
 
 Degrading, discriminatory or offensive language is not allowed, and will result in actions against the commenter.
 
-In addition to Telegram channel, there will be face-to-face assistance available at some point later. <!--You can find timetable [here](/paja) --->
+In addition to Discord server, there will be face-to-face assistance available at some point later. <!--You can find timetable [here](/paja) --->
 
 ## Tools
 
