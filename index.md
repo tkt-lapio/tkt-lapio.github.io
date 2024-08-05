@@ -24,8 +24,8 @@ Tehtäviä tekemällä ansaitsee laskaripisteitä, jotka lasketaan mukaan kurssi
 
 ## Tukikanavat
 
-Kurssilla on käytössä sähköinen tukikanava, joka sijaitsee Telegramissa.
-- <a href="https://t.me/tktlapio">Liittymislinkki Telegram-ryhmään</a>
+Kurssilla on käytössä sähköinen tukikanava, joka sijaitsee Discordissa.
+- <a href="https://study.cs.helsinki.fi/discord/join/lapio">Liittymislinkki Discord -palvelimelle</a>
 
 Tukikanavalla saa esittää mitä tahansa kurssiin liittyviä kysymyksiä. Kurssikavereiden auttaminen on suotavaa.
 
